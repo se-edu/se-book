@@ -26,11 +26,15 @@
         <li>The object <code v-pre>O</code> itself</li>
         <li>Objects passed as parameters of <code v-pre>m</code></li>
         <li>Objects created/instantiated in <code v-pre>m</code> (directly or indirectly)</li>
-        <li>Objects from the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">objects that are held by instance variables of</span>direct association of</span> <code v-pre>O</code></li>
+        <li>Objects from the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">objects that are held by instance variables of</span>direct association of</span> <code v-pre>O</code></li>
       </ul>
       <box>
         <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The following code fragment violates LoD due to the reason: while <code v-pre>b</code> is a ‘friend’ of <code v-pre>foo</code> (because it receives it as a parameter), <code v-pre>g</code> is a ‘friend of a friend’ (which should be considered a ‘stranger’), and <code v-pre>g.doSomething()</code> is analogous to ‘talking to a stranger’.</p>
-        <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">foo</span><span class="hljs-params">(Bar b)</span> </span>{<br></span><span>    Goo g = b.getGoo();<br></span><span>    g.doSomething();<br></span><span>}<br></span></code></pre>
+        <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">foo</span><span class="hljs-params">(Bar b)</span> </span>{
+</span><span>    Goo g = b.getGoo();
+</span><span>    g.doSomething();
+</span><span>}
+</span></code></pre>
       </box>
       <p><strong>LoD aims to prevent objects navigating internal structures of other objects.</strong></p>
       <box>
@@ -68,7 +72,11 @@
               </template>
               <question>
                 <p>This violates Law of Demeter.</p>
-                <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">foo</span><span class="hljs-params">(Bar b)</span> </span>{<br></span><span>    Goo g =  <span class="hljs-keyword">new</span> Goo();<br></span><span>    g.doSomething();<br></span><span>}<br></span></code></pre>
+                <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">foo</span><span class="hljs-params">(Bar b)</span> </span>{
+</span><span>    Goo g =  <span class="hljs-keyword">new</span> Goo();
+</span><span>    g.doSomething();
+</span><span>}
+</span></code></pre>
                 <ul radio-group="3cf8e" class="radio-list">
                   <li class="radio-list-item"><label><input class="radio-list-input" name="3cf8e" type="radio"> True</label></li>
                   <li class="radio-list-item"><label><input class="radio-list-input" name="3cf8e" type="radio"> False</label></li>

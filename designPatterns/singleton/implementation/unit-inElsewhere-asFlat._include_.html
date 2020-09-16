@@ -9,7 +9,21 @@
   <div id="main">
     <div>
       <p>Here is the typical implementation of how the Singleton pattern is applied to a class:</p>
-      <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span> </span>{<br></span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Logic theOne = <span class="hljs-keyword">null</span>;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-title">Logic</span><span class="hljs-params">()</span> </span>{<br></span><span>        ...<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> Logic <span class="hljs-title">getInstance</span><span class="hljs-params">()</span> </span>{<br></span><span>        <span class="hljs-keyword">if</span> (theOne == <span class="hljs-keyword">null</span>) {<br></span><span>            theOne = <span class="hljs-keyword">new</span> Logic();<br></span><span>        }<br></span><span>        <span class="hljs-keyword">return</span> theOne;<br></span><span>    }<br></span><span>}<br></span></code></pre>
+      <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span> </span>{
+</span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Logic theOne = <span class="hljs-keyword">null</span>;
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-title">Logic</span><span class="hljs-params">()</span> </span>{
+</span><span>        ...
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> Logic <span class="hljs-title">getInstance</span><span class="hljs-params">()</span> </span>{
+</span><span>        <span class="hljs-keyword">if</span> (theOne == <span class="hljs-keyword">null</span>) {
+</span><span>            theOne = <span class="hljs-keyword">new</span> Logic();
+</span><span>        }
+</span><span>        <span class="hljs-keyword">return</span> theOne;
+</span><span>    }
+</span><span>}
+</span></code></pre>
       <p>Notes:</p>
       <ul>
         <li>The constructor is <code v-pre>private</code>, which prevents instantiation from outside the class.</li>
@@ -17,9 +31,11 @@
         <li>Access to this object is provided by a <code v-pre>public</code> class-level operation <code v-pre>getInstance()</code> which instantiates a single copy of the singleton class when it is executed for the first time. Subsequent calls to this operation return the single instance of the class.</li>
       </ul>
       <p>If <code v-pre>Logic</code> was not a Singleton class, an object is created like this:</p>
-      <pre><code class="hljs java" v-pre><span>Logic m = <span class="hljs-keyword">new</span> Logic();<br></span></code></pre>
+      <pre><code class="hljs java" v-pre><span>Logic m = <span class="hljs-keyword">new</span> Logic();
+</span></code></pre>
       <p>But now, the <code v-pre>Logic</code> object needs to be accessed like this:</p>
-      <pre><code class="hljs java" v-pre><span>Logic m = Logic.getInstance();<br></span></code></pre>
+      <pre><code class="hljs java" v-pre><span>Logic m = Logic.getInstance();
+</span></code></pre>
     </div>
     <div></div>
   </div>

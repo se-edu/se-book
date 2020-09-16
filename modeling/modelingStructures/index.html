@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.15.2">
+  <meta name="generator" content="MarkBind 2.16.0">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - Modeling: Modeling Structures</title>
   <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
@@ -14,11 +14,14 @@
   <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
   <link rel="stylesheet" href="../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../markbind/css/github.min.css">
-  <link rel="stylesheet" href="../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="../../markbind/css/markbind.min.css">
+  <script src="../../markbind/js/polyfill.min.js"></script>
+  <script src="../../markbind/js/vue.min.js"></script>
+  <script src="../../markbind/js/markbind.min.js"></script>
+  <script src="../../markbind/js/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/se-book/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../markbind/layouts/default/styles.css">
-  <link rel="stylesheet" href="../../markbind/css/site-nav.css">
   <link rel="icon" href="/se-book/favicon.ico">
 </head>
 
@@ -429,9 +432,25 @@
                                   </template>
                                   <question>
                                     <p>Draw a class diagram for the code below. Show the attributes, methods, associations, navigabilities, and multiplicities in the class diagram below:</p>
-                                    <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Box</span> </span>{<br></span><span>    <span class="hljs-keyword">private</span> Item[] parts = <span class="hljs-keyword">new</span> Item[<span class="hljs-number">10</span>];<br></span><span>    <span class="hljs-keyword">private</span> Item spareItem;<br></span><span>    <span class="hljs-keyword">private</span> Lid lid; <span class="hljs-comment">// lid of this box</span><br></span><span>    <span class="hljs-keyword">private</span> Box outerBox;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">open</span><span class="hljs-params">()</span></span>{<br></span><span>        <span class="hljs-comment">//...</span><br></span><span>    }<br></span><span>}<br></span></code></pre>
-                                    <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Item</span> </span>{<br></span><span>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> totalItems;<br></span><span>}<br></span></code></pre>
-                                    <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Lid</span> </span>{<br></span><span>    Box box; <span class="hljs-comment">// the box for which this is the lid</span><br></span><span>}<br></span></code></pre>
+                                    <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Box</span> </span>{
+</span><span>    <span class="hljs-keyword">private</span> Item[] parts = <span class="hljs-keyword">new</span> Item[<span class="hljs-number">10</span>];
+</span><span>    <span class="hljs-keyword">private</span> Item spareItem;
+</span><span>    <span class="hljs-keyword">private</span> Lid lid; <span class="hljs-comment">// lid of this box</span>
+</span><span>    <span class="hljs-keyword">private</span> Box outerBox;
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">open</span><span class="hljs-params">()</span></span>{
+</span><span>        <span class="hljs-comment">//...</span>
+</span><span>    }
+</span><span>}
+</span></code></pre>
+                                    <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Item</span> </span>{
+</span><span>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> totalItems;
+</span><span>}
+</span></code></pre>
+                                    <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Lid</span> </span>{
+</span><span>    Box box; <span class="hljs-comment">// the box for which this is the lid</span>
+</span><span>}
+</span></code></pre>
                                   </question>
                                 </panel>
                               </div>
@@ -628,14 +647,69 @@
                                     <p>Consider the code below:</p>
                                     <div class="row">
                                       <div class="col-sm-6">
-                                        <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Billable</span> </span>{<br></span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">bill</span><span class="hljs-params">()</span></span>;<br></span><span>}<br></span></code></pre>
-                                        <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Item</span></span><br></span><span><span class="hljs-class">         <span class="hljs-keyword">implements</span> <span class="hljs-title">Billable</span> </span>{<br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span></span>;<br></span><span>}<br></span></code></pre>
-                                        <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">StockItem</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Item</span> </span>{<br></span><span>    <span class="hljs-keyword">private</span> Review review;<br></span><span>    <span class="hljs-keyword">private</span> String name;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">StockItem</span><span class="hljs-params">(</span></span><br></span><span><span class="hljs-function"><span class="hljs-params">        String name, Rating rating)</span></span>{<br></span><span><br></span><span>        <span class="hljs-keyword">this</span>.name = name;<br></span><span>        <span class="hljs-keyword">this</span>.review = <span class="hljs-keyword">new</span> Review(rating);<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-meta">@Override</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span> </span>{<br></span><span>        <span class="hljs-comment">//...</span><br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-meta">@Override</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">bill</span><span class="hljs-params">()</span> </span>{<br></span><span>        <span class="hljs-comment">//...</span><br></span><span>    }<br></span><span>}<br></span></code></pre>
+                                        <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Billable</span> </span>{
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">bill</span><span class="hljs-params">()</span></span>;
+</span><span>}
+</span></code></pre>
+                                        <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Item</span></span>
+</span><span><span class="hljs-class">         <span class="hljs-keyword">implements</span> <span class="hljs-title">Billable</span> </span>{
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span></span>;
+</span><span>}
+</span></code></pre>
+                                        <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">StockItem</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Item</span> </span>{
+</span><span>    <span class="hljs-keyword">private</span> Review review;
+</span><span>    <span class="hljs-keyword">private</span> String name;
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">StockItem</span><span class="hljs-params">(</span></span>
+</span><span><span class="hljs-function"><span class="hljs-params">        String name, Rating rating)</span></span>{
+</span><span>
+</span><span>        <span class="hljs-keyword">this</span>.name = name;
+</span><span>        <span class="hljs-keyword">this</span>.review = <span class="hljs-keyword">new</span> Review(rating);
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-meta">@Override</span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span> </span>{
+</span><span>        <span class="hljs-comment">//...</span>
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-meta">@Override</span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">bill</span><span class="hljs-params">()</span> </span>{
+</span><span>        <span class="hljs-comment">//...</span>
+</span><span>    }
+</span><span>}
+</span></code></pre>
                                       </div>
                                       <div class="col-sm-6">
-                                        <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-keyword">enum</span> Rating {<br></span><span>    GOOD, OK, POOR<br></span><span>}<br></span></code></pre>
-                                        <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Review</span> </span>{<br></span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> Rating rating;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Review</span><span class="hljs-params">(Rating rating)</span> </span>{<br></span><span>        <span class="hljs-keyword">this</span>.rating = rating;<br></span><span>    }<br></span><span>}<br></span></code></pre>
-                                        <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">import</span> java.util.List;<br></span><span><br></span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Inventory</span> </span>{<br></span><span>    <span class="hljs-keyword">private</span> List&lt;Item&gt; items;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getItemCount</span><span class="hljs-params">()</span></span>{<br></span><span>        <span class="hljs-keyword">return</span> items.size();<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">generateBill</span><span class="hljs-params">(Billable b)</span></span>{<br></span><span>        <span class="hljs-comment">// ...</span><br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">add</span><span class="hljs-params">(Item s)</span> </span>{<br></span><span>        items.add(s);<br></span><span>    }<br></span><span>}<br></span></code></pre>
+                                        <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-keyword">enum</span> Rating {
+</span><span>    GOOD, OK, POOR
+</span><span>}
+</span></code></pre>
+                                        <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Review</span> </span>{
+</span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> Rating rating;
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Review</span><span class="hljs-params">(Rating rating)</span> </span>{
+</span><span>        <span class="hljs-keyword">this</span>.rating = rating;
+</span><span>    }
+</span><span>}
+</span></code></pre>
+                                        <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">import</span> java.util.List;
+</span><span>
+</span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Inventory</span> </span>{
+</span><span>    <span class="hljs-keyword">private</span> List&lt;Item&gt; items;
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getItemCount</span><span class="hljs-params">()</span></span>{
+</span><span>        <span class="hljs-keyword">return</span> items.size();
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">generateBill</span><span class="hljs-params">(Billable b)</span></span>{
+</span><span>        <span class="hljs-comment">// ...</span>
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">add</span><span class="hljs-params">(Item s)</span> </span>{
+</span><span>        items.add(s);
+</span><span>    }
+</span><span>}
+</span></code></pre>
                                       </div>
                                     </div>
                                     <p>(a) Draw a class diagram to represent the code. Show all attributes, methods, associations, navigabilities, visibilities, known multiplicities, and association roles. Show associations as lines.<br>
@@ -687,7 +761,39 @@
                                   <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> draw class diagram: Player, Bot, etc.</p>
                                 </template>
                                 <p>(a) Draw a class diagram to represent the following code.</p>
-                                <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Player</span></span>{<br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">challenge</span><span class="hljs-params">()</span></span>;<br></span><span>}<br></span><span><br></span><span><span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Trainable</span></span>{<br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">train</span><span class="hljs-params">()</span></span>;<br></span><span>}<br></span><span><br></span><span><span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bot</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Player</span></span>{<br></span><span><br></span><span>}<br></span><span><br></span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TrainableBot</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Bot</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Trainable</span></span>{<br></span><span><br></span><span>    <span class="hljs-meta">@Override</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">challenge</span><span class="hljs-params">()</span> </span>{<br></span><span><br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-meta">@Override</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">train</span><span class="hljs-params">()</span> </span>{<br></span><span><br></span><span>    }<br></span><span>}<br></span><span><br></span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Human</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Player</span></span>{<br></span><span><br></span><span>    <span class="hljs-meta">@Override</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">challenge</span><span class="hljs-params">()</span> </span>{<br></span><span><br></span><span>    }<br></span><span>}<br></span></code></pre>
+                                <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Player</span></span>{
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">challenge</span><span class="hljs-params">()</span></span>;
+</span><span>}
+</span><span>
+</span><span><span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Trainable</span></span>{
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">train</span><span class="hljs-params">()</span></span>;
+</span><span>}
+</span><span>
+</span><span><span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bot</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Player</span></span>{
+</span><span>
+</span><span>}
+</span><span>
+</span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TrainableBot</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Bot</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Trainable</span></span>{
+</span><span>
+</span><span>    <span class="hljs-meta">@Override</span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">challenge</span><span class="hljs-params">()</span> </span>{
+</span><span>
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-meta">@Override</span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">train</span><span class="hljs-params">()</span> </span>{
+</span><span>
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Human</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Player</span></span>{
+</span><span>
+</span><span>    <span class="hljs-meta">@Override</span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">challenge</span><span class="hljs-params">()</span> </span>{
+</span><span>
+</span><span>    }
+</span><span>}
+</span></code></pre>
                                 <p>(b) Add these association classes to the diagram:<br>
                                   i. A <code v-pre>Player</code> can <em>challenge</em> another <code v-pre>Player</code> object. <code v-pre>Challenge</code> class keeps track that association between the two <code v-pre>Player</code> objects: the <em>challenger</em> and the <em>target</em> of the challenge.<br>
                                   ii. A <code v-pre>Human</code> can <em>train</em> a <code v-pre>SmartBot</code> object. <code v-pre>Lesson</code> class keeps track of that association.</p>
@@ -774,9 +880,25 @@
                                         </template>
                                         <question>
                                           <p>Draw a class diagram for the code below. Show the attributes, methods, associations, navigabilities, and multiplicities in the class diagram below:</p>
-                                          <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Box</span> </span>{<br></span><span>    <span class="hljs-keyword">private</span> Item[] parts = <span class="hljs-keyword">new</span> Item[<span class="hljs-number">10</span>];<br></span><span>    <span class="hljs-keyword">private</span> Item spareItem;<br></span><span>    <span class="hljs-keyword">private</span> Lid lid; <span class="hljs-comment">// lid of this box</span><br></span><span>    <span class="hljs-keyword">private</span> Box outerBox;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">open</span><span class="hljs-params">()</span></span>{<br></span><span>        <span class="hljs-comment">//...</span><br></span><span>    }<br></span><span>}<br></span></code></pre>
-                                          <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Item</span> </span>{<br></span><span>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> totalItems;<br></span><span>}<br></span></code></pre>
-                                          <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Lid</span> </span>{<br></span><span>    Box box; <span class="hljs-comment">// the box for which this is the lid</span><br></span><span>}<br></span></code></pre>
+                                          <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Box</span> </span>{
+</span><span>    <span class="hljs-keyword">private</span> Item[] parts = <span class="hljs-keyword">new</span> Item[<span class="hljs-number">10</span>];
+</span><span>    <span class="hljs-keyword">private</span> Item spareItem;
+</span><span>    <span class="hljs-keyword">private</span> Lid lid; <span class="hljs-comment">// lid of this box</span>
+</span><span>    <span class="hljs-keyword">private</span> Box outerBox;
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">open</span><span class="hljs-params">()</span></span>{
+</span><span>        <span class="hljs-comment">//...</span>
+</span><span>    }
+</span><span>}
+</span></code></pre>
+                                          <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Item</span> </span>{
+</span><span>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> totalItems;
+</span><span>}
+</span></code></pre>
+                                          <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Lid</span> </span>{
+</span><span>    Box box; <span class="hljs-comment">// the box for which this is the lid</span>
+</span><span>}
+</span></code></pre>
                                         </question>
                                       </panel>
                                     </div>
@@ -807,7 +929,7 @@
                         <blockquote>
                           <p>The analysis process for identifying objects and object classes is recognized as one of the most difficult areas of object-oriented development. <sub>--<a href="http://www.software-engin.com/">Ian Sommerville, in the book <em>Software Engineering</em></a></sub></p>
                         </blockquote>
-                        <p>Class diagrams can also be used to model objects in the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">the relevant information that needs to be examined to understand a problem</span>problem domain</span> (i.e. to model how objects actually interact in the real world, before emulating them in the solution). <strong>Class diagrams are used to model the problem domain are called <em>conceptual class diagrams</em> or <em>OO domain models (OODMs)</em>.</strong></p>
+                        <p>Class diagrams can also be used to model objects in the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">the relevant information that needs to be examined to understand a problem</span>problem domain</span> (i.e. to model how objects actually interact in the real world, before emulating them in the solution). <strong>Class diagrams are used to model the problem domain are called <em>conceptual class diagrams</em> or <em>OO domain models (OODMs)</em>.</strong></p>
                         <box>
                           <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> OO domain model of a snakes and ladders game is given below.</p>
                           <p>Description: Snakes and ladders game is played by two or more players using a board and a die. The board has 100 squares marked 1 to 100. Each player owns one piece. Players take turns to throw the die and advance their piece by the number of squares they earned from the die throw. The board has a number of snakes. If a player’s piece lands on a square with a snake head, the piece is automatically moved to the square containing the snake’s tail. Similarly, a piece can automatically move from a ladder foot to the ladder top. The player whose piece is the first to reach the 100th square wins.</p>
@@ -975,6 +1097,7 @@
             </div>
           </div>
         </div>
+        <i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i>
       </div>
 
 
@@ -982,21 +1105,16 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Thu, Sep 10, 2020, 11:06:50 PM GMT+8]</small>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.16.0</a>, generated on Wed, Sep 16, 2020, 3:47:05 PM GMT+8]</small>
       </div>
     </footer>
   </div>
 </body>
-<script src="../../markbind/js/vue.min.js"></script>
-<script src="../../markbind/js/components.min.js"></script>
 <script src="../../markbind/js/bootstrap-utility.min.js"></script>
-<script src="../../markbind/js/polyfill.min.js"></script>
-<script src="../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/se-book'
-  const enableSearch = true
+  MarkBind.setupWithSearch()
 </script>
-<script src="../../markbind/js/setup.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
   function initAlgolia() {
@@ -1011,5 +1129,8 @@
   MarkBind.afterSetup(initAlgolia);
 </script>
 <script src="../../markbind/layouts/default/scripts.js"></script>
+<script>
+  if (MarkBind.AfterSetup) MarkBind.AfterSetup()
+</script>
 
 </html>

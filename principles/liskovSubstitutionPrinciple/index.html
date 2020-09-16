@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.15.2">
+  <meta name="generator" content="MarkBind 2.16.0">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - Principles: Liskov Substitution Principle</title>
   <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
@@ -14,11 +14,14 @@
   <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
   <link rel="stylesheet" href="../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../markbind/css/github.min.css">
-  <link rel="stylesheet" href="../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="../../markbind/css/markbind.min.css">
+  <script src="../../markbind/js/polyfill.min.js"></script>
+  <script src="../../markbind/js/vue.min.js"></script>
+  <script src="../../markbind/js/markbind.min.js"></script>
+  <script src="../../markbind/js/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/se-book/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../markbind/layouts/default/styles.css">
-  <link rel="stylesheet" href="../../markbind/css/site-nav.css">
   <link rel="icon" href="/se-book/favicon.ico">
 </head>
 
@@ -258,7 +261,7 @@
                         <p><strong>Liskov substitution principle (LSP)</strong>: Derived classes must be substitutable for their base classes. <sub>-- proposed by <a href="https://en.wikipedia.org/wiki/Barbara_Liskov">Barbara Liskov</a></sub></p>
                       </div>
                     </box>
-                    <p>LSP sounds same as <span large trigger="click" for="modal:lsp-substitutability" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:lsp-substitutability'].show()" class="trigger-click">substitutability</span> but it goes beyond substitutability; <strong>LSP implies that a subclass should not be more restrictive than the behavior specified by the superclass.</strong> As you know, Java has language support for substitutability. However, if LSP is not followed, substituting a subclass object for a superclass object can break the functionality of the code.</p>
+                    <p>LSP sounds same as <trigger large trigger="click" for="modal:lsp-substitutability">substitutability</trigger> but it goes beyond substitutability; <strong>LSP implies that a subclass should not be more restrictive than the behavior specified by the superclass.</strong> As you know, Java has language support for substitutability. However, if LSP is not followed, substituting a subclass object for a superclass object can break the functionality of the code.</p>
                     <b-modal id="modal:lsp-substitutability" hide-footer size="lg" modal-class="mb-zoom" ref="modal:lsp-substitutability" class="algolia-no-index"><template slot="modal-title">Textbook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span></template>
                       <div>
                         <div>
@@ -284,9 +287,13 @@
                                 </p>
                                 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> an <code v-pre>AcademicStaff</code> is an instance of a <code v-pre>Staff</code>, but a <code v-pre>Staff</code> is not necessarily an instance of an <code v-pre>AcademicStaff</code>. i.e. wherever an object of the superclass is expected, it can be substituted by an object of any of its subclasses.</p>
                                 <p>The following code is valid because an <code v-pre>AcademicStaff</code> object is substitutable as a <code v-pre>Staff</code> object.</p>
-                                <pre><code class="hljs java" v-pre><span>Staff staff = <span class="hljs-keyword">new</span> AcademicStaff (); <span class="hljs-comment">// OK</span><br></span></code></pre>
+                                <pre><code class="hljs java" v-pre><span>Staff staff = <span class="hljs-keyword">new</span> AcademicStaff (); <span class="hljs-comment">// OK</span>
+</span></code></pre>
                                 <p>But the following code is not valid <span class="dimmed">because <code v-pre>staff</code> is declared as a <code v-pre>Staff</code> type and therefore its value may or may not be of type <code v-pre>AcademicStaff</code>, which is the type expected by variable <code v-pre>academicStaff</code>.</span></p>
-                                <pre><code class="hljs java" v-pre><span>Staff staff;<br></span><span>...<br></span><span>AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span><br></span></code></pre>
+                                <pre><code class="hljs java" v-pre><span>Staff staff;
+</span><span>...
+</span><span>AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
+</span></code></pre>
                               </box>
                             </div>
                             <div></div>
@@ -314,9 +321,30 @@
                         <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The <code v-pre>Rectangle#resize()</code> can take any integers for <code v-pre>height</code> and <code v-pre>width</code>. This contract is violated by the subclass <code v-pre>Square#resize()</code> because it does not accept a <code v-pre>height</code> that is different from the <code v-pre>width</code>.</p>
                         <img src="/se-book/principles/liskovSubstitutionPrinciple/images/rectangleSquare.png" height="120">
                         <p></p>
-                        <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Rectangle</span> </span>{<br></span><span>    ...<br></span><span>    <span class="hljs-comment">/** sets the size to given height and width*/</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">resize</span><span class="hljs-params">(<span class="hljs-keyword">int</span> height, <span class="hljs-keyword">int</span> width)</span></span>{<br></span><span>        ...<br></span><span>    }<br></span><span>}<br></span><span><br></span><span><br></span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Square</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Rectangle</span> </span>{<br></span><span>    <br></span><span>    <span class="hljs-meta">@Override</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">resize</span><span class="hljs-params">(<span class="hljs-keyword">int</span> height, <span class="hljs-keyword">int</span> width)</span></span>{<br></span><span>        <span class="hljs-keyword">if</span> (height != width) {<br></span><span>            <span class="hljs-comment">//error</span><br></span><span>       }<br></span><span>    }<br></span><span>}<br></span></code></pre>
+                        <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Rectangle</span> </span>{
+</span><span>    ...
+</span><span>    <span class="hljs-comment">/** sets the size to given height and width*/</span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">resize</span><span class="hljs-params">(<span class="hljs-keyword">int</span> height, <span class="hljs-keyword">int</span> width)</span></span>{
+</span><span>        ...
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span>
+</span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Square</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Rectangle</span> </span>{
+</span><span>    
+</span><span>    <span class="hljs-meta">@Override</span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">resize</span><span class="hljs-params">(<span class="hljs-keyword">int</span> height, <span class="hljs-keyword">int</span> width)</span></span>{
+</span><span>        <span class="hljs-keyword">if</span> (height != width) {
+</span><span>            <span class="hljs-comment">//error</span>
+</span><span>       }
+</span><span>    }
+</span><span>}
+</span></code></pre>
                         <p>Now consider the following method that is written to work with the <code v-pre>Rectangle</code> class.</p>
-                        <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">makeSameSize</span><span class="hljs-params">(Rectangle original, Rectangle toResize)</span></span>{<br></span><span>    toResize.resize(original.getHeight(), original.getWidth());<br></span><span>}<br></span></code></pre>
+                        <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">makeSameSize</span><span class="hljs-params">(Rectangle original, Rectangle toResize)</span></span>{
+</span><span>    toResize.resize(original.getHeight(), original.getWidth());
+</span><span>}
+</span></code></pre>
                         <p>This code will fail if it is called as <code v-pre>maekSameSize(new Rectangle(12,8), new Square(4, 4))</code> That is, <code v-pre>Square</code> class is not substitutable for the <code v-pre>Rectangle</code> class.</p>
                       </panel>
                     </box>
@@ -351,6 +379,7 @@
             </div>
           </div>
         </div>
+        <i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i>
       </div>
 
 
@@ -358,21 +387,16 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Thu, Sep 10, 2020, 11:06:50 PM GMT+8]</small>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.16.0</a>, generated on Wed, Sep 16, 2020, 3:47:05 PM GMT+8]</small>
       </div>
     </footer>
   </div>
 </body>
-<script src="../../markbind/js/vue.min.js"></script>
-<script src="../../markbind/js/components.min.js"></script>
 <script src="../../markbind/js/bootstrap-utility.min.js"></script>
-<script src="../../markbind/js/polyfill.min.js"></script>
-<script src="../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/se-book'
-  const enableSearch = true
+  MarkBind.setupWithSearch()
 </script>
-<script src="../../markbind/js/setup.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
   function initAlgolia() {
@@ -387,5 +411,8 @@
   MarkBind.afterSetup(initAlgolia);
 </script>
 <script src="../../markbind/layouts/default/scripts.js"></script>
+<script>
+  if (MarkBind.AfterSetup) MarkBind.AfterSetup()
+</script>
 
 </html>

@@ -18,10 +18,29 @@
       <img src="/se-book/errorHandling/defensiveProgramming/1to1Associations/images/minedCell.png" height="50">
       <p></p>
       <p>Option 1:</p>
-      <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MinedCell</span> </span>{<br></span><span>    <span class="hljs-keyword">private</span> Mine mine;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">MinedCell</span><span class="hljs-params">(Mine m)</span></span>{<br></span><span>        <span class="hljs-keyword">if</span> (m == <span class="hljs-keyword">null</span>) {<br></span><span>            showError();<br></span><span>        }<br></span><span>        mine = m;<br></span><span>    }<br></span><span>    …<br></span><span>}<br></span></code></pre>
+      <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MinedCell</span> </span>{
+</span><span>    <span class="hljs-keyword">private</span> Mine mine;
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">MinedCell</span><span class="hljs-params">(Mine m)</span></span>{
+</span><span>        <span class="hljs-keyword">if</span> (m == <span class="hljs-keyword">null</span>) {
+</span><span>            showError();
+</span><span>        }
+</span><span>        mine = m;
+</span><span>    }
+</span><span>    …
+</span><span>}
+</span></code></pre>
       <p>Option 1 forces us to keep a <code v-pre>Mine</code> without a <code v-pre>MinedCell</code> (until the <code v-pre>MinedCell</code> is created).</p>
       <p>Option 2:</p>
-      <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MinedCell</span> </span>{<br></span><span>    <span class="hljs-keyword">private</span> Mine mine;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">MinedCell</span><span class="hljs-params">()</span></span>{<br></span><span>        mine = <span class="hljs-keyword">new</span> Mine();<br></span><span>    }<br></span><span>    …<br></span><span>}<br></span></code></pre>
+      <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MinedCell</span> </span>{
+</span><span>    <span class="hljs-keyword">private</span> Mine mine;
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">MinedCell</span><span class="hljs-params">()</span></span>{
+</span><span>        mine = <span class="hljs-keyword">new</span> Mine();
+</span><span>    }
+</span><span>    …
+</span><span>}
+</span></code></pre>
       <p>Option 2 is more defensive because the <code v-pre>Mine</code> is immediately linked to a <code v-pre>MinedCell</code>.</p>
     </div>
     <div></div>

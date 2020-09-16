@@ -36,7 +36,46 @@
               </template>
               <question has-input="true">
                 <p>Compare the cohesion of the following two versions of the <code v-pre>EmailMessage</code> class. Which one is more cohesive and why?</p>
-                <pre><code class="hljs java" v-pre><span><span class="hljs-comment">// version-1</span><br></span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">EmailMessage</span> </span>{<br></span><span>    <span class="hljs-keyword">private</span> String sendTo;<br></span><span> 	  <span class="hljs-keyword">private</span> String subject;<br></span><span>    <span class="hljs-keyword">private</span> String message;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">EmailMessage</span><span class="hljs-params">(String sendTo, String subject, String message)</span> </span>{<br></span><span>        <span class="hljs-keyword">this</span>.sendTo = sendTo;<br></span><span>        <span class="hljs-keyword">this</span>.subject = subject;<br></span><span>        <span class="hljs-keyword">this</span>.message = message;<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">sendMessage</span><span class="hljs-params">()</span> </span>{<br></span><span>        <span class="hljs-comment">// sends message using sendTo, subject and message</span><br></span><span>    }<br></span><span>}<br></span><span><br></span><span><span class="hljs-comment">// version-2</span><br></span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">EmailMessage</span> </span>{<br></span><span>    <span class="hljs-keyword">private</span> String sendTo;<br></span><span>    <span class="hljs-keyword">private</span> String subject;<br></span><span>    <span class="hljs-keyword">private</span> String message;<br></span><span>    <span class="hljs-keyword">private</span> String username;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">EmailMessage</span><span class="hljs-params">(String sendTo, String subject, String message)</span> </span>{<br></span><span>        <span class="hljs-keyword">this</span>.sendTo = sendTo;<br></span><span>        <span class="hljs-keyword">this</span>.subject = subject;<br></span><span>        <span class="hljs-keyword">this</span>.message = message;<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">sendMessage</span><span class="hljs-params">()</span> </span>{<br></span><span>        <span class="hljs-comment">// sends message using sendTo, subject and message</span><br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">login</span><span class="hljs-params">(String username, String password)</span> </span>{<br></span><span>        <span class="hljs-keyword">this</span>.username = username;<br></span><span>        <span class="hljs-comment">// code to login</span><br></span><span>    }<br></span><span>}<br></span></code></pre>
+                <pre><code class="hljs java" v-pre><span><span class="hljs-comment">// version-1</span>
+</span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">EmailMessage</span> </span>{
+</span><span>    <span class="hljs-keyword">private</span> String sendTo;
+</span><span> 	  <span class="hljs-keyword">private</span> String subject;
+</span><span>    <span class="hljs-keyword">private</span> String message;
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">EmailMessage</span><span class="hljs-params">(String sendTo, String subject, String message)</span> </span>{
+</span><span>        <span class="hljs-keyword">this</span>.sendTo = sendTo;
+</span><span>        <span class="hljs-keyword">this</span>.subject = subject;
+</span><span>        <span class="hljs-keyword">this</span>.message = message;
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">sendMessage</span><span class="hljs-params">()</span> </span>{
+</span><span>        <span class="hljs-comment">// sends message using sendTo, subject and message</span>
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span><span class="hljs-comment">// version-2</span>
+</span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">EmailMessage</span> </span>{
+</span><span>    <span class="hljs-keyword">private</span> String sendTo;
+</span><span>    <span class="hljs-keyword">private</span> String subject;
+</span><span>    <span class="hljs-keyword">private</span> String message;
+</span><span>    <span class="hljs-keyword">private</span> String username;
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">EmailMessage</span><span class="hljs-params">(String sendTo, String subject, String message)</span> </span>{
+</span><span>        <span class="hljs-keyword">this</span>.sendTo = sendTo;
+</span><span>        <span class="hljs-keyword">this</span>.subject = subject;
+</span><span>        <span class="hljs-keyword">this</span>.message = message;
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">sendMessage</span><span class="hljs-params">()</span> </span>{
+</span><span>        <span class="hljs-comment">// sends message using sendTo, subject and message</span>
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">login</span><span class="hljs-params">(String username, String password)</span> </span>{
+</span><span>        <span class="hljs-keyword">this</span>.username = username;
+</span><span>        <span class="hljs-comment">// code to login</span>
+</span><span>    }
+</span><span>}
+</span></code></pre>
                 <div slot="answer" class="algolia-no-index">
                   <p>Version 2 is less cohesive.</p>
                   <p>Explanation: Version 2 is handling functionality related to login, which is not directly related to the concept of ‘email message’ that the class is supposed to represent. On a related note, you can improve the cohesion of both versions by removing the sendMessage functionality. Although sending message is related to emails, this class is supposed to represent an email message, not an email server.</p>

@@ -8,15 +8,27 @@
   </div>
   <div id="main">
     <div>
-      <p><strong>Most programming environments come with logging systems that allow sophisticated forms of logging.</strong> They have features such as the ability to enable and disable logging easily or to change the logging <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">how much information to record</span>intensity</span>.</p>
+      <p><strong>Most programming environments come with logging systems that allow sophisticated forms of logging.</strong> They have features such as the ability to enable and disable logging easily or to change the logging <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">how much information to record</span>intensity</span>.</p>
       <box>
         <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This sample Java code uses Java’s default logging mechanism.</p>
         <p>First, import the relevant Java package:</p>
-        <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">import</span> java.util.logging.*;<br></span></code></pre>
+        <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">import</span> java.util.logging.*;
+</span></code></pre>
         <p>Next, create a <code v-pre>Logger</code>:</p>
-        <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Logger logger = Logger.getLogger(<span class="hljs-string">"Foo"</span>);<br></span></code></pre>
-        <p>Now, you can use the <code v-pre>Logger</code> object to log information. Note the use of <span data-mb-component-type="popover" v-b-popover.hover.top.html="popoverInnerGenerator" class="trigger"><span data-mb-html-for="content"><code v-pre>INFO</code>, <code v-pre>WARNING</code> etc.</span>logging level</span> for each message. When running the code, the logging level can be set to <code v-pre>WARNING</code> so that log messages specified as <code v-pre>INFO</code> level (which is a lower level than <code v-pre>WARNING</code>) will not be written to the log file at all.</p>
-        <pre><code class="hljs java" v-pre><span><span class="hljs-comment">// log a message at INFO level</span><br></span><span>logger.log(Level.INFO, <span class="hljs-string">"going to start processing"</span>);<br></span><span><span class="hljs-comment">//...</span><br></span><span>processInput();<br></span><span><span class="hljs-keyword">if</span>(error){<br></span><span>    <span class="hljs-comment">//log a message at WARNING level</span><br></span><span>    logger.log(Level.WARNING, <span class="hljs-string">"processing error"</span>, ex);<br></span><span>}<br></span><span><span class="hljs-comment">//...</span><br></span><span>logger.log(Level.INFO, <span class="hljs-string">"end of processing"</span>);<br></span></code></pre>
+        <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Logger logger = Logger.getLogger(<span class="hljs-string">"Foo"</span>);
+</span></code></pre>
+        <p>Now, you can use the <code v-pre>Logger</code> object to log information. Note the use of <span data-mb-component-type="popover" v-b-popover.hover.top.html="popoverInnerGetters" class="trigger"><span data-mb-slot-name="content"><code v-pre>INFO</code>, <code v-pre>WARNING</code> etc.</span>logging level</span> for each message. When running the code, the logging level can be set to <code v-pre>WARNING</code> so that log messages specified as <code v-pre>INFO</code> level (which is a lower level than <code v-pre>WARNING</code>) will not be written to the log file at all.</p>
+        <pre><code class="hljs java" v-pre><span><span class="hljs-comment">// log a message at INFO level</span>
+</span><span>logger.log(Level.INFO, <span class="hljs-string">"going to start processing"</span>);
+</span><span><span class="hljs-comment">//...</span>
+</span><span>processInput();
+</span><span><span class="hljs-keyword">if</span>(error){
+</span><span>    <span class="hljs-comment">//log a message at WARNING level</span>
+</span><span>    logger.log(Level.WARNING, <span class="hljs-string">"processing error"</span>, ex);
+</span><span>}
+</span><span><span class="hljs-comment">//...</span>
+</span><span>logger.log(Level.INFO, <span class="hljs-string">"end of processing"</span>);
+</span></code></pre>
       </box>
     </div>
     <div>

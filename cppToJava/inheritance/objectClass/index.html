@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.15.2">
+  <meta name="generator" content="MarkBind 2.16.0">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - C++ to Java: Inheritance: The Object Class</title>
   <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
@@ -14,11 +14,14 @@
   <link rel="stylesheet" href="../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
   <link rel="stylesheet" href="../../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../../markbind/css/github.min.css">
-  <link rel="stylesheet" href="../../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="../../../markbind/css/markbind.min.css">
+  <script src="../../../markbind/js/polyfill.min.js"></script>
+  <script src="../../../markbind/js/vue.min.js"></script>
+  <script src="../../../markbind/js/markbind.min.js"></script>
+  <script src="../../../markbind/js/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/se-book/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../../markbind/layouts/default/styles.css">
-  <link rel="stylesheet" href="../../../markbind/css/site-nav.css">
   <link rel="icon" href="/se-book/favicon.ico">
 </head>
 
@@ -260,15 +263,39 @@
                       <p><strong>Every class inherits a <code v-pre>toString</code> method from the <code v-pre>Object</code> class that is used by Java to get a string representation of the object</strong> <span class="dimmed">e.g., for printing</span>. By default, it simply returns the type of the object and its address (in hexadecimal).</p>
                       <box>
                         <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Suppose you defined a class called <code v-pre>Time</code>, to represent a moment in time. If you create a <code v-pre>Time</code> object and display it with println:</p>
-                        <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Time</span> </span>{<br></span><span>    <span class="hljs-keyword">int</span> hours;<br></span><span>    <span class="hljs-keyword">int</span> minutes;<br></span><span>    <span class="hljs-keyword">int</span> seconds;<br></span><span><br></span><span>    Time(<span class="hljs-keyword">int</span> hours, <span class="hljs-keyword">int</span> minutes, <span class="hljs-keyword">int</span> seconds) {<br></span><span>        <span class="hljs-keyword">this</span>.hours = hours;<br></span><span>        <span class="hljs-keyword">this</span>.minutes = minutes;<br></span><span>        <span class="hljs-keyword">this</span>.seconds = seconds;<br></span><span>    }<br></span><span>}<br></span></code></pre>
-                        <pre><code class="hljs java" v-pre><span> Time t = <span class="hljs-keyword">new</span> Time(<span class="hljs-number">5</span>, <span class="hljs-number">20</span>, <span class="hljs-number">13</span>);<br></span><span> System.out.println(t);<br></span></code></pre>
+                        <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Time</span> </span>{
+</span><span>    <span class="hljs-keyword">int</span> hours;
+</span><span>    <span class="hljs-keyword">int</span> minutes;
+</span><span>    <span class="hljs-keyword">int</span> seconds;
+</span><span>
+</span><span>    Time(<span class="hljs-keyword">int</span> hours, <span class="hljs-keyword">int</span> minutes, <span class="hljs-keyword">int</span> seconds) {
+</span><span>        <span class="hljs-keyword">this</span>.hours = hours;
+</span><span>        <span class="hljs-keyword">this</span>.minutes = minutes;
+</span><span>        <span class="hljs-keyword">this</span>.seconds = seconds;
+</span><span>    }
+</span><span>}
+</span></code></pre>
+                        <pre><code class="hljs java" v-pre><span> Time t = <span class="hljs-keyword">new</span> Time(<span class="hljs-number">5</span>, <span class="hljs-number">20</span>, <span class="hljs-number">13</span>);
+</span><span> System.out.println(t);
+</span></code></pre>
                         <p><span><span aria-hidden="true" class="fas fa-arrow-right"></span></span> <code v-pre>Time@80cc7c0</code> <span class="dimmed">(the address part can vary)</span></p>
                       </box>
                       <p><strong>You can override the <code v-pre>toString</code> method in your classes</strong> to provide a more meaningful string representation of the objects of that class.</p>
                       <box>
                         <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Here's an example of overriding the <code v-pre>toString</code> method of the <code v-pre>Time</code> class:</p>
-                        <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Time</span></span>{<br></span><span><br></span><span>   <span class="hljs-comment">//...</span><br></span><span><br></span><span>   <span class="hljs-meta">@Override</span><br></span><span>   <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span><span class="hljs-params">()</span> </span>{<br></span><span>       <span class="hljs-keyword">return</span> String.format(<span class="hljs-string">"%02d:%02d:%02d\n"</span>, <span class="hljs-keyword">this</span>.hours, <span class="hljs-keyword">this</span>.minutes, <span class="hljs-keyword">this</span>.seconds);<br></span><span>   }<br></span><span>}<br></span></code></pre>
-                        <pre><code class="hljs java" v-pre><span> Time t = <span class="hljs-keyword">new</span> Time(<span class="hljs-number">5</span>, <span class="hljs-number">20</span>, <span class="hljs-number">13</span>);<br></span><span> System.out.println(t);<br></span></code></pre>
+                        <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Time</span></span>{
+</span><span>
+</span><span>   <span class="hljs-comment">//...</span>
+</span><span>
+</span><span>   <span class="hljs-meta">@Override</span>
+</span><span>   <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span><span class="hljs-params">()</span> </span>{
+</span><span>       <span class="hljs-keyword">return</span> String.format(<span class="hljs-string">"%02d:%02d:%02d\n"</span>, <span class="hljs-keyword">this</span>.hours, <span class="hljs-keyword">this</span>.minutes, <span class="hljs-keyword">this</span>.seconds);
+</span><span>   }
+</span><span>}
+</span></code></pre>
+                        <pre><code class="hljs java" v-pre><span> Time t = <span class="hljs-keyword">new</span> Time(<span class="hljs-number">5</span>, <span class="hljs-number">20</span>, <span class="hljs-number">13</span>);
+</span><span> System.out.println(t);
+</span></code></pre>
                         <p><span><span aria-hidden="true" class="fas fa-arrow-right"></span></span> <code v-pre>05:20:13</code></p>
                       </box>
                       <p></p>
@@ -284,7 +311,10 @@
                       <p>The definition of identity is always the same, so the <code v-pre>==</code> operator always does the same thing.</p>
                       <box>
                         <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider the following variables:</p>
-                        <pre><code class="hljs java" v-pre><span>Time time1 = <span class="hljs-keyword">new</span> Time(<span class="hljs-number">9</span>, <span class="hljs-number">30</span>, <span class="hljs-number">0</span>);<br></span><span>Time time2 = time1;<br></span><span>Time time3 = <span class="hljs-keyword">new</span> Time(<span class="hljs-number">9</span>, <span class="hljs-number">30</span>, <span class="hljs-number">0</span>);<br></span></code></pre>
+                        <pre><code class="hljs java" v-pre><span>Time time1 = <span class="hljs-keyword">new</span> Time(<span class="hljs-number">9</span>, <span class="hljs-number">30</span>, <span class="hljs-number">0</span>);
+</span><span>Time time2 = time1;
+</span><span>Time time3 = <span class="hljs-keyword">new</span> Time(<span class="hljs-number">9</span>, <span class="hljs-number">30</span>, <span class="hljs-number">0</span>);
+</span></code></pre>
                         <ul>
                           <li>The assignment operator copies references, so <code v-pre>time1</code> and <code v-pre>time2</code> refer to the same object. Because they are identical, <code v-pre>time1 == time2</code> is <code v-pre>true</code>.</li>
                           <li>But <code v-pre>time1</code> and <code v-pre>time3</code> refer to different objects. Because they are not identical, <code v-pre>time1 == time3</code> is <code v-pre>false</code>.</li>
@@ -293,10 +323,31 @@
                       <p>By default, the <code v-pre>equals</code> method inherited from the <code v-pre>Object</code> class does the same thing as <code v-pre>==</code>. <strong>As the definition of equivalence is different for different classes, you can override the <code v-pre>equals</code> method to define your own criteria for equivalence</strong> of objects of your class.</p>
                       <box>
                         <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Here's how you can override the <code v-pre>equals</code> method of the <code v-pre>Time</code> class to provide an <code v-pre>equals</code> method that considers two <code v-pre>Time</code> objects equivalent as long as they represent the same time of the day:</p>
-                        <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Time</span> </span>{<br></span><span>    <span class="hljs-keyword">int</span> hours;<br></span><span>    <span class="hljs-keyword">int</span> minutes;<br></span><span>    <span class="hljs-keyword">int</span> seconds;<br></span><span><br></span><span>    <span class="hljs-comment">// ...</span><br></span><span><br></span><span>    <span class="hljs-meta">@Override</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">equals</span><span class="hljs-params">(Object o)</span> </span>{<br></span><span>        Time other = (Time) o;<br></span><span>        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.hours == other.hours<br></span><span>                &amp;&amp; <span class="hljs-keyword">this</span>.minutes == other.minutes<br></span><span>                &amp;&amp; <span class="hljs-keyword">this</span>.seconds == other.seconds;<br></span><span>    }<br></span><span>}<br></span></code></pre>
-                        <pre><code class="hljs java" v-pre><span>Time t1 = <span class="hljs-keyword">new</span> Time(<span class="hljs-number">5</span>, <span class="hljs-number">20</span>, <span class="hljs-number">13</span>);<br></span><span>Time t2 = <span class="hljs-keyword">new</span> Time(<span class="hljs-number">5</span>, <span class="hljs-number">20</span>, <span class="hljs-number">13</span>);<br></span><span>System.out.println(t1 == t2);<br></span><span>System.out.println(t1.equals(t2));<br></span></code></pre>
+                        <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Time</span> </span>{
+</span><span>    <span class="hljs-keyword">int</span> hours;
+</span><span>    <span class="hljs-keyword">int</span> minutes;
+</span><span>    <span class="hljs-keyword">int</span> seconds;
+</span><span>
+</span><span>    <span class="hljs-comment">// ...</span>
+</span><span>
+</span><span>    <span class="hljs-meta">@Override</span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">equals</span><span class="hljs-params">(Object o)</span> </span>{
+</span><span>        Time other = (Time) o;
+</span><span>        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.hours == other.hours
+</span><span>                &amp;&amp; <span class="hljs-keyword">this</span>.minutes == other.minutes
+</span><span>                &amp;&amp; <span class="hljs-keyword">this</span>.seconds == other.seconds;
+</span><span>    }
+</span><span>}
+</span></code></pre>
+                        <pre><code class="hljs java" v-pre><span>Time t1 = <span class="hljs-keyword">new</span> Time(<span class="hljs-number">5</span>, <span class="hljs-number">20</span>, <span class="hljs-number">13</span>);
+</span><span>Time t2 = <span class="hljs-keyword">new</span> Time(<span class="hljs-number">5</span>, <span class="hljs-number">20</span>, <span class="hljs-number">13</span>);
+</span><span>System.out.println(t1 == t2);
+</span><span>System.out.println(t1.equals(t2));
+</span></code></pre>
                         <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
-                        <pre><code class="hljs" v-pre><span>false<br></span><span>true<br></span></code></pre>
+                        <pre><code class="hljs" v-pre><span>false
+</span><span>true
+</span></code></pre>
                         <p>
                           <font color="red"><big><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></big></font> Note that a proper <code v-pre>equals</code> method implementation is more complex than the example above. See the article <a href="https://www.sitepoint.com/implement-javas-equals-method-correctly/"><em>How to Implement Java’s equals Method Correctly</em> by Nicolai Parlog</a> for a detailed explanation before you implement your own <code v-pre>equals</code> method.
                         </p>
@@ -316,18 +367,114 @@
                               </template>
                               <question>
                                 <p>Suppose you have the following classes <code v-pre>Task</code>, <code v-pre>Todo</code>, <code v-pre>Deadline</code>:</p>
-                                <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Task</span> </span>{<br></span><span>    <span class="hljs-keyword">protected</span> String description;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Task</span><span class="hljs-params">(String description)</span> </span>{<br></span><span>        <span class="hljs-keyword">this</span>.description = description;<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getDescription</span><span class="hljs-params">()</span> </span>{<br></span><span>        <span class="hljs-keyword">return</span> description;<br></span><span>    }<br></span><span>}<br></span></code></pre>
-                                <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Todo</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Task</span> </span>{<br></span><span>    <span class="hljs-keyword">protected</span> <span class="hljs-keyword">boolean</span> isDone;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Todo</span><span class="hljs-params">(String description)</span> </span>{<br></span><span>        <span class="hljs-keyword">super</span>(description);<br></span><span>        isDone = <span class="hljs-keyword">false</span>;<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setDone</span><span class="hljs-params">(<span class="hljs-keyword">boolean</span> done)</span> </span>{<br></span><span>        isDone = done;<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">isDone</span><span class="hljs-params">()</span> </span>{<br></span><span>        <span class="hljs-keyword">return</span> isDone;<br></span><span>    }<br></span><span>}<br></span></code></pre>
-                                <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Deadline</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Todo</span> </span>{<br></span><span><br></span><span>    <span class="hljs-keyword">protected</span> String by;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Deadline</span><span class="hljs-params">(String description, String by)</span> </span>{<br></span><span>        <span class="hljs-keyword">super</span>(description);<br></span><span>        <span class="hljs-keyword">this</span>.by = by;<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setBy</span><span class="hljs-params">(String by)</span> </span>{<br></span><span>        <span class="hljs-keyword">this</span>.by = by;<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getBy</span><span class="hljs-params">()</span> </span>{<br></span><span>        <span class="hljs-keyword">return</span> by;<br></span><span>    }<br></span><span>}<br></span></code></pre>
+                                <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Task</span> </span>{
+</span><span>    <span class="hljs-keyword">protected</span> String description;
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Task</span><span class="hljs-params">(String description)</span> </span>{
+</span><span>        <span class="hljs-keyword">this</span>.description = description;
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getDescription</span><span class="hljs-params">()</span> </span>{
+</span><span>        <span class="hljs-keyword">return</span> description;
+</span><span>    }
+</span><span>}
+</span></code></pre>
+                                <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Todo</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Task</span> </span>{
+</span><span>    <span class="hljs-keyword">protected</span> <span class="hljs-keyword">boolean</span> isDone;
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Todo</span><span class="hljs-params">(String description)</span> </span>{
+</span><span>        <span class="hljs-keyword">super</span>(description);
+</span><span>        isDone = <span class="hljs-keyword">false</span>;
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setDone</span><span class="hljs-params">(<span class="hljs-keyword">boolean</span> done)</span> </span>{
+</span><span>        isDone = done;
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">isDone</span><span class="hljs-params">()</span> </span>{
+</span><span>        <span class="hljs-keyword">return</span> isDone;
+</span><span>    }
+</span><span>}
+</span></code></pre>
+                                <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Deadline</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Todo</span> </span>{
+</span><span>
+</span><span>    <span class="hljs-keyword">protected</span> String by;
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Deadline</span><span class="hljs-params">(String description, String by)</span> </span>{
+</span><span>        <span class="hljs-keyword">super</span>(description);
+</span><span>        <span class="hljs-keyword">this</span>.by = by;
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setBy</span><span class="hljs-params">(String by)</span> </span>{
+</span><span>        <span class="hljs-keyword">this</span>.by = by;
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getBy</span><span class="hljs-params">()</span> </span>{
+</span><span>        <span class="hljs-keyword">return</span> by;
+</span><span>    }
+</span><span>}
+</span></code></pre>
                                 <p>Override the <code v-pre>toString</code> method of the three classes to produce the following behavior.</p>
-                                <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{<br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{<br></span><span>        <span class="hljs-comment">// create a todo task and print it</span><br></span><span>        Todo t = <span class="hljs-keyword">new</span> Todo(<span class="hljs-string">"Read a good book"</span>);<br></span><span>        System.out.println(t);<br></span><span><br></span><span>        <span class="hljs-comment">// change todo fields and print again</span><br></span><span>        t.setDone(<span class="hljs-keyword">true</span>);<br></span><span>        System.out.println(t);<br></span><span><br></span><span>        <span class="hljs-comment">// create a deadline task and print it</span><br></span><span>        Deadline d = <span class="hljs-keyword">new</span> Deadline(<span class="hljs-string">"Read textbook"</span>, <span class="hljs-string">"Nov 16"</span>);<br></span><span>        System.out.println(d);<br></span><span><br></span><span>        <span class="hljs-comment">// change deadline details and print again</span><br></span><span>        d.setDone(<span class="hljs-keyword">true</span>);<br></span><span>        d.setBy(<span class="hljs-string">"Postponed to Nov 18th"</span>);<br></span><span>        System.out.println(d);<br></span><span>    }<br></span><span>}<br></span></code></pre>
+                                <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+</span><span>        <span class="hljs-comment">// create a todo task and print it</span>
+</span><span>        Todo t = <span class="hljs-keyword">new</span> Todo(<span class="hljs-string">"Read a good book"</span>);
+</span><span>        System.out.println(t);
+</span><span>
+</span><span>        <span class="hljs-comment">// change todo fields and print again</span>
+</span><span>        t.setDone(<span class="hljs-keyword">true</span>);
+</span><span>        System.out.println(t);
+</span><span>
+</span><span>        <span class="hljs-comment">// create a deadline task and print it</span>
+</span><span>        Deadline d = <span class="hljs-keyword">new</span> Deadline(<span class="hljs-string">"Read textbook"</span>, <span class="hljs-string">"Nov 16"</span>);
+</span><span>        System.out.println(d);
+</span><span>
+</span><span>        <span class="hljs-comment">// change deadline details and print again</span>
+</span><span>        d.setDone(<span class="hljs-keyword">true</span>);
+</span><span>        d.setBy(<span class="hljs-string">"Postponed to Nov 18th"</span>);
+</span><span>        System.out.println(d);
+</span><span>    }
+</span><span>}
+</span></code></pre>
                                 <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
-                                <pre><code class="hljs" v-pre><span>description: Read a good book<br></span><span>is done? No<br></span><span>description: Read a good book<br></span><span>is done? Yes<br></span><span>description: Read textbook<br></span><span>is done? No<br></span><span>do by: Nov 16<br></span><span>description: Read textbook<br></span><span>is done? Yes<br></span><span>do by: Postponed to Nov 18th<br></span></code></pre>
+                                <pre><code class="hljs" v-pre><span>description: Read a good book
+</span><span>is done? No
+</span><span>description: Read a good book
+</span><span>is done? Yes
+</span><span>description: Read textbook
+</span><span>is done? No
+</span><span>do by: Nov 16
+</span><span>description: Read textbook
+</span><span>is done? Yes
+</span><span>do by: Postponed to Nov 18th
+</span></code></pre>
                                 <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> You can use the <code v-pre>super.toString</code> from the subclass to invoke the behavior of the method you are overriding. This is useful here because the overriding method is simply <em>adding onto</em> the behavior of the overridden method.</p>
                                 <div slot="hint" class="algolia-no-index">
                                   <p><code v-pre>toString()</code> method of <code v-pre>Task</code> class and <code v-pre>Todo</code> class are given below. You can follow a similar approach for the <code v-pre>Deadline</code> class.</p>
-                                  <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Task</span> </span>{<br></span><span>    <span class="hljs-comment">// ...</span><br></span><span><br></span><span>    <span class="hljs-meta">@Override</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span><span class="hljs-params">()</span> </span>{<br></span><span>        <span class="hljs-keyword">return</span> <span class="hljs-string">"description: "</span> + description;<br></span><span>    }<br></span><span>}<br></span></code></pre>
-                                  <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Todo</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Task</span> </span>{<br></span><span>    <span class="hljs-comment">// ...</span><br></span><span><br></span><span>    <span class="hljs-meta">@Override</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span><span class="hljs-params">()</span> </span>{<br></span><span>        String status = <span class="hljs-keyword">null</span>;<br></span><span>        <span class="hljs-keyword">if</span> (isDone){<br></span><span>            status = <span class="hljs-string">"Yes"</span>;<br></span><span>        } <span class="hljs-keyword">else</span> {<br></span><span>            status = <span class="hljs-string">"No"</span>;<br></span><span>        }<br></span><span>        <span class="hljs-keyword">return</span> <span class="hljs-keyword">super</span>.toString() + System.lineSeparator() + <span class="hljs-string">"is done? "</span> + status;<br></span><span>    }<br></span><span>}<br></span></code></pre>
+                                  <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Task</span> </span>{
+</span><span>    <span class="hljs-comment">// ...</span>
+</span><span>
+</span><span>    <span class="hljs-meta">@Override</span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span><span class="hljs-params">()</span> </span>{
+</span><span>        <span class="hljs-keyword">return</span> <span class="hljs-string">"description: "</span> + description;
+</span><span>    }
+</span><span>}
+</span></code></pre>
+                                  <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Todo</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Task</span> </span>{
+</span><span>    <span class="hljs-comment">// ...</span>
+</span><span>
+</span><span>    <span class="hljs-meta">@Override</span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span><span class="hljs-params">()</span> </span>{
+</span><span>        String status = <span class="hljs-keyword">null</span>;
+</span><span>        <span class="hljs-keyword">if</span> (isDone){
+</span><span>            status = <span class="hljs-string">"Yes"</span>;
+</span><span>        } <span class="hljs-keyword">else</span> {
+</span><span>            status = <span class="hljs-string">"No"</span>;
+</span><span>        }
+</span><span>        <span class="hljs-keyword">return</span> <span class="hljs-keyword">super</span>.toString() + System.lineSeparator() + <span class="hljs-string">"is done? "</span> + status;
+</span><span>    }
+</span><span>}
+</span></code></pre>
                                 </div>
                               </question>
                             </panel>
@@ -341,6 +488,7 @@
             </div>
           </div>
         </div>
+        <i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i>
       </div>
 
 
@@ -348,21 +496,16 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Thu, Sep 10, 2020, 11:06:50 PM GMT+8]</small>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.16.0</a>, generated on Wed, Sep 16, 2020, 3:47:05 PM GMT+8]</small>
       </div>
     </footer>
   </div>
 </body>
-<script src="../../../markbind/js/vue.min.js"></script>
-<script src="../../../markbind/js/components.min.js"></script>
 <script src="../../../markbind/js/bootstrap-utility.min.js"></script>
-<script src="../../../markbind/js/polyfill.min.js"></script>
-<script src="../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/se-book'
-  const enableSearch = true
+  MarkBind.setupWithSearch()
 </script>
-<script src="../../../markbind/js/setup.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
   function initAlgolia() {
@@ -377,5 +520,8 @@
   MarkBind.afterSetup(initAlgolia);
 </script>
 <script src="../../../markbind/layouts/default/scripts.js"></script>
+<script>
+  if (MarkBind.AfterSetup) MarkBind.AfterSetup()
+</script>
 
 </html>

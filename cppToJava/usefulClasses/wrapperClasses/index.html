@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.15.2">
+  <meta name="generator" content="MarkBind 2.16.0">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - C++ to Java: Some Useful Classes: Wrapper Classes for Primitive Types</title>
   <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
@@ -14,11 +14,14 @@
   <link rel="stylesheet" href="../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
   <link rel="stylesheet" href="../../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../../markbind/css/github.min.css">
-  <link rel="stylesheet" href="../../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="../../../markbind/css/markbind.min.css">
+  <script src="../../../markbind/js/polyfill.min.js"></script>
+  <script src="../../../markbind/js/vue.min.js"></script>
+  <script src="../../../markbind/js/markbind.min.js"></script>
+  <script src="../../../markbind/js/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/se-book/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../../markbind/layouts/default/styles.css">
-  <link rel="stylesheet" href="../../../markbind/css/site-nav.css">
   <link rel="icon" href="/se-book/favicon.ico">
 </head>
 
@@ -257,7 +260,9 @@
                     <p>Primitive values (like <code v-pre>int</code>, <code v-pre>double</code>, and <code v-pre>char</code>) do not provide methods.</p>
                     <box>
                       <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> For example, you can’t call <code v-pre>equals</code> on an <code v-pre>int</code>:</p>
-                      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">int</span> i = <span class="hljs-number">5</span>;<br></span><span>System.out.println(i.equals(<span class="hljs-number">5</span>));  <span class="hljs-comment">// compiler error</span><br></span></code></pre>
+                      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">int</span> i = <span class="hljs-number">5</span>;
+</span><span>System.out.println(i.equals(<span class="hljs-number">5</span>));  <span class="hljs-comment">// compiler error</span>
+</span></code></pre>
                     </box>
                     <p>But <strong>for each primitive type, there is a corresponding class in the Java library, called a <em>wrapper class</em></strong>, as given in the table below. They are in the <code v-pre>java.lang</code> package i.e., no need to import.</p>
                     <div class="table-responsive">
@@ -306,17 +311,24 @@
                     </div>
                     <box>
                       <p><span><span aria-hidden="true" class="fas fa-cube"></span></span></p>
-                      <pre><code class="hljs java" v-pre><span class="highlighted">Double d = <span class="hljs-keyword">new</span> Double(<span class="hljs-number">2.5</span>);<br></span><span><span class="hljs-keyword">int</span> i = d.intValue();<br></span><span>System.out.println(d);<br></span><span>System.out.println(i);<br></span></code></pre>
+                      <pre><code class="hljs java" v-pre><span class="highlighted">Double d = <span class="hljs-keyword">new</span> Double(<span class="hljs-number">2.5</span>);
+</span><span><span class="hljs-keyword">int</span> i = d.intValue();
+</span><span>System.out.println(d);
+</span><span>System.out.println(i);
+</span></code></pre>
                       <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
-                      <pre><code class="hljs" v-pre><span>2.5<br></span><span>2<br></span></code></pre>
+                      <pre><code class="hljs" v-pre><span>2.5
+</span><span>2
+</span></code></pre>
                     </box>
                     <p>Each wrapper class defines constants <code v-pre>MIN_VALUE</code> and <code v-pre>MAX_VALUE</code>.</p>
                     <box>
                       <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Accessing max and min values for integers:</p>
-                      <pre><code class="hljs java" v-pre><span>System.out.println(Integer.MIN_VALUE + <span class="hljs-string">" : "</span> + Integer.MAX_VALUE);<br></span></code></pre>
+                      <pre><code class="hljs java" v-pre><span>System.out.println(Integer.MIN_VALUE + <span class="hljs-string">" : "</span> + Integer.MAX_VALUE);
+</span></code></pre>
                       <p><span><span aria-hidden="true" class="fas fa-arrow-right"></span></span> <code v-pre>-2147483648 : 2147483647</code></p>
                     </box>
-                    <p><strong>Wrapper classes provide methods for <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">In this context, parse means something like “read and translate”</span><em>parsing</em></span> strings to other types</strong> e.g., <code v-pre>Integer.parseInt</code> converts a string to (you guessed it) an integer. The other wrapper classes provide similar methods, like <code v-pre>Double.parseDouble</code> and <code v-pre>Boolean.parseBoolean</code>.</p>
+                    <p><strong>Wrapper classes provide methods for <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">In this context, parse means something like “read and translate”</span><em>parsing</em></span> strings to other types</strong> e.g., <code v-pre>Integer.parseInt</code> converts a string to (you guessed it) an integer. The other wrapper classes provide similar methods, like <code v-pre>Double.parseDouble</code> and <code v-pre>Boolean.parseBoolean</code>.</p>
                     <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> <code v-pre>Integer.parseInt(&quot;1234&quot;)</code> <span><span aria-hidden="true" class="fas fa-arrow-right"></span></span> <code v-pre>1234</code></p>
                     <p>Wrapper classes also provide <code v-pre>toString</code>, which returns a string representation of a value.</p>
                     <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> <code v-pre>Integer.toString(1234)</code> <span><span aria-hidden="true" class="fas fa-arrow-right"></span></span> <code v-pre>&quot;1234&quot;</code></p>
@@ -339,13 +351,33 @@
                                     <code v-pre>[&quot;5&quot;, &quot;-1&quot;]</code> <span><span aria-hidden="true" class="fas fa-arrow-right"></span></span> <code v-pre>4</code>
                                   </li>
                                 </ul>
-                                <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printTotalScore</span><span class="hljs-params">(String[] values)</span></span>{<br></span><span>        <span class="hljs-comment">// <span class="hljs-doctag">TODO:</span> add your code here</span><br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{<br></span><span>        printTotalScore(<span class="hljs-keyword">new</span> String[]{});<br></span><span>        printTotalScore(<span class="hljs-keyword">new</span> String[]{<span class="hljs-string">"0"</span>, <span class="hljs-string">"124"</span>, <span class="hljs-string">"-15"</span>});<br></span><span>    }<br></span><span>}<br></span></code></pre>
+                                <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printTotalScore</span><span class="hljs-params">(String[] values)</span></span>{
+</span><span>        <span class="hljs-comment">// <span class="hljs-doctag">TODO:</span> add your code here</span>
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+</span><span>        printTotalScore(<span class="hljs-keyword">new</span> String[]{});
+</span><span>        printTotalScore(<span class="hljs-keyword">new</span> String[]{<span class="hljs-string">"0"</span>, <span class="hljs-string">"124"</span>, <span class="hljs-string">"-15"</span>});
+</span><span>    }
+</span><span>}
+</span></code></pre>
                                 <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
-                                <pre><code class="hljs" v-pre><span>0<br></span><span>109<br></span></code></pre>
+                                <pre><code class="hljs" v-pre><span>0
+</span><span>109
+</span></code></pre>
                                 <div slot="hint" class="algolia-no-index">
                                   <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> You can use the <a href="https://www.tutorialspoint.com/java/number_parseint.htm"><code v-pre>Integer.parseInt()</code></a> method to convert a <code v-pre>String</code> to the equivalent <code v-pre>int</code> value.</p>
                                   <p>Partial solution:</p>
-                                  <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printTotalScore</span><span class="hljs-params">(String[] values)</span></span>{<br></span><span>    <span class="hljs-keyword">int</span> total = <span class="hljs-number">0</span>;<br></span><span>    <span class="hljs-keyword">for</span> (String value: values){<br></span><span>        <span class="hljs-comment">// convert the value to an int and add to the total</span><br></span><span>    }<br></span><span>    System.out.println(total);<br></span><span>}<br></span></code></pre>
+                                  <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printTotalScore</span><span class="hljs-params">(String[] values)</span></span>{
+</span><span>    <span class="hljs-keyword">int</span> total = <span class="hljs-number">0</span>;
+</span><span>    <span class="hljs-keyword">for</span> (String value: values){
+</span><span>        <span class="hljs-comment">// convert the value to an int and add to the total</span>
+</span><span>    }
+</span><span>    System.out.println(total);
+</span><span>}
+</span></code></pre>
                                 </div>
                               </question>
                             </panel>
@@ -359,6 +391,7 @@
             </div>
           </div>
         </div>
+        <i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i>
       </div>
 
 
@@ -366,21 +399,16 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Thu, Sep 10, 2020, 11:06:50 PM GMT+8]</small>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.16.0</a>, generated on Wed, Sep 16, 2020, 3:47:05 PM GMT+8]</small>
       </div>
     </footer>
   </div>
 </body>
-<script src="../../../markbind/js/vue.min.js"></script>
-<script src="../../../markbind/js/components.min.js"></script>
 <script src="../../../markbind/js/bootstrap-utility.min.js"></script>
-<script src="../../../markbind/js/polyfill.min.js"></script>
-<script src="../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/se-book'
-  const enableSearch = true
+  MarkBind.setupWithSearch()
 </script>
-<script src="../../../markbind/js/setup.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
   function initAlgolia() {
@@ -395,5 +423,8 @@
   MarkBind.afterSetup(initAlgolia);
 </script>
 <script src="../../../markbind/layouts/default/scripts.js"></script>
+<script>
+  if (MarkBind.AfterSetup) MarkBind.AfterSetup()
+</script>
 
 </html>

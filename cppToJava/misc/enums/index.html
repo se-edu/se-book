@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.15.2">
+  <meta name="generator" content="MarkBind 2.16.0">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - Java: Use Enums</title>
   <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
@@ -14,11 +14,14 @@
   <link rel="stylesheet" href="../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
   <link rel="stylesheet" href="../../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../../markbind/css/github.min.css">
-  <link rel="stylesheet" href="../../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="../../../markbind/css/markbind.min.css">
+  <script src="../../../markbind/js/polyfill.min.js"></script>
+  <script src="../../../markbind/js/vue.min.js"></script>
+  <script src="../../../markbind/js/markbind.min.js"></script>
+  <script src="../../../markbind/js/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/se-book/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../../markbind/layouts/default/styles.css">
-  <link rel="stylesheet" href="../../../markbind/css/site-nav.css">
   <link rel="icon" href="/se-book/favicon.ico">
 </head>
 
@@ -257,9 +260,24 @@
                     <p><strong>You can define an enum type by using the <code v-pre>enum</code> keyword.</strong> Because they are constants, the names of an enum type's fields are in uppercase letters e.g., <code v-pre>FLAG_SUCCESS</code> by convention.</p>
                     <box>
                       <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Defining an enumeration to represent days of a week (code to be put in the <code v-pre>Day.java</code> file):</p>
-                      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-keyword">enum</span> Day {<br></span><span>    SUNDAY, MONDAY, TUESDAY, WEDNESDAY,<br></span><span>    THURSDAY, FRIDAY, SATURDAY<br></span><span>}<br></span></code></pre>
+                      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-keyword">enum</span> Day {
+</span><span>    SUNDAY, MONDAY, TUESDAY, WEDNESDAY,
+</span><span>    THURSDAY, FRIDAY, SATURDAY
+</span><span>}
+</span></code></pre>
                       <p>Some examples of using the <code v-pre>Day</code> enumeration defined above:</p>
-                      <pre><code class="hljs java" v-pre><span>Day today = Day.MONDAY;<br></span><span>Day[] holidays = <span class="hljs-keyword">new</span> Day[]{Day.SATURDAY, Day.SUNDAY};<br></span><span><br></span><span><span class="hljs-keyword">switch</span> (today) {<br></span><span><span class="hljs-keyword">case</span> SATURDAY:<br></span><span><span class="hljs-keyword">case</span> SUNDAY:<br></span><span>    System.out.println(<span class="hljs-string">"It's the weekend"</span>);<br></span><span>    <span class="hljs-keyword">break</span>;<br></span><span><span class="hljs-keyword">default</span>:<br></span><span>    System.out.println(<span class="hljs-string">"It's a week day"</span>);<br></span><span>}<br></span></code></pre>
+                      <pre><code class="hljs java" v-pre><span>Day today = Day.MONDAY;
+</span><span>Day[] holidays = <span class="hljs-keyword">new</span> Day[]{Day.SATURDAY, Day.SUNDAY};
+</span><span>
+</span><span><span class="hljs-keyword">switch</span> (today) {
+</span><span><span class="hljs-keyword">case</span> SATURDAY:
+</span><span><span class="hljs-keyword">case</span> SUNDAY:
+</span><span>    System.out.println(<span class="hljs-string">"It's the weekend"</span>);
+</span><span>    <span class="hljs-keyword">break</span>;
+</span><span><span class="hljs-keyword">default</span>:
+</span><span>    System.out.println(<span class="hljs-string">"It's a week day"</span>);
+</span><span>}
+</span></code></pre>
                     </box>
                     <p>Note that while enumerations are usually a simple set of fixed values, <strong>Java enumerations can have behaviors too</strong>, as explained in <a href="https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html">this tutorial from <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small></a></p>
                   </div>
@@ -275,14 +293,40 @@
                               </template>
                               <question>
                                 <p>Define an enumeration named <code v-pre>Priority</code>. Add the missing <code v-pre>describe</code> method to the code below so that it produces the output given.</p>
-                                <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{<br></span><span><br></span><span>    <span class="hljs-comment">// Add your method here</span><br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{<br></span><span>        describe(<span class="hljs-string">"Red"</span>, Priority.HIGH);<br></span><span>        describe(<span class="hljs-string">"Orange"</span>, Priority.MEDIUM);<br></span><span>        describe(<span class="hljs-string">"Blue"</span>, Priority.MEDIUM);<br></span><span>        describe(<span class="hljs-string">"Green"</span>, Priority.LOW);<br></span><span>    }<br></span><span>}<br></span></code></pre>
+                                <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+</span><span>
+</span><span>    <span class="hljs-comment">// Add your method here</span>
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+</span><span>        describe(<span class="hljs-string">"Red"</span>, Priority.HIGH);
+</span><span>        describe(<span class="hljs-string">"Orange"</span>, Priority.MEDIUM);
+</span><span>        describe(<span class="hljs-string">"Blue"</span>, Priority.MEDIUM);
+</span><span>        describe(<span class="hljs-string">"Green"</span>, Priority.LOW);
+</span><span>    }
+</span><span>}
+</span></code></pre>
                                 <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
-                                <pre><code class="hljs" v-pre><span>Red indicates high priority<br></span><span>Orange indicates medium priority<br></span><span>Blue indicates medium priority<br></span><span>Green indicates low priority<br></span></code></pre>
+                                <pre><code class="hljs" v-pre><span>Red indicates high priority
+</span><span>Orange indicates medium priority
+</span><span>Blue indicates medium priority
+</span><span>Green indicates low priority
+</span></code></pre>
                                 <div slot="hint" class="algolia-no-index">
                                   <p>Use a <code v-pre>switch</code> statement to select between possible values for <code v-pre>Priority</code>.</p>
-                                  <pre><code class="hljs java" v-pre><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">describe</span><span class="hljs-params">(String color, Priority p)</span> </span>{<br></span><span>        <span class="hljs-keyword">switch</span> (p) {<br></span><span>            <span class="hljs-keyword">case</span> LOW:<br></span><span>                System.out.println(color + <span class="hljs-string">" indicates low priority"</span>);<br></span><span>                <span class="hljs-keyword">break</span>;<br></span><span>            <span class="hljs-comment">// ...</span><br></span><span>        }<br></span><span>    }<br></span></code></pre>
+                                  <pre><code class="hljs java" v-pre><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">describe</span><span class="hljs-params">(String color, Priority p)</span> </span>{
+</span><span>        <span class="hljs-keyword">switch</span> (p) {
+</span><span>            <span class="hljs-keyword">case</span> LOW:
+</span><span>                System.out.println(color + <span class="hljs-string">" indicates low priority"</span>);
+</span><span>                <span class="hljs-keyword">break</span>;
+</span><span>            <span class="hljs-comment">// ...</span>
+</span><span>        }
+</span><span>    }
+</span></code></pre>
                                   <p>Code for the enumeration is given below:</p>
-                                  <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-keyword">enum</span> Priority {<br></span><span>    HIGH, MEDIUM, LOW<br></span><span>}<br></span></code></pre>
+                                  <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-keyword">enum</span> Priority {
+</span><span>    HIGH, MEDIUM, LOW
+</span><span>}
+</span></code></pre>
                                 </div>
                               </question>
                             </panel>
@@ -296,6 +340,7 @@
             </div>
           </div>
         </div>
+        <i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i>
       </div>
 
 
@@ -303,21 +348,16 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Thu, Sep 10, 2020, 11:06:50 PM GMT+8]</small>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.16.0</a>, generated on Wed, Sep 16, 2020, 3:47:05 PM GMT+8]</small>
       </div>
     </footer>
   </div>
 </body>
-<script src="../../../markbind/js/vue.min.js"></script>
-<script src="../../../markbind/js/components.min.js"></script>
 <script src="../../../markbind/js/bootstrap-utility.min.js"></script>
-<script src="../../../markbind/js/polyfill.min.js"></script>
-<script src="../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/se-book'
-  const enableSearch = true
+  MarkBind.setupWithSearch()
 </script>
-<script src="../../../markbind/js/setup.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
   function initAlgolia() {
@@ -332,5 +372,8 @@
   MarkBind.afterSetup(initAlgolia);
 </script>
 <script src="../../../markbind/layouts/default/scripts.js"></script>
+<script>
+  if (MarkBind.AfterSetup) MarkBind.AfterSetup()
+</script>
 
 </html>

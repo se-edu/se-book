@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.15.2">
+  <meta name="generator" content="MarkBind 2.16.0">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - Test Case Design: Introduction: What</title>
   <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
@@ -14,11 +14,14 @@
   <link rel="stylesheet" href="../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
   <link rel="stylesheet" href="../../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../../markbind/css/github.min.css">
-  <link rel="stylesheet" href="../../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="../../../markbind/css/markbind.min.css">
+  <script src="../../../markbind/js/polyfill.min.js"></script>
+  <script src="../../../markbind/js/vue.min.js"></script>
+  <script src="../../../markbind/js/markbind.min.js"></script>
+  <script src="../../../markbind/js/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/se-book/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../../markbind/layouts/default/styles.css">
-  <link rel="stylesheet" href="../../../markbind/css/site-nav.css">
   <link rel="icon" href="/se-book/favicon.ico">
 </head>
 
@@ -254,9 +257,9 @@
                 </div>
                 <div id="main">
                   <div>
-                    <p><strong>Except for trivial <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">Software Under Test</span>SUTs</span>, <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">testing all possible cases</span>exhaustive testing</span> is not practical</strong> because such testing often requires a massive/infinite number of test cases.</p>
+                    <p><strong>Except for trivial <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">Software Under Test</span>SUTs</span>, <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">testing all possible cases</span>exhaustive testing</span> is not practical</strong> because such testing often requires a massive/infinite number of test cases.</p>
                     <box>
-                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider the test cases for adding a string object to a <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">Java: <code v-pre>ArrayList</code>,<br>Python: <code v-pre>list</code></span>collection</span>:</p>
+                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider the test cases for adding a string object to a <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">Java: <code v-pre>ArrayList</code>,<br>Python: <code v-pre>list</code></span>collection</span>:</p>
                       <ul>
                         <li>Add an item to an empty collection.</li>
                         <li>Add an item when there is one item in the collection.</li>
@@ -284,7 +287,7 @@
                           <p><strong>Testing should be <em>efficient</em></strong> i.e., it has a high rate of success (bugs found/test cases) <span class="dimmed">a set of 20 test cases that finds 8 defects is more efficient than another set of 40 test cases that finds the same 8 defects</span>.</p>
                         </li>
                       </ul>
-                      <p><strong>For testing to be <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">Efficient and Effective</span>E&amp;E</span>, each new test you add should be targeting a potential fault that is not already targeted by existing test cases.</strong> There are test case design techniques that can help us improve E&amp;E of testing.</p>
+                      <p><strong>For testing to be <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">Efficient and Effective</span>E&amp;E</span>, each new test you add should be targeting a potential fault that is not already targeted by existing test cases.</strong> There are test case design techniques that can help us improve E&amp;E of testing.</p>
                     </div>
                   </div>
                   <div>
@@ -298,9 +301,17 @@
                             </template>
                             <question has-input="true">
                               <p>Given below is the sample output from a text-based program <code v-pre>TriangleDetector</code> ithat determines whether the three input numbers make up the three sides of a valid triangle. List test cases you would use to test this software. Two sample test cases are given below.</p>
-                              <pre><code class="hljs" v-pre><span>C:\&gt; java TriangleDetector<br></span><span>Enter side 1: 34<br></span><span>Enter side 2: 34<br></span><span>Enter side 3: 32<br></span><span>Can this be a triangle?:  Yes<br></span><span>Enter side 1:<br></span></code></pre>
+                              <pre><code class="hljs" v-pre><span>C:\&gt; java TriangleDetector
+</span><span>Enter side 1: 34
+</span><span>Enter side 2: 34
+</span><span>Enter side 3: 32
+</span><span>Can this be a triangle?:  Yes
+</span><span>Enter side 1:
+</span></code></pre>
                               <p>Sample test cases,</p>
-                              <pre><code class="hljs" v-pre><span>34,34,34: Yes<br></span><span>0, any valid, any valid: No<br></span></code></pre>
+                              <pre><code class="hljs" v-pre><span>34,34,34: Yes
+</span><span>0, any valid, any valid: No
+</span></code></pre>
                               <div slot="answer" class="algolia-no-index">
                                 <p>In addition to obvious test cases such as</p>
                                 <ul>
@@ -369,6 +380,7 @@
             </div>
           </div>
         </div>
+        <i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i>
       </div>
 
 
@@ -376,21 +388,16 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Thu, Sep 10, 2020, 11:06:50 PM GMT+8]</small>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.16.0</a>, generated on Wed, Sep 16, 2020, 3:47:05 PM GMT+8]</small>
       </div>
     </footer>
   </div>
 </body>
-<script src="../../../markbind/js/vue.min.js"></script>
-<script src="../../../markbind/js/components.min.js"></script>
 <script src="../../../markbind/js/bootstrap-utility.min.js"></script>
-<script src="../../../markbind/js/polyfill.min.js"></script>
-<script src="../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/se-book'
-  const enableSearch = true
+  MarkBind.setupWithSearch()
 </script>
-<script src="../../../markbind/js/setup.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
   function initAlgolia() {
@@ -405,5 +412,8 @@
   MarkBind.afterSetup(initAlgolia);
 </script>
 <script src="../../../markbind/layouts/default/scripts.js"></script>
+<script>
+  if (MarkBind.AfterSetup) MarkBind.AfterSetup()
+</script>
 
 </html>

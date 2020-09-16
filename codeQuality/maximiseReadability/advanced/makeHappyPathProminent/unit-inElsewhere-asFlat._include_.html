@@ -14,7 +14,19 @@
         <p>
           <font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font>
         </p>
-        <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">if</span> (!isUnusualCase) {  <span class="hljs-comment">//detecting an unusual condition</span><br></span><span>    <span class="hljs-keyword">if</span> (!isErrorCase) {<br></span><span>        start();    <span class="hljs-comment">//main path</span><br></span><span>        process();<br></span><span>        cleanup();<br></span><span>        exit();<br></span><span>    } <span class="hljs-keyword">else</span> {<br></span><span>        handleError();<br></span><span>    }<br></span><span>} <span class="hljs-keyword">else</span> {<br></span><span>    handleUnusualCase(); <span class="hljs-comment">//handling that unusual condition</span><br></span><span>}<br></span></code></pre>
+        <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">if</span> (!isUnusualCase) {  <span class="hljs-comment">//detecting an unusual condition</span>
+</span><span>    <span class="hljs-keyword">if</span> (!isErrorCase) {
+</span><span>        start();    <span class="hljs-comment">//main path</span>
+</span><span>        process();
+</span><span>        cleanup();
+</span><span>        exit();
+</span><span>    } <span class="hljs-keyword">else</span> {
+</span><span>        handleError();
+</span><span>    }
+</span><span>} <span class="hljs-keyword">else</span> {
+</span><span>    handleUnusualCase(); <span class="hljs-comment">//handling that unusual condition</span>
+</span><span>}
+</span></code></pre>
         <p>In the code above,</p>
         <ul>
           <li>Unusual condition detection is separated from their handling.</li>
@@ -23,7 +35,21 @@
         <p>
           <font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong></span></font>
         </p>
-        <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">if</span> (isUnusualCase) { <span class="hljs-comment">//Guard Clause</span><br></span><span>    handleUnusualCase();<br></span><span>    <span class="hljs-keyword">return</span>;<br></span><span>}<br></span><span><br></span><span><span class="hljs-keyword">if</span> (isErrorCase) { <span class="hljs-comment">//Guard Clause</span><br></span><span>    handleError();<br></span><span>    <span class="hljs-keyword">return</span>;<br></span><span>}<br></span><span><br></span><span>start();<br></span><span>process();<br></span><span>cleanup();<br></span><span>exit();<br></span></code></pre>
+        <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">if</span> (isUnusualCase) { <span class="hljs-comment">//Guard Clause</span>
+</span><span>    handleUnusualCase();
+</span><span>    <span class="hljs-keyword">return</span>;
+</span><span>}
+</span><span>
+</span><span><span class="hljs-keyword">if</span> (isErrorCase) { <span class="hljs-comment">//Guard Clause</span>
+</span><span>    handleError();
+</span><span>    <span class="hljs-keyword">return</span>;
+</span><span>}
+</span><span>
+</span><span>start();
+</span><span>process();
+</span><span>cleanup();
+</span><span>exit();
+</span></code></pre>
         <p>In contrast, the above code</p>
         <ul>
           <li>deals with unusual conditions as soon as they are detected so that the reader doesn't have to remember them for long.</li>

@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.15.2">
+  <meta name="generator" content="MarkBind 2.16.0">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - C++ to Java: Miscellaneous Topics: Constants</title>
   <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
@@ -14,11 +14,14 @@
   <link rel="stylesheet" href="../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
   <link rel="stylesheet" href="../../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../../markbind/css/github.min.css">
-  <link rel="stylesheet" href="../../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="../../../markbind/css/markbind.min.css">
+  <script src="../../../markbind/js/polyfill.min.js"></script>
+  <script src="../../../markbind/js/vue.min.js"></script>
+  <script src="../../../markbind/js/markbind.min.js"></script>
+  <script src="../../../markbind/js/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/se-book/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../../markbind/layouts/default/styles.css">
-  <link rel="stylesheet" href="../../../markbind/css/site-nav.css">
   <link rel="icon" href="/se-book/favicon.ico">
 </head>
 
@@ -258,15 +261,24 @@
                     <p><strong>To create a package, you put a package statement at the very top of every source file in that package.</strong> The package statement must be the first line in the source file and there can be no more than one package statement in each source file. Furthermore, <strong>the package of a type should match the folder path of the source file.</strong> Similarly, the compiler will put the <code v-pre>.class</code> files in a folder structure that matches the package names.</p>
                     <box>
                       <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The <code v-pre>Formatter</code> class below (in <code v-pre>&lt;source folder&gt;/seedu/tojava/util/Formatter.java</code> file) is in the package <code v-pre>seedu.tojava.util</code>. When it is compiled, the <code v-pre>Formatter.class</code> file will be in the location <code v-pre>&lt;compiler output folder&gt;/seedu/tojava/util</code>:</p>
-                      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">package</span> seedu.tojava.util;<br></span><span><br></span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Formatter</span> </span>{<br></span><span>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String PREFIX = <span class="hljs-string">"&gt;&gt;"</span>;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> String <span class="hljs-title">format</span><span class="hljs-params">(String s)</span></span>{<br></span><span>        <span class="hljs-keyword">return</span> PREFIX + s;<br></span><span>    }<br></span><span>}<br></span></code></pre>
+                      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">package</span> seedu.tojava.util;
+</span><span>
+</span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Formatter</span> </span>{
+</span><span>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String PREFIX = <span class="hljs-string">"&gt;&gt;"</span>;
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> String <span class="hljs-title">format</span><span class="hljs-params">(String s)</span></span>{
+</span><span>        <span class="hljs-keyword">return</span> PREFIX + s;
+</span><span>    }
+</span><span>}
+</span></code></pre>
                     </box>
                     <p><strong>Package names are written in all lower case</strong> (not camelCase), using the dot as a separator. Packages in the Java language itself begin with <code v-pre>java</code>. or <code v-pre>javax</code>. Companies use their reversed Internet domain name to begin their package names.</p>
                     <box>
                       <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> For example, <code v-pre>com.foobar.doohickey.util</code> can be the name of a package created by a company with a domain name <code v-pre>foobar.com</code></p>
                     </box>
-                    <p><strong>To use a public <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">types contained in the package</span>package member</span> from outside its package, you must do one of the following:</strong></p>
+                    <p><strong>To use a public <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">types contained in the package</span>package member</span> from outside its package, you must do one of the following:</strong></p>
                     <ol>
-                      <li><strong>Use the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">type name prefixed by the package name e.g., <code v-pre>java.io.IOException</code></span>fully qualified name</span></strong> to refer to the member</li>
+                      <li><strong>Use the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">type name prefixed by the package name e.g., <code v-pre>java.io.IOException</code></span>fully qualified name</span></strong> to refer to the member</li>
                       <li><strong>Import</strong> the package or the specific package member</li>
                     </ol>
                     <box>
@@ -275,7 +287,28 @@
                         <li><code v-pre>import seedu.tojava.util.StringParser</code>: imports the class <code v-pre>StringParser</code> in the <code v-pre>seedu.tojava.util</code> package</li>
                         <li><code v-pre>import seedu.tojava.frontend.*</code>: imports all the classes in the <code v-pre>seedu.tojava.frontend</code> package</li>
                       </ul>
-                      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">package</span> seedu.tojava;<br></span><span><br></span><span><span class="hljs-keyword">import</span> seedu.tojava.util.StringParser;<br></span><span><span class="hljs-keyword">import</span> seedu.tojava.frontend.*;<br></span><span><br></span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{<br></span><span><br></span><span>        <span class="hljs-comment">// Using the fully qualified name to access the Processor class</span><br></span><span>        String status = seedu.tojava.logic.Processor.getStatus();<br></span><span><br></span><span>        <span class="hljs-comment">// Using the StringParser previously imported</span><br></span><span>        StringParser sp = <span class="hljs-keyword">new</span> StringParser();<br></span><span><br></span><span>        <span class="hljs-comment">// Using classes from the tojava.frontend package</span><br></span><span>        Ui ui = <span class="hljs-keyword">new</span> Ui();<br></span><span>        Message m = <span class="hljs-keyword">new</span> Message();<br></span><span><br></span><span>    }<br></span><span>}<br></span></code></pre>
+                      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">package</span> seedu.tojava;
+</span><span>
+</span><span><span class="hljs-keyword">import</span> seedu.tojava.util.StringParser;
+</span><span><span class="hljs-keyword">import</span> seedu.tojava.frontend.*;
+</span><span>
+</span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+</span><span>
+</span><span>        <span class="hljs-comment">// Using the fully qualified name to access the Processor class</span>
+</span><span>        String status = seedu.tojava.logic.Processor.getStatus();
+</span><span>
+</span><span>        <span class="hljs-comment">// Using the StringParser previously imported</span>
+</span><span>        StringParser sp = <span class="hljs-keyword">new</span> StringParser();
+</span><span>
+</span><span>        <span class="hljs-comment">// Using classes from the tojava.frontend package</span>
+</span><span>        Ui ui = <span class="hljs-keyword">new</span> Ui();
+</span><span>        Message m = <span class="hljs-keyword">new</span> Message();
+</span><span>
+</span><span>    }
+</span><span>}
+</span></code></pre>
                       <p>Note how the class can still use the <code v-pre>Processor</code> without importing it first, by using its fully qualified name <code v-pre>seedu.tojava.logic.Processor</code></p>
                     </box>
                     <p><strong>Importing a package does not import its sub-packages</strong>, as packages do not behave as hierarchies despite appearances.</p>
@@ -286,11 +319,32 @@
                     <p><strong>Optionally, a <em>static import</em> can be used to import static members of a type</strong> so that the imported members can be used without specifying the type name.</p>
                     <box>
                       <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The class below uses static imports to import the constant <code v-pre>PREFIX</code> and the method <code v-pre>format()</code> from the <code v-pre>seedu.tojava.util.Formatter</code> class.</p>
-                      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">import</span> <span class="hljs-keyword">static</span> seedu.tojava.util.Formatter.PREFIX;<br></span><span><span class="hljs-keyword">import</span> <span class="hljs-keyword">static</span> seedu.tojava.util.Formatter.format;<br></span><span><br></span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{<br></span><span><br></span><span>        String formatted = format(<span class="hljs-string">"Hello"</span>);<br></span><span>        <span class="hljs-keyword">boolean</span> isFormatted = formatted.startsWith(PREFIX);<br></span><span>        System.out.println(formatted);<br></span><span>    }<br></span><span>}<br></span></code></pre>
+                      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">import</span> <span class="hljs-keyword">static</span> seedu.tojava.util.Formatter.PREFIX;
+</span><span><span class="hljs-keyword">import</span> <span class="hljs-keyword">static</span> seedu.tojava.util.Formatter.format;
+</span><span>
+</span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+</span><span>
+</span><span>        String formatted = format(<span class="hljs-string">"Hello"</span>);
+</span><span>        <span class="hljs-keyword">boolean</span> isFormatted = formatted.startsWith(PREFIX);
+</span><span>        System.out.println(formatted);
+</span><span>    }
+</span><span>}
+</span></code></pre>
                       <panel type="seamless" class="algolia-no-index"><template slot="_header">
                           <p><code v-pre>Formatter</code> class</p>
                         </template>
-                        <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">package</span> seedu.tojava.util;<br></span><span><br></span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Formatter</span> </span>{<br></span><span>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String PREFIX = <span class="hljs-string">"&gt;&gt;"</span>;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> String <span class="hljs-title">format</span><span class="hljs-params">(String s)</span></span>{<br></span><span>        <span class="hljs-keyword">return</span> PREFIX + s;<br></span><span>    }<br></span><span>}<br></span></code></pre>
+                        <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">package</span> seedu.tojava.util;
+</span><span>
+</span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Formatter</span> </span>{
+</span><span>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String PREFIX = <span class="hljs-string">"&gt;&gt;"</span>;
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> String <span class="hljs-title">format</span><span class="hljs-params">(String s)</span></span>{
+</span><span>        <span class="hljs-keyword">return</span> PREFIX + s;
+</span><span>    }
+</span><span>}
+</span></code></pre>
                       </panel>
                       <p>Note how the class can use <code v-pre>PREFIX</code> and <code v-pre>format()</code> (instead of <code v-pre>Formatter.PREFIX</code> and <code v-pre>Formatter.format()</code>).</p>
                     </box>
@@ -325,6 +379,7 @@
             </div>
           </div>
         </div>
+        <i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i>
       </div>
 
 
@@ -332,21 +387,16 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Thu, Sep 10, 2020, 11:06:50 PM GMT+8]</small>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.16.0</a>, generated on Wed, Sep 16, 2020, 3:47:05 PM GMT+8]</small>
       </div>
     </footer>
   </div>
 </body>
-<script src="../../../markbind/js/vue.min.js"></script>
-<script src="../../../markbind/js/components.min.js"></script>
 <script src="../../../markbind/js/bootstrap-utility.min.js"></script>
-<script src="../../../markbind/js/polyfill.min.js"></script>
-<script src="../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/se-book'
-  const enableSearch = true
+  MarkBind.setupWithSearch()
 </script>
-<script src="../../../markbind/js/setup.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
   function initAlgolia() {
@@ -361,5 +411,8 @@
   MarkBind.afterSetup(initAlgolia);
 </script>
 <script src="../../../markbind/layouts/default/scripts.js"></script>
+<script>
+  if (MarkBind.AfterSetup) MarkBind.AfterSetup()
+</script>
 
 </html>

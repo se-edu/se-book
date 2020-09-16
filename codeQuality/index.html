@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.15.2">
+  <meta name="generator" content="MarkBind 2.16.0">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - Code Quality</title>
   <link rel="stylesheet" href="../markbind/css/bootstrap.min.css">
@@ -14,12 +14,14 @@
   <link rel="stylesheet" href="../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
   <link rel="stylesheet" href="../markbind/css/octicons.css">
   <link rel="stylesheet" href="../markbind/css/github.min.css">
-  <link rel="stylesheet" href="../markbind/css/markbind.css">
+  <link rel="stylesheet" href="../markbind/css/markbind.min.css">
+  <script src="../markbind/js/polyfill.min.js"></script>
+  <script src="../markbind/js/vue.min.js"></script>
+  <script src="../markbind/js/markbind.min.js"></script>
+  <script src="../markbind/js/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/se-book/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../markbind/layouts/default/styles.css">
-  <link rel="stylesheet" href="../markbind/css/site-nav.css">
-  <link rel="stylesheet" href="../markbind/css/page-nav.css">
   <link rel="icon" href="/se-book/favicon.ico">
 </head>
 
@@ -270,9 +272,11 @@
                               <blockquote>
                                 <p>Always code as if the person who ends up maintaining your code will be a violent psychopath who knows where you live. <sub>-- Martin Golding</sub></p>
                               </blockquote>
-                              <p><strong><span for="pop:production-code" v-b-popover.hover.top.html="popoverGenerator" v-b-tooltip.hover.top.html="tooltipContentGetter" v-on:mouseover="$refs['pop:production-code'].show()" class="trigger">Production code</span> needs to be of high quality</strong>. Given how the world is becoming increasingly dependent of software, poor quality code is something no one can afford to tolerate.</p>
-                              <span id="pop:production-code" placement="top" data-mb-component-type="popover" v-b-popover.hover.top.html="popoverInnerGenerator" class="trigger"><span data-mb-html-for="header"><span><span aria-hidden="true" class="glyphicon glyphicon-eye-open"></span></span> Production Code</span>
-                                <div data-mb-html-for="content">
+                              <p><strong>
+                                  <trigger for="pop:production-code">Production code</trigger> needs to be of high quality
+                                </strong>. Given how the world is becoming increasingly dependent of software, poor quality code is something no one can afford to tolerate.</p>
+                              <span id="pop:production-code" placement="top" data-mb-component-type="popover" v-b-popover.hover.top.html="popoverInnerGetters" class="trigger"><span data-mb-slot-name="header"><span><span aria-hidden="true" class="glyphicon glyphicon-eye-open"></span></span> Production Code</span>
+                                <div data-mb-slot-name="content">
                                   Code being used in an actual product with actual users
                                 </div>
                               </span>
@@ -319,14 +323,44 @@
                                           <p>
                                             <font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font>
                                           </p>
-                                          <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">subsidy</span><span class="hljs-params">()</span> </span>{<br></span><span>    <span class="hljs-keyword">int</span> subsidy;<br></span><span>    <span class="hljs-keyword">if</span> (!age) {<br></span><span>        <span class="hljs-keyword">if</span> (!sub) {<br></span><span>            <span class="hljs-keyword">if</span> (!notFullTime) {<br></span><span>                subsidy = <span class="hljs-number">500</span>;<br></span><span>            } <span class="hljs-keyword">else</span> {<br></span><span>                subsidy = <span class="hljs-number">250</span>;<br></span><span>            }<br></span><span>        } <span class="hljs-keyword">else</span> {<br></span><span>            subsidy = <span class="hljs-number">250</span>;<br></span><span>        }<br></span><span>    } <span class="hljs-keyword">else</span> {<br></span><span>        subsidy = -<span class="hljs-number">1</span>;<br></span><span>    }<br></span><span>    <span class="hljs-keyword">return</span> subsidy;<br></span><span>}<br></span></code></pre>
+                                          <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">subsidy</span><span class="hljs-params">()</span> </span>{
+</span><span>    <span class="hljs-keyword">int</span> subsidy;
+</span><span>    <span class="hljs-keyword">if</span> (!age) {
+</span><span>        <span class="hljs-keyword">if</span> (!sub) {
+</span><span>            <span class="hljs-keyword">if</span> (!notFullTime) {
+</span><span>                subsidy = <span class="hljs-number">500</span>;
+</span><span>            } <span class="hljs-keyword">else</span> {
+</span><span>                subsidy = <span class="hljs-number">250</span>;
+</span><span>            }
+</span><span>        } <span class="hljs-keyword">else</span> {
+</span><span>            subsidy = <span class="hljs-number">250</span>;
+</span><span>        }
+</span><span>    } <span class="hljs-keyword">else</span> {
+</span><span>        subsidy = -<span class="hljs-number">1</span>;
+</span><span>    }
+</span><span>    <span class="hljs-keyword">return</span> subsidy;
+</span><span>}
+</span></code></pre>
                                         </td>
                                         <td>&nbsp;&nbsp;<br><br></td>
                                         <td valign="top">
                                           <p>
                                             <font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong></span></font>
                                           </p>
-                                          <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">calculateSubsidy</span><span class="hljs-params">()</span> </span>{<br></span><span>    <span class="hljs-keyword">int</span> subsidy;<br></span><span>    <span class="hljs-keyword">if</span> (isSenior) {<br></span><span>        subsidy = REJECT_SENIOR;<br></span><span>    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (isAlreadySubsidised) {<br></span><span>        subsidy = SUBSIDISED_SUBSIDY;<br></span><span>    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (isPartTime) {<br></span><span>        subsidy = FULLTIME_SUBSIDY * RATIO;<br></span><span>    } <span class="hljs-keyword">else</span> {<br></span><span>        subsidy = FULLTIME_SUBSIDY;<br></span><span>    }<br></span><span>    <span class="hljs-keyword">return</span> subsidy;<br></span><span>}<br></span></code></pre>
+                                          <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">calculateSubsidy</span><span class="hljs-params">()</span> </span>{
+</span><span>    <span class="hljs-keyword">int</span> subsidy;
+</span><span>    <span class="hljs-keyword">if</span> (isSenior) {
+</span><span>        subsidy = REJECT_SENIOR;
+</span><span>    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (isAlreadySubsidised) {
+</span><span>        subsidy = SUBSIDISED_SUBSIDY;
+</span><span>    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (isPartTime) {
+</span><span>        subsidy = FULLTIME_SUBSIDY * RATIO;
+</span><span>    } <span class="hljs-keyword">else</span> {
+</span><span>        subsidy = FULLTIME_SUBSIDY;
+</span><span>    }
+</span><span>    <span class="hljs-keyword">return</span> subsidy;
+</span><span>}
+</span></code></pre>
                                         </td>
                                       </tr>
                                     </table>
@@ -340,14 +374,35 @@
                                           <p>
                                             <font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font>
                                           </p>
-                                          <pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">calculate_subs</span><span class="hljs-params">()</span>:</span><br></span><span>    <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> age:<br></span><span>        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> sub:<br></span><span>            <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> not_fulltime:<br></span><span>                subsidy = <span class="hljs-number">500</span><br></span><span>            <span class="hljs-keyword">else</span>:<br></span><span>                subsidy = <span class="hljs-number">250</span><br></span><span>        <span class="hljs-keyword">else</span>:<br></span><span>            subsidy = <span class="hljs-number">250</span><br></span><span>    <span class="hljs-keyword">else</span>:<br></span><span>        subsidy = <span class="hljs-number">-1</span><br></span><span>    <span class="hljs-keyword">return</span> subsidy<br></span></code></pre>
+                                          <pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">calculate_subs</span><span class="hljs-params">()</span>:</span>
+</span><span>    <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> age:
+</span><span>        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> sub:
+</span><span>            <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> not_fulltime:
+</span><span>                subsidy = <span class="hljs-number">500</span>
+</span><span>            <span class="hljs-keyword">else</span>:
+</span><span>                subsidy = <span class="hljs-number">250</span>
+</span><span>        <span class="hljs-keyword">else</span>:
+</span><span>            subsidy = <span class="hljs-number">250</span>
+</span><span>    <span class="hljs-keyword">else</span>:
+</span><span>        subsidy = <span class="hljs-number">-1</span>
+</span><span>    <span class="hljs-keyword">return</span> subsidy
+</span></code></pre>
                                         </td>
                                         <td>&nbsp;&nbsp;<br><br></td>
                                         <td valign="top">
                                           <p>
                                             <font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong></span></font>
                                           </p>
-                                          <pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">calculate_subsidy</span><span class="hljs-params">()</span>:</span><br></span><span>    <span class="hljs-keyword">if</span> is_senior:<br></span><span>        <span class="hljs-keyword">return</span> REJECT_SENIOR<br></span><span>    <span class="hljs-keyword">elif</span> is_already_subsidised:<br></span><span>        <span class="hljs-keyword">return</span> SUBSIDISED_SUBSIDY<br></span><span>    <span class="hljs-keyword">elif</span> is_parttime:<br></span><span>        <span class="hljs-keyword">return</span> FULLTIME_SUBSIDY * RATIO<br></span><span>    <span class="hljs-keyword">else</span>:<br></span><span>        <span class="hljs-keyword">return</span> FULLTIME_SUBSIDY<br></span></code></pre>
+                                          <pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">calculate_subsidy</span><span class="hljs-params">()</span>:</span>
+</span><span>    <span class="hljs-keyword">if</span> is_senior:
+</span><span>        <span class="hljs-keyword">return</span> REJECT_SENIOR
+</span><span>    <span class="hljs-keyword">elif</span> is_already_subsidised:
+</span><span>        <span class="hljs-keyword">return</span> SUBSIDISED_SUBSIDY
+</span><span>    <span class="hljs-keyword">elif</span> is_parttime:
+</span><span>        <span class="hljs-keyword">return</span> FULLTIME_SUBSIDY * RATIO
+</span><span>    <span class="hljs-keyword">else</span>:
+</span><span>        <span class="hljs-keyword">return</span> FULLTIME_SUBSIDY
+</span></code></pre>
                                         </td>
                                       </tr>
                                     </table>
@@ -415,14 +470,44 @@
                                                 <p>
                                                   <font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font>
                                                 </p>
-                                                <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">subsidy</span><span class="hljs-params">()</span> </span>{<br></span><span>    <span class="hljs-keyword">int</span> subsidy;<br></span><span>    <span class="hljs-keyword">if</span> (!age) {<br></span><span>        <span class="hljs-keyword">if</span> (!sub) {<br></span><span>            <span class="hljs-keyword">if</span> (!notFullTime) {<br></span><span>                subsidy = <span class="hljs-number">500</span>;<br></span><span>            } <span class="hljs-keyword">else</span> {<br></span><span>                subsidy = <span class="hljs-number">250</span>;<br></span><span>            }<br></span><span>        } <span class="hljs-keyword">else</span> {<br></span><span>            subsidy = <span class="hljs-number">250</span>;<br></span><span>        }<br></span><span>    } <span class="hljs-keyword">else</span> {<br></span><span>        subsidy = -<span class="hljs-number">1</span>;<br></span><span>    }<br></span><span>    <span class="hljs-keyword">return</span> subsidy;<br></span><span>}<br></span></code></pre>
+                                                <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">subsidy</span><span class="hljs-params">()</span> </span>{
+</span><span>    <span class="hljs-keyword">int</span> subsidy;
+</span><span>    <span class="hljs-keyword">if</span> (!age) {
+</span><span>        <span class="hljs-keyword">if</span> (!sub) {
+</span><span>            <span class="hljs-keyword">if</span> (!notFullTime) {
+</span><span>                subsidy = <span class="hljs-number">500</span>;
+</span><span>            } <span class="hljs-keyword">else</span> {
+</span><span>                subsidy = <span class="hljs-number">250</span>;
+</span><span>            }
+</span><span>        } <span class="hljs-keyword">else</span> {
+</span><span>            subsidy = <span class="hljs-number">250</span>;
+</span><span>        }
+</span><span>    } <span class="hljs-keyword">else</span> {
+</span><span>        subsidy = -<span class="hljs-number">1</span>;
+</span><span>    }
+</span><span>    <span class="hljs-keyword">return</span> subsidy;
+</span><span>}
+</span></code></pre>
                                               </td>
                                               <td>&nbsp;&nbsp;<br><br></td>
                                               <td valign="top">
                                                 <p>
                                                   <font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong></span></font>
                                                 </p>
-                                                <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">calculateSubsidy</span><span class="hljs-params">()</span> </span>{<br></span><span>    <span class="hljs-keyword">int</span> subsidy;<br></span><span>    <span class="hljs-keyword">if</span> (isSenior) {<br></span><span>        subsidy = REJECT_SENIOR;<br></span><span>    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (isAlreadySubsidised) {<br></span><span>        subsidy = SUBSIDISED_SUBSIDY;<br></span><span>    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (isPartTime) {<br></span><span>        subsidy = FULLTIME_SUBSIDY * RATIO;<br></span><span>    } <span class="hljs-keyword">else</span> {<br></span><span>        subsidy = FULLTIME_SUBSIDY;<br></span><span>    }<br></span><span>    <span class="hljs-keyword">return</span> subsidy;<br></span><span>}<br></span></code></pre>
+                                                <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">calculateSubsidy</span><span class="hljs-params">()</span> </span>{
+</span><span>    <span class="hljs-keyword">int</span> subsidy;
+</span><span>    <span class="hljs-keyword">if</span> (isSenior) {
+</span><span>        subsidy = REJECT_SENIOR;
+</span><span>    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (isAlreadySubsidised) {
+</span><span>        subsidy = SUBSIDISED_SUBSIDY;
+</span><span>    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (isPartTime) {
+</span><span>        subsidy = FULLTIME_SUBSIDY * RATIO;
+</span><span>    } <span class="hljs-keyword">else</span> {
+</span><span>        subsidy = FULLTIME_SUBSIDY;
+</span><span>    }
+</span><span>    <span class="hljs-keyword">return</span> subsidy;
+</span><span>}
+</span></code></pre>
                                               </td>
                                             </tr>
                                           </table>
@@ -436,14 +521,35 @@
                                                 <p>
                                                   <font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font>
                                                 </p>
-                                                <pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">calculate_subs</span><span class="hljs-params">()</span>:</span><br></span><span>    <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> age:<br></span><span>        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> sub:<br></span><span>            <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> not_fulltime:<br></span><span>                subsidy = <span class="hljs-number">500</span><br></span><span>            <span class="hljs-keyword">else</span>:<br></span><span>                subsidy = <span class="hljs-number">250</span><br></span><span>        <span class="hljs-keyword">else</span>:<br></span><span>            subsidy = <span class="hljs-number">250</span><br></span><span>    <span class="hljs-keyword">else</span>:<br></span><span>        subsidy = <span class="hljs-number">-1</span><br></span><span>    <span class="hljs-keyword">return</span> subsidy<br></span></code></pre>
+                                                <pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">calculate_subs</span><span class="hljs-params">()</span>:</span>
+</span><span>    <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> age:
+</span><span>        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> sub:
+</span><span>            <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> not_fulltime:
+</span><span>                subsidy = <span class="hljs-number">500</span>
+</span><span>            <span class="hljs-keyword">else</span>:
+</span><span>                subsidy = <span class="hljs-number">250</span>
+</span><span>        <span class="hljs-keyword">else</span>:
+</span><span>            subsidy = <span class="hljs-number">250</span>
+</span><span>    <span class="hljs-keyword">else</span>:
+</span><span>        subsidy = <span class="hljs-number">-1</span>
+</span><span>    <span class="hljs-keyword">return</span> subsidy
+</span></code></pre>
                                               </td>
                                               <td>&nbsp;&nbsp;<br><br></td>
                                               <td valign="top">
                                                 <p>
                                                   <font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong></span></font>
                                                 </p>
-                                                <pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">calculate_subsidy</span><span class="hljs-params">()</span>:</span><br></span><span>    <span class="hljs-keyword">if</span> is_senior:<br></span><span>        <span class="hljs-keyword">return</span> REJECT_SENIOR<br></span><span>    <span class="hljs-keyword">elif</span> is_already_subsidised:<br></span><span>        <span class="hljs-keyword">return</span> SUBSIDISED_SUBSIDY<br></span><span>    <span class="hljs-keyword">elif</span> is_parttime:<br></span><span>        <span class="hljs-keyword">return</span> FULLTIME_SUBSIDY * RATIO<br></span><span>    <span class="hljs-keyword">else</span>:<br></span><span>        <span class="hljs-keyword">return</span> FULLTIME_SUBSIDY<br></span></code></pre>
+                                                <pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">calculate_subsidy</span><span class="hljs-params">()</span>:</span>
+</span><span>    <span class="hljs-keyword">if</span> is_senior:
+</span><span>        <span class="hljs-keyword">return</span> REJECT_SENIOR
+</span><span>    <span class="hljs-keyword">elif</span> is_already_subsidised:
+</span><span>        <span class="hljs-keyword">return</span> SUBSIDISED_SUBSIDY
+</span><span>    <span class="hljs-keyword">elif</span> is_parttime:
+</span><span>        <span class="hljs-keyword">return</span> FULLTIME_SUBSIDY * RATIO
+</span><span>    <span class="hljs-keyword">else</span>:
+</span><span>        <span class="hljs-keyword">return</span> FULLTIME_SUBSIDY
+</span></code></pre>
                                               </td>
                                             </tr>
                                           </table>
@@ -476,11 +582,20 @@
                                           <p>
                                             <font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font>
                                           </p>
-                                          <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">return</span> ((length &lt; MAX_LENGTH) || (previousSize != length)) &amp;&amp; (typeCode == URGENT);<br></span></code></pre>
+                                          <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">return</span> ((length &lt; MAX_LENGTH) || (previousSize != length)) &amp;&amp; (typeCode == URGENT);
+</span></code></pre>
                                           <p>
                                             <font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong></span></font>
                                           </p>
-                                          <pre><code class="hljs java" v-pre><span><br></span><span><span class="hljs-keyword">boolean</span> isWithinSizeLimit = length &lt; MAX_LENGTH;<br></span><span><span class="hljs-keyword">boolean</span> isSameSize = previousSize != length;<br></span><span><span class="hljs-keyword">boolean</span> isValidCode = isWithinSizeLimit || isSameSize;<br></span><span><br></span><span><span class="hljs-keyword">boolean</span> isUrgent = typeCode == URGENT;<br></span><span><br></span><span><span class="hljs-keyword">return</span> isValidCode &amp;&amp; isUrgent;<br></span></code></pre>
+                                          <pre><code class="hljs java" v-pre><span>
+</span><span><span class="hljs-keyword">boolean</span> isWithinSizeLimit = length &lt; MAX_LENGTH;
+</span><span><span class="hljs-keyword">boolean</span> isSameSize = previousSize != length;
+</span><span><span class="hljs-keyword">boolean</span> isValidCode = isWithinSizeLimit || isSameSize;
+</span><span>
+</span><span><span class="hljs-keyword">boolean</span> isUrgent = typeCode == URGENT;
+</span><span>
+</span><span><span class="hljs-keyword">return</span> isValidCode &amp;&amp; isUrgent;
+</span></code></pre>
                                         </box>
                                       </div>
                                     </div>
@@ -491,11 +606,19 @@
                                           <p>
                                             <font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font>
                                           </p>
-                                          <pre><code class="hljs python" v-pre><span><span class="hljs-keyword">return</span> ((length &lt; MAX_LENGTH) <span class="hljs-keyword">or</span> (previous_size != length)) <span class="hljs-keyword">and</span> (type_code == URGENT)<br></span></code></pre>
+                                          <pre><code class="hljs python" v-pre><span><span class="hljs-keyword">return</span> ((length &lt; MAX_LENGTH) <span class="hljs-keyword">or</span> (previous_size != length)) <span class="hljs-keyword">and</span> (type_code == URGENT)
+</span></code></pre>
                                           <p>
                                             <font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong></span></font>
                                           </p>
-                                          <pre><code class="hljs python" v-pre><span>is_within_size_limit = length &lt; MAX_LENGTH<br></span><span>is_same_size = previous_size != length<br></span><span>is_valid_code = is_within_size_limit <span class="hljs-keyword">or</span> is_same_size<br></span><span><br></span><span>is_urgent = type_code == URGENT<br></span><span><br></span><span><span class="hljs-keyword">return</span> is_valid_code <span class="hljs-keyword">and</span> is_urgent<br></span></code></pre>
+                                          <pre><code class="hljs python" v-pre><span>is_within_size_limit = length &lt; MAX_LENGTH
+</span><span>is_same_size = previous_size != length
+</span><span>is_valid_code = is_within_size_limit <span class="hljs-keyword">or</span> is_same_size
+</span><span>
+</span><span>is_urgent = type_code == URGENT
+</span><span>
+</span><span><span class="hljs-keyword">return</span> is_valid_code <span class="hljs-keyword">and</span> is_urgent
+</span></code></pre>
                                         </box>
                                       </div>
                                     </div>
@@ -520,7 +643,7 @@
                                   <p></p>
                                   <p></p>
                                   <div>
-                                    <p>When the code has a number that does not explain the meaning of the number, it is called a &quot;magic number&quot; (as in &quot;the number appears as if by magic&quot;). Using a <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">e.g., <code v-pre>PI</code></span><em>named constant</em></span> makes the code easier to understand because the name tells us more about the meaning of the number.</p>
+                                    <p>When the code has a number that does not explain the meaning of the number, it is called a &quot;magic number&quot; (as in &quot;the number appears as if by magic&quot;). Using a <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">e.g., <code v-pre>PI</code></span><em>named constant</em></span> makes the code easier to understand because the name tells us more about the meaning of the number.</p>
                                     <box>
                                       <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example:</p>
                                       <div class="alt-java">
@@ -531,14 +654,23 @@
                                                 <p>
                                                   <font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font>
                                                 </p>
-                                                <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">return</span> <span class="hljs-number">3.14236</span>;<br></span><span>...<br></span><span><span class="hljs-keyword">return</span> <span class="hljs-number">9</span>;<br></span></code></pre>
+                                                <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">return</span> <span class="hljs-number">3.14236</span>;
+</span><span>...
+</span><span><span class="hljs-keyword">return</span> <span class="hljs-number">9</span>;
+</span></code></pre>
                                               </td>
                                               <td>&nbsp;&nbsp;<br><br></td>
                                               <td valign="top">
                                                 <p>
                                                   <font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong></span></font>
                                                 </p>
-                                                <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">double</span> PI = <span class="hljs-number">3.14236</span>;<br></span><span><span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">int</span> MAX_SIZE = <span class="hljs-number">10</span>;<br></span><span>...<br></span><span><span class="hljs-keyword">return</span> PI;<br></span><span>...<br></span><span><span class="hljs-keyword">return</span> MAX_SIZE-<span class="hljs-number">1</span>;<br></span></code></pre>
+                                                <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">double</span> PI = <span class="hljs-number">3.14236</span>;
+</span><span><span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">int</span> MAX_SIZE = <span class="hljs-number">10</span>;
+</span><span>...
+</span><span><span class="hljs-keyword">return</span> PI;
+</span><span>...
+</span><span><span class="hljs-keyword">return</span> MAX_SIZE-<span class="hljs-number">1</span>;
+</span></code></pre>
                                               </td>
                                             </tr>
                                           </table>
@@ -553,14 +685,23 @@
                                                 <p>
                                                   <font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font>
                                                 </p>
-                                                <pre><code class="hljs python" v-pre><span><span class="hljs-keyword">return</span> <span class="hljs-number">3.14236</span><br></span><span>...<br></span><span><span class="hljs-keyword">return</span> <span class="hljs-number">9</span><br></span></code></pre>
+                                                <pre><code class="hljs python" v-pre><span><span class="hljs-keyword">return</span> <span class="hljs-number">3.14236</span>
+</span><span>...
+</span><span><span class="hljs-keyword">return</span> <span class="hljs-number">9</span>
+</span></code></pre>
                                               </td>
                                               <td>&nbsp;&nbsp;<br><br></td>
                                               <td valign="top">
                                                 <p>
                                                   <font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong></span></font>
                                                 </p>
-                                                <pre><code class="hljs python" v-pre><span>PI = <span class="hljs-number">3.14236</span><br></span><span>MAX_SIZE = <span class="hljs-number">10</span><br></span><span>...<br></span><span><span class="hljs-keyword">return</span> PI<br></span><span>...<br></span><span><span class="hljs-keyword">return</span> MAX_SIZE<span class="hljs-number">-1</span><br></span></code></pre>
+                                                <pre><code class="hljs python" v-pre><span>PI = <span class="hljs-number">3.14236</span>
+</span><span>MAX_SIZE = <span class="hljs-number">10</span>
+</span><span>...
+</span><span><span class="hljs-keyword">return</span> PI
+</span><span>...
+</span><span><span class="hljs-keyword">return</span> MAX_SIZE<span class="hljs-number">-1</span>
+</span></code></pre>
                                               </td>
                                             </tr>
                                           </table>
@@ -573,10 +714,12 @@
                                         <font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font>
                                       </p>
                                       <div class="alt-java">
-                                        <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">return</span> <span class="hljs-string">"Error 1432"</span>  <span class="hljs-comment">// A magic string!</span><br></span></code></pre>
+                                        <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">return</span> <span class="hljs-string">"Error 1432"</span>  <span class="hljs-comment">// A magic string!</span>
+</span></code></pre>
                                       </div>
                                       <div class="alt-python">
-                                        <pre><code class="hljs python" v-pre><span><span class="hljs-keyword">return</span> <span class="hljs-string">"Error 1432"</span>  <span class="hljs-comment"># A magic string!</span><br></span></code></pre>
+                                        <pre><code class="hljs python" v-pre><span><span class="hljs-keyword">return</span> <span class="hljs-string">"Error 1432"</span>  <span class="hljs-comment"># A magic string!</span>
+</span></code></pre>
                                       </div>
                                     </box>
                                     <p>In general, try to avoid any magic literals.</p>
@@ -602,7 +745,7 @@
                                     <ul>
                                       <li>[<code v-pre>Java</code>] Use explicit type conversion instead of implicit type conversion.</li>
                                       <li>[<code v-pre>Java</code>, <code v-pre>Python</code>] Use parentheses/braces to show grouping even when they can be skipped.</li>
-                                      <li>[<code v-pre>Java</code>, <code v-pre>Python</code>] Use <span trigger="click" for="modal:obviousCode-enums" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:obviousCode-enums'].show()" class="trigger-click">enumerations</span> when a certain variable can take only a small number of finite values. For example, instead of declaring the variable 'state' as an integer and using values 0,1,2 to denote the states 'starting', 'enabled', and 'disabled' respectively, declare 'state' as type <code v-pre>SystemState</code> and define an enumeration <code v-pre>SystemState</code> that has values <code v-pre>'STARTING'</code>, <code v-pre>'ENABLED'</code>, and <code v-pre>'DISABLED'</code>.</li>
+                                      <li>[<code v-pre>Java</code>, <code v-pre>Python</code>] Use <trigger trigger="click" for="modal:obviousCode-enums">enumerations</trigger> when a certain variable can take only a small number of finite values. For example, instead of declaring the variable 'state' as an integer and using values 0,1,2 to denote the states 'starting', 'enabled', and 'disabled' respectively, declare 'state' as type <code v-pre>SystemState</code> and define an enumeration <code v-pre>SystemState</code> that has values <code v-pre>'STARTING'</code>, <code v-pre>'ENABLED'</code>, and <code v-pre>'DISABLED'</code>.</li>
                                     </ul>
                                     <b-modal id="modal:obviousCode-enums" hide-footer size modal-class="mb-zoom" ref="modal:obviousCode-enums" class="algolia-no-index"><template slot="modal-title">More about enumerations</template>
                                       <ul>
@@ -739,18 +882,25 @@
                                   <p></p>
                                   <p></p>
                                   <div>
-                                    <p>Avoid varying the level of <span trigger="click" for="modal:slap-abstraction" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:slap-abstraction'].show()" class="trigger-click">abstraction</span> within a code fragment.
+                                    <p>Avoid varying the level of <trigger trigger="click" for="modal:slap-abstraction">abstraction</trigger> within a code fragment.
                                       Note: The <em>Productive Programmer</em> (by Neal Ford) calls this the <em>SLAP principle</em> i.e. Single Level of Abstraction Per method.</p>
                                     <box>
                                       <p>Example:</p>
                                       <p>
                                         <font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font> (<code v-pre>readData();</code> and <code v-pre>salary = basic*rise+1000;</code> are at different levels of abstraction)
                                       </p>
-                                      <pre><code class="hljs java" v-pre><span>readData();<br></span><span>salary = basic*rise+<span class="hljs-number">1000</span>;<br></span><span>tax = (taxable?salary*<span class="hljs-number">0.07</span>:<span class="hljs-number">0</span>);<br></span><span>displayResult();<br></span></code></pre>
+                                      <pre><code class="hljs java" v-pre><span>readData();
+</span><span>salary = basic*rise+<span class="hljs-number">1000</span>;
+</span><span>tax = (taxable?salary*<span class="hljs-number">0.07</span>:<span class="hljs-number">0</span>);
+</span><span>displayResult();
+</span></code></pre>
                                       <p>
                                         <font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong></span></font> (all statements are at the same level of abstraction)
                                       </p>
-                                      <pre><code class="hljs java" v-pre><span>readData();<br></span><span>processData();<br></span><span>displayResult();<br></span></code></pre>
+                                      <pre><code class="hljs java" v-pre><span>readData();
+</span><span>processData();
+</span><span>displayResult();
+</span></code></pre>
                                     </box>
                                     <b-modal id="modal:slap-abstraction" hide-footer size modal-class="mb-zoom" ref="modal:slap-abstraction" class="algolia-no-index"><template slot="modal-title"></template>
                                       <div>
@@ -833,7 +983,19 @@
                                       <p>
                                         <font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font>
                                       </p>
-                                      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">if</span> (!isUnusualCase) {  <span class="hljs-comment">//detecting an unusual condition</span><br></span><span>    <span class="hljs-keyword">if</span> (!isErrorCase) {<br></span><span>        start();    <span class="hljs-comment">//main path</span><br></span><span>        process();<br></span><span>        cleanup();<br></span><span>        exit();<br></span><span>    } <span class="hljs-keyword">else</span> {<br></span><span>        handleError();<br></span><span>    }<br></span><span>} <span class="hljs-keyword">else</span> {<br></span><span>    handleUnusualCase(); <span class="hljs-comment">//handling that unusual condition</span><br></span><span>}<br></span></code></pre>
+                                      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">if</span> (!isUnusualCase) {  <span class="hljs-comment">//detecting an unusual condition</span>
+</span><span>    <span class="hljs-keyword">if</span> (!isErrorCase) {
+</span><span>        start();    <span class="hljs-comment">//main path</span>
+</span><span>        process();
+</span><span>        cleanup();
+</span><span>        exit();
+</span><span>    } <span class="hljs-keyword">else</span> {
+</span><span>        handleError();
+</span><span>    }
+</span><span>} <span class="hljs-keyword">else</span> {
+</span><span>    handleUnusualCase(); <span class="hljs-comment">//handling that unusual condition</span>
+</span><span>}
+</span></code></pre>
                                       <p>In the code above,</p>
                                       <ul>
                                         <li>Unusual condition detection is separated from their handling.</li>
@@ -842,7 +1004,21 @@
                                       <p>
                                         <font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong></span></font>
                                       </p>
-                                      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">if</span> (isUnusualCase) { <span class="hljs-comment">//Guard Clause</span><br></span><span>    handleUnusualCase();<br></span><span>    <span class="hljs-keyword">return</span>;<br></span><span>}<br></span><span><br></span><span><span class="hljs-keyword">if</span> (isErrorCase) { <span class="hljs-comment">//Guard Clause</span><br></span><span>    handleError();<br></span><span>    <span class="hljs-keyword">return</span>;<br></span><span>}<br></span><span><br></span><span>start();<br></span><span>process();<br></span><span>cleanup();<br></span><span>exit();<br></span></code></pre>
+                                      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">if</span> (isUnusualCase) { <span class="hljs-comment">//Guard Clause</span>
+</span><span>    handleUnusualCase();
+</span><span>    <span class="hljs-keyword">return</span>;
+</span><span>}
+</span><span>
+</span><span><span class="hljs-keyword">if</span> (isErrorCase) { <span class="hljs-comment">//Guard Clause</span>
+</span><span>    handleError();
+</span><span>    <span class="hljs-keyword">return</span>;
+</span><span>}
+</span><span>
+</span><span>start();
+</span><span>process();
+</span><span>cleanup();
+</span><span>exit();
+</span></code></pre>
                                       <p>In contrast, the above code</p>
                                       <ul>
                                         <li>deals with unusual conditions as soon as they are detected so that the reader doesn't have to remember them for long.</li>
@@ -955,7 +1131,31 @@
                                         </template>
                                         <question>
                                           <p>Consider the code given below:</p>
-                                          <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">import</span> java.util.*;<br></span><span><br></span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Task</span> </span>{<br></span><span>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String descriptionPrefix = <span class="hljs-string">"description: "</span>;<br></span><span>    <span class="hljs-keyword">private</span> String description;<br></span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">boolean</span> important;<br></span><span>    List&lt;String&gt; pastDescription = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;(); <span class="hljs-comment">// a list of past descriptions</span><br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Task</span><span class="hljs-params">(String d)</span> </span>{<br></span><span>      <span class="hljs-keyword">this</span>.description = d;<br></span><span>      <span class="hljs-keyword">if</span> (!d.isEmpty())<br></span><span>          <span class="hljs-keyword">this</span>.important = <span class="hljs-keyword">true</span>;<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getAsXML</span><span class="hljs-params">()</span> </span>{ <span class="hljs-keyword">return</span> <span class="hljs-string">"&lt;task&gt;"</span>+description+<span class="hljs-string">"&lt;/task&gt;"</span>; }<br></span><span><br></span><span>    <span class="hljs-comment">/**</span><br></span><span><span class="hljs-comment">     * Print the description as a string.</span><br></span><span><span class="hljs-comment">     */</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printingDescription</span><span class="hljs-params">()</span></span>{ System.out.println(<span class="hljs-keyword">this</span>); }<br></span><span><br></span><span>    <span class="hljs-meta">@Override</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span><span class="hljs-params">()</span> </span>{ <span class="hljs-keyword">return</span> descriptionPrefix + description; }<br></span><span>}<br></span></code></pre>
+                                          <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">import</span> java.util.*;
+</span><span>
+</span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Task</span> </span>{
+</span><span>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String descriptionPrefix = <span class="hljs-string">"description: "</span>;
+</span><span>    <span class="hljs-keyword">private</span> String description;
+</span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">boolean</span> important;
+</span><span>    List&lt;String&gt; pastDescription = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;(); <span class="hljs-comment">// a list of past descriptions</span>
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Task</span><span class="hljs-params">(String d)</span> </span>{
+</span><span>      <span class="hljs-keyword">this</span>.description = d;
+</span><span>      <span class="hljs-keyword">if</span> (!d.isEmpty())
+</span><span>          <span class="hljs-keyword">this</span>.important = <span class="hljs-keyword">true</span>;
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getAsXML</span><span class="hljs-params">()</span> </span>{ <span class="hljs-keyword">return</span> <span class="hljs-string">"&lt;task&gt;"</span>+description+<span class="hljs-string">"&lt;/task&gt;"</span>; }
+</span><span>
+</span><span>    <span class="hljs-comment">/**</span>
+</span><span><span class="hljs-comment">     * Print the description as a string.</span>
+</span><span><span class="hljs-comment">     */</span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printingDescription</span><span class="hljs-params">()</span></span>{ System.out.println(<span class="hljs-keyword">this</span>); }
+</span><span>
+</span><span>    <span class="hljs-meta">@Override</span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span><span class="hljs-params">()</span> </span>{ <span class="hljs-keyword">return</span> descriptionPrefix + description; }
+</span><span>}
+</span></code></pre>
                                           <p>In what ways the code violate the coding standard you are expected to follow?</p>
                                           <div slot="hint" class="algolia-no-index">
                                             <p>Here are three:</p>
@@ -1029,7 +1229,31 @@
                                               </template>
                                               <question>
                                                 <p>Consider the code given below:</p>
-                                                <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">import</span> java.util.*;<br></span><span><br></span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Task</span> </span>{<br></span><span>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String descriptionPrefix = <span class="hljs-string">"description: "</span>;<br></span><span>    <span class="hljs-keyword">private</span> String description;<br></span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">boolean</span> important;<br></span><span>    List&lt;String&gt; pastDescription = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;(); <span class="hljs-comment">// a list of past descriptions</span><br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Task</span><span class="hljs-params">(String d)</span> </span>{<br></span><span>      <span class="hljs-keyword">this</span>.description = d;<br></span><span>      <span class="hljs-keyword">if</span> (!d.isEmpty())<br></span><span>          <span class="hljs-keyword">this</span>.important = <span class="hljs-keyword">true</span>;<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getAsXML</span><span class="hljs-params">()</span> </span>{ <span class="hljs-keyword">return</span> <span class="hljs-string">"&lt;task&gt;"</span>+description+<span class="hljs-string">"&lt;/task&gt;"</span>; }<br></span><span><br></span><span>    <span class="hljs-comment">/**</span><br></span><span><span class="hljs-comment">     * Print the description as a string.</span><br></span><span><span class="hljs-comment">     */</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printingDescription</span><span class="hljs-params">()</span></span>{ System.out.println(<span class="hljs-keyword">this</span>); }<br></span><span><br></span><span>    <span class="hljs-meta">@Override</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span><span class="hljs-params">()</span> </span>{ <span class="hljs-keyword">return</span> descriptionPrefix + description; }<br></span><span>}<br></span></code></pre>
+                                                <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">import</span> java.util.*;
+</span><span>
+</span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Task</span> </span>{
+</span><span>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String descriptionPrefix = <span class="hljs-string">"description: "</span>;
+</span><span>    <span class="hljs-keyword">private</span> String description;
+</span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">boolean</span> important;
+</span><span>    List&lt;String&gt; pastDescription = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;(); <span class="hljs-comment">// a list of past descriptions</span>
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Task</span><span class="hljs-params">(String d)</span> </span>{
+</span><span>      <span class="hljs-keyword">this</span>.description = d;
+</span><span>      <span class="hljs-keyword">if</span> (!d.isEmpty())
+</span><span>          <span class="hljs-keyword">this</span>.important = <span class="hljs-keyword">true</span>;
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getAsXML</span><span class="hljs-params">()</span> </span>{ <span class="hljs-keyword">return</span> <span class="hljs-string">"&lt;task&gt;"</span>+description+<span class="hljs-string">"&lt;/task&gt;"</span>; }
+</span><span>
+</span><span>    <span class="hljs-comment">/**</span>
+</span><span><span class="hljs-comment">     * Print the description as a string.</span>
+</span><span><span class="hljs-comment">     */</span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printingDescription</span><span class="hljs-params">()</span></span>{ System.out.println(<span class="hljs-keyword">this</span>); }
+</span><span>
+</span><span>    <span class="hljs-meta">@Override</span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span><span class="hljs-params">()</span> </span>{ <span class="hljs-keyword">return</span> descriptionPrefix + description; }
+</span><span>}
+</span></code></pre>
                                                 <p>In what ways the code violate the coding standard you are expected to follow?</p>
                                                 <div slot="hint" class="algolia-no-index">
                                                   <p>Here are three:</p>
@@ -1155,13 +1379,17 @@
                                         <p>
                                           <font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong></span></font>
                                         </p>
-                                        <pre><code class="hljs java" v-pre><span>Person student;<br></span><span>ArrayList&lt;Person&gt; students;<br></span></code></pre>
+                                        <pre><code class="hljs java" v-pre><span>Person student;
+</span><span>ArrayList&lt;Person&gt; students;
+</span></code></pre>
                                       </div>
                                       <div class="alt-python">
                                         <p>
                                           <font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong></span></font>
                                         </p>
-                                        <pre><code class="hljs python" v-pre><span>name = <span class="hljs-string">'Jim'</span><br></span><span>names = [<span class="hljs-string">'Jim'</span>, <span class="hljs-string">'Alice'</span>]<br></span></code></pre>
+                                        <pre><code class="hljs python" v-pre><span>name = <span class="hljs-string">'Jim'</span>
+</span><span>names = [<span class="hljs-string">'Jim'</span>, <span class="hljs-string">'Alice'</span>]
+</span></code></pre>
                                       </div>
                                     </box>
                                   </div>
@@ -1459,11 +1687,16 @@
                                       <p>
                                         <font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font>
                                       </p>
-                                      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">if</span> (red) print <span class="hljs-string">"red"</span>;<br></span><span><span class="hljs-keyword">else</span> print <span class="hljs-string">"blue"</span>;<br></span></code></pre>
+                                      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">if</span> (red) print <span class="hljs-string">"red"</span>;
+</span><span><span class="hljs-keyword">else</span> print <span class="hljs-string">"blue"</span>;
+</span></code></pre>
                                       <p>
                                         <font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong></span></font>
                                       </p>
-                                      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">if</span> (red) print <span class="hljs-string">"red"</span>;<br></span><span><span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (blue) print <span class="hljs-string">"blue"</span>;<br></span><span><span class="hljs-keyword">else</span> error(<span class="hljs-string">"incorrect input"</span>);<br></span></code></pre>
+                                      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">if</span> (red) print <span class="hljs-string">"red"</span>;
+</span><span><span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (blue) print <span class="hljs-string">"blue"</span>;
+</span><span><span class="hljs-keyword">else</span> error(<span class="hljs-string">"incorrect input"</span>);
+</span></code></pre>
                                     </box>
                                   </div>
                                   <div></div>
@@ -1492,19 +1725,35 @@
                                         <font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font>
                                       </p>
                                       <div class="alt-java">
-                                        <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">double</span> <span class="hljs-title">computeRectangleArea</span><span class="hljs-params">(<span class="hljs-keyword">double</span> length, <span class="hljs-keyword">double</span> width)</span> </span>{<br></span><span>    length = length * width;<br></span><span>    <span class="hljs-keyword">return</span> length;<br></span><span>}<br></span></code></pre>
+                                        <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">double</span> <span class="hljs-title">computeRectangleArea</span><span class="hljs-params">(<span class="hljs-keyword">double</span> length, <span class="hljs-keyword">double</span> width)</span> </span>{
+</span><span>    length = length * width;
+</span><span>    <span class="hljs-keyword">return</span> length;
+</span><span>}
+</span></code></pre>
                                       </div>
                                       <div class="alt-python">
-                                        <pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">compute_rectangle_area</span><span class="hljs-params">(length, width)</span>:</span><br></span><span>    length = length * width<br></span><span>    <span class="hljs-keyword">return</span> length<br></span></code></pre>
+                                        <pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">compute_rectangle_area</span><span class="hljs-params">(length, width)</span>:</span>
+</span><span>    length = length * width
+</span><span>    <span class="hljs-keyword">return</span> length
+</span></code></pre>
                                       </div>
                                       <p>
                                         <font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong></span></font>
                                       </p>
                                       <div class="alt-java">
-                                        <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">double</span> <span class="hljs-title">computeRectangleArea</span><span class="hljs-params">(<span class="hljs-keyword">double</span> length, <span class="hljs-keyword">double</span> width)</span> </span>{<br></span><span>    <span class="hljs-keyword">double</span> area;<br></span><span>    area = length * width;<br></span><span>    <span class="hljs-keyword">return</span> area;<br></span><span>}<br></span></code></pre>
+                                        <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">double</span> <span class="hljs-title">computeRectangleArea</span><span class="hljs-params">(<span class="hljs-keyword">double</span> length, <span class="hljs-keyword">double</span> width)</span> </span>{
+</span><span>    <span class="hljs-keyword">double</span> area;
+</span><span>    area = length * width;
+</span><span>    <span class="hljs-keyword">return</span> area;
+</span><span>}
+</span></code></pre>
                                       </div>
                                       <div class="alt-python">
-                                        <pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">compute_rectangle_area</span><span class="hljs-params">(length, width)</span>:</span><br></span><span>    area = length * width<br></span><span>    <span class="hljs-keyword">return</span> area<br></span><span>}<br></span></code></pre>
+                                        <pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">compute_rectangle_area</span><span class="hljs-params">(length, width)</span>:</span>
+</span><span>    area = length * width
+</span><span>    <span class="hljs-keyword">return</span> area
+</span><span>}
+</span></code></pre>
                                       </div>
                                     </box>
                                   </div>
@@ -1602,7 +1851,9 @@
                                   <p></p>
                                   <div>
                                     <p><strong>Code duplication, especially when you copy-paste-modify code, often indicates a poor quality implementation.</strong> While it may not be possible to have zero duplication, always think twice before duplicating code; most often there is a better alternative.</p>
-                                    <p>This guideline is closely related to the <span for="modal:duplication-dry" trigger="click" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:duplication-dry'].show()" class="trigger-click">DRY Principle<span v-b-popover.hover.top.html="popoverGenerator" v-b-tooltip.hover.top.html="tooltipContentGetter" v-on:mouseover="$refs['undefined'].show()" class="trigger">.</span></span></p>
+                                    <p>This guideline is closely related to the <trigger for="modal:duplication-dry" trigger="click">DRY Principle<trigger>.</trigger>
+                                      </trigger>
+                                    </p>
                                     <b-modal id="modal:duplication-dry" hide-footer size modal-class="mb-zoom" ref="modal:duplication-dry" class="algolia-no-index"><template slot="modal-title"><strong><span><span aria-hidden="true" class="glyphicon glyphicon-eye-open"></span></span> DRY Principle</strong></template>
                                       <div>
                                         <div></div>
@@ -1698,13 +1949,23 @@
                                       <p>
                                         <font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font>
                                       </p>
-                                      <pre><code class="hljs java" v-pre><span><span class="hljs-comment">//increment x</span><br></span><span>x++;<br></span><span><br></span><span><span class="hljs-comment">//trim the input</span><br></span><span>trimInput();<br></span></code></pre>
+                                      <pre><code class="hljs java" v-pre><span><span class="hljs-comment">//increment x</span>
+</span><span>x++;
+</span><span>
+</span><span><span class="hljs-comment">//trim the input</span>
+</span><span>trimInput();
+</span></code></pre>
                                     </div>
                                     <div class="alt-python">
                                       <p>
                                         <font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font>
                                       </p>
-                                      <pre><code class="hljs python" v-pre><span><span class="hljs-comment"># increment x</span><br></span><span>x = x + <span class="hljs-number">1</span><br></span><span><br></span><span><span class="hljs-comment"># trim the input</span><br></span><span>trim_input()<br></span></code></pre>
+                                      <pre><code class="hljs python" v-pre><span><span class="hljs-comment"># increment x</span>
+</span><span>x = x + <span class="hljs-number">1</span>
+</span><span>
+</span><span><span class="hljs-comment"># trim the input</span>
+</span><span>trim_input()
+</span></code></pre>
                                     </div>
                                   </div>
                                   <div></div>
@@ -1732,11 +1993,19 @@
                                           <p>
                                             <font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font> <span class="dimmed">Reason: this comment will only make sense to the person who wrote it</span>
                                           </p>
-                                          <pre><code class="hljs java" v-pre><span><span class="hljs-comment">// a quick trim function used to fix bug I detected overnight</span><br></span><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">trimInput</span><span class="hljs-params">()</span></span>{<br></span><span>    ....<br></span><span>}<br></span></code></pre>
+                                          <pre><code class="hljs java" v-pre><span><span class="hljs-comment">// a quick trim function used to fix bug I detected overnight</span>
+</span><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">trimInput</span><span class="hljs-params">()</span></span>{
+</span><span>    ....
+</span><span>}
+</span></code></pre>
                                           <p>
                                             <font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong></span></font>
                                           </p>
-                                          <pre><code class="hljs java" v-pre><span><span class="hljs-comment">/** Trims the input of leading and trailing spaces */</span><br></span><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">trimInput</span><span class="hljs-params">()</span></span>{<br></span><span>    ....<br></span><span>}<br></span></code></pre>
+                                          <pre><code class="hljs java" v-pre><span><span class="hljs-comment">/** Trims the input of leading and trailing spaces */</span>
+</span><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">trimInput</span><span class="hljs-params">()</span></span>{
+</span><span>    ....
+</span><span>}
+</span></code></pre>
                                         </div>
                                       </div>
                                       <div class="alt-python">
@@ -1744,11 +2013,17 @@
                                           <p>
                                             <font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font> <span class="dimmed">Reason: this comment will only make sense to the person who wrote it</span>
                                           </p>
-                                          <pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">trim_input</span><span class="hljs-params">()</span>:</span><br></span><span><span class="hljs-string">"""a quick trim function used to fix bug I detected overnight"""</span><br></span><span>    ...<br></span></code></pre>
+                                          <pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">trim_input</span><span class="hljs-params">()</span>:</span>
+</span><span><span class="hljs-string">"""a quick trim function used to fix bug I detected overnight"""</span>
+</span><span>    ...
+</span></code></pre>
                                           <p>
                                             <font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong></span></font>
                                           </p>
-                                          <pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">trim_input</span><span class="hljs-params">()</span>:</span><br></span><span><span class="hljs-string">"""Trim the input of leading and trailing spaces"""</span><br></span><span>    ...<br></span></code></pre>
+                                          <pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">trim_input</span><span class="hljs-params">()</span>:</span>
+</span><span><span class="hljs-string">"""Trim the input of leading and trailing spaces"""</span>
+</span><span>    ...
+</span></code></pre>
                                         </div>
                                       </div>
                                     </box>
@@ -1785,12 +2060,18 @@
                                     <p><span style="color:green"><span><span aria-hidden="true" class="fas fa-check"></span></span></span> <strong>What</strong> : The specification of what the code <em>supposed</em> to do. The reader can compare such comments to the implementation to verify if the implementation is correct</p>
                                     <box>
                                       <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example: This method is possibly buggy because the implementation does not seem to match the comment. In this case the comment could help the reader to detect the bug.</p>
-                                      <pre><code class="hljs java" v-pre><span><span class="hljs-comment">/** Removes all spaces from the {<span class="hljs-doctag">@code</span> input} */</span><br></span><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">compact</span><span class="hljs-params">(String input)</span></span>{<br></span><span>    input.trim();<br></span><span>}<br></span></code></pre>
+                                      <pre><code class="hljs java" v-pre><span><span class="hljs-comment">/** Removes all spaces from the {<span class="hljs-doctag">@code</span> input} */</span>
+</span><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">compact</span><span class="hljs-params">(String input)</span></span>{
+</span><span>    input.trim();
+</span><span>}
+</span></code></pre>
                                     </box>
                                     <p><span style="color:green"><span><span aria-hidden="true" class="fas fa-check"></span></span></span> <strong>Why</strong> : The rationale for the current implementation.</p>
                                     <box>
                                       <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example: Without this comment, the reader will not know the reason for calling this method.</p>
-                                      <pre><code class="hljs java" v-pre><span><span class="hljs-comment">// Remove spaces to comply with IE23.5 formatting rules</span><br></span><span>compact(input);<br></span></code></pre>
+                                      <pre><code class="hljs java" v-pre><span><span class="hljs-comment">// Remove spaces to comply with IE23.5 formatting rules</span>
+</span><span>compact(input);
+</span></code></pre>
                                     </box>
                                     <p><span style="color:red"><span><span aria-hidden="true" class="fas fa-times"></span></span></span> <strong>How</strong> : The explanation for how the code works. This should already be apparent from the code, if the code is self-explanatory. Adding comments to explain the same thing is redundant.</p>
                                     <box>
@@ -1798,11 +2079,16 @@
                                       <p>
                                         <font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font> <span class="dimmed">Reason: Comment explains how the code works.</span>
                                       </p>
-                                      <pre><code class="hljs java" v-pre><span><span class="hljs-comment">// return true if both left end and right end are correct or the size has not incremented</span><br></span><span><span class="hljs-keyword">return</span> (left &amp;&amp; right) || (input.size() == size);<br></span></code></pre>
+                                      <pre><code class="hljs java" v-pre><span><span class="hljs-comment">// return true if both left end and right end are correct or the size has not incremented</span>
+</span><span><span class="hljs-keyword">return</span> (left &amp;&amp; right) || (input.size() == size);
+</span></code></pre>
                                       <p>
                                         <font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong></span></font> <span class="dimmed">Reason: Code refactored to be self-explanatory. Comment no longer needed.</span>
                                       </p>
-                                      <pre><code class="hljs java" v-pre><span><br></span><span><span class="hljs-keyword">boolean</span> isSameSize = (input.size() == size) ;<br></span><span><span class="hljs-keyword">return</span> (isLeftEndCorrect &amp;&amp; isRightEndCorrect) || isSameSize;<br></span></code></pre>
+                                      <pre><code class="hljs java" v-pre><span>
+</span><span><span class="hljs-keyword">boolean</span> isSameSize = (input.size() == size) ;
+</span><span><span class="hljs-keyword">return</span> (isLeftEndCorrect &amp;&amp; isRightEndCorrect) || isSameSize;
+</span></code></pre>
                                     </box>
                                   </div>
                                   <div></div>
@@ -1819,6 +2105,7 @@
             </div>
           </div>
         </div>
+        <p><i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i></p>
       </div>
 
 
@@ -1853,21 +2140,16 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Thu, Sep 10, 2020, 11:06:50 PM GMT+8]</small>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.16.0</a>, generated on Wed, Sep 16, 2020, 3:47:05 PM GMT+8]</small>
       </div>
     </footer>
   </div>
 </body>
-<script src="../markbind/js/vue.min.js"></script>
-<script src="../markbind/js/components.min.js"></script>
 <script src="../markbind/js/bootstrap-utility.min.js"></script>
-<script src="../markbind/js/polyfill.min.js"></script>
-<script src="../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/se-book'
-  const enableSearch = true
+  MarkBind.setupWithSearch()
 </script>
-<script src="../markbind/js/setup.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
   function initAlgolia() {
@@ -1882,5 +2164,8 @@
   MarkBind.afterSetup(initAlgolia);
 </script>
 <script src="../markbind/layouts/default/scripts.js"></script>
+<script>
+  if (MarkBind.AfterSetup) MarkBind.AfterSetup()
+</script>
 
 </html>

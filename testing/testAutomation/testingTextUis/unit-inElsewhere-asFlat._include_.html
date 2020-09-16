@@ -20,7 +20,9 @@
           <panel type="seamless" class="algolia-no-index"><template slot="_header">
               <p><span class="dimmed"><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example <code v-pre>input.txt</code></span></p>
             </template>
-            <pre><code class="hljs" v-pre><span>add Valid Name p/12345 valid@email.butNoPrefix<br></span><span>add Valid Name 12345 e/valid@email.butPhonePrefixMissing<br></span></code></pre>
+            <pre><code class="hljs" v-pre><span>add Valid Name p/12345 valid@email.butNoPrefix
+</span><span>add Valid Name 12345 e/valid@email.butPhonePrefixMissing
+</span></code></pre>
           </panel>
         </li>
         <li>
@@ -28,12 +30,18 @@
           <panel type="seamless" class="algolia-no-index"><template slot="_header">
               <p><span class="dimmed"><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example <code v-pre>expected.txt</code></span></p>
             </template>
-            <pre><code class="hljs" v-pre><span>Command: || [add Valid Name p/12345 valid@email.butNoPrefix]<br></span><span>Invalid command format: add <br></span><span><br></span><span>Command: || [add Valid Name 12345 e/valid@email.butPhonePrefixMissing]<br></span><span>Invalid command format: add <br></span></code></pre>
+            <pre><code class="hljs" v-pre><span>Command: || [add Valid Name p/12345 valid@email.butNoPrefix]
+</span><span>Invalid command format: add 
+</span><span>
+</span><span>Command: || [add Valid Name 12345 e/valid@email.butPhonePrefixMissing]
+</span><span>Invalid command format: add 
+</span></code></pre>
           </panel>
         </li>
         <li>
           <p>Run the program as given below, which will redirect the text in <code v-pre>input.txt</code> as the input to <code v-pre>AddressBook</code> and similarly, will redirect the output of AddressBook to a text file <code v-pre>output.txt</code>. <span class="dimmed">Note that this does not require any code changes to <code v-pre>AddressBook</code>.</span></p>
-          <pre><code class="no-line-numbers hljs sh" v-pre><span>java AddressBook &lt; input.txt &gt; output.txt<br></span></code></pre>
+          <pre><code class="no-line-numbers hljs sh" v-pre><span>java AddressBook &lt; input.txt &gt; output.txt
+</span></code></pre>
           <ul>
             <li>
               <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> The way to run a CLI program differs based on the language.<br>
@@ -48,7 +56,8 @@
           <panel minimized class="algolia-no-index"><template slot="_header"></template>
             <span slot="header" class="card-title"><span>More on the <code v-pre>&gt;</code> operator and the <code v-pre>&lt;</code> operator <span class="badge badge-pill badge-secondary"><span><span aria-hidden="true" class="fas fa-plus"></span> extra</span></span></span></span>
             <p>A CLI program takes input from the keyboard and outputs to the console. That is because those two are default input and output streams, respectively. But you can change that behavior using <code v-pre>&lt;</code> and <code v-pre>&gt;</code> operators. For example, if you run <code v-pre>AddressBook</code> in a command window, the output will be shown in the console, but if you run it like this,</p>
-            <pre><code class="no-line-numbers hljs sh" v-pre><span>java AddressBook &gt; output.txt <br></span></code></pre>
+            <pre><code class="no-line-numbers hljs sh" v-pre><span>java AddressBook &gt; output.txt 
+</span></code></pre>
             <p>the Operating System then creates a file <code v-pre>output.txt</code> and stores the output in that file instead of displaying it in the console. No file I/O coding is required. Similarly, adding <code v-pre>&lt; input.txt</code> (or any other filename) makes the OS redirect the contents of the file as input to the program, as if the user typed the content of the file one line at a time.</p>
             <box>
               <p><span><span aria-hidden="true" class="fas fa-paperclip"></span></span> Resources:</p>
@@ -63,13 +72,14 @@
         </li>
         <li>
           <p>Next, you compare <code v-pre>output.txt</code> with the <code v-pre>expected.txt</code>. This can be done using a utility such as Windows <code v-pre>FC</code> (i.e. File Compare) command, Unix <code v-pre>diff</code> command, or a GUI tool such as <em>WinMerge</em>.</p>
-          <pre><code class="no-line-numbers hljs" v-pre><span>FC output.txt expected.txt<br></span></code></pre>
+          <pre><code class="no-line-numbers hljs" v-pre><span>FC output.txt expected.txt
+</span></code></pre>
         </li>
       </ol>
       <p>Note that the above technique is only suitable when testing CLI apps, and only if the exact output can be predetermined. <span class="dimmed">If the output varies from one run to the other (e.g. it contains a time stamp), this technique will not work. In those cases you need more sophisticated ways of automating tests.</span></p>
       <div>
-        <span id="pop:cli" placement="top" data-mb-component-type="popover" v-b-popover.hover.top.html="popoverInnerGenerator" class="trigger">
-          <div data-mb-html-for="content">
+        <span id="pop:cli" placement="top" data-mb-component-type="popover" v-b-popover.hover.top.html="popoverInnerGetters" class="trigger">
+          <div data-mb-slot-name="content">
             <div>
               <p><strong>CLI application</strong>: An application that has a <em>Command Line Interface</em>. i.e. user interacts with the app by typing in commands.</p>
             </div>

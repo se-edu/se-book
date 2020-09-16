@@ -163,14 +163,69 @@
                   <p>Consider the code below:</p>
                   <div class="row">
                     <div class="col-sm-6">
-                      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Billable</span> </span>{<br></span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">bill</span><span class="hljs-params">()</span></span>;<br></span><span>}<br></span></code></pre>
-                      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Item</span></span><br></span><span><span class="hljs-class">         <span class="hljs-keyword">implements</span> <span class="hljs-title">Billable</span> </span>{<br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span></span>;<br></span><span>}<br></span></code></pre>
-                      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">StockItem</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Item</span> </span>{<br></span><span>    <span class="hljs-keyword">private</span> Review review;<br></span><span>    <span class="hljs-keyword">private</span> String name;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">StockItem</span><span class="hljs-params">(</span></span><br></span><span><span class="hljs-function"><span class="hljs-params">        String name, Rating rating)</span></span>{<br></span><span><br></span><span>        <span class="hljs-keyword">this</span>.name = name;<br></span><span>        <span class="hljs-keyword">this</span>.review = <span class="hljs-keyword">new</span> Review(rating);<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-meta">@Override</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span> </span>{<br></span><span>        <span class="hljs-comment">//...</span><br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-meta">@Override</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">bill</span><span class="hljs-params">()</span> </span>{<br></span><span>        <span class="hljs-comment">//...</span><br></span><span>    }<br></span><span>}<br></span></code></pre>
+                      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Billable</span> </span>{
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">bill</span><span class="hljs-params">()</span></span>;
+</span><span>}
+</span></code></pre>
+                      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Item</span></span>
+</span><span><span class="hljs-class">         <span class="hljs-keyword">implements</span> <span class="hljs-title">Billable</span> </span>{
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span></span>;
+</span><span>}
+</span></code></pre>
+                      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">StockItem</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Item</span> </span>{
+</span><span>    <span class="hljs-keyword">private</span> Review review;
+</span><span>    <span class="hljs-keyword">private</span> String name;
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">StockItem</span><span class="hljs-params">(</span></span>
+</span><span><span class="hljs-function"><span class="hljs-params">        String name, Rating rating)</span></span>{
+</span><span>
+</span><span>        <span class="hljs-keyword">this</span>.name = name;
+</span><span>        <span class="hljs-keyword">this</span>.review = <span class="hljs-keyword">new</span> Review(rating);
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-meta">@Override</span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span> </span>{
+</span><span>        <span class="hljs-comment">//...</span>
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-meta">@Override</span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">bill</span><span class="hljs-params">()</span> </span>{
+</span><span>        <span class="hljs-comment">//...</span>
+</span><span>    }
+</span><span>}
+</span></code></pre>
                     </div>
                     <div class="col-sm-6">
-                      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-keyword">enum</span> Rating {<br></span><span>    GOOD, OK, POOR<br></span><span>}<br></span></code></pre>
-                      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Review</span> </span>{<br></span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> Rating rating;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Review</span><span class="hljs-params">(Rating rating)</span> </span>{<br></span><span>        <span class="hljs-keyword">this</span>.rating = rating;<br></span><span>    }<br></span><span>}<br></span></code></pre>
-                      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">import</span> java.util.List;<br></span><span><br></span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Inventory</span> </span>{<br></span><span>    <span class="hljs-keyword">private</span> List&lt;Item&gt; items;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getItemCount</span><span class="hljs-params">()</span></span>{<br></span><span>        <span class="hljs-keyword">return</span> items.size();<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">generateBill</span><span class="hljs-params">(Billable b)</span></span>{<br></span><span>        <span class="hljs-comment">// ...</span><br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">add</span><span class="hljs-params">(Item s)</span> </span>{<br></span><span>        items.add(s);<br></span><span>    }<br></span><span>}<br></span></code></pre>
+                      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-keyword">enum</span> Rating {
+</span><span>    GOOD, OK, POOR
+</span><span>}
+</span></code></pre>
+                      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Review</span> </span>{
+</span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> Rating rating;
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Review</span><span class="hljs-params">(Rating rating)</span> </span>{
+</span><span>        <span class="hljs-keyword">this</span>.rating = rating;
+</span><span>    }
+</span><span>}
+</span></code></pre>
+                      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">import</span> java.util.List;
+</span><span>
+</span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Inventory</span> </span>{
+</span><span>    <span class="hljs-keyword">private</span> List&lt;Item&gt; items;
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getItemCount</span><span class="hljs-params">()</span></span>{
+</span><span>        <span class="hljs-keyword">return</span> items.size();
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">generateBill</span><span class="hljs-params">(Billable b)</span></span>{
+</span><span>        <span class="hljs-comment">// ...</span>
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">add</span><span class="hljs-params">(Item s)</span> </span>{
+</span><span>        items.add(s);
+</span><span>    }
+</span><span>}
+</span></code></pre>
                     </div>
                   </div>
                   <p>(a) Draw a class diagram to represent the code. Show all attributes, methods, associations, navigabilities, visibilities, known multiplicities, and association roles. Show associations as lines.<br>

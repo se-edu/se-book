@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.15.2">
+  <meta name="generator" content="MarkBind 2.16.0">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - Testing: Testing Types: Unit Testing</title>
   <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
@@ -14,11 +14,14 @@
   <link rel="stylesheet" href="../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
   <link rel="stylesheet" href="../../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../../markbind/css/github.min.css">
-  <link rel="stylesheet" href="../../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="../../../markbind/css/markbind.min.css">
+  <script src="../../../markbind/js/polyfill.min.js"></script>
+  <script src="../../../markbind/js/vue.min.js"></script>
+  <script src="../../../markbind/js/markbind.min.js"></script>
+  <script src="../../../markbind/js/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/se-book/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../../markbind/layouts/default/styles.css">
-  <link rel="stylesheet" href="../../../markbind/css/site-nav.css">
   <link rel="icon" href="/se-book/favicon.ico">
 </head>
 
@@ -269,13 +272,60 @@
                           <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Here are the code skeletons for a <code v-pre>Foo</code> class containing two methods and a <code v-pre>FooTest</code> class that contains unit tests for those two methods.</p>
                           <div class="alt-java">
                             <div>
-                              <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span></span>{<br></span><span>    <span class="hljs-function">String <span class="hljs-title">read</span><span class="hljs-params">()</span></span>{<br></span><span>        <span class="hljs-comment">//...</span><br></span><span>    }<br></span><span>    <br></span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">write</span><span class="hljs-params">(String input)</span></span>{<br></span><span>        <span class="hljs-comment">//...</span><br></span><span>    }<br></span><span>    <br></span><span>}<br></span></code></pre>
-                              <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FooTest</span></span>{<br></span><span>    <br></span><span>    <span class="hljs-meta">@Test</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">read</span><span class="hljs-params">()</span></span>{<br></span><span>        <span class="hljs-comment">//a unit test for Foo#read() method</span><br></span><span>    }<br></span><span>    <br></span><span>    <span class="hljs-meta">@Test</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">write_emptyInput_exceptionThrown</span><span class="hljs-params">()</span></span>{<br></span><span>        <span class="hljs-comment">//a unit tests for Foo#write(String) method</span><br></span><span>    }  <br></span><span>    <br></span><span>    <span class="hljs-meta">@Test</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">write_normalInput_writtenCorrectly</span><span class="hljs-params">()</span></span>{<br></span><span>        <span class="hljs-comment">//another unit tests for Foo#write(String) method</span><br></span><span>    }<br></span><span>}<br></span></code></pre>
+                              <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span></span>{
+</span><span>    <span class="hljs-function">String <span class="hljs-title">read</span><span class="hljs-params">()</span></span>{
+</span><span>        <span class="hljs-comment">//...</span>
+</span><span>    }
+</span><span>    
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">write</span><span class="hljs-params">(String input)</span></span>{
+</span><span>        <span class="hljs-comment">//...</span>
+</span><span>    }
+</span><span>    
+</span><span>}
+</span></code></pre>
+                              <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FooTest</span></span>{
+</span><span>    
+</span><span>    <span class="hljs-meta">@Test</span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">read</span><span class="hljs-params">()</span></span>{
+</span><span>        <span class="hljs-comment">//a unit test for Foo#read() method</span>
+</span><span>    }
+</span><span>    
+</span><span>    <span class="hljs-meta">@Test</span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">write_emptyInput_exceptionThrown</span><span class="hljs-params">()</span></span>{
+</span><span>        <span class="hljs-comment">//a unit tests for Foo#write(String) method</span>
+</span><span>    }  
+</span><span>    
+</span><span>    <span class="hljs-meta">@Test</span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">write_normalInput_writtenCorrectly</span><span class="hljs-params">()</span></span>{
+</span><span>        <span class="hljs-comment">//another unit tests for Foo#write(String) method</span>
+</span><span>    }
+</span><span>}
+</span></code></pre>
                             </div>
                           </div>
                           <div class="alt-python">
                             <div>
-                              <pre><code class="hljs python" v-pre><span><span class="hljs-keyword">import</span> unittest<br></span><span><br></span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span>:</span><br></span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">read</span><span class="hljs-params">(self)</span>:</span><br></span><span>      <span class="hljs-comment"># ...</span><br></span><span>  <br></span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">write</span><span class="hljs-params">(self, input)</span>:</span><br></span><span>      <span class="hljs-comment"># ...</span><br></span><span><br></span><span><br></span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FooTest</span><span class="hljs-params">(unittest.TestCase)</span>:</span><br></span><span>  <br></span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">test_read</span><span class="hljs-params">(sefl)</span>:</span><br></span><span>      <span class="hljs-comment"># a unit test for read() method</span><br></span><span>  <br></span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">test_write_emptyIntput_ignored</span><span class="hljs-params">(self)</span>:</span><br></span><span>      <span class="hljs-comment"># a unit tests for write(string) method</span><br></span><span>  <br></span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">test_write_normalInput_writtenCorrectly</span><span class="hljs-params">(self)</span>:</span><br></span><span>      <span class="hljs-comment"># another unit tests for write(string) method</span><br></span></code></pre>
+                              <pre><code class="hljs python" v-pre><span><span class="hljs-keyword">import</span> unittest
+</span><span>
+</span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span>:</span>
+</span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">read</span><span class="hljs-params">(self)</span>:</span>
+</span><span>      <span class="hljs-comment"># ...</span>
+</span><span>  
+</span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">write</span><span class="hljs-params">(self, input)</span>:</span>
+</span><span>      <span class="hljs-comment"># ...</span>
+</span><span>
+</span><span>
+</span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FooTest</span><span class="hljs-params">(unittest.TestCase)</span>:</span>
+</span><span>  
+</span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">test_read</span><span class="hljs-params">(sefl)</span>:</span>
+</span><span>      <span class="hljs-comment"># a unit test for read() method</span>
+</span><span>  
+</span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">test_write_emptyIntput_ignored</span><span class="hljs-params">(self)</span>:</span>
+</span><span>      <span class="hljs-comment"># a unit tests for write(string) method</span>
+</span><span>  
+</span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">test_write_normalInput_writtenCorrectly</span><span class="hljs-params">(self)</span>:</span>
+</span><span>      <span class="hljs-comment"># another unit tests for write(string) method</span>
+</span></code></pre>
                             </div>
                           </div>
                         </box>
@@ -311,11 +361,11 @@
                       <p></p>
                       <p></p>
                       <div>
-                        <p><strong>A proper unit test requires the <em>unit</em> to be tested <mark>in isolation</mark></strong> so that bugs in the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">code the unit depends on</span>dependencies</span> cannot influence the test <span class="dimmed">i.e. bugs outside of the unit should not affect the unit tests</span>.</p>
+                        <p><strong>A proper unit test requires the <em>unit</em> to be tested <mark>in isolation</mark></strong> so that bugs in the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">code the unit depends on</span>dependencies</span> cannot influence the test <span class="dimmed">i.e. bugs outside of the unit should not affect the unit tests</span>.</p>
                         <box>
                           <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> If a <code v-pre>Logic</code> class depends on a <code v-pre>Storage</code> class, unit testing the <code v-pre>Logic</code> class requires isolating the <code v-pre>Logic</code> class from the <code v-pre>Storage</code> class.</p>
                         </box>
-                        <p><strong><em>Stubs</em> can isolate the <span data-mb-component-type="popover" v-b-popover.hover.top.html="popoverInnerGenerator" class="trigger"><span data-mb-html-for="content">Software Under Test (in this case, the <em>unit</em> being tested)</span>SUT</span> from its dependencies</strong>.</p>
+                        <p><strong><em>Stubs</em> can isolate the <span data-mb-component-type="popover" v-b-popover.hover.top.html="popoverInnerGetters" class="trigger"><span data-mb-slot-name="content">Software Under Test (in this case, the <em>unit</em> being tested)</span>SUT</span> from its dependencies</strong>.</p>
                         <box type="definition" seamless>
                           <div>
                             <p><strong>Stub</strong>: A stub has the same interface as the component it replaces, but its implementation is so simple that it is unlikely to have any bugs. It mimics the responses of the component, but only for the a limited set of predetermined inputs. That is, it does not know how to respond to any other inputs. Typically, these mimicked responses are hard-coded in the stub rather than computed or retrieved from elsewhere, e.g. from a database.</p>
@@ -323,19 +373,67 @@
                         </box>
                         <box>
                           <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider the code below:</p>
-                          <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span> </span>{<br></span><span>    Storage s;<br></span><span><br></span><span>    Logic(Storage s) {<br></span><span>        <span class="hljs-keyword">this</span>.s = s;<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function">String <span class="hljs-title">getName</span><span class="hljs-params">(<span class="hljs-keyword">int</span> index)</span> </span>{<br></span><span>        <span class="hljs-keyword">return</span> <span class="hljs-string">"Name: "</span> + s.getName(index);<br></span><span>    }<br></span><span>}<br></span></code></pre>
-                          <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Storage</span> </span>{<br></span><span>    <span class="hljs-function">String <span class="hljs-title">getName</span><span class="hljs-params">(<span class="hljs-keyword">int</span> index)</span></span>;<br></span><span>}<br></span></code></pre>
-                          <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DatabaseStorage</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Storage</span> </span>{<br></span><span><br></span><span>    <span class="hljs-meta">@Override</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getName</span><span class="hljs-params">(<span class="hljs-keyword">int</span> index)</span> </span>{<br></span><span>        <span class="hljs-keyword">return</span> readValueFromDatabase(index);<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">private</span> String <span class="hljs-title">readValueFromDatabase</span><span class="hljs-params">(<span class="hljs-keyword">int</span> index)</span> </span>{<br></span><span>        <span class="hljs-comment">// retrieve name from the database</span><br></span><span>    }<br></span><span>}<br></span></code></pre>
+                          <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span> </span>{
+</span><span>    Storage s;
+</span><span>
+</span><span>    Logic(Storage s) {
+</span><span>        <span class="hljs-keyword">this</span>.s = s;
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-function">String <span class="hljs-title">getName</span><span class="hljs-params">(<span class="hljs-keyword">int</span> index)</span> </span>{
+</span><span>        <span class="hljs-keyword">return</span> <span class="hljs-string">"Name: "</span> + s.getName(index);
+</span><span>    }
+</span><span>}
+</span></code></pre>
+                          <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Storage</span> </span>{
+</span><span>    <span class="hljs-function">String <span class="hljs-title">getName</span><span class="hljs-params">(<span class="hljs-keyword">int</span> index)</span></span>;
+</span><span>}
+</span></code></pre>
+                          <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DatabaseStorage</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Storage</span> </span>{
+</span><span>
+</span><span>    <span class="hljs-meta">@Override</span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getName</span><span class="hljs-params">(<span class="hljs-keyword">int</span> index)</span> </span>{
+</span><span>        <span class="hljs-keyword">return</span> readValueFromDatabase(index);
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">private</span> String <span class="hljs-title">readValueFromDatabase</span><span class="hljs-params">(<span class="hljs-keyword">int</span> index)</span> </span>{
+</span><span>        <span class="hljs-comment">// retrieve name from the database</span>
+</span><span>    }
+</span><span>}
+</span></code></pre>
                           <p>Normally, you would use the <code v-pre>Logic</code> class as follows (note how the <code v-pre>Logic</code> object depends on a <code v-pre>DatabaseStorage</code> object to perform the <code v-pre>getName()</code> operation):</p>
-                          <pre><code class="hljs java" v-pre><span>Logic logic = <span class="hljs-keyword">new</span> Logic(<span class="hljs-keyword">new</span> DatabaseStorage());<br></span><span>String name = logic.getName(<span class="hljs-number">23</span>);<br></span></code></pre>
+                          <pre><code class="hljs java" v-pre><span>Logic logic = <span class="hljs-keyword">new</span> Logic(<span class="hljs-keyword">new</span> DatabaseStorage());
+</span><span>String name = logic.getName(<span class="hljs-number">23</span>);
+</span></code></pre>
                           <p>You can test it like this:</p>
-                          <pre><code class="hljs java" v-pre><span><span class="hljs-meta">@Test</span><br></span><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">getName</span><span class="hljs-params">()</span> </span>{<br></span><span>    Logic logic = <span class="hljs-keyword">new</span> Logic(<span class="hljs-keyword">new</span> DatabaseStorage());<br></span><span>    assertEquals(<span class="hljs-string">"Name: John"</span>, logic.getName(<span class="hljs-number">5</span>));<br></span><span>}<br></span></code></pre>
+                          <pre><code class="hljs java" v-pre><span><span class="hljs-meta">@Test</span>
+</span><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">getName</span><span class="hljs-params">()</span> </span>{
+</span><span>    Logic logic = <span class="hljs-keyword">new</span> Logic(<span class="hljs-keyword">new</span> DatabaseStorage());
+</span><span>    assertEquals(<span class="hljs-string">"Name: John"</span>, logic.getName(<span class="hljs-number">5</span>));
+</span><span>}
+</span></code></pre>
                           <p>However, this <code v-pre>logic</code> object being tested is making use of a <code v-pre>DataBaseStorage</code> object which means a bug in the <code v-pre>DatabaseStorage</code> class can affect the test. Therefore, this test is not testing <code v-pre>Logic</code> <em>in isolation from its dependencies</em> and hence it is not a pure unit test.</p>
                           <p>Here is a stub class you can use in place of <code v-pre>DatabaseStorage</code>:</p>
-                          <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">StorageStub</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Storage</span> </span>{<br></span><span><br></span><span>    <span class="hljs-meta">@Override</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getName</span><span class="hljs-params">(<span class="hljs-keyword">int</span> index)</span> </span>{<br></span><span>        <span class="hljs-keyword">if</span>(index == <span class="hljs-number">5</span>) {<br></span><span>            <span class="hljs-keyword">return</span> <span class="hljs-string">"Adam"</span>;<br></span><span>        } <span class="hljs-keyword">else</span> {<br></span><span>            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> UnsupportedOperationException();<br></span><span>        }<br></span><span>    }<br></span><span>}<br></span></code></pre>
+                          <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">StorageStub</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Storage</span> </span>{
+</span><span>
+</span><span>    <span class="hljs-meta">@Override</span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getName</span><span class="hljs-params">(<span class="hljs-keyword">int</span> index)</span> </span>{
+</span><span>        <span class="hljs-keyword">if</span>(index == <span class="hljs-number">5</span>) {
+</span><span>            <span class="hljs-keyword">return</span> <span class="hljs-string">"Adam"</span>;
+</span><span>        } <span class="hljs-keyword">else</span> {
+</span><span>            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> UnsupportedOperationException();
+</span><span>        }
+</span><span>    }
+</span><span>}
+</span></code></pre>
                           <p>Note how the <code v-pre>StorageStub</code> has the same interface as <code v-pre>DatabaseStorage</code>, is so simple that it is unlikely to contain bugs, and is pre-configured to respond with a hard-coded response, presumably, the correct response <code v-pre>DatabaseStorage</code> is expected to return for the given test input.</p>
                           <p>Here is how you can use the stub to write a unit test. This test is not affected by any bugs in the <code v-pre>DatabaseStorage</code> class and hence is a pure unit test.</p>
-                          <pre><code class="hljs java" v-pre><span><span class="hljs-meta">@Test</span><br></span><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">getName</span><span class="hljs-params">()</span> </span>{<br></span><span>    Logic logic = <span class="hljs-keyword">new</span> Logic(<span class="hljs-keyword">new</span> StorageStub());<br></span><span>    assertEquals(<span class="hljs-string">"Name: Adam"</span>, logic.getName(<span class="hljs-number">5</span>));<br></span><span>}<br></span></code></pre>
+                          <pre><code class="hljs java" v-pre><span><span class="hljs-meta">@Test</span>
+</span><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">getName</span><span class="hljs-params">()</span> </span>{
+</span><span>    Logic logic = <span class="hljs-keyword">new</span> Logic(<span class="hljs-keyword">new</span> StorageStub());
+</span><span>    assertEquals(<span class="hljs-string">"Name: Adam"</span>, logic.getName(<span class="hljs-number">5</span>));
+</span><span>}
+</span></code></pre>
                         </box>
                         <p>In addition to Stubs, there are other type of replacements you can use during testing. E.g. <em>Mocks</em>, <em>Fakes</em>, <em>Dummies</em>, <em>Spies</em>.</p>
                       </div>
@@ -379,6 +477,7 @@
             </div>
           </div>
         </div>
+        <i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i>
       </div>
 
 
@@ -386,21 +485,16 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Thu, Sep 10, 2020, 11:06:50 PM GMT+8]</small>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.16.0</a>, generated on Wed, Sep 16, 2020, 3:47:05 PM GMT+8]</small>
       </div>
     </footer>
   </div>
 </body>
-<script src="../../../markbind/js/vue.min.js"></script>
-<script src="../../../markbind/js/components.min.js"></script>
 <script src="../../../markbind/js/bootstrap-utility.min.js"></script>
-<script src="../../../markbind/js/polyfill.min.js"></script>
-<script src="../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/se-book'
-  const enableSearch = true
+  MarkBind.setupWithSearch()
 </script>
-<script src="../../../markbind/js/setup.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
   function initAlgolia() {
@@ -415,5 +509,8 @@
   MarkBind.afterSetup(initAlgolia);
 </script>
 <script src="../../../markbind/layouts/default/scripts.js"></script>
+<script>
+  if (MarkBind.AfterSetup) MarkBind.AfterSetup()
+</script>
 
 </html>

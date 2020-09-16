@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.15.2">
+  <meta name="generator" content="MarkBind 2.16.0">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - C++ to Java: Control Flow: Methods</title>
   <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
@@ -14,11 +14,14 @@
   <link rel="stylesheet" href="../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
   <link rel="stylesheet" href="../../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../../markbind/css/github.min.css">
-  <link rel="stylesheet" href="../../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="../../../markbind/css/markbind.min.css">
+  <script src="../../../markbind/js/polyfill.min.js"></script>
+  <script src="../../../markbind/js/vue.min.js"></script>
+  <script src="../../../markbind/js/markbind.min.js"></script>
+  <script src="../../../markbind/js/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/se-book/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../../markbind/layouts/default/styles.css">
-  <link rel="stylesheet" href="../../../markbind/css/site-nav.css">
   <link rel="icon" href="/se-book/favicon.ico">
 </head>
 
@@ -257,10 +260,26 @@
                     <h5 id="defining-methods">Defining methods<a class="fa fa-anchor" href="#defining-methods" onclick="event.stopPropagation()"></a></h5>
                     <div class="indented">
                       <p>Here’s an example of adding more methods to a class:</p>
-                      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PrintTwice</span> </span>{<br></span><span><br></span><span class="highlighted">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printTwice</span><span class="hljs-params">(String s)</span> </span>{<br></span><span class="highlighted">        System.out.println(s);<br></span><span class="highlighted">        System.out.println(s);<br></span><span class="highlighted">    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{<br></span><span>        String sentence = “Polly likes crackers”<br></span><span>        printTwice(sentence);<br></span><span><br></span><span>    }<br></span><span>}<br></span><span><br></span></code></pre>
+                      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PrintTwice</span> </span>{
+</span><span>
+</span><span class="highlighted">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printTwice</span><span class="hljs-params">(String s)</span> </span>{
+</span><span class="highlighted">        System.out.println(s);
+</span><span class="highlighted">        System.out.println(s);
+</span><span class="highlighted">    }
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+</span><span>        String sentence = “Polly likes crackers”
+</span><span>        printTwice(sentence);
+</span><span>
+</span><span>    }
+</span><span>}
+</span><span>
+</span></code></pre>
                       <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
-                      <pre><code class="hljs" v-pre><span>Polly likes crackers<br></span><span>Polly likes crackers<br></span></code></pre>
-                      <p>By convention, method names should be named in the <span trigger="click" for="modal:javaMethods_camelCase" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:javaMethods_camelCase'].show()" class="trigger-click"><em>camelCase</em></span> format.</p>
+                      <pre><code class="hljs" v-pre><span>Polly likes crackers
+</span><span>Polly likes crackers
+</span></code></pre>
+                      <p>By convention, method names should be named in the <trigger trigger="click" for="modal:javaMethods_camelCase"><em>camelCase</em></trigger> format.</p>
                       <b-modal id="modal:javaMethods_camelCase" hide-footer size="lg" modal-class="mb-zoom" ref="modal:javaMethods_camelCase" class="algolia-no-index"><template slot="modal-title">Defintion: camelCase</template>
                         <div>
                           <blockquote>
@@ -280,19 +299,52 @@
                     <h5 id="return-statements"><code v-pre>return</code> statements<a class="fa fa-anchor" href="#return-statements" onclick="event.stopPropagation()"></a></h5>
                     <div class="indented">
                       <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span><span aria-hidden="true" class="fas fa-equals"></span></span></span></span> <strong>The <code v-pre>return</code> statement allows you to terminate a method before you reach the end of it</strong>:</p>
-                      <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printLogarithm</span><span class="hljs-params">(<span class="hljs-keyword">double</span> x)</span> </span>{<br></span><span>    <span class="hljs-keyword">if</span> (x &lt;= <span class="hljs-number">0.0</span>) {<br></span><span>        System.out.println(<span class="hljs-string">"Error: x must be positive."</span>);<br></span><span class="highlighted">        <span class="hljs-keyword">return</span>;<br></span><span>    }<br></span><span>    <span class="hljs-keyword">double</span> result = Math.log(x);<br></span><span>    System.out.println(<span class="hljs-string">"The log of x is "</span> + result);<br></span><span>}<br></span></code></pre>
+                      <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printLogarithm</span><span class="hljs-params">(<span class="hljs-keyword">double</span> x)</span> </span>{
+</span><span>    <span class="hljs-keyword">if</span> (x &lt;= <span class="hljs-number">0.0</span>) {
+</span><span>        System.out.println(<span class="hljs-string">"Error: x must be positive."</span>);
+</span><span class="highlighted">        <span class="hljs-keyword">return</span>;
+</span><span>    }
+</span><span>    <span class="hljs-keyword">double</span> result = Math.log(x);
+</span><span>    System.out.println(<span class="hljs-string">"The log of x is "</span> + result);
+</span><span>}
+</span></code></pre>
                       <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span><span aria-hidden="true" class="fas fa-equals"></span></span></span></span> <strong>It can be used to return a value from a method too</strong>:</p>
-                      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AreaCalculator</span></span>{<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">double</span> <span class="hljs-title">calculateArea</span><span class="hljs-params">(<span class="hljs-keyword">double</span> radius)</span> </span>{<br></span><span>        <span class="hljs-keyword">double</span> result = <span class="hljs-number">3.14</span> * radius * radius;<br></span><span class="highlighted">        <span class="hljs-keyword">return</span> result;<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{<br></span><span>        <span class="hljs-keyword">double</span> area = calculateArea(<span class="hljs-number">12.5</span>);<br></span><span>        System.out.println(area);<br></span><span>    }<br></span><span>}<br></span></code></pre>
+                      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AreaCalculator</span></span>{
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">double</span> <span class="hljs-title">calculateArea</span><span class="hljs-params">(<span class="hljs-keyword">double</span> radius)</span> </span>{
+</span><span>        <span class="hljs-keyword">double</span> result = <span class="hljs-number">3.14</span> * radius * radius;
+</span><span class="highlighted">        <span class="hljs-keyword">return</span> result;
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+</span><span>        <span class="hljs-keyword">double</span> area = calculateArea(<span class="hljs-number">12.5</span>);
+</span><span>        System.out.println(area);
+</span><span>    }
+</span><span>}
+</span></code></pre>
                     </div>
                     <h5 id="overloading">Overloading<a class="fa fa-anchor" href="#overloading" onclick="event.stopPropagation()"></a></h5>
                     <div class="indented">
                       <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span><span aria-hidden="true" class="fas fa-equals"></span></span></span></span> <strong>Java methods can be <em>overloaded</em>.</strong> If two methods do the same thing, it is natural to give them the same name. Having more than one method with the same name is called overloading, and it is legal in Java as long as each version has a different method <em>signature</em> (the signature of the method is the method name and ordered list of parameter types) . For example, the following overloading of the method <code v-pre>calculateArea</code> is allowed because the method signatures are different (i.e., <code v-pre>calculateArea(double)</code> vs <code v-pre>calculateArea(double, double)</code>).</p>
-                      <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">double</span> <span class="hljs-title">calculateArea</span><span class="hljs-params">(<span class="hljs-keyword">double</span> radius)</span> </span>{<br></span><span>    <span class="hljs-comment">//...</span><br></span><span>}<br></span><span><br></span><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">double</span> <span class="hljs-title">calculateArea</span><span class="hljs-params">(<span class="hljs-keyword">double</span> height, <span class="hljs-keyword">double</span> width)</span> </span>{<br></span><span>    <span class="hljs-comment">//...</span><br></span><span>}<br></span></code></pre>
+                      <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">double</span> <span class="hljs-title">calculateArea</span><span class="hljs-params">(<span class="hljs-keyword">double</span> radius)</span> </span>{
+</span><span>    <span class="hljs-comment">//...</span>
+</span><span>}
+</span><span>
+</span><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">double</span> <span class="hljs-title">calculateArea</span><span class="hljs-params">(<span class="hljs-keyword">double</span> height, <span class="hljs-keyword">double</span> width)</span> </span>{
+</span><span>    <span class="hljs-comment">//...</span>
+</span><span>}
+</span></code></pre>
                     </div>
                     <h5 id="recursion">Recursion<a class="fa fa-anchor" href="#recursion" onclick="event.stopPropagation()"></a></h5>
                     <div class="indented">
                       <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span><span aria-hidden="true" class="fas fa-equals"></span></span></span></span> <strong>Methods can be <em>recursive</em>.</strong> Here is an example in which the <code v-pre>nLines</code> method calls itself recursively:</p>
-                      <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">nLines</span><span class="hljs-params">(<span class="hljs-keyword">int</span> n)</span> </span>{<br></span><span>    <span class="hljs-keyword">if</span> (n &gt; <span class="hljs-number">0</span>) {<br></span><span>        System.out.println();<br></span><span class="highlighted">        nLines(n - <span class="hljs-number">1</span>);<br></span><span>    }<br></span><span>}<br></span></code></pre>
+                      <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">nLines</span><span class="hljs-params">(<span class="hljs-keyword">int</span> n)</span> </span>{
+</span><span>    <span class="hljs-keyword">if</span> (n &gt; <span class="hljs-number">0</span>) {
+</span><span>        System.out.println();
+</span><span class="highlighted">        nLines(n - <span class="hljs-number">1</span>);
+</span><span>    }
+</span><span>}
+</span></code></pre>
                     </div>
                   </div>
                   <div>
@@ -355,12 +407,46 @@
                                   </div>
                                 </div>
                                 <p><mark>Do not change the code of the <code v-pre>main</code> method!</mark></p>
-                                <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{<br></span><span><br></span><span>    <span class="hljs-comment">// ADD YOUR CODE HERE</span><br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{<br></span><span>        System.out.println(<span class="hljs-string">"A+: "</span> + getGradeCap(<span class="hljs-string">"A+"</span>));<br></span><span>        System.out.println(<span class="hljs-string">"B : "</span> + getGradeCap(<span class="hljs-string">"B"</span>));<br></span><span>    }<br></span><span>}<br></span></code></pre>
+                                <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+</span><span>
+</span><span>    <span class="hljs-comment">// ADD YOUR CODE HERE</span>
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+</span><span>        System.out.println(<span class="hljs-string">"A+: "</span> + getGradeCap(<span class="hljs-string">"A+"</span>));
+</span><span>        System.out.println(<span class="hljs-string">"B : "</span> + getGradeCap(<span class="hljs-string">"B"</span>));
+</span><span>    }
+</span><span>}
+</span></code></pre>
                                 <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
-                                <pre><code class="hljs" v-pre><span>A+: 5.0<br></span><span>B : 3.5<br></span></code></pre>
+                                <pre><code class="hljs" v-pre><span>A+: 5.0
+</span><span>B : 3.5
+</span></code></pre>
                                 <div slot="hint" class="algolia-no-index">
                                   <p>Partial solution:</p>
-                                  <pre><code class="hljs java" v-pre><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">double</span> <span class="hljs-title">getGradeCap</span><span class="hljs-params">(String grade)</span> </span>{<br></span><span>        <span class="hljs-keyword">double</span> cap = <span class="hljs-number">0</span>;<br></span><span>        <span class="hljs-keyword">switch</span> (grade) {<br></span><span>        <span class="hljs-keyword">case</span> <span class="hljs-string">"A+"</span>:<br></span><span>        <span class="hljs-keyword">case</span> <span class="hljs-string">"A"</span>:<br></span><span>            cap = <span class="hljs-number">5.0</span>;<br></span><span>            <span class="hljs-keyword">break</span>;<br></span><span>        <span class="hljs-keyword">case</span> <span class="hljs-string">"A-"</span>:<br></span><span>            cap = <span class="hljs-number">4.5</span>;<br></span><span>            <span class="hljs-keyword">break</span>;<br></span><span>        <span class="hljs-keyword">case</span> <span class="hljs-string">"B+"</span>:<br></span><span>            cap = <span class="hljs-number">4.0</span>;<br></span><span>            <span class="hljs-keyword">break</span>;<br></span><span>        <span class="hljs-keyword">case</span> <span class="hljs-string">"B"</span>:<br></span><span>            cap = <span class="hljs-number">3.5</span>;<br></span><span>            <span class="hljs-keyword">break</span>;<br></span><span>        <span class="hljs-keyword">case</span> <span class="hljs-string">"B-"</span>:<br></span><span>            cap = <span class="hljs-number">3.0</span>;<br></span><span>            <span class="hljs-keyword">break</span>;<br></span><span>        <span class="hljs-keyword">default</span>:<br></span><span>        }<br></span><span>        <span class="hljs-keyword">return</span> cap;<br></span><span>    }<br></span></code></pre>
+                                  <pre><code class="hljs java" v-pre><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">double</span> <span class="hljs-title">getGradeCap</span><span class="hljs-params">(String grade)</span> </span>{
+</span><span>        <span class="hljs-keyword">double</span> cap = <span class="hljs-number">0</span>;
+</span><span>        <span class="hljs-keyword">switch</span> (grade) {
+</span><span>        <span class="hljs-keyword">case</span> <span class="hljs-string">"A+"</span>:
+</span><span>        <span class="hljs-keyword">case</span> <span class="hljs-string">"A"</span>:
+</span><span>            cap = <span class="hljs-number">5.0</span>;
+</span><span>            <span class="hljs-keyword">break</span>;
+</span><span>        <span class="hljs-keyword">case</span> <span class="hljs-string">"A-"</span>:
+</span><span>            cap = <span class="hljs-number">4.5</span>;
+</span><span>            <span class="hljs-keyword">break</span>;
+</span><span>        <span class="hljs-keyword">case</span> <span class="hljs-string">"B+"</span>:
+</span><span>            cap = <span class="hljs-number">4.0</span>;
+</span><span>            <span class="hljs-keyword">break</span>;
+</span><span>        <span class="hljs-keyword">case</span> <span class="hljs-string">"B"</span>:
+</span><span>            cap = <span class="hljs-number">3.5</span>;
+</span><span>            <span class="hljs-keyword">break</span>;
+</span><span>        <span class="hljs-keyword">case</span> <span class="hljs-string">"B-"</span>:
+</span><span>            cap = <span class="hljs-number">3.0</span>;
+</span><span>            <span class="hljs-keyword">break</span>;
+</span><span>        <span class="hljs-keyword">default</span>:
+</span><span>        }
+</span><span>        <span class="hljs-keyword">return</span> cap;
+</span><span>    }
+</span></code></pre>
                                 </div>
                               </question>
                             </panel>
@@ -374,6 +460,7 @@
             </div>
           </div>
         </div>
+        <i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i>
       </div>
 
 
@@ -381,21 +468,16 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Thu, Sep 10, 2020, 11:06:50 PM GMT+8]</small>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.16.0</a>, generated on Wed, Sep 16, 2020, 3:47:05 PM GMT+8]</small>
       </div>
     </footer>
   </div>
 </body>
-<script src="../../../markbind/js/vue.min.js"></script>
-<script src="../../../markbind/js/components.min.js"></script>
 <script src="../../../markbind/js/bootstrap-utility.min.js"></script>
-<script src="../../../markbind/js/polyfill.min.js"></script>
-<script src="../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/se-book'
-  const enableSearch = true
+  MarkBind.setupWithSearch()
 </script>
-<script src="../../../markbind/js/setup.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
   function initAlgolia() {
@@ -410,5 +492,8 @@
   MarkBind.afterSetup(initAlgolia);
 </script>
 <script src="../../../markbind/layouts/default/scripts.js"></script>
+<script>
+  if (MarkBind.AfterSetup) MarkBind.AfterSetup()
+</script>
 
 </html>

@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.15.2">
+  <meta name="generator" content="MarkBind 2.16.0">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - Error Handling: Defensive Programming: Enforcing Compulsory Associations</title>
   <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
@@ -14,11 +14,14 @@
   <link rel="stylesheet" href="../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
   <link rel="stylesheet" href="../../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../../markbind/css/github.min.css">
-  <link rel="stylesheet" href="../../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="../../../markbind/css/markbind.min.css">
+  <script src="../../../markbind/js/polyfill.min.js"></script>
+  <script src="../../../markbind/js/vue.min.js"></script>
+  <script src="../../../markbind/js/markbind.min.js"></script>
+  <script src="../../../markbind/js/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/se-book/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../../markbind/layouts/default/styles.css">
-  <link rel="stylesheet" href="../../../markbind/css/site-nav.css">
   <link rel="icon" href="/se-book/favicon.ico">
 </head>
 
@@ -266,11 +269,37 @@
                       <img src="/se-book/errorHandling/defensiveProgramming/compulsoryAssociations/images/accountGuarantor.png" height="50">
                       <p></p>
                       <p>Here, the association is compulsory i.e. an <code v-pre>Account</code> object should always be linked to a <code v-pre>Guarantor</code>. One way to implement this is to simply use a reference variable, like this:</p>
-                      <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{<br></span><span>    Guarantor guarantor;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setGuarantor</span><span class="hljs-params">(Guarantor g)</span> </span>{<br></span><span>        guarantor = g;<br></span><span>    }<br></span><span>}<br></span></code></pre>
+                      <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{
+</span><span>    Guarantor guarantor;
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setGuarantor</span><span class="hljs-params">(Guarantor g)</span> </span>{
+</span><span>        guarantor = g;
+</span><span>    }
+</span><span>}
+</span></code></pre>
                       <p>However, what if someone else used the <code v-pre>Account</code> class like this?</p>
-                      <pre><code class="hljs java" v-pre><span>Account a = <span class="hljs-keyword">new</span> Account();<br></span><span>a.setGuarantor(<span class="hljs-keyword">null</span>);<br></span></code></pre>
+                      <pre><code class="hljs java" v-pre><span>Account a = <span class="hljs-keyword">new</span> Account();
+</span><span>a.setGuarantor(<span class="hljs-keyword">null</span>);
+</span></code></pre>
                       <p>This results in an <code v-pre>Account</code> without a <code v-pre>Guarantor</code>! In a real banking system, this could have serious consequences! The code here did not try to prevent such a thing from happening. You can make the code more defensive by proactively enforcing the multiplicity constraint, like this:</p>
-                      <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{<br></span><span>    <span class="hljs-keyword">private</span> Guarantor guarantor;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Account</span><span class="hljs-params">(Guarantor g)</span></span>{<br></span><span>        <span class="hljs-keyword">if</span> (g == <span class="hljs-keyword">null</span>) {<br></span><span>            stopSystemWithMessage(<span class="hljs-string">"multiplicity violated. Null Guarantor"</span>);<br></span><span>        }<br></span><span>        guarantor = g;<br></span><span>    }<br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setGuarantor</span> <span class="hljs-params">(Guarantor g)</span></span>{<br></span><span>        <span class="hljs-keyword">if</span> (g == <span class="hljs-keyword">null</span>) {<br></span><span>            stopSystemWithMessage(<span class="hljs-string">"multiplicity violated. Null Guarantor"</span>);<br></span><span>        }<br></span><span>        guarantor = g;<br></span><span>    }<br></span><span>    …<br></span><span>}<br></span></code></pre>
+                      <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{
+</span><span>    <span class="hljs-keyword">private</span> Guarantor guarantor;
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Account</span><span class="hljs-params">(Guarantor g)</span></span>{
+</span><span>        <span class="hljs-keyword">if</span> (g == <span class="hljs-keyword">null</span>) {
+</span><span>            stopSystemWithMessage(<span class="hljs-string">"multiplicity violated. Null Guarantor"</span>);
+</span><span>        }
+</span><span>        guarantor = g;
+</span><span>    }
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setGuarantor</span> <span class="hljs-params">(Guarantor g)</span></span>{
+</span><span>        <span class="hljs-keyword">if</span> (g == <span class="hljs-keyword">null</span>) {
+</span><span>            stopSystemWithMessage(<span class="hljs-string">"multiplicity violated. Null Guarantor"</span>);
+</span><span>        }
+</span><span>        guarantor = g;
+</span><span>    }
+</span><span>    …
+</span><span>}
+</span></code></pre>
                     </box>
                   </div>
                   <div>
@@ -291,7 +320,26 @@
                               <img src="/se-book/errorHandling/defensiveProgramming/compulsoryAssociations/images/managerAccount.jpg" height="55">
                               <p></p>
                               <div slot="answer" class="algolia-no-index">
-                                <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">import</span> java.util.*;<br></span><span><br></span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Manager</span> </span>{<br></span><span>    <span class="hljs-keyword">private</span> ArrayList&lt; Account &gt; theAccounts ;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addAccount</span><span class="hljs-params">(Account acc)</span> <span class="hljs-keyword">throws</span> Exception </span>{<br></span><span>        <span class="hljs-keyword">if</span> (theAccounts.size( ) == <span class="hljs-number">8</span>){<br></span><span>            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Exception (<span class="hljs-string">"adding more than 8 accounts"</span>);<br></span><span>        }<br></span><span>        <br></span><span>        <span class="hljs-keyword">if</span> (!theAccounts.contains(acc)) {<br></span><span>            theAccounts.add(acc);<br></span><span>        }<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">removeAccount</span><span class="hljs-params">(Account acc)</span> </span>{<br></span><span>        theAccounts.remove(acc);<br></span><span>    }<br></span><span>}<br></span></code></pre>
+                                <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">import</span> java.util.*;
+</span><span>
+</span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Manager</span> </span>{
+</span><span>    <span class="hljs-keyword">private</span> ArrayList&lt; Account &gt; theAccounts ;
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addAccount</span><span class="hljs-params">(Account acc)</span> <span class="hljs-keyword">throws</span> Exception </span>{
+</span><span>        <span class="hljs-keyword">if</span> (theAccounts.size( ) == <span class="hljs-number">8</span>){
+</span><span>            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Exception (<span class="hljs-string">"adding more than 8 accounts"</span>);
+</span><span>        }
+</span><span>        
+</span><span>        <span class="hljs-keyword">if</span> (!theAccounts.contains(acc)) {
+</span><span>            theAccounts.add(acc);
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">removeAccount</span><span class="hljs-params">(Account acc)</span> </span>{
+</span><span>        theAccounts.remove(acc);
+</span><span>    }
+</span><span>}
+</span></code></pre>
                               </div>
                             </question>
                           </panel>
@@ -305,7 +353,53 @@
                               <img src="/se-book/errorHandling/defensiveProgramming/compulsoryAssociations/images/manMarriageWoman.jpg" height="55">
                               <p></p>
                               <div slot="answer" class="algolia-no-index">
-                                <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Marriage</span> </span>{<br></span><span>    <span class="hljs-keyword">private</span> Man husband = <span class="hljs-keyword">null</span>;<br></span><span>    <span class="hljs-keyword">private</span> Woman wife = <span class="hljs-keyword">null</span>;<br></span><span><br></span><span>    <span class="hljs-comment">// extra information like date etc can be added</span><br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Marriage</span><span class="hljs-params">(Man m, Woman w)</span> <span class="hljs-keyword">throws</span> Exception </span>{<br></span><span>        <span class="hljs-keyword">if</span> (m == <span class="hljs-keyword">null</span> || w == <span class="hljs-keyword">null</span>) {<br></span><span>            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Exception(<span class="hljs-string">"no man/woman"</span>);<br></span><span>        }<br></span><span>        <span class="hljs-keyword">if</span> (m.isMarried() || w.isMarried()) {<br></span><span>            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Exception(<span class="hljs-string">"already married"</span>);<br></span><span>        }<br></span><span>        husband = m;<br></span><span>        m.enterMarriage(<span class="hljs-keyword">this</span>);<br></span><span>        wife = w;<br></span><span>        w.enterMarriage(<span class="hljs-keyword">this</span>);<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> Man <span class="hljs-title">getHusband</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> Exception </span>{<br></span><span>        <span class="hljs-keyword">if</span>(husband == <span class="hljs-keyword">null</span>) {<br></span><span>            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Exception(<span class="hljs-string">"error state"</span>);<br></span><span>        } <span class="hljs-keyword">else</span> {<br></span><span>            <span class="hljs-keyword">return</span> husband;<br></span><span>        }<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> Woman <span class="hljs-title">getWife</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> Exception </span>{<br></span><span>        <span class="hljs-keyword">if</span>(wife == <span class="hljs-keyword">null</span>) {<br></span><span>            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Exception(<span class="hljs-string">"error state"</span>);<br></span><span>        } <span class="hljs-keyword">else</span> {<br></span><span>            <span class="hljs-keyword">return</span> wife;<br></span><span>        }<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-comment">// removal of both ends of 'Marriage'</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">divorce</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> Exception </span>{<br></span><span>        <span class="hljs-keyword">if</span> (husband==<span class="hljs-keyword">null</span> || wife==<span class="hljs-keyword">null</span>) {<br></span><span>            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Exception(<span class="hljs-string">"no marriage"</span>);<br></span><span>        }<br></span><span>        husband.removeFromMarriage(<span class="hljs-keyword">this</span>);<br></span><span>        husband = <span class="hljs-keyword">null</span>;<br></span><span>        wife.removeFromMarriage(<span class="hljs-keyword">this</span>);<br></span><span>        wife = <span class="hljs-keyword">null</span>;<br></span><span>    }<br></span><span>} <br></span></code></pre>
+                                <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Marriage</span> </span>{
+</span><span>    <span class="hljs-keyword">private</span> Man husband = <span class="hljs-keyword">null</span>;
+</span><span>    <span class="hljs-keyword">private</span> Woman wife = <span class="hljs-keyword">null</span>;
+</span><span>
+</span><span>    <span class="hljs-comment">// extra information like date etc can be added</span>
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Marriage</span><span class="hljs-params">(Man m, Woman w)</span> <span class="hljs-keyword">throws</span> Exception </span>{
+</span><span>        <span class="hljs-keyword">if</span> (m == <span class="hljs-keyword">null</span> || w == <span class="hljs-keyword">null</span>) {
+</span><span>            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Exception(<span class="hljs-string">"no man/woman"</span>);
+</span><span>        }
+</span><span>        <span class="hljs-keyword">if</span> (m.isMarried() || w.isMarried()) {
+</span><span>            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Exception(<span class="hljs-string">"already married"</span>);
+</span><span>        }
+</span><span>        husband = m;
+</span><span>        m.enterMarriage(<span class="hljs-keyword">this</span>);
+</span><span>        wife = w;
+</span><span>        w.enterMarriage(<span class="hljs-keyword">this</span>);
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> Man <span class="hljs-title">getHusband</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> Exception </span>{
+</span><span>        <span class="hljs-keyword">if</span>(husband == <span class="hljs-keyword">null</span>) {
+</span><span>            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Exception(<span class="hljs-string">"error state"</span>);
+</span><span>        } <span class="hljs-keyword">else</span> {
+</span><span>            <span class="hljs-keyword">return</span> husband;
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> Woman <span class="hljs-title">getWife</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> Exception </span>{
+</span><span>        <span class="hljs-keyword">if</span>(wife == <span class="hljs-keyword">null</span>) {
+</span><span>            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Exception(<span class="hljs-string">"error state"</span>);
+</span><span>        } <span class="hljs-keyword">else</span> {
+</span><span>            <span class="hljs-keyword">return</span> wife;
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-comment">// removal of both ends of 'Marriage'</span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">divorce</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> Exception </span>{
+</span><span>        <span class="hljs-keyword">if</span> (husband==<span class="hljs-keyword">null</span> || wife==<span class="hljs-keyword">null</span>) {
+</span><span>            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Exception(<span class="hljs-string">"no marriage"</span>);
+</span><span>        }
+</span><span>        husband.removeFromMarriage(<span class="hljs-keyword">this</span>);
+</span><span>        husband = <span class="hljs-keyword">null</span>;
+</span><span>        wife.removeFromMarriage(<span class="hljs-keyword">this</span>);
+</span><span>        wife = <span class="hljs-keyword">null</span>;
+</span><span>    }
+</span><span>} 
+</span></code></pre>
                               </div>
                             </question>
                           </panel>
@@ -319,7 +413,18 @@
                               <img src="/se-book/errorHandling/defensiveProgramming/compulsoryAssociations/images/accountGuarantorImmutable.png" height="80">
                               <p></p>
                               <div slot="answer" class="algolia-no-index">
-                                <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{<br></span><span>    <span class="hljs-keyword">private</span> Guarantor myGuarantor; <span class="hljs-comment">// should not be public</span><br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Account</span><span class="hljs-params">(Guarantor g)</span></span>{<br></span><span>        <span class="hljs-keyword">if</span> (g==<span class="hljs-keyword">null</span>) {<br></span><span>            haltWithErrorMessage(“Account must have a guarantor”);<br></span><span>        }<br></span><span>        myGuarantor = g;<br></span><span>    }<br></span><span>    <span class="hljs-comment">// there should not be a setGuarantor method</span><br></span><span>}<br></span></code></pre>
+                                <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{
+</span><span>    <span class="hljs-keyword">private</span> Guarantor myGuarantor; <span class="hljs-comment">// should not be public</span>
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Account</span><span class="hljs-params">(Guarantor g)</span></span>{
+</span><span>        <span class="hljs-keyword">if</span> (g==<span class="hljs-keyword">null</span>) {
+</span><span>            haltWithErrorMessage(“Account must have a guarantor”);
+</span><span>        }
+</span><span>        myGuarantor = g;
+</span><span>    }
+</span><span>    <span class="hljs-comment">// there should not be a setGuarantor method</span>
+</span><span>}
+</span></code></pre>
                               </div>
                             </question>
                           </panel>
@@ -331,7 +436,14 @@
                             <question>
                               <img src="/se-book/errorHandling/defensiveProgramming/compulsoryAssociations/images/countryCity.png" height="45">
                               <p></p>
-                              <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">City</span></span>{<br></span><span>    Country country;<br></span><span>    <br></span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setCountry</span><span class="hljs-params">(Country country)</span></span>{<br></span><span>        <span class="hljs-keyword">this</span>.country = country;<br></span><span>    }<br></span><span>}<br></span></code></pre>
+                              <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">City</span></span>{
+</span><span>    Country country;
+</span><span>    
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setCountry</span><span class="hljs-params">(Country country)</span></span>{
+</span><span>        <span class="hljs-keyword">this</span>.country = country;
+</span><span>    }
+</span><span>}
+</span></code></pre>
                               <p>This is a defensive implementation of the association.</p>
                               <ul radio-group="ac03f" class="radio-list">
                                 <li class="radio-list-item"><label><input class="radio-list-input" name="ac03f" type="radio"> True</label></li>
@@ -352,6 +464,7 @@
             </div>
           </div>
         </div>
+        <i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i>
       </div>
 
 
@@ -359,21 +472,16 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Thu, Sep 10, 2020, 11:06:50 PM GMT+8]</small>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.16.0</a>, generated on Wed, Sep 16, 2020, 3:47:05 PM GMT+8]</small>
       </div>
     </footer>
   </div>
 </body>
-<script src="../../../markbind/js/vue.min.js"></script>
-<script src="../../../markbind/js/components.min.js"></script>
 <script src="../../../markbind/js/bootstrap-utility.min.js"></script>
-<script src="../../../markbind/js/polyfill.min.js"></script>
-<script src="../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/se-book'
-  const enableSearch = true
+  MarkBind.setupWithSearch()
 </script>
-<script src="../../../markbind/js/setup.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
   function initAlgolia() {
@@ -388,5 +496,8 @@
   MarkBind.afterSetup(initAlgolia);
 </script>
 <script src="../../../markbind/layouts/default/scripts.js"></script>
+<script>
+  if (MarkBind.AfterSetup) MarkBind.AfterSetup()
+</script>
 
 </html>

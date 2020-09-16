@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.15.2">
+  <meta name="generator" content="MarkBind 2.16.0">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - Definitions</title>
   <link rel="stylesheet" href="../markbind/css/bootstrap.min.css">
@@ -14,12 +14,14 @@
   <link rel="stylesheet" href="../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
   <link rel="stylesheet" href="../markbind/css/octicons.css">
   <link rel="stylesheet" href="../markbind/css/github.min.css">
-  <link rel="stylesheet" href="../markbind/css/markbind.css">
+  <link rel="stylesheet" href="../markbind/css/markbind.min.css">
+  <script src="../markbind/js/polyfill.min.js"></script>
+  <script src="../markbind/js/vue.min.js"></script>
+  <script src="../markbind/js/markbind.min.js"></script>
+  <script src="../markbind/js/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/se-book/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../markbind/layouts/default/styles.css">
-  <link rel="stylesheet" href="../markbind/css/site-nav.css">
-  <link rel="stylesheet" href="../markbind/css/page-nav.css">
   <link rel="icon" href="/se-book/favicon.ico">
 </head>
 
@@ -306,7 +308,7 @@
             <p><strong>DRY (Don't Repeat Yourself) principle</strong>: Every piece of knowledge must have a single, unambiguous, authoritative representation within a system <sub><em>The Pragmatic Programmer</em>, by Andy Hunt and Dave Thomas</sub></p>
           </div>
           <div id="def-dynamic-binding">
-            <p><strong>Dynamic binding</strong> (<span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">There are subtle differences between late binding and dynamic binding, but they are beyond the scope of this document</span>aka late binding</span>) : a mechanism where method calls in code are <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">deciding which method implementation to execure</span>resolved</span> at <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">at the moment the method call is executed</span>runtime</span>, rather than at compile time.</p>
+            <p><strong>Dynamic binding</strong> (<span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">There are subtle differences between late binding and dynamic binding, but they are beyond the scope of this document</span>aka late binding</span>) : a mechanism where method calls in code are <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">deciding which method implementation to execure</span>resolved</span> at <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">at the moment the method call is executed</span>runtime</span>, rather than at compile time.</p>
           </div>
           <h2 id="e">E<a class="fa fa-anchor" href="#e" onclick="event.stopPropagation()"></a></h2>
           <div id="def-enterprise-application">
@@ -465,9 +467,9 @@
             <p><strong>Unit testing</strong>: testing individual units (methods, classes, subsystems, ...) to ensure each piece works correctly</p>
           </div>
           <div id="def-use-case">
-            <p><strong>Use case</strong>: A description of a set of sequences of actions, including variants, that a system performs to yield an observable result of value to an <span for="pop:actor" v-b-popover.hover.top.html="popoverGenerator" v-b-tooltip.hover.top.html="tooltipContentGetter" v-on:mouseover="$refs['pop:actor'].show()" class="trigger">actor</span>.[ 📖 : <span effect="fade" placement="top" data-mb-component-type="popover" v-b-popover.hover.top.html="popoverInnerGenerator" class="trigger">uml-user-guide<span data-mb-html-for="content"><span><em><strong>The Unified Modeling Language User Guide</strong></em>, 2e, G Booch, J Rumbaugh, and I Jacobson </span></span></span>]</p>
-            <span id="pop:actor" placement="top" data-mb-component-type="popover" v-b-popover.hover.top.html="popoverInnerGenerator" class="trigger"><span data-mb-html-for="header"><span><span aria-hidden="true" class="glyphicon glyphicon-eye-open"></span></span></span>
-              <div data-mb-html-for="content">
+            <p><strong>Use case</strong>: A description of a set of sequences of actions, including variants, that a system performs to yield an observable result of value to an <trigger for="pop:actor">actor</trigger>.[ 📖 : <span effect="fade" placement="top" data-mb-component-type="popover" v-b-popover.hover.top.html="popoverInnerGetters" class="trigger">uml-user-guide<span data-mb-slot-name="content"><span><em><strong>The Unified Modeling Language User Guide</strong></em>, 2e, G Booch, J Rumbaugh, and I Jacobson </span></span></span>]</p>
+            <span id="pop:actor" placement="top" data-mb-component-type="popover" v-b-popover.hover.top.html="popoverInnerGetters" class="trigger"><span data-mb-slot-name="header"><span><span aria-hidden="true" class="glyphicon glyphicon-eye-open"></span></span></span>
+              <div data-mb-slot-name="content">
                 <div>
                   <p><strong>Actor</strong>: An actor (in a use case) is a role played by a user. An actor can be a human or another system. Actors are not part of the system; they reside outside the system.</p>
                 </div>
@@ -490,6 +492,7 @@
           </div>
           <hr>
         </div>
+        <p><i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i></p>
       </div>
 
 
@@ -526,21 +529,16 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Thu, Sep 10, 2020, 11:06:50 PM GMT+8]</small>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.16.0</a>, generated on Wed, Sep 16, 2020, 3:47:05 PM GMT+8]</small>
       </div>
     </footer>
   </div>
 </body>
-<script src="../markbind/js/vue.min.js"></script>
-<script src="../markbind/js/components.min.js"></script>
 <script src="../markbind/js/bootstrap-utility.min.js"></script>
-<script src="../markbind/js/polyfill.min.js"></script>
-<script src="../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/se-book'
-  const enableSearch = true
+  MarkBind.setupWithSearch()
 </script>
-<script src="../markbind/js/setup.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
   function initAlgolia() {
@@ -555,5 +553,8 @@
   MarkBind.afterSetup(initAlgolia);
 </script>
 <script src="../markbind/layouts/default/scripts.js"></script>
+<script>
+  if (MarkBind.AfterSetup) MarkBind.AfterSetup()
+</script>
 
 </html>

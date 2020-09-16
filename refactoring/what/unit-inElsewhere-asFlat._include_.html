@@ -20,7 +20,7 @@
           <li>improve performance (sometimes, simpler code runs faster than complex code because simpler code is easier for the compiler to optimize).</li>
         </ul>
       </box>
-      <p>Given below are two common refactorings (<span trigger="click" for="modal:refactoring-catalog-what" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:refactoring-catalog-what'].show()" class="trigger-click">more</span>).</p>
+      <p>Given below are two common refactorings (<trigger trigger="click" for="modal:refactoring-catalog-what">more</trigger>).</p>
       <b-modal id="modal:refactoring-catalog-what" hide-footer size modal-class="mb-zoom" ref="modal:refactoring-catalog-what" class="algolia-no-index"><template slot="modal-title"><strong>Refactoring Catalogs</strong></template>
         <div>
           <ul>
@@ -39,11 +39,25 @@
             <table>
               <tr>
                 <td valign="top">
-                  <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">if</span> (isSpecialDeal()) {<br></span><span>    total = price * <span class="hljs-number">0.95</span>;<br></span><span>    send();<br></span><span>} <span class="hljs-keyword">else</span> {<br></span><span>    total = price * <span class="hljs-number">0.98</span>;<br></span><span>    send();<br></span><span>}<br></span></code></pre>
+                  <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">if</span> (isSpecialDeal()) {
+</span><span>    total = price * <span class="hljs-number">0.95</span>;
+</span><span>    send();
+</span><span>} <span class="hljs-keyword">else</span> {
+</span><span>    total = price * <span class="hljs-number">0.98</span>;
+</span><span>    send();
+</span><span>}
+</span></code></pre>
                 </td>
                 <td valign="center">&nbsp;→&nbsp;</td>
                 <td valign="top">
-                  <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">if</span> (isSpecialDeal()){<br></span><span>    total = price * <span class="hljs-number">0.95</span>;<br></span><span>} <span class="hljs-keyword">else</span> {<br></span><span>    total = price * <span class="hljs-number">0.98</span>;<br></span><span>}<br></span><span>send();<br></span><span><br></span></code></pre>
+                  <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">if</span> (isSpecialDeal()){
+</span><span>    total = price * <span class="hljs-number">0.95</span>;
+</span><span>} <span class="hljs-keyword">else</span> {
+</span><span>    total = price * <span class="hljs-number">0.98</span>;
+</span><span>}
+</span><span>send();
+</span><span>
+</span></code></pre>
                 </td>
               </tr>
             </table>
@@ -54,11 +68,23 @@
             <table>
               <tr>
                 <td valign="top">
-                  <pre><code class="hljs python" v-pre><span><span class="hljs-keyword">if</span> is_special_deal:<br></span><span>    total = price * <span class="hljs-number">0.95</span><br></span><span>    send()<br></span><span><span class="hljs-keyword">else</span>:<br></span><span>    total = price * <span class="hljs-number">0.98</span><br></span><span>    send()<br></span></code></pre>
+                  <pre><code class="hljs python" v-pre><span><span class="hljs-keyword">if</span> is_special_deal:
+</span><span>    total = price * <span class="hljs-number">0.95</span>
+</span><span>    send()
+</span><span><span class="hljs-keyword">else</span>:
+</span><span>    total = price * <span class="hljs-number">0.98</span>
+</span><span>    send()
+</span></code></pre>
                 </td>
                 <td valign="center">&nbsp;→&nbsp;</td>
                 <td valign="top">
-                  <pre><code class="hljs python" v-pre><span><span class="hljs-keyword">if</span> is_special_deal:<br></span><span>    total = price * <span class="hljs-number">0.95</span><br></span><span><span class="hljs-keyword">else</span>:<br></span><span>    total = price * <span class="hljs-number">0.98</span><br></span><span>    <br></span><span>send()<br></span></code></pre>
+                  <pre><code class="hljs python" v-pre><span><span class="hljs-keyword">if</span> is_special_deal:
+</span><span>    total = price * <span class="hljs-number">0.95</span>
+</span><span><span class="hljs-keyword">else</span>:
+</span><span>    total = price * <span class="hljs-number">0.98</span>
+</span><span>    
+</span><span>send()
+</span></code></pre>
                 </td>
               </tr>
             </table>
@@ -72,16 +98,45 @@
         <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example:</p>
         <div class="alt-java">
           <div>
-            <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">printOwing</span><span class="hljs-params">()</span> </span>{<br></span><span>    printBanner();<br></span><span><br></span><span>    <span class="hljs-comment">//print details</span><br></span><span>    System.out.println(<span class="hljs-string">"name:	"</span> + name);<br></span><span>    System.out.println(<span class="hljs-string">"amount	"</span> + getOutstanding());<br></span><span>}<br></span></code></pre>
+            <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">printOwing</span><span class="hljs-params">()</span> </span>{
+</span><span>    printBanner();
+</span><span>
+</span><span>    <span class="hljs-comment">//print details</span>
+</span><span>    System.out.println(<span class="hljs-string">"name:	"</span> + name);
+</span><span>    System.out.println(<span class="hljs-string">"amount	"</span> + getOutstanding());
+</span><span>}
+</span></code></pre>
             <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
-            <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">printOwing</span><span class="hljs-params">()</span> </span>{<br></span><span>    printBanner();<br></span><span>    printDetails(getOutstanding());<br></span><span>}<br></span><span><br></span><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">printDetails</span> <span class="hljs-params">(<span class="hljs-keyword">double</span> outstanding)</span> </span>{<br></span><span>    System.out.println(<span class="hljs-string">"name:	"</span> + name);<br></span><span>    System.out.println(<span class="hljs-string">"amount	"</span> + outstanding);<br></span><span>}<br></span></code></pre>
+            <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">printOwing</span><span class="hljs-params">()</span> </span>{
+</span><span>    printBanner();
+</span><span>    printDetails(getOutstanding());
+</span><span>}
+</span><span>
+</span><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">printDetails</span> <span class="hljs-params">(<span class="hljs-keyword">double</span> outstanding)</span> </span>{
+</span><span>    System.out.println(<span class="hljs-string">"name:	"</span> + name);
+</span><span>    System.out.println(<span class="hljs-string">"amount	"</span> + outstanding);
+</span><span>}
+</span></code></pre>
           </div>
         </div>
         <div class="alt-python">
           <div>
-            <pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_owing</span><span class="hljs-params">()</span>:</span><br></span><span>    print_banner()<br></span><span><br></span><span>    //<span class="hljs-keyword">print</span> details<br></span><span>    print(<span class="hljs-string">"name:	"</span> + name)<br></span><span>    print(<span class="hljs-string">"amount	"</span> + get_outstanding())<br></span></code></pre>
+            <pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_owing</span><span class="hljs-params">()</span>:</span>
+</span><span>    print_banner()
+</span><span>
+</span><span>    //<span class="hljs-keyword">print</span> details
+</span><span>    print(<span class="hljs-string">"name:	"</span> + name)
+</span><span>    print(<span class="hljs-string">"amount	"</span> + get_outstanding())
+</span></code></pre>
             <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
-            <pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_owing</span><span class="hljs-params">()</span>:</span><br></span><span>    print_banner()<br></span><span>    print_details(get_outstanding())<br></span><span><br></span><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_details</span><span class="hljs-params">(amount)</span>:</span><br></span><span>    print(<span class="hljs-string">"name:	"</span> + name)<br></span><span>    print(<span class="hljs-string">"amount	"</span> + amount)<br></span></code></pre>
+            <pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_owing</span><span class="hljs-params">()</span>:</span>
+</span><span>    print_banner()
+</span><span>    print_details(get_outstanding())
+</span><span>
+</span><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_details</span><span class="hljs-params">(amount)</span>:</span>
+</span><span>    print(<span class="hljs-string">"name:	"</span> + name)
+</span><span>    print(<span class="hljs-string">"amount	"</span> + amount)
+</span></code></pre>
           </div>
         </div>
       </box>

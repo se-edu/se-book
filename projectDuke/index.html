@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.15.2">
+  <meta name="generator" content="MarkBind 2.16.0">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - Project Duke</title>
   <link rel="stylesheet" href="../markbind/css/bootstrap.min.css">
@@ -14,12 +14,14 @@
   <link rel="stylesheet" href="../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
   <link rel="stylesheet" href="../markbind/css/octicons.css">
   <link rel="stylesheet" href="../markbind/css/github.min.css">
-  <link rel="stylesheet" href="../markbind/css/markbind.css">
+  <link rel="stylesheet" href="../markbind/css/markbind.min.css">
+  <script src="../markbind/js/polyfill.min.js"></script>
+  <script src="../markbind/js/vue.min.js"></script>
+  <script src="../markbind/js/markbind.min.js"></script>
+  <script src="../markbind/js/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/se-book/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../markbind/layouts/default/styles.css">
-  <link rel="stylesheet" href="../markbind/css/site-nav.css">
-  <link rel="stylesheet" href="../markbind/css/page-nav.css">
   <link rel="icon" href="/se-book/favicon.ico">
 </head>
 
@@ -257,7 +259,58 @@
                   </div>
                   <p><strong>The project aims to build a product named <em>Duke</em>, a Personal Assistant Chatbot that helps a person to keep track of various things.</strong> <span class="dimmed">The name <em>Duke</em> was chosen as a placeholder name, in honor of <a href="https://www.oracle.com/java/duke.html">Duke, the Java Mascot</a>.</span> <strong>You may give it any other name and personality you wish.</strong></p>
                   <p>Here is a sample interaction with Duke:</p>
-                  <pre><code class="no-line-numbers hljs" v-pre><span>    ____________________________________________________________<br></span><span>      ____        _        <br></span><span>     |  _ \ _   _| | _____ <br></span><span>     | | | | | | | |/ / _ \<br></span><span>     | |_| | |_| |   &lt;  __/<br></span><span>     |____/ \__,_|_|\_\___|<br></span><span><br></span><span>     Hello! I'm Duke<br></span><span>     What can I do for you?<br></span><span>    ____________________________________________________________<br></span><span><br></span><span>list<br></span><span>    ____________________________________________________________<br></span><span>     Here are the tasks in your list:<br></span><span>     1.[T][✓] read book<br></span><span>     2.[D][✗] return book (by: June 6th)<br></span><span>     3.[E][✗] project meeting (at: Aug 6th 2-4pm)<br></span><span>     4.[T][✓] join sports club<br></span><span>    ____________________________________________________________<br></span><span><br></span><span>todo borrow book<br></span><span>    ____________________________________________________________<br></span><span>     Got it. I've added this task: <br></span><span>       [T][✗] borrow book<br></span><span>     Now you have 5 tasks in the list.<br></span><span>    ____________________________________________________________<br></span><span><br></span><span><br></span><span>deadline return book /by Sunday<br></span><span>    ____________________________________________________________<br></span><span>     Got it. I've added this task: <br></span><span>       [D][✗] return book (by: Sunday)<br></span><span>     Now you have 6 tasks in the list.<br></span><span>    ____________________________________________________________<br></span><span><br></span><span>done 2<br></span><span>    ____________________________________________________________<br></span><span>     Nice! I've marked this task as done: <br></span><span>       [D][✓] return book (by: June 6th)<br></span><span>    ____________________________________________________________<br></span><span><br></span><span>blah<br></span><span>    ____________________________________________________________<br></span><span>     ☹ OOPS!!! I'm sorry, but I don't know what that means :-(<br></span><span>    ____________________________________________________________<br></span><span><br></span><span>bye<br></span><span>    ____________________________________________________________<br></span><span>     Bye. Hope to see you again soon!<br></span><span>    ____________________________________________________________<br></span><span><br></span></code></pre>
+                  <pre><code class="no-line-numbers hljs" v-pre><span>    ____________________________________________________________
+</span><span>      ____        _        
+</span><span>     |  _ \ _   _| | _____ 
+</span><span>     | | | | | | | |/ / _ \
+</span><span>     | |_| | |_| |   &lt;  __/
+</span><span>     |____/ \__,_|_|\_\___|
+</span><span>
+</span><span>     Hello! I'm Duke
+</span><span>     What can I do for you?
+</span><span>    ____________________________________________________________
+</span><span>
+</span><span>list
+</span><span>    ____________________________________________________________
+</span><span>     Here are the tasks in your list:
+</span><span>     1.[T][✓] read book
+</span><span>     2.[D][✗] return book (by: June 6th)
+</span><span>     3.[E][✗] project meeting (at: Aug 6th 2-4pm)
+</span><span>     4.[T][✓] join sports club
+</span><span>    ____________________________________________________________
+</span><span>
+</span><span>todo borrow book
+</span><span>    ____________________________________________________________
+</span><span>     Got it. I've added this task: 
+</span><span>       [T][✗] borrow book
+</span><span>     Now you have 5 tasks in the list.
+</span><span>    ____________________________________________________________
+</span><span>
+</span><span>
+</span><span>deadline return book /by Sunday
+</span><span>    ____________________________________________________________
+</span><span>     Got it. I've added this task: 
+</span><span>       [D][✗] return book (by: Sunday)
+</span><span>     Now you have 6 tasks in the list.
+</span><span>    ____________________________________________________________
+</span><span>
+</span><span>done 2
+</span><span>    ____________________________________________________________
+</span><span>     Nice! I've marked this task as done: 
+</span><span>       [D][✓] return book (by: June 6th)
+</span><span>    ____________________________________________________________
+</span><span>
+</span><span>blah
+</span><span>    ____________________________________________________________
+</span><span>     ☹ OOPS!!! I'm sorry, but I don't know what that means :-(
+</span><span>    ____________________________________________________________
+</span><span>
+</span><span>bye
+</span><span>    ____________________________________________________________
+</span><span>     Bye. Hope to see you again soon!
+</span><span>    ____________________________________________________________
+</span><span>
+</span></code></pre>
                   <div id="increments_summary">
                     <p>The project consists of the following <em>increments</em>:</p>
                     <ul>
@@ -285,7 +338,13 @@
                     <br>
                     Example:
                   </p>
-                  <pre><code class="no-line-numbers hljs" v-pre><span>____________________________________________________________<br></span><span> Hello! I'm Duke<br></span><span> What can I do for you?<br></span><span>____________________________________________________________<br></span><span> Bye. Hope to see you again soon!<br></span><span>____________________________________________________________<br></span></code></pre>
+                  <pre><code class="no-line-numbers hljs" v-pre><span>____________________________________________________________
+</span><span> Hello! I'm Duke
+</span><span> What can I do for you?
+</span><span>____________________________________________________________
+</span><span> Bye. Hope to see you again soon!
+</span><span>____________________________________________________________
+</span></code></pre>
                   <ul>
                     <li>The indentation and horizontal lines are optional.</li>
                   </ul>
@@ -300,7 +359,27 @@
                     <br>
                     Example:
                   </p>
-                  <pre><code class="no-line-numbers hljs" v-pre><span>    ____________________________________________________________<br></span><span>     Hello! I'm Duke<br></span><span>     What can I do for you?<br></span><span>    ____________________________________________________________<br></span><span><br></span><span>list<br></span><span>    ____________________________________________________________<br></span><span>     list<br></span><span>    ____________________________________________________________<br></span><span><br></span><span>blah<br></span><span>    ____________________________________________________________<br></span><span>     blah<br></span><span>    ____________________________________________________________<br></span><span><br></span><span>bye<br></span><span>    ____________________________________________________________<br></span><span>     Bye. Hope to see you again soon!<br></span><span>    ____________________________________________________________<br></span><span><br></span></code></pre>
+                  <pre><code class="no-line-numbers hljs" v-pre><span>    ____________________________________________________________
+</span><span>     Hello! I'm Duke
+</span><span>     What can I do for you?
+</span><span>    ____________________________________________________________
+</span><span>
+</span><span>list
+</span><span>    ____________________________________________________________
+</span><span>     list
+</span><span>    ____________________________________________________________
+</span><span>
+</span><span>blah
+</span><span>    ____________________________________________________________
+</span><span>     blah
+</span><span>    ____________________________________________________________
+</span><span>
+</span><span>bye
+</span><span>    ____________________________________________________________
+</span><span>     Bye. Hope to see you again soon!
+</span><span>    ____________________________________________________________
+</span><span>
+</span></code></pre>
                   <ul>
                     <li>The indentation and horizontal lines are optional.</li>
                   </ul>
@@ -318,7 +397,32 @@
                   <h3 id="level-2-add-list">Level 2. Add, List<a class="fa fa-anchor" href="#level-2-add-list" onclick="event.stopPropagation()"></a></h3>
                   <p>Add the ability to store whatever text entered by the user and display them back to the user when requested.</p>
                   <p>Example:</p>
-                  <pre><code class="no-line-numbers hljs" v-pre><span>    ____________________________________________________________<br></span><span>     Hello! I'm Duke<br></span><span>     What can I do for you?<br></span><span>    ____________________________________________________________<br></span><span><br></span><span>read book<br></span><span>    ____________________________________________________________<br></span><span>     added: read book<br></span><span>    ____________________________________________________________<br></span><span><br></span><span>return book<br></span><span>    ____________________________________________________________<br></span><span>     added: return book<br></span><span>    ____________________________________________________________<br></span><span><br></span><span>list<br></span><span>    ____________________________________________________________<br></span><span>     1. read book<br></span><span>     2. return book<br></span><span>    ____________________________________________________________<br></span><span>bye<br></span><span>    ____________________________________________________________<br></span><span>     Bye. Hope to see you again soon!<br></span><span>    ____________________________________________________________<br></span><span><br></span></code></pre>
+                  <pre><code class="no-line-numbers hljs" v-pre><span>    ____________________________________________________________
+</span><span>     Hello! I'm Duke
+</span><span>     What can I do for you?
+</span><span>    ____________________________________________________________
+</span><span>
+</span><span>read book
+</span><span>    ____________________________________________________________
+</span><span>     added: read book
+</span><span>    ____________________________________________________________
+</span><span>
+</span><span>return book
+</span><span>    ____________________________________________________________
+</span><span>     added: return book
+</span><span>    ____________________________________________________________
+</span><span>
+</span><span>list
+</span><span>    ____________________________________________________________
+</span><span>     1. read book
+</span><span>     2. return book
+</span><span>    ____________________________________________________________
+</span><span>bye
+</span><span>    ____________________________________________________________
+</span><span>     Bye. Hope to see you again soon!
+</span><span>    ____________________________________________________________
+</span><span>
+</span></code></pre>
                   <ul>
                     <li>There is no need to save the data to the hard disk.</li>
                     <li>Assume there will be no more than 100 tasks. If you wish, you may use a fixed size array (e.g., <code v-pre>String[100]</code>) to store the items.</li>
@@ -331,7 +435,20 @@
                     </span></p>
                   <h3 id="level-3-mark-as-done">Level 3. Mark as Done<a class="fa fa-anchor" href="#level-3-mark-as-done" onclick="event.stopPropagation()"></a></h3>
                   <p>Add the ability to mark tasks as <em>done</em>.<br><br></p>
-                  <pre><code class="no-line-numbers hljs" v-pre><span>list<br></span><span>    ____________________________________________________________<br></span><span>     Here are the tasks in your list:<br></span><span>     1.[✓] read book<br></span><span>     2.[✗] return book<br></span><span>     3.[✗] buy bread<br></span><span>    ____________________________________________________________<br></span><span><br></span><span>done 2<br></span><span>    ____________________________________________________________<br></span><span>     Nice! I've marked this task as done: <br></span><span>       [✓] return book<br></span><span>    ____________________________________________________________<br></span></code></pre>
+                  <pre><code class="no-line-numbers hljs" v-pre><span>list
+</span><span>    ____________________________________________________________
+</span><span>     Here are the tasks in your list:
+</span><span>     1.[✓] read book
+</span><span>     2.[✗] return book
+</span><span>     3.[✗] buy bread
+</span><span>    ____________________________________________________________
+</span><span>
+</span><span>done 2
+</span><span>    ____________________________________________________________
+</span><span>     Nice! I've marked this task as done: 
+</span><span>       [✓] return book
+</span><span>    ____________________________________________________________
+</span></code></pre>
                   <div>
                     <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> When implementing this feature, you are also recommended to implement the following extension:</p>
                     <div class="indented">
@@ -344,12 +461,29 @@
                             <h3 id="a-classes"><span class="badge badge-pill badge-primary">A-Classes</span><a class="fa fa-anchor" href="#a-classes" onclick="event.stopPropagation()"></a></h3>
                             <p>     <big>↳</big> <strong>Use a class to represent tasks</strong></p>
                           </div>
-                          <p>While it is possible to represent a task list as a multi-dimensional array containing <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content"><code v-pre>String</code>, <code v-pre>int</code>, <code v-pre>boolean</code> etc.</span>primitive values</span>, the more natural approach is to use a <code v-pre>Task</code> class to represent tasks.</p>
+                          <p>While it is possible to represent a task list as a multi-dimensional array containing <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content"><code v-pre>String</code>, <code v-pre>int</code>, <code v-pre>boolean</code> etc.</span>primitive values</span>, the more natural approach is to use a <code v-pre>Task</code> class to represent tasks.</p>
                           <panel type="seamless" minimized class="algolia-no-index"><template slot="_header">
                               <p>Partial solution</p>
                             </template>
-                            <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Task</span> </span>{<br></span><span>    <span class="hljs-keyword">protected</span> String description;<br></span><span>    <span class="hljs-keyword">protected</span> <span class="hljs-keyword">boolean</span> isDone;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Task</span><span class="hljs-params">(String description)</span> </span>{<br></span><span>        <span class="hljs-keyword">this</span>.description = description;<br></span><span>        <span class="hljs-keyword">this</span>.isDone = <span class="hljs-keyword">false</span>;<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getStatusIcon</span><span class="hljs-params">()</span> </span>{<br></span><span>        <span class="hljs-keyword">return</span> (isDone ? <span class="hljs-string">"\u2713"</span> : <span class="hljs-string">"\u2718"</span>); <span class="hljs-comment">//return tick or X symbols</span><br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-comment">//...</span><br></span><span>}<br></span></code></pre>
-                            <pre><code class="hljs java" v-pre><span>Task t = <span class="hljs-keyword">new</span> Taks(<span class="hljs-string">"read book"</span>);<br></span><span>t.markAsDone()<br></span></code></pre>
+                            <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Task</span> </span>{
+</span><span>    <span class="hljs-keyword">protected</span> String description;
+</span><span>    <span class="hljs-keyword">protected</span> <span class="hljs-keyword">boolean</span> isDone;
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Task</span><span class="hljs-params">(String description)</span> </span>{
+</span><span>        <span class="hljs-keyword">this</span>.description = description;
+</span><span>        <span class="hljs-keyword">this</span>.isDone = <span class="hljs-keyword">false</span>;
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getStatusIcon</span><span class="hljs-params">()</span> </span>{
+</span><span>        <span class="hljs-keyword">return</span> (isDone ? <span class="hljs-string">"\u2713"</span> : <span class="hljs-string">"\u2718"</span>); <span class="hljs-comment">//return tick or X symbols</span>
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-comment">//...</span>
+</span><span>}
+</span></code></pre>
+                            <pre><code class="hljs java" v-pre><span>Task t = <span class="hljs-keyword">new</span> Taks(<span class="hljs-string">"read book"</span>);
+</span><span>t.markAsDone()
+</span></code></pre>
                           </panel>
                         </div>
                       </panel>
@@ -372,10 +506,47 @@
                     <li><strong>Events</strong>: tasks that start at a specific time and ends at a specific time <span class="dimmed">e.g., <em>team project meeting on 2/10/2019 2-4pm</em></span></li>
                   </ol>
                   <p>Example:</p>
-                  <pre><code class="no-line-numbers hljs" v-pre><span>todo borrow book<br></span><span>    ____________________________________________________________<br></span><span>     Got it. I've added this task: <br></span><span>       [T][✗] borrow book<br></span><span>     Now you have 5 tasks in the list.<br></span><span>    ____________________________________________________________<br></span><span><br></span><span>list<br></span><span>    ____________________________________________________________<br></span><span>     Here are the tasks in your list:<br></span><span>     1.[T][✓] read book<br></span><span>     2.[D][✗] return book (by: June 6th)<br></span><span>     3.[E][✗] project meeting (at: Aug 6th 2-4pm)<br></span><span>     4.[T][✓] join sports club<br></span><span>     5.[T][✗] borrow book<br></span><span>    ____________________________________________________________<br></span><span><br></span><span>deadline return book /by Sunday<br></span><span>    ____________________________________________________________<br></span><span>     Got it. I've added this task: <br></span><span>       [D][✗] return book (by: Sunday)<br></span><span>     Now you have 6 tasks in the list.<br></span><span>    ____________________________________________________________<br></span><span><br></span><span>event project meeting /at Mon 2-4pm<br></span><span>    ____________________________________________________________<br></span><span>     Got it. I've added this task: <br></span><span>       [E][✗] project meeting (at: Mon 2-4pm)<br></span><span>     Now you have 7 tasks in the list.<br></span><span>    ____________________________________________________________<br></span></code></pre>
+                  <pre><code class="no-line-numbers hljs" v-pre><span>todo borrow book
+</span><span>    ____________________________________________________________
+</span><span>     Got it. I've added this task: 
+</span><span>       [T][✗] borrow book
+</span><span>     Now you have 5 tasks in the list.
+</span><span>    ____________________________________________________________
+</span><span>
+</span><span>list
+</span><span>    ____________________________________________________________
+</span><span>     Here are the tasks in your list:
+</span><span>     1.[T][✓] read book
+</span><span>     2.[D][✗] return book (by: June 6th)
+</span><span>     3.[E][✗] project meeting (at: Aug 6th 2-4pm)
+</span><span>     4.[T][✓] join sports club
+</span><span>     5.[T][✗] borrow book
+</span><span>    ____________________________________________________________
+</span><span>
+</span><span>deadline return book /by Sunday
+</span><span>    ____________________________________________________________
+</span><span>     Got it. I've added this task: 
+</span><span>       [D][✗] return book (by: Sunday)
+</span><span>     Now you have 6 tasks in the list.
+</span><span>    ____________________________________________________________
+</span><span>
+</span><span>event project meeting /at Mon 2-4pm
+</span><span>    ____________________________________________________________
+</span><span>     Got it. I've added this task: 
+</span><span>       [E][✗] project meeting (at: Mon 2-4pm)
+</span><span>     Now you have 7 tasks in the list.
+</span><span>    ____________________________________________________________
+</span></code></pre>
                   <p>At this point, dates/times can be treated as strings; there is no need to convert them to actual dates/times.</p>
                   <p>Example:</p>
-                  <pre><code class="no-line-numbers hljs" v-pre><span><br></span><span>deadline do homework /by no idea :-p<br></span><span>    ____________________________________________________________<br></span><span>     Got it. I've added this task: <br></span><span>       [D][✗] do homework (by: no idea :-p)<br></span><span>     Now you have 6 tasks in the list.<br></span><span>    ____________________________________________________________<br></span></code></pre>
+                  <pre><code class="no-line-numbers hljs" v-pre><span>
+</span><span>deadline do homework /by no idea :-p
+</span><span>    ____________________________________________________________
+</span><span>     Got it. I've added this task: 
+</span><span>       [D][✗] do homework (by: no idea :-p)
+</span><span>     Now you have 6 tasks in the list.
+</span><span>    ____________________________________________________________
+</span></code></pre>
                   <div>
                     <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> When implementing this feature, you are also recommended to implement the following extension:</p>
                     <div class="indented">
@@ -393,8 +564,24 @@
                           <panel type="seamless" minimized class="algolia-no-index"><template slot="_header">
                               <p>Partial solution</p>
                             </template>
-                            <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Deadline</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Task</span> </span>{<br></span><span><br></span><span>    <span class="hljs-keyword">protected</span> String by;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Deadline</span><span class="hljs-params">(String description, String by)</span> </span>{<br></span><span>        <span class="hljs-keyword">super</span>(description);<br></span><span>        <span class="hljs-keyword">this</span>.by = by;<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-meta">@Override</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span><span class="hljs-params">()</span> </span>{<br></span><span>        <span class="hljs-keyword">return</span> <span class="hljs-string">"[D]"</span> + <span class="hljs-keyword">super</span>.toString() + <span class="hljs-string">" (by: "</span> + by + <span class="hljs-string">")"</span>;<br></span><span>    }<br></span><span>}<br></span></code></pre>
-                            <pre><code class="hljs java" v-pre><span>Task[] tasks = <span class="hljs-keyword">new</span> Task[<span class="hljs-number">100</span>];<br></span><span>task[<span class="hljs-number">0</span>] = <span class="hljs-keyword">new</span> Deadline(<span class="hljs-string">"return book"</span>, <span class="hljs-string">"Monday"</span>);<br></span></code></pre>
+                            <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Deadline</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Task</span> </span>{
+</span><span>
+</span><span>    <span class="hljs-keyword">protected</span> String by;
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Deadline</span><span class="hljs-params">(String description, String by)</span> </span>{
+</span><span>        <span class="hljs-keyword">super</span>(description);
+</span><span>        <span class="hljs-keyword">this</span>.by = by;
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-meta">@Override</span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span><span class="hljs-params">()</span> </span>{
+</span><span>        <span class="hljs-keyword">return</span> <span class="hljs-string">"[D]"</span> + <span class="hljs-keyword">super</span>.toString() + <span class="hljs-string">" (by: "</span> + by + <span class="hljs-string">")"</span>;
+</span><span>    }
+</span><span>}
+</span></code></pre>
+                            <pre><code class="hljs java" v-pre><span>Task[] tasks = <span class="hljs-keyword">new</span> Task[<span class="hljs-number">100</span>];
+</span><span>task[<span class="hljs-number">0</span>] = <span class="hljs-keyword">new</span> Deadline(<span class="hljs-string">"return book"</span>, <span class="hljs-string">"Monday"</span>);
+</span></code></pre>
                           </panel>
                         </div>
                       </panel>
@@ -412,7 +599,16 @@
                     <br>
                   </p>
                   <p>Example:</p>
-                  <pre><code class="no-line-numbers hljs" v-pre><span>todo<br></span><span>    ____________________________________________________________<br></span><span>     ☹ OOPS!!! The description of a todo cannot be empty.<br></span><span>    ____________________________________________________________<br></span><span><br></span><span>blah<br></span><span>    ____________________________________________________________<br></span><span>     ☹ OOPS!!! I'm sorry, but I don't know what that means :-(<br></span><span>    ____________________________________________________________<br></span></code></pre>
+                  <pre><code class="no-line-numbers hljs" v-pre><span>todo
+</span><span>    ____________________________________________________________
+</span><span>     ☹ OOPS!!! The description of a todo cannot be empty.
+</span><span>    ____________________________________________________________
+</span><span>
+</span><span>blah
+</span><span>    ____________________________________________________________
+</span><span>     ☹ OOPS!!! I'm sorry, but I don't know what that means :-(
+</span><span>    ____________________________________________________________
+</span></code></pre>
                   <div>
                     <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> When implementing this feature, you are also recommended to implement the following extension:</p>
                     <div class="indented">
@@ -446,7 +642,23 @@
                     <br>
                   </p>
                   <p>Example:</p>
-                  <pre><code class="no-line-numbers hljs" v-pre><span>list<br></span><span>    ____________________________________________________________<br></span><span>     Here are the tasks in your list:<br></span><span>     1.[T][✓] read book<br></span><span>     2.[D][✓] return book (by: June 6th)<br></span><span>     3.[E][✗] project meeting (at: Aug 6th 2-4pm)<br></span><span>     4.[T][✓] join sports club<br></span><span>     5.[T][✗] borrow book<br></span><span>    ____________________________________________________________<br></span><span><br></span><span>delete 3<br></span><span>    ____________________________________________________________<br></span><span>     Noted. I've removed this task: <br></span><span>       [E][✗] project meeting (at: Aug 6th 2-4pm)<br></span><span>     Now you have 4 tasks in the list.<br></span><span>    ____________________________________________________________<br></span></code></pre>
+                  <pre><code class="no-line-numbers hljs" v-pre><span>list
+</span><span>    ____________________________________________________________
+</span><span>     Here are the tasks in your list:
+</span><span>     1.[T][✓] read book
+</span><span>     2.[D][✓] return book (by: June 6th)
+</span><span>     3.[E][✗] project meeting (at: Aug 6th 2-4pm)
+</span><span>     4.[T][✓] join sports club
+</span><span>     5.[T][✗] borrow book
+</span><span>    ____________________________________________________________
+</span><span>
+</span><span>delete 3
+</span><span>    ____________________________________________________________
+</span><span>     Noted. I've removed this task: 
+</span><span>       [E][✗] project meeting (at: Aug 6th 2-4pm)
+</span><span>     Now you have 4 tasks in the list.
+</span><span>    ____________________________________________________________
+</span></code></pre>
                   <div>
                     <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> When implementing this feature, you are also recommended to implement the following extension:</p>
                     <div class="indented">
@@ -473,7 +685,11 @@
                   <h3 id="level-7-save">Level 7. Save<a class="fa fa-anchor" href="#level-7-save" onclick="event.stopPropagation()"></a></h3>
                   <p>Save the tasks in the hard disk automatically whenever the task list changes. Load the data from the hard disk when Duke starts up. You may hard-code the file name and location <span class="dimmed">e.g., <code v-pre>[project_root]/data/duke.txt</code></span></p>
                   <p>The format of the file is up to you. Example:</p>
-                  <pre><code class="no-line-numbers hljs" v-pre><span>T | 1 | read book<br></span><span>D | 0 | return book | June 6th<br></span><span>E | 0 | project meeting | Aug 6th 2-4pm<br></span><span>T | 1 | join sports club<br></span></code></pre>
+                  <pre><code class="no-line-numbers hljs" v-pre><span>T | 1 | read book
+</span><span>D | 0 | return book | June 6th
+</span><span>E | 0 | project meeting | Aug 6th 2-4pm
+</span><span>T | 1 | join sports club
+</span></code></pre>
                   <p><strong><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> If you use file paths in your code,</strong></p>
                   <ul>
                     <li>remember to use relative paths rather than absolute paths such as <code v-pre>C:\data</code>. If not, your app can cause unpredictable results when used in another computer.</li>
@@ -498,7 +714,34 @@
                       <p>Using dates/times in Java</p>
                     </template>
                     <p>A code snippet using the <code v-pre>LocalDate</code> class:</p>
-                    <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">import</span> java.time.LocalDate;<br></span><span><span class="hljs-keyword">import</span> java.time.format.DateTimeFormatter;<br></span><span><span class="hljs-keyword">import</span> java.time.temporal.ChronoUnit;<br></span><span><br></span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{<br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{<br></span><span>        <span class="hljs-comment">//create dates from strings</span><br></span><span>        LocalDate d1 = LocalDate.parse(<span class="hljs-string">"2019-12-01"</span>);<br></span><span>        LocalDate d2 = LocalDate.parse(<span class="hljs-string">"2019-12-02"</span>);<br></span><span>        LocalDate d3 = LocalDate.parse(<span class="hljs-string">"2019-12-02"</span>);<br></span><span>        <br></span><span>        <span class="hljs-comment">//compare dates</span><br></span><span>        System.out.println(d1.isBefore(d2)); <span class="hljs-comment">// -&gt; true</span><br></span><span>        System.out.println(d1.isAfter(d2)); <span class="hljs-comment">// -&gt; false</span><br></span><span>        System.out.println(d2.equals(d3)); <span class="hljs-comment">// -&gt; true</span><br></span><span>        <br></span><span>        <span class="hljs-comment">//work with dates</span><br></span><span>        System.out.println(d1.getDayOfWeek()); <span class="hljs-comment">// -&gt; SUNDAY</span><br></span><span>        System.out.println(d1.getMonth()); <span class="hljs-comment">// -&gt; DECEMBER</span><br></span><span>        System.out.println(d1.plus(<span class="hljs-number">1</span>, ChronoUnit.YEARS));  <span class="hljs-comment">// -&gt; 2020-12-01</span><br></span><span>        <br></span><span>        <span class="hljs-comment">// get today's date and print it in a specific format</span><br></span><span>        LocalDate d4 = LocalDate.now();<br></span><span>        System.out.println(d4); <span class="hljs-comment">// -&gt; 2019-10-15</span><br></span><span>        System.out.println(d4.format(DateTimeFormatter.ofPattern(<span class="hljs-string">"MMM d yyyy"</span>))); <span class="hljs-comment">// -&gt; Oct 15 2019</span><br></span><span>    }<br></span><span>}<br></span></code></pre>
+                    <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">import</span> java.time.LocalDate;
+</span><span><span class="hljs-keyword">import</span> java.time.format.DateTimeFormatter;
+</span><span><span class="hljs-keyword">import</span> java.time.temporal.ChronoUnit;
+</span><span>
+</span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+</span><span>        <span class="hljs-comment">//create dates from strings</span>
+</span><span>        LocalDate d1 = LocalDate.parse(<span class="hljs-string">"2019-12-01"</span>);
+</span><span>        LocalDate d2 = LocalDate.parse(<span class="hljs-string">"2019-12-02"</span>);
+</span><span>        LocalDate d3 = LocalDate.parse(<span class="hljs-string">"2019-12-02"</span>);
+</span><span>        
+</span><span>        <span class="hljs-comment">//compare dates</span>
+</span><span>        System.out.println(d1.isBefore(d2)); <span class="hljs-comment">// -&gt; true</span>
+</span><span>        System.out.println(d1.isAfter(d2)); <span class="hljs-comment">// -&gt; false</span>
+</span><span>        System.out.println(d2.equals(d3)); <span class="hljs-comment">// -&gt; true</span>
+</span><span>        
+</span><span>        <span class="hljs-comment">//work with dates</span>
+</span><span>        System.out.println(d1.getDayOfWeek()); <span class="hljs-comment">// -&gt; SUNDAY</span>
+</span><span>        System.out.println(d1.getMonth()); <span class="hljs-comment">// -&gt; DECEMBER</span>
+</span><span>        System.out.println(d1.plus(<span class="hljs-number">1</span>, ChronoUnit.YEARS));  <span class="hljs-comment">// -&gt; 2020-12-01</span>
+</span><span>        
+</span><span>        <span class="hljs-comment">// get today's date and print it in a specific format</span>
+</span><span>        LocalDate d4 = LocalDate.now();
+</span><span>        System.out.println(d4); <span class="hljs-comment">// -&gt; 2019-10-15</span>
+</span><span>        System.out.println(d4.format(DateTimeFormatter.ofPattern(<span class="hljs-string">"MMM d yyyy"</span>))); <span class="hljs-comment">// -&gt; Oct 15 2019</span>
+</span><span>    }
+</span><span>}
+</span></code></pre>
                     <ul>
                       <li><a href="https://www.baeldung.com/java-8-date-time-intro">A tutorial from https://www.baeldung.com/</a></li>
                     </ul>
@@ -515,7 +758,13 @@
                     <br>
                   </p>
                   <p>Example:</p>
-                  <pre><code class="no-line-numbers hljs" v-pre><span>find book<br></span><span>    ____________________________________________________________<br></span><span>     Here are the matching tasks in your list:<br></span><span>     1.[T][✓] read book<br></span><span>     2.[D][✓] return book (by: June 6th)<br></span><span>    ____________________________________________________________<br></span></code></pre>
+                  <pre><code class="no-line-numbers hljs" v-pre><span>find book
+</span><span>    ____________________________________________________________
+</span><span>     Here are the matching tasks in your list:
+</span><span>     1.[T][✓] read book
+</span><span>     2.[D][✓] return book (by: June 6th)
+</span><span>    ____________________________________________________________
+</span></code></pre>
                 </div>
                 <hr>
                 <div id="Level-10">
@@ -539,12 +788,29 @@
                       <h3 id="a-classes-2"><span class="badge badge-pill badge-primary">A-Classes</span><a class="fa fa-anchor" href="#a-classes-2" onclick="event.stopPropagation()"></a></h3>
                       <p>     <big>↳</big> <strong>Use a class to represent tasks</strong></p>
                     </div>
-                    <p>While it is possible to represent a task list as a multi-dimensional array containing <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content"><code v-pre>String</code>, <code v-pre>int</code>, <code v-pre>boolean</code> etc.</span>primitive values</span>, the more natural approach is to use a <code v-pre>Task</code> class to represent tasks.</p>
+                    <p>While it is possible to represent a task list as a multi-dimensional array containing <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content"><code v-pre>String</code>, <code v-pre>int</code>, <code v-pre>boolean</code> etc.</span>primitive values</span>, the more natural approach is to use a <code v-pre>Task</code> class to represent tasks.</p>
                     <panel type="seamless" minimized class="algolia-no-index"><template slot="_header">
                         <p>Partial solution</p>
                       </template>
-                      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Task</span> </span>{<br></span><span>    <span class="hljs-keyword">protected</span> String description;<br></span><span>    <span class="hljs-keyword">protected</span> <span class="hljs-keyword">boolean</span> isDone;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Task</span><span class="hljs-params">(String description)</span> </span>{<br></span><span>        <span class="hljs-keyword">this</span>.description = description;<br></span><span>        <span class="hljs-keyword">this</span>.isDone = <span class="hljs-keyword">false</span>;<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getStatusIcon</span><span class="hljs-params">()</span> </span>{<br></span><span>        <span class="hljs-keyword">return</span> (isDone ? <span class="hljs-string">"\u2713"</span> : <span class="hljs-string">"\u2718"</span>); <span class="hljs-comment">//return tick or X symbols</span><br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-comment">//...</span><br></span><span>}<br></span></code></pre>
-                      <pre><code class="hljs java" v-pre><span>Task t = <span class="hljs-keyword">new</span> Taks(<span class="hljs-string">"read book"</span>);<br></span><span>t.markAsDone()<br></span></code></pre>
+                      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Task</span> </span>{
+</span><span>    <span class="hljs-keyword">protected</span> String description;
+</span><span>    <span class="hljs-keyword">protected</span> <span class="hljs-keyword">boolean</span> isDone;
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Task</span><span class="hljs-params">(String description)</span> </span>{
+</span><span>        <span class="hljs-keyword">this</span>.description = description;
+</span><span>        <span class="hljs-keyword">this</span>.isDone = <span class="hljs-keyword">false</span>;
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getStatusIcon</span><span class="hljs-params">()</span> </span>{
+</span><span>        <span class="hljs-keyword">return</span> (isDone ? <span class="hljs-string">"\u2713"</span> : <span class="hljs-string">"\u2718"</span>); <span class="hljs-comment">//return tick or X symbols</span>
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-comment">//...</span>
+</span><span>}
+</span></code></pre>
+                      <pre><code class="hljs java" v-pre><span>Task t = <span class="hljs-keyword">new</span> Taks(<span class="hljs-string">"read book"</span>);
+</span><span>t.markAsDone()
+</span></code></pre>
                     </panel>
                   </div>
                   <hr>
@@ -559,8 +825,24 @@
                     <panel type="seamless" minimized class="algolia-no-index"><template slot="_header">
                         <p>Partial solution</p>
                       </template>
-                      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Deadline</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Task</span> </span>{<br></span><span><br></span><span>    <span class="hljs-keyword">protected</span> String by;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Deadline</span><span class="hljs-params">(String description, String by)</span> </span>{<br></span><span>        <span class="hljs-keyword">super</span>(description);<br></span><span>        <span class="hljs-keyword">this</span>.by = by;<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-meta">@Override</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span><span class="hljs-params">()</span> </span>{<br></span><span>        <span class="hljs-keyword">return</span> <span class="hljs-string">"[D]"</span> + <span class="hljs-keyword">super</span>.toString() + <span class="hljs-string">" (by: "</span> + by + <span class="hljs-string">")"</span>;<br></span><span>    }<br></span><span>}<br></span></code></pre>
-                      <pre><code class="hljs java" v-pre><span>Task[] tasks = <span class="hljs-keyword">new</span> Task[<span class="hljs-number">100</span>];<br></span><span>task[<span class="hljs-number">0</span>] = <span class="hljs-keyword">new</span> Deadline(<span class="hljs-string">"return book"</span>, <span class="hljs-string">"Monday"</span>);<br></span></code></pre>
+                      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Deadline</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Task</span> </span>{
+</span><span>
+</span><span>    <span class="hljs-keyword">protected</span> String by;
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Deadline</span><span class="hljs-params">(String description, String by)</span> </span>{
+</span><span>        <span class="hljs-keyword">super</span>(description);
+</span><span>        <span class="hljs-keyword">this</span>.by = by;
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-meta">@Override</span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span><span class="hljs-params">()</span> </span>{
+</span><span>        <span class="hljs-keyword">return</span> <span class="hljs-string">"[D]"</span> + <span class="hljs-keyword">super</span>.toString() + <span class="hljs-string">" (by: "</span> + by + <span class="hljs-string">")"</span>;
+</span><span>    }
+</span><span>}
+</span></code></pre>
+                      <pre><code class="hljs java" v-pre><span>Task[] tasks = <span class="hljs-keyword">new</span> Task[<span class="hljs-number">100</span>];
+</span><span>task[<span class="hljs-number">0</span>] = <span class="hljs-keyword">new</span> Deadline(<span class="hljs-string">"return book"</span>, <span class="hljs-string">"Monday"</span>);
+</span></code></pre>
                     </panel>
                   </div>
                   <hr>
@@ -624,11 +906,53 @@
                     </ul>
                     <div class="indented-level2">
                       <p>For example, the code of the main class could look like this:</p>
-                      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Duke</span> </span>{<br></span><span><br></span><span>    <span class="hljs-keyword">private</span> Storage storage;<br></span><span>    <span class="hljs-keyword">private</span> TaskList tasks;<br></span><span>    <span class="hljs-keyword">private</span> Ui ui;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Duke</span><span class="hljs-params">(String filePath)</span> </span>{<br></span><span>        ui = <span class="hljs-keyword">new</span> Ui();<br></span><span>        storage = <span class="hljs-keyword">new</span> Storage(filePath);<br></span><span>        <span class="hljs-keyword">try</span> {<br></span><span>            tasks = <span class="hljs-keyword">new</span> TaskList(storage.load());<br></span><span>        } <span class="hljs-keyword">catch</span> (DukeException e) {<br></span><span>            ui.showLoadingError();<br></span><span>            tasks = <span class="hljs-keyword">new</span> TaskList();<br></span><span>        }<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">run</span><span class="hljs-params">()</span> </span>{<br></span><span>        <span class="hljs-comment">//...</span><br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{<br></span><span>        <span class="hljs-keyword">new</span> Duke(<span class="hljs-string">"data/tasks.txt"</span>).run();<br></span><span>    }<br></span><span>}<br></span></code></pre>
+                      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Duke</span> </span>{
+</span><span>
+</span><span>    <span class="hljs-keyword">private</span> Storage storage;
+</span><span>    <span class="hljs-keyword">private</span> TaskList tasks;
+</span><span>    <span class="hljs-keyword">private</span> Ui ui;
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Duke</span><span class="hljs-params">(String filePath)</span> </span>{
+</span><span>        ui = <span class="hljs-keyword">new</span> Ui();
+</span><span>        storage = <span class="hljs-keyword">new</span> Storage(filePath);
+</span><span>        <span class="hljs-keyword">try</span> {
+</span><span>            tasks = <span class="hljs-keyword">new</span> TaskList(storage.load());
+</span><span>        } <span class="hljs-keyword">catch</span> (DukeException e) {
+</span><span>            ui.showLoadingError();
+</span><span>            tasks = <span class="hljs-keyword">new</span> TaskList();
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">run</span><span class="hljs-params">()</span> </span>{
+</span><span>        <span class="hljs-comment">//...</span>
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+</span><span>        <span class="hljs-keyword">new</span> Duke(<span class="hljs-string">"data/tasks.txt"</span>).run();
+</span><span>    }
+</span><span>}
+</span></code></pre>
                     </div>
                     <ul>
                       <li><strong>Stretch Goal</strong>: Consider extracting more classes. e.g., <code v-pre>*Command</code> classes (i.e., <code v-pre>AddCommand</code>, <code v-pre>DeleteCommand</code>, <code v-pre>ExitCommand</code> etc.) that inherits from an abstract <code v-pre>Command</code> class, so that you can write the main logic of the App as follows:
-                        <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">run</span><span class="hljs-params">()</span> </span>{<br></span><span>    ui.showWelcome();<br></span><span>    <span class="hljs-keyword">boolean</span> isExit = <span class="hljs-keyword">false</span>;<br></span><span>    <span class="hljs-keyword">while</span> (!isExit) {<br></span><span>        <span class="hljs-keyword">try</span> {<br></span><span>            String fullCommand = ui.readCommand();<br></span><span>            ui.showLine(); <span class="hljs-comment">// show the divider line ("_______")</span><br></span><span>            Command c = Parser.parse(fullCommand);<br></span><span>            c.execute(tasks, ui, storage);<br></span><span>            isExit = c.isExit();<br></span><span>        } <span class="hljs-keyword">catch</span> (DukeException e) {<br></span><span>            ui.showError(e.getMessage());<br></span><span>        } <span class="hljs-keyword">finally</span> {<br></span><span>            ui.showLine();<br></span><span>        }<br></span><span>    }<br></span><span>}<br></span></code></pre><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> You can get some inspiration from how the code of the <a href="https://github.com/se-edu/addressbook-level2">addressbook-level2</a> is organized.
+                        <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">run</span><span class="hljs-params">()</span> </span>{
+</span><span>    ui.showWelcome();
+</span><span>    <span class="hljs-keyword">boolean</span> isExit = <span class="hljs-keyword">false</span>;
+</span><span>    <span class="hljs-keyword">while</span> (!isExit) {
+</span><span>        <span class="hljs-keyword">try</span> {
+</span><span>            String fullCommand = ui.readCommand();
+</span><span>            ui.showLine(); <span class="hljs-comment">// show the divider line ("_______")</span>
+</span><span>            Command c = Parser.parse(fullCommand);
+</span><span>            c.execute(tasks, ui, storage);
+</span><span>            isExit = c.isExit();
+</span><span>        } <span class="hljs-keyword">catch</span> (DukeException e) {
+</span><span>            ui.showError(e.getMessage());
+</span><span>        } <span class="hljs-keyword">finally</span> {
+</span><span>            ui.showLine();
+</span><span>        }
+</span><span>    }
+</span><span>}
+</span></code></pre><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> You can get some inspiration from how the code of the <a href="https://github.com/se-edu/addressbook-level2">addressbook-level2</a> is organized.
                       </li>
                     </ul>
                   </div>
@@ -855,8 +1179,10 @@
                     <ul>
                       <li>Tweak the GUI to match the asymmetric nature of the conversation: As the conversation is between the user and the app (not between two humans), it is asymmetric in nature. Accordingly, it makes sense not to display both sides of the conversion in the same visual format.</li>
                       <li>Highlight errors e.g., when the user types a wrong command, the error should be shown in a different format to catch ther user's attention.</li>
-                      <li>Tweak padding, fonts, colors, alignments to make the GUI more pleasing to look at.</li>
-                      <li>Profile pictures: If your GUI shows profile pictures, you can tweak the way the picture is shown (e.g., crop as a circle or a square with rounded corners). In fact, an easy tweak is to use a picture with a transparent background so that it blends nicely with the background.</li>
+                      <li>Tweak padding, fonts, colors, alignments to make the GUI more pleasing to look at.<br>
+                        Given the app is likely to take only a small portion of the screen, and the bot replies can contain lot of text, try to optimize for space (e.g., avoid wasting display space that simply shows the background graphics)</li>
+                      <li>Profile pictures: If your GUI shows profile pictures, you can tweak the way the picture is shown (e.g., crop as a circle or a square with rounded corners). In fact, an easy tweak is to use a picture with a transparent background so that it blends nicely with the background.<br>
+                        Given that the participants of the conversion are fixed (i.e., you and the chatbot), do you even need big profile pictures?</li>
                     </ul>
                     <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> You can take inspiration from <a href="https://nus-cs2103-ay1920s1.github.io/website/admin/ip-showcase.html">these past projects</a>. If you adopt any ideas from them, don't forget to give credit to the original author.</p>
                   </div>
@@ -1161,6 +1487,7 @@
             </div>
           </div>
         </div>
+        <p><i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i></p>
       </div>
 
 
@@ -1265,21 +1592,16 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Thu, Sep 10, 2020, 11:06:50 PM GMT+8]</small>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.16.0</a>, generated on Wed, Sep 16, 2020, 3:47:05 PM GMT+8]</small>
       </div>
     </footer>
   </div>
 </body>
-<script src="../markbind/js/vue.min.js"></script>
-<script src="../markbind/js/components.min.js"></script>
 <script src="../markbind/js/bootstrap-utility.min.js"></script>
-<script src="../markbind/js/polyfill.min.js"></script>
-<script src="../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/se-book'
-  const enableSearch = true
+  MarkBind.setupWithSearch()
 </script>
-<script src="../markbind/js/setup.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
   function initAlgolia() {
@@ -1294,5 +1616,8 @@
   MarkBind.afterSetup(initAlgolia);
 </script>
 <script src="../markbind/layouts/default/scripts.js"></script>
+<script>
+  if (MarkBind.AfterSetup) MarkBind.AfterSetup()
+</script>
 
 </html>

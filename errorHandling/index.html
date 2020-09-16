@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.15.2">
+  <meta name="generator" content="MarkBind 2.16.0">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - Error Handling</title>
   <link rel="stylesheet" href="../markbind/css/bootstrap.min.css">
@@ -14,12 +14,14 @@
   <link rel="stylesheet" href="../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
   <link rel="stylesheet" href="../markbind/css/octicons.css">
   <link rel="stylesheet" href="../markbind/css/github.min.css">
-  <link rel="stylesheet" href="../markbind/css/markbind.css">
+  <link rel="stylesheet" href="../markbind/css/markbind.min.css">
+  <script src="../markbind/js/polyfill.min.js"></script>
+  <script src="../markbind/js/vue.min.js"></script>
+  <script src="../markbind/js/markbind.min.js"></script>
+  <script src="../markbind/js/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/se-book/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../markbind/layouts/default/styles.css">
-  <link rel="stylesheet" href="../markbind/css/site-nav.css">
-  <link rel="stylesheet" href="../markbind/css/page-nav.css">
   <link rel="icon" href="/se-book/favicon.ico">
 </head>
 
@@ -337,7 +339,7 @@
                               <p>The extract below from the <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small> (with slight adaptations) explains how exceptions are typically handled.</p>
                               <div class="indented">
                                 <p><strong>When an error occurs at some point in the execution, the code being executed creates an <em>exception object</em> and hands it off to the runtime system.</strong> The exception object contains information about the error, including its type and the state of the program when the error occurred. Creating an exception object and handing it to the runtime system is called <em>throwing</em> an exception.</p>
-                                <p><strong>After a method throws an exception, the runtime system attempts to find something to handle it in the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">the ordered list of methods that had been called to get to the method where the error occurred</span><em>call stack</em></span>.</strong> The runtime system searches the call stack for a method that contains a block of code that can handle the exception. This block of code is called an <em>exception handler</em>. The search begins with the method in which the error occurred and proceeds through the call stack in the reverse order in which the methods were called. When an appropriate handler is found, the runtime system passes the exception to the handler. An exception handler is considered appropriate if the type of the exception object thrown matches the type that can be handled by the handler.</p>
+                                <p><strong>After a method throws an exception, the runtime system attempts to find something to handle it in the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">the ordered list of methods that had been called to get to the method where the error occurred</span><em>call stack</em></span>.</strong> The runtime system searches the call stack for a method that contains a block of code that can handle the exception. This block of code is called an <em>exception handler</em>. The search begins with the method in which the error occurred and proceeds through the call stack in the reverse order in which the methods were called. When an appropriate handler is found, the runtime system passes the exception to the handler. An exception handler is considered appropriate if the type of the exception object thrown matches the type that can be handled by the handler.</p>
                                 <p><strong>The exception handler chosen is said to <em>catch</em> the exception.</strong> If the runtime system exhaustively searches all the methods on the call stack without finding an appropriate exception handler, the program terminates.</p>
                               </div>
                               <p>Advantages of exception handling in this way:</p>
@@ -425,7 +427,8 @@
                               <p><strong>If the runtime detects an <em>assertion failure</em>, it typically take some drastic action</strong> such as terminating the execution with an error message. This is because an assertion failure indicates a possible bug and the sooner the execution stops, the safer it is.</p>
                               <box>
                                 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In the Java code below, suppose you set an assertion that <code v-pre>timeout</code> returned by <code v-pre>Config.getTimeout()</code> is greater than <code v-pre>0</code>. Now, if the <code v-pre>Config.getTimeout()</code> returned <code v-pre>-1</code> in a specific execution of this line, the runtime can detect it as a <em>assertion failure</em> -- i.e. an assumption about the expected behavior of the code turned out to be wrong which could potentially be the result of a bug -- and take some drastic action such as terminating the execution.</p>
-                                <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">int</span> timeout = Config.getTimeout(); <br></span></code></pre>
+                                <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">int</span> timeout = Config.getTimeout(); 
+</span></code></pre>
                               </box>
                             </div>
                             <div></div>
@@ -448,7 +451,10 @@
                               <p>Use the <code v-pre>assert</code> keyword to define assertions.</p>
                               <box>
                                 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This assertion will fail with the message <code v-pre>x should be 0</code> if <code v-pre>x</code> is not 0 at this point.</p>
-                                <pre><code class="hljs java" v-pre><span>x = getX();<br></span><span><span class="hljs-keyword">assert</span> x == <span class="hljs-number">0</span> : <span class="hljs-string">"x should be 0"</span>;<br></span><span>...<br></span></code></pre>
+                                <pre><code class="hljs java" v-pre><span>x = getX();
+</span><span><span class="hljs-keyword">assert</span> x == <span class="hljs-number">0</span> : <span class="hljs-string">"x should be 0"</span>;
+</span><span>...
+</span></code></pre>
                               </box>
                               <p><strong>Assertions can be disabled without modifying the code.</strong></p>
                               <box>
@@ -497,7 +503,9 @@
                               <p><strong>Do not use assertions to do <em>work</em></strong> because assertions can be disabled. If not, your program will stop working when assertions are not enabled.</p>
                               <box>
                                 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The code below will not invoke the <code v-pre>writeFile()</code> method when assertions are disabled. <span class="dimmed">If that method is performing some work that is necessary for your program, your program will not work correctly when assertions are disabled.</span></p>
-                                <pre><code class="hljs java" v-pre><span>...<br></span><span><span class="hljs-function"><span class="hljs-keyword">assert</span> <span class="hljs-title">writeFile</span><span class="hljs-params">()</span> : "File writing is supposed to return <span class="hljs-keyword">true</span>"</span>;<br></span></code></pre>
+                                <pre><code class="hljs java" v-pre><span>...
+</span><span><span class="hljs-function"><span class="hljs-keyword">assert</span> <span class="hljs-title">writeFile</span><span class="hljs-params">()</span> : "File writing is supposed to return <span class="hljs-keyword">true</span>"</span>;
+</span></code></pre>
                               </box>
                               <p><strong>Assertions are suitable for verifying assumptions about <em>Internal Invariants</em>, <em>Control-Flow Invariants</em>,
                                   <em>Preconditions</em>, <em>Postconditions</em>, and <em>Class Invariants</em>.</strong> Refer to [<a href="http://docs.oracle.com/javase/8/docs/technotes/guides/language/assert.html#usage">Programming with Assertions (second half)</a>] to learn more.</p>
@@ -581,7 +589,7 @@
                               <p><strong><em>Logging</em> can be useful for troubleshooting problems</strong>. A good logging system records some system information regularly. When bad things happen to a system <span class="dimmed">e.g. an unanticipated failure</span>, their associated log files may provide indications of what went wrong and action can then be taken to prevent it from happening again.</p>
                               <div v-closeable alt="blackbox photo">
                                 <box>
-                                  <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> <strong>A log file is like the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">flight data recorder</span>black box</span> of an airplane</strong>; they don't prevent problems but they can be helpful in understanding what went wrong after the fact.</p>
+                                  <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> <strong>A log file is like the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">flight data recorder</span>black box</span> of an airplane</strong>; they don't prevent problems but they can be helpful in understanding what went wrong after the fact.</p>
                                   <div class="non-printable">
                                     <p><img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Flight_data_recorder_displayed_at_HAL_Museum_7893.JPG" width="250"><br>
                                       <sub>source:<a href="https://upload.wikimedia.org/wikipedia/commons/5/5b/Flight_data_recorder_displayed_at_HAL_Museum_7893.JPG">https://commons.wikimedia.org</a></sub>
@@ -632,15 +640,27 @@
                             <p></p>
                             <p></p>
                             <div>
-                              <p><strong>Most programming environments come with logging systems that allow sophisticated forms of logging.</strong> They have features such as the ability to enable and disable logging easily or to change the logging <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">how much information to record</span>intensity</span>.</p>
+                              <p><strong>Most programming environments come with logging systems that allow sophisticated forms of logging.</strong> They have features such as the ability to enable and disable logging easily or to change the logging <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">how much information to record</span>intensity</span>.</p>
                               <box>
                                 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This sample Java code uses Java’s default logging mechanism.</p>
                                 <p>First, import the relevant Java package:</p>
-                                <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">import</span> java.util.logging.*;<br></span></code></pre>
+                                <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">import</span> java.util.logging.*;
+</span></code></pre>
                                 <p>Next, create a <code v-pre>Logger</code>:</p>
-                                <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Logger logger = Logger.getLogger(<span class="hljs-string">"Foo"</span>);<br></span></code></pre>
-                                <p>Now, you can use the <code v-pre>Logger</code> object to log information. Note the use of <span data-mb-component-type="popover" v-b-popover.hover.top.html="popoverInnerGenerator" class="trigger"><span data-mb-html-for="content"><code v-pre>INFO</code>, <code v-pre>WARNING</code> etc.</span>logging level</span> for each message. When running the code, the logging level can be set to <code v-pre>WARNING</code> so that log messages specified as <code v-pre>INFO</code> level (which is a lower level than <code v-pre>WARNING</code>) will not be written to the log file at all.</p>
-                                <pre><code class="hljs java" v-pre><span><span class="hljs-comment">// log a message at INFO level</span><br></span><span>logger.log(Level.INFO, <span class="hljs-string">"going to start processing"</span>);<br></span><span><span class="hljs-comment">//...</span><br></span><span>processInput();<br></span><span><span class="hljs-keyword">if</span>(error){<br></span><span>    <span class="hljs-comment">//log a message at WARNING level</span><br></span><span>    logger.log(Level.WARNING, <span class="hljs-string">"processing error"</span>, ex);<br></span><span>}<br></span><span><span class="hljs-comment">//...</span><br></span><span>logger.log(Level.INFO, <span class="hljs-string">"end of processing"</span>);<br></span></code></pre>
+                                <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Logger logger = Logger.getLogger(<span class="hljs-string">"Foo"</span>);
+</span></code></pre>
+                                <p>Now, you can use the <code v-pre>Logger</code> object to log information. Note the use of <span data-mb-component-type="popover" v-b-popover.hover.top.html="popoverInnerGetters" class="trigger"><span data-mb-slot-name="content"><code v-pre>INFO</code>, <code v-pre>WARNING</code> etc.</span>logging level</span> for each message. When running the code, the logging level can be set to <code v-pre>WARNING</code> so that log messages specified as <code v-pre>INFO</code> level (which is a lower level than <code v-pre>WARNING</code>) will not be written to the log file at all.</p>
+                                <pre><code class="hljs java" v-pre><span><span class="hljs-comment">// log a message at INFO level</span>
+</span><span>logger.log(Level.INFO, <span class="hljs-string">"going to start processing"</span>);
+</span><span><span class="hljs-comment">//...</span>
+</span><span>processInput();
+</span><span><span class="hljs-keyword">if</span>(error){
+</span><span>    <span class="hljs-comment">//log a message at WARNING level</span>
+</span><span>    logger.log(Level.WARNING, <span class="hljs-string">"processing error"</span>, ex);
+</span><span>}
+</span><span><span class="hljs-comment">//...</span>
+</span><span>logger.log(Level.INFO, <span class="hljs-string">"end of processing"</span>);
+</span></code></pre>
                               </box>
                             </div>
                             <div>
@@ -697,9 +717,21 @@
                               <p><strong>A defensive programmer codes under the assumption &quot;if you leave room for things to go wrong, they <em>will</em> go wrong&quot;.</strong> Therefore, a defensive programmer proactively tries to eliminate any room for things to go wrong.</p>
                               <box>
                                 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider a <code v-pre>MainApp#getConfig()</code> a method that returns a <code v-pre>Config</code> object containing configuration data. A typical implementation is given below:</p>
-                                <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MainApp</span></span>{<br></span><span>    Config config;<br></span><span>    <br></span><span>    <span class="hljs-comment">/** Returns the config object */</span><br></span><span>    <span class="hljs-function">Config <span class="hljs-title">getConfig</span><span class="hljs-params">()</span></span>{<br></span><span>        <span class="hljs-keyword">return</span> config;<br></span><span>    }<br></span><span>}<br></span></code></pre>
+                                <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MainApp</span></span>{
+</span><span>    Config config;
+</span><span>    
+</span><span>    <span class="hljs-comment">/** Returns the config object */</span>
+</span><span>    <span class="hljs-function">Config <span class="hljs-title">getConfig</span><span class="hljs-params">()</span></span>{
+</span><span>        <span class="hljs-keyword">return</span> config;
+</span><span>    }
+</span><span>}
+</span></code></pre>
                                 <p>If the returned Config object is not meant to be modified, a defensive programmer might use a more <em>defensive</em> implementation given below. <span class="dimmed">This is more defensive because even if the returned <code v-pre>Config</code> object is modified (although it is not meant to be) it will not affect the <code v-pre>config</code> object inside the <code v-pre>MainApp</code> object.</span></p>
-                                <pre><code class="hljs java" v-pre><span>    <span class="hljs-comment">/** Returns a copy of the config object */</span><br></span><span>    <span class="hljs-function">Config <span class="hljs-title">getConfig</span><span class="hljs-params">()</span></span>{<br></span><span>        <span class="hljs-keyword">return</span> config.copy(); <span class="hljs-comment">//return a defensive copy</span><br></span><span>    }<br></span></code></pre>
+                                <pre><code class="hljs java" v-pre><span>    <span class="hljs-comment">/** Returns a copy of the config object */</span>
+</span><span>    <span class="hljs-function">Config <span class="hljs-title">getConfig</span><span class="hljs-params">()</span></span>{
+</span><span>        <span class="hljs-keyword">return</span> config.copy(); <span class="hljs-comment">//return a defensive copy</span>
+</span><span>    }
+</span></code></pre>
                               </box>
                             </div>
                             <div></div>
@@ -725,11 +757,37 @@
                                 <img src="/se-book/errorHandling/defensiveProgramming/compulsoryAssociations/images/accountGuarantor.png" height="50">
                                 <p></p>
                                 <p>Here, the association is compulsory i.e. an <code v-pre>Account</code> object should always be linked to a <code v-pre>Guarantor</code>. One way to implement this is to simply use a reference variable, like this:</p>
-                                <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{<br></span><span>    Guarantor guarantor;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setGuarantor</span><span class="hljs-params">(Guarantor g)</span> </span>{<br></span><span>        guarantor = g;<br></span><span>    }<br></span><span>}<br></span></code></pre>
+                                <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{
+</span><span>    Guarantor guarantor;
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setGuarantor</span><span class="hljs-params">(Guarantor g)</span> </span>{
+</span><span>        guarantor = g;
+</span><span>    }
+</span><span>}
+</span></code></pre>
                                 <p>However, what if someone else used the <code v-pre>Account</code> class like this?</p>
-                                <pre><code class="hljs java" v-pre><span>Account a = <span class="hljs-keyword">new</span> Account();<br></span><span>a.setGuarantor(<span class="hljs-keyword">null</span>);<br></span></code></pre>
+                                <pre><code class="hljs java" v-pre><span>Account a = <span class="hljs-keyword">new</span> Account();
+</span><span>a.setGuarantor(<span class="hljs-keyword">null</span>);
+</span></code></pre>
                                 <p>This results in an <code v-pre>Account</code> without a <code v-pre>Guarantor</code>! In a real banking system, this could have serious consequences! The code here did not try to prevent such a thing from happening. You can make the code more defensive by proactively enforcing the multiplicity constraint, like this:</p>
-                                <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{<br></span><span>    <span class="hljs-keyword">private</span> Guarantor guarantor;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Account</span><span class="hljs-params">(Guarantor g)</span></span>{<br></span><span>        <span class="hljs-keyword">if</span> (g == <span class="hljs-keyword">null</span>) {<br></span><span>            stopSystemWithMessage(<span class="hljs-string">"multiplicity violated. Null Guarantor"</span>);<br></span><span>        }<br></span><span>        guarantor = g;<br></span><span>    }<br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setGuarantor</span> <span class="hljs-params">(Guarantor g)</span></span>{<br></span><span>        <span class="hljs-keyword">if</span> (g == <span class="hljs-keyword">null</span>) {<br></span><span>            stopSystemWithMessage(<span class="hljs-string">"multiplicity violated. Null Guarantor"</span>);<br></span><span>        }<br></span><span>        guarantor = g;<br></span><span>    }<br></span><span>    …<br></span><span>}<br></span></code></pre>
+                                <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{
+</span><span>    <span class="hljs-keyword">private</span> Guarantor guarantor;
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Account</span><span class="hljs-params">(Guarantor g)</span></span>{
+</span><span>        <span class="hljs-keyword">if</span> (g == <span class="hljs-keyword">null</span>) {
+</span><span>            stopSystemWithMessage(<span class="hljs-string">"multiplicity violated. Null Guarantor"</span>);
+</span><span>        }
+</span><span>        guarantor = g;
+</span><span>    }
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setGuarantor</span> <span class="hljs-params">(Guarantor g)</span></span>{
+</span><span>        <span class="hljs-keyword">if</span> (g == <span class="hljs-keyword">null</span>) {
+</span><span>            stopSystemWithMessage(<span class="hljs-string">"multiplicity violated. Null Guarantor"</span>);
+</span><span>        }
+</span><span>        guarantor = g;
+</span><span>    }
+</span><span>    …
+</span><span>}
+</span></code></pre>
                               </box>
                             </div>
                             <div>
@@ -750,7 +808,26 @@
                                         <img src="/se-book/errorHandling/defensiveProgramming/compulsoryAssociations/images/managerAccount.jpg" height="55">
                                         <p></p>
                                         <div slot="answer" class="algolia-no-index">
-                                          <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">import</span> java.util.*;<br></span><span><br></span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Manager</span> </span>{<br></span><span>    <span class="hljs-keyword">private</span> ArrayList&lt; Account &gt; theAccounts ;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addAccount</span><span class="hljs-params">(Account acc)</span> <span class="hljs-keyword">throws</span> Exception </span>{<br></span><span>        <span class="hljs-keyword">if</span> (theAccounts.size( ) == <span class="hljs-number">8</span>){<br></span><span>            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Exception (<span class="hljs-string">"adding more than 8 accounts"</span>);<br></span><span>        }<br></span><span>        <br></span><span>        <span class="hljs-keyword">if</span> (!theAccounts.contains(acc)) {<br></span><span>            theAccounts.add(acc);<br></span><span>        }<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">removeAccount</span><span class="hljs-params">(Account acc)</span> </span>{<br></span><span>        theAccounts.remove(acc);<br></span><span>    }<br></span><span>}<br></span></code></pre>
+                                          <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">import</span> java.util.*;
+</span><span>
+</span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Manager</span> </span>{
+</span><span>    <span class="hljs-keyword">private</span> ArrayList&lt; Account &gt; theAccounts ;
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addAccount</span><span class="hljs-params">(Account acc)</span> <span class="hljs-keyword">throws</span> Exception </span>{
+</span><span>        <span class="hljs-keyword">if</span> (theAccounts.size( ) == <span class="hljs-number">8</span>){
+</span><span>            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Exception (<span class="hljs-string">"adding more than 8 accounts"</span>);
+</span><span>        }
+</span><span>        
+</span><span>        <span class="hljs-keyword">if</span> (!theAccounts.contains(acc)) {
+</span><span>            theAccounts.add(acc);
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">removeAccount</span><span class="hljs-params">(Account acc)</span> </span>{
+</span><span>        theAccounts.remove(acc);
+</span><span>    }
+</span><span>}
+</span></code></pre>
                                         </div>
                                       </question>
                                     </panel>
@@ -764,7 +841,53 @@
                                         <img src="/se-book/errorHandling/defensiveProgramming/compulsoryAssociations/images/manMarriageWoman.jpg" height="55">
                                         <p></p>
                                         <div slot="answer" class="algolia-no-index">
-                                          <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Marriage</span> </span>{<br></span><span>    <span class="hljs-keyword">private</span> Man husband = <span class="hljs-keyword">null</span>;<br></span><span>    <span class="hljs-keyword">private</span> Woman wife = <span class="hljs-keyword">null</span>;<br></span><span><br></span><span>    <span class="hljs-comment">// extra information like date etc can be added</span><br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Marriage</span><span class="hljs-params">(Man m, Woman w)</span> <span class="hljs-keyword">throws</span> Exception </span>{<br></span><span>        <span class="hljs-keyword">if</span> (m == <span class="hljs-keyword">null</span> || w == <span class="hljs-keyword">null</span>) {<br></span><span>            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Exception(<span class="hljs-string">"no man/woman"</span>);<br></span><span>        }<br></span><span>        <span class="hljs-keyword">if</span> (m.isMarried() || w.isMarried()) {<br></span><span>            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Exception(<span class="hljs-string">"already married"</span>);<br></span><span>        }<br></span><span>        husband = m;<br></span><span>        m.enterMarriage(<span class="hljs-keyword">this</span>);<br></span><span>        wife = w;<br></span><span>        w.enterMarriage(<span class="hljs-keyword">this</span>);<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> Man <span class="hljs-title">getHusband</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> Exception </span>{<br></span><span>        <span class="hljs-keyword">if</span>(husband == <span class="hljs-keyword">null</span>) {<br></span><span>            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Exception(<span class="hljs-string">"error state"</span>);<br></span><span>        } <span class="hljs-keyword">else</span> {<br></span><span>            <span class="hljs-keyword">return</span> husband;<br></span><span>        }<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> Woman <span class="hljs-title">getWife</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> Exception </span>{<br></span><span>        <span class="hljs-keyword">if</span>(wife == <span class="hljs-keyword">null</span>) {<br></span><span>            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Exception(<span class="hljs-string">"error state"</span>);<br></span><span>        } <span class="hljs-keyword">else</span> {<br></span><span>            <span class="hljs-keyword">return</span> wife;<br></span><span>        }<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-comment">// removal of both ends of 'Marriage'</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">divorce</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> Exception </span>{<br></span><span>        <span class="hljs-keyword">if</span> (husband==<span class="hljs-keyword">null</span> || wife==<span class="hljs-keyword">null</span>) {<br></span><span>            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Exception(<span class="hljs-string">"no marriage"</span>);<br></span><span>        }<br></span><span>        husband.removeFromMarriage(<span class="hljs-keyword">this</span>);<br></span><span>        husband = <span class="hljs-keyword">null</span>;<br></span><span>        wife.removeFromMarriage(<span class="hljs-keyword">this</span>);<br></span><span>        wife = <span class="hljs-keyword">null</span>;<br></span><span>    }<br></span><span>} <br></span></code></pre>
+                                          <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Marriage</span> </span>{
+</span><span>    <span class="hljs-keyword">private</span> Man husband = <span class="hljs-keyword">null</span>;
+</span><span>    <span class="hljs-keyword">private</span> Woman wife = <span class="hljs-keyword">null</span>;
+</span><span>
+</span><span>    <span class="hljs-comment">// extra information like date etc can be added</span>
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Marriage</span><span class="hljs-params">(Man m, Woman w)</span> <span class="hljs-keyword">throws</span> Exception </span>{
+</span><span>        <span class="hljs-keyword">if</span> (m == <span class="hljs-keyword">null</span> || w == <span class="hljs-keyword">null</span>) {
+</span><span>            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Exception(<span class="hljs-string">"no man/woman"</span>);
+</span><span>        }
+</span><span>        <span class="hljs-keyword">if</span> (m.isMarried() || w.isMarried()) {
+</span><span>            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Exception(<span class="hljs-string">"already married"</span>);
+</span><span>        }
+</span><span>        husband = m;
+</span><span>        m.enterMarriage(<span class="hljs-keyword">this</span>);
+</span><span>        wife = w;
+</span><span>        w.enterMarriage(<span class="hljs-keyword">this</span>);
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> Man <span class="hljs-title">getHusband</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> Exception </span>{
+</span><span>        <span class="hljs-keyword">if</span>(husband == <span class="hljs-keyword">null</span>) {
+</span><span>            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Exception(<span class="hljs-string">"error state"</span>);
+</span><span>        } <span class="hljs-keyword">else</span> {
+</span><span>            <span class="hljs-keyword">return</span> husband;
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> Woman <span class="hljs-title">getWife</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> Exception </span>{
+</span><span>        <span class="hljs-keyword">if</span>(wife == <span class="hljs-keyword">null</span>) {
+</span><span>            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Exception(<span class="hljs-string">"error state"</span>);
+</span><span>        } <span class="hljs-keyword">else</span> {
+</span><span>            <span class="hljs-keyword">return</span> wife;
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-comment">// removal of both ends of 'Marriage'</span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">divorce</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> Exception </span>{
+</span><span>        <span class="hljs-keyword">if</span> (husband==<span class="hljs-keyword">null</span> || wife==<span class="hljs-keyword">null</span>) {
+</span><span>            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Exception(<span class="hljs-string">"no marriage"</span>);
+</span><span>        }
+</span><span>        husband.removeFromMarriage(<span class="hljs-keyword">this</span>);
+</span><span>        husband = <span class="hljs-keyword">null</span>;
+</span><span>        wife.removeFromMarriage(<span class="hljs-keyword">this</span>);
+</span><span>        wife = <span class="hljs-keyword">null</span>;
+</span><span>    }
+</span><span>} 
+</span></code></pre>
                                         </div>
                                       </question>
                                     </panel>
@@ -778,7 +901,18 @@
                                         <img src="/se-book/errorHandling/defensiveProgramming/compulsoryAssociations/images/accountGuarantorImmutable.png" height="80">
                                         <p></p>
                                         <div slot="answer" class="algolia-no-index">
-                                          <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{<br></span><span>    <span class="hljs-keyword">private</span> Guarantor myGuarantor; <span class="hljs-comment">// should not be public</span><br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Account</span><span class="hljs-params">(Guarantor g)</span></span>{<br></span><span>        <span class="hljs-keyword">if</span> (g==<span class="hljs-keyword">null</span>) {<br></span><span>            haltWithErrorMessage(“Account must have a guarantor”);<br></span><span>        }<br></span><span>        myGuarantor = g;<br></span><span>    }<br></span><span>    <span class="hljs-comment">// there should not be a setGuarantor method</span><br></span><span>}<br></span></code></pre>
+                                          <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{
+</span><span>    <span class="hljs-keyword">private</span> Guarantor myGuarantor; <span class="hljs-comment">// should not be public</span>
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Account</span><span class="hljs-params">(Guarantor g)</span></span>{
+</span><span>        <span class="hljs-keyword">if</span> (g==<span class="hljs-keyword">null</span>) {
+</span><span>            haltWithErrorMessage(“Account must have a guarantor”);
+</span><span>        }
+</span><span>        myGuarantor = g;
+</span><span>    }
+</span><span>    <span class="hljs-comment">// there should not be a setGuarantor method</span>
+</span><span>}
+</span></code></pre>
                                         </div>
                                       </question>
                                     </panel>
@@ -790,7 +924,14 @@
                                       <question>
                                         <img src="/se-book/errorHandling/defensiveProgramming/compulsoryAssociations/images/countryCity.png" height="45">
                                         <p></p>
-                                        <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">City</span></span>{<br></span><span>    Country country;<br></span><span>    <br></span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setCountry</span><span class="hljs-params">(Country country)</span></span>{<br></span><span>        <span class="hljs-keyword">this</span>.country = country;<br></span><span>    }<br></span><span>}<br></span></code></pre>
+                                        <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">City</span></span>{
+</span><span>    Country country;
+</span><span>    
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setCountry</span><span class="hljs-params">(Country country)</span></span>{
+</span><span>        <span class="hljs-keyword">this</span>.country = country;
+</span><span>    }
+</span><span>}
+</span></code></pre>
                                         <p>This is a defensive implementation of the association.</p>
                                         <ul radio-group="ac03f" class="radio-list">
                                           <li class="radio-list-item"><label><input class="radio-list-input" name="ac03f" type="radio"> True</label></li>
@@ -826,10 +967,29 @@
                               <img src="/se-book/errorHandling/defensiveProgramming/1to1Associations/images/minedCell.png" height="50">
                               <p></p>
                               <p>Option 1:</p>
-                              <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MinedCell</span> </span>{<br></span><span>    <span class="hljs-keyword">private</span> Mine mine;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">MinedCell</span><span class="hljs-params">(Mine m)</span></span>{<br></span><span>        <span class="hljs-keyword">if</span> (m == <span class="hljs-keyword">null</span>) {<br></span><span>            showError();<br></span><span>        }<br></span><span>        mine = m;<br></span><span>    }<br></span><span>    …<br></span><span>}<br></span></code></pre>
+                              <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MinedCell</span> </span>{
+</span><span>    <span class="hljs-keyword">private</span> Mine mine;
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">MinedCell</span><span class="hljs-params">(Mine m)</span></span>{
+</span><span>        <span class="hljs-keyword">if</span> (m == <span class="hljs-keyword">null</span>) {
+</span><span>            showError();
+</span><span>        }
+</span><span>        mine = m;
+</span><span>    }
+</span><span>    …
+</span><span>}
+</span></code></pre>
                               <p>Option 1 forces us to keep a <code v-pre>Mine</code> without a <code v-pre>MinedCell</code> (until the <code v-pre>MinedCell</code> is created).</p>
                               <p>Option 2:</p>
-                              <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MinedCell</span> </span>{<br></span><span>    <span class="hljs-keyword">private</span> Mine mine;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">MinedCell</span><span class="hljs-params">()</span></span>{<br></span><span>        mine = <span class="hljs-keyword">new</span> Mine();<br></span><span>    }<br></span><span>    …<br></span><span>}<br></span></code></pre>
+                              <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MinedCell</span> </span>{
+</span><span>    <span class="hljs-keyword">private</span> Mine mine;
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">MinedCell</span><span class="hljs-params">()</span></span>{
+</span><span>        mine = <span class="hljs-keyword">new</span> Mine();
+</span><span>    }
+</span><span>    …
+</span><span>}
+</span></code></pre>
                               <p>Option 2 is more defensive because the <code v-pre>Mine</code> is immediately linked to a <code v-pre>MinedCell</code>.</p>
                             </div>
                             <div></div>
@@ -852,18 +1012,79 @@
                               <p>A bidirectional association in the design (shown in (a)) is usually emulated at code level using two variables (as shown in (b)).</p>
                               <img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/manWoman.png" height="140">
                               <p></p>
-                              <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Man</span> </span>{<br></span><span>    Woman girlfriend;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setGirlfriend</span><span class="hljs-params">(Woman w)</span> </span>{<br></span><span>        girlfriend = w;<br></span><span>    }<br></span><span>    …<br></span><span>}<br></span></code></pre>
-                              <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Woman</span> </span>{<br></span><span>    Man boyfriend;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setBoyfriend</span><span class="hljs-params">(Man m)</span> </span>{<br></span><span>        boyfriend = m;<br></span><span>    }<br></span><span>}<br></span></code></pre>
+                              <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Man</span> </span>{
+</span><span>    Woman girlfriend;
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setGirlfriend</span><span class="hljs-params">(Woman w)</span> </span>{
+</span><span>        girlfriend = w;
+</span><span>    }
+</span><span>    …
+</span><span>}
+</span></code></pre>
+                              <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Woman</span> </span>{
+</span><span>    Man boyfriend;
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setBoyfriend</span><span class="hljs-params">(Man m)</span> </span>{
+</span><span>        boyfriend = m;
+</span><span>    }
+</span><span>}
+</span></code></pre>
                               <p>The two classes are meant to be used as follows:</p>
-                              <pre><code class="hljs java" v-pre><span>Woman jean;<br></span><span>Man james;<br></span><span>…<br></span><span>james.setGirlfriend(jean);<br></span><span>jean.setBoyfriend(james);<br></span></code></pre>
+                              <pre><code class="hljs java" v-pre><span>Woman jean;
+</span><span>Man james;
+</span><span>…
+</span><span>james.setGirlfriend(jean);
+</span><span>jean.setBoyfriend(james);
+</span></code></pre>
                               <p>Suppose the two classes were used this instead:</p>
-                              <pre><code class="hljs java" v-pre><span>Woman jean; Man james, yong;<br></span><span>…<br></span><span>james.setGirlfriend(jean);  <br></span><span>jean.setBoyfriend(yong);  <br></span></code></pre>
+                              <pre><code class="hljs java" v-pre><span>Woman jean; Man james, yong;
+</span><span>…
+</span><span>james.setGirlfriend(jean);  
+</span><span>jean.setBoyfriend(yong);  
+</span></code></pre>
                               <p>Now James' girlfriend is Jean, while Jean's boyfriend is not James. This situation results as the code was not defensive enough to stop this &quot;love triangle&quot;. In such a situation, you should say that <em>the referential integrity has been violated</em>. It simply means <em>there is an inconsistency in object references</em>.</p>
                               <img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/woman.png" height="50">
                               <p></p>
                               <p>One way to prevent this situation is to implement the two classes as shown below. Note how the referential integrity is maintained.</p>
-                              <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Woman</span> </span>{<br></span><span>    <span class="hljs-keyword">private</span> Man boyfriend;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setBoyfriend</span><span class="hljs-params">(Man m)</span> </span>{<br></span><span>        <span class="hljs-keyword">if</span>(boyfriend == m){<br></span><span>            <span class="hljs-keyword">return</span>;<br></span><span>        }<br></span><span>        <span class="hljs-keyword">if</span> (boyfriend != <span class="hljs-keyword">null</span>) {<br></span><span>            boyfriend.breakUp();<br></span><span>        }<br></span><span>        boyfriend = m;<br></span><span>        m.setGirlfriend(<span class="hljs-keyword">this</span>);<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">breakUp</span><span class="hljs-params">()</span> </span>{<br></span><span>        boyfriend = <span class="hljs-keyword">null</span>;<br></span><span>    }   <br></span><span>    ...<br></span><span>}<br></span></code></pre>
-                              <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Man</span></span>{<br></span><span>    <span class="hljs-keyword">private</span> Woman girlfriend;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setGirlfriend</span><span class="hljs-params">(Woman w)</span> </span>{<br></span><span>        <span class="hljs-keyword">if</span>(girlfriend == w){<br></span><span>            <span class="hljs-keyword">return</span>;<br></span><span>        }<br></span><span>        <span class="hljs-keyword">if</span> (girlfriend != <span class="hljs-keyword">null</span>) {<br></span><span>            girlfriend.breakUp();<br></span><span>        }<br></span><span>        girlfriend = w;<br></span><span>        w.setBoyfriend(<span class="hljs-keyword">this</span>);<br></span><span>    }<br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">breakUp</span><span class="hljs-params">()</span> </span>{<br></span><span>        girlfriend = <span class="hljs-keyword">null</span>;<br></span><span>    }  <br></span><span>   ...<br></span><span>}<br></span></code></pre>
+                              <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Woman</span> </span>{
+</span><span>    <span class="hljs-keyword">private</span> Man boyfriend;
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setBoyfriend</span><span class="hljs-params">(Man m)</span> </span>{
+</span><span>        <span class="hljs-keyword">if</span>(boyfriend == m){
+</span><span>            <span class="hljs-keyword">return</span>;
+</span><span>        }
+</span><span>        <span class="hljs-keyword">if</span> (boyfriend != <span class="hljs-keyword">null</span>) {
+</span><span>            boyfriend.breakUp();
+</span><span>        }
+</span><span>        boyfriend = m;
+</span><span>        m.setGirlfriend(<span class="hljs-keyword">this</span>);
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">breakUp</span><span class="hljs-params">()</span> </span>{
+</span><span>        boyfriend = <span class="hljs-keyword">null</span>;
+</span><span>    }   
+</span><span>    ...
+</span><span>}
+</span></code></pre>
+                              <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Man</span></span>{
+</span><span>    <span class="hljs-keyword">private</span> Woman girlfriend;
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setGirlfriend</span><span class="hljs-params">(Woman w)</span> </span>{
+</span><span>        <span class="hljs-keyword">if</span>(girlfriend == w){
+</span><span>            <span class="hljs-keyword">return</span>;
+</span><span>        }
+</span><span>        <span class="hljs-keyword">if</span> (girlfriend != <span class="hljs-keyword">null</span>) {
+</span><span>            girlfriend.breakUp();
+</span><span>        }
+</span><span>        girlfriend = w;
+</span><span>        w.setBoyfriend(<span class="hljs-keyword">this</span>);
+</span><span>    }
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">breakUp</span><span class="hljs-params">()</span> </span>{
+</span><span>        girlfriend = <span class="hljs-keyword">null</span>;
+</span><span>    }  
+</span><span>   ...
+</span><span>}
+</span></code></pre>
                               <p>When the code <code v-pre>james.setGirlfriend(jean)</code> is executed, the code ensures that <code v-pre>james</code> break up with any current girlfriend before he accepts <code v-pre>jean</code> as the girlfriend. Furthermore, the code ensures that <code v-pre>jean</code> breaks up with any existing boyfriends and accepts <code v-pre>james</code> as the boyfriend.</p>
                             </div>
                             <div>
@@ -885,15 +1106,101 @@
                                         <img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/playerRegion.png" height="100">
                                         <p></p>
                                         <p>Minimally, this can be implemented like this.</p>
-                                        <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Player</span></span>{<br></span><span>    Region region;<br></span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setRegion</span><span class="hljs-params">(Region r)</span> </span>{<br></span><span>        region = r;<br></span><span>    }<br></span><span>    <span class="hljs-function">Region <span class="hljs-title">getRegion</span><span class="hljs-params">()</span> </span>{<br></span><span>        <span class="hljs-keyword">return</span> region;<br></span><span>    }<br></span><span>} <br></span><span><br></span><span><span class="hljs-comment">// Region class is similar</span><br></span></code></pre>
+                                        <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Player</span></span>{
+</span><span>    Region region;
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setRegion</span><span class="hljs-params">(Region r)</span> </span>{
+</span><span>        region = r;
+</span><span>    }
+</span><span>    <span class="hljs-function">Region <span class="hljs-title">getRegion</span><span class="hljs-params">()</span> </span>{
+</span><span>        <span class="hljs-keyword">return</span> region;
+</span><span>    }
+</span><span>} 
+</span><span>
+</span><span><span class="hljs-comment">// Region class is similar</span>
+</span></code></pre>
                                         <p>However, this is not very defensive. For example, a user of this class can pass a <code v-pre>null</code> to either of the methods, thus violating the multiplicity of the relationship.</p>
                                         <p>Implement the two classes using a more defensive approach. Take note of the bidirectional link which requires us to preserve referential integrity at all times.</p>
                                         <div slot="answer" class="algolia-no-index">
                                           <p>In this solution, assume <code v-pre>Regions</code> can be created without <code v-pre>Players</code> (note that you cannot be 100% defensive all the time). The usage will be something like this:</p>
-                                          <pre><code class="hljs java" v-pre><span>Region r1 = <span class="hljs-keyword">new</span> Region();<br></span><span>Player p1 = <span class="hljs-keyword">new</span> Player(r1);<br></span><span>Region r2 = <span class="hljs-keyword">new</span> Region();<br></span><span>Player p2 = <span class="hljs-keyword">new</span> Player(r2);<br></span><span>p1.setRegion(r2);<br></span><span>r1.setPlayer(p2);<br></span></code></pre>
+                                          <pre><code class="hljs java" v-pre><span>Region r1 = <span class="hljs-keyword">new</span> Region();
+</span><span>Player p1 = <span class="hljs-keyword">new</span> Player(r1);
+</span><span>Region r2 = <span class="hljs-keyword">new</span> Region();
+</span><span>Player p2 = <span class="hljs-keyword">new</span> Player(r2);
+</span><span>p1.setRegion(r2);
+</span><span>r1.setPlayer(p2);
+</span></code></pre>
                                           <p>Here are the two classes. Get methods are omitted as they are simple. Note how much extra effort you need to be defensive.</p>
-                                          <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Region</span> </span>{<br></span><span>    <span class="hljs-keyword">private</span> Player myPlayer;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Region</span><span class="hljs-params">()</span> </span>{<br></span><span>        <span class="hljs-comment">// initialise region</span><br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setPlayer</span><span class="hljs-params">(Player newPlayer)</span> </span>{<br></span><span>        <span class="hljs-keyword">if</span> (newPlayer == <span class="hljs-keyword">null</span>) {<br></span><span>            stopSystemWithErrorMessage(<span class="hljs-string">"Multiplicity violation"</span>);<br></span><span>        }<br></span><span>        <span class="hljs-keyword">if</span> (myPlayer == newPlayer) {<br></span><span>            <span class="hljs-keyword">return</span>; <span class="hljs-comment">// same player</span><br></span><span>        }<br></span><span>        <span class="hljs-keyword">if</span> (myPlayer != <span class="hljs-keyword">null</span>) {<br></span><span>            <span class="hljs-comment">// I already have a Player!</span><br></span><span>            myPlayer.removeRegion(<span class="hljs-keyword">this</span>);<br></span><span>        }<br></span><span>        myPlayer = newPlayer;<br></span><span>        <span class="hljs-comment">// set the reverse link</span><br></span><span>        myPlayer.setRegion(<span class="hljs-keyword">this</span>);<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">removePlayer</span><span class="hljs-params">(Player disconnectingPlayer)</span> </span>{<br></span><span>        <span class="hljs-keyword">if</span> (myPlayer == disconnectingPlayer){<br></span><span>            myPlayer = <span class="hljs-keyword">null</span>;<br></span><span>        } <span class="hljs-keyword">else</span> {<br></span><span>            stopSystemWithErrorMessage(<span class="hljs-string">"Unknown Player trying to disconnect"</span>);<br></span><span>        }<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">stopSystemWithErrorMessage</span><span class="hljs-params">(String msg)</span> </span>{<br></span><span>        ...<br></span><span>    }<br></span><span>}<br></span></code></pre>
-                                          <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Player</span> </span>{<br></span><span>    <span class="hljs-keyword">private</span> Region myRegion;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Player</span><span class="hljs-params">(Region region)</span> </span>{<br></span><span>        setRegion(region);<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setRegion</span><span class="hljs-params">(Region newRegion)</span> </span>{<br></span><span>        <span class="hljs-keyword">if</span> (newRegion == <span class="hljs-keyword">null</span>) {<br></span><span>            stopSystemWithErrorMessage(<span class="hljs-string">"Multiplicity violation"</span>);<br></span><span>        }<br></span><span>        <span class="hljs-keyword">if</span> (myRegion == newRegion) {<br></span><span>            <span class="hljs-keyword">return</span>; <span class="hljs-comment">// no change in Region!</span><br></span><span>        }<br></span><span>        <span class="hljs-keyword">if</span> (myRegion != <span class="hljs-keyword">null</span>) {<br></span><span>            <span class="hljs-comment">// previous region exists</span><br></span><span>            myRegion.removePlayer(<span class="hljs-keyword">this</span>);<br></span><span>        }<br></span><span>        myRegion = newRegion;<br></span><span>        <br></span><span>        <span class="hljs-comment">// set the reverse link</span><br></span><span>        myRegion.setPlayer(<span class="hljs-keyword">this</span>);<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">removeRegion</span><span class="hljs-params">(Region disconnectingRegion)</span> </span>{<br></span><span>        <span class="hljs-keyword">if</span> (myRegion == disconnectingRegion) {<br></span><span>            myRegion = <span class="hljs-keyword">null</span>;<br></span><span>        }<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">stopSystemWithErrorMessage</span><span class="hljs-params">(String msg)</span> </span>{<br></span><span>        ...<br></span><span>    }<br></span><span>}<br></span></code></pre>
+                                          <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Region</span> </span>{
+</span><span>    <span class="hljs-keyword">private</span> Player myPlayer;
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Region</span><span class="hljs-params">()</span> </span>{
+</span><span>        <span class="hljs-comment">// initialise region</span>
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setPlayer</span><span class="hljs-params">(Player newPlayer)</span> </span>{
+</span><span>        <span class="hljs-keyword">if</span> (newPlayer == <span class="hljs-keyword">null</span>) {
+</span><span>            stopSystemWithErrorMessage(<span class="hljs-string">"Multiplicity violation"</span>);
+</span><span>        }
+</span><span>        <span class="hljs-keyword">if</span> (myPlayer == newPlayer) {
+</span><span>            <span class="hljs-keyword">return</span>; <span class="hljs-comment">// same player</span>
+</span><span>        }
+</span><span>        <span class="hljs-keyword">if</span> (myPlayer != <span class="hljs-keyword">null</span>) {
+</span><span>            <span class="hljs-comment">// I already have a Player!</span>
+</span><span>            myPlayer.removeRegion(<span class="hljs-keyword">this</span>);
+</span><span>        }
+</span><span>        myPlayer = newPlayer;
+</span><span>        <span class="hljs-comment">// set the reverse link</span>
+</span><span>        myPlayer.setRegion(<span class="hljs-keyword">this</span>);
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">removePlayer</span><span class="hljs-params">(Player disconnectingPlayer)</span> </span>{
+</span><span>        <span class="hljs-keyword">if</span> (myPlayer == disconnectingPlayer){
+</span><span>            myPlayer = <span class="hljs-keyword">null</span>;
+</span><span>        } <span class="hljs-keyword">else</span> {
+</span><span>            stopSystemWithErrorMessage(<span class="hljs-string">"Unknown Player trying to disconnect"</span>);
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">stopSystemWithErrorMessage</span><span class="hljs-params">(String msg)</span> </span>{
+</span><span>        ...
+</span><span>    }
+</span><span>}
+</span></code></pre>
+                                          <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Player</span> </span>{
+</span><span>    <span class="hljs-keyword">private</span> Region myRegion;
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Player</span><span class="hljs-params">(Region region)</span> </span>{
+</span><span>        setRegion(region);
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setRegion</span><span class="hljs-params">(Region newRegion)</span> </span>{
+</span><span>        <span class="hljs-keyword">if</span> (newRegion == <span class="hljs-keyword">null</span>) {
+</span><span>            stopSystemWithErrorMessage(<span class="hljs-string">"Multiplicity violation"</span>);
+</span><span>        }
+</span><span>        <span class="hljs-keyword">if</span> (myRegion == newRegion) {
+</span><span>            <span class="hljs-keyword">return</span>; <span class="hljs-comment">// no change in Region!</span>
+</span><span>        }
+</span><span>        <span class="hljs-keyword">if</span> (myRegion != <span class="hljs-keyword">null</span>) {
+</span><span>            <span class="hljs-comment">// previous region exists</span>
+</span><span>            myRegion.removePlayer(<span class="hljs-keyword">this</span>);
+</span><span>        }
+</span><span>        myRegion = newRegion;
+</span><span>        
+</span><span>        <span class="hljs-comment">// set the reverse link</span>
+</span><span>        myRegion.setPlayer(<span class="hljs-keyword">this</span>);
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">removeRegion</span><span class="hljs-params">(Region disconnectingRegion)</span> </span>{
+</span><span>        <span class="hljs-keyword">if</span> (myRegion == disconnectingRegion) {
+</span><span>            myRegion = <span class="hljs-keyword">null</span>;
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">stopSystemWithErrorMessage</span><span class="hljs-params">(String msg)</span> </span>{
+</span><span>        ...
+</span><span>    }
+</span><span>}
+</span></code></pre>
                                           <p>Note that the above code stops the system when the multiplicity is violated. Alternatively, you can throw an exception and let the caller handle the situation.</p>
                                         </div>
                                       </question>
@@ -910,8 +1217,41 @@
                                         <div slot="answer" class="algolia-no-index">
                                           <p>The code below contains a method in the <code v-pre>Bank</code> class to create an account; the bank field in the new account is thereby filled by the bank creating it.</p>
                                           <p>Assume that once an <code v-pre>Account</code> has been assigned to one <code v-pre>Bank</code>, it cannot be assigned to a different <code v-pre>Bank</code>. Once the <code v-pre>Account</code> is removed from the <code v-pre>Bank</code>, it will not be used any more (hence, no need to remove the link from <code v-pre>Account</code> to <code v-pre>Bank</code>).</p>
-                                          <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{<br></span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> accNumber ;<br></span><span>    <span class="hljs-keyword">private</span> Bank theBank ;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Account</span><span class="hljs-params">(<span class="hljs-keyword">int</span> n, Bank b)</span> </span>{<br></span><span>        accno = n ;<br></span><span>        theBank = b ;<br></span><span>    }<br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getNumber</span><span class="hljs-params">()</span> </span>{<br></span><span>        <span class="hljs-keyword">return</span> accNumber;<br></span><span>    }<br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> Bank <span class="hljs-title">getBank</span><span class="hljs-params">()</span> </span>{<br></span><span>        <span class="hljs-keyword">return</span> theBank ;<br></span><span>    }<br></span><span>}<br></span></code></pre>
-                                          <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">import</span> java.util.*;<br></span><span><br></span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bank</span> </span>{<br></span><span>    <span class="hljs-keyword">private</span> HashMap&lt; Integer, Account &gt; theAccounts = <span class="hljs-keyword">new</span> HashMap &lt; Integer, Account &gt; ();<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">createAccount</span><span class="hljs-params">(<span class="hljs-keyword">int</span> n)</span> </span>{<br></span><span>        addAccount(<span class="hljs-keyword">new</span> Account(n, <span class="hljs-keyword">this</span>)) ;<br></span><span>    }<br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addAccount</span><span class="hljs-params">(Account a)</span> </span>{          <br></span><span>        theAccounts.put(a.getNumber(), a);<br></span><span>    }<br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">removeAccount</span><span class="hljs-params">(<span class="hljs-keyword">int</span> accNumber)</span> </span>{<br></span><span>        theAccounts.remove(accNumber);<br></span><span>    }<br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> Account <span class="hljs-title">lookupAccount</span><span class="hljs-params">(<span class="hljs-keyword">int</span> accNumber)</span> </span>{<br></span><span>        <span class="hljs-keyword">return</span> theAccounts.get(accNumber);<br></span><span>    }<br></span><span>}<br></span></code></pre>
+                                          <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{
+</span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> accNumber ;
+</span><span>    <span class="hljs-keyword">private</span> Bank theBank ;
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Account</span><span class="hljs-params">(<span class="hljs-keyword">int</span> n, Bank b)</span> </span>{
+</span><span>        accno = n ;
+</span><span>        theBank = b ;
+</span><span>    }
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getNumber</span><span class="hljs-params">()</span> </span>{
+</span><span>        <span class="hljs-keyword">return</span> accNumber;
+</span><span>    }
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> Bank <span class="hljs-title">getBank</span><span class="hljs-params">()</span> </span>{
+</span><span>        <span class="hljs-keyword">return</span> theBank ;
+</span><span>    }
+</span><span>}
+</span></code></pre>
+                                          <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">import</span> java.util.*;
+</span><span>
+</span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bank</span> </span>{
+</span><span>    <span class="hljs-keyword">private</span> HashMap&lt; Integer, Account &gt; theAccounts = <span class="hljs-keyword">new</span> HashMap &lt; Integer, Account &gt; ();
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">createAccount</span><span class="hljs-params">(<span class="hljs-keyword">int</span> n)</span> </span>{
+</span><span>        addAccount(<span class="hljs-keyword">new</span> Account(n, <span class="hljs-keyword">this</span>)) ;
+</span><span>    }
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addAccount</span><span class="hljs-params">(Account a)</span> </span>{          
+</span><span>        theAccounts.put(a.getNumber(), a);
+</span><span>    }
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">removeAccount</span><span class="hljs-params">(<span class="hljs-keyword">int</span> accNumber)</span> </span>{
+</span><span>        theAccounts.remove(accNumber);
+</span><span>    }
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> Account <span class="hljs-title">lookupAccount</span><span class="hljs-params">(<span class="hljs-keyword">int</span> accNumber)</span> </span>{
+</span><span>        <span class="hljs-keyword">return</span> theAccounts.get(accNumber);
+</span><span>    }
+</span><span>}
+</span></code></pre>
                                         </div>
                                       </question>
                                     </panel>
@@ -922,8 +1262,22 @@
                                       </template>
                                       <question has-input="true">
                                         <p>(a) Is the code given below a defensive translation of the associations shown in the class diagram? Explain your answer.</p>
-                                        <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Teacher</span></span>{<br></span><span>    <span class="hljs-keyword">private</span> Student favoriteStudent;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setFavoriteStudent</span><span class="hljs-params">(Student s)</span></span>{<br></span><span>        favoriteStudent = s;<br></span><span>    }<br></span><span>}<br></span></code></pre>
-                                        <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Student</span></span>{<br></span><span>    <span class="hljs-keyword">private</span> Teacher favoriteTeacher;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setFavoriteTeacher</span><span class="hljs-params">(Teacher t)</span></span>{<br></span><span>        favoriteTeacher = t;<br></span><span>    }<br></span><span>}<br></span></code></pre><img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/teacherStudent.png" height="80">
+                                        <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Teacher</span></span>{
+</span><span>    <span class="hljs-keyword">private</span> Student favoriteStudent;
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setFavoriteStudent</span><span class="hljs-params">(Student s)</span></span>{
+</span><span>        favoriteStudent = s;
+</span><span>    }
+</span><span>}
+</span></code></pre>
+                                        <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Student</span></span>{
+</span><span>    <span class="hljs-keyword">private</span> Teacher favoriteTeacher;
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setFavoriteTeacher</span><span class="hljs-params">(Teacher t)</span></span>{
+</span><span>        favoriteTeacher = t;
+</span><span>    }
+</span><span>}
+</span></code></pre><img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/teacherStudent.png" height="80">
                                         <p></p>
                                         <p>(b) In terms of maintaining referential integrity in the implementation, what is the difference between the following two diagrams?</p>
                                         <img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/teacherStudent.png" height="80">
@@ -938,7 +1292,18 @@
                                           <p><code v-pre>Teacher</code> class can be made even more defensive by introducing a <code v-pre>resetFavoriteStudent()</code> method to unlink the current favorite student from a teacher. In that case, <code v-pre>setFavoriteStudent(Student)</code> method should not accept null. This approach is more defensive because it prevents a null value being passed to <code v-pre>setFavoriteStudent(Student)</code> by mistake and being interpreted as a request to de-link the current favorite student from the <code v-pre>Teacher</code> object.</p>
                                           <p>(b) First diagram has unidirectional links. Second has a bidirectional link. RI is only applicable to the second.</p>
                                           <p>(c)</p>
-                                          <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">removeMember</span><span class="hljs-params">(Member m)</span> </span>{<br></span><span>    <span class="hljs-keyword">if</span> (m==<span class="hljs-keyword">null</span>) {<br></span><span>        <span class="hljs-keyword">throw</span> exception(<span class="hljs-string">"this is null, not a member!"</span>);<br></span><span>    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(member_count == <span class="hljs-number">10</span>) {<br></span><span>        <span class="hljs-keyword">throw</span> exception(<span class="hljs-string">"we need at least 10 members to survive!"</span>);<br></span><span>    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(!isMember(m)) {<br></span><span>        <span class="hljs-keyword">throw</span> exception (<span class="hljs-string">"this fellow is not a member of our club!"</span>);<br></span><span>    } <span class="hljs-keyword">else</span> {<br></span><span>        members.remove(m); <span class="hljs-comment">// members is a data structure such as ArrayList</span><br></span><span>    }<br></span><span>}<br></span></code></pre>
+                                          <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">removeMember</span><span class="hljs-params">(Member m)</span> </span>{
+</span><span>    <span class="hljs-keyword">if</span> (m==<span class="hljs-keyword">null</span>) {
+</span><span>        <span class="hljs-keyword">throw</span> exception(<span class="hljs-string">"this is null, not a member!"</span>);
+</span><span>    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(member_count == <span class="hljs-number">10</span>) {
+</span><span>        <span class="hljs-keyword">throw</span> exception(<span class="hljs-string">"we need at least 10 members to survive!"</span>);
+</span><span>    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(!isMember(m)) {
+</span><span>        <span class="hljs-keyword">throw</span> exception (<span class="hljs-string">"this fellow is not a member of our club!"</span>);
+</span><span>    } <span class="hljs-keyword">else</span> {
+</span><span>        members.remove(m); <span class="hljs-comment">// members is a data structure such as ArrayList</span>
+</span><span>    }
+</span><span>}
+</span></code></pre>
                                         </div>
                                       </question>
                                     </panel>
@@ -1043,7 +1408,7 @@
                             <p></p>
                             <p></p>
                             <div>
-                              <p><strong><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">term was coined by Bertrand Meyer</span>Design by contract (DbC)</span> is an approach for designing software that requires defining formal, precise and verifiable interface specifications for software components.</strong></p>
+                              <p><strong><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">term was coined by Bertrand Meyer</span>Design by contract (DbC)</span> is an approach for designing software that requires defining formal, precise and verifiable interface specifications for software components.</strong></p>
                               <p>Suppose an operation is implemented with the behavior specified precisely in the API (preconditions, post conditions, exceptions etc.). When following the defensive approach, the code should first check if the preconditions have been met. Typically, exceptions are thrown if preconditions are violated. In contrast, the <em>Design-by-Contract (DbC)</em> approach to coding assumes that it is the responsibility of the caller to ensure all preconditions are met. The operation will honor the contract only if the preconditions have been met. If any of them have not been met, the behavior of the operation is &quot;unspecified&quot;.</p>
                               <p>Languages such as Eiffel have native support for DbC. For example, preconditions of an operation can be specified in Eiffel and the language runtime will check precondition violations without the need to do it explicitly in the code. To follow the DbC approach in languages such as Java and C++ where there is no built-in DbC support, assertions can be used to confirm pre-conditions.</p>
                             </div>
@@ -1083,6 +1448,7 @@
             </div>
           </div>
         </div>
+        <p><i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i></p>
       </div>
 
 
@@ -1108,21 +1474,16 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Thu, Sep 10, 2020, 11:06:50 PM GMT+8]</small>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.16.0</a>, generated on Wed, Sep 16, 2020, 3:47:05 PM GMT+8]</small>
       </div>
     </footer>
   </div>
 </body>
-<script src="../markbind/js/vue.min.js"></script>
-<script src="../markbind/js/components.min.js"></script>
 <script src="../markbind/js/bootstrap-utility.min.js"></script>
-<script src="../markbind/js/polyfill.min.js"></script>
-<script src="../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/se-book'
-  const enableSearch = true
+  MarkBind.setupWithSearch()
 </script>
-<script src="../markbind/js/setup.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
   function initAlgolia() {
@@ -1137,5 +1498,8 @@
   MarkBind.afterSetup(initAlgolia);
 </script>
 <script src="../markbind/layouts/default/scripts.js"></script>
+<script>
+  if (MarkBind.AfterSetup) MarkBind.AfterSetup()
+</script>
 
 </html>

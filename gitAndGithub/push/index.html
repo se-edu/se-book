@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.15.2">
+  <meta name="generator" content="MarkBind 2.16.0">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - Git and GitHub: Push</title>
   <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
@@ -14,11 +14,14 @@
   <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
   <link rel="stylesheet" href="../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../markbind/css/github.min.css">
-  <link rel="stylesheet" href="../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="../../markbind/css/markbind.min.css">
+  <script src="../../markbind/js/polyfill.min.js"></script>
+  <script src="../../markbind/js/vue.min.js"></script>
+  <script src="../../markbind/js/markbind.min.js"></script>
+  <script src="../../markbind/js/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/se-book/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../markbind/layouts/default/styles.css">
-  <link rel="stylesheet" href="../../markbind/css/site-nav.css">
   <link rel="icon" href="/se-book/favicon.ico">
 </head>
 
@@ -261,7 +264,7 @@
                 <div id="main">
                   <div>
                     <div id="simple-push">
-                      <p>Given below is a scenario you can try in order to learn how to <span trigger="click" for="modal:githubPushing-rcsPushing" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:githubPushing-rcsPushing'].show()" class="trigger-click">push</span> commits to a remote repo hosted on GitHub:</p>
+                      <p>Given below is a scenario you can try in order to learn how to <trigger trigger="click" for="modal:githubPushing-rcsPushing">push</trigger> commits to a remote repo hosted on GitHub:</p>
                       <b-modal id="modal:githubPushing-rcsPushing" hide-footer size="lg" modal-class="mb-zoom" ref="modal:githubPushing-rcsPushing" class="algolia-no-index"><template slot="modal-title">Project Management → Revision Control → Remote Repositories →</template>
                         <div>
                           <p><strong>You can <mark><em>push</em></mark> new commits in one repo to another repo</strong> which will copy the new commits onto the destination repo. Note that pushing to a repo requires you to have write-access to it. Furthermore, you can push between repos only if those repos have a shared history among them (i.e, one was created by copying the other at some point in the past).</p>
@@ -299,13 +302,15 @@
                     </div>
                     <p><strong>You can push to repos other than the one you cloned from</strong>, as long as the target repo and your repo have a shared history.</p>
                     <ol>
-                      <li><span trigger="click" for="modal:push-addRemoteForNormalPushing" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:push-addRemoteForNormalPushing'].show()" class="trigger-click">Add the GitHub repo URL as a remote</span>, if you haven't done so already.</li>
+                      <li>
+                        <trigger trigger="click" for="modal:push-addRemoteForNormalPushing">Add the GitHub repo URL as a remote</trigger>, if you haven't done so already.
+                      </li>
                       <li>Push to the target repo.</li>
                     </ol>
                     <b-modal id="modal:push-addRemoteForNormalPushing" hide-footer size="lg" modal-class="mb-zoom" ref="modal:push-addRemoteForNormalPushing" class="algolia-no-index"><template slot="modal-title">Git &amp; GitHub → Pull →</template>
                       <div>
                         <h5 id="working-with-multiple-remotes">Working with multiple remotes<a class="fa fa-anchor" href="#working-with-multiple-remotes" onclick="event.stopPropagation()"></a></h5>
-                        <p><strong>When you clone a repo, Git automatically adds a <em>remote</em> repo named <code v-pre>origin</code></strong> to your repo configuration. As you know, you can pull commits from that repo. As you know, <span trigger="click" for="modal:gitPull-rcsMultipleRepos" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:gitPull-rcsMultipleRepos'].show()" class="trigger-click">a Git repo can work with remote repos other than the one it was cloned from</span>.</p>
+                        <p><strong>When you clone a repo, Git automatically adds a <em>remote</em> repo named <code v-pre>origin</code></strong> to your repo configuration. As you know, you can pull commits from that repo. As you know, <trigger trigger="click" for="modal:gitPull-rcsMultipleRepos">a Git repo can work with remote repos other than the one it was cloned from</trigger>.</p>
                         <b-modal id="modal:gitPull-rcsMultipleRepos" hide-footer size="lg" modal-class="mb-zoom" ref="modal:gitPull-rcsMultipleRepos" class="algolia-no-index"><template slot="modal-title">Project Management → Revision Control → Remote Repositories →</template>
                           <div>
                             <p><strong>A repo can work with any number of other repositories as long as they have a shared history</strong> e.g., <code v-pre>repo1</code> can pull from (or push to) <code v-pre>repo2</code> and <code v-pre>repo3</code> if they have a shared history between them.</p>
@@ -400,11 +405,11 @@
                         </p>
                       </li>
                     </ol>
-                    <p><strong>2. <span trigger="click" for="modal:push-addRemote" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:push-addRemote'].show()" class="trigger-click">Add the GitHub repo URL as a remote</span></strong> of the local repo. You can give it the name <code v-pre>origin</code> (or any other name).</p>
+                    <p><strong>2. <trigger trigger="click" for="modal:push-addRemote">Add the GitHub repo URL as a remote</trigger></strong> of the local repo. You can give it the name <code v-pre>origin</code> (or any other name).</p>
                     <b-modal id="modal:push-addRemote" hide-footer size="lg" modal-class="mb-zoom" ref="modal:push-addRemote" class="algolia-no-index"><template slot="modal-title">Git &amp; GitHub → Pull →</template>
                       <div>
                         <h5 id="working-with-multiple-remotes-2">Working with multiple remotes<a class="fa fa-anchor" href="#working-with-multiple-remotes-2" onclick="event.stopPropagation()"></a></h5>
-                        <p><strong>When you clone a repo, Git automatically adds a <em>remote</em> repo named <code v-pre>origin</code></strong> to your repo configuration. As you know, you can pull commits from that repo. As you know, <span trigger="click" for="modal:gitPull-rcsMultipleRepos" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:gitPull-rcsMultipleRepos'].show()" class="trigger-click">a Git repo can work with remote repos other than the one it was cloned from</span>.</p>
+                        <p><strong>When you clone a repo, Git automatically adds a <em>remote</em> repo named <code v-pre>origin</code></strong> to your repo configuration. As you know, you can pull commits from that repo. As you know, <trigger trigger="click" for="modal:gitPull-rcsMultipleRepos">a Git repo can work with remote repos other than the one it was cloned from</trigger>.</p>
                         <b-modal id="modal:gitPull-rcsMultipleRepos" hide-footer size="lg" modal-class="mb-zoom" ref="modal:gitPull-rcsMultipleRepos" class="algolia-no-index"><template slot="modal-title">Project Management → Revision Control → Remote Repositories →</template>
                           <div>
                             <p><strong>A repo can work with any number of other repositories as long as they have a shared history</strong> e.g., <code v-pre>repo1</code> can pull from (or push to) <code v-pre>repo2</code> and <code v-pre>repo3</code> if they have a shared history between them.</p>
@@ -474,7 +479,7 @@
                         <img src="/se-book/gitAndGithub/push/images/pushToRemote.png" width="470">
                       </tab>
                       <tab class="algolia-no-index"><template slot="_header">CLI</template>
-                        <p>Push each branch to the new remote the usual way <mark>but use the <code v-pre>-u</code> flag</mark> to inform Git that you wish to <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">i.e., remember which branch in the remote repo corresponds to which branch in the local repo</span>track</span> the branch.<br>
+                        <p>Push each branch to the new remote the usual way <mark>but use the <code v-pre>-u</code> flag</mark> to inform Git that you wish to <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">i.e., remember which branch in the remote repo corresponds to which branch in the local repo</span>track</span> the branch.<br>
                           e.g., <code v-pre>git push -u origin master</code></p>
                       </tab>
                     </tabs>
@@ -485,6 +490,7 @@
             </div>
           </div>
         </div>
+        <i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i>
       </div>
 
 
@@ -492,21 +498,16 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Thu, Sep 10, 2020, 11:06:50 PM GMT+8]</small>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.16.0</a>, generated on Wed, Sep 16, 2020, 3:47:05 PM GMT+8]</small>
       </div>
     </footer>
   </div>
 </body>
-<script src="../../markbind/js/vue.min.js"></script>
-<script src="../../markbind/js/components.min.js"></script>
 <script src="../../markbind/js/bootstrap-utility.min.js"></script>
-<script src="../../markbind/js/polyfill.min.js"></script>
-<script src="../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/se-book'
-  const enableSearch = true
+  MarkBind.setupWithSearch()
 </script>
-<script src="../../markbind/js/setup.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
   function initAlgolia() {
@@ -521,5 +522,8 @@
   MarkBind.afterSetup(initAlgolia);
 </script>
 <script src="../../markbind/layouts/default/scripts.js"></script>
+<script>
+  if (MarkBind.AfterSetup) MarkBind.AfterSetup()
+</script>
 
 </html>

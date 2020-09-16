@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.15.2">
+  <meta name="generator" content="MarkBind 2.16.0">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - Software Design Patterns: Observer</title>
   <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
@@ -14,11 +14,14 @@
   <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
   <link rel="stylesheet" href="../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../markbind/css/github.min.css">
-  <link rel="stylesheet" href="../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="../../markbind/css/markbind.min.css">
+  <script src="../../markbind/js/polyfill.min.js"></script>
+  <script src="../../markbind/js/vue.min.js"></script>
+  <script src="../../markbind/js/markbind.min.js"></script>
+  <script src="../../markbind/js/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/se-book/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../markbind/layouts/default/styles.css">
-  <link rel="stylesheet" href="../../markbind/css/site-nav.css">
   <link rel="icon" href="/se-book/favicon.ico">
 </head>
 
@@ -287,26 +290,46 @@
                           <ol>
                             <li>
                               <p>First, create the relevant objects.</p>
-                              <pre><code class="hljs java" v-pre><span>StudentList studentList = <span class="hljs-keyword">new</span> StudentList();<br></span><span>StudentListUi listUi = <span class="hljs-keyword">new</span> StudentListUi();<br></span><span>StudentStatusUi statusUi = <span class="hljs-keyword">new</span> StudentStatsUi();<br></span></code></pre>
+                              <pre><code class="hljs java" v-pre><span>StudentList studentList = <span class="hljs-keyword">new</span> StudentList();
+</span><span>StudentListUi listUi = <span class="hljs-keyword">new</span> StudentListUi();
+</span><span>StudentStatusUi statusUi = <span class="hljs-keyword">new</span> StudentStatsUi();
+</span></code></pre>
                             </li>
                             <li>
                               <p>Next, the two UIs indicate to the <code v-pre>StudentList</code> that they are interested in being updated whenever <code v-pre>StudentList</code> changes. This is also known as ‘subscribing for updates’.</p>
-                              <pre><code class="hljs java" v-pre><span>studentList.addUi(listUi);<br></span><span>studentList.addUi(statusUi);<br></span></code></pre>
+                              <pre><code class="hljs java" v-pre><span>studentList.addUi(listUi);
+</span><span>studentList.addUi(statusUi);
+</span></code></pre>
                             </li>
                             <li>
                               <p>Within the <code v-pre>addUi</code> operation of <code v-pre>StudentList</code>, all Observer objects subscribers are added to an internal data structure called <code v-pre>observerList</code>.</p>
-                              <pre><code class="hljs java" v-pre><span><span class="hljs-comment">//StudentList class</span><br></span><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addUi</span><span class="hljs-params">(Observer o)</span> </span>{<br></span><span>    observerList.add(o);<br></span><span>}<br></span></code></pre>
+                              <pre><code class="hljs java" v-pre><span><span class="hljs-comment">//StudentList class</span>
+</span><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addUi</span><span class="hljs-params">(Observer o)</span> </span>{
+</span><span>    observerList.add(o);
+</span><span>}
+</span></code></pre>
                             </li>
                           </ol>
                           <p><strong>Now, whenever the data in <code v-pre>StudentList</code> changes</strong> (e.g. when a new student is added to the <code v-pre>StudentList</code>),</p>
                           <ol>
                             <li>
                               <p>All interested observers are updated by calling the <code v-pre>notifyUIs</code> operation.</p>
-                              <pre><code class="hljs java" v-pre><span><span class="hljs-comment">//StudentList class</span><br></span><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">notifyUIs</span><span class="hljs-params">()</span> </span>{<br></span><span>    <span class="hljs-comment">//for each observer in the list</span><br></span><span>    <span class="hljs-keyword">for</span>(Observer o: observerList){<br></span><span>        o.update();<br></span><span>    }<br></span><span>}<br></span></code></pre>
+                              <pre><code class="hljs java" v-pre><span><span class="hljs-comment">//StudentList class</span>
+</span><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">notifyUIs</span><span class="hljs-params">()</span> </span>{
+</span><span>    <span class="hljs-comment">//for each observer in the list</span>
+</span><span>    <span class="hljs-keyword">for</span>(Observer o: observerList){
+</span><span>        o.update();
+</span><span>    }
+</span><span>}
+</span></code></pre>
                             </li>
                             <li>
                               <p>UIs can then pull data from the <code v-pre>StudentList</code> whenever the <code v-pre>update</code> operation is called.</p>
-                              <pre><code class="hljs java" v-pre><span><span class="hljs-comment">//StudentListUI class</span><br></span><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">update</span><span class="hljs-params">()</span> </span>{<br></span><span>    <span class="hljs-comment">//refresh UI by pulling data from StudentList</span><br></span><span>}<br></span></code></pre>
+                              <pre><code class="hljs java" v-pre><span><span class="hljs-comment">//StudentListUI class</span>
+</span><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">update</span><span class="hljs-params">()</span> </span>{
+</span><span>    <span class="hljs-comment">//refresh UI by pulling data from StudentList</span>
+</span><span>}
+</span></code></pre>
                               <p>Note that <code v-pre>StudentList</code> is unaware of the exact nature of the two UIs but still manages to communicate with them via an intermediary.</p>
                             </li>
                           </ol>
@@ -372,6 +395,7 @@
             </div>
           </div>
         </div>
+        <i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i>
       </div>
 
 
@@ -379,21 +403,16 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Thu, Sep 10, 2020, 11:06:50 PM GMT+8]</small>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.16.0</a>, generated on Wed, Sep 16, 2020, 3:47:05 PM GMT+8]</small>
       </div>
     </footer>
   </div>
 </body>
-<script src="../../markbind/js/vue.min.js"></script>
-<script src="../../markbind/js/components.min.js"></script>
 <script src="../../markbind/js/bootstrap-utility.min.js"></script>
-<script src="../../markbind/js/polyfill.min.js"></script>
-<script src="../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/se-book'
-  const enableSearch = true
+  MarkBind.setupWithSearch()
 </script>
-<script src="../../markbind/js/setup.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
   function initAlgolia() {
@@ -408,5 +427,8 @@
   MarkBind.afterSetup(initAlgolia);
 </script>
 <script src="../../markbind/layouts/default/scripts.js"></script>
+<script>
+  if (MarkBind.AfterSetup) MarkBind.AfterSetup()
+</script>
 
 </html>

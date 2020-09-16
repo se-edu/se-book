@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.15.2">
+  <meta name="generator" content="MarkBind 2.16.0">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - C++ to Java: Getting Started</title>
   <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
@@ -14,11 +14,14 @@
   <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
   <link rel="stylesheet" href="../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../markbind/css/github.min.css">
-  <link rel="stylesheet" href="../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="../../markbind/css/markbind.min.css">
+  <script src="../../markbind/js/polyfill.min.js"></script>
+  <script src="../../markbind/js/vue.min.js"></script>
+  <script src="../../markbind/js/markbind.min.js"></script>
+  <script src="../../markbind/js/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/se-book/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../markbind/layouts/default/styles.css">
-  <link rel="stylesheet" href="../../markbind/css/site-nav.css">
   <link rel="icon" href="/se-book/favicon.ico">
 </head>
 
@@ -280,14 +283,29 @@
                       <p></p>
                       <div>
                         <p>In Java, the HelloWorld program looks like this:</p>
-                        <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">HelloWorld</span> </span>{<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{<br></span><span>        <span class="hljs-comment">// generate some simple output</span><br></span><span>        System.out.println(<span class="hljs-string">"Hello, World!"</span>);<br></span><span>    }<br></span><span>}<br></span></code></pre>
+                        <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">HelloWorld</span> </span>{
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+</span><span>        <span class="hljs-comment">// generate some simple output</span>
+</span><span>        System.out.println(<span class="hljs-string">"Hello, World!"</span>);
+</span><span>    }
+</span><span>}
+</span></code></pre>
                         <p>For reference, the equivalent C++ code is given below:</p>
-                        <pre><code class="hljs cpp" v-pre><span><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span><br></span><span><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;<br></span><span><br></span><span><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{<br></span><span>    <span class="hljs-comment">// generate some simple output</span><br></span><span>    <span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">"Hello, World!"</span>;<br></span><span>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br></span><span>}<br></span></code></pre>
+                        <pre><code class="hljs cpp" v-pre><span><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span>
+</span><span><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;
+</span><span>
+</span><span><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+</span><span>    <span class="hljs-comment">// generate some simple output</span>
+</span><span>    <span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">"Hello, World!"</span>;
+</span><span>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+</span><span>}
+</span></code></pre>
                         <p>This HelloWorld Java program defines one method named main: <code class="hljs inline java" v-pre><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span></span></code></p>
                         <p><code class="hljs inline java" v-pre>System.out.println()</code> displays a given text on the screen.</p>
                         <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span><span aria-hidden="true" class="fas fa-equals"></span></span></span></span> Some similarities:</p>
                         <ul>
-                          <li>Java programs consists of <span for="pop:helloWorld-statement" v-b-popover.hover.top.html="popoverGenerator" v-b-tooltip.hover.top.html="tooltipContentGetter" v-on:mouseover="$refs['pop:helloWorld-statement'].show()" class="trigger">statements</span>, grouped <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">A <em>method</em> is a named sequence of statements</span>methods</span>, which are then grouped into classes.</li>
+                          <li>Java programs consists of <trigger for="pop:helloWorld-statement">statements</trigger>, grouped <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">A <em>method</em> is a named sequence of statements</span>methods</span>, which are then grouped into classes.</li>
                           <li>Java is “case-sensitive”, which means <code v-pre>SYSTEM</code> is different from <code v-pre>System</code>.</li>
                           <li><code v-pre>public</code> is an <em>access modifier</em> that indicates the method is accessible from outside this class. Similarly, <code v-pre>private</code> access modifier indicates that a method/attribute is not accessible outside the class.</li>
                           <li><code v-pre>static</code> indicates this method is defined as a class-level member. Do not worry if you don’t know what that means. It will be explained later.</li>
@@ -297,8 +315,8 @@
                           <li>Java uses squiggly braces (<code v-pre>{</code> and <code v-pre>}</code>) to group things together.</li>
                           <li>The line starting with <code v-pre>//</code> is a comment. You can use <code v-pre>//</code> for single line comments and <code v-pre>/* ... */</code> for multi-line comments in Java code.</li>
                         </ul>
-                        <span id="pop:helloWorld-statement" placement="top" data-mb-component-type="popover" v-b-popover.hover.top.html="popoverInnerGenerator" class="trigger"><span data-mb-html-for="header">Statements</span>
-                          <div data-mb-html-for="content">
+                        <span id="pop:helloWorld-statement" placement="top" data-mb-component-type="popover" v-b-popover.hover.top.html="popoverInnerGetters" class="trigger"><span data-mb-slot-name="header">Statements</span>
+                          <div data-mb-slot-name="content">
                             <p>A statement is a line of code that performs a basic operation. In the HelloWorld program, this line is a print statement that displays a message on the screen:</p>
                             <p><code v-pre>System.out.println(&quot;Hello, World!&quot;);</code></p>
                           </div>
@@ -333,9 +351,9 @@
                         <p>
                           <smal><span class="badge badge-secondary">&gt;_</span></smal> <code v-pre>javac HelloWorld.java</code>
                         </p>
-                        <p>If the compilation is successful, you should see a file <code v-pre>HelloWorld.class</code>. That file contains the byte code for your program. If the compilation is unsuccessful, you will be notified of the <span for="pop:compiling-errors" v-b-popover.hover.top.html="popoverGenerator" v-b-tooltip.hover.top.html="tooltipContentGetter" v-on:mouseover="$refs['pop:compiling-errors'].show()" class="trigger">compile-time errors</span>.</p>
-                        <span id="pop:compiling-errors" placement="top" data-mb-component-type="popover" v-b-popover.hover.top.html="popoverInnerGenerator" class="trigger"><span data-mb-html-for="header">Compile-time errors</span>
-                          <div data-mb-html-for="content">
+                        <p>If the compilation is successful, you should see a file <code v-pre>HelloWorld.class</code>. That file contains the byte code for your program. If the compilation is unsuccessful, you will be notified of the <trigger for="pop:compiling-errors">compile-time errors</trigger>.</p>
+                        <span id="pop:compiling-errors" placement="top" data-mb-component-type="popover" v-b-popover.hover.top.html="popoverInnerGetters" class="trigger"><span data-mb-slot-name="header">Compile-time errors</span>
+                          <div data-mb-slot-name="content">
                             <p><em>Compile-time errors</em> <span class="dimmed">(aka <em>compile errors</em>)</span> occur when you violate the syntax rules of the Java language. For example, parentheses and braces have to come in matching pairs.</p>
                             <p>Error messages from the compiler usually indicate where in the program the error occurred, and sometimes they can tell you exactly what the error is.</p>
                           </div>
@@ -374,12 +392,15 @@
                           <li><code v-pre>java</code> in the command above refers to the Java interpreter installed in your computer.</li>
                           <li>Similar to <code v-pre>javac</code>, your console should be able to find the java executable.</li>
                         </ul>
-                        <p>When you run a Java program, you can encounter a <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">so-called because it does not appear until after the program has started running</span>run-time error</span>. These errors are also called &quot;exceptions&quot; because they usually indicate that something exceptional (and bad) has happened. When a run-time error occurs, the interpreter displays an error message that explains what happened and where.</p>
+                        <p>When you run a Java program, you can encounter a <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">so-called because it does not appear until after the program has started running</span>run-time error</span>. These errors are also called &quot;exceptions&quot; because they usually indicate that something exceptional (and bad) has happened. When a run-time error occurs, the interpreter displays an error message that explains what happened and where.</p>
                         <box>
                           <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> For example, modify the HelloWorld code to include the following line, compile it again, and run it.</p>
-                          <pre><code class="hljs java" v-pre><span>System.out.println(<span class="hljs-number">5</span>/<span class="hljs-number">0</span>);<br></span></code></pre>
+                          <pre><code class="hljs java" v-pre><span>System.out.println(<span class="hljs-number">5</span>/<span class="hljs-number">0</span>);
+</span></code></pre>
                           <p>You should get a message like this:</p>
-                          <pre><code class="hljs sh" v-pre><span>Exception <span class="hljs-keyword">in</span> thread <span class="hljs-string">"main"</span> java.lang.ArithmeticException: / by zero<br></span><span>    at Hello.main(Hello.java:5)<br></span></code></pre>
+                          <pre><code class="hljs sh" v-pre><span>Exception <span class="hljs-keyword">in</span> thread <span class="hljs-string">"main"</span> java.lang.ArithmeticException: / by zero
+</span><span>    at Hello.main(Hello.java:5)
+</span></code></pre>
                         </box>
                         <p><strong>Integrated Development Environments (IDEs)</strong> can automate the intermediate step of compiling. They usually have a <span style="color:green"><span aria-hidden="true" class="fas fa-play-circle"></span></span> <em>Run</em> button which compiles the code first and then runs it.</p>
                         <p>Example IDEs:</p>
@@ -414,7 +435,12 @@
                                   </template>
                                   <question>
                                     <p>Modify the code below to print &quot;Bye World!&quot;.</p>
-                                    <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{<br></span><span>  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{<br></span><span class="highlighted">    <span class="hljs-comment">// add code here</span><br></span><span>  }<br></span><span>}<br></span></code></pre>
+                                    <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+</span><span>  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+</span><span class="highlighted">    <span class="hljs-comment">// add code here</span>
+</span><span>  }
+</span><span>}
+</span></code></pre>
                                   </question>
                                 </panel>
                               </div>
@@ -429,6 +455,7 @@
             </div>
           </div>
         </div>
+        <i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i>
       </div>
 
 
@@ -436,21 +463,16 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Thu, Sep 10, 2020, 11:06:50 PM GMT+8]</small>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.16.0</a>, generated on Wed, Sep 16, 2020, 3:47:05 PM GMT+8]</small>
       </div>
     </footer>
   </div>
 </body>
-<script src="../../markbind/js/vue.min.js"></script>
-<script src="../../markbind/js/components.min.js"></script>
 <script src="../../markbind/js/bootstrap-utility.min.js"></script>
-<script src="../../markbind/js/polyfill.min.js"></script>
-<script src="../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/se-book'
-  const enableSearch = true
+  MarkBind.setupWithSearch()
 </script>
-<script src="../../markbind/js/setup.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
   function initAlgolia() {
@@ -465,5 +487,8 @@
   MarkBind.afterSetup(initAlgolia);
 </script>
 <script src="../../markbind/layouts/default/scripts.js"></script>
+<script>
+  if (MarkBind.AfterSetup) MarkBind.AfterSetup()
+</script>
 
 </html>

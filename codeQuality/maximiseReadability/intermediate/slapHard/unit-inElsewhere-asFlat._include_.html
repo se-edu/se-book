@@ -8,18 +8,25 @@
   </div>
   <div id="main">
     <div>
-      <p>Avoid varying the level of <span trigger="click" for="modal:slap-abstraction" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:slap-abstraction'].show()" class="trigger-click">abstraction</span> within a code fragment.
+      <p>Avoid varying the level of <trigger trigger="click" for="modal:slap-abstraction">abstraction</trigger> within a code fragment.
         Note: The <em>Productive Programmer</em> (by Neal Ford) calls this the <em>SLAP principle</em> i.e. Single Level of Abstraction Per method.</p>
       <box>
         <p>Example:</p>
         <p>
           <font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font> (<code v-pre>readData();</code> and <code v-pre>salary = basic*rise+1000;</code> are at different levels of abstraction)
         </p>
-        <pre><code class="hljs java" v-pre><span>readData();<br></span><span>salary = basic*rise+<span class="hljs-number">1000</span>;<br></span><span>tax = (taxable?salary*<span class="hljs-number">0.07</span>:<span class="hljs-number">0</span>);<br></span><span>displayResult();<br></span></code></pre>
+        <pre><code class="hljs java" v-pre><span>readData();
+</span><span>salary = basic*rise+<span class="hljs-number">1000</span>;
+</span><span>tax = (taxable?salary*<span class="hljs-number">0.07</span>:<span class="hljs-number">0</span>);
+</span><span>displayResult();
+</span></code></pre>
         <p>
           <font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong></span></font> (all statements are at the same level of abstraction)
         </p>
-        <pre><code class="hljs java" v-pre><span>readData();<br></span><span>processData();<br></span><span>displayResult();<br></span></code></pre>
+        <pre><code class="hljs java" v-pre><span>readData();
+</span><span>processData();
+</span><span>displayResult();
+</span></code></pre>
       </box>
       <b-modal id="modal:slap-abstraction" hide-footer size modal-class="mb-zoom" ref="modal:slap-abstraction" class="algolia-no-index"><template slot="modal-title"></template>
         <div>

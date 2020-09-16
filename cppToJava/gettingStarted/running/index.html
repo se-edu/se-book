@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.15.2">
+  <meta name="generator" content="MarkBind 2.16.0">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - C++ to Java: Getting Started: Running a Program</title>
   <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
@@ -14,11 +14,14 @@
   <link rel="stylesheet" href="../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
   <link rel="stylesheet" href="../../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../../markbind/css/github.min.css">
-  <link rel="stylesheet" href="../../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="../../../markbind/css/markbind.min.css">
+  <script src="../../../markbind/js/polyfill.min.js"></script>
+  <script src="../../../markbind/js/vue.min.js"></script>
+  <script src="../../../markbind/js/markbind.min.js"></script>
+  <script src="../../../markbind/js/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/se-book/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../../markbind/layouts/default/styles.css">
-  <link rel="stylesheet" href="../../../markbind/css/site-nav.css">
   <link rel="icon" href="/se-book/favicon.ico">
 </head>
 
@@ -263,12 +266,15 @@
                       <li><code v-pre>java</code> in the command above refers to the Java interpreter installed in your computer.</li>
                       <li>Similar to <code v-pre>javac</code>, your console should be able to find the java executable.</li>
                     </ul>
-                    <p>When you run a Java program, you can encounter a <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">so-called because it does not appear until after the program has started running</span>run-time error</span>. These errors are also called &quot;exceptions&quot; because they usually indicate that something exceptional (and bad) has happened. When a run-time error occurs, the interpreter displays an error message that explains what happened and where.</p>
+                    <p>When you run a Java program, you can encounter a <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">so-called because it does not appear until after the program has started running</span>run-time error</span>. These errors are also called &quot;exceptions&quot; because they usually indicate that something exceptional (and bad) has happened. When a run-time error occurs, the interpreter displays an error message that explains what happened and where.</p>
                     <box>
                       <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> For example, modify the HelloWorld code to include the following line, compile it again, and run it.</p>
-                      <pre><code class="hljs java" v-pre><span>System.out.println(<span class="hljs-number">5</span>/<span class="hljs-number">0</span>);<br></span></code></pre>
+                      <pre><code class="hljs java" v-pre><span>System.out.println(<span class="hljs-number">5</span>/<span class="hljs-number">0</span>);
+</span></code></pre>
                       <p>You should get a message like this:</p>
-                      <pre><code class="hljs sh" v-pre><span>Exception <span class="hljs-keyword">in</span> thread <span class="hljs-string">"main"</span> java.lang.ArithmeticException: / by zero<br></span><span>    at Hello.main(Hello.java:5)<br></span></code></pre>
+                      <pre><code class="hljs sh" v-pre><span>Exception <span class="hljs-keyword">in</span> thread <span class="hljs-string">"main"</span> java.lang.ArithmeticException: / by zero
+</span><span>    at Hello.main(Hello.java:5)
+</span></code></pre>
                     </box>
                     <p><strong>Integrated Development Environments (IDEs)</strong> can automate the intermediate step of compiling. They usually have a <span style="color:green"><span aria-hidden="true" class="fas fa-play-circle"></span></span> <em>Run</em> button which compiles the code first and then runs it.</p>
                     <p>Example IDEs:</p>
@@ -303,7 +309,12 @@
                               </template>
                               <question>
                                 <p>Modify the code below to print &quot;Bye World!&quot;.</p>
-                                <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{<br></span><span>  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{<br></span><span class="highlighted">    <span class="hljs-comment">// add code here</span><br></span><span>  }<br></span><span>}<br></span></code></pre>
+                                <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+</span><span>  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+</span><span class="highlighted">    <span class="hljs-comment">// add code here</span>
+</span><span>  }
+</span><span>}
+</span></code></pre>
                               </question>
                             </panel>
                           </div>
@@ -316,6 +327,7 @@
             </div>
           </div>
         </div>
+        <i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i>
       </div>
 
 
@@ -323,21 +335,16 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Thu, Sep 10, 2020, 11:06:50 PM GMT+8]</small>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.16.0</a>, generated on Wed, Sep 16, 2020, 3:47:05 PM GMT+8]</small>
       </div>
     </footer>
   </div>
 </body>
-<script src="../../../markbind/js/vue.min.js"></script>
-<script src="../../../markbind/js/components.min.js"></script>
 <script src="../../../markbind/js/bootstrap-utility.min.js"></script>
-<script src="../../../markbind/js/polyfill.min.js"></script>
-<script src="../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/se-book'
-  const enableSearch = true
+  MarkBind.setupWithSearch()
 </script>
-<script src="../../../markbind/js/setup.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
   function initAlgolia() {
@@ -352,5 +359,8 @@
   MarkBind.afterSetup(initAlgolia);
 </script>
 <script src="../../../markbind/layouts/default/scripts.js"></script>
+<script>
+  if (MarkBind.AfterSetup) MarkBind.AfterSetup()
+</script>
 
 </html>

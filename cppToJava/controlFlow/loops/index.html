@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.15.2">
+  <meta name="generator" content="MarkBind 2.16.0">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - C++ to Java: Control Flow: Loops</title>
   <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
@@ -14,11 +14,14 @@
   <link rel="stylesheet" href="../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
   <link rel="stylesheet" href="../../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../../markbind/css/github.min.css">
-  <link rel="stylesheet" href="../../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="../../../markbind/css/markbind.min.css">
+  <script src="../../../markbind/js/polyfill.min.js"></script>
+  <script src="../../../markbind/js/vue.min.js"></script>
+  <script src="../../../markbind/js/markbind.min.js"></script>
+  <script src="../../../markbind/js/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/se-book/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../../markbind/layouts/default/styles.css">
-  <link rel="stylesheet" href="../../../markbind/css/site-nav.css">
   <link rel="icon" href="/se-book/favicon.ico">
 </head>
 
@@ -258,42 +261,95 @@
                     <h5 id="while-loops"><code v-pre>while</code> loops<a class="fa fa-anchor" href="#while-loops" onclick="event.stopPropagation()"></a></h5>
                     <div class="indented">
                       <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span><span aria-hidden="true" class="fas fa-equals"></span></span></span></span> Here is an example <code v-pre>while</code> loop:</p>
-                      <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">countdown</span><span class="hljs-params">(<span class="hljs-keyword">int</span> n)</span> </span>{<br></span><span class="highlighted">    <span class="hljs-keyword">while</span> (n &gt; <span class="hljs-number">0</span>) {<br></span><span>        System.out.println(n);<br></span><span>        n = n - <span class="hljs-number">1</span>;<br></span><span class="highlighted">    }<br></span><span>    System.out.println(<span class="hljs-string">"Blastoff!"</span>);<br></span><span>}<br></span></code></pre>
+                      <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">countdown</span><span class="hljs-params">(<span class="hljs-keyword">int</span> n)</span> </span>{
+</span><span class="highlighted">    <span class="hljs-keyword">while</span> (n &gt; <span class="hljs-number">0</span>) {
+</span><span>        System.out.println(n);
+</span><span>        n = n - <span class="hljs-number">1</span>;
+</span><span class="highlighted">    }
+</span><span>    System.out.println(<span class="hljs-string">"Blastoff!"</span>);
+</span><span>}
+</span></code></pre>
                     </div>
                     <h5 id="for-loops"><code v-pre>for</code> loops<a class="fa fa-anchor" href="#for-loops" onclick="event.stopPropagation()"></a></h5>
                     <div class="indented">
                       <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span><span aria-hidden="true" class="fas fa-equals"></span></span></span></span> <code v-pre>for</code> loops have the form:</p>
-                      <pre><code class="hljs" v-pre><span>for (initializer; condition; update) {<br></span><span>    statement(s);<br></span><span>}<br></span></code></pre>
+                      <pre><code class="hljs" v-pre><span>for (initializer; condition; update) {
+</span><span>    statement(s);
+</span><span>}
+</span></code></pre>
                       <p>Here is an example:</p>
-                      <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printTable</span><span class="hljs-params">(<span class="hljs-keyword">int</span> rows)</span> </span>{<br></span><span class="highlighted">    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt;= rows; i = i + <span class="hljs-number">1</span>) {<br></span><span>        printRow(i, rows);<br></span><span class="highlighted">    }<br></span><span>}<br></span></code></pre>
+                      <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printTable</span><span class="hljs-params">(<span class="hljs-keyword">int</span> rows)</span> </span>{
+</span><span class="highlighted">    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt;= rows; i = i + <span class="hljs-number">1</span>) {
+</span><span>        printRow(i, rows);
+</span><span class="highlighted">    }
+</span><span>}
+</span></code></pre>
                     </div>
                     <h5 id="do-while-loops"><code v-pre>do-while</code> loops<a class="fa fa-anchor" href="#do-while-loops" onclick="event.stopPropagation()"></a></h5>
                     <div class="indented">
                       <p>The <code v-pre>while</code> and <code v-pre>for</code> statements are <em>pretest</em> loops; that is, they test the condition first and at the beginning of each pass through the loop. Java also provides a <em>posttest</em> loop: the <code v-pre>do-while</code> statement. This type of loop is useful when you need to run the body of the loop at least once.</p>
                       <p>Here is an example <span class="dimmed">(from <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small>)</span>:</p>
-                      <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DoWhileDemo</span> </span>{<br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span></span>{<br></span><span>        <span class="hljs-keyword">int</span> count = <span class="hljs-number">1</span>;<br></span><span class="highlighted">        <span class="hljs-keyword">do</span> {<br></span><span>            System.out.println(<span class="hljs-string">"Count is: "</span> + count);<br></span><span>            count++;<br></span><span class="highlighted">        } <span class="hljs-keyword">while</span> (count &lt; <span class="hljs-number">11</span>);<br></span><span>    }<br></span><span>}<br></span></code></pre>
+                      <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DoWhileDemo</span> </span>{
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span></span>{
+</span><span>        <span class="hljs-keyword">int</span> count = <span class="hljs-number">1</span>;
+</span><span class="highlighted">        <span class="hljs-keyword">do</span> {
+</span><span>            System.out.println(<span class="hljs-string">"Count is: "</span> + count);
+</span><span>            count++;
+</span><span class="highlighted">        } <span class="hljs-keyword">while</span> (count &lt; <span class="hljs-number">11</span>);
+</span><span>    }
+</span><span>}
+</span></code></pre>
                     </div>
                     <h5 id="break-and-continue"><code v-pre>break</code> and <code v-pre>continue</code><a class="fa fa-anchor" href="#break-and-continue" onclick="event.stopPropagation()"></a></h5>
                     <div class="indented">
                       <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span><span aria-hidden="true" class="fas fa-equals"></span></span></span></span> <strong>A <code v-pre>break</code> statement exits the current loop</strong>.</p>
                       <p>Here is an example <span class="dimmed">(from <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small>)</span>:</p>
-                      <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{<br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{<br></span><span>        <span class="hljs-keyword">int</span>[] numbers = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[] { <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">0</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">0</span> };<br></span><span>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; numbers.length; i++) {<br></span><span>            <span class="hljs-keyword">if</span> (numbers[i] == <span class="hljs-number">0</span>) {<br></span><span class="highlighted">                <span class="hljs-keyword">break</span>;<br></span><span>            }<br></span><span>            System.out.print(numbers[i]);<br></span><span>        }<br></span><span>    }<br></span><span>}<br></span></code></pre>
+                      <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+</span><span>        <span class="hljs-keyword">int</span>[] numbers = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[] { <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">0</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">0</span> };
+</span><span>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; numbers.length; i++) {
+</span><span>            <span class="hljs-keyword">if</span> (numbers[i] == <span class="hljs-number">0</span>) {
+</span><span class="highlighted">                <span class="hljs-keyword">break</span>;
+</span><span>            }
+</span><span>            System.out.print(numbers[i]);
+</span><span>        }
+</span><span>    }
+</span><span>}
+</span></code></pre>
                       <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
-                      <pre><code class="hljs" v-pre><span>123<br></span></code></pre>
+                      <pre><code class="hljs" v-pre><span>123
+</span></code></pre>
                       <p><small>[<a href="https://repl.it/@seedu/Demo-Break">Try the above code on Repl.it</a>]</small></p>
                       <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span><span aria-hidden="true" class="fas fa-equals"></span></span></span></span> <strong>A <code v-pre>continue</code> statement skips the remainder of the current iteration</strong> and moves to the next iteration of the loop.</p>
                       <p>Here is an example <span class="dimmed">(from <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small>)</span>:</p>
-                      <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{<br></span><span>    <span class="hljs-keyword">int</span>[] numbers = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[] { <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">0</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">0</span> };<br></span><span>    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; numbers.length; i++) {<br></span><span>        <span class="hljs-keyword">if</span> (numbers[i] == <span class="hljs-number">0</span>) {<br></span><span class="highlighted">            <span class="hljs-keyword">continue</span>;<br></span><span>        }<br></span><span>        System.out.print(numbers[i]);<br></span><span>    }<br></span><span>}<br></span></code></pre>
+                      <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+</span><span>    <span class="hljs-keyword">int</span>[] numbers = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[] { <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">0</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">0</span> };
+</span><span>    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; numbers.length; i++) {
+</span><span>        <span class="hljs-keyword">if</span> (numbers[i] == <span class="hljs-number">0</span>) {
+</span><span class="highlighted">            <span class="hljs-keyword">continue</span>;
+</span><span>        }
+</span><span>        System.out.print(numbers[i]);
+</span><span>    }
+</span><span>}
+</span></code></pre>
                       <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
-                      <pre><code class="hljs" v-pre><span>12345<br></span></code></pre>
+                      <pre><code class="hljs" v-pre><span>12345
+</span></code></pre>
                       <p><small>[<a href="https://repl.it/@seedu/Demo-Continue">Try the above code on Repl.it</a>]</small></p>
                     </div>
                     <h5 id="enhanced-for-loops">Enhanced <code v-pre>for</code> loops<a class="fa fa-anchor" href="#enhanced-for-loops" onclick="event.stopPropagation()"></a></h5>
                     <div class="indented">
                       <p>Since traversing arrays is so common, Java provides an alternative for-loop syntax that makes the code more compact. For example, consider a for loop that displays the elements of an array on separate lines:</p>
-                      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; values.length; i++) {<br></span><span>    <span class="hljs-keyword">int</span> value = values[i];<br></span><span>    System.out.println(value);<br></span><span>}<br></span></code></pre>
+                      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; values.length; i++) {
+</span><span>    <span class="hljs-keyword">int</span> value = values[i];
+</span><span>    System.out.println(value);
+</span><span>}
+</span></code></pre>
                       <p>We could rewrite the loop like this:</p>
-                      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> value : values) {<br></span><span>    System.out.println(value);<br></span><span>}<br></span></code></pre>
+                      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> value : values) {
+</span><span>    System.out.println(value);
+</span><span>}
+</span></code></pre>
                       <p>This statement is called an <em>enhanced <code v-pre>for</code> loop</em>. You can read it as, “for each value in values”.
                         Notice how the single line <code v-pre>for (int value : values)</code> replaces the first two lines of the standard <code v-pre>for</code> loop.</p>
                     </div>
@@ -357,12 +413,61 @@
                                   </div>
                                 </div>
                                 <p><mark>Do not change the code of the <code v-pre>main</code> method!</mark></p>
-                                <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{<br></span><span><br></span><span>    <span class="hljs-comment">// ADD YOUR CODE HERE</span><br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">double</span> <span class="hljs-title">getGradeCap</span><span class="hljs-params">(String grade)</span> </span>{<br></span><span>        <span class="hljs-keyword">double</span> cap = <span class="hljs-number">0</span>;<br></span><span>        <span class="hljs-keyword">switch</span> (grade) {<br></span><span>        <span class="hljs-keyword">case</span> <span class="hljs-string">"A+"</span>:<br></span><span>        <span class="hljs-keyword">case</span> <span class="hljs-string">"A"</span>:<br></span><span>            cap = <span class="hljs-number">5.0</span>;<br></span><span>            <span class="hljs-keyword">break</span>;<br></span><span>        <span class="hljs-keyword">case</span> <span class="hljs-string">"A-"</span>:<br></span><span>            cap = <span class="hljs-number">4.5</span>;<br></span><span>            <span class="hljs-keyword">break</span>;<br></span><span>        <span class="hljs-keyword">case</span> <span class="hljs-string">"B+"</span>:<br></span><span>            cap = <span class="hljs-number">4.0</span>;<br></span><span>            <span class="hljs-keyword">break</span>;<br></span><span>        <span class="hljs-keyword">case</span> <span class="hljs-string">"B"</span>:<br></span><span>            cap = <span class="hljs-number">3.5</span>;<br></span><span>            <span class="hljs-keyword">break</span>;<br></span><span>        <span class="hljs-keyword">case</span> <span class="hljs-string">"B-"</span>:<br></span><span>            cap = <span class="hljs-number">3.0</span>;<br></span><span>            <span class="hljs-keyword">break</span>;<br></span><span>        <span class="hljs-keyword">case</span> <span class="hljs-string">"C"</span>:<br></span><span>            cap = <span class="hljs-number">2.5</span>;<br></span><span>            <span class="hljs-keyword">break</span>;<br></span><span>        <span class="hljs-keyword">default</span>:<br></span><span>        }<br></span><span>        <span class="hljs-keyword">return</span> cap;<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{<br></span><span>        String[] grades = <span class="hljs-keyword">new</span> String[]{<span class="hljs-string">"A+"</span>, <span class="hljs-string">"A"</span>, <span class="hljs-string">"A-"</span>};<br></span><span>        <span class="hljs-keyword">double</span>[] caps = getMultipleGradeCaps(grades);<br></span><span>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; grades.length; i++) {<br></span><span>            System.out.println(grades[i] + <span class="hljs-string">":"</span> + caps[i]);<br></span><span>        }<br></span><span>    }<br></span><span>}<br></span></code></pre>
+                                <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+</span><span>
+</span><span>    <span class="hljs-comment">// ADD YOUR CODE HERE</span>
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">double</span> <span class="hljs-title">getGradeCap</span><span class="hljs-params">(String grade)</span> </span>{
+</span><span>        <span class="hljs-keyword">double</span> cap = <span class="hljs-number">0</span>;
+</span><span>        <span class="hljs-keyword">switch</span> (grade) {
+</span><span>        <span class="hljs-keyword">case</span> <span class="hljs-string">"A+"</span>:
+</span><span>        <span class="hljs-keyword">case</span> <span class="hljs-string">"A"</span>:
+</span><span>            cap = <span class="hljs-number">5.0</span>;
+</span><span>            <span class="hljs-keyword">break</span>;
+</span><span>        <span class="hljs-keyword">case</span> <span class="hljs-string">"A-"</span>:
+</span><span>            cap = <span class="hljs-number">4.5</span>;
+</span><span>            <span class="hljs-keyword">break</span>;
+</span><span>        <span class="hljs-keyword">case</span> <span class="hljs-string">"B+"</span>:
+</span><span>            cap = <span class="hljs-number">4.0</span>;
+</span><span>            <span class="hljs-keyword">break</span>;
+</span><span>        <span class="hljs-keyword">case</span> <span class="hljs-string">"B"</span>:
+</span><span>            cap = <span class="hljs-number">3.5</span>;
+</span><span>            <span class="hljs-keyword">break</span>;
+</span><span>        <span class="hljs-keyword">case</span> <span class="hljs-string">"B-"</span>:
+</span><span>            cap = <span class="hljs-number">3.0</span>;
+</span><span>            <span class="hljs-keyword">break</span>;
+</span><span>        <span class="hljs-keyword">case</span> <span class="hljs-string">"C"</span>:
+</span><span>            cap = <span class="hljs-number">2.5</span>;
+</span><span>            <span class="hljs-keyword">break</span>;
+</span><span>        <span class="hljs-keyword">default</span>:
+</span><span>        }
+</span><span>        <span class="hljs-keyword">return</span> cap;
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+</span><span>        String[] grades = <span class="hljs-keyword">new</span> String[]{<span class="hljs-string">"A+"</span>, <span class="hljs-string">"A"</span>, <span class="hljs-string">"A-"</span>};
+</span><span>        <span class="hljs-keyword">double</span>[] caps = getMultipleGradeCaps(grades);
+</span><span>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; grades.length; i++) {
+</span><span>            System.out.println(grades[i] + <span class="hljs-string">":"</span> + caps[i]);
+</span><span>        }
+</span><span>    }
+</span><span>}
+</span></code></pre>
                                 <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
-                                <pre><code class="hljs" v-pre><span>A+:5.0<br></span><span>A:5.0<br></span><span>A-:4.5<br></span></code></pre>
+                                <pre><code class="hljs" v-pre><span>A+:5.0
+</span><span>A:5.0
+</span><span>A-:4.5
+</span></code></pre>
                                 <div slot="hint" class="algolia-no-index">
                                   <p>Partial solution:</p>
-                                  <pre><code class="hljs java" v-pre><span>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">double</span>[] getMultipleGradeCaps(String[] grades) {<br></span><span>        <span class="hljs-keyword">double</span>[] caps = <span class="hljs-keyword">new</span> <span class="hljs-keyword">double</span>[grades.length];<br></span><span>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; grades.length; i++) {<br></span><span>           <span class="hljs-comment">// ...</span><br></span><span>        }<br></span><span>        <span class="hljs-keyword">return</span> caps;<br></span><span>    }<br></span></code></pre>
+                                  <pre><code class="hljs java" v-pre><span>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">double</span>[] getMultipleGradeCaps(String[] grades) {
+</span><span>        <span class="hljs-keyword">double</span>[] caps = <span class="hljs-keyword">new</span> <span class="hljs-keyword">double</span>[grades.length];
+</span><span>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; grades.length; i++) {
+</span><span>           <span class="hljs-comment">// ...</span>
+</span><span>        }
+</span><span>        <span class="hljs-keyword">return</span> caps;
+</span><span>    }
+</span></code></pre>
                                 </div>
                               </question>
                             </panel>
@@ -376,6 +481,7 @@
             </div>
           </div>
         </div>
+        <i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i>
       </div>
 
 
@@ -383,21 +489,16 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Thu, Sep 10, 2020, 11:06:50 PM GMT+8]</small>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.16.0</a>, generated on Wed, Sep 16, 2020, 3:47:05 PM GMT+8]</small>
       </div>
     </footer>
   </div>
 </body>
-<script src="../../../markbind/js/vue.min.js"></script>
-<script src="../../../markbind/js/components.min.js"></script>
 <script src="../../../markbind/js/bootstrap-utility.min.js"></script>
-<script src="../../../markbind/js/polyfill.min.js"></script>
-<script src="../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/se-book'
-  const enableSearch = true
+  MarkBind.setupWithSearch()
 </script>
-<script src="../../../markbind/js/setup.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
   function initAlgolia() {
@@ -412,5 +513,8 @@
   MarkBind.afterSetup(initAlgolia);
 </script>
 <script src="../../../markbind/layouts/default/scripts.js"></script>
+<script>
+  if (MarkBind.AfterSetup) MarkBind.AfterSetup()
+</script>
 
 </html>

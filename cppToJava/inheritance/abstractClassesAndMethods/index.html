@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.15.2">
+  <meta name="generator" content="MarkBind 2.16.0">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - C++ to Java: Inheritance: Abstract Classes and Methods</title>
   <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
@@ -14,11 +14,14 @@
   <link rel="stylesheet" href="../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
   <link rel="stylesheet" href="../../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../../markbind/css/github.min.css">
-  <link rel="stylesheet" href="../../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="../../../markbind/css/markbind.min.css">
+  <script src="../../../markbind/js/polyfill.min.js"></script>
+  <script src="../../../markbind/js/vue.min.js"></script>
+  <script src="../../../markbind/js/markbind.min.js"></script>
+  <script src="../../../markbind/js/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/se-book/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../../markbind/layouts/default/styles.css">
-  <link rel="stylesheet" href="../../../markbind/css/site-nav.css">
   <link rel="icon" href="/se-book/favicon.ico">
 </head>
 
@@ -257,13 +260,30 @@
                     <p>In Java, <strong>an <em>abstract method</em> is declared with the keyword <code v-pre>abstract</code> and given without an implementation</strong>. If a class includes abstract methods, then the class itself must be declared abstract.</p>
                     <box>
                       <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The <code v-pre>speak</code> method in this <code v-pre>Animal</code> class is <code v-pre>abstract</code>. Note how the method signature ends with a semicolon and there is no method body. This makes sense as the implementation of the <code v-pre>speak</code> method depends on the type of the animal and it is meaningless to provide a common implementation for all animal types.</p>
-                      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Animal</span> </span>{<br></span><span><br></span><span>    <span class="hljs-keyword">protected</span> String name;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Animal</span><span class="hljs-params">(String name)</span></span>{<br></span><span>        <span class="hljs-keyword">this</span>.name = name;<br></span><span>    }<br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> String <span class="hljs-title">speak</span><span class="hljs-params">()</span></span>;<br></span><span>}<br></span></code></pre>
+                      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Animal</span> </span>{
+</span><span>
+</span><span>    <span class="hljs-keyword">protected</span> String name;
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Animal</span><span class="hljs-params">(String name)</span></span>{
+</span><span>        <span class="hljs-keyword">this</span>.name = name;
+</span><span>    }
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> String <span class="hljs-title">speak</span><span class="hljs-params">()</span></span>;
+</span><span>}
+</span></code></pre>
                       <p>As one method of the class is <code v-pre>abstract</code>, the class itself is <code v-pre>abstract</code>.</p>
                     </box>
                     <p><strong>An <em>abstract class</em> is declared with the keyword <code v-pre>abstract</code>. Abstract classes can be used as reference type but cannot be instantiated.</strong></p>
                     <box>
                       <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This <code v-pre>Account</code> class has been declared as abstract although it does not have any abstract methods. Attempting to instantiate <code v-pre>Account</code> objects will result in a compile error.</p>
-                      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{<br></span><span><br></span><span>    <span class="hljs-keyword">int</span> number;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">close</span><span class="hljs-params">()</span></span>{<br></span><span>        <span class="hljs-comment">//...</span><br></span><span>    }<br></span><span>}<br></span></code></pre>
+                      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{
+</span><span>
+</span><span>    <span class="hljs-keyword">int</span> number;
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">close</span><span class="hljs-params">()</span></span>{
+</span><span>        <span class="hljs-comment">//...</span>
+</span><span>    }
+</span><span>}
+</span></code></pre>
                       <p><code v-pre>Account a;</code> <span><span aria-hidden="true" class="fas fa-arrow-right"></span></span> <span style="color:green"><span><span aria-hidden="true" class="fas fa-check"></span></span></span> OK to use as a type <br>
                         <code v-pre>a = new Account();</code> <span><span aria-hidden="true" class="fas fa-arrow-right"></span></span> <span style="color:red"><span><span aria-hidden="true" class="fas fa-times"></span></span></span> Compile error!
                       </p>
@@ -272,9 +292,25 @@
                     <p><strong>When an abstract class is subclassed, the subclass should provides implementations for all of the abstract methods in its superclass or else the subclass must also be declared abstract.</strong></p>
                     <box>
                       <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The <code v-pre>Feline</code> class below inherits from the abstract class <code v-pre>Animal</code> but it does not provide an implementation for the abstract method <code v-pre>speak</code>. As a result, the <code v-pre>Feline</code> class needs to be abstract too.</p>
-                      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Feline</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Animal</span> </span>{<br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Feline</span><span class="hljs-params">(String name)</span> </span>{<br></span><span>        <span class="hljs-keyword">super</span>(name);<br></span><span>    }<br></span><span><br></span><span>}<br></span></code></pre>
+                      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Feline</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Animal</span> </span>{
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Feline</span><span class="hljs-params">(String name)</span> </span>{
+</span><span>        <span class="hljs-keyword">super</span>(name);
+</span><span>    }
+</span><span>
+</span><span>}
+</span></code></pre>
                       <p>The <code v-pre>DomesticCat</code> class inherits the abstract <code v-pre>Feline</code> class and provides the implementation for the abstract method <code v-pre>speak</code>. As a result, it need not be (but <em>can</em> be) declared as abstract.</p>
-                      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DomesticCat</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Feline</span> </span>{<br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">DomesticCat</span><span class="hljs-params">(String name)</span> </span>{<br></span><span>        <span class="hljs-keyword">super</span>(name);<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-meta">@Override</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">speak</span><span class="hljs-params">()</span> </span>{<br></span><span>        <span class="hljs-keyword">return</span> <span class="hljs-string">"Meow"</span>;<br></span><span>    }<br></span><span>}<br></span></code></pre>
+                      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DomesticCat</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Feline</span> </span>{
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">DomesticCat</span><span class="hljs-params">(String name)</span> </span>{
+</span><span>        <span class="hljs-keyword">super</span>(name);
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-meta">@Override</span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">speak</span><span class="hljs-params">()</span> </span>{
+</span><span>        <span class="hljs-keyword">return</span> <span class="hljs-string">"Meow"</span>;
+</span><span>    }
+</span><span>}
+</span></code></pre>
                       <ul>
                         <li><code class="hljs inline java" v-pre>Animal a = <span class="hljs-keyword">new</span> Feline(<span class="hljs-string">"Mittens"</span>);</code><br><span style="color:red"><span><span aria-hidden="true" class="fas fa-times"></span></span></span> Compile error! <code v-pre>Feline</code> is abstract.</li>
                         <li><code class="hljs inline java" v-pre>Animal a = <span class="hljs-keyword">new</span> DomesticCat(<span class="hljs-string">"Mittens"</span>);</code><br><span style="color:green"><span><span aria-hidden="true" class="fas fa-check"></span></span></span> OK. <code v-pre>DomesticCat</code> can be instantiated and assigned to a variable of <code v-pre>Animal</code> type <span class="dimmed">(the assignment is allowed by polymorphism)</span>.</li>
@@ -304,17 +340,86 @@
                               </template>
                               <question>
                                 <p>The <code v-pre>Main</code> class below keeps a list of <code v-pre>Circle</code> and <code v-pre>Rectangle</code> objects and prints the area (as an <code v-pre>int</code> value) of each shape when requested.</p>
-                                <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{<br></span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Shape[] shapes = <span class="hljs-keyword">new</span> Shape[<span class="hljs-number">100</span>];<br></span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> shapeCount = <span class="hljs-number">0</span>;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addShape</span><span class="hljs-params">(Shape s)</span></span>{<br></span><span>        shapes[shapeCount] = s;<br></span><span>        shapeCount++;<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printAreas</span><span class="hljs-params">()</span></span>{<br></span><span>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; shapeCount; i++){<br></span><span>            shapes[i].print();<br></span><span>        }<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{<br></span><span>        addShape(<span class="hljs-keyword">new</span> Circle(<span class="hljs-number">5</span>));<br></span><span>        addShape(<span class="hljs-keyword">new</span> Rectangle(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>));<br></span><span>        addShape(<span class="hljs-keyword">new</span> Circle(<span class="hljs-number">10</span>));<br></span><span>        addShape(<span class="hljs-keyword">new</span> Rectangle(<span class="hljs-number">4</span>, <span class="hljs-number">4</span>));<br></span><span>        printAreas();<br></span><span>    }<br></span><span>}<br></span></code></pre>
+                                <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+</span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Shape[] shapes = <span class="hljs-keyword">new</span> Shape[<span class="hljs-number">100</span>];
+</span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> shapeCount = <span class="hljs-number">0</span>;
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addShape</span><span class="hljs-params">(Shape s)</span></span>{
+</span><span>        shapes[shapeCount] = s;
+</span><span>        shapeCount++;
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printAreas</span><span class="hljs-params">()</span></span>{
+</span><span>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; shapeCount; i++){
+</span><span>            shapes[i].print();
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+</span><span>        addShape(<span class="hljs-keyword">new</span> Circle(<span class="hljs-number">5</span>));
+</span><span>        addShape(<span class="hljs-keyword">new</span> Rectangle(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>));
+</span><span>        addShape(<span class="hljs-keyword">new</span> Circle(<span class="hljs-number">10</span>));
+</span><span>        addShape(<span class="hljs-keyword">new</span> Rectangle(<span class="hljs-number">4</span>, <span class="hljs-number">4</span>));
+</span><span>        printAreas();
+</span><span>    }
+</span><span>}
+</span></code></pre>
                                 <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
-                                <pre><code class="hljs" v-pre><span>Circle of area 78<br></span><span>Rectangle of area 12<br></span><span>Circle of area 314<br></span><span>Rectangle of area 16<br></span></code></pre>
+                                <pre><code class="hljs" v-pre><span>Circle of area 78
+</span><span>Rectangle of area 12
+</span><span>Circle of area 314
+</span><span>Rectangle of area 16
+</span></code></pre>
                                 <p><code v-pre>Circle</code> class and <code v-pre>Rectangle</code> class is given below:</p>
-                                <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Circle</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Shape</span> </span>{<br></span><span><br></span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> radius;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Circle</span><span class="hljs-params">(<span class="hljs-keyword">int</span> radius)</span> </span>{<br></span><span>        <span class="hljs-keyword">this</span>.radius = radius;<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-meta">@Override</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">area</span><span class="hljs-params">()</span> </span>{<br></span><span>        <span class="hljs-keyword">return</span> (<span class="hljs-keyword">int</span>)(Math.PI * radius * radius);<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-meta">@Override</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span> </span>{<br></span><span>        System.out.println(<span class="hljs-string">"Circle of area "</span> + area());<br></span><span>    }<br></span><span>}<br></span></code></pre>
-                                <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Rectangle</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Shape</span> </span>{<br></span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> height;<br></span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> width;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Rectangle</span><span class="hljs-params">(<span class="hljs-keyword">int</span> height, <span class="hljs-keyword">int</span> width)</span></span>{<br></span><span>        <span class="hljs-keyword">this</span>.height = height;<br></span><span>        <span class="hljs-keyword">this</span>.width = width;<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-meta">@Override</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">area</span><span class="hljs-params">()</span> </span>{<br></span><span>        <span class="hljs-keyword">return</span> height * width;<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-meta">@Override</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span> </span>{<br></span><span>        System.out.println(<span class="hljs-string">"Rectangle of area "</span> + area());<br></span><span>    }<br></span><span>}<br></span></code></pre>
+                                <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Circle</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Shape</span> </span>{
+</span><span>
+</span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> radius;
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Circle</span><span class="hljs-params">(<span class="hljs-keyword">int</span> radius)</span> </span>{
+</span><span>        <span class="hljs-keyword">this</span>.radius = radius;
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-meta">@Override</span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">area</span><span class="hljs-params">()</span> </span>{
+</span><span>        <span class="hljs-keyword">return</span> (<span class="hljs-keyword">int</span>)(Math.PI * radius * radius);
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-meta">@Override</span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span> </span>{
+</span><span>        System.out.println(<span class="hljs-string">"Circle of area "</span> + area());
+</span><span>    }
+</span><span>}
+</span></code></pre>
+                                <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Rectangle</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Shape</span> </span>{
+</span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> height;
+</span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> width;
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Rectangle</span><span class="hljs-params">(<span class="hljs-keyword">int</span> height, <span class="hljs-keyword">int</span> width)</span></span>{
+</span><span>        <span class="hljs-keyword">this</span>.height = height;
+</span><span>        <span class="hljs-keyword">this</span>.width = width;
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-meta">@Override</span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">area</span><span class="hljs-params">()</span> </span>{
+</span><span>        <span class="hljs-keyword">return</span> height * width;
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-meta">@Override</span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span> </span>{
+</span><span>        System.out.println(<span class="hljs-string">"Rectangle of area "</span> + area());
+</span><span>    }
+</span><span>}
+</span></code></pre>
                                 <p>Add the missing <code v-pre>Shape</code> class <mark>as an abstract class with two abstract methods</mark>.</p>
                                 <panel type="seamless" class="algolia-no-index"><template slot="_header">
                                     <p>Partial solution</p>
                                   </template>
-                                  <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Shape</span> </span>{<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-keyword">int</span> <span class="hljs-title">area</span><span class="hljs-params">()</span></span>;<br></span><span>    <span class="hljs-comment">// ...</span><br></span><span>}<br></span></code></pre>
+                                  <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Shape</span> </span>{
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-keyword">int</span> <span class="hljs-title">area</span><span class="hljs-params">()</span></span>;
+</span><span>    <span class="hljs-comment">// ...</span>
+</span><span>}
+</span></code></pre>
                                 </panel>
                               </question>
                             </panel>
@@ -324,7 +429,7 @@
                                 <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Statements about abstract classes</p>
                               </template>
                               <question>
-                                <p>Choose the correct statements about Java abstract classes and <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">classes that are not abstract</span>concrete classes</span>.</p>
+                                <p>Choose the correct statements about Java abstract classes and <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">classes that are not abstract</span>concrete classes</span>.</p>
                                 <ul class="contains-task-list">
                                   <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> a. A concrete class can contain an abstract method.</li>
                                   <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> b. An abstract class can contain concrete methods.</li>
@@ -347,6 +452,7 @@
             </div>
           </div>
         </div>
+        <i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i>
       </div>
 
 
@@ -354,21 +460,16 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Thu, Sep 10, 2020, 11:06:50 PM GMT+8]</small>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.16.0</a>, generated on Wed, Sep 16, 2020, 3:47:05 PM GMT+8]</small>
       </div>
     </footer>
   </div>
 </body>
-<script src="../../../markbind/js/vue.min.js"></script>
-<script src="../../../markbind/js/components.min.js"></script>
 <script src="../../../markbind/js/bootstrap-utility.min.js"></script>
-<script src="../../../markbind/js/polyfill.min.js"></script>
-<script src="../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/se-book'
-  const enableSearch = true
+  MarkBind.setupWithSearch()
 </script>
-<script src="../../../markbind/js/setup.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
   function initAlgolia() {
@@ -383,5 +484,8 @@
   MarkBind.afterSetup(initAlgolia);
 </script>
 <script src="../../../markbind/layouts/default/scripts.js"></script>
+<script>
+  if (MarkBind.AfterSetup) MarkBind.AfterSetup()
+</script>
 
 </html>

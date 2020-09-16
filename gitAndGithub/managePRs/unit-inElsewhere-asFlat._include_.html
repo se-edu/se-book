@@ -31,7 +31,7 @@
               If that option is not available, post a message in the PR requesting the PR author to update the PR.</li>
           </ul>
         </li>
-        <li><strong>Problem: There are merge conflicts</strong>, indicated by the message <strong><span class="dimmed">This branch has conflicts that must be resolved</span></strong>. That means the repo's <code v-pre>master</code> branch has been updated since the PR code was last updated, in a way that the PR code conflicts with the current <code v-pre>master</code> branch. Those <span trigger="click" for="modal:managePRs-mergeConflics" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:managePRs-mergeConflics'].show()" class="trigger-click">conflicts must be resolved</span> before the PR can be merged.
+        <li><strong>Problem: There are merge conflicts</strong>, indicated by the message <strong><span class="dimmed">This branch has conflicts that must be resolved</span></strong>. That means the repo's <code v-pre>master</code> branch has been updated since the PR code was last updated, in a way that the PR code conflicts with the current <code v-pre>master</code> branch. Those <trigger trigger="click" for="modal:managePRs-mergeConflics">conflicts must be resolved</trigger> before the PR can be merged.
           <ul>
             <li>If the conflicts are simple, GitHub might allow you to resolve them using the Web interface.</li>
             <li>If that option is not available, post a message in the PR requesting the PR author to update the PR.</li>
@@ -58,14 +58,45 @@
                 <img src="/se-book/gitAndGithub/mergeConflicts/images/sourcetree_1.png" height="350">
                 <p></p>
                 <p><strong>3. Try to merge the <code v-pre>fix1</code> branch onto the <code v-pre>master</code> branch.</strong> Git will pause mid-way during the merge and report a merge conflict. If you open the conflicted file, you will see something like this:</p>
-                <pre><code class="hljs" v-pre><span>COLORS<br></span><span>------<br></span><span>blue<br></span><span class="highlighted">&lt;&lt;&lt;&lt;&lt;&lt; HEAD<br></span><span>black<br></span><span class="highlighted">=======<br></span><span>green<br></span><span class="highlighted">&gt;&gt;&gt;&gt;&gt;&gt; fix1<br></span><span>red<br></span><span>white<br></span></code></pre>
+                <pre><code class="hljs" v-pre><span>COLORS
+</span><span>------
+</span><span>blue
+</span><span class="highlighted">&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+</span><span>black
+</span><span class="highlighted">=======
+</span><span>green
+</span><span class="highlighted">&gt;&gt;&gt;&gt;&gt;&gt; fix1
+</span><span>red
+</span><span>white
+</span></code></pre>
                 <p><strong>4. Observe how the conflicted part is marked</strong> between a line starting with <code v-pre>&lt;&lt;&lt;&lt;&lt;&lt; </code> and a line starting with <code v-pre>&gt;&gt;&gt;&gt;&gt;&gt;</code>, separated by another line starting with <code v-pre>=======</code>.</p>
                 <p>Highlighted below is the conflicting part that is coming from the <code v-pre>master</code> branch:</p>
-                <pre><code style="counter-reset: line 2;" class="hljs" v-pre><span>blue<br></span><span>&lt;&lt;&lt;&lt;&lt;&lt; HEAD<br></span><span class="highlighted">black<br></span><span>=======<br></span><span>green<br></span><span>&gt;&gt;&gt;&gt;&gt;&gt; fix1<br></span><span>red<br></span></code></pre>
+                <pre><code style="counter-reset: line 2;" class="hljs" v-pre><span>blue
+</span><span>&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+</span><span class="highlighted">black
+</span><span>=======
+</span><span>green
+</span><span>&gt;&gt;&gt;&gt;&gt;&gt; fix1
+</span><span>red
+</span></code></pre>
                 <p>This is the conflicting part that is coming from the <code v-pre>fix1</code> branch:</p>
-                <pre><code style="counter-reset: line 2;" class="hljs" v-pre><span>blue<br></span><span>&lt;&lt;&lt;&lt;&lt;&lt; HEAD<br></span><span>black<br></span><span>=======<br></span><span class="highlighted">green<br></span><span>&gt;&gt;&gt;&gt;&gt;&gt; fix1<br></span><span>red<br></span></code></pre>
+                <pre><code style="counter-reset: line 2;" class="hljs" v-pre><span>blue
+</span><span>&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+</span><span>black
+</span><span>=======
+</span><span class="highlighted">green
+</span><span>&gt;&gt;&gt;&gt;&gt;&gt; fix1
+</span><span>red
+</span></code></pre>
                 <p><strong>5. Resolve the conflict by editing the file</strong>. Let us assume you want to keep both lines in the merged version. You can modify the file to be like this:</p>
-                <pre><code class="hljs" v-pre><span>COLORS<br></span><span>------<br></span><span>blue<br></span><span class="highlighted">black<br></span><span class="highlighted">green<br></span><span>red<br></span><span>white<br></span></code></pre>
+                <pre><code class="hljs" v-pre><span>COLORS
+</span><span>------
+</span><span>blue
+</span><span class="highlighted">black
+</span><span class="highlighted">green
+</span><span>red
+</span><span>white
+</span></code></pre>
                 <p><strong>6. Stage the changes, and commit.</strong></p>
               </div>
               <div></div>

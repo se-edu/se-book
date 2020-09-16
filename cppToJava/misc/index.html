@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.15.2">
+  <meta name="generator" content="MarkBind 2.16.0">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - C++ to Java: Miscellaneous Topics</title>
   <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
@@ -14,11 +14,14 @@
   <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
   <link rel="stylesheet" href="../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../markbind/css/github.min.css">
-  <link rel="stylesheet" href="../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="../../markbind/css/markbind.min.css">
+  <script src="../../markbind/js/polyfill.min.js"></script>
+  <script src="../../markbind/js/vue.min.js"></script>
+  <script src="../../markbind/js/markbind.min.js"></script>
+  <script src="../../markbind/js/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/se-book/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../markbind/layouts/default/styles.css">
-  <link rel="stylesheet" href="../../markbind/css/site-nav.css">
   <link rel="icon" href="/se-book/favicon.ico">
 </head>
 
@@ -262,9 +265,24 @@
                         <p><strong>You can define an enum type by using the <code v-pre>enum</code> keyword.</strong> Because they are constants, the names of an enum type's fields are in uppercase letters e.g., <code v-pre>FLAG_SUCCESS</code> by convention.</p>
                         <box>
                           <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Defining an enumeration to represent days of a week (code to be put in the <code v-pre>Day.java</code> file):</p>
-                          <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-keyword">enum</span> Day {<br></span><span>    SUNDAY, MONDAY, TUESDAY, WEDNESDAY,<br></span><span>    THURSDAY, FRIDAY, SATURDAY<br></span><span>}<br></span></code></pre>
+                          <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-keyword">enum</span> Day {
+</span><span>    SUNDAY, MONDAY, TUESDAY, WEDNESDAY,
+</span><span>    THURSDAY, FRIDAY, SATURDAY
+</span><span>}
+</span></code></pre>
                           <p>Some examples of using the <code v-pre>Day</code> enumeration defined above:</p>
-                          <pre><code class="hljs java" v-pre><span>Day today = Day.MONDAY;<br></span><span>Day[] holidays = <span class="hljs-keyword">new</span> Day[]{Day.SATURDAY, Day.SUNDAY};<br></span><span><br></span><span><span class="hljs-keyword">switch</span> (today) {<br></span><span><span class="hljs-keyword">case</span> SATURDAY:<br></span><span><span class="hljs-keyword">case</span> SUNDAY:<br></span><span>    System.out.println(<span class="hljs-string">"It's the weekend"</span>);<br></span><span>    <span class="hljs-keyword">break</span>;<br></span><span><span class="hljs-keyword">default</span>:<br></span><span>    System.out.println(<span class="hljs-string">"It's a week day"</span>);<br></span><span>}<br></span></code></pre>
+                          <pre><code class="hljs java" v-pre><span>Day today = Day.MONDAY;
+</span><span>Day[] holidays = <span class="hljs-keyword">new</span> Day[]{Day.SATURDAY, Day.SUNDAY};
+</span><span>
+</span><span><span class="hljs-keyword">switch</span> (today) {
+</span><span><span class="hljs-keyword">case</span> SATURDAY:
+</span><span><span class="hljs-keyword">case</span> SUNDAY:
+</span><span>    System.out.println(<span class="hljs-string">"It's the weekend"</span>);
+</span><span>    <span class="hljs-keyword">break</span>;
+</span><span><span class="hljs-keyword">default</span>:
+</span><span>    System.out.println(<span class="hljs-string">"It's a week day"</span>);
+</span><span>}
+</span></code></pre>
                         </box>
                         <p>Note that while enumerations are usually a simple set of fixed values, <strong>Java enumerations can have behaviors too</strong>, as explained in <a href="https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html">this tutorial from <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small></a></p>
                       </div>
@@ -280,14 +298,40 @@
                                   </template>
                                   <question>
                                     <p>Define an enumeration named <code v-pre>Priority</code>. Add the missing <code v-pre>describe</code> method to the code below so that it produces the output given.</p>
-                                    <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{<br></span><span><br></span><span>    <span class="hljs-comment">// Add your method here</span><br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{<br></span><span>        describe(<span class="hljs-string">"Red"</span>, Priority.HIGH);<br></span><span>        describe(<span class="hljs-string">"Orange"</span>, Priority.MEDIUM);<br></span><span>        describe(<span class="hljs-string">"Blue"</span>, Priority.MEDIUM);<br></span><span>        describe(<span class="hljs-string">"Green"</span>, Priority.LOW);<br></span><span>    }<br></span><span>}<br></span></code></pre>
+                                    <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+</span><span>
+</span><span>    <span class="hljs-comment">// Add your method here</span>
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+</span><span>        describe(<span class="hljs-string">"Red"</span>, Priority.HIGH);
+</span><span>        describe(<span class="hljs-string">"Orange"</span>, Priority.MEDIUM);
+</span><span>        describe(<span class="hljs-string">"Blue"</span>, Priority.MEDIUM);
+</span><span>        describe(<span class="hljs-string">"Green"</span>, Priority.LOW);
+</span><span>    }
+</span><span>}
+</span></code></pre>
                                     <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
-                                    <pre><code class="hljs" v-pre><span>Red indicates high priority<br></span><span>Orange indicates medium priority<br></span><span>Blue indicates medium priority<br></span><span>Green indicates low priority<br></span></code></pre>
+                                    <pre><code class="hljs" v-pre><span>Red indicates high priority
+</span><span>Orange indicates medium priority
+</span><span>Blue indicates medium priority
+</span><span>Green indicates low priority
+</span></code></pre>
                                     <div slot="hint" class="algolia-no-index">
                                       <p>Use a <code v-pre>switch</code> statement to select between possible values for <code v-pre>Priority</code>.</p>
-                                      <pre><code class="hljs java" v-pre><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">describe</span><span class="hljs-params">(String color, Priority p)</span> </span>{<br></span><span>        <span class="hljs-keyword">switch</span> (p) {<br></span><span>            <span class="hljs-keyword">case</span> LOW:<br></span><span>                System.out.println(color + <span class="hljs-string">" indicates low priority"</span>);<br></span><span>                <span class="hljs-keyword">break</span>;<br></span><span>            <span class="hljs-comment">// ...</span><br></span><span>        }<br></span><span>    }<br></span></code></pre>
+                                      <pre><code class="hljs java" v-pre><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">describe</span><span class="hljs-params">(String color, Priority p)</span> </span>{
+</span><span>        <span class="hljs-keyword">switch</span> (p) {
+</span><span>            <span class="hljs-keyword">case</span> LOW:
+</span><span>                System.out.println(color + <span class="hljs-string">" indicates low priority"</span>);
+</span><span>                <span class="hljs-keyword">break</span>;
+</span><span>            <span class="hljs-comment">// ...</span>
+</span><span>        }
+</span><span>    }
+</span></code></pre>
                                       <p>Code for the enumeration is given below:</p>
-                                      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-keyword">enum</span> Priority {<br></span><span>    HIGH, MEDIUM, LOW<br></span><span>}<br></span></code></pre>
+                                      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-keyword">enum</span> Priority {
+</span><span>    HIGH, MEDIUM, LOW
+</span><span>}
+</span></code></pre>
                                     </div>
                                   </question>
                                 </panel>
@@ -316,15 +360,24 @@
                         <p><strong>To create a package, you put a package statement at the very top of every source file in that package.</strong> The package statement must be the first line in the source file and there can be no more than one package statement in each source file. Furthermore, <strong>the package of a type should match the folder path of the source file.</strong> Similarly, the compiler will put the <code v-pre>.class</code> files in a folder structure that matches the package names.</p>
                         <box>
                           <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The <code v-pre>Formatter</code> class below (in <code v-pre>&lt;source folder&gt;/seedu/tojava/util/Formatter.java</code> file) is in the package <code v-pre>seedu.tojava.util</code>. When it is compiled, the <code v-pre>Formatter.class</code> file will be in the location <code v-pre>&lt;compiler output folder&gt;/seedu/tojava/util</code>:</p>
-                          <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">package</span> seedu.tojava.util;<br></span><span><br></span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Formatter</span> </span>{<br></span><span>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String PREFIX = <span class="hljs-string">"&gt;&gt;"</span>;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> String <span class="hljs-title">format</span><span class="hljs-params">(String s)</span></span>{<br></span><span>        <span class="hljs-keyword">return</span> PREFIX + s;<br></span><span>    }<br></span><span>}<br></span></code></pre>
+                          <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">package</span> seedu.tojava.util;
+</span><span>
+</span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Formatter</span> </span>{
+</span><span>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String PREFIX = <span class="hljs-string">"&gt;&gt;"</span>;
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> String <span class="hljs-title">format</span><span class="hljs-params">(String s)</span></span>{
+</span><span>        <span class="hljs-keyword">return</span> PREFIX + s;
+</span><span>    }
+</span><span>}
+</span></code></pre>
                         </box>
                         <p><strong>Package names are written in all lower case</strong> (not camelCase), using the dot as a separator. Packages in the Java language itself begin with <code v-pre>java</code>. or <code v-pre>javax</code>. Companies use their reversed Internet domain name to begin their package names.</p>
                         <box>
                           <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> For example, <code v-pre>com.foobar.doohickey.util</code> can be the name of a package created by a company with a domain name <code v-pre>foobar.com</code></p>
                         </box>
-                        <p><strong>To use a public <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">types contained in the package</span>package member</span> from outside its package, you must do one of the following:</strong></p>
+                        <p><strong>To use a public <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">types contained in the package</span>package member</span> from outside its package, you must do one of the following:</strong></p>
                         <ol>
-                          <li><strong>Use the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">type name prefixed by the package name e.g., <code v-pre>java.io.IOException</code></span>fully qualified name</span></strong> to refer to the member</li>
+                          <li><strong>Use the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">type name prefixed by the package name e.g., <code v-pre>java.io.IOException</code></span>fully qualified name</span></strong> to refer to the member</li>
                           <li><strong>Import</strong> the package or the specific package member</li>
                         </ol>
                         <box>
@@ -333,7 +386,28 @@
                             <li><code v-pre>import seedu.tojava.util.StringParser</code>: imports the class <code v-pre>StringParser</code> in the <code v-pre>seedu.tojava.util</code> package</li>
                             <li><code v-pre>import seedu.tojava.frontend.*</code>: imports all the classes in the <code v-pre>seedu.tojava.frontend</code> package</li>
                           </ul>
-                          <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">package</span> seedu.tojava;<br></span><span><br></span><span><span class="hljs-keyword">import</span> seedu.tojava.util.StringParser;<br></span><span><span class="hljs-keyword">import</span> seedu.tojava.frontend.*;<br></span><span><br></span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{<br></span><span><br></span><span>        <span class="hljs-comment">// Using the fully qualified name to access the Processor class</span><br></span><span>        String status = seedu.tojava.logic.Processor.getStatus();<br></span><span><br></span><span>        <span class="hljs-comment">// Using the StringParser previously imported</span><br></span><span>        StringParser sp = <span class="hljs-keyword">new</span> StringParser();<br></span><span><br></span><span>        <span class="hljs-comment">// Using classes from the tojava.frontend package</span><br></span><span>        Ui ui = <span class="hljs-keyword">new</span> Ui();<br></span><span>        Message m = <span class="hljs-keyword">new</span> Message();<br></span><span><br></span><span>    }<br></span><span>}<br></span></code></pre>
+                          <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">package</span> seedu.tojava;
+</span><span>
+</span><span><span class="hljs-keyword">import</span> seedu.tojava.util.StringParser;
+</span><span><span class="hljs-keyword">import</span> seedu.tojava.frontend.*;
+</span><span>
+</span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+</span><span>
+</span><span>        <span class="hljs-comment">// Using the fully qualified name to access the Processor class</span>
+</span><span>        String status = seedu.tojava.logic.Processor.getStatus();
+</span><span>
+</span><span>        <span class="hljs-comment">// Using the StringParser previously imported</span>
+</span><span>        StringParser sp = <span class="hljs-keyword">new</span> StringParser();
+</span><span>
+</span><span>        <span class="hljs-comment">// Using classes from the tojava.frontend package</span>
+</span><span>        Ui ui = <span class="hljs-keyword">new</span> Ui();
+</span><span>        Message m = <span class="hljs-keyword">new</span> Message();
+</span><span>
+</span><span>    }
+</span><span>}
+</span></code></pre>
                           <p>Note how the class can still use the <code v-pre>Processor</code> without importing it first, by using its fully qualified name <code v-pre>seedu.tojava.logic.Processor</code></p>
                         </box>
                         <p><strong>Importing a package does not import its sub-packages</strong>, as packages do not behave as hierarchies despite appearances.</p>
@@ -344,11 +418,32 @@
                         <p><strong>Optionally, a <em>static import</em> can be used to import static members of a type</strong> so that the imported members can be used without specifying the type name.</p>
                         <box>
                           <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The class below uses static imports to import the constant <code v-pre>PREFIX</code> and the method <code v-pre>format()</code> from the <code v-pre>seedu.tojava.util.Formatter</code> class.</p>
-                          <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">import</span> <span class="hljs-keyword">static</span> seedu.tojava.util.Formatter.PREFIX;<br></span><span><span class="hljs-keyword">import</span> <span class="hljs-keyword">static</span> seedu.tojava.util.Formatter.format;<br></span><span><br></span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{<br></span><span><br></span><span>        String formatted = format(<span class="hljs-string">"Hello"</span>);<br></span><span>        <span class="hljs-keyword">boolean</span> isFormatted = formatted.startsWith(PREFIX);<br></span><span>        System.out.println(formatted);<br></span><span>    }<br></span><span>}<br></span></code></pre>
+                          <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">import</span> <span class="hljs-keyword">static</span> seedu.tojava.util.Formatter.PREFIX;
+</span><span><span class="hljs-keyword">import</span> <span class="hljs-keyword">static</span> seedu.tojava.util.Formatter.format;
+</span><span>
+</span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+</span><span>
+</span><span>        String formatted = format(<span class="hljs-string">"Hello"</span>);
+</span><span>        <span class="hljs-keyword">boolean</span> isFormatted = formatted.startsWith(PREFIX);
+</span><span>        System.out.println(formatted);
+</span><span>    }
+</span><span>}
+</span></code></pre>
                           <panel type="seamless" class="algolia-no-index"><template slot="_header">
                               <p><code v-pre>Formatter</code> class</p>
                             </template>
-                            <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">package</span> seedu.tojava.util;<br></span><span><br></span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Formatter</span> </span>{<br></span><span>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String PREFIX = <span class="hljs-string">"&gt;&gt;"</span>;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> String <span class="hljs-title">format</span><span class="hljs-params">(String s)</span></span>{<br></span><span>        <span class="hljs-keyword">return</span> PREFIX + s;<br></span><span>    }<br></span><span>}<br></span></code></pre>
+                            <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">package</span> seedu.tojava.util;
+</span><span>
+</span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Formatter</span> </span>{
+</span><span>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String PREFIX = <span class="hljs-string">"&gt;&gt;"</span>;
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> String <span class="hljs-title">format</span><span class="hljs-params">(String s)</span></span>{
+</span><span>        <span class="hljs-keyword">return</span> PREFIX + s;
+</span><span>    }
+</span><span>}
+</span></code></pre>
                           </panel>
                           <p>Note how the class can use <code v-pre>PREFIX</code> and <code v-pre>format()</code> (instead of <code v-pre>Formatter.PREFIX</code> and <code v-pre>Formatter.format()</code>).</p>
                         </box>
@@ -420,10 +515,10 @@
                               <thead>
                                 <tr>
                                   <th>Modifier</th>
-                                  <th><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">whether the class itself has access to the member defined by the access level</span>Class</span></th>
-                                  <th><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">whether classes in the same package as the class (regardless of their parentage) have access to the member</span>Package</span></th>
-                                  <th><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">whether subclasses of the class declared outside this package have access to the member</span>Subclass</span></th>
-                                  <th><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">whether all classes have access to the member</span>World</span></th>
+                                  <th><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">whether the class itself has access to the member defined by the access level</span>Class</span></th>
+                                  <th><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">whether classes in the same package as the class (regardless of their parentage) have access to the member</span>Package</span></th>
+                                  <th><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">whether subclasses of the class declared outside this package have access to the member</span>Subclass</span></th>
+                                  <th><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">whether all classes have access to the member</span>World</span></th>
                                 </tr>
                               </thead>
                               <tbody>
@@ -485,7 +580,12 @@
                         <p>Java does not directly support constants. The convention is to use a <code v-pre>static</code> <code v-pre>final</code> variable where a constant is needed. The <code v-pre>static</code> modifier causes the variable to be available without instantiating an object. The <code v-pre>final</code> modifier causes the variable to be unchangeable. Java constants are normally declared in ALL CAPS separated by underscores.</p>
                         <box>
                           <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Here is an example of a constant named <code v-pre>MAX_BALANCE</code> which can be accessed as <code v-pre>Account.MAX_BALANCE</code>.</p>
-                          <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span></span>{<br></span><span><br></span><span>  <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">double</span> MAX_BALANCE = <span class="hljs-number">1000000.0</span>;<br></span><span><br></span><span>}<br></span></code></pre>
+                          <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span></span>{
+</span><span>
+</span><span>  <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">double</span> MAX_BALANCE = <span class="hljs-number">1000000.0</span>;
+</span><span>
+</span><span>}
+</span></code></pre>
                           <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> <a href="https://docs.oracle.com/javase/9/docs/api/java/lang/Math.html#PI"><code v-pre>Math.PI</code></a> is an example constant that comes with Java.</p>
                         </box>
                       </div>
@@ -510,40 +610,96 @@
                         <p><strong>When you cast a primitive value to another type, there may be a loss of precision.</strong></p>
                         <box>
                           <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The code below casts a <code v-pre>double</code> value to an <code v-pre>int</code> value and casts it back to a <code v-pre>double</code>. Note the loss of precision.</p>
-                          <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">double</span> d = <span class="hljs-number">5.3</span>;<br></span><span>System.out.println(<span class="hljs-string">"Before casting to an int: "</span> + d);<br></span><span><span class="hljs-keyword">int</span> i = (<span class="hljs-keyword">int</span>)d; <span class="hljs-comment">// cast d to an int</span><br></span><span>System.out.println(<span class="hljs-string">"After casting to an int: "</span> + i);<br></span><span>d = (<span class="hljs-keyword">double</span>)i; <span class="hljs-comment">// cast i back to a double</span><br></span><span>System.out.println(<span class="hljs-string">"After casting back a double: "</span> + d);<br></span></code></pre>
+                          <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">double</span> d = <span class="hljs-number">5.3</span>;
+</span><span>System.out.println(<span class="hljs-string">"Before casting to an int: "</span> + d);
+</span><span><span class="hljs-keyword">int</span> i = (<span class="hljs-keyword">int</span>)d; <span class="hljs-comment">// cast d to an int</span>
+</span><span>System.out.println(<span class="hljs-string">"After casting to an int: "</span> + i);
+</span><span>d = (<span class="hljs-keyword">double</span>)i; <span class="hljs-comment">// cast i back to a double</span>
+</span><span>System.out.println(<span class="hljs-string">"After casting back a double: "</span> + d);
+</span></code></pre>
                           <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
-                          <pre><code class="hljs" v-pre><span>Before casting to an int: 5.3<br></span><span>After casting to an int: 5<br></span><span>After casting back a double: 5.0<br></span></code></pre>
+                          <pre><code class="hljs" v-pre><span>Before casting to an int: 5.3
+</span><span>After casting to an int: 5
+</span><span>After casting back a double: 5.0
+</span></code></pre>
                         </box>
                         <p><strong><mark><em>Downcasting</em></mark> is when you cast an object reference from a superclass to a subclass.</strong></p>
                         <box>
                           <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Assume the following class hierarchy:</p>
-                          <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Animal</span></span>{<br></span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">speak</span><span class="hljs-params">()</span></span>{<br></span><span>        System.out.println(<span class="hljs-string">"I'm an animal"</span>);<br></span><span>    }<br></span><span>}<br></span><span><br></span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Cat</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Animal</span></span>{<br></span><span>    <span class="hljs-meta">@Override</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">speak</span><span class="hljs-params">()</span> </span>{<br></span><span>        System.out.println(<span class="hljs-string">"I'm a Cat"</span>);<br></span><span>    }<br></span><span>}<br></span><span><br></span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DomesticCat</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Cat</span></span>{<br></span><span>    <span class="hljs-meta">@Override</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">speak</span><span class="hljs-params">()</span> </span>{<br></span><span>        System.out.println(<span class="hljs-string">"I'm a DomesticCat"</span>);<br></span><span>    }<br></span><span>}<br></span></code></pre>
+                          <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Animal</span></span>{
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">speak</span><span class="hljs-params">()</span></span>{
+</span><span>        System.out.println(<span class="hljs-string">"I'm an animal"</span>);
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Cat</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Animal</span></span>{
+</span><span>    <span class="hljs-meta">@Override</span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">speak</span><span class="hljs-params">()</span> </span>{
+</span><span>        System.out.println(<span class="hljs-string">"I'm a Cat"</span>);
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DomesticCat</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Cat</span></span>{
+</span><span>    <span class="hljs-meta">@Override</span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">speak</span><span class="hljs-params">()</span> </span>{
+</span><span>        System.out.println(<span class="hljs-string">"I'm a DomesticCat"</span>);
+</span><span>    }
+</span><span>}
+</span></code></pre>
                           <p>The <code v-pre>foo</code> method below downcasts an <code v-pre>Animal</code> object to its subclasses.</p>
-                          <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">foo</span><span class="hljs-params">(Animal a)</span></span>{<br></span><span>    a.speak();<br></span><span>    Cat c = (Cat)a; <span class="hljs-comment">// downcast a to a Cat</span><br></span><span>    c.speak();<br></span><span>    DomesticCat dc = (DomesticCat)a; <span class="hljs-comment">// downcast a to a DomesticCat</span><br></span><span>    dc.speak();<br></span><span>}<br></span></code></pre>
+                          <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">foo</span><span class="hljs-params">(Animal a)</span></span>{
+</span><span>    a.speak();
+</span><span>    Cat c = (Cat)a; <span class="hljs-comment">// downcast a to a Cat</span>
+</span><span>    c.speak();
+</span><span>    DomesticCat dc = (DomesticCat)a; <span class="hljs-comment">// downcast a to a DomesticCat</span>
+</span><span>    dc.speak();
+</span><span>}
+</span></code></pre>
                         </box>
                         <p><strong><mark><em>Upcasting</em></mark> is when you cast an object reference from a subclass to a superclass.</strong> However, upcasting is done automatically by the compiler even if you do not specify it explicitly.</p>
                         <box>
                           <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This example upcasts a <code v-pre>Cat</code> object to its superclass <code v-pre>Animal</code>:</p>
-                          <pre><code class="hljs java" v-pre><span>Cat c = <span class="hljs-keyword">new</span> Cat();<br></span><span>Animal a1 = (Animal)c; <span class="hljs-comment">//upcasting c to the Animal class</span><br></span><span>Animal a2 = c; <span class="hljs-comment">//upcasting is implicit</span><br></span><span><br></span></code></pre>
+                          <pre><code class="hljs java" v-pre><span>Cat c = <span class="hljs-keyword">new</span> Cat();
+</span><span>Animal a1 = (Animal)c; <span class="hljs-comment">//upcasting c to the Animal class</span>
+</span><span>Animal a2 = c; <span class="hljs-comment">//upcasting is implicit</span>
+</span><span>
+</span></code></pre>
                         </box>
                         <p>Note that due to polymorphism, the behavior of the object will reflect the actual type of the object irrespective of the type of the variable holding a reference to it.</p>
                         <box>
                           <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The call to the <code v-pre>speak()</code> method in the code below always executes the <code v-pre>speak()</code> method of the <code v-pre>DomesticCat</code> class because the actual type of the object remains <code v-pre>DomesticCat</code> although the reference to it is being downcast/upcast to various other types.</p>
-                          <pre><code class="hljs java" v-pre><span>Animal a = <span class="hljs-keyword">new</span> DomesticCat(); <span class="hljs-comment">//implicit upcast</span><br></span><span>a.speak();<br></span><span>Cat c = (Cat)a; <span class="hljs-comment">//downcast</span><br></span><span>c.speak();<br></span><span>DomesticCat dc = (DomesticCat)a; <span class="hljs-comment">//downcast</span><br></span><span>dc.speak();<br></span></code></pre>
+                          <pre><code class="hljs java" v-pre><span>Animal a = <span class="hljs-keyword">new</span> DomesticCat(); <span class="hljs-comment">//implicit upcast</span>
+</span><span>a.speak();
+</span><span>Cat c = (Cat)a; <span class="hljs-comment">//downcast</span>
+</span><span>c.speak();
+</span><span>DomesticCat dc = (DomesticCat)a; <span class="hljs-comment">//downcast</span>
+</span><span>dc.speak();
+</span></code></pre>
                           <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
-                          <pre><code class="hljs" v-pre><span>I'm a DomesticCat<br></span><span>I'm a DomesticCat<br></span><span>I'm a DomesticCat<br></span></code></pre>
+                          <pre><code class="hljs" v-pre><span>I'm a DomesticCat
+</span><span>I'm a DomesticCat
+</span><span>I'm a DomesticCat
+</span></code></pre>
                         </box>
                         <p><strong>Casting to an incompatible type can result in a <code v-pre>ClassCastException</code> at runtime.</strong></p>
                         <box>
                           <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This code will cause a <code v-pre>ClassCastException</code>:</p>
-                          <pre><code class="hljs java" v-pre><span>Object o = <span class="hljs-keyword">new</span> Animal();<br></span><span>Integer x = (Integer)o;<br></span></code></pre>
+                          <pre><code class="hljs java" v-pre><span>Object o = <span class="hljs-keyword">new</span> Animal();
+</span><span>Integer x = (Integer)o;
+</span></code></pre>
                           <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
-                          <pre><code class="hljs" v-pre><span>Exception in thread &quot;main&quot; java.lang.ClassCastException: misc.casting.Animal cannot be<br></span><span>cast to java.lang.Integer at misc.casting.CastingExamples.main(CastingExamples.java:14)<br></span></code></pre>
+                          <pre><code class="hljs" v-pre><span>Exception in thread &quot;main&quot; java.lang.ClassCastException: misc.casting.Animal cannot be
+</span><span>cast to java.lang.Integer at misc.casting.CastingExamples.main(CastingExamples.java:14)
+</span></code></pre>
                         </box>
                         <p>You can use the <code v-pre>instanceof</code> operator to check if a cast is safe to perform.</p>
                         <box>
                           <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This code checks if the object <code v-pre>a</code> is an instance of the <code v-pre>Cat</code> class before casting it to a <code v-pre>Cat</code>.</p>
-                          <pre><code class="hljs java" v-pre><span>Cat c;<br></span><span><span class="hljs-keyword">if</span> (a <span class="hljs-keyword">instanceof</span> Cat){<br></span><span>    c = (Cat)a;<br></span><span>}<br></span></code></pre>
+                          <pre><code class="hljs java" v-pre><span>Cat c;
+</span><span><span class="hljs-keyword">if</span> (a <span class="hljs-keyword">instanceof</span> Cat){
+</span><span>    c = (Cat)a;
+</span><span>}
+</span></code></pre>
                         </box>
                       </div>
                       <div></div>
@@ -566,35 +722,116 @@
                         <p><strong>You can use the <a href="https://docs.oracle.com/javase/9/docs/api/java/io/File.html"><code v-pre>java.io.File</code></a> class to represent a file object</strong>. It can be used to access properties of the file object.</p>
                         <box>
                           <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This code creates a <code v-pre>File</code> object to represent a file <code v-pre>fruits.txt</code> that exists in the <code v-pre>data</code> directory <mark>relative to the current working directory</mark> and uses that object to print some properties of the file.</p>
-                          <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">import</span> java.io.File;<br></span><span><br></span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FileClassDemo</span> </span>{<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{<br></span><span>        File f = <span class="hljs-keyword">new</span> File(<span class="hljs-string">"data/fruits.txt"</span>);<br></span><span>        System.out.println(<span class="hljs-string">"full path: "</span> + f.getAbsolutePath());<br></span><span>        System.out.println(<span class="hljs-string">"file exists?: "</span> + f.exists());<br></span><span>        System.out.println(<span class="hljs-string">"is Directory?: "</span> + f.isDirectory());<br></span><span>    }<br></span><span><br></span><span>}<br></span></code></pre>
+                          <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">import</span> java.io.File;
+</span><span>
+</span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FileClassDemo</span> </span>{
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+</span><span>        File f = <span class="hljs-keyword">new</span> File(<span class="hljs-string">"data/fruits.txt"</span>);
+</span><span>        System.out.println(<span class="hljs-string">"full path: "</span> + f.getAbsolutePath());
+</span><span>        System.out.println(<span class="hljs-string">"file exists?: "</span> + f.exists());
+</span><span>        System.out.println(<span class="hljs-string">"is Directory?: "</span> + f.isDirectory());
+</span><span>    }
+</span><span>
+</span><span>}
+</span></code></pre>
                           <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
-                          <pre><code class="hljs" v-pre><span>full path: C:\sample-code\data\fruits.txt<br></span><span>file exists?: true<br></span><span>is Directory?: false<br></span></code></pre>
+                          <pre><code class="hljs" v-pre><span>full path: C:\sample-code\data\fruits.txt
+</span><span>file exists?: true
+</span><span>is Directory?: false
+</span></code></pre>
                         </box>
                         <p><span><span aria-hidden="true" class="fas fa-info-circle"></span></span> If you use backslash to specify the file path in a Windows computer, you need to use an additional backslash as an escape character because the backslash by itself has a special meaning. e.g., use <span style="color:green"><span><span aria-hidden="true" class="fas fa-check"></span></span></span><code v-pre>&quot;data\\fruits.txt&quot;</code>, not <span style="color:red"><span><span aria-hidden="true" class="fas fa-times"></span></span></span> <code v-pre>&quot;data\fruits.txt&quot;</code>. Alternatively, you can use forward slash <span style="color:green"><span><span aria-hidden="true" class="fas fa-check"></span></span></span> <code v-pre>&quot;data/fruits.txt&quot;</code> (even on Windows).</p>
                         <p><strong>You can read from a file using a <code v-pre>Scanner</code> object that uses a <code v-pre>File</code> object as the <em>source</em> of data.</strong></p>
                         <box>
                           <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This code uses a <code v-pre>Scanner</code> object to read (and print) contents of a text file line-by-line:</p>
-                          <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">import</span> java.io.File;<br></span><span><span class="hljs-keyword">import</span> java.io.FileNotFoundException;<br></span><span><span class="hljs-keyword">import</span> java.util.Scanner;<br></span><span><br></span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FileReadingDemo</span> </span>{<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printFileContents</span><span class="hljs-params">(String filePath)</span> <span class="hljs-keyword">throws</span> FileNotFoundException </span>{<br></span><span>        File f = <span class="hljs-keyword">new</span> File(filePath); <span class="hljs-comment">// create a File for the given file path</span><br></span><span>        Scanner s = <span class="hljs-keyword">new</span> Scanner(f); <span class="hljs-comment">// create a Scanner using the File as the source</span><br></span><span>        <span class="hljs-keyword">while</span> (s.hasNext()) {<br></span><span>            System.out.println(s.nextLine());<br></span><span>        }<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{<br></span><span>        <span class="hljs-keyword">try</span> {<br></span><span>            printFileContents(<span class="hljs-string">"data/fruits.txt"</span>);<br></span><span>        } <span class="hljs-keyword">catch</span> (FileNotFoundException e) {<br></span><span>            System.out.println(<span class="hljs-string">"File not found"</span>);<br></span><span>        }<br></span><span>    }<br></span><span><br></span><span>}<br></span></code></pre>
+                          <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">import</span> java.io.File;
+</span><span><span class="hljs-keyword">import</span> java.io.FileNotFoundException;
+</span><span><span class="hljs-keyword">import</span> java.util.Scanner;
+</span><span>
+</span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FileReadingDemo</span> </span>{
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printFileContents</span><span class="hljs-params">(String filePath)</span> <span class="hljs-keyword">throws</span> FileNotFoundException </span>{
+</span><span>        File f = <span class="hljs-keyword">new</span> File(filePath); <span class="hljs-comment">// create a File for the given file path</span>
+</span><span>        Scanner s = <span class="hljs-keyword">new</span> Scanner(f); <span class="hljs-comment">// create a Scanner using the File as the source</span>
+</span><span>        <span class="hljs-keyword">while</span> (s.hasNext()) {
+</span><span>            System.out.println(s.nextLine());
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+</span><span>        <span class="hljs-keyword">try</span> {
+</span><span>            printFileContents(<span class="hljs-string">"data/fruits.txt"</span>);
+</span><span>        } <span class="hljs-keyword">catch</span> (FileNotFoundException e) {
+</span><span>            System.out.println(<span class="hljs-string">"File not found"</span>);
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>}
+</span></code></pre>
                           <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span> i.e., contents of the <code v-pre>data/fruits.txt</code></p>
-                          <pre><code class="hljs" v-pre><span>5 Apples<br></span><span>3 Bananas<br></span><span>6 Cherries<br></span></code></pre>
+                          <pre><code class="hljs" v-pre><span>5 Apples
+</span><span>3 Bananas
+</span><span>6 Cherries
+</span></code></pre>
                         </box>
                         <p><strong>You can use a <a href="https://docs.oracle.com/javase/9/docs/api/java/io/FileWriter.html"><code v-pre>java.io.FileWriter</code></a> object to write to a file.</strong></p>
                         <box>
                           <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The <code v-pre>writeToFile</code> method below uses a <code v-pre>FileWrite</code> object to write to a file. The method is being used to write two lines to the file <code v-pre>temp/lines.txt</code>.</p>
-                          <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">import</span> java.io.FileWriter;<br></span><span><span class="hljs-keyword">import</span> java.io.IOException;<br></span><span><br></span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FileWritingDemo</span> </span>{<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">writeToFile</span><span class="hljs-params">(String filePath, String textToAdd)</span> <span class="hljs-keyword">throws</span> IOException </span>{<br></span><span>        FileWriter fw = <span class="hljs-keyword">new</span> FileWriter(filePath);<br></span><span>        fw.write(textToAdd);<br></span><span>        fw.close();<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{<br></span><span>        String file2 = <span class="hljs-string">"temp/lines.txt"</span>;<br></span><span>        <span class="hljs-keyword">try</span> {<br></span><span>            writeToFile(file2, <span class="hljs-string">"first line"</span> + System.lineSeparator() + <span class="hljs-string">"second line"</span>);<br></span><span>        } <span class="hljs-keyword">catch</span> (IOException e) {<br></span><span>            System.out.println(<span class="hljs-string">"Something went wrong: "</span> + e.getMessage());<br></span><span>        }<br></span><span>    }<br></span><span><br></span><span>}<br></span></code></pre>
+                          <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">import</span> java.io.FileWriter;
+</span><span><span class="hljs-keyword">import</span> java.io.IOException;
+</span><span>
+</span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FileWritingDemo</span> </span>{
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">writeToFile</span><span class="hljs-params">(String filePath, String textToAdd)</span> <span class="hljs-keyword">throws</span> IOException </span>{
+</span><span>        FileWriter fw = <span class="hljs-keyword">new</span> FileWriter(filePath);
+</span><span>        fw.write(textToAdd);
+</span><span>        fw.close();
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+</span><span>        String file2 = <span class="hljs-string">"temp/lines.txt"</span>;
+</span><span>        <span class="hljs-keyword">try</span> {
+</span><span>            writeToFile(file2, <span class="hljs-string">"first line"</span> + System.lineSeparator() + <span class="hljs-string">"second line"</span>);
+</span><span>        } <span class="hljs-keyword">catch</span> (IOException e) {
+</span><span>            System.out.println(<span class="hljs-string">"Something went wrong: "</span> + e.getMessage());
+</span><span>        }
+</span><span>    }
+</span><span>
+</span><span>}
+</span></code></pre>
                           <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span> Contents of the <code v-pre>temp/lines.txt</code>:</p>
-                          <pre><code class="hljs" v-pre><span>first line<br></span><span>second line<br></span></code></pre>
+                          <pre><code class="hljs" v-pre><span>first line
+</span><span>second line
+</span></code></pre>
                         </box>
                         <p>Note that you <mark>need to call the <code v-pre>close()</code> method</mark> of the <code v-pre>FileWriter</code> object for the writing operation to be completed.</p>
                         <p><strong>You can create a <code v-pre>FileWriter</code> object that appends to the file</strong> (instead of overwriting the current content) by specifying an additional boolean parameter to the constructor.</p>
                         <box>
                           <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The method below appends to the file rather than overwrites.</p>
-                          <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">appendToFile</span><span class="hljs-params">(String filePath, String textToAppend)</span> <span class="hljs-keyword">throws</span> IOException </span>{<br></span><span>    FileWriter fw = <span class="hljs-keyword">new</span> FileWriter(filePath, <span class="hljs-keyword">true</span>); <span class="hljs-comment">// create a FileWriter in append mode</span><br></span><span>    fw.write(textToAppend);<br></span><span>    fw.close();<br></span><span>}<br></span></code></pre>
+                          <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">appendToFile</span><span class="hljs-params">(String filePath, String textToAppend)</span> <span class="hljs-keyword">throws</span> IOException </span>{
+</span><span>    FileWriter fw = <span class="hljs-keyword">new</span> FileWriter(filePath, <span class="hljs-keyword">true</span>); <span class="hljs-comment">// create a FileWriter in append mode</span>
+</span><span>    fw.write(textToAppend);
+</span><span>    fw.close();
+</span><span>}
+</span></code></pre>
                         </box>
                         <p><strong>The <a href="https://docs.oracle.com/javase/9/docs/api/java/nio/file/Files.html"><code v-pre>java.nio.file.Files</code></a> is a utility class that provides several useful file operations.</strong> It relies on the <a href="https://docs.oracle.com/javase/9/docs/api/java/nio/file/Paths.html"><code v-pre>java.nio.file.Paths</code></a> file to generate <code v-pre>Path</code> objects that represent file paths.</p>
                         <box>
                           <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This example uses the <code v-pre>Files</code> class to copy a file and delete a file.</p>
-                          <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">import</span> java.io.IOException;<br></span><span><span class="hljs-keyword">import</span> java.nio.file.Files;<br></span><span><span class="hljs-keyword">import</span> java.nio.file.Paths;<br></span><span><br></span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FilesClassDemo</span> </span>{<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> IOException</span>{<br></span><span>        Files.copy(Paths.get(<span class="hljs-string">"data/fruits.txt"</span>), Paths.get(<span class="hljs-string">"temp/fruits2.txt"</span>));<br></span><span>        Files.delete(Paths.get(<span class="hljs-string">"temp/fruits2.txt"</span>));<br></span><span>    }<br></span><span><br></span><span>}<br></span></code></pre>
+                          <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">import</span> java.io.IOException;
+</span><span><span class="hljs-keyword">import</span> java.nio.file.Files;
+</span><span><span class="hljs-keyword">import</span> java.nio.file.Paths;
+</span><span>
+</span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FilesClassDemo</span> </span>{
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> IOException</span>{
+</span><span>        Files.copy(Paths.get(<span class="hljs-string">"data/fruits.txt"</span>), Paths.get(<span class="hljs-string">"temp/fruits2.txt"</span>));
+</span><span>        Files.delete(Paths.get(<span class="hljs-string">"temp/fruits2.txt"</span>));
+</span><span>    }
+</span><span>
+</span><span>}
+</span></code></pre>
                         </box>
                         <p>The techniques above are good enough to manipulate simple text files. Note that <strong>it is also possible to <a href="https://www.tutorialspoint.com/java/java_files_io.htm">perform file I/O operations using other classes</a></strong>.</p>
                       </div>
@@ -640,7 +877,10 @@
                         <p>Variable Arguments (Varargs) is a <em>syntactic sugar</em> type feature that allows writing a methods that can take a variable number of arguments.</p>
                         <box>
                           <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The <code v-pre>search</code> method below can be called as <code v-pre>search()</code>, <code v-pre>search(&quot;book&quot;)</code>, <code v-pre>search(&quot;book&quot;, &quot;paper&quot;)</code>, etc.</p>
-                          <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">search</span><span class="hljs-params">(String ... keywords)</span></span>{<br></span><span>   <span class="hljs-comment">// method body</span><br></span><span>}<br></span></code></pre>
+                          <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">search</span><span class="hljs-params">(String ... keywords)</span></span>{
+</span><span>   <span class="hljs-comment">// method body</span>
+</span><span>}
+</span></code></pre>
                         </box>
                         <p><span><span aria-hidden="true" class="fas fa-paperclip"></span></span> Resources:</p>
                         <ul>
@@ -727,6 +967,7 @@
             </div>
           </div>
         </div>
+        <i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i>
       </div>
 
 
@@ -734,21 +975,16 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Thu, Sep 10, 2020, 11:06:50 PM GMT+8]</small>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.16.0</a>, generated on Wed, Sep 16, 2020, 3:47:05 PM GMT+8]</small>
       </div>
     </footer>
   </div>
 </body>
-<script src="../../markbind/js/vue.min.js"></script>
-<script src="../../markbind/js/components.min.js"></script>
 <script src="../../markbind/js/bootstrap-utility.min.js"></script>
-<script src="../../markbind/js/polyfill.min.js"></script>
-<script src="../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/se-book'
-  const enableSearch = true
+  MarkBind.setupWithSearch()
 </script>
-<script src="../../markbind/js/setup.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
   function initAlgolia() {
@@ -763,5 +999,8 @@
   MarkBind.afterSetup(initAlgolia);
 </script>
 <script src="../../markbind/layouts/default/scripts.js"></script>
+<script>
+  if (MarkBind.AfterSetup) MarkBind.AfterSetup()
+</script>
 
 </html>

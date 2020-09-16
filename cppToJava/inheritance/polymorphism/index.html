@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.15.2">
+  <meta name="generator" content="MarkBind 2.16.0">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - C++ to Java: Inheritance: Polymorphism</title>
   <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
@@ -14,11 +14,14 @@
   <link rel="stylesheet" href="../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
   <link rel="stylesheet" href="../../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../../markbind/css/github.min.css">
-  <link rel="stylesheet" href="../../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="../../../markbind/css/markbind.min.css">
+  <script src="../../../markbind/js/polyfill.min.js"></script>
+  <script src="../../../markbind/js/vue.min.js"></script>
+  <script src="../../../markbind/js/markbind.min.js"></script>
+  <script src="../../../markbind/js/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/se-book/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../../markbind/layouts/default/styles.css">
-  <link rel="stylesheet" href="../../../markbind/css/site-nav.css">
   <link rel="icon" href="/se-book/favicon.ico">
 </head>
 
@@ -257,39 +260,135 @@
                     <p><strong>Java is a <em>strongly-typed</em> language which means the code works with only the object types that it targets.</strong></p>
                     <box>
                       <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The following code <code v-pre>PetShelter</code> keeps a list of <code v-pre>Cat</code> objects and make them <code v-pre>speak</code>. The code will not work with any other type, for example, <code v-pre>Dog</code> objects.</p>
-                      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PetShelter</span> </span>{<br></span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Cat[] cats = <span class="hljs-keyword">new</span> Cat[]{<br></span><span>            <span class="hljs-keyword">new</span> Cat(<span class="hljs-string">"Mittens"</span>),<br></span><span>            <span class="hljs-keyword">new</span> Cat(<span class="hljs-string">"Snowball"</span>)};<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{<br></span><span>        <span class="hljs-keyword">for</span> (Cat c: cats){<br></span><span>            System.out.println(c.speak());<br></span><span>        }<br></span><span>    }<br></span><span>}<br></span></code></pre>
+                      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PetShelter</span> </span>{
+</span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Cat[] cats = <span class="hljs-keyword">new</span> Cat[]{
+</span><span>            <span class="hljs-keyword">new</span> Cat(<span class="hljs-string">"Mittens"</span>),
+</span><span>            <span class="hljs-keyword">new</span> Cat(<span class="hljs-string">"Snowball"</span>)};
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+</span><span>        <span class="hljs-keyword">for</span> (Cat c: cats){
+</span><span>            System.out.println(c.speak());
+</span><span>        }
+</span><span>    }
+</span><span>}
+</span></code></pre>
                       <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
-                      <pre><code class="hljs" v-pre><span>Mittens: Meow<br></span><span>Snowball: Meow<br></span></code></pre>
+                      <pre><code class="hljs" v-pre><span>Mittens: Meow
+</span><span>Snowball: Meow
+</span></code></pre>
                       <panel type="seamless" class="algolia-no-index"><template slot="_header">
                           <p><span class="dimmed">The <code v-pre>Cat</code> class</span></p>
                         </template>
-                        <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Cat</span> </span>{<br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Cat</span><span class="hljs-params">(String name)</span> </span>{<br></span><span>        <span class="hljs-keyword">super</span>(name);<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">speak</span><span class="hljs-params">()</span> </span>{<br></span><span>        <span class="hljs-keyword">return</span> name + <span class="hljs-string">": Meow"</span>;<br></span><span>    }<br></span><span>}<br></span></code></pre>
+                        <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Cat</span> </span>{
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Cat</span><span class="hljs-params">(String name)</span> </span>{
+</span><span>        <span class="hljs-keyword">super</span>(name);
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">speak</span><span class="hljs-params">()</span> </span>{
+</span><span>        <span class="hljs-keyword">return</span> name + <span class="hljs-string">": Meow"</span>;
+</span><span>    }
+</span><span>}
+</span></code></pre>
                       </panel>
                     </box>
                     <p>This <strong>strong-typing can lead to unnecessary verbosity</strong> caused by repetitive similar code that do similar things with different object types.</p>
                     <box>
                       <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> If the <code v-pre>PetShelter</code> is to keep both cats and dogs, you'll need two arrays and two loops:</p>
-                      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PetShelter</span> </span>{<br></span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Cat[] cats = <span class="hljs-keyword">new</span> Cat[]{<br></span><span>            <span class="hljs-keyword">new</span> Cat(<span class="hljs-string">"Mittens"</span>),<br></span><span>            <span class="hljs-keyword">new</span> Cat(<span class="hljs-string">"Snowball"</span>)};<br></span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Dog[] dogs = <span class="hljs-keyword">new</span> Dog[]{<br></span><span>            <span class="hljs-keyword">new</span> Dog(<span class="hljs-string">"Spot"</span>)};<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{<br></span><span>        <span class="hljs-keyword">for</span> (Cat c: cats){<br></span><span>            System.out.println(c.speak());<br></span><span>        }<br></span><span>        <span class="hljs-keyword">for</span>(Dog d: dogs){<br></span><span>            System.out.println(d.speak());<br></span><span>        }<br></span><span>    }<br></span><span>}<br></span></code></pre>
+                      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PetShelter</span> </span>{
+</span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Cat[] cats = <span class="hljs-keyword">new</span> Cat[]{
+</span><span>            <span class="hljs-keyword">new</span> Cat(<span class="hljs-string">"Mittens"</span>),
+</span><span>            <span class="hljs-keyword">new</span> Cat(<span class="hljs-string">"Snowball"</span>)};
+</span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Dog[] dogs = <span class="hljs-keyword">new</span> Dog[]{
+</span><span>            <span class="hljs-keyword">new</span> Dog(<span class="hljs-string">"Spot"</span>)};
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+</span><span>        <span class="hljs-keyword">for</span> (Cat c: cats){
+</span><span>            System.out.println(c.speak());
+</span><span>        }
+</span><span>        <span class="hljs-keyword">for</span>(Dog d: dogs){
+</span><span>            System.out.println(d.speak());
+</span><span>        }
+</span><span>    }
+</span><span>}
+</span></code></pre>
                       <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
-                      <pre><code class="hljs" v-pre><span>Mittens: Meow<br></span><span>Snowball: Meow<br></span><span>Spot: Woof<br></span></code></pre>
+                      <pre><code class="hljs" v-pre><span>Mittens: Meow
+</span><span>Snowball: Meow
+</span><span>Spot: Woof
+</span></code></pre>
                       <panel type="seamless" class="algolia-no-index"><template slot="_header">
                           <p><span class="dimmed">The <code v-pre>Dog</code> class</span></p>
                         </template>
-                        <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Dog</span> </span>{<br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Dog</span><span class="hljs-params">(String name)</span> </span>{<br></span><span>        <span class="hljs-keyword">super</span>(name);<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">speak</span><span class="hljs-params">()</span> </span>{<br></span><span>        <span class="hljs-keyword">return</span> name + <span class="hljs-string">": Woof"</span>;<br></span><span>    }<br></span><span>}<br></span></code></pre>
+                        <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Dog</span> </span>{
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Dog</span><span class="hljs-params">(String name)</span> </span>{
+</span><span>        <span class="hljs-keyword">super</span>(name);
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">speak</span><span class="hljs-params">()</span> </span>{
+</span><span>        <span class="hljs-keyword">return</span> name + <span class="hljs-string">": Woof"</span>;
+</span><span>    }
+</span><span>}
+</span></code></pre>
                       </panel>
                     </box>
                     <p>A better way is to <strong>take advantage of polymorphism to write code that targets a superclass so that it works with any subclass objects.</strong></p>
                     <box>
                       <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The <code v-pre>PetShelter2</code> uses one data structure to keep both types of animals and one loop to make them speak. The code targets the <code v-pre>Animal</code> superclass (assuming <code v-pre>Cat</code> and <code v-pre>Dog</code> inherits from the <code v-pre>Animal</code> class) instead of repeating the code for each animal type.</p>
-                      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PetShelter2</span> </span>{<br></span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Animal[] animals = <span class="hljs-keyword">new</span> Animal[]{<br></span><span>            <span class="hljs-keyword">new</span> Cat(<span class="hljs-string">"Mittens"</span>),<br></span><span>            <span class="hljs-keyword">new</span> Cat(<span class="hljs-string">"Snowball"</span>),<br></span><span>            <span class="hljs-keyword">new</span> Dog(<span class="hljs-string">"Spot"</span>)};<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{<br></span><span>        <span class="hljs-keyword">for</span> (Animal a: animals){<br></span><span>            System.out.println(a.speak());<br></span><span>        }<br></span><span>    }<br></span><span>}<br></span></code></pre>
+                      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PetShelter2</span> </span>{
+</span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Animal[] animals = <span class="hljs-keyword">new</span> Animal[]{
+</span><span>            <span class="hljs-keyword">new</span> Cat(<span class="hljs-string">"Mittens"</span>),
+</span><span>            <span class="hljs-keyword">new</span> Cat(<span class="hljs-string">"Snowball"</span>),
+</span><span>            <span class="hljs-keyword">new</span> Dog(<span class="hljs-string">"Spot"</span>)};
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+</span><span>        <span class="hljs-keyword">for</span> (Animal a: animals){
+</span><span>            System.out.println(a.speak());
+</span><span>        }
+</span><span>    }
+</span><span>}
+</span></code></pre>
                       <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
-                      <pre><code class="hljs" v-pre><span>Mittens: Meow<br></span><span>Snowball: Meow<br></span><span>Spot: Woof<br></span></code></pre>
+                      <pre><code class="hljs" v-pre><span>Mittens: Meow
+</span><span>Snowball: Meow
+</span><span>Spot: Woof
+</span></code></pre>
                       <panel type="seamless" class="algolia-no-index"><template slot="_header">
                           <p><span class="dimmed">The <code v-pre>Animal</code>, <code v-pre>Cat</code>, and <code v-pre>Dog</code> classes</span></p>
                         </template>
-                        <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Animal</span> </span>{<br></span><span><br></span><span>    <span class="hljs-keyword">protected</span> String name;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Animal</span><span class="hljs-params">(String name)</span></span>{<br></span><span>        <span class="hljs-keyword">this</span>.name = name;<br></span><span>    }<br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">speak</span><span class="hljs-params">()</span></span>{<br></span><span>        <span class="hljs-keyword">return</span> name;<br></span><span>    }<br></span><span>}<br></span></code></pre>
-                        <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Cat</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Animal</span> </span>{<br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Cat</span><span class="hljs-params">(String name)</span> </span>{<br></span><span>        <span class="hljs-keyword">super</span>(name);<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-meta">@Override</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">speak</span><span class="hljs-params">()</span> </span>{<br></span><span>        <span class="hljs-keyword">return</span> name + <span class="hljs-string">": Meow"</span>;<br></span><span>    }<br></span><span>}<br></span></code></pre>
-                        <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Dog</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Animal</span> </span>{<br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Dog</span><span class="hljs-params">(String name)</span> </span>{<br></span><span>        <span class="hljs-keyword">super</span>(name);<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-meta">@Override</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">speak</span><span class="hljs-params">()</span> </span>{<br></span><span>        <span class="hljs-keyword">return</span> name + <span class="hljs-string">": Woof"</span>;<br></span><span>    }<br></span><span>}<br></span></code></pre>
+                        <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Animal</span> </span>{
+</span><span>
+</span><span>    <span class="hljs-keyword">protected</span> String name;
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Animal</span><span class="hljs-params">(String name)</span></span>{
+</span><span>        <span class="hljs-keyword">this</span>.name = name;
+</span><span>    }
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">speak</span><span class="hljs-params">()</span></span>{
+</span><span>        <span class="hljs-keyword">return</span> name;
+</span><span>    }
+</span><span>}
+</span></code></pre>
+                        <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Cat</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Animal</span> </span>{
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Cat</span><span class="hljs-params">(String name)</span> </span>{
+</span><span>        <span class="hljs-keyword">super</span>(name);
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-meta">@Override</span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">speak</span><span class="hljs-params">()</span> </span>{
+</span><span>        <span class="hljs-keyword">return</span> name + <span class="hljs-string">": Meow"</span>;
+</span><span>    }
+</span><span>}
+</span></code></pre>
+                        <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Dog</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Animal</span> </span>{
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Dog</span><span class="hljs-params">(String name)</span> </span>{
+</span><span>        <span class="hljs-keyword">super</span>(name);
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-meta">@Override</span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">speak</span><span class="hljs-params">()</span> </span>{
+</span><span>        <span class="hljs-keyword">return</span> name + <span class="hljs-string">": Woof"</span>;
+</span><span>    }
+</span><span>}
+</span></code></pre>
                       </panel>
                       <p><span class="dimmed">Explanation: Because Java supports polymorphism, you can store both <code v-pre>Cat</code> and <code v-pre>Dog</code> objects in an array of <code v-pre>Animal</code> objects. Similarly, you can call the <code v-pre>speak</code> method on any <code v-pre>Animal</code> object (as done in the loop) and yet get different behavior from <code v-pre>Cat</code> objects and <code v-pre>Dog</code> objects.</span></p>
                       <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Suggestion: try to add an <code v-pre>Animal</code> object (e.g., <code v-pre>new Animal(&quot;Unnamed&quot;)</code>) to the <code v-pre>animals</code> array and see what happens.
@@ -316,17 +415,73 @@
                               <question>
                                 <p>The <code v-pre>Main</code> class below keeps a list of <code v-pre>Circle</code> and <code v-pre>Rectangle</code> objects and prints the area (as an <code v-pre>int</code> value) of each shape when requested.</p>
                                 <p>Add the missing variables/methods to the code below so that it produces the output given.</p>
-                                <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{<br></span><span>    <span class="hljs-comment">//TODO add your methods here</span><br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{<br></span><span>        addShape(<span class="hljs-keyword">new</span> Circle(<span class="hljs-number">5</span>));<br></span><span>        addShape(<span class="hljs-keyword">new</span> Rectangle(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>));<br></span><span>        addShape(<span class="hljs-keyword">new</span> Circle(<span class="hljs-number">10</span>));<br></span><span>        printAreas();<br></span><span>        addShape(<span class="hljs-keyword">new</span> Rectangle(<span class="hljs-number">4</span>, <span class="hljs-number">4</span>));<br></span><span>        printAreas();<br></span><span>    }<br></span><span>}<br></span></code></pre>
+                                <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+</span><span>    <span class="hljs-comment">//TODO add your methods here</span>
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+</span><span>        addShape(<span class="hljs-keyword">new</span> Circle(<span class="hljs-number">5</span>));
+</span><span>        addShape(<span class="hljs-keyword">new</span> Rectangle(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>));
+</span><span>        addShape(<span class="hljs-keyword">new</span> Circle(<span class="hljs-number">10</span>));
+</span><span>        printAreas();
+</span><span>        addShape(<span class="hljs-keyword">new</span> Rectangle(<span class="hljs-number">4</span>, <span class="hljs-number">4</span>));
+</span><span>        printAreas();
+</span><span>    }
+</span><span>}
+</span></code></pre>
                                 <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
-                                <pre><code class="hljs" v-pre><span>78<br></span><span>12<br></span><span>314<br></span><span>78<br></span><span>12<br></span><span>314<br></span><span>16<br></span></code></pre>
+                                <pre><code class="hljs" v-pre><span>78
+</span><span>12
+</span><span>314
+</span><span>78
+</span><span>12
+</span><span>314
+</span><span>16
+</span></code></pre>
                                 <p><code v-pre>Circle</code> class and <code v-pre>Rectangle</code> class is given below but you'll need to add a parent class <code v-pre>Shape</code>:</p>
-                                <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Circle</span> </span>{<br></span><span><br></span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> radius;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Circle</span><span class="hljs-params">(<span class="hljs-keyword">int</span> radius)</span> </span>{<br></span><span>        <span class="hljs-keyword">this</span>.radius = radius;<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">area</span><span class="hljs-params">()</span> </span>{<br></span><span>        <span class="hljs-keyword">return</span> (<span class="hljs-keyword">int</span>)(Math.PI * radius * radius);<br></span><span>    }<br></span><span>}<br></span></code></pre>
-                                <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Rectangle</span> </span>{<br></span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> height;<br></span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> width;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Rectangle</span><span class="hljs-params">(<span class="hljs-keyword">int</span> height, <span class="hljs-keyword">int</span> width)</span></span>{<br></span><span>        <span class="hljs-keyword">this</span>.height = height;<br></span><span>        <span class="hljs-keyword">this</span>.width = width;<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">area</span><span class="hljs-params">()</span> </span>{<br></span><span>        <span class="hljs-keyword">return</span> height * width;<br></span><span>    }<br></span><span>}<br></span></code></pre>
+                                <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Circle</span> </span>{
+</span><span>
+</span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> radius;
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Circle</span><span class="hljs-params">(<span class="hljs-keyword">int</span> radius)</span> </span>{
+</span><span>        <span class="hljs-keyword">this</span>.radius = radius;
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">area</span><span class="hljs-params">()</span> </span>{
+</span><span>        <span class="hljs-keyword">return</span> (<span class="hljs-keyword">int</span>)(Math.PI * radius * radius);
+</span><span>    }
+</span><span>}
+</span></code></pre>
+                                <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Rectangle</span> </span>{
+</span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> height;
+</span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> width;
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Rectangle</span><span class="hljs-params">(<span class="hljs-keyword">int</span> height, <span class="hljs-keyword">int</span> width)</span></span>{
+</span><span>        <span class="hljs-keyword">this</span>.height = height;
+</span><span>        <span class="hljs-keyword">this</span>.width = width;
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">area</span><span class="hljs-params">()</span> </span>{
+</span><span>        <span class="hljs-keyword">return</span> height * width;
+</span><span>    }
+</span><span>}
+</span></code></pre>
                                 <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> You may use an array of size 100 to store the shapes.</p>
                                 <panel type="seamless" class="algolia-no-index"><template slot="_header">
                                     <p>Partial solution</p>
                                   </template>
-                                  <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{<br></span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Shape[] shapes = <span class="hljs-keyword">new</span> Shape[<span class="hljs-number">100</span>];<br></span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> shapeCount = <span class="hljs-number">0</span>;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addShape</span><span class="hljs-params">(Shape s)</span></span>{<br></span><span>        shapes[shapeCount] = s;<br></span><span>        shapeCount++;<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-comment">// ...</span><br></span><span><br></span><span>}<br></span></code></pre>
+                                  <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+</span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Shape[] shapes = <span class="hljs-keyword">new</span> Shape[<span class="hljs-number">100</span>];
+</span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> shapeCount = <span class="hljs-number">0</span>;
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addShape</span><span class="hljs-params">(Shape s)</span></span>{
+</span><span>        shapes[shapeCount] = s;
+</span><span>        shapeCount++;
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-comment">// ...</span>
+</span><span>
+</span><span>}
+</span></code></pre>
                                 </panel>
                               </question>
                             </panel>
@@ -340,6 +495,7 @@
             </div>
           </div>
         </div>
+        <i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i>
       </div>
 
 
@@ -347,21 +503,16 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Thu, Sep 10, 2020, 11:06:50 PM GMT+8]</small>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.16.0</a>, generated on Wed, Sep 16, 2020, 3:47:05 PM GMT+8]</small>
       </div>
     </footer>
   </div>
 </body>
-<script src="../../../markbind/js/vue.min.js"></script>
-<script src="../../../markbind/js/components.min.js"></script>
 <script src="../../../markbind/js/bootstrap-utility.min.js"></script>
-<script src="../../../markbind/js/polyfill.min.js"></script>
-<script src="../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/se-book'
-  const enableSearch = true
+  MarkBind.setupWithSearch()
 </script>
-<script src="../../../markbind/js/setup.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
   function initAlgolia() {
@@ -376,5 +527,8 @@
   MarkBind.afterSetup(initAlgolia);
 </script>
 <script src="../../../markbind/layouts/default/scripts.js"></script>
+<script>
+  if (MarkBind.AfterSetup) MarkBind.AfterSetup()
+</script>
 
 </html>

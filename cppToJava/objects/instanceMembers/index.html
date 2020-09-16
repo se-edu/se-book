@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.15.2">
+  <meta name="generator" content="MarkBind 2.16.0">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - C++ to Java: Objects: Instance Members</title>
   <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
@@ -14,11 +14,14 @@
   <link rel="stylesheet" href="../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
   <link rel="stylesheet" href="../../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../../markbind/css/github.min.css">
-  <link rel="stylesheet" href="../../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="../../../markbind/css/markbind.min.css">
+  <script src="../../../markbind/js/polyfill.min.js"></script>
+  <script src="../../../markbind/js/vue.min.js"></script>
+  <script src="../../../markbind/js/markbind.min.js"></script>
+  <script src="../../../markbind/js/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/se-book/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../../markbind/layouts/default/styles.css">
-  <link rel="stylesheet" href="../../../markbind/css/site-nav.css">
   <link rel="icon" href="/se-book/favicon.ico">
 </head>
 
@@ -258,23 +261,37 @@
                     <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-danger"><span><span aria-hidden="true" class="fas fa-not-equal"></span></span></span></span> To access an attribute of an object, Java uses <em>dot notation</em>.</p>
                     <box>
                       <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The code below uses <code v-pre>spot.x</code> which means &quot;go to the object <code v-pre>spot</code> refers to, and get the value of the attribute <code v-pre>x</code>.&quot;</p>
-                      <pre><code class="hljs java" v-pre><span>Point spot = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>);<br></span><span><span class="hljs-keyword">int</span> sum = spot.x * spot.x + spot.y * spot.y;<br></span><span>System.out.println(spot.x + <span class="hljs-string">", "</span> + spot.y + <span class="hljs-string">", "</span> + sum);<br></span></code></pre>
+                      <pre><code class="hljs java" v-pre><span>Point spot = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>);
+</span><span><span class="hljs-keyword">int</span> sum = spot.x * spot.x + spot.y * spot.y;
+</span><span>System.out.println(spot.x + <span class="hljs-string">", "</span> + spot.y + <span class="hljs-string">", "</span> + sum);
+</span></code></pre>
                       <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
-                      <pre><code class="hljs" v-pre><span>3, 4, 25<br></span></code></pre>
+                      <pre><code class="hljs" v-pre><span>3, 4, 25
+</span></code></pre>
                     </box>
-                    <p><strong>You can <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">i.e., change/modify</span><em>mutate</em></span> an object by assigning a different values to its attributes.</strong></p>
+                    <p><strong>You can <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">i.e., change/modify</span><em>mutate</em></span> an object by assigning a different values to its attributes.</strong></p>
                     <box>
                       <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This example changes the x value of the <code v-pre>Point</code> object to <code v-pre>5</code>.</p>
-                      <pre><code class="hljs java" v-pre><span>Point spot = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>);<br></span><span>spot.x = <span class="hljs-number">5</span>;<br></span><span>System.out.println(spot.x + <span class="hljs-string">", "</span> + spot.y);<br></span></code></pre>
+                      <pre><code class="hljs java" v-pre><span>Point spot = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>);
+</span><span>spot.x = <span class="hljs-number">5</span>;
+</span><span>System.out.println(spot.x + <span class="hljs-string">", "</span> + spot.y);
+</span></code></pre>
                       <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
-                      <pre><code class="hljs" v-pre><span>5, 4<br></span></code></pre>
+                      <pre><code class="hljs" v-pre><span>5, 4
+</span></code></pre>
                     </box>
                     <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-danger"><span><span aria-hidden="true" class="fas fa-not-equal"></span></span></span></span> <strong>Java uses the dot notation to invoke methods on an object too.</strong></p>
                     <box>
                       <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This example invokes the <code v-pre>translate</code> method on a <code v-pre>Point</code> object so that it moves to a different location.</p>
-                      <pre><code class="hljs java" v-pre><span>Point spot = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>);<br></span><span>System.out.println(spot.x + <span class="hljs-string">", "</span> + spot.y);<br></span><span>spot.translate(<span class="hljs-number">5</span>,<span class="hljs-number">5</span>);<br></span><span>System.out.println(spot.x + <span class="hljs-string">", "</span> + spot.y);<br></span></code></pre>
+                      <pre><code class="hljs java" v-pre><span>Point spot = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>);
+</span><span>System.out.println(spot.x + <span class="hljs-string">", "</span> + spot.y);
+</span><span>spot.translate(<span class="hljs-number">5</span>,<span class="hljs-number">5</span>);
+</span><span>System.out.println(spot.x + <span class="hljs-string">", "</span> + spot.y);
+</span></code></pre>
                       <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
-                      <pre><code class="hljs" v-pre><span>3, 4<br></span><span>8, 9<br></span></code></pre>
+                      <pre><code class="hljs" v-pre><span>3, 4
+</span><span>8, 9
+</span></code></pre>
                     </box>
                   </div>
                   <div>
@@ -289,9 +306,32 @@
                               </template>
                               <question>
                                 <p>Update the code below as described in code comments, to produce the given output.</p>
-                                <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">import</span> java.awt.Rectangle;<br></span><span><br></span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{<br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{<br></span><span>        Rectangle r = <span class="hljs-keyword">new</span> Rectangle(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">4</span>, <span class="hljs-number">6</span>);<br></span><span>        System.out.println(r);<br></span><span><br></span><span>        <span class="hljs-keyword">int</span> area;<br></span><span>        <span class="hljs-comment">//<span class="hljs-doctag">TODO:</span> add a line below to calculate the area using width and height properties of r</span><br></span><span>        <span class="hljs-comment">// and assign it to the variable area</span><br></span><span><br></span><span>        System.out.println(<span class="hljs-string">"Area: "</span> + area);<br></span><span><br></span><span>        <span class="hljs-comment">//<span class="hljs-doctag">TODO:</span> add a line here to set the size of r to 8x10 (width x height)</span><br></span><span>        <span class="hljs-comment">//Recommended: use the setSize(int width, int height) method of the Rectangle object</span><br></span><span><br></span><span>        System.out.println(r);<br></span><span>    }<br></span><span><br></span><span>}<br></span></code></pre>
+                                <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">import</span> java.awt.Rectangle;
+</span><span>
+</span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+</span><span>        Rectangle r = <span class="hljs-keyword">new</span> Rectangle(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">4</span>, <span class="hljs-number">6</span>);
+</span><span>        System.out.println(r);
+</span><span>
+</span><span>        <span class="hljs-keyword">int</span> area;
+</span><span>        <span class="hljs-comment">//<span class="hljs-doctag">TODO:</span> add a line below to calculate the area using width and height properties of r</span>
+</span><span>        <span class="hljs-comment">// and assign it to the variable area</span>
+</span><span>
+</span><span>        System.out.println(<span class="hljs-string">"Area: "</span> + area);
+</span><span>
+</span><span>        <span class="hljs-comment">//<span class="hljs-doctag">TODO:</span> add a line here to set the size of r to 8x10 (width x height)</span>
+</span><span>        <span class="hljs-comment">//Recommended: use the setSize(int width, int height) method of the Rectangle object</span>
+</span><span>
+</span><span>        System.out.println(r);
+</span><span>    }
+</span><span>
+</span><span>}
+</span></code></pre>
                                 <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
-                                <pre><code class="hljs" v-pre><span>java.awt.Rectangle[x=0,y=0,width=4,height=6]<br></span><span>Area: 24<br></span><span>java.awt.Rectangle[x=0,y=0,width=8,height=10]<br></span></code></pre>
+                                <pre><code class="hljs" v-pre><span>java.awt.Rectangle[x=0,y=0,width=4,height=6]
+</span><span>Area: 24
+</span><span>java.awt.Rectangle[x=0,y=0,width=8,height=10]
+</span></code></pre>
                                 <div slot="hint" class="algolia-no-index">
                                   <ul>
                                     <li>Area can be calculated as <code v-pre>r.width * r.height</code></li>
@@ -310,6 +350,7 @@
             </div>
           </div>
         </div>
+        <i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i>
       </div>
 
 
@@ -317,21 +358,16 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Thu, Sep 10, 2020, 11:06:50 PM GMT+8]</small>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.16.0</a>, generated on Wed, Sep 16, 2020, 3:47:05 PM GMT+8]</small>
       </div>
     </footer>
   </div>
 </body>
-<script src="../../../markbind/js/vue.min.js"></script>
-<script src="../../../markbind/js/components.min.js"></script>
 <script src="../../../markbind/js/bootstrap-utility.min.js"></script>
-<script src="../../../markbind/js/polyfill.min.js"></script>
-<script src="../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/se-book'
-  const enableSearch = true
+  MarkBind.setupWithSearch()
 </script>
-<script src="../../../markbind/js/setup.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
   function initAlgolia() {
@@ -346,5 +382,8 @@
   MarkBind.afterSetup(initAlgolia);
 </script>
 <script src="../../../markbind/layouts/default/scripts.js"></script>
+<script>
+  if (MarkBind.AfterSetup) MarkBind.AfterSetup()
+</script>
 
 </html>

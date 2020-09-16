@@ -38,7 +38,39 @@
                 <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> draw class diagram: Player, Bot, etc.</p>
               </template>
               <p>(a) Draw a class diagram to represent the following code.</p>
-              <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Player</span></span>{<br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">challenge</span><span class="hljs-params">()</span></span>;<br></span><span>}<br></span><span><br></span><span><span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Trainable</span></span>{<br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">train</span><span class="hljs-params">()</span></span>;<br></span><span>}<br></span><span><br></span><span><span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bot</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Player</span></span>{<br></span><span><br></span><span>}<br></span><span><br></span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TrainableBot</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Bot</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Trainable</span></span>{<br></span><span><br></span><span>    <span class="hljs-meta">@Override</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">challenge</span><span class="hljs-params">()</span> </span>{<br></span><span><br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-meta">@Override</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">train</span><span class="hljs-params">()</span> </span>{<br></span><span><br></span><span>    }<br></span><span>}<br></span><span><br></span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Human</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Player</span></span>{<br></span><span><br></span><span>    <span class="hljs-meta">@Override</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">challenge</span><span class="hljs-params">()</span> </span>{<br></span><span><br></span><span>    }<br></span><span>}<br></span></code></pre>
+              <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Player</span></span>{
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">challenge</span><span class="hljs-params">()</span></span>;
+</span><span>}
+</span><span>
+</span><span><span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Trainable</span></span>{
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">train</span><span class="hljs-params">()</span></span>;
+</span><span>}
+</span><span>
+</span><span><span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bot</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Player</span></span>{
+</span><span>
+</span><span>}
+</span><span>
+</span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TrainableBot</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Bot</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Trainable</span></span>{
+</span><span>
+</span><span>    <span class="hljs-meta">@Override</span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">challenge</span><span class="hljs-params">()</span> </span>{
+</span><span>
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-meta">@Override</span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">train</span><span class="hljs-params">()</span> </span>{
+</span><span>
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Human</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Player</span></span>{
+</span><span>
+</span><span>    <span class="hljs-meta">@Override</span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">challenge</span><span class="hljs-params">()</span> </span>{
+</span><span>
+</span><span>    }
+</span><span>}
+</span></code></pre>
               <p>(b) Add these association classes to the diagram:<br>
                 i. A <code v-pre>Player</code> can <em>challenge</em> another <code v-pre>Player</code> object. <code v-pre>Challenge</code> class keeps track that association between the two <code v-pre>Player</code> objects: the <em>challenger</em> and the <em>target</em> of the challenge.<br>
                 ii. A <code v-pre>Human</code> can <em>train</em> a <code v-pre>SmartBot</code> object. <code v-pre>Lesson</code> class keeps track of that association.</p>

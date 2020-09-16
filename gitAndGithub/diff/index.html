@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.15.2">
+  <meta name="generator" content="MarkBind 2.16.0">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - Git and GitHub: Checkout</title>
   <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
@@ -14,11 +14,14 @@
   <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
   <link rel="stylesheet" href="../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../markbind/css/github.min.css">
-  <link rel="stylesheet" href="../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="../../markbind/css/markbind.min.css">
+  <script src="../../markbind/js/polyfill.min.js"></script>
+  <script src="../../markbind/js/vue.min.js"></script>
+  <script src="../../markbind/js/markbind.min.js"></script>
+  <script src="../../markbind/js/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/se-book/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../markbind/layouts/default/styles.css">
-  <link rel="stylesheet" href="../../markbind/css/site-nav.css">
   <link rel="icon" href="/se-book/favicon.ico">
 </head>
 
@@ -271,11 +274,28 @@
                       </tab>
                       <tab class="algolia-no-index"><template slot="_header">CLI</template>
                         <div>
-                          <pre><code class="hljs sh" v-pre><span>git show &lt; part-of-commit-hash &gt;<br></span></code></pre>
+                          <pre><code class="hljs sh" v-pre><span>git show &lt; part-of-commit-hash &gt;
+</span></code></pre>
                           <p>Example:</p>
-                          <pre><code class="hljs" v-pre><span>git show 251b4cf<br></span></code></pre>
+                          <pre><code class="hljs" v-pre><span>git show 251b4cf
+</span></code></pre>
                           <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
-                          <pre><code class="hljs diff" v-pre><span>commit 5bc0e30635a754908dbdd3d2d833756cc4b52ef3<br></span><span>Author: … &lt; … &gt;<br></span><span>Date:   Sat Jul 8 16:50:27 2017 +0800<br></span><span><br></span><span>    fruits.txt: replace banana with berries<br></span><span><br></span><span>diff --git a/fruits.txt b/fruits.txt<br></span><span>index 15b57f7..17f4528 100644<br></span><span><span class="hljs-comment">--- a/fruits.txt</span><br></span><span><span class="hljs-comment">+++ b/fruits.txt</span><br></span><span><span class="hljs-meta">@@ -1,3 +1,3 @@</span><br></span><span> apples<br></span><span><span class="hljs-deletion">-bananas</span><br></span><span><span class="hljs-addition">+berries</span><br></span><span> cherries<br></span></code></pre>
+                          <pre><code class="hljs diff" v-pre><span>commit 5bc0e30635a754908dbdd3d2d833756cc4b52ef3
+</span><span>Author: … &lt; … &gt;
+</span><span>Date:   Sat Jul 8 16:50:27 2017 +0800
+</span><span>
+</span><span>    fruits.txt: replace banana with berries
+</span><span>
+</span><span>diff --git a/fruits.txt b/fruits.txt
+</span><span>index 15b57f7..17f4528 100644
+</span><span><span class="hljs-comment">--- a/fruits.txt</span>
+</span><span><span class="hljs-comment">+++ b/fruits.txt</span>
+</span><span><span class="hljs-meta">@@ -1,3 +1,3 @@</span>
+</span><span> apples
+</span><span><span class="hljs-deletion">-bananas</span>
+</span><span><span class="hljs-addition">+berries</span>
+</span><span> cherries
+</span></code></pre>
                         </div>
                       </tab>
                     </tabs>
@@ -319,6 +339,7 @@
             </div>
           </div>
         </div>
+        <i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i>
       </div>
 
 
@@ -326,21 +347,16 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Thu, Sep 10, 2020, 11:06:50 PM GMT+8]</small>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.16.0</a>, generated on Wed, Sep 16, 2020, 3:47:05 PM GMT+8]</small>
       </div>
     </footer>
   </div>
 </body>
-<script src="../../markbind/js/vue.min.js"></script>
-<script src="../../markbind/js/components.min.js"></script>
 <script src="../../markbind/js/bootstrap-utility.min.js"></script>
-<script src="../../markbind/js/polyfill.min.js"></script>
-<script src="../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/se-book'
-  const enableSearch = true
+  MarkBind.setupWithSearch()
 </script>
-<script src="../../markbind/js/setup.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
   function initAlgolia() {
@@ -355,5 +371,8 @@
   MarkBind.afterSetup(initAlgolia);
 </script>
 <script src="../../markbind/layouts/default/scripts.js"></script>
+<script>
+  if (MarkBind.AfterSetup) MarkBind.AfterSetup()
+</script>
 
 </html>

@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.15.2">
+  <meta name="generator" content="MarkBind 2.16.0">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - C++ to Java: Collections : The ArrayList Class</title>
   <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
@@ -14,11 +14,14 @@
   <link rel="stylesheet" href="../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
   <link rel="stylesheet" href="../../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../../markbind/css/github.min.css">
-  <link rel="stylesheet" href="../../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="../../../markbind/css/markbind.min.css">
+  <script src="../../../markbind/js/polyfill.min.js"></script>
+  <script src="../../../markbind/js/vue.min.js"></script>
+  <script src="../../../markbind/js/markbind.min.js"></script>
+  <script src="../../../markbind/js/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/se-book/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../../markbind/layouts/default/styles.css">
-  <link rel="stylesheet" href="../../../markbind/css/site-nav.css">
   <link rel="icon" href="/se-book/favicon.ico">
 </head>
 
@@ -255,9 +258,64 @@
                 <div id="main">
                   <div>
                     <p>The <code v-pre>ArrayList</code> class is a resizable-array implementation of the <code v-pre>List</code> interface. Unlike a normal <code v-pre>array</code>, an <code v-pre>ArrayList</code> can grow in size as you add more items to it. The example below illustrate some of the useful methods of the <code v-pre>ArrayList</code> class using an <code v-pre>ArrayList</code> of <code v-pre>String</code> objects.</p>
-                    <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">import</span> java.util.ArrayList;<br></span><span><br></span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ArrayListDemo</span> </span>{<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String args[])</span> </span>{<br></span><span>        ArrayList&lt;String&gt; items = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();<br></span><span><br></span><span>        System.out.println(<span class="hljs-string">"Before adding any items:"</span> + items);<br></span><span><br></span><span>        items.add(<span class="hljs-string">"Apple"</span>);<br></span><span>        items.add(<span class="hljs-string">"Box"</span>);<br></span><span>        items.add(<span class="hljs-string">"Cup"</span>);<br></span><span>        items.add(<span class="hljs-string">"Dart"</span>);<br></span><span>        print(<span class="hljs-string">"After adding four items: "</span> + items);<br></span><span><br></span><span>        items.remove(<span class="hljs-string">"Box"</span>); <span class="hljs-comment">// remove item "Box"</span><br></span><span>        print(<span class="hljs-string">"After removing Box: "</span> + items);<br></span><span><br></span><span>        items.add(<span class="hljs-number">1</span>, <span class="hljs-string">"Banana"</span>); <span class="hljs-comment">// add "Banana" at index 1</span><br></span><span>        print(<span class="hljs-string">"After adding Banana: "</span> + items);<br></span><span><br></span><span>        items.add(<span class="hljs-string">"Egg"</span>); <span class="hljs-comment">// add "Egg", will be added to the end</span><br></span><span>        items.add(<span class="hljs-string">"Cup"</span>); <span class="hljs-comment">// add another "Cup"</span><br></span><span>        print(<span class="hljs-string">"After adding Egg: "</span> + items);<br></span><span><br></span><span>        print(<span class="hljs-string">"Number of items: "</span> + items.size());<br></span><span><br></span><span>        print(<span class="hljs-string">"Index of Cup: "</span> + items.indexOf(<span class="hljs-string">"Cup"</span>));<br></span><span>        print(<span class="hljs-string">"Index of Zebra: "</span> + items.indexOf(<span class="hljs-string">"Zebra"</span>));<br></span><span><br></span><span>        print(<span class="hljs-string">"Item at index 3 is: "</span> + items.get(<span class="hljs-number">2</span>));<br></span><span><br></span><span>        print(<span class="hljs-string">"Do we have a Box?: "</span> + items.contains(<span class="hljs-string">"Box"</span>));<br></span><span>        print(<span class="hljs-string">"Do we have an Apple?: "</span> + items.contains(<span class="hljs-string">"Apple"</span>));<br></span><span><br></span><span>        items.clear();<br></span><span>        print(<span class="hljs-string">"After clearing: "</span> + items);<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">(String text)</span> </span>{<br></span><span>        System.out.println(text);<br></span><span>    }<br></span><span>}<br></span></code></pre>
+                    <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">import</span> java.util.ArrayList;
+</span><span>
+</span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ArrayListDemo</span> </span>{
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String args[])</span> </span>{
+</span><span>        ArrayList&lt;String&gt; items = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+</span><span>
+</span><span>        System.out.println(<span class="hljs-string">"Before adding any items:"</span> + items);
+</span><span>
+</span><span>        items.add(<span class="hljs-string">"Apple"</span>);
+</span><span>        items.add(<span class="hljs-string">"Box"</span>);
+</span><span>        items.add(<span class="hljs-string">"Cup"</span>);
+</span><span>        items.add(<span class="hljs-string">"Dart"</span>);
+</span><span>        print(<span class="hljs-string">"After adding four items: "</span> + items);
+</span><span>
+</span><span>        items.remove(<span class="hljs-string">"Box"</span>); <span class="hljs-comment">// remove item "Box"</span>
+</span><span>        print(<span class="hljs-string">"After removing Box: "</span> + items);
+</span><span>
+</span><span>        items.add(<span class="hljs-number">1</span>, <span class="hljs-string">"Banana"</span>); <span class="hljs-comment">// add "Banana" at index 1</span>
+</span><span>        print(<span class="hljs-string">"After adding Banana: "</span> + items);
+</span><span>
+</span><span>        items.add(<span class="hljs-string">"Egg"</span>); <span class="hljs-comment">// add "Egg", will be added to the end</span>
+</span><span>        items.add(<span class="hljs-string">"Cup"</span>); <span class="hljs-comment">// add another "Cup"</span>
+</span><span>        print(<span class="hljs-string">"After adding Egg: "</span> + items);
+</span><span>
+</span><span>        print(<span class="hljs-string">"Number of items: "</span> + items.size());
+</span><span>
+</span><span>        print(<span class="hljs-string">"Index of Cup: "</span> + items.indexOf(<span class="hljs-string">"Cup"</span>));
+</span><span>        print(<span class="hljs-string">"Index of Zebra: "</span> + items.indexOf(<span class="hljs-string">"Zebra"</span>));
+</span><span>
+</span><span>        print(<span class="hljs-string">"Item at index 3 is: "</span> + items.get(<span class="hljs-number">2</span>));
+</span><span>
+</span><span>        print(<span class="hljs-string">"Do we have a Box?: "</span> + items.contains(<span class="hljs-string">"Box"</span>));
+</span><span>        print(<span class="hljs-string">"Do we have an Apple?: "</span> + items.contains(<span class="hljs-string">"Apple"</span>));
+</span><span>
+</span><span>        items.clear();
+</span><span>        print(<span class="hljs-string">"After clearing: "</span> + items);
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">(String text)</span> </span>{
+</span><span>        System.out.println(text);
+</span><span>    }
+</span><span>}
+</span></code></pre>
                     <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
-                    <pre><code class="hljs" v-pre><span>Before adding any items:[]<br></span><span>After adding four items: [Apple, Box, Cup, Dart]<br></span><span>After removing Box: [Apple, Cup, Dart]<br></span><span>After adding Banana: [Apple, Banana, Cup, Dart]<br></span><span>After adding Egg: [Apple, Banana, Cup, Dart, Egg, Cup]<br></span><span>Number of items: 6<br></span><span>Index of Cup: 2<br></span><span>Index of Zebra: -1<br></span><span>Item at index 3 is: Cup<br></span><span>Do we have a Box?: false<br></span><span>Do we have an Apple?: true<br></span><span>After clearing: []<br></span></code></pre>
+                    <pre><code class="hljs" v-pre><span>Before adding any items:[]
+</span><span>After adding four items: [Apple, Box, Cup, Dart]
+</span><span>After removing Box: [Apple, Cup, Dart]
+</span><span>After adding Banana: [Apple, Banana, Cup, Dart]
+</span><span>After adding Egg: [Apple, Banana, Cup, Dart, Egg, Cup]
+</span><span>Number of items: 6
+</span><span>Index of Cup: 2
+</span><span>Index of Zebra: -1
+</span><span>Item at index 3 is: Cup
+</span><span>Do we have a Box?: false
+</span><span>Do we have an Apple?: true
+</span><span>After clearing: []
+</span></code></pre>
                     <p><small>[<a href="https://repl.it/@seedu/Demo-ArrayList">Try the above code on Repl.it</a>]</small></p>
                   </div>
                   <div>
@@ -285,12 +343,51 @@
                               <question>
                                 <p>Add the missing methods to the class given below so that it produces the output given.</p>
                                 <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Use an <code v-pre>ArrayList</code> to store the numbers.</p>
-                                <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{<br></span><span><br></span><span>    <span class="hljs-comment">//<span class="hljs-doctag">TODO:</span> add your methods here</span><br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{<br></span><span>        System.out.println(<span class="hljs-string">"Adding numbers to the list"</span>);<br></span><span>        addNumber(<span class="hljs-number">3</span>);<br></span><span>        addNumber(<span class="hljs-number">8</span>);<br></span><span>        addNumber(<span class="hljs-number">24</span>);<br></span><span>        System.out.println(<span class="hljs-string">"The total is: "</span> + getTotal());<br></span><span>        System.out.println(<span class="hljs-string">"8 in the list : "</span> + isFound(<span class="hljs-number">8</span>) );<br></span><span>        System.out.println(<span class="hljs-string">"5 in the list : "</span> + isFound(<span class="hljs-number">5</span>) );<br></span><span>        removeNumber(<span class="hljs-number">8</span>);<br></span><span>        System.out.println(<span class="hljs-string">"The total is: "</span> + getTotal());<br></span><span>    }<br></span><span><br></span><span>}<br></span></code></pre>
+                                <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+</span><span>
+</span><span>    <span class="hljs-comment">//<span class="hljs-doctag">TODO:</span> add your methods here</span>
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+</span><span>        System.out.println(<span class="hljs-string">"Adding numbers to the list"</span>);
+</span><span>        addNumber(<span class="hljs-number">3</span>);
+</span><span>        addNumber(<span class="hljs-number">8</span>);
+</span><span>        addNumber(<span class="hljs-number">24</span>);
+</span><span>        System.out.println(<span class="hljs-string">"The total is: "</span> + getTotal());
+</span><span>        System.out.println(<span class="hljs-string">"8 in the list : "</span> + isFound(<span class="hljs-number">8</span>) );
+</span><span>        System.out.println(<span class="hljs-string">"5 in the list : "</span> + isFound(<span class="hljs-number">5</span>) );
+</span><span>        removeNumber(<span class="hljs-number">8</span>);
+</span><span>        System.out.println(<span class="hljs-string">"The total is: "</span> + getTotal());
+</span><span>    }
+</span><span>
+</span><span>}
+</span></code></pre>
                                 <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
-                                <pre><code class="hljs" v-pre><span>Adding numbers to the list<br></span><span>[3]<br></span><span>[3, 8]<br></span><span>[3, 8, 24]<br></span><span>The total is: 35<br></span><span>8 in the list : true<br></span><span>5 in the list : false<br></span><span>[3, 24]<br></span><span>The total is: 27<br></span></code></pre>
+                                <pre><code class="hljs" v-pre><span>Adding numbers to the list
+</span><span>[3]
+</span><span>[3, 8]
+</span><span>[3, 8, 24]
+</span><span>The total is: 35
+</span><span>8 in the list : true
+</span><span>5 in the list : false
+</span><span>[3, 24]
+</span><span>The total is: 27
+</span></code></pre>
                                 <div slot="hint" class="algolia-no-index">
                                   <p>Partial solution:</p>
-                                  <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">import</span> java.util.ArrayList;<br></span><span><br></span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{<br></span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> ArrayList&lt;Integer&gt; numbers = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addNumber</span><span class="hljs-params">(<span class="hljs-keyword">int</span> i)</span> </span>{<br></span><span>        numbers.add(Integer.valueOf(i));<br></span><span>        System.out.println(numbers);<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-comment">// ...</span><br></span><span><br></span><span>}<br></span></code></pre>
+                                  <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">import</span> java.util.ArrayList;
+</span><span>
+</span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+</span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> ArrayList&lt;Integer&gt; numbers = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addNumber</span><span class="hljs-params">(<span class="hljs-keyword">int</span> i)</span> </span>{
+</span><span>        numbers.add(Integer.valueOf(i));
+</span><span>        System.out.println(numbers);
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-comment">// ...</span>
+</span><span>
+</span><span>}
+</span></code></pre>
                                 </div>
                               </question>
                             </panel>
@@ -304,6 +401,7 @@
             </div>
           </div>
         </div>
+        <i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i>
       </div>
 
 
@@ -311,21 +409,16 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Thu, Sep 10, 2020, 11:06:50 PM GMT+8]</small>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.16.0</a>, generated on Wed, Sep 16, 2020, 3:47:05 PM GMT+8]</small>
       </div>
     </footer>
   </div>
 </body>
-<script src="../../../markbind/js/vue.min.js"></script>
-<script src="../../../markbind/js/components.min.js"></script>
 <script src="../../../markbind/js/bootstrap-utility.min.js"></script>
-<script src="../../../markbind/js/polyfill.min.js"></script>
-<script src="../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/se-book'
-  const enableSearch = true
+  MarkBind.setupWithSearch()
 </script>
-<script src="../../../markbind/js/setup.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
   function initAlgolia() {
@@ -340,5 +433,8 @@
   MarkBind.afterSetup(initAlgolia);
 </script>
 <script src="../../../markbind/layouts/default/scripts.js"></script>
+<script>
+  if (MarkBind.AfterSetup) MarkBind.AfterSetup()
+</script>
 
 </html>

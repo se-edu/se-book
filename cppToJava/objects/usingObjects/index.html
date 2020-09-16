@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.15.2">
+  <meta name="generator" content="MarkBind 2.16.0">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - C++ to Java: Objects: Using Java Objects</title>
   <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
@@ -14,11 +14,14 @@
   <link rel="stylesheet" href="../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
   <link rel="stylesheet" href="../../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../../markbind/css/github.min.css">
-  <link rel="stylesheet" href="../../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="../../../markbind/css/markbind.min.css">
+  <script src="../../../markbind/js/polyfill.min.js"></script>
+  <script src="../../../markbind/js/vue.min.js"></script>
+  <script src="../../../markbind/js/markbind.min.js"></script>
+  <script src="../../../markbind/js/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/se-book/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../../markbind/layouts/default/styles.css">
-  <link rel="stylesheet" href="../../../markbind/css/site-nav.css">
   <link rel="icon" href="/se-book/favicon.ico">
 </head>
 
@@ -276,13 +279,22 @@
                       </div>
                       <p><strong>Before using a class in your code, you need to <code v-pre>import</code> the class.</strong> <code v-pre>import</code> statements appear at the top of the code.</p>
                       <box>
-                        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This example imports the <code v-pre>java.awt.Point</code> class (i.e., the <code v-pre>Point</code> class in the <code v-pre>java.awt</code> package) -- which can be used to represent <span for="pop:usingObjects-coordinates" v-b-popover.hover.top.html="popoverGenerator" v-b-tooltip.hover.top.html="tooltipContentGetter" v-on:mouseover="$refs['pop:usingObjects-coordinates'].show()" class="trigger">the coordinates of a location in a Cartesian plane</span> -- and use it in the <code v-pre>main</code> method.</p>
-                        <span id="pop:usingObjects-coordinates" placement="top" data-mb-component-type="popover" v-b-popover.hover.top.html="popoverInnerGenerator" class="trigger"><span data-mb-html-for="header">Coordinates of a location in a Cartesian plane</span>
-                          <div data-mb-html-for="content">
+                        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This example imports the <code v-pre>java.awt.Point</code> class (i.e., the <code v-pre>Point</code> class in the <code v-pre>java.awt</code> package) -- which can be used to represent <trigger for="pop:usingObjects-coordinates">the coordinates of a location in a Cartesian plane</trigger> -- and use it in the <code v-pre>main</code> method.</p>
+                        <span id="pop:usingObjects-coordinates" placement="top" data-mb-component-type="popover" v-b-popover.hover.top.html="popoverInnerGetters" class="trigger"><span data-mb-slot-name="header">Coordinates of a location in a Cartesian plane</span>
+                          <div data-mb-slot-name="content">
                             <p>In mathematical notation, points are often written in parentheses with a comma separating the coordinates. For example, <code v-pre>(0,0)</code> indicates the origin, and <code v-pre>(x,y)</code> indicates the point <code v-pre>x</code> units to the right and <code v-pre>y</code> units up from the origin.</p>
                           </div>
                         </span>
-                        <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">import</span> java.awt.Point;<br></span><span><br></span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span></span>{<br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{<br></span><span>        Point spot = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>);<br></span><span>        <span class="hljs-keyword">int</span> x = spot.x;<br></span><span>        System.out.println(x);<br></span><span>   }<br></span><span>}<br></span></code></pre>
+                        <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">import</span> java.awt.Point;
+</span><span>
+</span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span></span>{
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+</span><span>        Point spot = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>);
+</span><span>        <span class="hljs-keyword">int</span> x = spot.x;
+</span><span>        System.out.println(x);
+</span><span>   }
+</span><span>}
+</span></code></pre>
                       </box>
                       <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> You might wonder why we can use the <code v-pre>System</code> class without importing it. <code v-pre>System</code> belongs to <strong>the <code v-pre>java.lang</code> package, which is imported automatically</strong>.</p>
                     </div>
@@ -291,7 +303,8 @@
                       <p><strong>To create a new object, you have to use the <code v-pre>new</code> operator</strong></p>
                       <box>
                         <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This line shows how to create a new <code v-pre>Point</code> object using the <code v-pre>new</code> operator:</p>
-                        <pre><code class="hljs java" v-pre><span>Point spot = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>);<br></span></code></pre>
+                        <pre><code class="hljs java" v-pre><span>Point spot = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>);
+</span></code></pre>
                       </box>
                     </div>
                   </div>
@@ -311,9 +324,20 @@
                                   <li>The <code v-pre>Rectangle</code> class is found in the <code v-pre>java.awt</code> package.</li>
                                   <li>The parameters you need to supply when creating new <code v-pre>Rectangle</code> objects are <code v-pre>(int x, int y, int width, int height)</code>.</li>
                                 </ul>
-                                <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{<br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{<br></span><span>        Rectangle r;<br></span><span><br></span><span>        <span class="hljs-comment">// TODO create a Rectangle object that has the properties x=0, y=0, width=5, height=10</span><br></span><span>        <span class="hljs-comment">// assign it to r</span><br></span><span><br></span><span>        System.out.println(r);<br></span><span>    }<br></span><span>}<br></span></code></pre>
+                                <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+</span><span>        Rectangle r;
+</span><span>
+</span><span>        <span class="hljs-comment">// TODO create a Rectangle object that has the properties x=0, y=0, width=5, height=10</span>
+</span><span>        <span class="hljs-comment">// assign it to r</span>
+</span><span>
+</span><span>        System.out.println(r);
+</span><span>    }
+</span><span>}
+</span></code></pre>
                                 <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
-                                <pre><code class="hljs" v-pre><span>java.awt.Rectangle[x=0,y=0,width=5,height=10]<br></span></code></pre>
+                                <pre><code class="hljs" v-pre><span>java.awt.Rectangle[x=0,y=0,width=5,height=10]
+</span></code></pre>
                                 <div slot="hint" class="algolia-no-index">
                                   <ul>
                                     <li>Import the <code v-pre>java.awt.Rectangle</code> class</li>
@@ -332,6 +356,7 @@
             </div>
           </div>
         </div>
+        <i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i>
       </div>
 
 
@@ -339,21 +364,16 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Thu, Sep 10, 2020, 11:06:50 PM GMT+8]</small>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.16.0</a>, generated on Wed, Sep 16, 2020, 3:47:05 PM GMT+8]</small>
       </div>
     </footer>
   </div>
 </body>
-<script src="../../../markbind/js/vue.min.js"></script>
-<script src="../../../markbind/js/components.min.js"></script>
 <script src="../../../markbind/js/bootstrap-utility.min.js"></script>
-<script src="../../../markbind/js/polyfill.min.js"></script>
-<script src="../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/se-book'
-  const enableSearch = true
+  MarkBind.setupWithSearch()
 </script>
-<script src="../../../markbind/js/setup.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
   function initAlgolia() {
@@ -368,5 +388,8 @@
   MarkBind.afterSetup(initAlgolia);
 </script>
 <script src="../../../markbind/layouts/default/scripts.js"></script>
+<script>
+  if (MarkBind.AfterSetup) MarkBind.AfterSetup()
+</script>
 
 </html>

@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.15.2">
+  <meta name="generator" content="MarkBind 2.16.0">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - C++ to Java: Objects: Using Java Objects</title>
   <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
@@ -14,11 +14,14 @@
   <link rel="stylesheet" href="../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
   <link rel="stylesheet" href="../../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../../markbind/css/github.min.css">
-  <link rel="stylesheet" href="../../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="../../../markbind/css/markbind.min.css">
+  <script src="../../../markbind/js/polyfill.min.js"></script>
+  <script src="../../../markbind/js/vue.min.js"></script>
+  <script src="../../../markbind/js/markbind.min.js"></script>
+  <script src="../../../markbind/js/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/se-book/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../../markbind/layouts/default/styles.css">
-  <link rel="stylesheet" href="../../../markbind/css/site-nav.css">
   <link rel="icon" href="/se-book/favicon.ico">
 </head>
 
@@ -264,14 +267,19 @@
                     </ul>
                     <box>
                       <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Here's a class called <code v-pre>Time</code>, intended to represent a moment in time. It has three attributes and no methods.</p>
-                      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Time</span> </span>{<br></span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> hour;<br></span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> minute;<br></span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> second;<br></span><span>}<br></span></code></pre>
+                      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Time</span> </span>{
+</span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> hour;
+</span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> minute;
+</span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> second;
+</span><span>}
+</span></code></pre>
                     </box>
-                    <p>You can give a class any name you like. <strong>The Java convention is to use <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">e.g., <code v-pre>MyHelloWord</code> rather than <code v-pre>myHelloWorld</code> or <code v-pre>myhelloword</code> or <code v-pre>my_hello_world</code></span>PascalCase</span> format for class names</strong>.</p>
-                    <p>The code is <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">there are exceptions to this rule</span>usually</span> placed in a file whose name matches the class <span class="dimmed">e.g., the <code v-pre>Time</code> class should be in a file named <code v-pre>Time.java</code></span>.</p>
-                    <p>When a class is <code v-pre>public</code> <span class="dimmed">(e.g., the <code v-pre>Time</code> class in the above example)</span> it can be used in other classes. But the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">Attributes are also called <strong>instance variables</strong>, because each instance has its own variables.</span>instance variables</span> that are <code v-pre>private</code> <span class="dimmed">(e.g., the <code v-pre>hour</code>, <code v-pre>minute</code> and <code v-pre>second</code> attributes of the <code v-pre>Time</code> class)</span> can only be accessed from inside the <code v-pre>Time</code> class.</p>
+                    <p>You can give a class any name you like. <strong>The Java convention is to use <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">e.g., <code v-pre>MyHelloWord</code> rather than <code v-pre>myHelloWorld</code> or <code v-pre>myhelloword</code> or <code v-pre>my_hello_world</code></span>PascalCase</span> format for class names</strong>.</p>
+                    <p>The code is <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">there are exceptions to this rule</span>usually</span> placed in a file whose name matches the class <span class="dimmed">e.g., the <code v-pre>Time</code> class should be in a file named <code v-pre>Time.java</code></span>.</p>
+                    <p>When a class is <code v-pre>public</code> <span class="dimmed">(e.g., the <code v-pre>Time</code> class in the above example)</span> it can be used in other classes. But the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">Attributes are also called <strong>instance variables</strong>, because each instance has its own variables.</span>instance variables</span> that are <code v-pre>private</code> <span class="dimmed">(e.g., the <code v-pre>hour</code>, <code v-pre>minute</code> and <code v-pre>second</code> attributes of the <code v-pre>Time</code> class)</span> can only be accessed from inside the <code v-pre>Time</code> class.</p>
                     <h5 id="constructors">Constructors<a class="fa fa-anchor" href="#constructors" onclick="event.stopPropagation()"></a></h5>
                     <div class="indented">
-                      <p>The syntax for <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">special methods that construct the object and initialize the instance variables</span>constructors</span> is similar to that of other methods, except:</p>
+                      <p>The syntax for <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">special methods that construct the object and initialize the instance variables</span>constructors</span> is similar to that of other methods, except:</p>
                       <ul>
                         <li>The name of the constructor is the same as the name of the class.</li>
                         <li>The keyword <code v-pre>static</code> is omitted.</li>
@@ -280,15 +288,25 @@
                       <p>When you invoke <code v-pre>new</code>, Java creates the object and calls your constructor to initialize the instance variables. When the constructor is done, it returns a reference to the new object.</p>
                       <box>
                         <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Here is an example constructor for the <code v-pre>Time</code> class:</p>
-                        <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Time</span><span class="hljs-params">()</span> </span>{<br></span><span>    hour = <span class="hljs-number">0</span>;<br></span><span>    minute = <span class="hljs-number">0</span>;<br></span><span>    second = <span class="hljs-number">0</span>;<br></span><span>}<br></span></code></pre>
+                        <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Time</span><span class="hljs-params">()</span> </span>{
+</span><span>    hour = <span class="hljs-number">0</span>;
+</span><span>    minute = <span class="hljs-number">0</span>;
+</span><span>    second = <span class="hljs-number">0</span>;
+</span><span>}
+</span></code></pre>
                         <p>This constructor does not take any arguments. Each line initializes an instance variable to <code v-pre>0</code> (which in this example means midnight).
                           Now you can create <code v-pre>Time</code> objects.</p>
                         <p><code class="hljs inline java" v-pre>Time time = <span class="hljs-keyword">new</span> Time();</code></p>
                       </box>
-                      <p>Like other methods, constructors can be <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">i.e., you can provide multiple constructors with different parameters</span>overloaded</span>.</p>
+                      <p>Like other methods, constructors can be <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">i.e., you can provide multiple constructors with different parameters</span>overloaded</span>.</p>
                       <box>
                         <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> You can add another constructor to the <code v-pre>Time</code> class to allow creating <code v-pre>Time</code> objects that are initialized to a specific time:</p>
-                        <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Time</span><span class="hljs-params">(<span class="hljs-keyword">int</span> h, <span class="hljs-keyword">int</span> m, <span class="hljs-keyword">int</span> s)</span> </span>{<br></span><span>    hour = h;<br></span><span>    minute = m;<br></span><span>    second = s;<br></span><span>}<br></span></code></pre>
+                        <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Time</span><span class="hljs-params">(<span class="hljs-keyword">int</span> h, <span class="hljs-keyword">int</span> m, <span class="hljs-keyword">int</span> s)</span> </span>{
+</span><span>    hour = h;
+</span><span>    minute = m;
+</span><span>    second = s;
+</span><span>}
+</span></code></pre>
                         <p>Here's how you can invoke the new constructor:
                           <code class="hljs inline java" v-pre>Time justBeforeMidnight = <span class="hljs-keyword">new</span> Time(<span class="hljs-number">11</span>, <span class="hljs-number">59</span>, <span class="hljs-number">59</span>);</code>
                         </p>
@@ -297,23 +315,41 @@
                     </div>
                     <h5 id="this-keyword"><code v-pre>this</code> keyword<a class="fa fa-anchor" href="#this-keyword" onclick="event.stopPropagation()"></a></h5>
                     <div class="indented">
-                      <p><strong>The <code v-pre>this</code> keyword is a reference variable in Java that refers to the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">i.e., the enclosing object, or <em>myself</em></span>current object</span>.</strong> You can use <code v-pre>this</code> the same way you use the name of any other object. For example, you can read and write the instance variables of <code v-pre>this</code>, and you can pass <code v-pre>this</code> as an argument to other methods. But you do not declare <code v-pre>this</code>, and you can’t make an assignment to it.</p>
+                      <p><strong>The <code v-pre>this</code> keyword is a reference variable in Java that refers to the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">i.e., the enclosing object, or <em>myself</em></span>current object</span>.</strong> You can use <code v-pre>this</code> the same way you use the name of any other object. For example, you can read and write the instance variables of <code v-pre>this</code>, and you can pass <code v-pre>this</code> as an argument to other methods. But you do not declare <code v-pre>this</code>, and you can’t make an assignment to it.</p>
                       <box>
                         <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In the following version of the constructor, the names and types of the parameters are the same as the instance variables (parameters don’t have to use the same names, but that’s a common style). As a result, the parameters <strong><em>shadow</em></strong> (or hide) the instance variables, so the keyword <code v-pre>this</code> is necessary to tell them apart.</p>
-                        <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Time</span><span class="hljs-params">(<span class="hljs-keyword">int</span> hour, <span class="hljs-keyword">int</span> minute, <span class="hljs-keyword">int</span> second)</span> </span>{<br></span><span>    <span class="hljs-keyword">this</span>.hour = hour;<br></span><span>    <span class="hljs-keyword">this</span>.minute = minute;<br></span><span>    <span class="hljs-keyword">this</span>.second = second;<br></span><span>}<br></span></code></pre>
+                        <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Time</span><span class="hljs-params">(<span class="hljs-keyword">int</span> hour, <span class="hljs-keyword">int</span> minute, <span class="hljs-keyword">int</span> second)</span> </span>{
+</span><span>    <span class="hljs-keyword">this</span>.hour = hour;
+</span><span>    <span class="hljs-keyword">this</span>.minute = minute;
+</span><span>    <span class="hljs-keyword">this</span>.second = second;
+</span><span>}
+</span></code></pre>
                       </box>
                       <p><strong><code v-pre>this</code> can be used to refer to a constructor of a class within the same class too.</strong></p>
                       <box>
                         <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In this example the constructor <code v-pre>Time()</code> uses the <code v-pre>this</code> keyword to call its own overloaded constructor <code v-pre>Time(int, int, int)</code></p>
-                        <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Time</span><span class="hljs-params">()</span> </span>{<br></span><span class="highlighted">    <span class="hljs-keyword">this</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>); <span class="hljs-comment">// call the overloaded constructor</span><br></span><span>}<br></span><span><br></span><span class="highlighted"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Time</span><span class="hljs-params">(<span class="hljs-keyword">int</span> hour, <span class="hljs-keyword">int</span> minute, <span class="hljs-keyword">int</span> second)</span> </span>{<br></span><span class="highlighted">    <span class="hljs-comment">// ...</span><br></span><span class="highlighted">}<br></span><span><br></span></code></pre>
+                        <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Time</span><span class="hljs-params">()</span> </span>{
+</span><span class="highlighted">    <span class="hljs-keyword">this</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>); <span class="hljs-comment">// call the overloaded constructor</span>
+</span><span>}
+</span><span>
+</span><span class="highlighted"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Time</span><span class="hljs-params">(<span class="hljs-keyword">int</span> hour, <span class="hljs-keyword">int</span> minute, <span class="hljs-keyword">int</span> second)</span> </span>{
+</span><span class="highlighted">    <span class="hljs-comment">// ...</span>
+</span><span class="highlighted">}
+</span><span>
+</span></code></pre>
                       </box>
                       <h5 id="instance-methods">Instance methods<a class="fa fa-anchor" href="#instance-methods" onclick="event.stopPropagation()"></a></h5>
                       <p><strong>You can add methods to a class which can then be used from the objects of that class.</strong> These <em>instance</em> methods do not have the <code v-pre>static</code> keyword in the method signature. Instance methods can access attributes of the class.</p>
                       <box>
                         <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Here's how you can add a method to the <code v-pre>Time</code> class to get the number of seconds passed till midnight.</p>
-                        <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">secondsSinceMidnight</span><span class="hljs-params">()</span> </span>{<br></span><span>    <span class="hljs-keyword">return</span> hour*<span class="hljs-number">60</span>*<span class="hljs-number">60</span> + minute*<span class="hljs-number">60</span> + second;<br></span><span>}<br></span></code></pre>
+                        <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">secondsSinceMidnight</span><span class="hljs-params">()</span> </span>{
+</span><span>    <span class="hljs-keyword">return</span> hour*<span class="hljs-number">60</span>*<span class="hljs-number">60</span> + minute*<span class="hljs-number">60</span> + second;
+</span><span>}
+</span></code></pre>
                         <p>Here's how you can use that method.</p>
-                        <pre><code class="hljs java" v-pre><span>Time t = <span class="hljs-keyword">new</span> Time(<span class="hljs-number">0</span>, <span class="hljs-number">2</span>, <span class="hljs-number">5</span>);<br></span><span>System.out.println(t.secondsSinceMidnight() + <span class="hljs-string">" seconds since midnight!"</span>);<br></span></code></pre>
+                        <pre><code class="hljs java" v-pre><span>Time t = <span class="hljs-keyword">new</span> Time(<span class="hljs-number">0</span>, <span class="hljs-number">2</span>, <span class="hljs-number">5</span>);
+</span><span>System.out.println(t.secondsSinceMidnight() + <span class="hljs-string">" seconds since midnight!"</span>);
+</span></code></pre>
                       </box>
                     </div>
                   </div>
@@ -353,15 +389,46 @@
                                     </ul>
                                   </li>
                                 </ul>
-                                <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{<br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{<br></span><span>        Circle c = <span class="hljs-keyword">new</span> Circle();<br></span><span><br></span><span>        System.out.println(c.getArea());<br></span><span>        c = <span class="hljs-keyword">new</span> Circle(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">5</span>);<br></span><span>        System.out.println(c.getArea());<br></span><span><br></span><span>    }<br></span><span>}<br></span></code></pre>
+                                <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+</span><span>        Circle c = <span class="hljs-keyword">new</span> Circle();
+</span><span>
+</span><span>        System.out.println(c.getArea());
+</span><span>        c = <span class="hljs-keyword">new</span> Circle(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">5</span>);
+</span><span>        System.out.println(c.getArea());
+</span><span>
+</span><span>    }
+</span><span>}
+</span></code></pre>
                                 <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
-                                <pre><code class="hljs" v-pre><span>0<br></span><span>78<br></span></code></pre>
+                                <pre><code class="hljs" v-pre><span>0
+</span><span>78
+</span></code></pre>
                                 <div slot="hint" class="algolia-no-index">
                                   <ul>
                                     <li>Put the <code v-pre>Circle</code> class in a file called <code v-pre>Circle.java</code></li>
                                   </ul>
                                   <p>Partial solution:</p>
-                                  <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Circle</span> </span>{<br></span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> x;<br></span><span>    <span class="hljs-comment">// ...</span><br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Circle</span><span class="hljs-params">()</span></span>{<br></span><span>        <span class="hljs-keyword">this</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>);<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Circle</span><span class="hljs-params">(<span class="hljs-keyword">int</span> x, <span class="hljs-keyword">int</span> y, <span class="hljs-keyword">double</span> radius)</span></span>{<br></span><span>        <span class="hljs-keyword">this</span>.x = x;<br></span><span>        <span class="hljs-comment">// ...</span><br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getArea</span><span class="hljs-params">()</span></span>{<br></span><span>        <span class="hljs-keyword">double</span> area = Math.PI * Math.pow(radius, <span class="hljs-number">2</span>);<br></span><span>        <span class="hljs-keyword">return</span> (<span class="hljs-keyword">int</span>)area;<br></span><span>    }<br></span><span><br></span><span>}<br></span></code></pre>
+                                  <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Circle</span> </span>{
+</span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> x;
+</span><span>    <span class="hljs-comment">// ...</span>
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Circle</span><span class="hljs-params">()</span></span>{
+</span><span>        <span class="hljs-keyword">this</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>);
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Circle</span><span class="hljs-params">(<span class="hljs-keyword">int</span> x, <span class="hljs-keyword">int</span> y, <span class="hljs-keyword">double</span> radius)</span></span>{
+</span><span>        <span class="hljs-keyword">this</span>.x = x;
+</span><span>        <span class="hljs-comment">// ...</span>
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getArea</span><span class="hljs-params">()</span></span>{
+</span><span>        <span class="hljs-keyword">double</span> area = Math.PI * Math.pow(radius, <span class="hljs-number">2</span>);
+</span><span>        <span class="hljs-keyword">return</span> (<span class="hljs-keyword">int</span>)area;
+</span><span>    }
+</span><span>
+</span><span>}
+</span></code></pre>
                                 </div>
                               </question>
                             </panel>
@@ -375,6 +442,7 @@
             </div>
           </div>
         </div>
+        <i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i>
       </div>
 
 
@@ -382,21 +450,16 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Thu, Sep 10, 2020, 11:06:50 PM GMT+8]</small>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.16.0</a>, generated on Wed, Sep 16, 2020, 3:47:05 PM GMT+8]</small>
       </div>
     </footer>
   </div>
 </body>
-<script src="../../../markbind/js/vue.min.js"></script>
-<script src="../../../markbind/js/components.min.js"></script>
 <script src="../../../markbind/js/bootstrap-utility.min.js"></script>
-<script src="../../../markbind/js/polyfill.min.js"></script>
-<script src="../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/se-book'
-  const enableSearch = true
+  MarkBind.setupWithSearch()
 </script>
-<script src="../../../markbind/js/setup.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
   function initAlgolia() {
@@ -411,5 +474,8 @@
   MarkBind.afterSetup(initAlgolia);
 </script>
 <script src="../../../markbind/layouts/default/scripts.js"></script>
+<script>
+  if (MarkBind.AfterSetup) MarkBind.AfterSetup()
+</script>
 
 </html>

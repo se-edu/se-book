@@ -14,13 +14,13 @@
   </div>
   <div id="main">
     <div>
-      <p>Here's a scenario you can try in order to learn how to <span trigger="click" for="modal:githubPull-rcsPulling" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:githubPull-rcsPulling'].show()" class="trigger-click">pull</span> commits from another repo to yours.</p>
+      <p>Here's a scenario you can try in order to learn how to <trigger trigger="click" for="modal:githubPull-rcsPulling">pull</trigger> commits from another repo to yours.</p>
       <b-modal id="modal:githubPull-rcsPulling" hide-footer size="lg" modal-class="mb-zoom" ref="modal:githubPull-rcsPulling" class="algolia-no-index"><template slot="modal-title">Project Management → Revision Control → Remote Repositories →</template>
         <div>
-          <p><strong>You can <mark><em>pull</em></mark> from a repo to another, to receive new commits in the second repo</strong>, if the repos have a shared history. Let's say some new commits were added to the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content"><em>upstream</em> repo is a term used to refer to the repo you cloned from</span>upstream repo</span> after you cloned it and you would like to copy over those new commits to your own clone i.e., <mark>sync</mark> your clone with the upstream repo. In that case you pull from the upstream repo to your clone.</p>
+          <p><strong>You can <mark><em>pull</em></mark> from a repo to another, to receive new commits in the second repo</strong>, if the repos have a shared history. Let's say some new commits were added to the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content"><em>upstream</em> repo is a term used to refer to the repo you cloned from</span>upstream repo</span> after you cloned it and you would like to copy over those new commits to your own clone i.e., <mark>sync</mark> your clone with the upstream repo. In that case you pull from the upstream repo to your clone.</p>
         </div>
       </b-modal>
-      <p><strong>1.Clone a repo</strong> (e.g., the repo used in <span for="modal:clone-repository" trigger="click" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:clone-repository'].show()" class="trigger-click">[Git &amp; GitHub → Clone]</span>) to be used for this activity.</p>
+      <p><strong>1.Clone a repo</strong> (e.g., the repo used in <trigger for="modal:clone-repository" trigger="click">[Git &amp; GitHub → Clone]</trigger>) to be used for this activity.</p>
       <p><strong>2. Delete the last few commits to simulate cloning the repo a few commits ago.</strong></p>
       <b-modal id="modal:clone-repository" hide-footer size="lg" modal-class="mb-zoom" ref="modal:clone-repository" class="algolia-no-index"><template slot="modal-title"><strong>Clone Repository</strong></template>
         <div>
@@ -35,7 +35,7 @@
             <p></p>
             <p></p>
             <div>
-              <p>Given below is an example scenario you can try yourself to learn Git <span trigger="click" for="modal:gitCloning-rcsCloning" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:gitCloning-rcsCloning'].show()" class="trigger-click">cloning</span>.</p>
+              <p>Given below is an example scenario you can try yourself to learn Git <trigger trigger="click" for="modal:gitCloning-rcsCloning">cloning</trigger>.</p>
               <b-modal id="modal:gitCloning-rcsCloning" hide-footer size="lg" modal-class="mb-zoom" ref="modal:gitCloning-rcsCloning" class="algolia-no-index"><template slot="modal-title">Project Management → Revision Control → Remote Repositories →</template>
                 <div>
                   <p><strong>You can <mark><em>clone</em></mark> a repo</strong> to create a copy of that repo on another location in your computer. The copy will have even the revision history of the original repo i.e., identical to the original repo. For example, you can clone a remote repo onto your computer to create a local copy of the remote repo.<br></p>
@@ -86,7 +86,8 @@
         <tab class="algolia-no-index"><template slot="_header">CLI</template>
           <div>
             <p>Use the <code v-pre>reset</code> command to delete commits at the tip of the revision history.</p>
-            <pre><code class="hljs" v-pre><span>git reset --hard HEAD~2<br></span></code></pre>
+            <pre><code class="hljs" v-pre><span>git reset --hard HEAD~2
+</span></code></pre>
           </div>
         </tab>
       </tabs>
@@ -114,7 +115,7 @@
       <box>
         <div id="section-working-with-multiple-remotes">
           <h5 id="working-with-multiple-remotes">Working with multiple remotes<a class="fa fa-anchor" href="#working-with-multiple-remotes" onclick="event.stopPropagation()"></a></h5>
-          <p><strong>When you clone a repo, Git automatically adds a <em>remote</em> repo named <code v-pre>origin</code></strong> to your repo configuration. As you know, you can pull commits from that repo. As you know, <span trigger="click" for="modal:gitPull-rcsMultipleRepos" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:gitPull-rcsMultipleRepos'].show()" class="trigger-click">a Git repo can work with remote repos other than the one it was cloned from</span>.</p>
+          <p><strong>When you clone a repo, Git automatically adds a <em>remote</em> repo named <code v-pre>origin</code></strong> to your repo configuration. As you know, you can pull commits from that repo. As you know, <trigger trigger="click" for="modal:gitPull-rcsMultipleRepos">a Git repo can work with remote repos other than the one it was cloned from</trigger>.</p>
           <b-modal id="modal:gitPull-rcsMultipleRepos" hide-footer size="lg" modal-class="mb-zoom" ref="modal:gitPull-rcsMultipleRepos" class="algolia-no-index"><template slot="modal-title">Project Management → Revision Control → Remote Repositories →</template>
             <div>
               <p><strong>A repo can work with any number of other repositories as long as they have a shared history</strong> e.g., <code v-pre>repo1</code> can pull from (or push to) <code v-pre>repo2</code> and <code v-pre>repo3</code> if they have a shared history between them.</p>

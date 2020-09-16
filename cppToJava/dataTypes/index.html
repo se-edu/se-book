@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.15.2">
+  <meta name="generator" content="MarkBind 2.16.0">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - C++ to Java: Data Types</title>
   <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
@@ -14,11 +14,14 @@
   <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
   <link rel="stylesheet" href="../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../markbind/css/github.min.css">
-  <link rel="stylesheet" href="../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="../../markbind/css/markbind.min.css">
+  <script src="../../markbind/js/polyfill.min.js"></script>
+  <script src="../../markbind/js/vue.min.js"></script>
+  <script src="../../markbind/js/markbind.min.js"></script>
+  <script src="../../markbind/js/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/se-book/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../markbind/layouts/default/styles.css">
-  <link rel="stylesheet" href="../../markbind/css/site-nav.css">
   <link rel="icon" href="/se-book/favicon.ico">
 </head>
 
@@ -305,14 +308,33 @@
                       <p></p>
                       <div>
                         <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span><span aria-hidden="true" class="fas fa-equals"></span></span></span></span> <strong>Java is a <em>statically-typed</em> language</strong> in that variables have a fixed type. Here are some examples of declaring variables and assigning values to them.</p>
-                        <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">int</span> x;<br></span><span>x = <span class="hljs-number">5</span>;<br></span><span><span class="hljs-keyword">int</span> hour = <span class="hljs-number">11</span>;<br></span><span><span class="hljs-keyword">boolean</span> isCorrect = <span class="hljs-keyword">true</span>;<br></span><span><span class="hljs-keyword">char</span> capitalC = <span class="hljs-string">'C'</span>;<br></span><span><span class="hljs-keyword">byte</span> b = <span class="hljs-number">100</span>;<br></span><span><span class="hljs-keyword">short</span> s = <span class="hljs-number">10000</span>;<br></span><span><span class="hljs-keyword">int</span> i = <span class="hljs-number">100000</span>;<br></span></code></pre>
+                        <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">int</span> x;
+</span><span>x = <span class="hljs-number">5</span>;
+</span><span><span class="hljs-keyword">int</span> hour = <span class="hljs-number">11</span>;
+</span><span><span class="hljs-keyword">boolean</span> isCorrect = <span class="hljs-keyword">true</span>;
+</span><span><span class="hljs-keyword">char</span> capitalC = <span class="hljs-string">'C'</span>;
+</span><span><span class="hljs-keyword">byte</span> b = <span class="hljs-number">100</span>;
+</span><span><span class="hljs-keyword">short</span> s = <span class="hljs-number">10000</span>;
+</span><span><span class="hljs-keyword">int</span> i = <span class="hljs-number">100000</span>;
+</span></code></pre>
                         <p><strong>You can use any name starting with a letter, underscore, or $ as a variable name but you cannot use Java <a href="http://docs.oracle.com/javase/tutorial/java/nutsandbolts/_keywords.html">keywords</a> as variables names.</strong>
                           You can display the value of a variable using <code v-pre>System.out.print</code> or <code v-pre>System.out.println</code> (the latter goes to the next line after printing). To output multiple values on the same line, it’s common to use several <code v-pre>print</code> statements followed by <code v-pre>println</code> at the end.</p>
-                        <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">int</span> hour = <span class="hljs-number">11</span>;<br></span><span><span class="hljs-keyword">int</span> mintue = <span class="hljs-number">59</span>;<br></span><span>System.out.print(<span class="hljs-string">"The current time is "</span>);<br></span><span>System.out.print(hour);<br></span><span>System.out.print(<span class="hljs-string">":"</span>);<br></span><span>System.out.print(minute);<br></span><span>System.out.println(<span class="hljs-string">"."</span>); <span class="hljs-comment">//use println here to complete the line</span><br></span><span>System.out.println(<span class="hljs-string">"done"</span>);<br></span></code></pre>
+                        <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">int</span> hour = <span class="hljs-number">11</span>;
+</span><span><span class="hljs-keyword">int</span> mintue = <span class="hljs-number">59</span>;
+</span><span>System.out.print(<span class="hljs-string">"The current time is "</span>);
+</span><span>System.out.print(hour);
+</span><span>System.out.print(<span class="hljs-string">":"</span>);
+</span><span>System.out.print(minute);
+</span><span>System.out.println(<span class="hljs-string">"."</span>); <span class="hljs-comment">//use println here to complete the line</span>
+</span><span>System.out.println(<span class="hljs-string">"done"</span>);
+</span></code></pre>
                         <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
-                        <pre><code class="hljs" v-pre><span>The current time is 11:59.<br></span><span>done<br></span></code></pre>
+                        <pre><code class="hljs" v-pre><span>The current time is 11:59.
+</span><span>done
+</span></code></pre>
                         <p><strong>Use the keyword <code v-pre>final</code> to indicate that the variable value, once assigned, should not be allowed to change later</strong> i.e., act like a ‘constant’. By convention, names for constants are all uppercase, with the underscore character (<code v-pre>_</code>) between words.</p>
-                        <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">final</span> <span class="hljs-keyword">double</span> CM_PER_INCH = <span class="hljs-number">2.54</span>;<br></span></code></pre>
+                        <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">final</span> <span class="hljs-keyword">double</span> CM_PER_INCH = <span class="hljs-number">2.54</span>;
+</span></code></pre>
                       </div>
                       <div>
                         <div>
@@ -384,9 +406,14 @@
                           </table>
                         </div>
                         <p>The following program uses some operators as part of an <em>expression</em> <code v-pre>hour * 60 + minute</code>:</p>
-                        <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">int</span> hour = <span class="hljs-number">11</span>;<br></span><span><span class="hljs-keyword">int</span> minute = <span class="hljs-number">59</span>;<br></span><span>System.out.print(<span class="hljs-string">"Number of minutes since midnight: "</span>);<br></span><span>System.out.println(hour * <span class="hljs-number">60</span> + minute);<br></span></code></pre>
+                        <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">int</span> hour = <span class="hljs-number">11</span>;
+</span><span><span class="hljs-keyword">int</span> minute = <span class="hljs-number">59</span>;
+</span><span>System.out.print(<span class="hljs-string">"Number of minutes since midnight: "</span>);
+</span><span>System.out.println(hour * <span class="hljs-number">60</span> + minute);
+</span></code></pre>
                         <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
-                        <pre><code class="hljs" v-pre><span>Number of minutes since midnight: 719<br></span></code></pre>
+                        <pre><code class="hljs" v-pre><span>Number of minutes since midnight: 719
+</span></code></pre>
                         <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span><span aria-hidden="true" class="fas fa-equals"></span></span></span></span> <strong>When an expression has multiple operators, normal <em>operator precedence</em> rules apply</strong>. Furthermore, you can use parentheses to specify a precise precedence.</p>
                         <box>
                           <p>Examples:</p>
@@ -397,7 +424,7 @@
                           </ul>
                         </box>
 
-                        <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-danger"><span><span aria-hidden="true" class="fas fa-not-equal"></span></span></span></span> Java does not allow <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">changing the meaning of operators</span><em>operator overloading</em></span>.</p>
+                        <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-danger"><span><span aria-hidden="true" class="fas fa-not-equal"></span></span></span></span> Java does not allow <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">changing the meaning of operators</span><em>operator overloading</em></span>.</p>
                         <p>The <strong>unary operators</strong> require only one operand; they perform various operations such as incrementing/decrementing a value by one, negating an expression, or inverting the value of a boolean.<small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small></p>
                         <div class="table-responsive">
                           <table class="markbind-table table table-bordered table-striped">
@@ -554,26 +581,66 @@
                       <p></p>
                       <div>
                         <p>Arrays are indicated using square brackets (<code v-pre>[]</code>). To create the array itself, you have to use the <code v-pre>new</code> operator. Here are some example array declarations:</p>
-                        <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">int</span>[] counts;<br></span><span>counts = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[<span class="hljs-number">4</span>]; <span class="hljs-comment">// create an int array of size 4</span><br></span><span><br></span><span><span class="hljs-keyword">int</span> size = <span class="hljs-number">5</span>;<br></span><span><span class="hljs-keyword">double</span>[] values;<br></span><span>values = <span class="hljs-keyword">new</span> <span class="hljs-keyword">double</span>[size]; <span class="hljs-comment">//use a variable for the size</span><br></span><span><br></span><span><span class="hljs-keyword">double</span>[] prices = <span class="hljs-keyword">new</span> <span class="hljs-keyword">double</span>[size]; <span class="hljs-comment">// declare and create at the same time</span><br></span></code></pre>
+                        <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">int</span>[] counts;
+</span><span>counts = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[<span class="hljs-number">4</span>]; <span class="hljs-comment">// create an int array of size 4</span>
+</span><span>
+</span><span><span class="hljs-keyword">int</span> size = <span class="hljs-number">5</span>;
+</span><span><span class="hljs-keyword">double</span>[] values;
+</span><span>values = <span class="hljs-keyword">new</span> <span class="hljs-keyword">double</span>[size]; <span class="hljs-comment">//use a variable for the size</span>
+</span><span>
+</span><span><span class="hljs-keyword">double</span>[] prices = <span class="hljs-keyword">new</span> <span class="hljs-keyword">double</span>[size]; <span class="hljs-comment">// declare and create at the same time</span>
+</span></code></pre>
                         <blockquote>
                           Alternatively, you can use the shortcut syntax to create and initialize an array:
-                          <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">int</span>[] values = {<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>};<br></span><span><br></span><span><span class="hljs-keyword">int</span>[] anArray = {<br></span><span>    <span class="hljs-number">100</span>, <span class="hljs-number">200</span>, <span class="hljs-number">300</span>,<br></span><span>    <span class="hljs-number">400</span>, <span class="hljs-number">500</span>, <span class="hljs-number">600</span>,<br></span><span>    <span class="hljs-number">700</span>, <span class="hljs-number">800</span>, <span class="hljs-number">900</span>, <span class="hljs-number">1000</span><br></span><span>};<br></span></code></pre>
+                          <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">int</span>[] values = {<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>};
+</span><span>
+</span><span><span class="hljs-keyword">int</span>[] anArray = {
+</span><span>    <span class="hljs-number">100</span>, <span class="hljs-number">200</span>, <span class="hljs-number">300</span>,
+</span><span>    <span class="hljs-number">400</span>, <span class="hljs-number">500</span>, <span class="hljs-number">600</span>,
+</span><span>    <span class="hljs-number">700</span>, <span class="hljs-number">800</span>, <span class="hljs-number">900</span>, <span class="hljs-number">1000</span>
+</span><span>};
+</span></code></pre>
                           <p><small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small></p>
                         </blockquote>
-                        <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span><span aria-hidden="true" class="fas fa-equals"></span></span></span></span> The <code v-pre>[]</code> operator selects elements from an array. Array elements <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">i.e., the index of the first element is 0, not 1</span>indices start from 0</span>.</p>
-                        <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">int</span>[] counts = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[<span class="hljs-number">4</span>];<br></span><span><br></span><span>System.out.println(<span class="hljs-string">"The first element is "</span> + counts[<span class="hljs-number">0</span>]);<br></span><span><br></span><span>counts[<span class="hljs-number">0</span>] = <span class="hljs-number">7</span>; <span class="hljs-comment">// set the element at index 0 to be 7</span><br></span><span>counts[<span class="hljs-number">1</span>] = counts[<span class="hljs-number">0</span>] * <span class="hljs-number">2</span>;<br></span><span>counts[<span class="hljs-number">2</span>]++; <span class="hljs-comment">// increment value at index 2</span><br></span></code></pre>
+                        <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span><span aria-hidden="true" class="fas fa-equals"></span></span></span></span> The <code v-pre>[]</code> operator selects elements from an array. Array elements <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">i.e., the index of the first element is 0, not 1</span>indices start from 0</span>.</p>
+                        <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">int</span>[] counts = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[<span class="hljs-number">4</span>];
+</span><span>
+</span><span>System.out.println(<span class="hljs-string">"The first element is "</span> + counts[<span class="hljs-number">0</span>]);
+</span><span>
+</span><span>counts[<span class="hljs-number">0</span>] = <span class="hljs-number">7</span>; <span class="hljs-comment">// set the element at index 0 to be 7</span>
+</span><span>counts[<span class="hljs-number">1</span>] = counts[<span class="hljs-number">0</span>] * <span class="hljs-number">2</span>;
+</span><span>counts[<span class="hljs-number">2</span>]++; <span class="hljs-comment">// increment value at index 2</span>
+</span></code></pre>
                         <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-danger"><span><span aria-hidden="true" class="fas fa-not-equal"></span></span></span></span> A Java array is aware of its size. A Java array prevents a programmer from indexing the array out of bounds. If the index is negative or not present in the array, the result is an error named <code v-pre>ArrayIndexOutOfBoundsException</code>.</p>
-                        <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">int</span>[] scores = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[<span class="hljs-number">4</span>];<br></span><span>System.out.println(scores.length) <span class="hljs-comment">// prints 4</span><br></span><span>scores[<span class="hljs-number">5</span>] = <span class="hljs-number">0</span>; <span class="hljs-comment">// causes an exception</span><br></span></code></pre>
+                        <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">int</span>[] scores = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[<span class="hljs-number">4</span>];
+</span><span>System.out.println(scores.length) <span class="hljs-comment">// prints 4</span>
+</span><span>scores[<span class="hljs-number">5</span>] = <span class="hljs-number">0</span>; <span class="hljs-comment">// causes an exception</span>
+</span></code></pre>
                         <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
-                        <pre><code class="hljs" v-pre><span>4<br></span><span>Exception in thread &quot;main&quot; java.lang.ArrayIndexOutOfBoundsException: 5<br></span><span>	at Main.main(Main.java:6)<br></span></code></pre>
+                        <pre><code class="hljs" v-pre><span>4
+</span><span>Exception in thread &quot;main&quot; java.lang.ArrayIndexOutOfBoundsException: 5
+</span><span>	at Main.main(Main.java:6)
+</span></code></pre>
                         <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span><span aria-hidden="true" class="fas fa-equals"></span></span></span></span> It is also possible to create arrays of more than one dimension:</p>
                         <blockquote>
-                          <pre><code class="hljs java" v-pre><span>String[][] names = {<br></span><span>    {<span class="hljs-string">"Mr. "</span>, <span class="hljs-string">"Mrs. "</span>, <span class="hljs-string">"Ms. "</span>},<br></span><span>    {<span class="hljs-string">"Smith"</span>, <span class="hljs-string">"Jones"</span>}<br></span><span>};<br></span><span><br></span><span>System.out.println(names[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>] + names[<span class="hljs-number">1</span>][<span class="hljs-number">0</span>]); <span class="hljs-comment">// Mr. Smith</span><br></span><span>System.out.println(names[<span class="hljs-number">0</span>][<span class="hljs-number">2</span>] + names[<span class="hljs-number">1</span>][<span class="hljs-number">1</span>]); <span class="hljs-comment">// Ms. Jones</span><br></span></code></pre>
+                          <pre><code class="hljs java" v-pre><span>String[][] names = {
+</span><span>    {<span class="hljs-string">"Mr. "</span>, <span class="hljs-string">"Mrs. "</span>, <span class="hljs-string">"Ms. "</span>},
+</span><span>    {<span class="hljs-string">"Smith"</span>, <span class="hljs-string">"Jones"</span>}
+</span><span>};
+</span><span>
+</span><span>System.out.println(names[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>] + names[<span class="hljs-number">1</span>][<span class="hljs-number">0</span>]); <span class="hljs-comment">// Mr. Smith</span>
+</span><span>System.out.println(names[<span class="hljs-number">0</span>][<span class="hljs-number">2</span>] + names[<span class="hljs-number">1</span>][<span class="hljs-number">1</span>]); <span class="hljs-comment">// Ms. Jones</span>
+</span></code></pre>
                           <p><small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small></p>
                         </blockquote>
                         <h5 id="passing-arguments-to-a-program">Passing arguments to a program<a class="fa fa-anchor" href="#passing-arguments-to-a-program" onclick="event.stopPropagation()"></a></h5>
                         <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span><span aria-hidden="true" class="fas fa-equals"></span></span></span></span> The <code v-pre>args</code> parameter of the <code v-pre>main</code> method is an array of Strings containing command line arguments supplied (if any) when running the program.</p>
-                        <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span></span>{<br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{<br></span><span>        System.out.println(args[<span class="hljs-number">0</span>]);<br></span><span>    }<br></span><span>}<br></span></code></pre>
+                        <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span></span>{
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+</span><span>        System.out.println(args[<span class="hljs-number">0</span>]);
+</span><span>    }
+</span><span>}
+</span></code></pre>
                         <p>You can run this program (after compiling it first) from the command line by typing:</p>
                         <p>
                           <smal><span class="badge badge-secondary">&gt;_</span></smal> <code v-pre>java Foo abc</code>
@@ -606,17 +673,29 @@
                                   </template>
                                   <question>
                                     <p>Write a Java program that takes two command line arguments and prints <code v-pre>true</code> or <code v-pre>false</code> to indicate if the two arguments have the same value. Follow the sample output given below.</p>
-                                    <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{<br></span><span>  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{<br></span><span>      <span class="hljs-comment">// add your code here</span><br></span><span>  }<br></span><span>}<br></span></code></pre>
+                                    <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+</span><span>  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+</span><span>      <span class="hljs-comment">// add your code here</span>
+</span><span>  }
+</span><span>}
+</span></code></pre>
                                     <p>
                                       <smal><span class="badge badge-secondary">&gt;_</span></smal> <code v-pre>java Main adam eve</code> <span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
                                     </p>
-                                    <pre><code class="hljs" v-pre><span>Words given: adam, eve<br></span><span>They are the same: false<br></span></code></pre>
+                                    <pre><code class="hljs" v-pre><span>Words given: adam, eve
+</span><span>They are the same: false
+</span></code></pre>
                                     <p>
                                       <smal><span class="badge badge-secondary">&gt;_</span></smal> <code v-pre>java Main eve eve</code> <span><span aria-hidden="true" class="fas fa-arrow-down"></span></span>
                                     </p>
-                                    <pre><code class="hljs" v-pre><span>Words given: eve, eve<br></span><span>They are the same: true<br></span></code></pre>
+                                    <pre><code class="hljs" v-pre><span>Words given: eve, eve
+</span><span>They are the same: true
+</span></code></pre>
                                     <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Use the following technique to compare two <code v-pre>Strings</code>(i.e., don't use <code v-pre>==</code>). <span class="dimmed">Reason: to be covered in a later topic</span>.</p>
-                                    <pre><code class="hljs java" v-pre><span>String x = <span class="hljs-string">"foo"</span>;<br></span><span><span class="hljs-keyword">boolean</span> isSame = x.equals(<span class="hljs-string">"bar"</span>) <span class="hljs-comment">// false</span><br></span><span>isSame = x.equals(<span class="hljs-string">"foo"</span>) <span class="hljs-comment">// true</span><br></span></code></pre>
+                                    <pre><code class="hljs java" v-pre><span>String x = <span class="hljs-string">"foo"</span>;
+</span><span><span class="hljs-keyword">boolean</span> isSame = x.equals(<span class="hljs-string">"bar"</span>) <span class="hljs-comment">// false</span>
+</span><span>isSame = x.equals(<span class="hljs-string">"foo"</span>) <span class="hljs-comment">// true</span>
+</span></code></pre>
                                     <div slot="hint" class="algolia-no-index">
                                       <ul>
                                         <li>The two command line arguments can be accessed inside the <code v-pre>main</code> method using <code v-pre>args[0]</code> and <code v-pre>args[1]</code>.</li>
@@ -625,7 +704,16 @@
                                       <panel type="seamless" class="algolia-no-index"><template slot="_header">
                                           <p>partial solution</p>
                                         </template>
-                                        <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{<br></span><span>  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{<br></span><span>      String first = args[<span class="hljs-number">0</span>];<br></span><span>      String second = args[<span class="hljs-number">1</span>];<br></span><span>      System.out.println(<span class="hljs-string">"Words given: "</span> + first + <span class="hljs-string">", "</span> + second);<br></span><span>      <span class="hljs-comment">// ...</span><br></span><span>  }<br></span><span>}<br></span><span><br></span></code></pre>
+                                        <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+</span><span>  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+</span><span>      String first = args[<span class="hljs-number">0</span>];
+</span><span>      String second = args[<span class="hljs-number">1</span>];
+</span><span>      System.out.println(<span class="hljs-string">"Words given: "</span> + first + <span class="hljs-string">", "</span> + second);
+</span><span>      <span class="hljs-comment">// ...</span>
+</span><span>  }
+</span><span>}
+</span><span>
+</span></code></pre>
                                       </panel>
                                     </div>
                                   </question>
@@ -642,6 +730,7 @@
             </div>
           </div>
         </div>
+        <i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i>
       </div>
 
 
@@ -649,21 +738,16 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Thu, Sep 10, 2020, 11:06:50 PM GMT+8]</small>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.16.0</a>, generated on Wed, Sep 16, 2020, 3:47:05 PM GMT+8]</small>
       </div>
     </footer>
   </div>
 </body>
-<script src="../../markbind/js/vue.min.js"></script>
-<script src="../../markbind/js/components.min.js"></script>
 <script src="../../markbind/js/bootstrap-utility.min.js"></script>
-<script src="../../markbind/js/polyfill.min.js"></script>
-<script src="../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/se-book'
-  const enableSearch = true
+  MarkBind.setupWithSearch()
 </script>
-<script src="../../markbind/js/setup.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script>
   function initAlgolia() {
@@ -678,5 +762,8 @@
   MarkBind.afterSetup(initAlgolia);
 </script>
 <script src="../../markbind/layouts/default/scripts.js"></script>
+<script>
+  if (MarkBind.AfterSetup) MarkBind.AfterSetup()
+</script>
 
 </html>
