@@ -17,7 +17,7 @@
 * **breadth-first**: an iteration evolves all major components in parallel %%e.g., add a new feature fully, or enhance an existing feature%%.
 * **depth-first**: an iteration focuses on fleshing out only some components %%e.g., update the backend to support a new feature that will be added in a future iteration%%.
 
-**Most project use a mixture of breadth-first and depth-first iterations** %%i.e., an iteration can contain some breadth-first work as well as some depth-first work%%.
+**Most projects use a mixture of breadth-first and depth-first iterations** %%i.e., an iteration can contain some breadth-first work as well as some depth-first work%%.
 
 </div>
 
