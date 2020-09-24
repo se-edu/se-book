@@ -15,7 +15,7 @@ Class      | Objects
 ---------- | -------
 `Customer` | `john`
 `Book`     | `LoTR`, `GoT`
-`Cheque`   | `checqueJohnGave`
+`Cheque`   | `chequeJohnGave`
 `Cashier`  | `peter`
 
 </div>

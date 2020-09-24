@@ -7,7 +7,7 @@ Explain the Law of Demeter using code examples. You are to make up your own code
 
 Let us take the `Logic` class as an example.  Assume that it has the following operation.
 
-`setMinefield(Minefiled mf):void`
+`setMinefield(Minefield mf):void`
 
 Consider the following that can happen inside this operation.
 
