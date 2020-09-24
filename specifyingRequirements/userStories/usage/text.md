@@ -94,7 +94,7 @@ More examples that might apply to some products:
 </blockquote>
 
 
-****Step 4:**** **List the user stories to supports the scenarios:**
+****Step 4:**** **List the user stories to support the scenarios:**
 
 Based on the scenarios, decide user stories you need to support each. For example, based on the scenario 'A. First use', you might have user stories such as these:
 

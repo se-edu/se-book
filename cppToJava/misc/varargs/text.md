@@ -6,7 +6,7 @@
 
 <div id="body">
 
-Variable Arguments (Varargs) is a _syntactic sugar_ type feature that allows writing a methods that can take a variable number of arguments.
+Variable Arguments (Varargs) is a _syntactic sugar_ type feature that allows writing a method that can take a variable number of arguments.
 
 <box>
 

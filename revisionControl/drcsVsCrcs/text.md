@@ -8,7 +8,7 @@
 
 **RCS can be done in two ways: the _centralized_ way and the _distributed_ way.**
 
-**Centralized RCS (CRCS for short)uses a central remote repo that is shared by the team.** Team members download (‘pull’) and upload (‘push’) changes between their own local repositories and the central repository. Older RCS tools such as CVS and SVN support only this model. Note that these older RCS do not support the notion of a local repo either. Instead, they force users to do all the versioning with the remote repo.
+**Centralized RCS (CRCS for short) uses a central remote repo that is shared by the team.** Team members download (‘pull’) and upload (‘push’) changes between their own local repositories and the central repository. Older RCS tools such as CVS and SVN support only this model. Note that these older RCS do not support the notion of a local repo either. Instead, they force users to do all the versioning with the remote repo.
 
 <pic src="{{baseUrl}}/revisionControl/drcsVsCrcs/images/crcsDiagram.png" width="300">
 

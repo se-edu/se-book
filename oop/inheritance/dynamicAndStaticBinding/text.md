@@ -60,7 +60,7 @@ class Account {
 }
 ```
 
-{{ icon_example }} Similarly, the `calcuateGrade` method is overloaded in the code below and a method call `calculateGrade("A1213232")` is bound to the second implementation, at compile time.
+{{ icon_example }} Similarly, the `calculateGrade` method is overloaded in the code below and a method call `calculateGrade("A1213232")` is bound to the second implementation, at compile time.
 
 ```java
 void calculateGrade (int[] averages) { ... }

@@ -51,7 +51,7 @@ public abstract class Account {
 
 {{ icon_info }} In Java, even **a class that does not have any abstract methods _can_ be declared as an abstract class.**
 
-**When an abstract class is subclassed, the subclass should provides implementations for all of the abstract methods in its superclass or else the subclass must also be declared abstract.**
+**When an abstract class is subclassed, the subclass should provide implementations for all of the abstract methods in its superclass or else the subclass must also be declared abstract.**
 
 <box>
 
