@@ -13,13 +13,15 @@
 
 To illustrate how the workflow goes, let’s assume Jean wants to fix a bug in the code. Here are the steps:
 
-1. Jean creates a separate branch in her local repo and fixes the bug in that branch.
+1. Jean creates a separate branch in her local repo and fixes the bug in that branch.<br>
+   {{ icon_important_big_red }} Common mistake: Done the proposed changes in the `master` branch -- if Jean does that, she will not be able to have more than one open PR at any time because any changes to the `master` branch will be reflected in all open PRs.
 2. Jean pushes the branch to her fork.
 3. Jean creates a pull request from that branch in her fork to the main repo.
 4. Other members review Jean’s pull request.
 5. If reviewers suggested any changes, Jean updates the PR accordingly.
 6. When reviewers are satisfied with the PR, one of the members (usually the team lead or a designated 'maintainer' of the main repo) merges the PR, which brings Jean’s code to the main repo.
-7. Other members, realizing there is new code in the upstream repo, sync their forks with the new upstream repo (i.e. the main repo). This is done by pulling the new code to their own local repo and pushing the updated code to their own fork.
+7. Other members, realizing there is new code in the upstream repo, sync their forks with the new upstream repo (i.e. the main repo). This is done by pulling the new code to their own local repo and pushing the updated code to their own fork.<br>
+   {{ icon_important_big_red }} Possible mistake: Creating another 'reverse' PR from the team repo to team member fork to syn the member's fork with the merged code. PRs are meant to go from downstream repos to upstream repos, not in the other direction.
 
 </div>
 
