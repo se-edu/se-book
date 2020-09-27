@@ -13,13 +13,17 @@
       <p><strong>In the <em>forking workflow</em>, the 'official' version of the software is kept in a remote repo designated as the 'main repo'. All team members fork the main repo create pull requests from their fork to the main repo.</strong></p>
       <p>To illustrate how the workflow goes, let’s assume Jean wants to fix a bug in the code. Here are the steps:</p>
       <ol>
-        <li>Jean creates a separate branch in her local repo and fixes the bug in that branch.</li>
+        <li>Jean creates a separate branch in her local repo and fixes the bug in that branch.<br>
+          <font color="red"><big><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></big></font> Common mistake: Done the proposed changes in the <code v-pre>master</code> branch -- if Jean does that, she will not be able to have more than one open PR at any time because any changes to the <code v-pre>master</code> branch will be reflected in all open PRs.
+        </li>
         <li>Jean pushes the branch to her fork.</li>
         <li>Jean creates a pull request from that branch in her fork to the main repo.</li>
         <li>Other members review Jean’s pull request.</li>
         <li>If reviewers suggested any changes, Jean updates the PR accordingly.</li>
         <li>When reviewers are satisfied with the PR, one of the members (usually the team lead or a designated 'maintainer' of the main repo) merges the PR, which brings Jean’s code to the main repo.</li>
-        <li>Other members, realizing there is new code in the upstream repo, sync their forks with the new upstream repo (i.e. the main repo). This is done by pulling the new code to their own local repo and pushing the updated code to their own fork.</li>
+        <li>Other members, realizing there is new code in the upstream repo, sync their forks with the new upstream repo (i.e. the main repo). This is done by pulling the new code to their own local repo and pushing the updated code to their own fork.<br>
+          <font color="red"><big><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></big></font> Possible mistake: Creating another 'reverse' PR from the team repo to team member fork to syn the member's fork with the merged code. PRs are meant to go from downstream repos to upstream repos, not in the other direction.
+        </li>
       </ol>
     </div>
     <div>
