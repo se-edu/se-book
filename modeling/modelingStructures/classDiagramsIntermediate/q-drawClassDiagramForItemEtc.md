@@ -80,7 +80,8 @@ public class Inventory {
 </div>
 
 (a) Draw a class diagram to represent the code. Show all attributes, methods, associations, navigabilities, visibilities, known multiplicities, and association roles. Show associations as lines.<br>
-(b) Draw an object diagram to represent the situation where the inventory has one item with a name `spanner` and a review of `POOR` rating.
+(b) Draw an object diagram to represent the situation where the inventory has one item with a name `spanner` and a review of `POOR` rating<br>
+  i.e., `new Inventory().add(new StockItem("spanner", new Review(Rating.POOR)))`{.java}.
 
 </question>
 </panel>
