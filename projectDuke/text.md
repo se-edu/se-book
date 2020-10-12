@@ -354,7 +354,7 @@ T | 1 | join sports club
 * remember to use relative paths rather than absolute paths such as `C:\data`. If not, your app can cause unpredictable results when used in another computer.
 * remember to [specify file paths in an OS-independent way](https://www.sghill.net/how-do-i-make-cross-platform-file-paths-in-java.html). If not, your app might not work when used on a different OS.
 
-{{ icon_important_big_red }} Your code must handle the case where the file doesn't exist at the start. Reason: when someone else takes your Duke and runs it for the first time, the required file might not exist in their computer. Similarly, if you expect the data file to be in as specific folder (e.g., `./data/`), you must also handle the 'folder does not exist yet' case.
+{{ icon_important_big_red }} Your code must <tooltip content="i.e., if the file is missing, your code must creat it">handle</tooltip> the case where the data file doesn't exist at the start. Reason: when someone else takes your Duke and runs it for the first time, the required file might not exist in their computer. Similarly, if you expect the data file to be in as specific folder (e.g., `./data/`), you must also handle the folder-does-not-exist-yet case.
 
 </div><hr><!-- ================================================================================================ -->
 <div id="Level-8">
