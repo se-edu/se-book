@@ -1,4 +1,4 @@
-<panel header="{{ icon_Q }} Draw a Class Diagram for the code (`StokItem`, `Inventory`, `Review` etc.)">
+<panel header="{{ icon_Q }} Draw a Class Diagram for the code (`StockItem`, `Inventory`, `Review` etc.)">
 <question>
 
 Consider the code below:
