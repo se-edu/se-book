@@ -26,7 +26,7 @@ Some examples in which a certain workflow is relevant to software project:
 
 <panel type="seamless" src="../../../uml/activityDiagrams/basicNotations/alternatePaths/unit-inElsewhere-asFlat.md#main" boilerplate header="{{ icon_prereq }} UML {{ icon_embedding }} Activity Diagrams → Basic Notation → Alternate Paths" alt="{{ icon_prereq }} UML/AD/AlternatePaths" />
 
-<panel type="seamless" src="../../../uml/activityDiagrams/basicNotations/parallelPaths/unit-inElsewhere-asFlat.md#main" boilerplate header="{{ icon_prereq }} UML {{ icon_embedding }} Activity Diagrams → Basic Notation → Parellel Paths" alt="{{ icon_prereq }} UML/AD/ParallelPaths" />
+<panel type="seamless" src="../../../uml/activityDiagrams/basicNotations/parallelPaths/unit-inElsewhere-asFlat.md#main" boilerplate header="{{ icon_prereq }} UML {{ icon_embedding }} Activity Diagrams → Basic Notation → Parallel Paths" alt="{{ icon_prereq }} UML/AD/ParallelPaths" />
 
 </div>
 
