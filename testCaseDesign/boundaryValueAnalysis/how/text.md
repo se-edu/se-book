@@ -16,7 +16,7 @@
 <table class="table">
   <tr>
     <th>Equivalence partition</th>
-    <th>Some possible boundary values</th>
+    <th>Some possible test values (boundaries are in bold)</th>
   </tr>
   <tr>
   <td>
@@ -26,7 +26,7 @@
   </td>
   <td>
       
-0,1,2, 11,12,13
+0,**1**,2, 11,**12**,13
       
   </td>
   </tr>
@@ -39,19 +39,20 @@
   </td>
   <td>
       
-MIN_INT, MIN_INT+1, -1, 0 , 1
+**MIN_INT**, MIN_INT+1, -1, **0** , 1
       
   </td>
   </tr>
   <tr>
   <td>
       
-[any non-null String]
-      
+[any non-null String]<br>
+%%(assuming string length is the aspect of interest)%%
+
   </td>
   <td>
       
-Empty String, a String of maximum possible length
+**Empty String**, **a String of maximum possible length**
       
   </td>
   </tr>
@@ -80,7 +81,7 @@ No specific boundary
   </td>
   <td>
       
-Stack with: one element, two elements, no empty spaces, only one empty space
+Stack with: no elements, **one element**, two elements, **no empty spaces**, only one empty space
       
   </td>
   </tr>
