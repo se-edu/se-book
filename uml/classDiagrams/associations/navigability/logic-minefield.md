@@ -1,11 +1,11 @@
 <div class="alt-java">
 
 ```java
-class Logic{
+class Logic {
     Minefield minefield;
 }
 
-class Minefield{
+class Minefield {
     ...
 }
 ```

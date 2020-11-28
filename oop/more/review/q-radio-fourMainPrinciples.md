@@ -1,4 +1,4 @@
-<panel header="{{ icon_Q_A }} Which of these do not belong to four main OO principles?">
+<panel header="{{ icon_Q_A }} Which of these do not belong to the four main OO principles?">
 
 <panel header="%%Prerequisites%%" expandable expanded>
   <panel src="../../objects/abstraction/unit-inElsewhere-asFlat.md" boilerplate header="OOP: Objects: Abstraction" />

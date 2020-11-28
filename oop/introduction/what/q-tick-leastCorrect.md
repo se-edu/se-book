@@ -1,4 +1,4 @@
-<panel header="{{ icon_Q_A }} statements about OOP">
+<panel header="{{ icon_Q_A }} Statements about OOP">
 <question>
 
 A) Choose the correct statements
