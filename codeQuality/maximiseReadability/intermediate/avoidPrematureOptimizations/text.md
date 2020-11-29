@@ -11,7 +11,7 @@
 * **Optimizing can complicate the code**, affecting correctness and understandability
 * **Hand-optimized code can be harder for the compiler to optimize** (the simpler the code, the easier for the compiler to optimize it). In many cases a compiler can do a better job of optimizing the runtime code if you don't get in the way by trying to hand-optimize the source code.
 
-A popular saying in the industry is **_make it work, make it right, make it fast_** which means in most cases getting the code to perform correctly should take priority over optimizing it. If the code doesn't work correctly, it has no value on matter how fast/efficient it it.
+A popular saying in the industry is **_make it work, make it right, make it fast_** which means in most cases getting the code to perform correctly should take priority over optimizing it. If the code doesn't work correctly, it has no value no matter how fast/efficient it is.
 
 > {{ icon_quote_start }} Premature optimization is the root of all evil in programming. {{ icon_start_end }} <sub>--[Donald Knuth](https://en.wikipedia.org/wiki/Donald_Knuth)</sub>
 
