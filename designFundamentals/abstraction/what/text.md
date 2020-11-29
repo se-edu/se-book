@@ -10,7 +10,7 @@
 <include src="../../../common/definitions.md#def-abstraction" />
 </box>
 
-**The guiding principle of abstraction is that only details that are relevant to the current perspective or the task at hand needs to be considered.** As most programs are written to solve complex problems involving large amounts of intricate details, it is impossible to deal with all these details at the same time. That is where abstraction can help.
+**The guiding principle of abstraction is that only details that are relevant to the current perspective or the task at hand need to be considered.** As most programs are written to solve complex problems involving large amounts of intricate details, it is impossible to deal with all these details at the same time. That is where abstraction can help.
 
 **==_Data abstraction_==: abstracting away the lower level data items and thinking in terms of bigger entities**
 

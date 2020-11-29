@@ -14,7 +14,7 @@
 
 <box>
 
-{{ icon_example }} In the example below, design `A` appears to have a more coupling between the components than design `B`.
+{{ icon_example }} In the example below, design `A` appears to have more coupling between the components than design `B`.
 
 <img src="{{baseUrl}}/designFundamentals/coupling/what/images/playerPuzzleManager.png" height="220" />
 <p/>
