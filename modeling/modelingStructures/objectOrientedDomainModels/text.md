@@ -19,8 +19,6 @@ Description: Snakes and ladders game is played by two or more players using a bo
 <img src="{{baseUrl}}/modeling/modelingStructures/objectOrientedDomainModels/images/diagram.png" height="420" />
 <p/>
 
-The above OO domain model omits the ladder class for simplicity. It can be included in a similar fashion to the Snake class.
-
 </box>
 
 **OODMs do not contain solution-specific classes** (i.e. classes that are used in the solution domain but do not exist in the problem domain). For example, a class called DatabaseConnection could appear in a class diagram but not usually in an OO domain model because DatabaseConnection is something related to a software solution but not an entity in the problem domain.
