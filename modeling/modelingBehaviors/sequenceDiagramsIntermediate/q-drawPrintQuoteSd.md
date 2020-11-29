@@ -11,19 +11,19 @@ if (isFirstPage) {
 
 The `Quote` class:
 ```java
-class Quote{
+class Quote {
 
     String q;
 
-    Quote(){
+    Quote() {
         q = generate();
     }
 
-    String generate(){
+    String generate() {
         // ...
     }
 
-    void print(){
+    void print() {
         System.out.println(q);
     }
 
