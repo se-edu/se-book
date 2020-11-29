@@ -7,7 +7,7 @@
 
 <div id="body">
 
-As mentioned in [<trigger trigger="click" for="modal:basicModelling-modelingIntro">Design → Modeling → Modeling a Solutions → Introduction</trigger>], this is the Minesweeper design you have come up with so far. Our objective is to analyze, evaluate, and refine that design.
+As mentioned in [<trigger trigger="click" for="modal:basicModelling-modelingIntro">Design → Modeling → Modeling a Solution → Introduction</trigger>], this is the Minesweeper design you have come up with so far. Our objective is to analyze, evaluate, and refine that design.
 
 <modal large header="Textbook {{ icon_embedding }}" id="modal:basicModelling-modelingIntro">
   <include src="../introduction/unit-inElsewhere-asFlat.md" boilerplate/>
@@ -16,7 +16,7 @@ As mentioned in [<trigger trigger="click" for="modal:basicModelling-modelingIntr
 <img src="{{baseUrl}}/modeling/modelingASolution/introduction/images/textLogicMinefieldCell.png" height="50" />
 <p/>
 
-Let us start by modelling a sample interaction between the person playing the game and the `TextUi` object.
+Let us start by modeling a sample interaction between the person playing the game and the `TextUi` object.
 
 <box>
 
@@ -27,7 +27,7 @@ Let us start by modelling a sample interaction between the person playing the ga
 
 </box>
 
-How does the `TextUi` object carry out the requests it has received from player? It would need to interact with other objects of the system. Because the `Logic` class is the one that controls the game logic, the `TextUi` needs to collaborate with `Logic` to fulfill the `newgame` request. Let us extend the model to capture that interaction.
+How does the `TextUi` object carry out the requests it has received from the player? It would need to interact with other objects of the system. Because the `Logic` class is the one that controls the game logic, the `TextUi` needs to collaborate with `Logic` to fulfill the `newgame` request. Let us extend the model to capture that interaction.
 
 <box>
 
@@ -38,8 +38,9 @@ How does the `TextUi` object carry out the requests it has received from player?
 
 </box>
 
-The above diagram assumes that `W` and `H` are the only information `TextUi` requires to display the minefield to the `Player`. Note that there could be other ways of doing this.  
-The `Logic` methods you conceptualized in our modelling so far are:
+The above diagram assumes that `W` and `H` are the only information `TextUi` requires to display the minefield to the `Player`. Note that there could be other ways of doing this.
+
+The `Logic` methods you conceptualized in our modeling so far are:
 
 <box>
 
@@ -57,7 +58,7 @@ Now, let us look at what other objects and interactions are needed to support th
 
 Note that the behavior of the `Minefield` constructor has been abstracted away. It can be designed at a later stage.
 
-Given below are the interactions between the player and the Text UI for the whole game.
+Given below are the interactions between the player and the `TextUi` for the whole game.
 
 
 <box>
@@ -69,7 +70,7 @@ Given below are the interactions between the player and the Text UI for the whol
 
 <box>
 
-{{ icon_tip }} Note that <tooltip content="using sequence diagramsn">a similar technique</tooltip> can be used when discovering/defining the architecture-level APIs.
+{{ icon_tip }} Note that <tooltip content="using sequence diagrams">a similar technique</tooltip> can be used when discovering/defining the architecture-level APIs.
 
 <div v-closeable alt="Tic-Tac-Toe Video" class="non-printable">
 
