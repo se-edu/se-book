@@ -23,6 +23,6 @@ Inclusions are useful,
 * when you don't want to clutter a use case with too many low-level steps.
 * when a set of steps is repeated in multiple use cases.
 
-You use a dotted arrow and a `<<include>>` annotation to show use case inclusions in a use case diagram. Note how the arrow direction is different from the `<<extend>>` arrows.
+You use a dotted arrow and an `<<include>>` annotation to show use case inclusions in a use case diagram. Note how the arrow direction is different from the `<<extend>>` arrows.
 
 <img src="{{baseUrl}}/specifyingRequirements/useCases/details/images/inclusion.png" height="250" /><p/>

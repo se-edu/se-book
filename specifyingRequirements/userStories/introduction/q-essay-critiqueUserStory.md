@@ -3,7 +3,7 @@
 
 Critique the following user story taken from a software project to build an e-commerce website. 
 
-`As a developer, I want to use Python to implement the software, so that we can resue existing Python modules.`
+`As a developer, I want to use Python to implement the software, so that we can reuse existing Python modules.`
 
 <div slot="hint">
 
