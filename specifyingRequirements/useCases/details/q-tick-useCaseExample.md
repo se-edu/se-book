@@ -8,7 +8,7 @@ Identify problems with this use case description.
 <div>
   <ul>
     <li>System: EZ-Link machine (those found at MRTs)</li>
-    <li>Use case: UC2 top-up EZ-Link card</li>
+    <li>Use case: UC01 top-up EZ-Link card</li>
     <li>Actor: EZ-Link card user</li>
     <li>Preconditions: All hardware in working order.</li>
     <li>Guarantees: If MSS completes at least until step 7, the card will be topped-up.</li>

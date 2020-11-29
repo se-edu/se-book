@@ -47,7 +47,7 @@ A use case description can show loops too.
 {{ icon_example }} An example of how you can show a loop:
 <div class="text-monospace">
 
-Software System: Square game<br>
+Software System: SquareGame<br>
 Use case:  <popover content="Each use case can be given a unique identification for easier cross reference."> UC02 </popover>  - Play a Game<br>
 Actors: Player (multiple players)
 
@@ -55,13 +55,13 @@ Actors: Player (multiple players)
 2. SquareGame asks for player names.
 3. Each Player enters his own name.
 4. SquareGame shows the order of play.
-5. SquareGame prompts for the current Player to throw die.
+5. SquareGame prompts for the current Player to throw a die.
 6. Current Player adjusts the throw speed.
 7. Current Player triggers the die throw.
-8. Square Game shows the face value of the die.
-9. Square Game moves the Player's piece accordingly.<br>
+8. SquareGame shows the face value of the die.
+9. SquareGame moves the Player's piece accordingly.<br>
    ==Steps 5-9 are repeated for each Player, and for as many rounds as required until a Player reaches the 100th square.==
-10. Square Game shows the Winner.
+10. SquareGame shows the Winner.
 
 Use case ends.
 </div>

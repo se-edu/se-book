@@ -45,7 +45,7 @@ Even if you already have some idea of what your product will look/behave like in
 
 ****Step 1:**** **Define the _target user_ as a _persona_:**
 
-Decide your target user's profile (e.g. a student, office worker, programmer, sales person) and work patterns (e.g. Does he work in groups or alone? Does he share his computer with others?). A clear understanding of the target user will help when deciding the importance of a user story. You can even narrow it down to a _persona_. Here is an example:
+Decide your target user's profile (e.g. a student, office worker, programmer, salesperson) and work patterns (e.g. Does he work in groups or alone? Does he share his computer with others?). A clear understanding of the target user will help when deciding the importance of a user story. You can even narrow it down to a _persona_. Here is an example:
 
 > Jean is a university student studying in a non-IT field. She interacts with a lot of people due to her involvement in university clubs/societies. ...
 
@@ -90,7 +90,7 @@ More examples that might apply to some products:
 * Jean uses the app before going to sleep to ...
 * Jean hasn't used the app for a while because she was on a three-month training programme. She is now back at work and wants to resume her daily use of the app.
 * Jean moves to another company. Some of her clients come with her but some don't.
-* Jean starts freelancing in her spare time. She wants to keep her free-lancing clients separate from her other clients.
+* Jean starts freelancing in her spare time. She wants to keep her freelancing clients separate from her other clients.
 </blockquote>
 
 

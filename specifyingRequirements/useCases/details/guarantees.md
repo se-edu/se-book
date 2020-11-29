@@ -10,7 +10,7 @@ Use case: UC23 - Transfer Money<br>
 Actor: User<br>
 Preconditions: User is logged in.<br>
 ==Guarantees:==
-* Money will be deducted from the source account only if the transfer to the destination account is successful
+* Money will be deducted from the source account only if the transfer to the destination account is successful.
 * The transfer will not result in the account balance going below the minimum balance required.
 
 MSS:

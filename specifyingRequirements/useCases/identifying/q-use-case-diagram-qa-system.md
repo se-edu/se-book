@@ -13,7 +13,7 @@ The system is to be used by Testers, Programmers and System Administrators. Only
 
 <p/>
 
-**Explanation**: The given description contains information not relevant to use case modeling. Furthermore, the description is not enough to complete the use case diagram All these are realities of real projects. However, the process of trying to create this use case diagram prompts us to investigate issues such as:
+**Explanation**: The given description contains information not relevant to use case modeling. Furthermore, the description is not enough to complete the use case diagram. All these are realities of real projects. However, the process of trying to create this use case diagram prompts us to investigate issues such as:
 
 *	Is ‘edit bug report’ a use case or is editing the bug report covered by other use cases such as those for setting the status of bug reports? If it is indeed a separate use case, who are the actors of that use case?
 *	Does ‘assign task’ simply mean ‘assign bug report’ or are there other types of tasks?
