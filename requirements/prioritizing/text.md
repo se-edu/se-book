@@ -30,7 +30,7 @@ A common approach is to group requirements into priority categories. Note that a
 
 <box>
 
-{{ icon_example }} The requirement given below is for a Calendar application. Stakeholder of the software (e.g. product designers) might decide the following requirement is not in the scope of the software.
+{{ icon_example }} The requirement given below is for a Calendar application. Stakeholders of the software (e.g. product designers) might decide the following requirement is not in the scope of the software.
 
 >The software records the actual time taken by each task and show the difference between the _actual_ and _scheduled_ time for the task.
 
