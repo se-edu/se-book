@@ -6,17 +6,17 @@ Draw a UML diagram to represent the `Car` class as given below. Include visibili
 <div class="alt-java">
 
 ```java
-class Car{
+class Car {
 
     Engine engine;
     private List<Wheel> wheels = null;
     public String model;
 
-    public void drive(int speed){
+    public void drive(int speed) {
         move(speed);
     }
 
-    private void move(int speed){
+    private void move(int speed) {
         ...
     }
 }

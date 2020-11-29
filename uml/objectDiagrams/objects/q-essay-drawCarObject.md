@@ -6,12 +6,12 @@ Draw a UML diagram to represent the `Car` object created by the following code.
 <div class="alt-java">
 
 ```java
-class Car{
+class Car {
 
     private double price;
     private int speed;
 
-    Car(double price, int speed){
+    Car(double price, int speed) {
         //...
     }
 }
@@ -32,7 +32,7 @@ class Car:
 
 
 # somewhere else in the code
-my_car = Car(13.5, 200);
+my_car = Car(13.5, 200)
 ```
 </div>
 

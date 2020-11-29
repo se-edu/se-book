@@ -26,13 +26,13 @@ An _architecture diagram_ depicts the high-level design of a software.
   <include src="../../../architecture/architectureDiagrams/reading/text.md#architecture-diagram-examples"/>
 </modal>
 
-b) **To communicate information among stakeholders.**  Models can be used as a visual aid in discussions and documentations.
+b) **To communicate information among stakeholders.**  Models can be used as a visual aid in discussions and documentation.
 
 <box>
 
 {{ icon_example }} Some examples of using models to communicate:
 
-1. You can use an architecture diagram to explain the high-level design of the software to developers.
+1. You can use an _architecture diagram_ to explain the high-level design of the software to developers.
 2. A business analyst can use a _use case diagram_ to explain to the customer the functionality of the system.
 3. A _class diagram_ can be reverse-engineered from code so as to help explain the design of a component to a new developer.
 
@@ -57,7 +57,7 @@ c) **As a blueprint for creating software.** Models can be used as instructions 
 <panel type="seamless">
 <span slot="header" class="card-title">Model Driven Development {{ icon_extra }}</span>
 
-**_Model-driven development (MDD)_, also called _Model-driven engineering_, is an approach to software development that strives to exploit models as blueprints.** MDD uses models as primary engineering artifacts when developing software. That is, the system is first created in the form of models. After that, the models are converted to code using code-generation techniques (usually, automated or semi-automated, but can even involve manual translation from model to code). MDD requires the use of a very expressive modeling notation (graphical or otherwise), often specific to a given problem domain. It also requires sophisticated tools to generate code from models and maintain the link between models and the code. One advantage of MDD is that the same model can be used to create software for different platforms and different languages. MDD has a lot of promise, but it is still an emerging technology
+**_Model-driven development (MDD)_, also called _Model-driven engineering_, is an approach to software development that strives to exploit models as blueprints.** MDD uses models as primary engineering artifacts when developing software. That is, the system is first created in the form of models. After that, the models are converted to code using code-generation techniques (usually, automated or semi-automated, but can even involve manual translation from model to code). MDD requires the use of a very expressive modeling notation (graphical or otherwise), often specific to a given problem domain. It also requires sophisticated tools to generate code from models and maintain the link between models and the code. One advantage of MDD is that the same model can be used to create software for different platforms and different languages. MDD has a lot of promise, but it is still an emerging technology.
 
 Further reading:
 * [Martin Fowler's view on MDD](https://martinfowler.com/bliki/ModelDrivenSoftwareDevelopment.html) - TLDR: he is sceptical

@@ -10,7 +10,7 @@ class Box {
     private Lid lid; // lid of this box
     private Box outerBox;
 
-    public void open(){
+    public void open() {
         //...
     }
 }

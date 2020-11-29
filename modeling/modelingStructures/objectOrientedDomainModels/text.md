@@ -8,7 +8,7 @@
 
 > The analysis process for identifying objects and object classes is recognized as one of the most difficult areas of object-oriented development. <sub>--[Ian Sommerville, in the book _Software Engineering_](http://www.software-engin.com/)</sub>
 
-Class diagrams can also be used to model objects in the <tooltip content="the relevant information that needs to be examined to understand a problem">problem domain</tooltip> (i.e. to model how objects actually interact in the real world, before emulating them in the solution). **Class diagrams are used to model the problem domain are called _conceptual class diagrams_ or _OO domain models (OODMs)_.**
+Class diagrams can also be used to model objects in the <tooltip content="the relevant information that needs to be examined to understand a problem">problem domain</tooltip> (i.e. to model how objects actually interact in the real world, before emulating them in the solution). **Class diagrams that are used to model the problem domain are called _conceptual class diagrams_ or _OO domain models (OODMs)_.**
 
 <box>
 
