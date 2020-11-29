@@ -10,7 +10,7 @@
  1. **create the virtual world of the object network, and**
  2. **provide it the inputs to produce the outcome you want.** 
 
-**A ==_class_== contains instructions for creating a specific kind of objects**. It turns out sometimes multiple objects keep the same type of data and have the same behavior because they are of the _same kind_. Instructions for creating a 'kind' (or ‘class’) of objects can be done once and that same instructions can be used to <tooltip content="i.e. create instances of">_instantiate_</tooltip> objects of that kind. You call such instructions a _Class_.
+**A ==_class_== contains instructions for creating a specific kind of objects**. It turns out sometimes multiple objects keep the same type of data and have the same behavior because they are of the _same kind_. Instructions for creating a 'kind' (or ‘class’) of objects can be done once and those same instructions can be used to <tooltip content="i.e. create instances of">_instantiate_</tooltip> objects of that kind. You call such instructions a _Class_.
 
 <box>
 

@@ -30,7 +30,7 @@ You are asked to find out the average age of a group of people Adam, Beth, Charl
 
 </box>
 
-**OOP solutions try to create a similar object network inside the computer’s memory** – a sort of a virtual simulation of the corresponding real world scenario – **so that a similar result can be achieved programmatically.**
+**OOP solutions try to create a similar object network inside the computer’s memory** – a sort of virtual simulation of the corresponding real world scenario – **so that a similar result can be achieved programmatically.**
 
 <!-- TODO {visual: Direct mapping} -->
 
@@ -72,7 +72,7 @@ Every real world object has:
 {{ icon_example }} The interface and implementation of some real-world objects in our example:
 
 * Calculator: the buttons and the display are part of the interface; circuits are part of the implementation.
-* Adam: In the context of our 'calculate average age' example, the interface of Adam consists of requests that adam will respond to, e.g.  "Give age to the nearest year, as at Jan 1st of this year" "State your name"; the implementation includes the mental calculation Adam uses to calculate the age which is not visible to other objects.
+* Adam: In the context of our 'calculate average age' example, the interface of Adam consists of requests that Adam will respond to, e.g.  "Give age to the nearest year, as at Jan 1st of this year" "State your name"; the implementation includes the mental calculation Adam uses to calculate the age which is not visible to other objects.
 
 </box>
 
@@ -86,7 +86,7 @@ Similarly, every object in the virtual world has an interface and an implementat
 
 </box>
 
-**Objects interact by sending messages.** Both real world and virtual world object interactions can be viewed as objects sending message to each other. The message can result in the sender object receiving a response and/or the receiver object’s state being changed. Furthermore, the result can vary based on which object received the message, even if the message is identical %%(see rows 1 and 2 in the example below)%%.
+**Objects interact by sending messages.** Both real world and virtual world object interactions can be viewed as objects sending messages to each other. The message can result in the sender object receiving a response and/or the receiver object’s state being changed. Furthermore, the result can vary based on which object received the message, even if the message is identical %%(see rows 1 and 2 in the example below)%%.
 
 <box>
 
