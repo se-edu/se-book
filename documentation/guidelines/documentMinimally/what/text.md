@@ -2,7 +2,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{ icon_outcome }} Can explain documentation should be minimal yet sufficient</span>
+<span id="outcomes">{{ icon_outcome }} Can explain that documentation should be minimal yet sufficient</span>
 
 <div id="body">
 

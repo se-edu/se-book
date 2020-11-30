@@ -6,7 +6,7 @@
 
 <div id="body">
 
-Technical documents exist to help others understand technical details. Therefore, **it is not enough for the documentation to be accurate and comprehensive, it should also be comprehensible too**. 
+Technical documents exist to help others understand technical details. Therefore, **it is not enough for the documentation to be accurate and comprehensive; it should also be comprehensible**. 
 
 </div>
 

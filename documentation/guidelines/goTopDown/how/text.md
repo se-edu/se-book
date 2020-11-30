@@ -29,14 +29,14 @@
 >And this is how the three components work together ...
 
 
-[At this point, further drill down the internal workings of each component. A reader who is not interested in knowing nitty-gritty details can skip ahead to the section on `BackEnd`.]
+[At this point, further drill down to the internal workings of each component. A reader who is not interested in knowing the nitty-gritty details can skip ahead to the section on `BackEnd`.]
 
 >In-depth description of `A`<br><br>
 >In-depth description of `B`<br><br>
 >...
 
 
-[At this point drill down details of the `BackEnd`.]
+[At this point drill down to the details of the `BackEnd`.]
 
 >...
 
