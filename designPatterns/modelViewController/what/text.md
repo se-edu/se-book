@@ -20,16 +20,16 @@ Decouple data, presentation, and control logic of an application by separating t
 
 * _View_: Displays data, interacts with the user, and pulls data from the model if necessary.
 * _Controller_: Detects UI events such as mouse clicks, button pushes and takes follow up action. Updates/changes the model/view when necessary.
-* _Model_: Stores and maintains data. Updates views if necessary.
+* _Model_: Stores and maintains data. Updates view if necessary.
 
-The relationship between the components can be observed in the diagram below. Typically, the UI is the combination of view and controller.
+The relationship between the components can be observed in the diagram below. Typically, the UI is the combination of _View_ and _Controller_.
 
 <img src="{{baseUrl}}/designPatterns/modelViewController/what/images/classDiagram.png" width="400" />
 <p/>
 
 <box>
 
-{{ icon_example }} Given below is a concrete example of MVC applied to a student management system. In this scenario, the user is retrieving data of one student.
+{{ icon_example }} Given below is a concrete example of MVC applied to a student management system. In this scenario, the user is retrieving the data of a student.
 
 <img src="{{baseUrl}}/designPatterns/modelViewController/what/images/sequenceDiagram.png" width="500" />
 <p/>
@@ -38,9 +38,9 @@ In the diagram above, when the user clicks on a button using the UI, the ‘clic
 
 </box>
 
-Note that in a simple UI where there’s only one view, Controller and View can be combined as one class.
+Note that in a simple UI where there’s only one view, _Controller_ and _View_ can be combined as one class.
 
-There are many variations of the MVC model used in different domains. For example, the one used in a desktop GUI could be different from the one used in a Web application.
+There are many variations of the MVC model used in different domains. For example, the one used in a desktop GUI could be different from the one used in a web application.
 
 </div>
 

@@ -8,7 +8,7 @@
 
 **Context**
 
-A certain classes should have no more than just one instance (e.g. the main controller class of the system). These single instances are commonly known as _singletons_.
+Certain classes should have no more than just one instance (e.g. the main controller class of the system). These single instances are commonly known as _singletons_.
 
 **Problem**
 

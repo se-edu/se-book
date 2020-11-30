@@ -6,7 +6,7 @@
 
 <div id="body">
 
-**Design pattern provides a high-level vocabulary to talk about design.**
+**Design patterns provide a high-level vocabulary to talk about design.**
 
 <box>
 

@@ -9,11 +9,11 @@
 
 **Context**
 
-An object (possibly, more than one) is interested to get notified when a change happens to another object. That is, some objects want to ‘observe’ another object.
+An object (possibly more than one) is interested in being notified when a change happens to another object. That is, some objects want to ‘observe’ another object.
 
 <box>
 
-{{ icon_example }} Consider this scenario from the a student management system where the user is adding a new student to the system.
+{{ icon_example }} Consider this scenario from a student management system where the user is adding a new student to the system.
 
 <img src="{{baseUrl}}/designPatterns/observer/what/images/sequenceDiagram.png" height="330" />
 <p/>
@@ -54,20 +54,20 @@ Force the communication through an interface known to both parties.
    ```java
    StudentList studentList = new StudentList();
    StudentListUi listUi = new StudentListUi();
-   StudentStatusUi statusUi = new StudentStatsUi();
+   StudentStatsUi statsUi = new StudentStatsUi();
    ```
 
-2. Next, the two UIs indicate to the `StudentList` that they are interested in being updated whenever `StudentList` changes. This is also known as ‘subscribing for updates’.
+1. Next, the two UIs indicate to the `StudentList` that they are interested in being updated whenever `StudentList` changes. This is also known as ‘subscribing for updates’.
 
    ```java
    studentList.addUi(listUi);
-   studentList.addUi(statusUi);
+   studentList.addUi(statsUi);
    ```
 
-3. Within the `addUi` operation of `StudentList`, all Observer objects subscribers are added to an internal data structure called `observerList`.
+1. Within the `addUi` operation of `StudentList`, all Observer object subscribers are added to an internal data structure called `observerList`.
 
    ```java
-   //StudentList class
+   // StudentList class
    public void addUi(Observer o) {
        observerList.add(o);
    }
@@ -77,10 +77,10 @@ Force the communication through an interface known to both parties.
 
 1. All interested observers are updated by calling the `notifyUIs` operation.
    ```java
-   //StudentList class
+   // StudentList class
    public void notifyUIs() {
-       //for each observer in the list
-       for(Observer o: observerList){
+       // for each observer in the list
+       for (Observer o: observerList) {
            o.update();
        }
    }
@@ -88,9 +88,9 @@ Force the communication through an interface known to both parties.
 
 1. UIs can then pull data from the `StudentList` whenever the `update` operation is called.
    ```java
-   //StudentListUI class
+   // StudentListUI class
    public void update() {
-       //refresh UI by pulling data from StudentList
+       // refresh UI by pulling data from StudentList
    }
    ```
    Note that `StudentList` is unaware of the exact nature of the two UIs but still manages to communicate with them via an intermediary.
@@ -103,12 +103,12 @@ Here is the generic description of the observer pattern:
 <p/>
 
 * `<<Observer>>` is an interface: any class that implements it can observe an `<<Observable>>`. Any number of `<<Observer>>` objects can observe (i.e. listen to changes of) the `<<Observable>>` object.
-* The `<<Observable>>` maintains a list of `<<Observer>>` objects. `addObserver(Observer)` operation adds a new `<<Observer>>` to the list of `<<Observer>>`'s.
-* Whenever there is a change in the `<<Observable>>`, the `notifyObservers()` operation is called that will call the `update()` operation of all `<<Observer>>`'s in the list.
+* The `<<Observable>>` maintains a list of `<<Observer>>` objects. `addObserver(Observer)` operation adds a new `<<Observer>>` to the list of `<<Observer>>`s.
+* Whenever there is a change in the `<<Observable>>`, the `notifyObservers()` operation is called that will call the `update()` operation of all `<<Observer>>`s in the list.
 
 <box>
 
-{{ icon_example }} In a GUI application, how is the Controller notified when the “save” button is clicked? UI frameworks such as JavaFX has inbuilt support for the Observer pattern.
+{{ icon_example }} In a GUI application, how is the Controller notified when the “save” button is clicked? UI frameworks such as JavaFX have inbuilt support for the Observer pattern.
 
 </box>
 
