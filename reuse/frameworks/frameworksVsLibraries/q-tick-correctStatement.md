@@ -12,7 +12,7 @@ Which of these are frameworks?
 
 (a)(b)(c)(d)
 
-Explanation: These are frameworks.
+Explanation: These are all frameworks.
 
 </div>
 </question>
