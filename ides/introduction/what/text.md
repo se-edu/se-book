@@ -21,7 +21,7 @@ Examples of popular IDEs:
 * Swift: XCode
 * Python: PyCharm
 
-Some Web-based IDEs have appeared in recent times too e.g., Amazon's [Cloud9 IDE](https://aws.amazon.com/cloud9/).
+Some web-based IDEs have appeared in recent times too e.g., Amazon's [Cloud9 IDE](https://aws.amazon.com/cloud9/).
 
 Some experienced developers, in particular those with a UNIX background, prefer lightweight yet powerful text editors with scripting capabilities (e.g. [Emacs](http://www.gnu.org/software/emacs/)) over heavier IDEs.
 
