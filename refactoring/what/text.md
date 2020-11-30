@@ -15,7 +15,7 @@ The first version of the code you write may not be of production quality. It is 
 
 {{ icon_tip }} Improving code structure can have many secondary benefits: e.g.
  * hidden bugs become easier to spot
- * improve performance (sometimes, simpler code runs faster than complex code because simpler code is easier for the compiler to optimize). 
+ * improve performance (sometimes, simpler code runs faster than complex code because simpler code is easier for the compiler to optimize).
 
 </box>
 
@@ -68,7 +68,7 @@ Method: Turn the fragment into a method whose name explains the purpose of the m
 </box>
 
 
-{{ icon_tip }} Some IDEs have built in support for basic refactorings such as automatically renaming a variable/method/class in all places it has been used.
+{{ icon_tip }} Some IDEs have builtin support for basic refactorings such as automatically renaming a variable/method/class in all places it has been used.
 
 
 {{ icon_important_big_red }} Refactoring, even if done with the aid of an IDE, may still result in regressions. Therefore, each small refactoring should be followed by regression testing.
