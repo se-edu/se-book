@@ -10,7 +10,7 @@
 
 <box>
 
-{{ icon_example }} `Logic` is aware of `Minefield`, but `Minefield` is not aware of `Logic`
+{{ icon_example }} `Logic` is aware of `Minefield`, but `Minefield` is not aware of `Logic`.
 
 <img src="{{baseUrl}}/uml/classDiagrams/associations/navigability/images/logicMinefield.png" height="40" />
 
@@ -25,7 +25,7 @@
 
 <box>
 
-{{ icon_example }} According to this object diagram the given `Logic` object is associated with and aware of two `MineField` objects.
+{{ icon_example }} According to this object diagram, the given `Logic` object is associated with and aware of two `MineField` objects.
 
 <img src="{{baseUrl}}/uml/classDiagrams/associations/navigability/images/logicMinefieldObjects.png" height="80" />
 

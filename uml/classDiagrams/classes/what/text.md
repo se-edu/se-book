@@ -93,12 +93,12 @@ class Table:
 
 <panel type="seamless" header="How visibilities map to programming language features">
 
-visibility | Java | Python
+Visibility | Java | Python
 -----------|------|-------
-`-`  private | `private` | at least two leading underscores (and at most one trailing underscores) in the name
-`#`  protected | `protected` | one leading underscore in the name
-`+`  public | `public` | all other cases
-`~`  package private | default visibility | not applicable
+`-` private | `private` | at least two leading underscores (and at most one trailing underscores) in the name
+`#` protected | `protected` | one leading underscore in the name
+`+` public | `public` | all other cases
+`~` package private | default visibility | not applicable
 
 </panel><p/>
 

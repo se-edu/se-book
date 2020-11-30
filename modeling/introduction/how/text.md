@@ -43,7 +43,7 @@ c) **As a blueprint for creating software.** Models can be used as instructions 
 
 <box>
 
-{{ icon_example }} Some examples of using models to as blueprints:
+{{ icon_example }} Some examples of using models as blueprints:
 
 1. A senior developer draws a class diagram to propose a design for an OOP software and passes it to a junior programmer to implement.
 2. A software tool allows users to draw UML models using its interface and the tool automatically generates the code based on the model.
