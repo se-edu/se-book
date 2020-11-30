@@ -6,7 +6,7 @@ A) In TDD, we write all the test cases before we start writing functional code.
 - ( ) True
 - ( ) False
 
-B) Testing tools such as Junit require us to follow TDD.
+B) Testing tools such as JUnit require us to follow TDD.
 
 - ( ) True
 - ( ) False

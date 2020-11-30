@@ -3,10 +3,10 @@
 
 Which testing technique is better?
 
-- ( ) a. error guessing
-- ( ) b. bug hunting
-- ( ) c. attack-based testing
-- ( ) d. reactive testing
+- ( ) a. Error guessing
+- ( ) b. Bug hunting
+- ( ) c. Attack-based testing
+- ( ) d. Reactive testing
 - ( ) e. These are different names used to describe exploratory testing.
 
 <div slot="answer">

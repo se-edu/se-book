@@ -6,7 +6,7 @@
 
 <div id="body">
 
-**A simple way to semi-automate testing of a CLI(Command Line Interface) app is by using input/output re-direction.**
+**A simple way to semi-automate testing of a CLI (Command Line Interface) app is by using input/output re-direction.**
 
 * First, you feed the app with a sequence of test inputs that is stored in a file while redirecting the output to another file.
 * Next, you compare the actual output file with another file containing the expected output.
@@ -47,12 +47,12 @@ Lets assume you are testing a CLI app called `AddressBook`. Here are the detaile
      e.g., In Python, assuming the code is in `AddressBook.py` file, use the command<br>
       `python AddressBook.py < input.txt > output.txt`
    
-   * {{ icon_tip }} If you are using Windows, use a normal command window to run the app, not a Power Shell window.
+   * {{ icon_tip }} If you are using Windows, use a normal command window to run the app, not a PowerShell window.
    
    <panel header="" minimized >
    <span slot="header" class="card-title"><md>More on the `>` operator and the `<` operator {{ icon_extra }}</md></span>
    
-   A CLI program takes input from the keyboard and outputs to the console. That is because those two are default input and output streams, respectively. But you can change that behavior using ` < ` and ` > ` operators. For example, if you run `AddressBook` in a command window, the output will be shown in the console, but if you run it like this,
+   A CLI program takes input from the keyboard and outputs to the console. That is because those two are the default input and output streams, respectively. But you can change that behavior using ` < ` and ` > ` operators. For example, if you run `AddressBook` in a command window, the output will be shown in the console, but if you run it like this,
    
    ```sh{.no-line-numbers}
    java AddressBook > output.txt 
@@ -69,13 +69,13 @@ Lets assume you are testing a CLI app called `AddressBook`. Here are the detaile
    
    </panel><p/>
 
-1. Next, you compare `output.txt` with the `expected.txt`. This can be done using a utility such as Windows `FC` (i.e. File Compare) command, Unix `diff` command, or a GUI tool such as _WinMerge_. 
+1. Next, you compare `output.txt` with the `expected.txt`. This can be done using a utility such as Windows' `FC` (i.e. File Compare) command, Unix's `diff` command, or a GUI tool such as _WinMerge_.
 
    ```{.no-line-numbers}
    FC output.txt expected.txt
    ```
 
-Note that the above technique is only suitable when testing CLI apps, and only if the exact output can be predetermined. %%If the output varies from one run to the other (e.g. it contains a time stamp), this technique will not work. In those cases you need more sophisticated ways of automating tests.%%
+Note that the above technique is only suitable when testing CLI apps, and only if the exact output can be predetermined. %%If the output varies from one run to the other (e.g. it contains a time stamp), this technique will not work. In those cases, you need more sophisticated ways of automating tests.%%
 
 <include src="../../../common/popOvers.md#cli" />
 

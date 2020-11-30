@@ -16,7 +16,7 @@
 
 {{ icon_example }} Here is another example of using polymorphism to implement dependency injection:
 
-Suppose you want to unit test the `Payroll#totalSalary()` given below. The method depends on the `SalaryManager` object to calculate the return value. Note how the `setSalaryManager(SalaryManager)` can be used to inject a `SalaryManager` object to replace the current `SalaryManager` object.
+Suppose you want to unit test `Payroll#totalSalary()` given below. The method depends on the `SalaryManager` object to calculate the return value. Note how the `setSalaryManager(SalaryManager)` can be used to inject a `SalaryManager` object to replace the current `SalaryManager` object.
 
 ```java
 class Payroll {
@@ -28,12 +28,12 @@ class Payroll {
     }
 
     void setSalaryManager(SalaryManager sm) {
-       this. manager = sm;
+        this.manager = sm;
     }
 
     double totalSalary() {
         double total = 0;
-        for(int i = 0;i < employees.length; i++){
+        for (int i = 0; i < employees.length; i++) {
             total += manager.getSalaryForEmployee(employees[i]);
         }
         return total;
@@ -42,9 +42,9 @@ class Payroll {
 
 
 class SalaryManager {
-    double getSalaryForEmployee(String empID){
-        //code to access employee’s salary history
-        //code to calculate total salary paid and return it
+    double getSalaryForEmployee(String empID) {
+        // code to access employee’s salary history
+        // code to calculate total salary paid and return it
     }
 }
 ```
@@ -54,16 +54,16 @@ During testing, you can inject a `SalaryManagerStub` object to replace the `Sala
 ```java
 class PayrollTest {
     public static void main(String[] args) {
-        //test setup
+        // test setup
         Payroll p = new Payroll();
-        p.setSalaryManager(new SalaryManagerStub()); //dependency injection
-        //test case 1
+        p.setSalaryManager(new SalaryManagerStub()); // dependency injection
+        // test case 1
         p.setEmployees(new String[]{"E001", "E002"});
         assertEquals(2500.0, p.totalSalary());
-        //test case 2
+        // test case 2
         p.setEmployees(new String[]{"E001"});
         assertEquals(1000.0, p.totalSalary());
-        //more tests ...
+        // more tests ...
     }
 }
 
@@ -71,9 +71,9 @@ class PayrollTest {
 class SalaryManagerStub extends SalaryManager {
     /** Returns hard coded values used for testing */
     double getSalaryForEmployee(String empID) {
-        if(empID.equals("E001")) {
+        if (empID.equals("E001")) {
             return 1000.0;
-        } else if(empID.equals("E002")) {
+        } else if (empID.equals("E002")) {
             return 1500.0;
         } else {
             throw new Error("unknown id");
