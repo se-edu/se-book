@@ -3,8 +3,8 @@
 
 Choose correct statements about software frameworks.
 
-- [ ] a. They follow the hollywood principle, otherwise known as ‘inversion of control’
-- [ ] b. They come with full or partial implementation.
+- [ ] a. They follow the Hollywood principle, otherwise known as ‘inversion of control’.
+- [ ] b. They come with full or partial implementations.
 - [ ] c. They are more concrete than patterns or principles.
 - [ ] d. They are often configurable.
 - [ ] e. They are reuse mechanisms.
@@ -14,7 +14,7 @@ Choose correct statements about software frameworks.
 
 (a)(b)(c)(d)(e)~~(f)~~
 
-Explanation: While both libraries and frameworks are reuse mechanisms, and both more concrete than principles and patterns, libraries differ from frameworks in some key ways. One of them is the ‘inversion of control’ used by frameworks but not libraries. Furthermore, frameworks do not have to be bigger than libraries all the time.
+Explanation: While both libraries and frameworks are reuse mechanisms, and both are more concrete than principles and patterns, libraries differ from frameworks in some key ways. One of them is the ‘inversion of control’ used by frameworks but not libraries. Furthermore, frameworks do not have to be bigger than libraries all the time.
 
 </div>
 </question>
