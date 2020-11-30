@@ -34,14 +34,14 @@ Similarly, you can have ‘magic’ values of other data types.
 <div class="alt-java">
 
 ```java
-return "Error 1432"  // A magic string!
+return "Error 1432"; // A magic string!
 ```
 
 </div>
 <div class="alt-python">
 
 ```python
-return "Error 1432"  # A magic string!
+return "Error 1432" # A magic string!
 ```
 
 </div>

@@ -22,7 +22,7 @@ void compact(String input) {
 ```
 </box>
 
-{{ icon_tick_green }} **Why** : The rationale for the current implementation.
+{{ icon_tick_green }} **Why**: The rationale for the current implementation.
 
 <box>
 
@@ -35,7 +35,7 @@ compact(input);
 
 </box>
 
-{{ icon_x_red }} **How** : The explanation for how the code works. This should already be apparent from the code, if the code is self-explanatory. Adding comments to explain the same thing is redundant.
+{{ icon_x_red }} **How**: The explanation for how the code works. This should already be apparent from the code, if the code is self-explanatory. Adding comments to explain the same thing is redundant.
 
 <box>
 
@@ -49,8 +49,7 @@ return (left && right) || (input.size() == size);
 
 {{good}} %%Reason: Code refactored to be self-explanatory. Comment no longer needed.%%
 ```java
-
-boolean isSameSize = (input.size() == size) ;
+boolean isSameSize = (input.size() == size);
 return (isLeftEndCorrect && isRightEndCorrect) || isSameSize;
 ```
 
