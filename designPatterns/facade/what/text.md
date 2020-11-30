@@ -29,7 +29,7 @@ Include a <tooltip content="a French word that means 'front of a building'">Faç
 
 <box>
 
-{{ icon_example }} The following class diagram applies the Façade pattern to the `Library System` example. The `LibraryLogic` class is the Facade class.
+{{ icon_example }} The following class diagram applies the Facade pattern to the `Library System` example. The `LibraryLogic` class is the Facade class.
 
 <img src="{{baseUrl}}/designPatterns/facade/what/images/textLibraryBook.png" height="120" />
 <p/>

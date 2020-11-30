@@ -114,13 +114,13 @@ e.g., `createEmptyList`, `listOfIntegers`, `htmlText`, `dvdPlayer`. This book de
 
 <div id="def-design-pattern">
 
-**Design pattern** : An _elegant reusable solution_ to a _commonly recurring problem_ within a _given context_ in software design.
+**Design pattern**: An _elegant reusable solution_ to a _commonly recurring problem_ within a _given context_ in software design.
 
 </div>
 
 <div id="def-domain-expert">
 
-**Domain expert** : An expert of a discipline to which the product is connected %%e.g., for a software used for Accounting, a domain expert is someone who is an expert of Accounting%%.
+**Domain expert**: An expert of a discipline to which the product is connected %%e.g., for a software used for Accounting, a domain expert is someone who is an expert of Accounting%%.
 
 </div>
 
