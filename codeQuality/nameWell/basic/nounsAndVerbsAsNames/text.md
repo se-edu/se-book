@@ -22,7 +22,7 @@ method     |`result()`       | `calculate()`
 </box>
 
 
-**Distinguish clearly between single-valued and multivalued variables.**
+**Distinguish clearly between single-valued and multi-valued variables.**
 
 <box>
 

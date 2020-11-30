@@ -16,7 +16,7 @@ Example: Consider these variables
 * `colorBlue`: number of times blue is used
 * `hexForRed`: hex value for color red
 
-This is misleading because `colorBlue` is named similar to `colorWhite` and `colorBlack` but has a different purpose while `hexForRed` is named differently but has very similar purpose to the first two variables. The following is better: 
+This is misleading because `colorBlue` is named similar to `colorWhite` and `colorBlack` but has a different purpose while `hexForRed` is named differently but has a very similar purpose to the first two variables. The following is better:
 * `hexForBlack` `hexForWhite` `hexForRed` 
 * `blueColorCount`
 
