@@ -18,7 +18,7 @@ However, most big projects use specialized build tools to automate complex build
 
 {{ icon_example }} Some popular build tools relevant to Java developers: [Gradle](https://gradle.org/), [Maven](http://maven.apache.org/), [Apache Ant](http://ant.apache.org/), [GNU Make](http://www.gnu.org/software/make/)
 
-{{ icon_example }} %%Some other build tools : Grunt (JavaScript), Rake (Ruby)%%
+{{ icon_example }} %%Some other build tools: Grunt (JavaScript), Rake (Ruby)%%
 
 </box>
 
