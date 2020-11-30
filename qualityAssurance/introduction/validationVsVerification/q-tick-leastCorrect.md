@@ -1,4 +1,4 @@
-<panel header="{{ icon_Q_A }} statements about validation and verification.">
+<panel header="{{ icon_Q_A }} Statements about validation and verification">
 <question>
 
 Choose the correct statements about validation and verification.
@@ -18,9 +18,9 @@ Explanation:
 
 Whether something belongs under validation or verification is not that important. What is more important is that we do both.
 
-Developer testing is more about bugs in code, rather than bugs in the requirements.
+Developer testing is more about finding bugs in the code, rather than bugs in the requirements.
 
-In QA, system testing is more about verification (does the system follow the specification?) and acceptance testings is more about validation (does the system solve the user’s problem?).
+In QA, system testing is more about verification (does the system follow the specification?) and acceptance testing is more about validation (does the system solve the user’s problem?).
 
 A system crash is more likely to be a bug in the code, not in the requirements.
 
