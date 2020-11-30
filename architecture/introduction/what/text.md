@@ -13,7 +13,7 @@
 
 <box>
 
-{{ icon_example }} A possible architecture for a _Minesweeper_ game
+{{ icon_example }} A possible architecture for a _Minesweeper_ game:
 
 <table>
 <tr>
@@ -28,8 +28,8 @@ Main components:
 * `GUI`: Graphical user interface
 * `TextUi`: Textual user interface
 * `ATD`: An automated test driver used for testing the game logic
-* `Logic`: computation and logic of the game
-* `Store`: storage and retrieval of game data (high scores etc.)
+* `Logic`: Computation and logic of the game
+* `Store`: Storage and retrieval of game data (high scores etc.)
 
 </box>
 
