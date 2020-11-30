@@ -29,7 +29,7 @@ public class Marriage {
     }
 
     public Man getHusband() throws Exception {
-        if(husband == null) {
+        if (husband == null) {
             throw new Exception("error state");
         } else {
             return husband;
@@ -37,7 +37,7 @@ public class Marriage {
     }
 
     public Woman getWife() throws Exception {
-        if(wife == null) {
+        if (wife == null) {
             throw new Exception("error state");
         } else {
             return wife;
