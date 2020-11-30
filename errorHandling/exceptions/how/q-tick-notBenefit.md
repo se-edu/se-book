@@ -1,7 +1,7 @@
-<panel header="{{ icon_Q_A }} Benefit of exceptions">
+<panel header="{{ icon_Q_A }} Benefits of exceptions">
 <question>
 
-Which are benefits of exceptions?
+Which are the benefits of exceptions?
 
 - [ ] a. Exceptions allow us to separate normal code from error handling code.
 - [ ] b. Exceptions can prevent problems that happen in the environment.

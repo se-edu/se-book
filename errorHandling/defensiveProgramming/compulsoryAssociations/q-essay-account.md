@@ -12,8 +12,8 @@ Give a suitable defensive implementation to the `Account` class in the following
 class Account {
     private Guarantor myGuarantor; // should not be public
 
-    public Account(Guarantor g){
-        if (g==null) {
+    public Account(Guarantor g) {
+        if (g == null) {
             haltWithErrorMessage(“Account must have a guarantor”);
         }
         myGuarantor = g;

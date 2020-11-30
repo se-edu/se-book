@@ -22,7 +22,7 @@ This is a defensive implementation of the association.
 
 False
 
-Explanation: While the design requires a City to be connected to exactly one Country, the code allows it to be connected to zero Country objects (by passing null to the setCountry() method).
+Explanation: While the design requires a `City` to be connected to exactly one `Country`, the code allows it to be connected to zero `Country` objects (by passing `null` to the `setCountry()` method).
 
 </div>
 </question>

@@ -40,13 +40,13 @@ This results in an `Account` without a `Guarantor`! In a real banking system, th
 class Account {
     private Guarantor guarantor;
 
-    public Account(Guarantor g){
+    public Account(Guarantor g) {
         if (g == null) {
             stopSystemWithMessage("multiplicity violated. Null Guarantor");
         }
         guarantor = g;
     }
-    public void setGuarantor (Guarantor g){
+    public void setGuarantor (Guarantor g) {
         if (g == null) {
             stopSystemWithMessage("multiplicity violated. Null Guarantor");
         }
