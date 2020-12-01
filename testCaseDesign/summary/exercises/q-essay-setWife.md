@@ -11,10 +11,10 @@ Use equivalence partitions and boundary values to choose test inputs for testing
 <img src="{{baseUrl}}/testCaseDesign/summary/exercises/images/manWomanPartitions.png" height="300" />
 <p/>
 
-Partitioning ‘married’ as ‘to same woman’ and ‘to different woman’ seems redundant at first. Arguments for having it:
+Partitioning ‘married’ as ‘to the same woman’ and ‘to a different woman’ seems redundant at first. Arguments for having it:
 
 * The behavior (e.g. the error message shown) may be different in those two situations.
-* The ‘to same woman’ partition has a risk of misunderstanding between developer and user. For example, the developer might think it is OK to ignore the request while the users might expect to see an error message.
+* The ‘to the same woman’ partition has a risk of misunderstanding between developer and user. For example, the developer might think it is OK to ignore the request while the users might expect to see an error message.
 
 </div>
 </question>

@@ -11,7 +11,7 @@ For 10-character strings:
 
 * c1-c4: [not an integer] [less than 1880] [1880-2030 excluding leap years] [leap years within 1880-2030 period] [2030-9999]
 * c5: [‘/’] [not ‘/’]
-* c6-c7: [not an integer] [less than 1] [2] [31-day months: 1,3,5, 7,8, 10,12] [30-day months: 4,6,9,11] [13-99]
+* c6-c7: [not an integer] [less than 1] [2] [31-day months: 1,3,5,7,8,10,12] [30-day months: 4,6,9,11] [13-99]
 * c8: [‘/’] [ not ‘/’]
 * c9-c10: [not an integer] [less than 1] [1-28] [29] [30] [31] [more than 31]
 

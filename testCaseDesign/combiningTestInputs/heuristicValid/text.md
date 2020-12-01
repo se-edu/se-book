@@ -12,7 +12,7 @@ Consider the following scenario.
 
 SUT:  `printLabel(String fruitName, int unitPrice)`
 
-**Selected values for** `fruitName` (invalid values are ++underlined++ ):
+**Selected values for** `fruitName` (invalid values are ++underlined++):
 
 Values	| Explanation
 ------- | -----------
@@ -63,7 +63,7 @@ In this case, a useful heuristic to apply is **each valid input must appear at l
 | 3      | VV         | ++0++      | Error message “invalid price”  |
 | 4      | ++Dog++    | ++-1++     | Error message “invalid fruit"  |
 
-VV/IV = Any Invalid or Valid Value VV=Any Valid Value
+VV/IV = Any Invalid or Valid Value VV = Any Valid Value
 
 </div>
 
