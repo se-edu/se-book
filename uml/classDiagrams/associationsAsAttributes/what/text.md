@@ -8,7 +8,7 @@
 
 **An association can be shown as an attribute instead of a line.** 
 
-Association multiplicities and the default value too can be shown as part of the attribute using the following notation. Both are optional. 
+Association multiplicities and the default value can be shown as part of the attribute using the following notation. Both are optional.
 
 `name: type [multiplicity]  = default value`
 
