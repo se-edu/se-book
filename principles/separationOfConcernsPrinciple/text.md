@@ -30,7 +30,7 @@ A _concern_ in this context is a set of information that affects the code of a c
 
 </box>
 
-**This principle can be applied at the class level, as well as on higher levels.** 
+**This principle can be applied at the class level, as well as at higher levels.**
 
 <box>
 

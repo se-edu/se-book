@@ -1,4 +1,4 @@
-<panel header="{{ icon_Q_A }} Pick the odd one out.">
+<panel header="{{ icon_Q_A }} Pick the odd one out">
 
 <panel header="%%Prerequisites%%" expandable expanded>
   <panel src="../separationOfConcernsPrinciple/unit-inElsewhere-asFlat.md" boilerplate header="Principles: Separation of Concerns Principle" />
