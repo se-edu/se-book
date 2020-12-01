@@ -111,7 +111,7 @@ title: "Book - Software Engineering for Self-Directed Learners"
 * [UML]({{baseUrl}}/uml/) 
   [{{icon_print}}]({{baseUrl}}/uml/print.html)
 
-* [Intellij IDEA]({{baseUrl}}/intellij/)
+* [IntelliJ IDEA]({{baseUrl}}/intellij/)
   [{{icon_print}}]({{baseUrl}}/intellij/print.html)
   
 * [Git and GitHub]({{baseUrl}}/gitAndGithub/)

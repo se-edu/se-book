@@ -32,7 +32,7 @@
   * [SDLC Process Models](#sdlc-process-models)
 * [**SECTION: TOOLS**](#section-tools) 
   * [UML](#uml)
-  * [Intellij IDEA](#intellij-idea)
+  * [IntelliJ IDEA](#intellij-idea)
   * [Git and GitHub](#git-and-github)
 * [**SECTION: PRINCIPLES**](#section-principles)
   * [Principles](#principles)

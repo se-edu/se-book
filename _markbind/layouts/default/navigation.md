@@ -46,7 +46,7 @@
 
 * **Tools**
   * [UML]({{baseUrl}}/uml/index.html)
-  * [Intellij IDEA]({{baseUrl}}/intellij/index.html)
+  * [IntelliJ IDEA]({{baseUrl}}/intellij/index.html)
   * [Git and GitHub]({{baseUrl}}/gitAndGithub/index.html)
 
 * **Principles**
