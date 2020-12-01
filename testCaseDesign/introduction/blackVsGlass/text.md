@@ -6,7 +6,7 @@
 
 <div id="body">
 
-**Test case design can be of three types, based on how much of SUT internal details are considered when designing test cases:**
+**Test case design can be of three types, based on how much of the SUT's internal details are considered when designing test cases:**
 
 * **_Black-box_ (aka _specification-based or responsibility-based_) approach**: test cases are designed exclusively based on the SUT’s specified external behavior.
 

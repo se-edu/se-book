@@ -6,21 +6,21 @@
 
 <div id="body">
 
-When deciding EPs of OOP methods, you need to identify EPs of all data participants that can potentially influence the behaviour of the method, such as,
+When deciding EPs of OOP methods, you need to identify the EPs of all data participants that can potentially influence the behaviour of the method, such as,
 
 * the target object of the method call
 * input parameters of the method call
-* other data/objects accessed by the method such as global variables. This category may not be applicable if using the black box approach (because the test case designer using the black box approach will not know how the method is implemented)
+* other data/objects accessed by the method such as global variables. This category may not be applicable if using the black box approach (because the test case designer using the black box approach will not know how the method is implemented).
 
 <box>
 
 {{ icon_example }} Consider this method in the `DataStack` class:
 `push(Object o): boolean`
-* Adds o to the top of the stack if the stack is not full.
-* returns `true` if the push operation was a success.
-* throws 
+* Adds `o` to the top of the stack if the stack is not full.
+* Returns `true` if the push operation was a success.
+* Throws
   * `MutabilityException` if the global flag `FREEZE==true`.
-  * `InvalidValueException` if  o is null.
+  * `InvalidValueException` if `o` is null.
 
 EPs:
   * `DataStack` object: [full] [not full]
@@ -35,14 +35,14 @@ EPs:
 
 As `newGame()` does not have any parameters, the only obvious participant is the `Logic` object itself.
 
-Note that if the glass-box or the grey-box approach is used, other associated objects that are involved in the method might also be included as participants. For example, `Minefield` object can be considered as another participant of the `newGame()` method. Here, the black-box approach is assumed.
+Note that if the glass-box or the grey-box approach is used, other associated objects that are involved in the method might also be included as participants. For example, the `Minefield` object can be considered as another participant of the `newGame()` method. Here, the black-box approach is assumed.
 
 Next, let us identify equivalence partitions for each participant. Will the `newGame()` method behave differently for different `Logic` objects? If yes, how will it differ? In this case, yes, it might behave differently based on the game state. Therefore, the equivalence partitions are:
 
-* `PRE_GAME` : before the game starts, minefield does not exist yet
-* `READY` : a new minefield has been created and waiting for player’s first move
-* `IN_PLAY` : the current minefield is already in use
-* `WON`, `LOST` : let us assume the `newGame` behaves the same way for these two values
+* `PRE_GAME`: before the game starts, minefield does not exist yet
+* `READY`: a new minefield has been created and the app is waiting for the player’s first move
+* `IN_PLAY`: the current minefield is already in use
+* `WON`, `LOST`: let us assume that `newGame()` behaves the same way for these two values
 
 </box>
 
