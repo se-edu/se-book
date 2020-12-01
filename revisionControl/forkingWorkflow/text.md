@@ -14,7 +14,7 @@
 To illustrate how the workflow goes, let’s assume Jean wants to fix a bug in the code. Here are the steps:
 
 1. Jean creates a separate branch in her local repo and fixes the bug in that branch.<br>
-   {{ icon_important_big_red }} Common mistake: Do the proposed changes in the `master` branch -- if Jean does that, she will not be able to have more than one open PR at any time because any changes to the `master` branch will be reflected in all open PRs.
+   {{ icon_important_big_red }} Common mistake: Doing the proposed changes in the `master` branch -- if Jean does that, she will not be able to have more than one PR open at any time because any changes to the `master` branch will be reflected in all open PRs.
 2. Jean pushes the branch to her fork.
 3. Jean creates a pull request from that branch in her fork to the main repo.
 4. Other members review Jean’s pull request.

@@ -22,13 +22,13 @@ class Person {
 ```java
 class Tag {
     Tag(String value) {
-        //...
+        // ...
     }
 }
 
 class PersonList {
     void addPerson(Person p) {
-        //...
+        // ...
     }
 }
 ```

@@ -6,7 +6,7 @@
 
 <div id="body">
 
-**JavaDoc is a tool for generating API documentation in HTML format from doc comments in source.** In addition, modern IDEs use JavaDoc comments to generate explanatory tooltips.
+**JavaDoc is a tool for generating API documentation in HTML format from comments in the source code.** In addition, modern IDEs use JavaDoc comments to generate explanatory tooltips.
 
 <box>
 

@@ -67,7 +67,7 @@ void makeSameSize(Rectangle original, Rectangle toResize) {
     toResize.resize(original.getHeight(), original.getWidth());
 }
 ```
-This code will fail if it is called as `makeSameSize(new Rectangle(12,8), new Square(4, 4))`. That is, the `Square` class is not substitutable for the `Rectangle` class.
+This code will fail if it is called as `makeSameSize(new Rectangle(12, 8), new Square(4, 4))`. That is, the `Square` class is not substitutable for the `Rectangle` class.
 
 </panel>
 
