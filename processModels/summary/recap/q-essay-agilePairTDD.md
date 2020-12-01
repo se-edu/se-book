@@ -15,14 +15,14 @@ Find out more about the following three topics and give at least three arguments
 
 * More focus on customer satisfaction.
 * Less chance of building the wrong product (because of frequent customer feedback).
-* Less resource wasted on bureaucracy, over-documenting, contract negotiations.
+* Less resources wasted on bureaucracy, over-documenting, contract negotiations.
 
 Arguments against agile processes (not necessarily true):
 
 * It is ‘just hacking’. Not very systematic. No discipline.
 * It is hard to know in advance the exact final product.
 * It does not give enough attention to documentation.
-* Lack of management control (gives too much freedom to developers)
+* Lack of management control (too much freedom given to developers).
 
 (b) Arguments in favor of pair programming:
 
@@ -35,10 +35,10 @@ Arguments against agile processes (not necessarily true):
 
 Arguments against pair programming:
 
-* Increase in total man hours required
-* Personality clashes between pair-members
+* Increase in total man hours required.
+* Personality clashes between pair-members.
 * Workspaces need to be adapted to suit two developers working at one computer.
-* If pairs are rotated, one needs to know more parts of the system than in solo programming
+* If pairs are rotated, one needs to know more parts of the system than in solo programming.
 
 (c) Arguments in favor of TDD:
 
