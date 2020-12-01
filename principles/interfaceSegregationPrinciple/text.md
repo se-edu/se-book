@@ -19,7 +19,7 @@
 ```java
 public class Payroll {
     //...    
-    private void adjustSalaries(AdminStaff adminStaff){ //violates ISP
+    private void adjustSalaries(AdminStaff adminStaff) { // violates ISP
         //...
     }
 
@@ -29,7 +29,7 @@ public class Payroll {
 ```java
 public class Payroll {
     //...    
-    private void adjustSalaries(SalariedStaff staff){ //does not violate ISP
+    private void adjustSalaries(SalariedStaff staff) { // does not violate ISP
         //...
     }
 }

@@ -10,7 +10,7 @@ If a subclass imposes more restrictive conditions than its parent class, it viol
 
 True.
 
-Explanation: If the subclass is more restrictive than the parent class, code that worked with the parent class may not work with the child class. Hence, the substitutability does not exist and LSP has been violated. 
+Explanation: If the subclass is more restrictive than the parent class, code that worked with the parent class may not work with the child class. Hence, the substitutability does not exist and LSP is violated. 
 
 </div>
 </question>

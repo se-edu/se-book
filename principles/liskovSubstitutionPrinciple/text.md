@@ -10,7 +10,7 @@
   <include src="../../common/definitions.md#def-liskov-substitution-principle" />
 </box>
 
-LSP sounds same as <trigger large trigger="click" for="modal:lsp-substitutability">substitutability</trigger> but it goes beyond substitutability; **LSP implies that a subclass should not be more restrictive than the behavior specified by the superclass.** As you know, Java has language support for substitutability. However, if LSP is not followed, substituting a subclass object for a superclass object can break the functionality of the code.
+LSP sounds the same as <trigger large trigger="click" for="modal:lsp-substitutability">substitutability</trigger> but it goes beyond substitutability; **LSP implies that a subclass should not be more restrictive than the behavior specified by the superclass.** As you know, Java has language support for substitutability. However, if LSP is not followed, substituting a subclass object for a superclass object can break the functionality of the code.
 
 <modal large header="Textbook {{ icon_embedding }}" id="modal:lsp-substitutability">
   <include src="../../oop/inheritance/substitutability/unit-inElsewhere-asFlat.md" boilerplate/>
@@ -25,17 +25,17 @@ LSP sounds same as <trigger large trigger="click" for="modal:lsp-substitutabilit
 
 Now consider the following:
 
-* `Admin#adjustMySalary` method works for both negative and positive percent values.
-* `Academic#adjustMySalary` method works for percent values `1..100` only.
+* The `Admin#adjustMySalary` method works for both negative and positive percent values.
+* The `Academic#adjustMySalary` method works for percent values `1..100` only.
 
 In the above scenario,
 
-* `Admin` class follows LSP because it fulfills `Payroll`’s expectation of `Staff` objects (i.e. it works for all positive values). Substituting `Admin` objects for Staff objects will not break the `Payroll` class functionality.
-* `Academic` class violates LSP because it will not work for percent values over `100` as expected by the `Payroll` class. Substituting `Academic` objects for `Staff` objects can potentially break the `Payroll` class functionality.
+* The `Admin` class follows LSP because it fulfills `Payroll`’s expectation of `Staff` objects (i.e. it works for all positive values). Substituting `Admin` objects for `Staff` objects will not break the `Payroll` class functionality.
+* The `Academic` class violates LSP because it will not work for percent values over `100` as expected by the `Payroll` class. Substituting `Academic` objects for `Staff` objects can potentially break the `Payroll` class functionality.
 
 <panel type="seamless" header="%%Another example%%">
 
-{{ icon_example }} The `Rectangle#resize()` can take any integers for `height` and `width`. This contract is violated by the subclass `Square#resize()` because it does not accept a `height` that is different from the `width`. 
+{{ icon_example }} The `Rectangle#resize()` method can take any integers for `height` and `width`. This contract is violated by the subclass `Square#resize()` because it does not accept a `height` that is different from the `width`. 
 
 <img src="{{baseUrl}}/principles/liskovSubstitutionPrinciple/images/rectangleSquare.png" height="120" />
 <p/>
@@ -43,8 +43,8 @@ In the above scenario,
 ```java
 class Rectangle {
     ...
-    /** sets the size to given height and width*/
-    void resize(int height, int width){
+    /** sets the size to the given height and width*/
+    void resize(int height, int width) {
         ...
     }
 }
@@ -53,7 +53,7 @@ class Rectangle {
 class Square extends Rectangle {
     
     @Override
-    void resize(int height, int width){
+    void resize(int height, int width) {
         if (height != width) {
             //error
        }
@@ -63,11 +63,11 @@ class Square extends Rectangle {
 Now consider the following method that is written to work with the `Rectangle` class.
 
 ```java
-void makeSameSize(Rectangle original, Rectangle toResize){
+void makeSameSize(Rectangle original, Rectangle toResize) {
     toResize.resize(original.getHeight(), original.getWidth());
 }
 ```
-This code will fail if it is called as `maekSameSize(new Rectangle(12,8), new Square(4, 4))` That is, `Square` class is not substitutable for the `Rectangle` class.
+This code will fail if it is called as `makeSameSize(new Rectangle(12,8), new Square(4, 4))`. That is, the `Square` class is not substitutable for the `Rectangle` class.
 
 </panel>
 

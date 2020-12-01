@@ -10,7 +10,7 @@
   <include src="../../common/definitions.md#def-brooks-law" />
 </box>
 
-Explanation: The additional communication overhead will outweigh the benefit of adding extra manpower, especially if done near to a deadline.
+Explanation: The additional communication overhead will outweigh the benefit of adding extra manpower, especially if done near a deadline.
 
 </div>
 

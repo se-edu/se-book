@@ -12,7 +12,7 @@
 
 </box>
 
-This principle guards against duplication of information. 
+This principle guards against the duplication of information. 
 
 <box>
 

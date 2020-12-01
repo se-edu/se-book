@@ -105,7 +105,7 @@ e.g., `createEmptyList`, `listOfIntegers`, `htmlText`, `dvdPlayer`. This book de
 
 <div id="def-dependency-inversion-principle">
 
-**Dependency inversion principle**:
+**Dependency inversion principle (DIP)**:
 
 1. High-level modules should not depend on low-level modules. Both should depend on abstractions.
 2. Abstractions should not depend on details. Details should depend on abstractions.
@@ -126,7 +126,7 @@ e.g., `createEmptyList`, `listOfIntegers`, `htmlText`, `dvdPlayer`. This book de
 
 <div id="def-dry-principle">
 
-**DRY (Don't Repeat Yourself) principle**: Every piece of knowledge must have a single, unambiguous, authoritative representation within a system <sub>_The Pragmatic Programmer_, by Andy Hunt and Dave Thomas</sub>
+**DRY (Don't Repeat Yourself) principle**: Every piece of knowledge must have a single, unambiguous, authoritative representation within a system. <sub>-- _The Pragmatic Programmer_, by Andy Hunt and Dave Thomas</sub>
 
 </div>
 

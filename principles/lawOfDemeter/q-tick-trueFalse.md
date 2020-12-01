@@ -1,11 +1,11 @@
 <panel header="{{ icon_Q_A }} LoD violation?">
 <question>
 
-This violates Law of Demeter.
+This violates the Law of Demeter.
 
 ```java
 void foo(Bar b) {
-    Goo g =  new Goo();
+    Goo g = new Goo();
     g.doSomething();
 }
 ```
