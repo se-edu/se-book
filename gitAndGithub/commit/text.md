@@ -46,7 +46,7 @@ Here are the steps you can follow to learn how to work with Git commits:
   </tab>
 </tabs>
 
-**4. Commit** the staged version of `fruits.txt`
+**4. Commit** the staged version of `fruits.txt`.
 
 <tabs>
   <tab header="SourceTree">

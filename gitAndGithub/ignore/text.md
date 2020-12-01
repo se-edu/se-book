@@ -24,13 +24,13 @@ Often, there are files inside the Git working folder that you don't want to revi
 
 <box>
 
-##### The `.ignore` file
+##### The `.gitignore` file
 
 The `.gitignore` file tells Git which files to ignore when tracking revision history. That file itself can be either revision controlled or ignored.
 * To version control it (the more common choice – which allows you to track how the `.gitignore` file changes over time), simply commit it as you would commit any other file.
 * To ignore it, follow the same steps you followed above when you set Git to ignore the `temp.txt` file.
 
-* It supports file patterns e.g., adding `temp/*.tmp` to the `.gitignore` file prevents Git from tracking any `.tmp` file in the `temp` directory.
+* It supports file patterns e.g., adding `temp/*.tmp` to the `.gitignore` file prevents Git from tracking any `.tmp` files in the `temp` directory.
 
 {{ icon_resource }} More information about the `.gitignore` file: [git-scm.com/docs/gitignore](https://git-scm.com/docs/gitignore)
 

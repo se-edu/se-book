@@ -22,7 +22,7 @@ Suppose you want to propose some changes to a GitHub repo (e.g., [samplerepo-pr-
 * **Option A - Commit changes to the `master` branch**
 * **Option B - Commit to a new branch** e.g., create a branch named `add-intro` (remember to switch to the `master` branch before creating a new branch) and add your commit to it.
 
-**4. Push** the branch you updated (i.e., `master` branch or the new branch) to your fork, as explained <trigger trigger="click" for="modal:createPr-pushBranch">here </trigger>.
+**4. Push** the branch you updated (i.e., `master` branch or the new branch) to your fork, as explained <trigger trigger="click" for="modal:createPr-pushBranch">here</trigger>.
 
 <modal large header="Git & GitHub → Branch →" id="modal:createPr-pushBranch">
   <include src="../branch/text.md#pushing-a-branch"/>
@@ -60,7 +60,7 @@ Suppose you want to propose some changes to a GitHub repo (e.g., [samplerepo-pr-
    ```
 1. If you want to indicate that the PR you are about to create is 'still work in progress, not yet ready', click on the dropdown arrow in the {{ button_green(" Create pull request :octicon-triangle-down:") }} button and choose `Create draft pull request` option.
 1. Click the {{ button_green(" Create pull request :octicon-triangle-down:") }} button to create the PR.<br>
-1. Go to the receiving repo to verify your PR appears there in the `Pull requests` tab.
+1. Go to the receiving repo to verify that your PR appears there in the `Pull requests` tab.
 </span>
 
 
@@ -73,7 +73,7 @@ Suppose you want to propose some changes to a GitHub repo (e.g., [samplerepo-pr-
 
 **Sending PRs using the `master` branch is less common** than sending PRs using separate branches. For example, suppose you wanted to propose two bug fixes that are not related to each other. In that case, it is more appropriate to send two separate PRs so that each fix can be reviewed, refined, and merged independently. But if you send PRs using the `master` branch only, both fixes (and any other change you do in the `master` branch) will appear in the PRs you create from it.
 
-**To create another PR** while the current PR is still under review, create a new branch (remember to ==switch back to the `master` first==), add your new proposed change in that branch, and create a new PR following the steps given above.
+**To create another PR** while the current PR is still under review, create a new branch (remember to ==switch back to the `master` branch first==), add your new proposed change in that branch, and create a new PR following the steps given above.
 
 **It is possible to create PRs within the same repo** e.g., you can create a PR from branch `feature-x` to the `master` branch, within the same repo. Doing so will allow the code to be reviewed by other developers (using PR review mechanism) before it is merged.
 
