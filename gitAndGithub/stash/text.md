@@ -6,7 +6,7 @@
 
 <div id="body">
 
-**You can use git's ==_stash_== feature to temporarily shelve (or stash) changes you've made to your working copy** so that you can work on something else, and then come back and re-apply the stashed changes later on. <sub>-- adapted from [Atlassian](https://www.atlassian.com/git/tutorials/git-stash)</sub>
+**You can use Git's ==_stash_== feature to temporarily shelve (or stash) changes you've made to your working copy** so that you can work on something else, and then come back and re-apply the stashed changes later on. <sub>-- adapted from [Atlassian](https://www.atlassian.com/git/tutorials/git-stash)</sub>
 
 <tabs> 
   <tab header="Source Tree">
