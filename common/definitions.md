@@ -363,7 +363,7 @@ Also known as
 
 <div id="def-unit-testing">
 
-**Unit testing**: testing individual units (methods, classes, subsystems, ...) to ensure each piece works correctly 
+**Unit testing**: testing individual units (methods, classes, subsystems, ...) to ensure each piece works correctly.
 
 </div>
 

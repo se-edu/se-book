@@ -11,7 +11,7 @@
 * First, you feed the app with a sequence of test inputs that is stored in a file while redirecting the output to another file.
 * Next, you compare the actual output file with another file containing the expected output.
 
-Lets assume you are testing a CLI app called `AddressBook`. Here are the detailed steps:
+Let's assume you are testing a CLI app called `AddressBook`. Here are the detailed steps:
 
 1. Store the test input in the text file `input.txt`. 
  

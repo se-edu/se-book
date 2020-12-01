@@ -10,7 +10,7 @@
 
 <box>
 
-{{ icon_example }} This an automated test for a `Payroll` class, written using JUnit libraries.
+{{ icon_example }} This is an automated test for a `Payroll` class, written using JUnit libraries.
 
 ```java
 @Test
