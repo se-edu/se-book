@@ -52,7 +52,7 @@ Some frameworks cover only a specific component or an aspect.
 
 <box>
 
-{{ icon_example }} JavaFx is a framework for creating Java GUIs. TkInter is a GUI framework for Python.
+{{ icon_example }} JavaFX is a framework for creating Java GUIs. Tkinter is a GUI framework for Python.
 
 </box>
 

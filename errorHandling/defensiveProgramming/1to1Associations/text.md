@@ -6,7 +6,7 @@
 
 <div id="body">
 
-Consider the association given below. A defensive implementation requires us to ensure that a `MinedCell` cannot exist without a `Mine` and vice versa which requires simultaneous object creation. However, Java can only create one object at a time. Given below are two alternatives implementations, both of which violate the multiplicity for a short period of time.
+Consider the association given below. A defensive implementation requires us to ensure that a `MinedCell` cannot exist without a `Mine` and vice versa which requires simultaneous object creation. However, Java can only create one object at a time. Given below are two alternative implementations, both of which violate the multiplicity for a short period of time.
 
 
 <img src="{{baseUrl}}/errorHandling/defensiveProgramming/1to1Associations/images/minedCell.png" height="50" />

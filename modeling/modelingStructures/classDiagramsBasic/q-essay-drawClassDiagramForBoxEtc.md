@@ -11,7 +11,7 @@ class Box {
     private Box outerBox;
 
     public void open() {
-        //...
+        // ...
     }
 }
 ```

@@ -21,7 +21,7 @@
 * List all items in the store
 
 
-SIS can be accessed using multiple terminals. Shop assistants use their own terminals to access SIS, while the shop manager’s terminal continuously displays a list of all items in the store. In the future, it is expected that suppliers of items use their own applications to connect to SIS to get real-time information about current stock status.  User authentication is not required for the current version, but may be required in the future.
+SIS can be accessed using multiple terminals. Shop assistants use their own terminals to access SIS, while the shop manager’s terminal continuously displays a list of all items in the store. In the future, it is expected that suppliers of items use their own applications to connect to SIS to get real-time information about the current stock status. User authentication is not required for the current version, but may be required in the future.
 
 A step by step explanation of the design is given below. Note that this is one out of many possible designs.  Design patterns are also applied where appropriate.
 

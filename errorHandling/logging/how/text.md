@@ -27,13 +27,13 @@ Now, you can use the `Logger` object to log information. Note the use of a <popo
 ```java
 // log a message at INFO level
 logger.log(Level.INFO, "going to start processing");
-//...
+// ...
 processInput();
 if (error) {
     // log a message at WARNING level
     logger.log(Level.WARNING, "processing error", ex);
 }
-//...
+// ...
 logger.log(Level.INFO, "end of processing");
 ```
 </box>

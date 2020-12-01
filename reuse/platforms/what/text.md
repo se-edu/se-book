@@ -20,7 +20,7 @@
 {{ icon_example }} **Two well-known examples of platforms are JavaEE and .NET**, both of which sit above the operating systems layer, and are used to develop <trigger for="modal:enterprise-application" trigger="click">enterprise applications</trigger>. Infrastructure services such as connection pooling, load balancing, remote code execution, transaction management, authentication, security, messaging etc. are done similarly in most enterprise applications. Both JavaEE and .NET provide these services to applications in a customizable way without developers having to implement them from scratch every time.
 
 * JavaEE (Java Enterprise Edition) is both a framework and a platform for writing enterprise applications. The runtime used by the JavaEE applications is the JVM (Java Virtual Machine) that can run on different Operating Systems.
-* .NET is a similar platform and a framework. Its runtime is called CLR (Common Language Runtime) and is usually used on Windows machines.
+* .NET is a similar platform and framework. Its runtime is called CLR (Common Language Runtime) and it is usually used on Windows machines.
 
 </box>
 <modal header="**Enterprise Applications**" id="modal:enterprise-application">

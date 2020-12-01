@@ -12,7 +12,7 @@ class Car {
     private int speed;
 
     Car(double price, int speed) {
-        //...
+        // ...
     }
 }
 

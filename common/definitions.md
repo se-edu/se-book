@@ -132,7 +132,7 @@ e.g., `createEmptyList`, `listOfIntegers`, `htmlText`, `dvdPlayer`. This book de
 
 <div id="def-dynamic-binding">
 
-**Dynamic binding** (<tooltip content="There are subtle differences between late binding and dynamic binding, but they are beyond the scope of this document">aka late binding</tooltip>) : a mechanism where method calls in code are <tooltip content="deciding which method implementation to execute">resolved</tooltip> at <tooltip content="at the moment the method call is executed">runtime</tooltip>, rather than at compile time.
+**Dynamic binding** (<tooltip content="There are subtle differences between late binding and dynamic binding, but they are beyond the scope of this document">aka late binding</tooltip>): a mechanism where method calls in code are <tooltip content="deciding which method implementation to execute">resolved</tooltip> at <tooltip content="at the moment the method call is executed">runtime</tooltip>, rather than at compile time.
 
 </div>
 

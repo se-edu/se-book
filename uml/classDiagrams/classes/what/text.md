@@ -46,11 +46,11 @@ class Table {
     Chair[] chairs = null;
     
     Integer getNumber() {
-        //...
+        // ...
     }
 
     void setNumber(Integer n) {
-        //...
+        // ...
     }
 }
 ```

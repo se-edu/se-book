@@ -31,7 +31,7 @@ Given below is an operation description taken from a restaurant booking system. 
 
 * Table:
 
-  * Invalid: null, not vacant, booking size == table size + 1)
+  * Invalid: null, not vacant, (booking size == table size + 1)
   * Valid: (booking size == table size), (booking size == table size-1)
 
 **Test cases:**
