@@ -2,7 +2,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{ icon_outcome }} Can explain GANTT charts</span>
+<span id="outcomes">{{ icon_outcome }} Can explain Gantt charts</span>
 
 <div id="body">
 

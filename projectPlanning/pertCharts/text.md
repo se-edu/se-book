@@ -6,14 +6,14 @@
 
 <div id="body">
 
-**PERT (Program Evaluation Review Technique) chart uses a graphical technique to show the order/sequence of tasks.** It is based on a simple idea of drawing a directed graph in which:
+**A PERT (Program Evaluation Review Technique) chart uses a graphical technique to show the order/sequence of tasks.** It is based on the simple idea of drawing a directed graph in which:
 
-* Node or vertex captures the effort estimation of a task, and
-* Arrow depicts the precedence between tasks
+* Nodes or vertices capture the effort estimations of tasks, and
+* Arrows depict the precedence between tasks
 
 <box>
 
-{{ icon_example }} an example PERT chart for a simple software project
+{{ icon_example }} An example PERT chart for a simple software project
 
 <img src="{{baseUrl}}/projectPlanning/pertCharts/images/pert.jpg" height="320" /><br>
 `md` = man days
