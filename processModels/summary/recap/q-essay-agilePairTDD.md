@@ -49,11 +49,11 @@ Arguments against pair programming:
 
 Arguments against TDD (not necessarily true):
 
-* Since tests can be seen as ‘executable specifications’, programmers tend to neglect others forms of documentation.
+* Since tests can be seen as ‘executable specifications’, programmers tend to neglect other forms of documentation.
 * Promotes ‘trial-and-error’ coding instead of making programmers think through their algorithms (i.e. ‘just keep hacking until all tests pass’).
-* Gives a false sense of security. (what if you forgot to test certain scenarios?)
+* Gives a false sense of security. (What if you forgot to test certain scenarios?)
 
-Not intuitive. Some programmer might resist adopting TDD.
+Not intuitive. Some programmers might resist adopting TDD.
 
 </div>
 </question>
