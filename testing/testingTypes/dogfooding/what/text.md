@@ -6,7 +6,7 @@
 
 <div id="body">
 
-**_Eating your own dog food_ (aka dogfooding), is a creators of a product use their own product to test the product.**
+**_Eating your own dog food_ (aka dogfooding), is when creators use their own product so as to test the product.**
 
 </div>
 

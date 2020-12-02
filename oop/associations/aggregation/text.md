@@ -20,7 +20,7 @@ Implementation is similar to that of composition except the _containee_ object c
 
 <box>
 
-{{ icon_example }} In the code below, there is an aggregation association between the `Team` class and the `Person` in that a `Team` contains `Person` a object who is the leader of the team.
+{{ icon_example }} In the code below, there is an aggregation association between the `Team` class and the `Person` class in that a `Team` contains a `Person` object who is the leader of the team.
 
 <div class="alt-java">
 

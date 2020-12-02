@@ -18,7 +18,7 @@ by [Eric Hehner](http://www.cs.utoronto.ca/~hehner/)
 
 Advantages:
 
-* **Formal verification can be used to prove the absence of errors**. In contrast, testing can only prove the presence of error, not their absence.
+* **Formal verification can be used to prove the absence of errors**. In contrast, testing can only prove the presence of errors, not their absence.
 
 Disadvantages:
 

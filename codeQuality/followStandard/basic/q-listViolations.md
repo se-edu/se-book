@@ -29,7 +29,7 @@ public class Task {
 }
 ```
 
-In what ways the code violate the coding standard you are expected to follow?
+In what ways do the code violate the coding standard you are expected to follow?
 
 <div slot="hint">
 

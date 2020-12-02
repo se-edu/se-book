@@ -16,7 +16,7 @@
 
 <box>
 
-{{ icon_example }} The `Animal` class that exist as a generalization of its subclasses `Cat`, `Dog`, `Horse`, `Tiger` etc. can be declared as abstract because it does not make sense to instantiate an `Animal` object.
+{{ icon_example }} The `Animal` class that exists as a generalization of its subclasses `Cat`, `Dog`, `Horse`, `Tiger` etc. can be declared as abstract because it does not make sense to instantiate an `Animal` object.
 
 </box>
 

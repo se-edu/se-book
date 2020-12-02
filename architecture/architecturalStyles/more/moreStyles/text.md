@@ -6,7 +6,7 @@
 
 <div id="body">
 
-**Other well-known architectural styles include the _pipes-and-filters architectures_, the _broker architectures_, the _peer-to-peer architectures_, and the _message-oriented architectures_.**
+**Other well-known architectural styles include the _pipes-and-filters architecture_, the _broker architecture_, the _peer-to-peer architecture_, and the _message-oriented architecture_.**
 
 </div>
 

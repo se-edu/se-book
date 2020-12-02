@@ -6,7 +6,7 @@
 
 <div id="body">
 
-**Exceptions are used to deal with _'unusual' but not entirely unexpected_ situations** that the program might encounter at run time. 
+**Exceptions are used to deal with _'unusual' but not entirely unexpected_ situations** that the program might encounter at runtime.
 
 <box type="definition" seamless>
 

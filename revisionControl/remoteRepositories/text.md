@@ -6,13 +6,13 @@
 
 <div id="body">
 
-**Remote repositories are repos that are hosted on remote computers** and allows remote access. They are especially useful for sharing the revision history of a codebase among team members of a multi-person project. %%They can also serve as a remote backup of your code base.%%
+**Remote repositories are repos that are hosted on remote computers** and allow remote access. They are especially useful for sharing the revision history of a codebase among team members of a multi-person project. %%They can also serve as a remote backup of your codebase.%%
 
 **It is possible to set up your own remote repo on a server**, but the easier option is to use a remote repo hosting service such as GitHub or BitBucket.
 
 <div id="section-cloning">
 
-**You can ==_clone_== a repo** to create a copy of that repo on another location in your computer. The copy will have even the revision history of the original repo i.e., identical to the original repo. For example, you can clone a remote repo onto your computer to create a local copy of the remote repo.<br>
+**You can ==_clone_== a repo** to create a copy of that repo in another location on your computer. The copy will even have the revision history of the original repo i.e., identical to the original repo. For example, you can clone a remote repo onto your computer to create a local copy of the remote repo.<br>
 </div>
 
 **When you clone from a repo, the original repo is commonly referred to as the ==_upstream_== repo.** A repo can have multiple upstream repos. For example, let's say a repo `repo1` was cloned as `repo2` which was then cloned as `repo3` In this case `repo1` and `repo2` are upstream repos of `repo3`.

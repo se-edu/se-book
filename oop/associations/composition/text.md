@@ -18,7 +18,7 @@
 
 <box>
 
-{{ icon_example }} The ‘sub-folder’ association between `Folder` objects is a composition type association. That means if the `Folder` object `foo` is a sub folder of `Folder` object `bar`, `bar` cannot be a sub-folder of `foo`. 
+{{ icon_example }} The ‘sub-folder’ association between `Folder` objects is a composition type association. That means if the `Folder` object `foo` is a sub-folder of `Folder` object `bar`, `bar` cannot be a sub-folder of `foo`. 
 
 </box>
 

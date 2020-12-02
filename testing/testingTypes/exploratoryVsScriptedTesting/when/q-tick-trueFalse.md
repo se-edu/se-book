@@ -10,7 +10,7 @@ Scripted testing is better than exploratory testing.
 
 False
 
-Explanation: Each has pros and cons. Relying on only one is not recommended. A combination is better.
+Explanation: Each has its pros and cons. Relying on only one is not recommended. A combination is better.
 
 </div>
 </question>

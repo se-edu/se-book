@@ -1,7 +1,7 @@
 <panel header="{{ icon_Q_A }} Is this Facade?">
 <question>
 
-Does the design below likely to use the Facade pattern?
+Is the design below likely to use the Facade pattern?
 
 <img src="{{baseUrl}}/designPatterns/facade/what/images/textStorage.png" height="150" />
 <p/>
@@ -13,7 +13,7 @@ Does the design below likely to use the Facade pattern?
 
 True.
 
-Facade is clearly visible (Storage is the <<Facade>> class).
+Facade is clearly visible (Storage is the `<<Facade>>` class).
 
 </div>
 </question>

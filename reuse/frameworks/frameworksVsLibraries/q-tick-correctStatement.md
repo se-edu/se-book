@@ -1,7 +1,7 @@
 <panel header="{{ icon_Q_A }} Which are frameworks?">
 <question>
 
-Which one of these are frameworks ?
+Which of these are frameworks?
 
 - [ ] a. JUnit
 - [ ] b. Eclipse

@@ -12,7 +12,7 @@ Note that TDD does not imply writing all the test cases first before writing fun
 2. Write test cases to test that behavior.
 3. Run those test cases and watch them fail.
 4. Implement the behavior.
-5. Run the test case.
+5. Run the test cases.
 6. Keep modifying the code and rerunning test cases until they all pass.
 7. Refactor code to improve quality.
 8. Repeat the cycle for each small unit of behavior that needs to be implemented.

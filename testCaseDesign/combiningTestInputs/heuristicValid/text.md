@@ -10,7 +10,7 @@ Consider the following scenario.
 
 <box>
 
-SUT:  `printLabel(fruitName String, unitPrice int)`
+SUT:  `printLabel(String fruitName, int unitPrice)`
 
 **Selected values for** `fruitName` (invalid values are ++underlined++ ):
 
@@ -45,11 +45,11 @@ Suppose these are the test cases being considered.
 
 </box>
 
-It looks like the test cases were created using the _at least once_ strategy. After running these tests, can you confirm that square-format label printing is done correctly?
+It looks like the test cases were created using the _at least once_ strategy. After running these tests, can you confirm that the square-format label printing is done correctly?
 * Answer: No.
 * Reason: `Cherry` -- the only input that can produce a square-format label -- is in a negative test case which produces an error message instead of a label. If there is a bug in the code that prints labels in square-format, these tests cases will not trigger that bug.
 
-In this case a useful heuristic to apply is **each valid input must appear at least once in a positive test case**. `Cherry` is a valid test input and you must ensure that it appears at least once in a positive test case. Here are the updated test cases after applying that heuristic.
+In this case, a useful heuristic to apply is **each valid input must appear at least once in a positive test case**. `Cherry` is a valid test input and you must ensure that it appears at least once in a positive test case. Here are the updated test cases after applying that heuristic.
 
 <box>
 

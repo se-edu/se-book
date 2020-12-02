@@ -1,12 +1,12 @@
 <panel header="{{ icon_Q_A }} Dispatch resources">
 <question has-input="true">
 
-Given below is the overview of the method dispatch(Resource, Task), from an emergency management system (e.g. a system used by those who handle emergency calls from the public about incidents such as fires, possible burglaries, domestic disturbances, etc.). A task might need multiple resources of multiple types. For example, the task ‘fire at Clementi MRT’ might need two fire engines and one ambulance.
+Given below is the overview of the method `dispatch(Resource, Task)`, from an emergency management system (e.g. a system used by those who handle emergency calls from the public about incidents such as fires, possible burglaries, domestic disturbances, etc.). A task might need multiple resources of multiple types. For example, the task ‘fire at Clementi MRT’ might need two fire engines and one ambulance.
 
-* dispatch(Resource r, Task t):void
-* Overview: This method dispatches the Resource r to the Task t. Since this can dispatch only one resource, it needs to be used multiple times should the task need multiple resources.
+* `dispatch(Resource r, Task t): void`
+* Overview: This method dispatches the Resource `r` to the Task `t`. Since this can dispatch only one resource, it needs to be used multiple times should the task need multiple resources.
 
-Imagine you are designing test cases to test the method dispatch(Resource,Task). Taking into account equivalence partitions and boundary values, which different inputs will you combine to test the method?
+Imagine you are designing test cases to test the method `dispatch(Resource, Task)`. Taking into account equivalence partitions and boundary values, which different inputs will you combine to test the method?
 
 <div slot="answer">
 
@@ -28,11 +28,11 @@ Imagine you are designing test cases to test the method dispatch(Resource,Task).
       <ul>
         <li>A fully dispatched task</li>
         <li>A task requiring one more resource</li>
-        <li>A task with no resource dispatched</li>
+        <li>A task with no resources dispatched</li>
       </ul>
       Considering the resource types required
       <ul>
-        <li>A task requiring only one type of resources</li>
+        <li>A task requiring only one type of resource</li>
         <li>A task requiring multiple types of resource</li>
         <li>null</li>
       </ul>

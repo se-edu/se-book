@@ -28,13 +28,13 @@
 
 </box>
 
-**Abstraction can be applied repeatedly to obtain progressively _higher levels of abstractions_.** 
+**Abstraction can be applied repeatedly to obtain progressively _higher levels of abstraction_.**
 
 <box>
 
 {{ icon_example }} An example of different levels of data abstraction: a `File` is a data item that is at a higher level than an array and an array is at a higher level than a bit. 
 
-{{ icon_example }} An example of different levels of control abstraction: `execute(Game)` is at a higher level than `print(Char)` which is at a higher than an Assembly language instruction `MOV`.
+{{ icon_example }} An example of different levels of control abstraction: `execute(Game)` is at a higher level than `print(Char)` which is at a higher level than an Assembly language instruction `MOV`.
 
 </box>
 

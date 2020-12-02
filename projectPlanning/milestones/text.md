@@ -6,7 +6,7 @@
 
 <div id="body">
 
-**A _milestone_ is the end of a stage which indicates a significant progress.** You should take into account dependencies and priorities when deciding on the features to be delivered at a certain milestone.
+**A _milestone_ is the end of a stage which indicates significant progress.** You should take into account dependencies and priorities when deciding on the features to be delivered at a certain milestone.
 
 <box>
 

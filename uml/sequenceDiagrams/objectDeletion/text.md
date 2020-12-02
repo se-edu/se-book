@@ -6,7 +6,7 @@
 
 <div id="body">
 
-**UML uses an `X` at the end of the lifeline of an object to show it's deletion.**
+**UML uses an `X` at the end of the lifeline of an object to show its deletion.**
 
 <box>
 

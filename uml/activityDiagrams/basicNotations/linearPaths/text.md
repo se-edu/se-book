@@ -6,7 +6,7 @@
 
 <div id="body">
 
-An activity diagram (AD) captures an _activity_ of _actions_ and _control flows_ that makes up the activity. 
+An activity diagram (AD) captures an _activity_ through the _actions_ and _control flows_ that make up the activity.
 * An _action_ is a single step in an activity. It is shown as a rectangle with ==rounded corners==. 
 * A _control flow_ shows the flow of control from one action to the next. It is shown by drawing a line with an arrow-head to show the direction of the flow.
 

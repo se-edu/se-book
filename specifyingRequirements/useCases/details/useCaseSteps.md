@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="{{baseUrl}}/css/common.css">
 
-**The main body of the use case is the sequence of steps that describes the interaction between the system and the actors.** Each step is given as a simple statement describing _who does what_.
+**The main body of the use case is a sequence of steps that describes the interaction between the system and the actors.** Each step is given as a simple statement describing _who does what_.
 
 <box>
   
@@ -29,7 +29,7 @@
 
 <box>
 
-{{ icon_example }} The first example below is not a good use case step because contains UI-specific details. The second one is better because it omits UI-specific details.
+{{ icon_example }} The first example below is not a good use case step because it contains UI-specific details. The second one is better because it omits UI-specific details.
 
 <div class="indented">
 

@@ -6,8 +6,8 @@
 
 <div id="body">
 
-Compared to the notation for a class diagrams, object diagrams differ in the following ways:
-* Shows objects instead of classes:
+Compared to the notation for class diagrams, object diagrams differ in the following ways:
+* Show objects instead of classes:
   * Instance name may be shown
   * There is a `:` before the class name
   * Instance and class names are underlined

@@ -6,13 +6,13 @@
 
 <div id="body">
 
-**A _positive test case_ is when the test is designed to produce an expected/valid behavior. A negative test case is designed to produce a behavior that indicates an invalid/unexpected situation, such as an error message.**
+**A _positive test case_ is when the test is designed to produce an expected/valid behavior. On the other hand, a _negative test case_ is designed to produce a behavior that indicates an invalid/unexpected situation, such as an error message.**
 
 <box>
 
-{{ icon_example }} Consider testing of the method `print(Integer i)` which prints the value of `i`.
+{{ icon_example }} Consider the testing of the method `print(Integer i)` which prints the value of `i`.
 
-* A positive test case: `i == new Integer(50)`
+* A positive test case: `i == new Integer(50);`
 * A negative test case: `i == null;`
 
 </box>

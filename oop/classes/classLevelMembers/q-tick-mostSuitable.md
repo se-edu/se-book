@@ -1,4 +1,4 @@
-<panel header="{{ icon_Q_A }} Suitable as a class-level variables">
+<panel header="{{ icon_Q_A }} Suitable as class-level variables">
 <question>
 
 Which of these are suitable as class-level variables?
@@ -13,7 +13,7 @@ Which of these are suitable as class-level variables?
 
 (c)
 
-Explanation: `totalPendingTasks` should not be managed by individual `Task` objects and therefore suitable to be maintained as a class-level variable. The other variables should be managed at instance level as their value varies from instance to instance. e.g., `totalStudents` for one `Course` object will differ from `totalStudents` of another.
+Explanation: `totalPendingTasks` should not be managed by individual `Task` objects and is therefore suitable to be maintained as a class-level variable. The other variables should be managed at instance level as their value varies from instance to instance. e.g., `totalStudents` for one `Course` object will differ from `totalStudents` of another.
 
 </div>
 </question>

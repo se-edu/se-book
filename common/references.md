@@ -39,7 +39,7 @@ pageNav: 3
 
   <div id="bach-et-explained">
   
-  [_**Exploratory Testing Explained**_](http://www.satisfice.com/articles/et-article.pdf), an online article by [James Bach](http://www.satisfice.com/aboutjames.shtml)  -- James Bach is an industry thought leader in software testing).
+  [_**Exploratory Testing Explained**_](http://www.satisfice.com/articles/et-article.pdf), an online article by [James Bach](http://www.satisfice.com/aboutjames.shtml)  -- James Bach is an industry thought leader in software testing.
   
   </div>
 

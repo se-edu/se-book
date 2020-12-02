@@ -1,5 +1,5 @@
 <frontmatter>
-title: "Intellij IDEA [Printable]"
+title: "IntelliJ IDEA [Printable]"
 </frontmatter>
 
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">

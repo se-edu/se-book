@@ -42,7 +42,7 @@ Use cases should be easy to read. Note that there is no strict rule about writin
 * Identifying all possible extensions encourages us to consider all situations that a software product might face during its operation.
 * Separating typical scenarios from special cases encourages us to optimize the typical scenarios.
 
-**One of the main disadvantages of use cases is that they are not good for capturing requirements that does not involve a user interacting with the system.** Hence, they should not be used as the sole means to specify requirements.
+**One of the main disadvantages of use cases is that they are not good for capturing requirements that do not involve a user interacting with the system.** Hence, they should not be used as the sole means to specify requirements.
 
 </div>
 

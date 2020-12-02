@@ -18,7 +18,7 @@ LSP sounds same as <trigger large trigger="click" for="modal:lsp-substitutabilit
 
 <box>
 
-{{ icon_example }} Suppose the `Payroll` class depends on the `adjustMySalary(int percent)` method of the `Staff` class. Furthermore, the `Staff` class states that the `adjustMySalary` method will work for all positive percent values. Both `Admin` and `Academic` classes override the `adjustMySalary` method.
+{{ icon_example }} Suppose the `Payroll` class depends on the `adjustMySalary(int percent)` method of the `Staff` class. Furthermore, the `Staff` class states that the `adjustMySalary` method will work for all positive percent values. Both the `Admin` and `Academic` classes override the `adjustMySalary` method.
 
 <img src="{{baseUrl}}/principles/liskovSubstitutionPrinciple/images/payroll.png" height="200" />
 <p/>

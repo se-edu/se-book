@@ -61,7 +61,7 @@ Here are the steps you can follow to learn how to work with Git commits:
 
 **5. Do a few more commits**.
 
-1. Do some changes to `fruits.txt` (e.g. add some text and delete some text). Stage the changes, and commit the changes using the same steps you followed before. You should end up with something like this.
+1. Make some changes to `fruits.txt` (e.g. add some text and delete some text). Stage the changes, and commit the changes using the same steps you followed before. You should end up with something like this.
 
    <img src="{{baseUrl}}/gitAndGithub/commit/images/sourcetree_6.png" height="180" />
    <p/>

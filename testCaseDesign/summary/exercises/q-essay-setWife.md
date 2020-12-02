@@ -1,7 +1,7 @@
 <panel header="{{ icon_Q_A }} setWife">
 <question has-input="true">
 
-Use equivalence partitions and boundary values to choose test inputs for testing the setWife operation in the Man class.
+Use equivalence partitions and boundary values to choose test inputs for testing the `setWife` operation in the `Man` class.
 
 <img src="{{baseUrl}}/testCaseDesign/summary/exercises/images/manWoman.png" height="90" />
 <p/>

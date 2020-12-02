@@ -8,14 +8,14 @@
 
 Requirements can be divided into two in the following way:
 1. **_Functional requirements_ specify what the system should do.**
-2. **_Non-functional requirements_ specify the constraints under which system is developed and operated.** 
+2. **_Non-functional requirements_ specify the constraints under which the system is developed and operated.**
 
 <box>
 
 {{ icon_example }} Some examples of non-functional requirement categories:
 
-* Data requirements e.g. size, <tooltip content="how often do data change">volatility</tooltip>, <tooltip content="saving data permanenetly">persistency</tooltip> etc.,
-* Environment requirements e.g. technical environment in which system would operate or need to be compatible with.
+* Data requirements e.g. size, <tooltip content="how often do data change">volatility</tooltip>, <tooltip content="saving data permanently">persistency</tooltip> etc.,
+* Environment requirements e.g. technical environment in which the system would operate in or needs to be compatible with.
 * Accessibility, Capacity, Compliance with regulations, Documentation, Disaster recovery, Efficiency, Extensibility, Fault tolerance, Interoperability, Maintainability, Privacy, Portability, Quality, Reliability, Response time, Robustness, Scalability, Security, Stability, Testability, and more ...
 
 <panel type="seamless" header="{{ icon_example }} Some concrete examples of NFRs" expanded>

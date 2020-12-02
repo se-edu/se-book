@@ -5,13 +5,13 @@ Consider this SUT:
 
 <box>
 
-`isValidName (String s): boolean`
+`isValidName(String s): boolean`
 
 Description: returns true if `s` is not `null` and not longer than 50 characters.
 
 </box>
 
-A. Which one of these is least likely to be an equivalence partition for the parameter s of the isValidName method given below?
+A. Which one of these is least likely to be an equivalence partition for the parameter `s` of the `isValidName` method given above?
 
 - ( ) a. null.
 - ( ) b. strings having more than 50 characters.

@@ -28,13 +28,13 @@
  * @return the image at the specified URL
  * @see Image
  */
- public Image getImage(URL url, String name) {
-        try {
-            return getImage(new URL(url, name));
-        } catch (MalformedURLException e) {
-            return null;
-        }
- }
+public Image getImage(URL url, String name) {
+    try {
+        return getImage(new URL(url, name));
+    } catch (MalformedURLException e) {
+        return null;
+    }
+}
 ```
 
 {{ icon_example }} Generated HTML documentation:

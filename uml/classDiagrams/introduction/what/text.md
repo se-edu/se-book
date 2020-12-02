@@ -6,7 +6,7 @@
 
 <div id="body">
 
-**UML _class diagrams_ describe the structure (but not the behavior) of an OOP solution.** These are possibly the most often used diagrams in the industry and an indispensable tool for an OO programmer.
+**UML _class diagrams_ describe the structure (but not the behavior) of an OOP solution.** These are possibly the most often used diagrams in the industry and are an indispensable tool for an OO programmer.
 
 <box>
 

@@ -6,7 +6,7 @@
 
 <div id="body">
 
-**<trigger trigger="click" for="modal:modelingAd-uml">UML</trigger> _&nbsp;activity diagrams_ (AD) can model workflows.&nbsp;** %%_Flow charts_ is another type of diagrams that can model workflows. Activity diagrams are the UML equivalent of flow charts.%%
+**<trigger trigger="click" for="modal:modelingAd-uml">UML</trigger> _&nbsp;activity diagrams_ (AD) can model workflows.&nbsp;** %%_Flow charts_ are another type of diagram that can model workflows. Activity diagrams are the UML equivalent of flow charts.%%
 
 <modal header="**Unified Modeling Language (UML)**" id="modal:modelingAd-uml">
   <include src="../../../../common/definitions.md#def-uml" />
