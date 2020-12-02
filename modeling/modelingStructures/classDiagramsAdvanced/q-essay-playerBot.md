@@ -1,21 +1,21 @@
-<panel header="{{ icon_Q_A }} draw class diagram: Player, Bot, etc.">
+<panel header="{{ icon_Q_A }} Draw class diagram: `Player`, `Bot`, etc.">
 
 (a) Draw a class diagram to represent the following code.
 
 ```java
-interface Player{
+interface Player {
     public void challenge();
 }
 
-interface Trainable{
+interface Trainable {
     public void train();
 }
 
-abstract class Bot implements Player{
+abstract class Bot implements Player {
 
 }
 
-class TrainableBot extends Bot implements Trainable{
+class TrainableBot extends Bot implements Trainable {
 
     @Override
     public void challenge() {
@@ -28,7 +28,7 @@ class TrainableBot extends Bot implements Trainable{
     }
 }
 
-class Human implements Player{
+class Human implements Player {
 
     @Override
     public void challenge() {
@@ -38,8 +38,8 @@ class Human implements Player{
 ```
 
 (b) Add these association classes to the diagram:<br>
-i. A `Player` can _challenge_ another `Player` object. `Challenge` class keeps track that association between the two `Player` objects: the _challenger_ and the _target_ of the challenge.<br>
-ii. A `Human` can _train_ a `SmartBot` object. `Lesson` class keeps track of that association.
+i. A `Player` object can _challenge_ another `Player` object. The `Challenge` class keeps track of the association between the two `Player` objects: the _challenger_ and the _target_ of the challenge.<br>
+ii. A `Human` object can _train_ a `SmartBot` object. The `Lesson` class keeps track of that association.
 
 
 (c) Convert the two association classes to normal classes.

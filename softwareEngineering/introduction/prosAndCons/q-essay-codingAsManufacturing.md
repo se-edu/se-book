@@ -1,7 +1,7 @@
 <panel header="{{ icon_Q_A }} Coding as a manufacturing activity">
 <question has-input="true">
 
-Justify this statement: Coding is still a ‘design’ activity, not a ‘manufacturing’ activity.  You may use a comparison (or an analogy) of Software engineering versus Civil Engineering to argue this point.
+Justify this statement: Coding is still a ‘design’ activity, not a ‘manufacturing’ activity. You may use a comparison (or an analogy) of Software Engineering versus Civil Engineering to argue this point.
 
 <div slot="answer">
 

@@ -5,7 +5,7 @@ Consider the following scenario. If you were to simulate this in an OOP program,
 
 <box>
   
-A customer (name: John) gave a cheque to the Cashier (name: Peter) to pay for the LoTR and GoT books he bought.
+A customer (name: John) gave a cheque to the cashier (name: Peter) to pay for the LoTR and GoT books he bought.
 
 </box>
 

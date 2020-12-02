@@ -6,7 +6,7 @@
 
 <div id="body">
 
-**A _timing diagram_ focus on timing constraints.**
+**A _timing diagram_ focuses on timing constraints.**
 
 <box>
 

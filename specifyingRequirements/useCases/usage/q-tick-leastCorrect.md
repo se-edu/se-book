@@ -3,7 +3,7 @@
 
 Which of these are correct?
 
-- [ ] a. Use case are not very suitable for capturing non-functional requirements.
+- [ ] a. Use cases are not very suitable for capturing non-functional requirements.
 - [ ] b. Use case diagrams are less detailed than textual use cases.
 - [ ] c. Use cases are better than user stories.
 - [ ] d. Use cases can be expressed at different levels of abstraction.

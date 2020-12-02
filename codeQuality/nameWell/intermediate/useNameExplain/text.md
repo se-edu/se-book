@@ -20,7 +20,7 @@ Examples:
 
 </box>
 
-**If the name has multiple words, they should be in a sensible order.**
+**If a name has multiple words, they should be in a sensible order.**
 
 <box>
 

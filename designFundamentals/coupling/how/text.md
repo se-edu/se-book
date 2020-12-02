@@ -15,18 +15,18 @@
 <panel type="seamless" header="%%code for the above example%%">
 
 ```java
-class Foo{
+class Foo {
     ...
     new Bar().read();
     ...
 }
 
-class Bar{
-    void read(){
+class Bar {
+    void read() {
         ...
     }
     
-    void write(){
+    void write() {
         ...
     }
 }

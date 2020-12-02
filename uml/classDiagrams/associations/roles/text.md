@@ -21,11 +21,11 @@ Note how the variable names match closely with the association roles.
 <div class="alt-java">
 
 ```java
-class Man{
+class Man {
     Woman wife;
 }
 
-class Woman{
+class Woman {
     Man husband;
 }
 ```
@@ -55,7 +55,7 @@ class Woman:
 <div class="alt-java">
 
 ```java
-class Admin{
+class Admin {
     List<Student> charges;
 }
 ```

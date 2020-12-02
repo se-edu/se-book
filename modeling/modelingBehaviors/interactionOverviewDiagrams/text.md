@@ -6,7 +6,7 @@
 
 <div id="body">
 
-**An _Interaction overview_ diagrams is a combination of activity diagrams and sequence diagrams**.
+**_Interaction overview_ diagrams are a combination of activity diagrams and sequence diagrams**.
 
 <box>
 
@@ -15,7 +15,7 @@
 <img src="{{baseUrl}}/modeling/modelingBehaviors/interactionOverviewDiagrams/images/diagram.png" height="420" />
 <p/>
 
-<sub>source:[https://commons.wikimedia.org](https://en.wikipedia.org/wiki/Interaction_overview_diagram)</sub>
+<sub>source: [https://commons.wikimedia.org](https://en.wikipedia.org/wiki/Interaction_overview_diagram)</sub>
 
 </box>
 

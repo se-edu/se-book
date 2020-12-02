@@ -6,7 +6,7 @@
 
 <div id="body">
 
-**A _Work Breakdown Structure (WBS)_ depicts information about tasks and their details in terms of subtasks.** When managing projects it is useful to divide the total work into smaller, well-defined units. Relatively complex tasks can be further split into subtasks.  In complex projects a WBS can also include prerequisite tasks and effort estimates for each task.
+**A _Work Breakdown Structure (WBS)_ depicts information about tasks and their details in terms of subtasks.** When managing projects, it is useful to divide the total work into smaller, well-defined units. Relatively complex tasks can be further split into subtasks. In complex projects, a WBS can also include prerequisite tasks and effort estimates for each task.
 
 <box>
 
@@ -28,7 +28,7 @@
 
 <box>
 
-{{ icon_example }} An example WBS for a project for developing a game.
+{{ icon_example }} An example WBS for a game development project.
  <div class="text-monospace">
  <table class="table">
    <tr>

@@ -40,17 +40,17 @@ set_number(n:int)
 <div class="alt-java">
 
 ```java
-class Table{
+class Table {
 
     Integer number;
     Chair[] chairs = null;
     
-    Integer getNumber(){
-        //...
+    Integer getNumber() {
+        // ...
     }
 
-    void setNumber(Integer n){
-        //...
+    void setNumber(Integer n) {
+        // ...
     }
 }
 ```
@@ -130,16 +130,16 @@ class Table {
 <div class="alt-java">
 
 ```java
-class Table{
+class Table {
 
     private Integer number;
     private Chair[] chairs = null;
 
-    public Integer getNumber(){
+    public Integer getNumber() {
         //...
     }
 
-    public void setNumber(Integer n){
+    public void setNumber(Integer n) {
         //...
     }
 }

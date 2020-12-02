@@ -23,17 +23,17 @@ In the context of OOP associations, **a _dependency_ is a need for one class to 
 <div class="alt-java">
 
 ```java
-class Foo{
+class Foo {
     
-    int calculate(Bar bar){
+    int calculate(Bar bar) {
         return bar.getValue();
     }
 }
 
-class Bar{
+class Bar {
     int value;
     
-    int getValue(){
+    int getValue() {
         return value;
     }
 }

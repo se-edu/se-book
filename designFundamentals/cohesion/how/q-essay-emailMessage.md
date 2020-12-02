@@ -7,7 +7,7 @@ Compare the cohesion of the following two versions of the `EmailMessage` class. 
 // version-1
 class EmailMessage {
     private String sendTo;
- 	  private String subject;
+    private String subject;
     private String message;
 
     public EmailMessage(String sendTo, String subject, String message) {

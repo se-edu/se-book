@@ -5,7 +5,7 @@ Discuss the relationship between coupling and <tooltip content="a measure of how
 
 <div slot="answer">
 
-Coupling decreases testability because if the <tooltip content="Software Under Test">SUT</tooltip> is coupled to many other components it becomes difficult to test the SUI in isolation of its dependencies.
+Coupling decreases testability because if the <tooltip content="Software Under Test">SUT</tooltip> is coupled to many other components, it becomes difficult to test the SUT in isolation of its dependencies.
 
 </div>
 </question>

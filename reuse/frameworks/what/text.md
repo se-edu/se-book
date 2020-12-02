@@ -42,15 +42,17 @@ Eclipse is a fully functional Java IDE out-of-the-box.
 
 {{ icon_example }} Running example:
 
-Eclipse plugin system can be used to create an IDE for different programming languages while reusing most of the existing IDE features of Eclipse. E.g. https://marketplace.eclipse.org/content/pydev-python-ide-eclipse
+The Eclipse plugin system can be used to create an IDE for different programming languages while reusing most of the existing IDE features of Eclipse.
+
+E.g. https://marketplace.eclipse.org/content/pydev-python-ide-eclipse
 
 </box>
 
-Some frameworks cover only a specific components or an aspect.
+Some frameworks cover only a specific component or an aspect.
 
 <box>
 
-{{ icon_example }} JavaFx a framework for creating Java GUIs. TkInter is a GUI framework for Python.
+{{ icon_example }} JavaFX is a framework for creating Java GUIs. Tkinter is a GUI framework for Python.
 
 </box>
 
@@ -58,8 +60,8 @@ Some frameworks cover only a specific components or an aspect.
 
 {{ icon_example }} More examples of frameworks
 
-* Frameworks for Web-based applications: Drupal(PHP), Django(Python), Ruby on Rails (Ruby), Spring (Java)
-* Frameworks for testing: JUnit (Java), unittest (Python), Jest (Java Script)
+* Frameworks for web-based applications: Drupal (PHP), Django (Python), Ruby on Rails (Ruby), Spring (Java)
+* Frameworks for testing: JUnit (Java), unittest (Python), Jest (JavaScript)
 
 </box>
 

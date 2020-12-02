@@ -1,7 +1,7 @@
 <panel header="{{ icon_Q }} Combine test inputs for the `consume` method">
 <question>
 
-Apply heuristics for combining multiple test inputs to improve the E&E of the following test cases, assuming all 6 values in the table need to be tested. ++underlines++ indicate invalid values. Point out where the heuristics are contradicted and how to improve the test cases.
+Apply heuristics for combining multiple test inputs to improve the E&E of the following test cases, assuming all 6 values in the table need to be tested. ++Underlines++ indicate invalid values. Point out where the heuristics are contradicted and how to improve the test cases.
 
    <box>
 

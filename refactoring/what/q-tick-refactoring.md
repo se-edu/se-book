@@ -13,7 +13,7 @@ Choose the correct statements
 a, b, c, d
 
 Explanation: 
-* (a, b, c) Although the primary aim of refactoring is to improve internal code structure, there are other secondary benefits. 
+* (a, b, c) Although the primary aim of refactoring is to improve the internal code structure, there are other secondary benefits.
 * (d) Some refactorings result in adding/removing methods/classes.
 
 </div>

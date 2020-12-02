@@ -6,7 +6,7 @@
 
 <div id="body">
 
-**UML uses a hollow diamond is used to indicate an aggregation.**
+**UML uses a hollow diamond to indicate an aggregation.**
 
 Notation:
 

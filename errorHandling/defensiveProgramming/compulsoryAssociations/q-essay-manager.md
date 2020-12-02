@@ -15,11 +15,11 @@ For the `Manager` class shown below, write an `addAccount()` method that
 import java.util.*;
 
 public class Manager {
-    private ArrayList< Account > theAccounts ;
+    private ArrayList<Account> theAccounts;
 
     public void addAccount(Account acc) throws Exception {
-        if (theAccounts.size( ) == 8){
-            throw new Exception ("adding more than 8 accounts");
+        if (theAccounts.size() == 8) {
+            throw new Exception("adding more than 8 accounts");
         }
         
         if (!theAccounts.contains(acc)) {

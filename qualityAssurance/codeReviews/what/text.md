@@ -6,7 +6,7 @@
 
 <div id="body">
 
-**Code review is the systematic examination code with the intention of finding where the code can be improved.**
+**Code review is the systematic examination of code with the intention of finding where the code can be improved.**
 
 Reviews can be done in various forms. Some examples below:
 
@@ -37,16 +37,16 @@ Reviews can be done in various forms. Some examples below:
 
 * **Formal inspections**
 
-  * Inspections involve a group of people systematically examining a project artifacts to discover defects. Members of the inspection team play various roles during the process, such as:
+  * Inspections involve a group of people systematically examining project artifacts to discover defects. Members of the inspection team play various roles during the process, such as:
 
     * the author - the creator of the artifact
     * the moderator - the planner and executor of the inspection meeting
     * the secretary - the recorder of the findings of the inspection
-    * the inspector/reviewer - the one who inspects/reviews the artifact.
+    * the inspector/reviewer - the one who inspects/reviews the artifact
 
 Advantages of code reviews over testing:
 
-* It can detect functionality defects as well as other problems such as coding standard violations.
+* It can detect functionality defects as well as other problems such as coding standard violations
 * Can verify non-code artifacts and incomplete code
 * Do not require test drivers or stubs.
 

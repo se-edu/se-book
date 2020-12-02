@@ -1,4 +1,4 @@
-<panel header="{{ icon_Q_A }} Statements about the Design-by-contract approach?">
+<panel header="{{ icon_Q_A }} Statements about the Design-by-contract approach">
 <question>
 
 Which statements are correct?

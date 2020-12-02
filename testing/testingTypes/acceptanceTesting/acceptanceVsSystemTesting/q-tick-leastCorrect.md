@@ -1,4 +1,4 @@
-<panel header="{{ icon_Q_A }} Statements about system testing and acceptance testing.">
+<panel header="{{ icon_Q_A }} Statements about system testing and acceptance testing">
 <question>
 
 Choose the correct statements about system testing and acceptance testing.

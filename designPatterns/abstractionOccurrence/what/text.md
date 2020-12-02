@@ -8,16 +8,16 @@
 
 **Context**
 
-There is a group of similar entities that appears to be ‘occurrences’ (or ‘copies’) of the same thing, sharing lots of common information, but also differing in significant ways.
+There is a group of similar entities that appear to be ‘occurrences’ (or ‘copies’) of the same thing, sharing lots of common information, but also differing in significant ways.
 
 <box>
 
-{{ icon_example }} In a library, there can be multiple copies of same book title. Each copy shares common information such as book title, author, ISBN etc. However, there are also significant differences like purchase date and barcode number (assumed to be unique for each copy of the book).
+{{ icon_example }} In a library, there can be multiple copies of the same book title. Each copy shares common information such as book title, author, ISBN, etc. However, there are also significant differences like purchase date and barcode number (assumed to be unique for each copy of the book).
 
 Other examples:
 
 * Episodes of the same TV series
-* Stock items of the same product model (e.g. TV sets of the same model).
+* Stock items of the same product model (e.g. TV sets of the same model)
 
 </box>
 
@@ -53,7 +53,7 @@ The design above segregates the common and unique information into a class hiera
 
 **Solution**
 
-Let a copy of an entity (e.g. a copy of a book)be represented by two objects instead of one, separating the common and unique information into two classes to avoid duplication.
+Let a copy of an entity (e.g. a copy of a book) be represented by two objects instead of one, separating the common and unique information into two classes to avoid duplication.
 
 <box>
 

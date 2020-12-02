@@ -12,7 +12,7 @@ If you download a pre-release version of a new game (executable file) to do a te
 
 c
 
-Explanation: Since it is an executable only, you are unlikely to have a knowledge of its internal workings. Therefore, your testing is most likely to be black-box testing. A ‘test drive’ sounds like exploratory testing rather than scripted testing. 
+Explanation: Since it is an executable only, you are unlikely to have knowledge of its internal workings. Therefore, your testing is most likely to be black-box testing. A ‘test drive’ sounds like exploratory testing rather than scripted testing.
 
 </div>
 </question>

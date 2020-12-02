@@ -14,23 +14,23 @@
 
 ```java
 @Test
-public void testTotalSalary(){
+public void testTotalSalary() {
     Payroll p = new Payroll();
 
-    //test case 1
+    // test case 1
     p.setEmployees(new String[]{"E001", "E002"});
     assertEquals(6400, p.totalSalary());
 
-    //test case 2
+    // test case 2
     p.setEmployees(new String[]{"E001"});
     assertEquals(2300, p.totalSalary());
 
-    //more tests...
+    // more tests...
 }
 ```
 </box>
 
-Most modern IDEs has integrated support for testing tools. The figure below shows the JUnit output when running some JUnit tests using the Eclipse IDE.
+Most modern IDEs have integrated support for testing tools. The figure below shows the JUnit output when running some JUnit tests using the Eclipse IDE.
 
 <img src="{{baseUrl}}/testing/testAutomation/tools/images/junit.png" height="190" />
 <p/>

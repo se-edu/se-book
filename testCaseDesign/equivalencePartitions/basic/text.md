@@ -12,9 +12,9 @@
 
 {{ icon_example }} These could be EPs for the <trigger for="pop:epBasic-isValidMonth">isValidMonth</trigger> example:
 
-* [MIN_INT ... 0] : **below** the range that produces `true` (produces `false`)
-* [1 … 12] : the range that produces `true`
-* [13 … MAX_INT] : **above** the range that produces `true` (produces `false`)
+* [MIN_INT ... 0]: **below** the range that produces `true` (produces `false`)
+* [1 … 12]: the range that produces `true`
+* [13 … MAX_INT]: **above** the range that produces `true` (produces `false`)
 
 </box>
 
@@ -54,11 +54,11 @@ EPs for `i`:
 
 </box>
 
-Some inputs have only a small number of possible values and a potentially unique behavior for each value. In those cases you have to consider each value as a partition by itself.
+Some inputs have only a small number of possible values and a potentially unique behavior for each value. In those cases, you have to consider each value as a partition by itself.
 
 <box>
 
-{{ icon_example }} Consider the method `showStatusMessage(GameStatus s): String` that returns a unique `String` for each of the possible value of s (`GameStatus` is an `enum`). In this case, each possible value for `s` will have to be considered as a partition. 
+{{ icon_example }} Consider the method `showStatusMessage(GameStatus s): String` that returns a unique `String` for each of the possible values of s (`GameStatus` is an `enum`). In this case, each possible value of `s` will have to be considered as a partition.
 
 </box>
 
@@ -66,9 +66,9 @@ Note that the EP technique is merely a heuristic and not an exact science, espec
 
 <box>
 
-{{ icon_example }} Consider the method EPs given above for the `isValidMonth`. A different tester might use these EPs instead:
-* [1 … 12] : the range that produces `true`
-* [all other integers] : the range that produces `false`
+{{ icon_example }} Consider the EPs given above for the method `isValidMonth`. A different tester might use these EPs instead:
+* [1 … 12]: the range that produces `true`
+* [all other integers]: the range that produces `false`
 
 </box>
 
@@ -85,7 +85,7 @@ Note that the EP technique is merely a heuristic and not an exact science, espec
   <td>
       
 `isValidFlag(String s): boolean`<br>
-Returns `true` if s is one of [`"F"`, `"T"`, `"D"`]. The comparison is case-sensitive.
+Returns `true` if `s` is one of [`"F"`, `"T"`, `"D"`]. The comparison is case-sensitive.
       
   </td>
   <td>
@@ -98,7 +98,7 @@ Returns `true` if s is one of [`"F"`, `"T"`, `"D"`]. The comparison is case-sens
   <td>
       
 `squareRoot(String s): int`<br>
-Pre-conditions: s represents a positive integer<br>
+Pre-conditions: `s` represents a positive integer.<br>
 Returns the square root of `s` if the square root is an integer; returns `0` otherwise.
       
   </td>

@@ -6,7 +6,7 @@
 
 <div id="body">
 
-In a smaller system, design of the entire system can be shown in one place.
+In a smaller system, the design of the entire system can be shown in one place.
 
 <div v-closeable alt="single-level design example">
 
@@ -20,7 +20,7 @@ In a smaller system, design of the entire system can be shown in one place.
 
 </div>
 
-**Design of bigger systems needs to be done/shown at multiple levels.**
+**The design of bigger systems needs to be done/shown at multiple levels.**
 
 <div v-closeable alt="multi-level design example">
 

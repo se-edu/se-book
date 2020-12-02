@@ -2,7 +2,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{ icon_outcome }} Can explain how patterns exist beyond software design domain</span>
+<span id="outcomes">{{ icon_outcome }} Can explain how patterns exist beyond the domain of software design</span>
 
 <div id="body">
 
@@ -19,7 +19,7 @@ Apparently, patterns and anti-patterns are found in the field of building archit
 
 In fact, the abstraction occurrence pattern is more of an analysis pattern than a design pattern, while MVC is more of an architectural pattern.
 
-New patterns can be created too. If a common problem needs to be solved frequently that leads to a non-obvious and better solution, it can be formulated as a pattern so that it can be reused by others. However, don’t reinvent the wheel; the pattern might already exist.
+New patterns can be created too. If a common problem that needs to be solved frequently leads to a non-obvious and better solution, it can be formulated as a pattern so that it can be reused by others. However, don’t reinvent the wheel; the pattern might already exist.
 
 </div>
 

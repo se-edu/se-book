@@ -20,7 +20,7 @@
 
 <box>
 
-{{ icon_example }} An example of a NFR captured as a user story:
+{{ icon_example }} An example of an NFR captured as a user story:
 
 As a | I want to | so that
 -----|-----------|--------
@@ -64,7 +64,7 @@ Think of the various scenarios your target user is likely to go through as she u
 <blockquote>
 
 **A. First use:**
-1. Jean get to know about ProductX. She downloads it and launches it to check out what it can do.
+1. Jean gets to know about ProductX. She downloads it and launches it to check out what it can do.
 1. After playing around with the product for a bit, Jean wants to start using it for real.
 1. ...
 
@@ -88,7 +88,7 @@ More examples that might apply to some products:
 
 * Jean uses the app at the start of the day to ...
 * Jean uses the app before going to sleep to ...
-* Jean doesn't use app for a while because she was on a three-month training programme. She is now back at work and wants to resume her daily use of the app.
+* Jean hasn't used the app for a while because she was on a three-month training programme. She is now back at work and wants to resume her daily use of the app.
 * Jean moves to another company. Some of her clients come with her but some don't.
 * Jean starts freelancing in her spare time. She wants to keep her free-lancing clients separate from her other clients.
 </blockquote>
@@ -96,7 +96,7 @@ More examples that might apply to some products:
 
 ****Step 4:**** **List the user stories to support the scenarios:**
 
-Based on the scenarios, decide user stories you need to support each. For example, based on the scenario 'A. First use', you might have user stories such as these:
+Based on the scenarios, decide on the user stories you need to support. For example, based on the scenario 'A. First use', you might have user stories such as these:
 
 <blockquote>
 
@@ -116,7 +116,7 @@ To give another example, based on the scenario 'D. 100th use', you might have us
 
 ****Other tips:****
 
-* **Don't be too hasty to discard 'unusual' user stories:**
+* **Don't be too hasty to discard 'unusual' user stories:**  
   Those might make your product unique and stand out from the rest, at least for the target users.
 * **Don't go into too much details:**  
   For example, consider this user story: `As a user, I want to see a list of tasks that needs my attention most at the present time, so that I pay attention to them first.`<br> 

@@ -16,7 +16,7 @@ if (isSpecialDeal()) {
   <td valign="top">
 
 ```java
-if (isSpecialDeal()){
+if (isSpecialDeal()) {
     total = price * 0.95;
 } else {
     total = price * 0.98;

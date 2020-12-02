@@ -8,7 +8,6 @@ Draw a class diagram for the code below. Also draw an object diagram that will r
 * You may omit the `Main` class from both diagrams.
 
 ```java
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,32 +23,32 @@ public class Main {
     }
 }
 
-class Box{
+class Box {
     private Item item;
-    Box (Item item){
+    Box(Item item) {
         this.item = item;
     }
 }
 
-class Item{
+class Item {
     private List<Box> previousBoxes = new ArrayList<>();
     private Card mainCard = null;
     private Card subCard = null;
 
-    void setMainCard(Card card){
+    void setMainCard(Card card) {
         this.mainCard = card;
     }
 
-    void setSubCard(Card card){
+    void setSubCard(Card card) {
         this.subCard = card;
     }
 
-    void addPreviousBox(Box previousBox){
+    void addPreviousBox(Box previousBox) {
         previousBoxes.add(previousBox);
     }
 }
 
-class Card{
+class Card {
 
 }
 ```

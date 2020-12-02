@@ -6,7 +6,7 @@
 
 <div id="body">
 
-This section has some exercise that cover multiple topics related to SDLC process models.
+This section has some exercises that cover multiple topics related to SDLC process models.
 
 </div>
 

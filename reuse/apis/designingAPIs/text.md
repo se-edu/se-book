@@ -30,7 +30,7 @@ As you analyze the interactions between components using sequence diagrams, you 
 * `getHeight():int`
 * `getRemainingMineCount():int`
 
-More details can be included to increase the precision of the method definitions before coding. Such precision is important to avoid misunderstandings between the developer of the class and developers of other classes that interact with this class.
+More details can be included to increase the precision of the method definitions before coding. Such precision is important to avoid misunderstandings between the developer of the class and developers of other classes that interact with the class.
 
 * **Operation**: _newGame(): void_
 * **Description**: Generates a new _WxH_ minefield with _M_ mines. Any existing minefield will be overwritten.
@@ -40,10 +40,10 @@ More details can be included to increase the precision of the method definitions
 Preconditions are the conditions that must be true before calling this operation. Postconditions describe the system after the operation is complete. Note that post conditions do not say what happens during the operation.  Here is another example:
 
 * **Operation**: _clearCellAt(int x, int y): void_
-* **Description**: Records the cell at x,y as cleared.
+* **Description**: Records the cell at x, y as cleared.
 * **Parameters**: x, y coordinates of the cell
 * **Preconditions**: game state is READY or IN_PLAY.  x and y are in 0..(H-1) and 0..(W-1), respectively.
-* **Postconditions**: Cell at x,y changes state to ZERO, ONE, TWO, THREE, …, EIGHT, or INCORRECTLY_CLEARED. Game state changes to IN_PLAY, WON or LOST as appropriate.
+* **Postconditions**: Cell at x, y changes state to ZERO, ONE, TWO, THREE, …, EIGHT, or INCORRECTLY_CLEARED. Game state changes to IN_PLAY, WON or LOST as appropriate.
 
 </box>
 
