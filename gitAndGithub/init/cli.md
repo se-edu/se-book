@@ -21,7 +21,7 @@ $ ls -a
 .  ..  .git
 ```
 
-You can also use the `git status` command to check the status of the newly-created repo. It should respond with something like the bellow
+You can also use the `git status` command to check the status of the newly-created repo. It should respond with something like the following:
 
 ```
 git status

@@ -11,7 +11,7 @@
 <p/>
 
 <question>
-Which of these do not belong to four main OO principles?
+Which of these do not belong to the four main OO principles?
 
 - ( ) a. Abstraction
 - ( ) b. Encapsulation

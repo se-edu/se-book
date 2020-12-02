@@ -6,11 +6,11 @@
 
 <div id="body">
 
-**Git supports branching** which allows you to do multiple parallel changes to the content of a repository.
+**Git supports branching**, which allows you to do multiple parallel changes to the content of a repository.
 
 **A Git branch is simply a _named label_ pointing to a commit. The `HEAD` label indicates which branch you are on.** Git creates a branch named `master` by default. When you add a commit, it goes into the branch you are currently on, and the branch label (together with the `HEAD` label) moves to the new commit.
 
-Given below is an illustrations of how branch labels move as branches evolve.
+Given below is an illustration of how branch labels move as branches evolve.
 
 <pic src="images/branchesAsLabels1.png" width="650"/>
 
@@ -53,7 +53,7 @@ Follow the steps below to learn how to work with branches. You can use any repo 
 </tabs>
 
 **2. Create some commits in the new branch.** %%Just commit as per normal. Commits you add while on a certain branch will become part of that branch.%%<br>
-Note how the `master` label and the `HEAD` label moves to the new commit (The `HEAD` label of the local repo is represented as :fas-dot-circle: in SourceTree)
+Note how the `master` label and the `HEAD` label moves to the new commit (The `HEAD` label of the local repo is represented as :fas-dot-circle: in SourceTree).
 
 **3. Switch to the `master` branch.** Note how the changes you did in the `feature1` branch are no longer in the working directory.
 
@@ -67,14 +67,14 @@ Note how the `master` label and the `HEAD` label moves to the new commit (The `H
 </tabs>
 
 **4. Add a commit to the master branch.** Let’s imagine it’s a bug fix.<br>
-To keep things simple for the time being, this commit should ==not involve the same content that you changed in the `feature1` branch==. To be one the safe side, this commit can change an entirely different file.
+To keep things simple for the time being, this commit should ==not involve the same content that you changed in the `feature1` branch==. To be on the safe side, this commit can change an entirely different file.
 
 <img src="{{baseUrl}}/gitAndGithub/branch/images/sourcetree_4.png" height="100" />
 <p/>
 
 **5. Switch back to the `feature1` branch** %%(similar to step 3)%%.
 
-**6. Merge the `master` branch to the `feature1` branch**, giving an end-result like the below. Also note how Git has created a _merge commit_.
+**6. Merge the `master` branch to the `feature1` branch**, giving an end-result like the following. Also note how Git has created a _merge commit_.
 
 <img src="{{baseUrl}}/gitAndGithub/branch/images/sourcetree_5.png" height="120" />
 <p/>
@@ -92,7 +92,7 @@ The objective of that merge was to _sync_ the `feature1` branch with the `master
 
 <box type="info" seamless>
 
-Instead of merging `master` to `feature1`, an alternative is to [_rebase_](https://www.atlassian.com/git/tutorials/merging-vs-rebasing) the `feature1` branch. However, rebasing is an advance feature that requires modifying past commits. If you modify past commits that have been pushed to a remote repository, you'll have to [_force-push_](https://www.datree.io/resources/git-push-force) the modified commit to the remote repo in order to update the commits in it.
+Instead of merging `master` to `feature1`, an alternative is to [_rebase_](https://www.atlassian.com/git/tutorials/merging-vs-rebasing) the `feature1` branch. However, rebasing is an advanced feature that requires modifying past commits. If you modify past commits that have been pushed to a remote repository, you'll have to [_force-push_](https://www.datree.io/resources/git-push-force) the modified commit to the remote repo in order to update the commits in it.
 </box>
 
 **7. Add another commit to the `feature1` branch.**
@@ -131,7 +131,7 @@ git merge feature1
 ==Always remember to switch back to the `master` branch before creating a new branch.== If not, your new branch will be created on top of the current branch.
 </box>
 
-**11. Go back to the `master` branch and merge the `add-countries` branch onto the `master` branch** %%(similar to steps 8-9 above)%%. While you might expect to see something like the below,
+**11. Go back to the `master` branch and merge the `add-countries` branch onto the `master` branch** %%(similar to steps 8-9 above)%%. While you might expect to see something like the following,
 
 <img src="{{baseUrl}}/gitAndGithub/branch/images/addCountriesBranchNoFastForward.png" height="100" />
 <p/>

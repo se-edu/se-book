@@ -12,7 +12,7 @@ Here's a scenario you can try in order to learn how to <trigger trigger="click" 
   <include src="..\..\revisionControl\remoteRepositories\text.md#section-pulling"/>
 </modal>
 
-**1.Clone a repo** (e.g., the repo used in <trigger for="modal:clone-repository" trigger="click">[Git & GitHub → Clone]</trigger>) to be used for this activity.
+**1. Clone a repo** (e.g., the repo used in <trigger for="modal:clone-repository" trigger="click">[Git & GitHub → Clone]</trigger>) to be used for this activity.
 
 **2. Delete the last few commits to simulate cloning the repo a few commits ago.**
 

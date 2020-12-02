@@ -6,7 +6,7 @@
 
 <div id="body">
 
-**Software architectures follow various high-level styles (aka _architectural patterns_)**, just like <trigger trigger="click" for="modal:archiStyles-buildingArchitectures">building architectures follow various architecture styles</trigger>.
+**Software architectures follow various high-level styles (aka _architectural patterns_)**, just like how <trigger trigger="click" for="modal:archiStyles-buildingArchitectures">building architectures follow various architecture styles</trigger>.
 
 <box>
 

@@ -29,7 +29,7 @@ In this case, a useful heuristic to apply is **no more than one invalid input in
 | 4      | VV         | ++-1++     | Error message “invalid price"  |
 | 4.1    | ++Dog++    | VV         | Error message “invalid fruit"  |
 
-VV/IV = Any Invalid or Valid Value VV=Any Valid Value
+VV/IV = Any Invalid or Valid Value VV = Any Valid Value
 
 </box>
 

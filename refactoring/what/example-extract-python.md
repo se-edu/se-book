@@ -2,7 +2,7 @@
 def print_owing():
     print_banner()
 
-    //print details
+    # print details
     print("name:	" + name)
     print("amount	" + get_outstanding())
 ```

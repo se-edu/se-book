@@ -26,8 +26,8 @@ def calculate_subs():
 def calculate_subsidy():
     if is_senior:
         return REJECT_SENIOR
-    elif is_already_subsidised:
-        return SUBSIDISED_SUBSIDY
+    elif is_already_subsidized:
+        return SUBSIDIZED_SUBSIDY
     elif is_parttime:
         return FULLTIME_SUBSIDY * RATIO
     else:

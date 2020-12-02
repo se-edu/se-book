@@ -10,7 +10,7 @@
 
 <div id="body">
 
-_PR review_ stage is a dialog between the PR author and members of the repo that received the PR, in order to refine and eventually merge the PR.
+The _PR review_ stage is a dialog between the PR author and members of the repo that received the PR, in order to refine and eventually merge the PR.
 
 Given below are some steps you can follow when reviewing a PR.
 
@@ -46,7 +46,7 @@ Given below are some steps you can follow when reviewing a PR.
    classes if that makes sense.
    ```
    {{ icon_tip }} `LGTM` is often used in such overall comments, to indicate `Looks good to merge`.<br>
-   `nit` is another such term, used to indicate minor flaw e.g., `LGTM, almost. Just a few nits to fix.`
+   `nit` is another such term, used to indicate minor flaws e.g., `LGTM, almost. Just a few nits to fix.`.
 1. Choose `Approve`, `Comment`, or `Request changes` option as appropriate and click on the {{ button_green("Submit review") }} button.
 
 </div>

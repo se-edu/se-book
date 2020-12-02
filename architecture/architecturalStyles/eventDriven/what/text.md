@@ -6,7 +6,7 @@
 
 <div id="body">
 
-**_Event-driven_ style controls the flow of the application by detecting <tooltip content="An event is a notable occurrence that happens inside or outside the software, such as the user clicking a button, a timer running out, minimizing a window, etc.">events</tooltip> from event _emitters_ and communicating those events to interested event _consumers_ .** This architectural style is often used in GUIs.
+**_Event-driven_ style controls the flow of the application by detecting <tooltip content="An event is a notable occurrence that happens inside or outside the software, such as the user clicking a button, a timer running out, minimizing a window, etc.">events</tooltip> from event _emitters_ and communicating those events to interested event _consumers_.** This architectural style is often used in GUIs.
 
 <img src="{{baseUrl}}/architecture/architecturalStyles/eventDriven/what/images/eventDriven.png" width="450" />
  

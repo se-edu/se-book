@@ -6,7 +6,7 @@
 
 <div id="body">
 
-**The iterative model (sometimes called _iterative_ and _incremental_) advocates having several _iterations_ of SDLC.** Each of the iterations could potentially go through all the development stages, from requirement gathering to testing & deployment. Roughly, it appears to be similar to several cycles of the sequential model.
+**The iterative model (sometimes called _iterative_ and _incremental_) advocates having several _iterations_ of SDLC.** Each of the iterations could potentially go through all the development stages, from requirements gathering to testing & deployment. Roughly, it appears to be similar to several cycles of the sequential model.
 
 <img src="{{baseUrl}}/processModels/introduction/iterativeModels/images/diagram.png" height="300" />
 <p/>

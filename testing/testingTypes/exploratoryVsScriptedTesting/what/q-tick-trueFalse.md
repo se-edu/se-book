@@ -1,7 +1,7 @@
 <panel header="{{ icon_Q_A }} Statements about exploratory and scripted testing">
 <question>
 
-Scripted testing requires tests to be written in a scripting language; Manual testing is called exploratory testing.
+Scripted testing requires tests to be written in a scripting language; manual testing is called exploratory testing.
 
 - ( ) True
 - ( ) False

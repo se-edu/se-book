@@ -15,7 +15,7 @@ Arguments for:
 
 Arguments against:
 
-*	Inexperienced developers; big-bang more likely to fail
+*	Inexperienced developers; big-bang more likely to fail.
 *	Too many problems may be discovered too late. Submission deadline (fixed) can be missed.
 *	Team members have not worked together before; increases the probability of integration problems.
 

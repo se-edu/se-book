@@ -9,7 +9,6 @@ return ((length < MAX_LENGTH) || (previousSize != length)) && (typeCode == URGEN
 
 {{good}}
 ```java
-
 boolean isWithinSizeLimit = length < MAX_LENGTH;
 boolean isSameSize = previousSize != length;
 boolean isValidCode = isWithinSizeLimit || isSameSize;

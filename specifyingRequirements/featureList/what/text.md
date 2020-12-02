@@ -16,7 +16,7 @@
 
 1. Basic play – Single player play.
 2. Difficulty levels
-   * Medium-levels
+   * Medium levels
    * Advanced levels
 3. Versus play – Two players can play against each other.
 4. Timer – Additional fixed time restriction on the player.

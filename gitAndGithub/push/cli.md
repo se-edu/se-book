@@ -1,4 +1,4 @@
-Use the command `git push origin master`. Enter Github username and password when prompted.
+Use the command `git push origin master`. Enter your Github username and password when prompted.
 
 <box type="warning">
 

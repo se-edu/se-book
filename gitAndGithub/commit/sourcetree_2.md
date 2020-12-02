@@ -1,4 +1,4 @@
-Select the `fruits.txt` and click on the `Stage Selected` button
+Select the `fruits.txt` and click on the `Stage Selected` button.
 
 <img src="{{baseUrl}}/gitAndGithub/commit/images/sourcetree_2.png" height="100" />
 <p/>

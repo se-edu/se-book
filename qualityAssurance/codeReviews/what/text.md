@@ -44,11 +44,11 @@ Reviews can be done in various forms. Some examples below:
     * the secretary - the recorder of the findings of the inspection
     * the inspector/reviewer - the one who inspects/reviews the artifact
 
-Advantages of code reviews over testing:
+Advantages of code review over testing:
 
-* It can detect functionality defects as well as other problems such as coding standard violations
-* Can verify non-code artifacts and incomplete code
-* Do not require test drivers or stubs.
+* It can detect functionality defects as well as other problems such as coding standard violations.
+* It can verify non-code artifacts and incomplete code.
+* It does not require test drivers or stubs.
 
 Disadvantages:
 

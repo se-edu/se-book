@@ -30,7 +30,7 @@ Similarly, when a normal method is being called, a message is being sent to the 
 
 </box>
 
-However, there can be methods related to a specific class but not suitable for sending message to a specific object of that class. Such **methods that are called using the class instead of a specific instance are called ==_class-level methods_==**.
+However, there can be methods related to a specific class but not suitable for sending messages to a specific object of that class. Such **methods that are called using the class instead of a specific instance are called ==_class-level methods_==**.
 
 <box>
 

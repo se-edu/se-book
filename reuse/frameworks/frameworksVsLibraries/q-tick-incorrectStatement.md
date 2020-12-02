@@ -1,7 +1,7 @@
 <panel header="{{ icon_Q_A }} Statement about software frameworks">
 <question>
 
-Choose correct statements about software frameworks.
+Choose the correct statements about software frameworks.
 
 - [ ] a. They follow the Hollywood principle, otherwise known as ‘inversion of control’.
 - [ ] b. They come with full or partial implementations.

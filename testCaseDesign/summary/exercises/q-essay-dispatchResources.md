@@ -33,7 +33,7 @@ Imagine you are designing test cases to test the method `dispatch(Resource, Task
       Considering the resource types required
       <ul>
         <li>A task requiring only one type of resource</li>
-        <li>A task requiring multiple types of resource</li>
+        <li>A task requiring multiple types of resources</li>
         <li>null</li>
       </ul>
     </td>

@@ -88,8 +88,8 @@ The updated class diagram:
 
 How is the `getGameState()` operation supported? Given below are two ways (there could be other ways):
 
-1. `Minefield` class knows the state of the game at any time. `Logic` class retrieves it from the `Minefield` class as and when required.
-2. `Logic` class maintains the state of the game at all times.
+1. The `Minefield` class knows the state of the game at any time. The `Logic` class retrieves it from the `Minefield` class as and when required.
+2. The `Logic` class maintains the state of the game at all times.
 
 Here’s the SD for option 1.
 

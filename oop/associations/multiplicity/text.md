@@ -31,7 +31,7 @@
 
 <box>
 
-{{ icon_example }} In the code below, the `Logic` class will always have a `ConfigGenerator` object, provided the variable is not set to null at some point.
+{{ icon_example }} In the code below, the `Logic` class will always have a `ConfigGenerator` object, provided the variable is not set to `null` at some point.
 
 
 <div class="alt-java">

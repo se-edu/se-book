@@ -21,10 +21,10 @@ MSS:
 <pre>
 Extensions:
   3a. OBS detects an error in the entered data.
-    3a1. OBS requests for the correct data.
-    3a2. User enters new data
-    Steps 3a1-3a2 are repeated until the data entered are correct.
-    Use case resumes from step 4.
+      3a1. OBS requests for the correct data.
+      3a2. User enters new data.
+      Steps 3a1-3a2 are repeated until the data entered are correct.
+      Use case resumes from step 4.
   
   3b. User requests to effect the transfer in a future date.
       3b1. OBS requests for confirmation.

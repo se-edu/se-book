@@ -5,10 +5,10 @@
 <p/>
 
 ```java
-class City{
+class City {
     Country country;
     
-    void setCountry(Country country){
+    void setCountry(Country country) {
         this.country = country;
     }
 }

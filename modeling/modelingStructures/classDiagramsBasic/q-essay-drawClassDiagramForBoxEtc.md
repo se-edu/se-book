@@ -1,7 +1,7 @@
 <panel header="{{ icon_Q }} Draw Class Diagram for Box etc.">
 <question>
 
-Draw a class diagram for the code below. Show the attributes, methods, associations, navigabilities, and multiplicities in the class diagram below:
+Draw a class diagram for the code below. Show the attributes, methods, associations, navigabilities, and multiplicities.
 
 ```java
 class Box {

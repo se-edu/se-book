@@ -1,7 +1,7 @@
 <panel header="{{ icon_Q_A }} Results of Refactoring">
 <question>
 
-Choose the correct statements
+Choose the correct statements.
 
 - [ ] a. Refactoring can improve understandability
 - [ ] b. Refactoring can uncover bugs

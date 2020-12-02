@@ -14,7 +14,7 @@ Given below is a scenario you can try in order to learn how to <trigger trigger=
   <include src="..\..\revisionControl\remoteRepositories\text.md#section-pushing"/>
 </modal>
 
-**1. Fork** an existing GitHub repo (e.g., [samplerepo-things](https://github.com/se-edu/samplerepo-things)) to your GitHub account:
+**1. Fork** an existing GitHub repo (e.g., [samplerepo-things](https://github.com/se-edu/samplerepo-things)) to your GitHub account.
 
 **2. Clone the fork** (not the original) to your computer.
 
@@ -51,7 +51,7 @@ Push your repo to the new remote the usual way, but select the name of target re
   </tab>
   <tab header="CLI">
 
-Push to the new remote the usual way  e.g., `git push upstream1 master` (assuming the you gave the name `upstream1` to the remote).
+Push to the new remote the usual way  e.g., `git push upstream1 master` (assuming you gave the name `upstream1` to the remote).
 
   </tab>
 </tabs>
@@ -68,8 +68,8 @@ Push to the new remote the usual way  e.g., `git push upstream1 master` (assumin
 1. In the next screen, provide a name for your repo but keep the `Initialize this repo ...` tick box unchecked.<br>
    <img src="{{baseUrl}}/gitAndGithub/push/images/fillNewRepoInfo.png" width="600" />
 
-1. Note the URL of the repo. It will be of the form `https://github.com/{your_user_name}/{repo_name}.git`<br>
-   e.g., `https://github.com/johndoe/foobar.git` (not the `.git` at the end)<br>
+1. Note the URL of the repo. It will be of the form `https://github.com/{your_user_name}/{repo_name}.git`.<br>
+   e.g., `https://github.com/johndoe/foobar.git` (note the `.git` at the end)<br>
    <img src="{{baseUrl}}/gitAndGithub/push/images/newRepoUrl.png" width="450" />
 
 **2. <trigger trigger="click" for="modal:push-addRemote">Add the GitHub repo URL as a remote</trigger>** of the local repo. You can give it the name `origin` (or any other name).

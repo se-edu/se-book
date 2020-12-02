@@ -19,9 +19,9 @@
   </div>
 </popover>
 
-**_Bottom-up_ integration: the reverse of top-down integration.** Note that when integrating lower level components, <tooltip content="additional code written to provide inputs to a component via an API">drivers</tooltip> may be needed to test the integrated components %%because the UI may not be integrated yet%%, just like top-down integration needs stubs.
+**_Bottom-up_ integration: the reverse of top-down integration.** Note that when integrating lower level components, <tooltip content="additional code written to provide inputs to a component via an API">drivers</tooltip> may be needed to test the integrated components %%because the UI may not be integrated yet%%, just like how top-down integration needs stubs.
 
-**_Sandwich_ integration: a mix of the top-down and the bottom-up approaches.** The idea is to do both top-down and bottom-up so as to 'meet' in the middle.
+**_Sandwich_ integration: a mix of the top-down and bottom-up approaches.** The idea is to do both top-down and bottom-up so as to 'meet' in the middle.
 
 <div v-closeable alt="slideshow: comparison">
 

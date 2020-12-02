@@ -16,7 +16,7 @@ A use case is an interaction between a system and its _actors_.
 
 <box>
 
-{{ icon_example }} Some example actors for a Learning Management System
+{{ icon_example }} Some example actors for a Learning Management System:
 <div class="text-monospace">
 
 * Actors: Guest, Student, Staff, Admin, <tooltip content="an exam management system">ExamSys</tooltip>, <tooltip content="a library management system">LibSys</tooltip>.
@@ -62,8 +62,8 @@ A use case is an interaction between a system and its _actors_.
 <div class="text-monospace">
 
 * Software System: LearnSys
-* Actor(or role) : Student
-* Persons that can play this role : ==undergraduate student, graduate student, a staff member doing a part-time course, exchange student==
+* Actor (or role): Student
+* Persons that can play this role: ==undergraduate student, graduate student, a staff member doing a part-time course, exchange student==
 </div>
 </box>
 

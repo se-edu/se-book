@@ -24,7 +24,7 @@ For 100% branch or decision coverage, two test cases are required:
   * `(x > 2 && x < 44) == true` :  [e.g. `x == 4`]
   * `(x > 2 && x < 44) == false` :  [e.g. `x == 100`]
 
-For 100% condition coverage, three test cases are required
+For 100% condition coverage, three test cases are required:
 
   * `(x > 2) == true` , `(x < 44) == true` : [e.g. `x == 4`]
   * `(x < 44) == false` : [e.g. `x == 100`]

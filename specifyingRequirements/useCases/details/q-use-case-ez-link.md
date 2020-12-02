@@ -8,7 +8,7 @@ Complete the following use case (MSS, extensions, etc.). Note that you should no
 <box>
 
 * System: EZ-Link machine
-* Use case: UC2 top-up EZ-Link card
+* Use case: UC01 top-up EZ-Link card
 * Actor: EZ-Link card user
 
 </box>
@@ -19,7 +19,7 @@ Complete the following use case (MSS, extensions, etc.). Note that you should no
   <div>
     <ul>
       <li>System: EZ-Link machine (those found at MRTs)</li>
-      <li>Use case: UC2 top-up EZ-Link card</li>
+      <li>Use case: UC01 top-up EZ-Link card</li>
       <li>Actor: EZ-Link card user</li>
       <li>Preconditions: All hardware in working order.</li>
       <li>Guarantees: MSS → the card will be topped-up.</li>

@@ -3,7 +3,7 @@
 
 Which pairs of classes are likely to be the `<<Abstraction>>` and the `<<Occurrence>>` of the abstraction occurrence pattern?
 
-1. CarModel, Car. (Here CarModel represents a particular model of a car produced by the car manufacturer. E.g. BMW R4300)
+1. CarModel, Car (Here, CarModel represents a particular model of a car produced by the car manufacturer. E.g. BMW R4300)
 2. Car, Wheel
 3. Club, Member
 4. TeamLeader, TeamMember

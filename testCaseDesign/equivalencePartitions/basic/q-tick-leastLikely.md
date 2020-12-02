@@ -33,7 +33,7 @@ Explanation: The description does not mention anything about the content of the 
 
 B. (a) or (c)
 
-Explanation: both belong to the same EP
+Explanation: both belong to the same EP.
 
 </div>
 </question>

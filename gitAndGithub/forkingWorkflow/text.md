@@ -6,7 +6,7 @@
 
 <div id="body">
 
-You can follow the steps in the simulation of a forking workflow given below to learn how to follow the such a workflow.
+You can follow the steps in the simulation of a forking workflow given below to learn how to follow such a workflow.
 
 {{ icon_info }} This activity is best done as a team.
 
@@ -22,7 +22,7 @@ You can follow the steps in the simulation of a forking workflow given below to 
 1. **[Add the forked repo](https://help.github.com/articles/managing-team-access-to-an-organization-repository/) to the `developers` team.** Give write access.
 
 
-**Step 2. Each team member: create PRs via own fork**
+**Step 2. Each team member: create PRs via own fork.**
 
 1. **Fork that repo** from your team org to your own GitHub account.
 
@@ -50,7 +50,7 @@ You can follow the steps in the simulation of a forking workflow given below to 
 
 1. **[One member]: Update README:** In the `master` branch, remove John Doe and Jane Doe from the `README.md`, commit, and push to the main repo.
 
-1. **[Each team member] Create a PR** to add yourself under the `Team Members` section in the `README.md`. Use a new branch for the PR e.g., `add-johnTan-name`
+1. **[Each team member] Create a PR** to add yourself under the `Team Members` section in the `README.md`. Use a new branch for the PR e.g., `add-johnTan-name`.
 
 **Step 5. Merge conflicting PRs** one at a time. Before merging a PR, you’ll have to resolve conflicts.
 

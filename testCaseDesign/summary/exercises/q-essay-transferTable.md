@@ -19,8 +19,8 @@ Given below is an operation description taken from a restaurant booking system. 
 
 * Table:
 
-  * Invalid: null, not vacant, vacant but doesn’t have enough room,
-  * Valid: vacant and has enough room.
+  * Invalid: null, not vacant, vacant but doesn’t have enough room
+  * Valid: vacant and has enough room
 
 **Boundary values:**
 

@@ -6,7 +6,7 @@
 
 <div id="body">
 
-Given below are some more commonly used refactorings. A more comprehensive list is available at <trigger trigger="click" for="modal:refactoring-catalog-how"> refactoring-catalog </trigger>.
+Given below are some more commonly used refactorings. A more comprehensive list is available at <trigger trigger="click" for="modal:refactoring-catalog-how">refactoring-catalog</trigger>.
 
 <modal header="**Refactoring Catalog**" id="modal:refactoring-catalog-how">
   <include src="../../common/references.md#refactoring-catalog"/>

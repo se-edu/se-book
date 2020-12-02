@@ -1,7 +1,7 @@
 <panel header="{{ icon_Q_A }} Statements about APIs">
 <question>
 
-Choose the correct statements
+Choose the correct statements.
 
 - [ ] a. A software component can have an API.
 - [ ] b. Any method of a class is part of its API.
@@ -13,7 +13,7 @@ Choose the correct statements
 
 (a) (c) (d) (e)
 
-Explanation: (b) is incorrect because private methods cannot be a part of the API
+Explanation: (b) is incorrect because private methods cannot be a part of the API.
 
 </div>
 </question>

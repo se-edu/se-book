@@ -10,7 +10,7 @@
 
 System: Online Banking System (OBS)<br>
 Use case: UC23 - Transfer Money<br>
-Actor: User
+Actor: User<br>
 MSS:
 1. User chooses to transfer money.
 1. OBS requests for details of the transfer.

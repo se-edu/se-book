@@ -28,8 +28,8 @@ if (!isUnusualCase) {  //detecting an unusual condition
 }
 ```
 In the code above,
-* Unusual condition detection is separated from their handling.
-* Main path is nested deeply.
+* unusual condition detections are separated from their handling.
+* the main path is nested deeply.
 
 {{good}}
 ```java

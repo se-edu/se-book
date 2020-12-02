@@ -48,7 +48,7 @@ Next, let us identify equivalence partitions for each participant. Will the `new
 
 <box>
 
-{{ icon_example }} Consider the `Logic` component of the Minesweeper application. What are the EPs for the `markCellAt(int x, int y)` method?. The partitions in **bold** represent valid inputs.
+{{ icon_example }} Consider the `Logic` component of the Minesweeper application. What are the EPs for the `markCellAt(int x, int y)` method? The partitions in **bold** represent valid inputs.
 
 * `Logic`: PRE_GAME, **READY**, **IN_PLAY**, WON, LOST
 * `x`: [MIN_INT..-1] **[0..(W-1)]** [W..MAX_INT] %%(assuming a minefield size of WxH)%%

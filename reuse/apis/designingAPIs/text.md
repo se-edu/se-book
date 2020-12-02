@@ -37,7 +37,7 @@ More details can be included to increase the precision of the method definitions
 * **Preconditions**: None
 * **Postconditions**:	A new minefield is created. Game state is READY.
 
-Preconditions are the conditions that must be true before calling this operation. Postconditions describe the system after the operation is complete. Note that post conditions do not say what happens during the operation.  Here is another example:
+Preconditions are the conditions that must be true before calling this operation. Postconditions describe the system after the operation is complete. Note that postconditions do not say what happens during the operation. Here is another example:
 
 * **Operation**: _clearCellAt(int x, int y): void_
 * **Description**: Records the cell at x, y as cleared.

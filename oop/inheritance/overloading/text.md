@@ -16,7 +16,7 @@
 
 <box>
 
-{{ icon_example }} In the case below, the `calculate` method is overloaded because the two methods have the same name but different type signatures `(String)` and `(int)`
+{{ icon_example }} In the case below, the `calculate` method is overloaded because the two methods have the same name but different type signatures `(String)` and `(int)`.
 
 * `calculate(String): void`
 * `calculate(int): void`

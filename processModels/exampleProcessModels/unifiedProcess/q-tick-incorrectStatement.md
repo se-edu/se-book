@@ -6,7 +6,7 @@ Choose the correct statements about the unified process.
 - [ ] a. It was conceived by the three amigos who also created UML.
 - [ ] b. The Unified process requires the use of UML.
 - [ ] c. The Unified process is actually a process framework rather than a fixed process.
-- [ ] d. The Unified process can be iterative and incremental
+- [ ] d. The Unified process can be iterative and incremental.
 
 <div slot="answer">
 

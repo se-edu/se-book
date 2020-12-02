@@ -1,6 +1,6 @@
 <span id="prereqs"></span>
 
-<span id="outcomes">{{ icon_outcome }} Can combine some principles concepts</span>
+<span id="outcomes">{{ icon_outcome }} Can combine some concepts of principles</span>
 
 <span id="title">Review</span>
 

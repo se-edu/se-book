@@ -105,7 +105,7 @@ e.g., `createEmptyList`, `listOfIntegers`, `htmlText`, `dvdPlayer`. This book de
 
 <div id="def-dependency-inversion-principle">
 
-**Dependency inversion principle**:
+**Dependency inversion principle (DIP)**:
 
 1. High-level modules should not depend on low-level modules. Both should depend on abstractions.
 2. Abstractions should not depend on details. Details should depend on abstractions.
@@ -114,19 +114,19 @@ e.g., `createEmptyList`, `listOfIntegers`, `htmlText`, `dvdPlayer`. This book de
 
 <div id="def-design-pattern">
 
-**Design pattern** : An _elegant reusable solution_ to a _commonly recurring problem_ within a _given context_ in software design.
+**Design pattern**: An _elegant reusable solution_ to a _commonly recurring problem_ within a _given context_ in software design.
 
 </div>
 
 <div id="def-domain-expert">
 
-**Domain expert** : An expert of a discipline to which the product is connected %%e.g., for a software used for Accounting, a domain expert is someone who is an expert of Accounting%%.
+**Domain expert**: An expert of a discipline to which the product is connected %%e.g., for a software used for Accounting, a domain expert is someone who is an expert of Accounting%%.
 
 </div>
 
 <div id="def-dry-principle">
 
-**DRY (Don't Repeat Yourself) principle**: Every piece of knowledge must have a single, unambiguous, authoritative representation within a system <sub>_The Pragmatic Programmer_, by Andy Hunt and Dave Thomas</sub>
+**DRY (Don't Repeat Yourself) principle**: Every piece of knowledge must have a single, unambiguous, authoritative representation within a system. <sub>-- _The Pragmatic Programmer_, by Andy Hunt and Dave Thomas</sub>
 
 </div>
 
@@ -312,7 +312,7 @@ Also known as
 
 <div id="def-stub">
 
-**Stub**: A stub has the same interface as the component it replaces, but its implementation is so simple that it is unlikely to have any bugs. It mimics the responses of the component, but only for the a limited set of predetermined inputs. That is, it does not know how to respond to any other inputs. Typically, these mimicked responses are hard-coded in the stub rather than computed or retrieved from elsewhere, e.g. from a database. 
+**Stub**: A stub has the same interface as the component it replaces, but its implementation is so simple that it is unlikely to have any bugs. It mimics the responses of the component, but only for a limited set of predetermined inputs. That is, it does not know how to respond to any other inputs. Typically, these mimicked responses are hard-coded in the stub rather than computed or retrieved from elsewhere, e.g. from a database. 
 
 </div>
 
@@ -363,7 +363,7 @@ Also known as
 
 <div id="def-unit-testing">
 
-**Unit testing**: testing individual units (methods, classes, subsystems, ...) to ensure each piece works correctly 
+**Unit testing**: testing individual units (methods, classes, subsystems, ...) to ensure each piece works correctly.
 
 </div>
 
