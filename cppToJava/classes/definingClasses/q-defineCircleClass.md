@@ -1,7 +1,7 @@
 <panel type="dark" header="###  <small><small>{{ icon_important }} [Key Exercise] define a `Circle` class</small></small>" expanded >
 <question>
 
-Define a `Circle` class so that the code given below produces the given output. The nature of the class is a follows:
+Define a `Circle` class so that the code given below produces the given output. The nature of the class is as follows:
 * Attributes(all `private`):
   * **`int x`, `int y`**: represents the location of the circle
   * **`double radius`**: the radius of the circle

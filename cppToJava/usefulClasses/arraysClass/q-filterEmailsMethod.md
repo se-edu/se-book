@@ -41,7 +41,7 @@ public class Main {
 
 <div slot="hint">
 
-* **`filterEmailsfilterEmails(String[] items): String[]`**
+* **`filterEmails(String[] items): String[]`**
   1. create a new array (say `emails`) of the same size as `items`
   1. go through the elements in the `items` and add to `emails` if the element contains `@` (you can use the `contains` method of the `String` class here)
   1. Use `Arrays.copyOf` method to return the filled part of `emails`.
