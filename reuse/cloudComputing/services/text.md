@@ -16,7 +16,7 @@ Cloud computing can deliver computing services at three levels:
 
 2. **Platform as a service (PaaS) provides a platform on which developers can build applications.** Developers do not have to worry about infrastructure issues such as deploying servers or load balancing as is required when using IaaS. Those aspects are automatically taken care of by the platform. The price to pay is reduced flexibility; applications written on PaaS are limited to facilities provided by the platform. %%A PaaS example is the Google App Engine where developers can build applications using Java, Python, PHP, or Go whereas Amazon EC2 allows users to deploy applications written in any language on their virtual servers.%%
 
-3. **Software as a service (SaaS) allows applications to be accessed over the network** instead of installing them on a local machine. %%For example, Google Docs is an SaaS word processing software, while Microsoft Word is a traditional word processing software.%%
+3. **Software as a service (SaaS) allows applications to be accessed over the network** instead of installing them on a local machine. %%For example, Google Docs is a SaaS word processing software, while Microsoft Word is a traditional word processing software.%%
 
 </div>
 
