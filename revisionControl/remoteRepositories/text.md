@@ -23,7 +23,7 @@
 </div>
 <div id="section-pushing">
 
-**You can ==_push_== new commits in one repo to another repo** which will copy the new commits onto the destination repo. Note that pushing to a repo requires you to have write-access to it. Furthermore, you can push between repos only if those repos have a shared history among them (i.e, one was created by copying the other at some point in the past).
+**You can ==_push_== new commits in one repo to another repo** which will copy the new commits onto the destination repo. Note that pushing to a repo requires you to have write-access to it. Furthermore, you can push between repos only if those repos have a shared history among them (i.e., one was created by copying the other at some point in the past).
 </div>
 
 Cloning, pushing, and pulling can be done between two local repos too, although it is more common for them to involve a remote repo.
