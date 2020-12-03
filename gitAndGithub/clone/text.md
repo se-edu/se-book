@@ -16,10 +16,10 @@ Suppose you want to clone the sample repo [samplerepo-things](https://github.com
 
 <box type="warning">
 
-Note that the URL of the Github project is different from the URL you need to clone a repo in that Github project.
+Note that the URL of the GitHub project is different from the URL you need to clone a repo in that GitHub project.
 e.g.
 
-Github project URL: `https://github.com/se-edu/samplerepo-things` <br>
+GitHub project URL: `https://github.com/se-edu/samplerepo-things` <br>
 Git repo URL: `https://github.com/se-edu/samplerepo-things.git` (note the `.git` at the end)
 
 </box>
