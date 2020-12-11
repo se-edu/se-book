@@ -1,7 +1,7 @@
 <panel header="{{ icon_Q_A }} Which sequences are not allowed?">
 <question>
 
-Which of these sequence of actions is not allowed by the given activity diagram?
+Which of these sequences of actions is not allowed by the given activity diagram?
 
 - [ ] i. start a b c d end
 - [ ] ii. start a b c d e f g c d end

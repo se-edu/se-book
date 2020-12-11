@@ -97,7 +97,7 @@ e.g., `createEmptyList`, `listOfIntegers`, `htmlText`, `dvdPlayer`. This book de
 
 <div id="def-coupling">
 
-**Coupling**: The degree of interdependence between software modules; a measure of how closely connected two routines or modules are; the strength of the relationships between module.
+**Coupling**: The degree of interdependence between software modules; a measure of how closely connected two routines or modules are; the strength of the relationships between modules.
 
 </div>
 

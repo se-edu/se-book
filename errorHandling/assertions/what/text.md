@@ -13,8 +13,8 @@
 {{ icon_example }} An assertion can be used to express something like _when the execution comes to this point, the variable `v` cannot be null_. 
 
 </box>
- 
-**If the runtime detects an _assertion failure_, it typically take some drastic action** such as terminating the execution with an error message. This is because an assertion failure indicates a possible bug and the sooner the execution stops, the safer it is.
+
+**If the runtime detects an _assertion failure_, it typically takes some drastic action** such as terminating the execution with an error message. This is because an assertion failure indicates a possible bug and the sooner the execution stops, the safer it is.
 
 <box>
 

@@ -1,4 +1,4 @@
-<panel header="{{ icon_Q_A }} Dogfooding improves product design?">
+<panel header="{{ icon_Q_A }} Can Dogfooding improve product design?">
 <question>
 
 ‘Dogfooding’ can help us improve product designs. 

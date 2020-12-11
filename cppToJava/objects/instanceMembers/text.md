@@ -26,7 +26,7 @@ System.out.println(spot.x + ", " + spot.y + ", " + sum);
 
 </box>
 
-**You can <tooltip content="i.e., change/modify">_mutate_</tooltip> an object by assigning a different values to its attributes.**
+**You can <tooltip content="i.e., change/modify">_mutate_</tooltip> an object by assigning a different value to its attributes.**
 
 <box>
 

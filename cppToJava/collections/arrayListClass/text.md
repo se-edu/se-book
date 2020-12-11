@@ -6,7 +6,7 @@
 
 <div id="body">
 
-The `ArrayList` class is a resizable-array implementation of the `List` interface. Unlike a normal `array`, an `ArrayList` can grow in size as you add more items to it. The example below illustrate some of the useful methods of the `ArrayList` class using an `ArrayList` of `String` objects.
+The `ArrayList` class is a resizable-array implementation of the `List` interface. Unlike a normal `array`, an `ArrayList` can grow in size as you add more items to it. The example below illustrates some of the useful methods of the `ArrayList` class using an `ArrayList` of `String` objects.
 
 ```java
 import java.util.ArrayList;

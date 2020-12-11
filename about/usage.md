@@ -161,7 +161,7 @@ Follow [this guide @SE-EDU/guides](https://se-education.org/guides/tutorials/sav
   
 ### Printing
 
-The {{icon_print}} icon indicates printer-friendly versions of each chapter. A printer-friendly version of the entire book can be found [here]({{baseUrl}}/common/print.html)
+The {{icon_print}} icon indicates printer-friendly versions of each chapter. A printer-friendly version of the entire book can be found [here]({{baseUrl}}/common/print.html).
 
 </div>
 

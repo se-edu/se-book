@@ -15,7 +15,7 @@ Which of these activity diagrams use the correct UML notation?
 <div slot="answer">
 
 * i: :+1: Correct. The arrow-head type does not matter. 
-* ii: Incorrect. The start and end node notation is swapped.
+* ii: Incorrect. The start and end node notations are swapped.
 * iii: Incorrect. Action boxes should have rounded corners.
 * iv: :+1: Correct. An activity can have only one action.
 * v: Incorrect. There cannot be any double-headed arrows.
