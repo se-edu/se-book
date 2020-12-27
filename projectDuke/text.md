@@ -34,16 +34,16 @@ Here is a sample interaction with Duke:
 list
     ____________________________________________________________
      Here are the tasks in your list:
-     1.[T][✓] read book
-     2.[D][✗] return book (by: June 6th)
-     3.[E][✗] project meeting (at: Aug 6th 2-4pm)
-     4.[T][✓] join sports club
+     1.[T][X] read book
+     2.[D][ ] return book (by: June 6th)
+     3.[E][ ] project meeting (at: Aug 6th 2-4pm)
+     4.[T][X] join sports club
     ____________________________________________________________
 
 todo borrow book
     ____________________________________________________________
      Got it. I've added this task: 
-       [T][✗] borrow book
+       [T][ ] borrow book
      Now you have 5 tasks in the list.
     ____________________________________________________________
 
@@ -51,14 +51,14 @@ todo borrow book
 deadline return book /by Sunday
     ____________________________________________________________
      Got it. I've added this task: 
-       [D][✗] return book (by: Sunday)
+       [D][ ] return book (by: Sunday)
      Now you have 6 tasks in the list.
     ____________________________________________________________
 
 done 2
     ____________________________________________________________
      Nice! I've marked this task as done: 
-       [D][✓] return book (by: June 6th)
+       [D][X] return book (by: June 6th)
     ____________________________________________________________
 
 blah
@@ -195,15 +195,15 @@ Add the ability to mark tasks as _done_.<br><br>
 list
     ____________________________________________________________
      Here are the tasks in your list:
-     1.[✓] read book
-     2.[✗] return book
-     3.[✗] buy bread
+     1.[X] read book
+     2.[ ] return book
+     3.[ ] buy bread
     ____________________________________________________________
 
 done 2
     ____________________________________________________________
      Nice! I've marked this task as done: 
-       [✓] return book
+       [X] return book
     ____________________________________________________________
 ```
 
@@ -229,31 +229,31 @@ Example:
 todo borrow book
     ____________________________________________________________
      Got it. I've added this task: 
-       [T][✗] borrow book
+       [T][ ] borrow book
      Now you have 5 tasks in the list.
     ____________________________________________________________
 
 list
     ____________________________________________________________
      Here are the tasks in your list:
-     1.[T][✓] read book
-     2.[D][✗] return book (by: June 6th)
-     3.[E][✗] project meeting (at: Aug 6th 2-4pm)
-     4.[T][✓] join sports club
-     5.[T][✗] borrow book
+     1.[T][X] read book
+     2.[D][ ] return book (by: June 6th)
+     3.[E][ ] project meeting (at: Aug 6th 2-4pm)
+     4.[T][X] join sports club
+     5.[T][ ] borrow book
     ____________________________________________________________
 
 deadline return book /by Sunday
     ____________________________________________________________
      Got it. I've added this task: 
-       [D][✗] return book (by: Sunday)
+       [D][ ] return book (by: Sunday)
      Now you have 6 tasks in the list.
     ____________________________________________________________
 
 event project meeting /at Mon 2-4pm
     ____________________________________________________________
      Got it. I've added this task: 
-       [E][✗] project meeting (at: Mon 2-4pm)
+       [E][ ] project meeting (at: Mon 2-4pm)
      Now you have 7 tasks in the list.
     ____________________________________________________________
 ```
@@ -266,7 +266,7 @@ Example:
 deadline do homework /by no idea :-p
     ____________________________________________________________
      Got it. I've added this task: 
-       [D][✗] do homework (by: no idea :-p)
+       [D][ ] do homework (by: no idea :-p)
      Now you have 6 tasks in the list.
     ____________________________________________________________
 ```
@@ -317,17 +317,17 @@ Example:
 list
     ____________________________________________________________
      Here are the tasks in your list:
-     1.[T][✓] read book
-     2.[D][✓] return book (by: June 6th)
-     3.[E][✗] project meeting (at: Aug 6th 2-4pm)
-     4.[T][✓] join sports club
-     5.[T][✗] borrow book
+     1.[T][X] read book
+     2.[D][X] return book (by: June 6th)
+     3.[E][ ] project meeting (at: Aug 6th 2-4pm)
+     4.[T][X] join sports club
+     5.[T][ ] borrow book
     ____________________________________________________________
 
 delete 3
     ____________________________________________________________
      Noted. I've removed this task: 
-       [E][✗] project meeting (at: Aug 6th 2-4pm)
+       [E][ ] project meeting (at: Aug 6th 2-4pm)
      Now you have 4 tasks in the list.
     ____________________________________________________________
 ```
@@ -420,8 +420,8 @@ Example:
 find book
     ____________________________________________________________
      Here are the matching tasks in your list:
-     1.[T][✓] read book
-     2.[D][✓] return book (by: June 6th)
+     1.[T][X] read book
+     2.[D][X] return book (by: June 6th)
     ____________________________________________________________
 ```
 
