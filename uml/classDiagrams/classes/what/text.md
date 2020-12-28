@@ -166,6 +166,16 @@ class Table:
 
 </box>
 
+
+<div class="alt-java">
+
+
+**Generic classes can be shown as given below**. The notation format is shown on the left, followed by two examples.
+
+<img src="images/generic.png" width="618"/>
+<p/>
+</div>
+
 </div>
 
 <div id="extras">
