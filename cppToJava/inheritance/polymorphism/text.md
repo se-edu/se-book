@@ -34,8 +34,10 @@ Snowball: Meow
 
 ```java
 public class Cat {
+    private String name;
+
     public Cat(String name) {
-        super(name);
+        this.name = name;
     }
 
     public String speak() {
@@ -81,8 +83,10 @@ Spot: Woof
 
 ```java
 public class Dog {
+    private String name;
+
     public Dog(String name) {
-        super(name);
+        this.name = name;
     }
 
     public String speak() {
