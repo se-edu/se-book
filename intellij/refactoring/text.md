@@ -8,13 +8,13 @@
 
 <div v-closeable alt="Videos: Automated refactoring using IDE">
 
-This video explains how to automate the 'Extract parameter' refactoring using IntelliJ IDEA. Most other refactorings available work similarly. i.e. `select the code to refactor` → `find the refactoring in the context menu` or `use the keyboard shortcut`.
+This video explains how to automate the 'Extract variable' refactoring using IntelliJ IDEA. Most other refactorings available work similarly. i.e. `select the code to refactor` → `find the refactoring in the context menu` or `use the keyboard shortcut`.
 
-@[youtube](fg3Q5pt4E80)
+@[youtube](W_IiuORF16E)
 
-Here's another video explaining how to change a method signature as part of refactoring.
+Here's another video explaining how to do some more useful refactorings in Intellij IDEA.
 
-@[youtube](p6Tsw_3cXow)
+@[youtube](rPq7fBo5JVs)
 
 </div><p/>
 
