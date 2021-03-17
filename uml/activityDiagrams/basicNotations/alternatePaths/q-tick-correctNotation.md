@@ -21,7 +21,7 @@ Which of these activity diagrams use the correct UML notation?
 * iii: :+1: Correct. A branch can join other branches.
 * iv: Incorrect. At `x = 5` both guard conditions become true.
 * v: :+1: Correct. It is fine for a branch to form a loop by going back to the original branch node.
-* iv: Incorrect. Guard conditions should be given in square brackets.
+* vi: Incorrect. Guard conditions should be given in square brackets.
 
 </div>
 </question>
