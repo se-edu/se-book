@@ -56,7 +56,7 @@ class Logic:
 
 </box>
 
-**Bi-directional associations require matching variables in both classes.**
+**Bidirectional associations require matching variables in both classes.**
 
 <box>
 

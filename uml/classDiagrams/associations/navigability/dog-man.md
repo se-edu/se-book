@@ -1,28 +1,32 @@
 <div class="alt-java">
 
 ```java
-class Logic {
-    Minefield minefield;
+class Dog {
+    Man man;
     // ...
 }
 
-class Minefield {
-    //...
+class Man {
+    Dog dog;
+    // ...
 }
 ```
 </div>
 <div class="alt-python">
 
 ```python
-class Logic:
+class Dog:
   
   def __init__(self):
-    self.minefield = None
+    self.man = None
     
   # ...
 
 
-class Minefield:
+class Man:
+  def __init__(self):
+    self.dog = None
+
   # ...
 ```
 </div>
