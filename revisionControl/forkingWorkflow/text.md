@@ -23,6 +23,9 @@ To illustrate how the workflow goes, let’s assume Jean wants to fix a bug in t
 7. Other members, realizing there is new code in the upstream repo, sync their forks with the new upstream repo (i.e. the main repo). This is done by pulling the new code to their own local repo and pushing the updated code to their own fork.<br>
    {{ icon_important_big_red }} Possible mistake: Creating another 'reverse' PR from the team repo to the team member's fork to sync the member's fork with the merged code. PRs are meant to go from downstream repos to upstream repos, not in the other direction.
 
+One main benefit of this workflow is that it does not require most contributors to have write permissions to the main repository. Only those who are merging PRs need write permissions.
+The main drawback of this workflow is the extra overhead of sending everything through forks.
+
 </div>
 
 <div id="extras">
