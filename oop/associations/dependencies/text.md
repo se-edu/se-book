@@ -6,15 +6,13 @@
 
 <div id="body">
 
-In the context of OOP associations, **a _dependency_ is a need for one class to depend on another without having a direct association with it.** One cause of dependencies is interactions between objects that do not have a long-term link between them.
+In the context of OOP associations, **a _dependency_ is a need for one class to depend on another without having a direct association in the same direction.** Reason for the exclusion: If there is an association from class `Foo` to class `Bar` (i.e., navigable from `Foo` to `Bar`), that means `Foo` is _obviously_ dependent on `Bar` and hence there is no point in mentioning _dependency_ specifically. In other words, we are only concerned about _non-obvious_ dependencies here. One cause of such dependencies is interactions between objects that do not have a long-term link between them.
 
 <box>
 
-{{ icon_example }} A `Course` object can have a dependency on a `Registrar` object to obtain the maximum number of students it can support. 
+{{ icon_example }} A `Course` class can have a dependency on a `Registrar` class because the `Course` class needs to refer to the `Registrar` class to obtain the the maximum number of students it can support (e.g., `Registrar.MAX_COURSE_CAPACITY`).
 
 </box>
-
-##### Implementing dependencies
 
 <box>
 
