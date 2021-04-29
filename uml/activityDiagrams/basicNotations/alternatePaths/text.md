@@ -6,7 +6,7 @@
 
 <div id="body">
 
-**A _branch node_ shows the start of alternate paths.** Each control flow exiting a branch node has a _guard condition_: a boolean condition that should be true for execution to take that path. **_Exactly one_ of the guard conditions should be true** an any.
+**A _branch node_ shows the start of alternate paths.** Each control flow exiting a branch node has a _guard condition_: a boolean condition that should be true for execution to take that path. **_Exactly one_ of the guard conditions should be true** at any given branch node.
  
 **A _merge node_ shows the end of alternate paths.** 
 
