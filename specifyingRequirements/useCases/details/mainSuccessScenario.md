@@ -4,13 +4,13 @@
 
 <box>
 
-{{ icon_example }} Note how the MSS in the example below assumes that all entered details are correct and ignores problems such as timeouts, network outages etc. %%For example, MSS does not tell us what happens if the user enters an incorrect data.%%
+{{ icon_example }} Note how the MSS in the example below assumes that all entered details are correct and ignores problems such as timeouts, network outages etc. %%For example, the MSS does not tell us what happens if the user enters incorrect data.%%
 
 <div class="text-monospace">
 
 System: Online Banking System (OBS)<br>
 Use case: UC23 - Transfer Money<br>
-Actor: User
+Actor: User<br>
 MSS:
 1. User chooses to transfer money.
 1. OBS requests for details of the transfer.

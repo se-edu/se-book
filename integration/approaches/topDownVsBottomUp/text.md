@@ -11,7 +11,7 @@
 
 **Based on the order in which components are integrated, incremental integration can be done in three ways.**
 
-**_Top-down_ integration: higher-level components are integrated before bringing in the lower-level components.** One advantage of this approach is that higher-level problems can be discovered early. One disadvantage is that this requires the use of <trigger for="pop:topdown-stub">stubs</trigger> in place of lower level components until the real lower-level components are integrated to the system. Otherwise, higher-level components cannot function as they depend on lower level ones.
+**_Top-down_ integration: higher-level components are integrated before bringing in the lower-level components.** One advantage of this approach is that higher-level problems can be discovered early. One disadvantage is that this requires the use of <trigger for="pop:topdown-stub">stubs</trigger> in place of lower level components until the real lower-level components are integrated into the system. Otherwise, higher-level components cannot function as they depend on lower level ones.
 
 <popover id="pop:topdown-stub" header="{{icon_preview}}" placement="top">
   <div slot="content">
@@ -19,9 +19,9 @@
   </div>
 </popover>
 
-**_Bottom-up_ integration: the reverse of top-down integration.** Note that when integrating lower level components, <tooltip content="additional code written to provide inputs to a component via an API">drivers</tooltip> may be needed to test the integrated components %%because the UI may not be integrated yet%%, just like top-down integration needs stubs.
+**_Bottom-up_ integration: the reverse of top-down integration.** Note that when integrating lower level components, <tooltip content="additional code written to provide inputs to a component via an API">drivers</tooltip> may be needed to test the integrated components %%because the UI may not be integrated yet%%, just like how top-down integration needs stubs.
 
-**_Sandwich_ integration: a mix of the top-down and the bottom-up approaches.** The idea is to do both top-down and bottom-up so as to 'meet' in the middle.
+**_Sandwich_ integration: a mix of the top-down and bottom-up approaches.** The idea is to do both top-down and bottom-up so as to 'meet' in the middle.
 
 <div v-closeable alt="slideshow: comparison">
 

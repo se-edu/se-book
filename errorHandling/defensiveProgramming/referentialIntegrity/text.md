@@ -2,7 +2,7 @@
 
 <span id="prereqs"><panel src="../what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Implementation → Error Handling → Defensive Programming → What%%" popup-url="{{ baseUrl }}/errorHandling/defensiveProgramming/what" /></span>
 
-<span id="outcomes">{{ icon_outcome }} Can use defensive coding to enforce referential integrity of bi-directional associations</span>
+<span id="outcomes">{{ icon_outcome }} Can use defensive coding to enforce referential integrity of bidirectional associations</span>
 
 <div id="body">
 
@@ -42,16 +42,17 @@ Man james;
 james.setGirlfriend(jean);
 jean.setBoyfriend(james);
 ```
-Suppose the two classes were used this instead: 
+Suppose the two classes were used like this instead:
 
 ```java
-Woman jean; Man james, yong;
+Woman jean;
+Man james, yong;
 …
 james.setGirlfriend(jean);  
 jean.setBoyfriend(yong);  
 ```
 
-Now James' girlfriend is Jean, while Jean's boyfriend is not James. This situation results as the code was not defensive enough to stop this "love triangle". In such a situation, you should say that _the referential integrity has been violated_. It simply means _there is an inconsistency in object references_.
+Now James' girlfriend is Jean, while Jean's boyfriend is not James. This situation is a result of the code not being defensive enough to stop this "love triangle". In such a situation, you could say that _the referential integrity has been violated_. This means that _there is an inconsistency in object references_.
 
 <img src="{{baseUrl}}/errorHandling/defensiveProgramming/referentialIntegrity/images/woman.png" height="50" />
 <p/>
@@ -63,7 +64,7 @@ public class Woman {
     private Man boyfriend;
 
     public void setBoyfriend(Man m) {
-        if(boyfriend == m){
+        if (boyfriend == m) {
             return;
         }
         if (boyfriend != null) {
@@ -81,11 +82,11 @@ public class Woman {
 ```
 
 ```java
-public class Man{
+public class Man {
     private Woman girlfriend;
 
     public void setGirlfriend(Woman w) {
-        if(girlfriend == w){
+        if (girlfriend == w) {
             return;
         }
         if (girlfriend != null) {
@@ -101,7 +102,7 @@ public class Man{
 }
 ```
 
-When the code `james.setGirlfriend(jean)` is executed, the code ensures that `james` break up with any current girlfriend before he accepts `jean` as the girlfriend. Furthermore, the code ensures that `jean` breaks up with any existing boyfriends and accepts `james` as the boyfriend.
+When `james.setGirlfriend(jean)` is executed, the code ensures that `james` breaks up with any current girlfriend before he accepts `jean` as his girlfriend. Furthermore, the code ensures that `jean` breaks up with any existing boyfriends before accepting `james` as her boyfriend.
 
 </div>
 

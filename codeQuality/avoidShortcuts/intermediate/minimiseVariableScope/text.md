@@ -2,7 +2,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{ icon_outcome }} Can improve code quality using technique: minimise scope of variables </span>
+<span id="outcomes">{{ icon_outcome }} Can improve code quality using technique: minimize scope of variables </span>
 
 <div id="body">
 

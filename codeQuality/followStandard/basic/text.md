@@ -17,8 +17,8 @@ Sample coding standard: [PEP 8 **Python** Style Guide -- by Python.org](https://
 
 </div>
 
-<div class="alt-java">
 <div id="extras">
+<div class="alt-java">
   <include src="exercisesPanel.md" boilerplate />
 </div>
 </div>

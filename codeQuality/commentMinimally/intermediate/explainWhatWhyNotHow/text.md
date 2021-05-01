@@ -6,23 +6,23 @@
 
 <div id="body">
 
-Comments should explain _what_ and _why_ aspect of the code, rather than the _how_ aspect. 
+Comments should explain the _what_ and _why_ aspects of the code, rather than the _how_ aspect.
 
-{{ icon_tick_green }} **What** : The specification of what the code _supposed_ to do. The reader can compare such comments to the implementation to verify if the implementation is correct
+{{ icon_tick_green }} **What**: The specification of what the code is _supposed_ to do. The reader can compare such comments to the implementation to verify if the implementation is correct.
 
 <box>
 
-{{ icon_example }} Example: This method is possibly buggy because the implementation does not seem to match the comment. In this case the comment could help the reader to detect the bug.
+{{ icon_example }} Example: This method is possibly buggy because the implementation does not seem to match the comment. In this case, the comment could help the reader to detect the bug.
 
 ```java
 /** Removes all spaces from the {@code input} */
-void compact(String input){
+void compact(String input) {
     input.trim();
 }
 ```
 </box>
 
-{{ icon_tick_green }} **Why** : The rationale for the current implementation.
+{{ icon_tick_green }} **Why**: The rationale for the current implementation.
 
 <box>
 
@@ -35,7 +35,7 @@ compact(input);
 
 </box>
 
-{{ icon_x_red }} **How** : The explanation for how the code works. This should already be apparent from the code, if the code is self-explanatory. Adding comments to explain the same thing is redundant.
+{{ icon_x_red }} **How**: The explanation for how the code works. This should already be apparent from the code, if the code is self-explanatory. Adding comments to explain the same thing is redundant.
 
 <box>
 
@@ -49,8 +49,7 @@ return (left && right) || (input.size() == size);
 
 {{good}} %%Reason: Code refactored to be self-explanatory. Comment no longer needed.%%
 ```java
-
-boolean isSameSize = (input.size() == size) ;
+boolean isSameSize = (input.size() == size);
 return (isLeftEndCorrect && isRightEndCorrect) || isSameSize;
 ```
 

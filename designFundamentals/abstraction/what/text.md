@@ -10,7 +10,7 @@
 <include src="../../../common/definitions.md#def-abstraction" />
 </box>
 
-**The guiding principle of abstraction is that only details that are relevant to the current perspective or the task at hand needs to be considered.** As most programs are written to solve complex problems involving large amounts of intricate details, it is impossible to deal with all these details at the same time. That is where abstraction can help.
+**The guiding principle of abstraction is that only details that are relevant to the current perspective or the task at hand need to be considered.** As most programs are written to solve complex problems involving large amounts of intricate details, it is impossible to deal with all these details at the same time. That is where abstraction can help.
 
 **==_Data abstraction_==: abstracting away the lower level data items and thinking in terms of bigger entities**
 
@@ -28,13 +28,13 @@
 
 </box>
 
-**Abstraction can be applied repeatedly to obtain progressively _higher levels of abstractions_.** 
+**Abstraction can be applied repeatedly to obtain progressively _higher levels of abstraction_.**
 
 <box>
 
 {{ icon_example }} An example of different levels of data abstraction: a `File` is a data item that is at a higher level than an array and an array is at a higher level than a bit. 
 
-{{ icon_example }} An example of different levels of control abstraction: `execute(Game)` is at a higher level than `print(Char)` which is at a higher than an Assembly language instruction `MOV`.
+{{ icon_example }} An example of different levels of control abstraction: `execute(Game)` is at a higher level than `print(Char)` which is at a higher level than an Assembly language instruction `MOV`.
 
 </box>
 

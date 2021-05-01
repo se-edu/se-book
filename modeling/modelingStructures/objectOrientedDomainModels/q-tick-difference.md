@@ -1,7 +1,7 @@
-<panel header="{{ icon_Q_A }} Difference between a class diagram and and an OO domain model?">
+<panel header="{{ icon_Q_A }} Difference between a class diagram and an OO domain model?">
 <question>
 
-What is the main difference between a class diagram and and an OO domain model?
+What is the main difference between a class diagram and an OO domain model?
 
 - ( ) a. One is about the problem domain while the other is about the solution domain.
 - ( ) b. One has more classes than the other.

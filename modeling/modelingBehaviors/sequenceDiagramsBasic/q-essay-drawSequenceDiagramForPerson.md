@@ -6,11 +6,11 @@ Consider the code below:
   <div class="col-sm-7">
 
 ```java
-class Person{
+class Person {
     Tag tag;
     String name;
 
-    Person(String personName, String tagName){
+    Person(String personName, String tagName) {
         name = personName;
         tag = new Tag(tagName);
     }
@@ -20,15 +20,15 @@ class Person{
   <div class="col-sm-5">
 
 ```java
-class Tag{
-    Tag(String value){
-        //...
+class Tag {
+    Tag(String value) {
+        // ...
     }
 }
 
-class PersonList{
-    void addPerson(Person p){
-        //...
+class PersonList {
+    void addPerson(Person p) {
+        // ...
     }
 }
 ```
@@ -38,7 +38,7 @@ class PersonList{
 Draw a sequence diagram to illustrate the object interactions that happen in the code snippet below:
 ```java
 PersonList personList = new PersonList();
-while (hasRoom){
+while (hasRoom) {
     Person p = new Person("Adam", "friend");
     personList.addPerson(p);
 }

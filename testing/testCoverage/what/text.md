@@ -11,7 +11,7 @@
 Here are some examples of different coverage criteria:
 
 * **Function/method coverage** : based on functions executed %%e.g., testing executed 90 out of 100 functions%%.
-* **Statement coverage** : based on the number of line of code executed %%e.g., testing executed 23k out of 25k LOC%%.
+* **Statement coverage** : based on the number of lines of code executed %%e.g., testing executed 23k out of 25k LOC%%.
 * **Decision/branch coverage** : based on the decision points exercised %%e.g., an `if` statement evaluated to both `true` and `false` with separate test cases during testing is considered 'covered'%%.
 * **Condition coverage** : based on the boolean sub-expressions, each evaluated to both true and false with different test cases. Condition coverage is not the same as the decision coverage.
  
@@ -24,7 +24,7 @@ For 100% branch or decision coverage, two test cases are required:
   * `(x > 2 && x < 44) == true` :  [e.g. `x == 4`]
   * `(x > 2 && x < 44) == false` :  [e.g. `x == 100`]
 
-For 100% condition coverage, three test cases are required
+For 100% condition coverage, three test cases are required:
 
   * `(x > 2) == true` , `(x < 44) == true` : [e.g. `x == 4`]
   * `(x < 44) == false` : [e.g. `x == 100`]

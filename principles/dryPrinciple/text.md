@@ -12,13 +12,13 @@
 
 </box>
 
-This principle guards against duplication of information. 
+This principle guards against the duplication of information. 
 
 <box>
 
-{{ icon_example }} The functionality implemented twice is a violation of the DRY principle even if the two implementations are different.
+{{ icon_example }} A functionality being implemented twice is a violation of the DRY principle even if the two implementations are different.
 
-{{ icon_example }} The value a system-wide timeout being defined in multiple places is a violation of DRY.
+{{ icon_example }} The value of a system-wide timeout being defined in multiple places is a violation of DRY.
 
 </box>
 

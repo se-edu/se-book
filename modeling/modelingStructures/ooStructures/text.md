@@ -2,7 +2,7 @@
 
 <span id="prereqs"><panel src="../../../oop/classes/what/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Design → OOP → Classes → Basic%%" popup-url="{{ baseUrl }}/oop/classes/what" /></span>
 
-<span id="outcomes">{{ icon_outcome }} Can explain structure modelling of OO solutions</span>
+<span id="outcomes">{{ icon_outcome }} Can explain structure modeling of OO solutions</span>
 
 <div id="body">
 

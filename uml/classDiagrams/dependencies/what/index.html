@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.16.0">
+  <meta name="generator" content="MarkBind 2.17.3">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - UML: Class Diagrams: Dependencies: What</title>
   <link rel="stylesheet" href="../../../../markbind/css/bootstrap.min.css">
@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="../../../../markbind/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="../../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
   <link rel="stylesheet" href="../../../../markbind/css/octicons.css">
-  <link rel="stylesheet" href="../../../../markbind/css/github.min.css">
+  <link rel="stylesheet" href="../../../../markbind/css/codeblock-dark.min.css">
   <link rel="stylesheet" href="../../../../markbind/css/markbind.min.css">
   <script src="../../../../markbind/js/polyfill.min.js"></script>
   <script src="../../../../markbind/js/vue.min.js"></script>
@@ -199,7 +199,7 @@
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/uml/index.html">UML</a></div>
                 </li>
                 <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/intellij/index.html">Intellij IDEA</a></div>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/intellij/index.html">IntelliJ IDEA</a></div>
                 </li>
                 <li>
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/gitAndGithub/index.html">Git and GitHub</a></div>
@@ -237,8 +237,9 @@
         </div>
       </nav>
 
+
       <div id="content-wrapper">
-        <h1 id="software-engineering-for-self-directed-learners"><span class="text-dark"><small><strong><strong>Software Engineering for Self-Directed Learners »</strong></strong></small></span><a class="fa fa-anchor" href="#software-engineering-for-self-directed-learners" onclick="event.stopPropagation()"></a></h1>
+        <h1 id="software-engineering-for-self-directed-learners"><span id="software-engineering-for-self-directed-learners" class="anchor"></span><span class="text-dark"><small><strong><strong>Software Engineering for Self-Directed Learners »</strong></strong></small></span><a class="fa fa-anchor" href="#software-engineering-for-self-directed-learners" onclick="event.stopPropagation()"></a></h1>
         <div>
           <link rel="stylesheet" href="/se-book/css/textbook.css">
           <div class="website-content">
@@ -253,7 +254,7 @@
                     </span></strong></span></p>
               <div id="title-and-body">
                 <div>
-                  <h4 id="dependencies"><span>Dependencies</span><a class="fa fa-anchor" href="#dependencies" onclick="event.stopPropagation()"></a></h4>
+                  <h4 id="dependencies"><span id="dependencies" class="anchor"></span><span>Dependencies</span><a class="fa fa-anchor" href="#dependencies" onclick="event.stopPropagation()"></a></h4>
                 </div>
                 <div id="main">
                   <div>
@@ -264,6 +265,12 @@
                       <img src="/se-book/uml/classDiagrams/dependencies/what/images/examples.png" width="450">
                       <p></p>
                     </box>
+                    <p><strong>Dependencies vs associations:</strong></p>
+                    <ul>
+                      <li>An association is a relationship resulting from one object keeping a reference to another object (i.e., storing an object in an instance variable). While such a relationship forms a <em>dependency</em>, we need not show that as a dependency arrow in the class diagram if the association is already indicated in the diagram. That is, showing a dependency arrow does not add any value to the diagram.<br>
+                        Similarly, an inheritance results in a dependency from the child class to the parent class but we don't show it as a dependency arrow either, for the same reason as above.</li>
+                      <li><strong>Use a dependency arrow to indicate a dependency only if that dependency is not already captured by the diagram in another way</strong> (for instance, as an association or an inheritance) e.g., class <code class="hljs inline no-lang" v-pre>Foo</code> accessing a constant in <code class="hljs inline no-lang" v-pre>Bar</code> but there is no association/inheritance from <code class="hljs inline no-lang" v-pre>Foo</code> to <code class="hljs inline no-lang" v-pre>Bar</code>.</li>
+                    </ul>
                   </div>
                   <div></div>
                 </div>
@@ -273,13 +280,11 @@
         </div>
         <i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i>
       </div>
-
-
     </div>
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.16.0</a>, generated on Thu, Oct 29, 2020, 4:09:50 PM GMT+8]</small>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.3</a>, generated on Sat, 1 May 2021, 12:33:13 GMT+8]</small>
       </div>
     </footer>
   </div>
@@ -300,7 +305,7 @@
       debug: false,
     });
   }
-  MarkBind.afterSetup(initAlgolia);
+  initAlgolia();
 </script>
 <script src="../../../../markbind/layouts/default/scripts.js"></script>
 <script>

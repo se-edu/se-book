@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.16.0">
+  <meta name="generator" content="MarkBind 2.17.3">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - Object Oriented Programming: Polymorphism</title>
   <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
   <link rel="stylesheet" href="../../markbind/css/octicons.css">
-  <link rel="stylesheet" href="../../markbind/css/github.min.css">
+  <link rel="stylesheet" href="../../markbind/css/codeblock-dark.min.css">
   <link rel="stylesheet" href="../../markbind/css/markbind.min.css">
   <script src="../../markbind/js/polyfill.min.js"></script>
   <script src="../../markbind/js/vue.min.js"></script>
@@ -199,7 +199,7 @@
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/uml/index.html">UML</a></div>
                 </li>
                 <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/intellij/index.html">Intellij IDEA</a></div>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/intellij/index.html">IntelliJ IDEA</a></div>
                 </li>
                 <li>
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/gitAndGithub/index.html">Git and GitHub</a></div>
@@ -237,15 +237,16 @@
         </div>
       </nav>
 
+
       <div id="content-wrapper">
-        <h1 id="software-engineering-for-self-directed-learners"><span class="text-dark"><small><strong><strong>Software Engineering for Self-Directed Learners »</strong></strong></small></span><a class="fa fa-anchor" href="#software-engineering-for-self-directed-learners" onclick="event.stopPropagation()"></a></h1>
+        <h1 id="software-engineering-for-self-directed-learners"><span id="software-engineering-for-self-directed-learners" class="anchor"></span><span class="text-dark"><small><strong><strong>Software Engineering for Self-Directed Learners »</strong></strong></small></span><a class="fa fa-anchor" href="#software-engineering-for-self-directed-learners" onclick="event.stopPropagation()"></a></h1>
         <div>
           <link rel="stylesheet" href="/se-book/css/textbook.css">
           <div class="website-content" id="all">
             <p><span class="dimmed"><strong><span>Paradigms → OOP →
                   </span></strong></span></p>
             <div id="title">
-              <h1 id="polymorphism"><span>Polymorphism</span><a class="fa fa-anchor" href="#polymorphism" onclick="event.stopPropagation()"></a></h1>
+              <h1 id="polymorphism"><span id="polymorphism" class="anchor"></span><span>Polymorphism</span><a class="fa fa-anchor" href="#polymorphism" onclick="event.stopPropagation()"></a></h1>
             </div>
             <div id="main">
               <div>
@@ -253,7 +254,7 @@
                   <panel type="seamless" expanded id="what">
                     <span slot="header" class="card-title">
                       <div>
-                        <h4 id="what"><span>What</span><a class="fa fa-anchor" href="#what" onclick="event.stopPropagation()"></a></h4>
+                        <h4 id="what"><span id="what" class="anchor"></span><span>What</span><a class="fa fa-anchor" href="#what" onclick="event.stopPropagation()"></a></h4>
                       </div>
                     </span>
                     <div class="indented">
@@ -272,11 +273,11 @@
                         </box>
                         <p><strong><em>Polymorphism</em> allows you to write code targeting superclass objects, use that code on subclass objects, and achieve possibly different results based on the actual class of the object.</strong></p>
                         <box>
-                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Assume classes <code v-pre>Cat</code> and <code v-pre>Dog</code> are both subclasses of the <code v-pre>Animal</code> class. You can write code targeting <code v-pre>Animal</code> objects and use that code on <code v-pre>Cat</code> and <code v-pre>Dog</code> objects, achieving possibly different results based on whether it is a <code v-pre>Cat</code> object or a <code v-pre>Dog</code> object. Some examples:</p>
+                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Assume classes <code class="hljs inline no-lang" v-pre>Cat</code> and <code class="hljs inline no-lang" v-pre>Dog</code> are both subclasses of the <code class="hljs inline no-lang" v-pre>Animal</code> class. You can write code targeting <code class="hljs inline no-lang" v-pre>Animal</code> objects and use that code on <code class="hljs inline no-lang" v-pre>Cat</code> and <code class="hljs inline no-lang" v-pre>Dog</code> objects, achieving possibly different results based on whether it is a <code class="hljs inline no-lang" v-pre>Cat</code> object or a <code class="hljs inline no-lang" v-pre>Dog</code> object. Some examples:</p>
                           <ul>
-                            <li>Declare an array of type <code v-pre>Animal</code> and still be able to store <code v-pre>Dog</code> and <code v-pre>Cat</code> objects in it.</li>
-                            <li>Define a method that takes an <code v-pre>Animal</code> object as a parameter and yet be able to pass <code v-pre>Dog</code> and <code v-pre>Cat</code> objects to it.</li>
-                            <li>Call a method on a <code v-pre>Dog</code> or a <code v-pre>Cat</code> object as if it is an <code v-pre>Animal</code> object <span class="dimmed">(i.e., without knowing whether it is a <code v-pre>Dog</code> object or a <code v-pre>Cat</code> object)</span> and get a different response from it based on its actual class <span class="dimmed">e.g., call the <code v-pre>Animal</code> class' method <code v-pre>speak()</code> on object <code v-pre>a</code> and get a <code v-pre>&quot;Meow&quot;</code> as the return value if <code v-pre>a</code> is a <code v-pre>Cat</code> object and <code v-pre>&quot;Woof&quot;</code> if it is a <code v-pre>Dog</code> object</span>.
+                            <li>Declare an array of type <code class="hljs inline no-lang" v-pre>Animal</code> and still be able to store <code class="hljs inline no-lang" v-pre>Dog</code> and <code class="hljs inline no-lang" v-pre>Cat</code> objects in it.</li>
+                            <li>Define a method that takes an <code class="hljs inline no-lang" v-pre>Animal</code> object as a parameter and yet be able to pass <code class="hljs inline no-lang" v-pre>Dog</code> and <code class="hljs inline no-lang" v-pre>Cat</code> objects to it.</li>
+                            <li>Call a method on a <code class="hljs inline no-lang" v-pre>Dog</code> or a <code class="hljs inline no-lang" v-pre>Cat</code> object as if it is an <code class="hljs inline no-lang" v-pre>Animal</code> object <span class="dimmed">(i.e., without knowing whether it is a <code class="hljs inline no-lang" v-pre>Dog</code> object or a <code class="hljs inline no-lang" v-pre>Cat</code> object)</span> and get a different response from it based on its actual class <span class="dimmed">e.g., call the <code class="hljs inline no-lang" v-pre>Animal</code> class's method <code class="hljs inline no-lang" v-pre>speak()</code> on object <code class="hljs inline no-lang" v-pre>a</code> and get a <code class="hljs inline no-lang" v-pre>&quot;Meow&quot;</code> as the return value if <code class="hljs inline no-lang" v-pre>a</code> is a <code class="hljs inline no-lang" v-pre>Cat</code> object and <code class="hljs inline no-lang" v-pre>&quot;Woof&quot;</code> if it is a <code class="hljs inline no-lang" v-pre>Dog</code> object</span>.
                             </li>
                           </ul>
                         </box>
@@ -291,7 +292,7 @@
                   <panel type="seamless" expanded id="how">
                     <span slot="header" class="card-title">
                       <div>
-                        <h4 id="how"><span>How</span><a class="fa fa-anchor" href="#how" onclick="event.stopPropagation()"></a></h4>
+                        <h4 id="how"><span id="how" class="anchor"></span><span>How</span><a class="fa fa-anchor" href="#how" onclick="event.stopPropagation()"></a></h4>
                       </div>
                     </span>
                     <div class="indented">
@@ -302,18 +303,18 @@
                       <div>
                         <p><strong>Three concepts combine to achieve polymorphism: <em>substitutability, operation overriding, and dynamic binding</em>.</strong></p>
                         <ul>
-                          <li><strong>Substitutability:</strong> Because of substitutability, you can write code that expects object of a parent class and yet use that code with objects of child classes. That is how polymorphism is able to <em>treat objects of different types as one type</em>.</li>
+                          <li><strong>Substitutability:</strong> Because of substitutability, you can write code that expects objects of a parent class and yet use that code with objects of child classes. That is how polymorphism is able to <em>treat objects of different types as one type</em>.</li>
                           <li><strong>Overriding:</strong> To get polymorphic behavior from an operation, the operation in the superclass needs to be overridden in each of the subclasses. That is how overriding allows objects of different subclasses to <em>display different behaviors in response to the same method call</em>.</li>
                           <li><strong>Dynamic binding</strong>: Calls to overridden methods are bound to the implementation of the actual object's class dynamically during the runtime. That is how the polymorphic code can call the method of the parent class and yet execute the implementation of the child class.</li>
                         </ul>
                       </div>
                       <div>
                         <div>
-                          <panel expandable class="algolia-no-index"><template slot="_header">
+                          <panel expandable class="algolia-no-index"><template slot="header">
                               <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                             </template>
                             <div>
-                              <panel class="algolia-no-index"><template slot="_header">
+                              <panel class="algolia-no-index"><template slot="header">
                                   <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Concepts related to polymorphism</p>
                                 </template>
                                 <question>
@@ -342,13 +343,11 @@
         </div>
         <i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i>
       </div>
-
-
     </div>
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.16.0</a>, generated on Thu, Oct 29, 2020, 4:09:50 PM GMT+8]</small>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.3</a>, generated on Sat, 1 May 2021, 12:33:13 GMT+8]</small>
       </div>
     </footer>
   </div>
@@ -369,7 +368,7 @@
       debug: false,
     });
   }
-  MarkBind.afterSetup(initAlgolia);
+  initAlgolia();
 </script>
 <script src="../../markbind/layouts/default/scripts.js"></script>
 <script>

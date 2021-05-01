@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.16.0">
+  <meta name="generator" content="MarkBind 2.17.3">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - Test Case Design: Combining Test Inputs: Test Input Combination Strategies</title>
   <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="../../../markbind/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
   <link rel="stylesheet" href="../../../markbind/css/octicons.css">
-  <link rel="stylesheet" href="../../../markbind/css/github.min.css">
+  <link rel="stylesheet" href="../../../markbind/css/codeblock-dark.min.css">
   <link rel="stylesheet" href="../../../markbind/css/markbind.min.css">
   <script src="../../../markbind/js/polyfill.min.js"></script>
   <script src="../../../markbind/js/vue.min.js"></script>
@@ -199,7 +199,7 @@
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/uml/index.html">UML</a></div>
                 </li>
                 <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/intellij/index.html">Intellij IDEA</a></div>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/intellij/index.html">IntelliJ IDEA</a></div>
                 </li>
                 <li>
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/gitAndGithub/index.html">Git and GitHub</a></div>
@@ -237,8 +237,9 @@
         </div>
       </nav>
 
+
       <div id="content-wrapper">
-        <h1 id="software-engineering-for-self-directed-learners"><span class="text-dark"><small><strong><strong>Software Engineering for Self-Directed Learners »</strong></strong></small></span><a class="fa fa-anchor" href="#software-engineering-for-self-directed-learners" onclick="event.stopPropagation()"></a></h1>
+        <h1 id="software-engineering-for-self-directed-learners"><span id="software-engineering-for-self-directed-learners" class="anchor"></span><span class="text-dark"><small><strong><strong>Software Engineering for Self-Directed Learners »</strong></strong></small></span><a class="fa fa-anchor" href="#software-engineering-for-self-directed-learners" onclick="event.stopPropagation()"></a></h1>
         <div>
           <link rel="stylesheet" href="/se-book/css/textbook.css">
           <div class="website-content">
@@ -253,14 +254,14 @@
                     </span></strong></span></p>
               <div id="title-and-body">
                 <div>
-                  <h4 id="test-input-combination-strategies"><span>Test input combination strategies</span><a class="fa fa-anchor" href="#test-input-combination-strategies" onclick="event.stopPropagation()"></a></h4>
+                  <h4 id="test-input-combination-strategies"><span id="test-input-combination-strategies" class="anchor"></span><span>Test input combination strategies</span><a class="fa fa-anchor" href="#test-input-combination-strategies" onclick="event.stopPropagation()"></a></h4>
                 </div>
                 <div id="main">
                   <div>
-                    <p>Given below are some basic strategies for generating a set of test cases by combining multiple test input combination strategies.</p>
+                    <p>Given below are some basic strategies for generating a set of test cases by combining multiple test inputs.</p>
                     <box>
                       <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Let's assume the SUT has the following three inputs and you have selected the given values for testing:</p>
-                      <p>SUT: <code v-pre>foo(p1 char, p2 int, p3 boolean)</code></p>
+                      <p>SUT: <code class="hljs inline no-lang" v-pre>foo(char p1, int p2, boolean p3)</code></p>
                       <p>Values to test:</p>
                       <div class="table-responsive">
                         <table class="markbind-table table table-bordered table-striped">
@@ -289,7 +290,7 @@
                     </box>
                     <p><strong>The <em>all combinations</em> strategy generates test cases for each unique combination of test inputs.</strong></p>
                     <box>
-                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> the strategy generates 3x3x2=18 test cases</p>
+                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This strategy generates 3x3x2=18 test cases.</p>
                       <div class="table-responsive">
                         <table class="markbind-table table table-bordered table-striped">
                           <thead>
@@ -337,7 +338,7 @@
                     </box>
                     <p><strong>The <em>at least once</em> strategy includes each test input at least once.</strong></p>
                     <box>
-                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> this strategy generates 3 test cases.</p>
+                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This strategy generates 3 test cases.</p>
                       <div class="table-responsive">
                         <table class="markbind-table table table-bordered table-striped">
                           <thead>
@@ -372,11 +373,11 @@
                       </div>
                       <p>VV/IV = Any Valid Value / Any Invalid Value</p>
                     </box>
-                    <p><strong>The <em>all pairs</em> strategy creates test cases so that for any given pair of inputs, all combinations between them are tested.</strong> It is based on the observations that a bug is rarely the result of more than two interacting factors. The resulting number of test cases is lower than the <em>all combinations</em> strategy, but higher than the <em>at least once</em> approach.</p>
+                    <p><strong>The <em>all pairs</em> strategy creates test cases so that for any given pair of inputs, all combinations between them are tested.</strong> It is based on the observation that a bug is rarely the result of more than two interacting factors. The resulting number of test cases is lower than the <em>all combinations</em> strategy, but higher than the <em>at least once</em> approach.</p>
                     <box>
-                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> this strategy generates 9 test cases:</p>
-                      <panel type="seamless" class="algolia-no-index"><template slot="_header">
-                          <p>see steps</p>
+                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This strategy generates 9 test cases:</p>
+                      <panel type="seamless" class="algolia-no-index"><template slot="header">
+                          <p>See steps</p>
                         </template>
                         <p>Let's first consider inputs p1 and p2:</p>
                         <div class="table-responsive">
@@ -422,8 +423,8 @@
                           </table>
                         </div>
                         <p>These values can generate <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">(a,T)(a,F)(b,T)(b,F),...</span>3x2=6 combinations</span>, and the test cases should cover all of them.</p>
-                        <p>Similarly, inputs p2 and p3 generates another 6 combinations.</p>
-                        <p>The 9 test cases given below covers all those 9+6+6 combinations.</p>
+                        <p>Similarly, inputs p2 and p3 generate another 6 combinations.</p>
+                        <p>The 9 test cases given below cover all the above 9+6+6 combinations.</p>
                       </panel>
                       <div class="table-responsive">
                         <table class="markbind-table table table-bordered table-striped">
@@ -548,7 +549,7 @@
                         </table>
                       </div>
                     </box>
-                    <p><strong>The <em>random</em> strategy generates test cases using one of the other strategies and then pick a subset randomly</strong> (presumably because the original set of test cases is too big).</p>
+                    <p><strong>The <em>random</em> strategy generates test cases using one of the other strategies and then picks a subset randomly</strong> (presumably because the original set of test cases is too big).</p>
                     <p><strong>There are other strategies that can be used too.</strong></p>
                   </div>
                   <div></div>
@@ -559,13 +560,11 @@
         </div>
         <i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i>
       </div>
-
-
     </div>
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.16.0</a>, generated on Thu, Oct 29, 2020, 4:09:50 PM GMT+8]</small>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.3</a>, generated on Sat, 1 May 2021, 12:33:13 GMT+8]</small>
       </div>
     </footer>
   </div>
@@ -586,7 +585,7 @@
       debug: false,
     });
   }
-  MarkBind.afterSetup(initAlgolia);
+  initAlgolia();
 </script>
 <script src="../../../markbind/layouts/default/scripts.js"></script>
 <script>

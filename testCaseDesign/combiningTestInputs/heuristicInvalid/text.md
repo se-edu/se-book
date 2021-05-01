@@ -12,11 +12,11 @@ Consider the <trigger for="modal:heuristic-valid-test-case" trigger="click">test
   <include src="../heuristicValid/text.md#heuristic-valid-test-case" />
 </modal>
 
-After running these test cases can you be sure that the error message “invalid price” is shown for negative prices?
+After running these test cases, can you be sure that the error message “invalid price” is shown for negative prices?
 * Answer: No.
-* Reason: `-1`  -- the only input that is a negative price -– is in a test case that produces the error message “invalid fruit”.
+* Reason: `-1` -- the only input that is a negative price -– is in a test case that produces the error message “invalid fruit”.
 
-In this case a useful heuristic to apply is **no more than one invalid input in a test case**. After applying that, you get the following test cases.
+In this case, a useful heuristic to apply is **no more than one invalid input in a test case**. After applying that, you get the following test cases.
 
 <box>
 
@@ -29,7 +29,7 @@ In this case a useful heuristic to apply is **no more than one invalid input in 
 | 4      | VV         | ++-1++     | Error message “invalid price"  |
 | 4.1    | ++Dog++    | VV         | Error message “invalid fruit"  |
 
-VV/IV = Any Invalid or Valid Value VV=Any Valid Value
+VV/IV = Any Invalid or Valid Value VV = Any Valid Value
 
 </box>
 

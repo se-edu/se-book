@@ -4,7 +4,7 @@
       </span></strong></span></p>
 <div id="title-and-body">
   <div>
-    <h4 id="basic"><span>Basic</span><a class="fa fa-anchor" href="#basic" onclick="event.stopPropagation()"></a></h4>
+    <h4 id="basic"><span id="basic" class="anchor"></span><span>Basic</span><a class="fa fa-anchor" href="#basic" onclick="event.stopPropagation()"></a></h4>
   </div>
   <div id="main">
     <div>
@@ -12,53 +12,53 @@
       <box>
         <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> These could be EPs for the <trigger for="pop:epBasic-isValidMonth">isValidMonth</trigger> example:</p>
         <ul>
-          <li>[MIN_INT ... 0] : <strong>below</strong> the range that produces <code v-pre>true</code> (produces <code v-pre>false</code>)</li>
-          <li>[1 … 12] : the range that produces <code v-pre>true</code></li>
-          <li>[13 … MAX_INT] : <strong>above</strong> the range that produces <code v-pre>true</code> (produces <code v-pre>false</code>)</li>
+          <li>[MIN_INT ... 0]: <strong>below</strong> the range that produces <code class="hljs inline no-lang" v-pre>true</code> (produces <code class="hljs inline no-lang" v-pre>false</code>)</li>
+          <li>[1 … 12]: the range that produces <code class="hljs inline no-lang" v-pre>true</code></li>
+          <li>[13 … MAX_INT]: <strong>above</strong> the range that produces <code class="hljs inline no-lang" v-pre>true</code> (produces <code class="hljs inline no-lang" v-pre>false</code>)</li>
         </ul>
       </box>
-      <span id="pop:epBasic-isValidMonth" placement="top" data-mb-component-type="popover" v-b-popover.hover.top.html="popoverInnerGetters" class="trigger"><span data-mb-slot-name="header"><code v-pre>isValidMonth</code></span>
+      <span id="pop:epBasic-isValidMonth" placement="top" data-mb-component-type="popover" v-b-popover.hover.top.html="popoverInnerGetters" class="trigger"><span data-mb-slot-name="header"><code class="hljs inline no-lang" v-pre>isValidMonth</code></span>
         <div data-mb-slot-name="content">
           <div>
-            <p><code v-pre>isValidMonth(m)</code> : returns <code v-pre>true</code> if <code v-pre>m</code> (and <code v-pre>int</code>) is in the range [1..12]</p>
+            <p><code class="hljs inline no-lang" v-pre>isValidMonth(m)</code> : returns <code class="hljs inline no-lang" v-pre>true</code> if <code class="hljs inline no-lang" v-pre>m</code> (and <code class="hljs inline no-lang" v-pre>int</code>) is in the range [1..12]</p>
           </div>
         </div>
       </span>
       <p>When the SUT has multiple inputs, you should identify EPs for each input.</p>
       <box>
-        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider the method <code v-pre>duplicate(String s, int n): String</code> which returns a <code v-pre>String</code> that contains <code v-pre>s</code> repeated <code v-pre>n</code> times.</p>
-        <p>Example EPs for <code v-pre>s</code>:</p>
+        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider the method <code class="hljs inline no-lang" v-pre>duplicate(String s, int n): String</code> which returns a <code class="hljs inline no-lang" v-pre>String</code> that contains <code class="hljs inline no-lang" v-pre>s</code> repeated <code class="hljs inline no-lang" v-pre>n</code> times.</p>
+        <p>Example EPs for <code class="hljs inline no-lang" v-pre>s</code>:</p>
         <ul>
           <li>zero-length strings</li>
           <li>string containing whitespaces</li>
           <li>...</li>
         </ul>
-        <p>Example EPs for <code v-pre>n</code>:</p>
+        <p>Example EPs for <code class="hljs inline no-lang" v-pre>n</code>:</p>
         <ul>
-          <li><code v-pre>0</code></li>
+          <li><code class="hljs inline no-lang" v-pre>0</code></li>
           <li>negative values</li>
           <li>...</li>
         </ul>
       </box>
       <p>An EP may not have adjacent values.</p>
       <box>
-        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider the method <code v-pre>isPrime(int i): boolean</code> that returns true if <code v-pre>i</code> is a prime number.</p>
-        <p>EPs for <code v-pre>i</code>:</p>
+        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider the method <code class="hljs inline no-lang" v-pre>isPrime(int i): boolean</code> that returns true if <code class="hljs inline no-lang" v-pre>i</code> is a prime number.</p>
+        <p>EPs for <code class="hljs inline no-lang" v-pre>i</code>:</p>
         <ul>
           <li>prime numbers</li>
           <li>non-prime numbers</li>
         </ul>
       </box>
-      <p>Some inputs have only a small number of possible values and a potentially unique behavior for each value. In those cases you have to consider each value as a partition by itself.</p>
+      <p>Some inputs have only a small number of possible values and a potentially unique behavior for each value. In those cases, you have to consider each value as a partition by itself.</p>
       <box>
-        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider the method <code v-pre>showStatusMessage(GameStatus s): String</code> that returns a unique <code v-pre>String</code> for each of the possible value of s (<code v-pre>GameStatus</code> is an <code v-pre>enum</code>). In this case, each possible value for <code v-pre>s</code> will have to be considered as a partition.</p>
+        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider the method <code class="hljs inline no-lang" v-pre>showStatusMessage(GameStatus s): String</code> that returns a unique <code class="hljs inline no-lang" v-pre>String</code> for each of the possible values of s (<code class="hljs inline no-lang" v-pre>GameStatus</code> is an <code class="hljs inline no-lang" v-pre>enum</code>). In this case, each possible value of <code class="hljs inline no-lang" v-pre>s</code> will have to be considered as a partition.</p>
       </box>
       <p>Note that the EP technique is merely a heuristic and not an exact science, especially when applied manually (as opposed to using an automated program analysis tool to derive EPs). The partitions derived depend on how one ‘speculates’ the SUT to behave internally. Applying EP under a glass-box or gray-box approach can yield more precise partitions.</p>
       <box>
-        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider the method EPs given above for the <code v-pre>isValidMonth</code>. A different tester might use these EPs instead:</p>
+        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider the EPs given above for the method <code class="hljs inline no-lang" v-pre>isValidMonth</code>. A different tester might use these EPs instead:</p>
         <ul>
-          <li>[1 … 12] : the range that produces <code v-pre>true</code></li>
-          <li>[all other integers] : the range that produces <code v-pre>false</code></li>
+          <li>[1 … 12]: the range that produces <code class="hljs inline no-lang" v-pre>true</code></li>
+          <li>[all other integers]: the range that produces <code class="hljs inline no-lang" v-pre>false</code></li>
         </ul>
       </box>
       <box>
@@ -70,21 +70,21 @@
           </tr>
           <tr>
             <td>
-              <p><code v-pre>isValidFlag(String s): boolean</code><br>
-                Returns <code v-pre>true</code> if s is one of [<code v-pre>&quot;F&quot;</code>, <code v-pre>&quot;T&quot;</code>, <code v-pre>&quot;D&quot;</code>]. The comparison is case-sensitive.</p>
+              <p><code class="hljs inline no-lang" v-pre>isValidFlag(String s): boolean</code><br>
+                Returns <code class="hljs inline no-lang" v-pre>true</code> if <code class="hljs inline no-lang" v-pre>s</code> is one of [<code class="hljs inline no-lang" v-pre>&quot;F&quot;</code>, <code class="hljs inline no-lang" v-pre>&quot;T&quot;</code>, <code class="hljs inline no-lang" v-pre>&quot;D&quot;</code>]. The comparison is case-sensitive.</p>
             </td>
             <td>
-              <p>[<code v-pre>&quot;F&quot;</code>] [<code v-pre>&quot;T&quot;</code>] [<code v-pre>&quot;D&quot;</code>] [<code v-pre>&quot;f&quot;</code>, <code v-pre>&quot;t&quot;</code>, <code v-pre>&quot;d&quot;</code>] [any other string][null]</p>
+              <p>[<code class="hljs inline no-lang" v-pre>&quot;F&quot;</code>] [<code class="hljs inline no-lang" v-pre>&quot;T&quot;</code>] [<code class="hljs inline no-lang" v-pre>&quot;D&quot;</code>] [<code class="hljs inline no-lang" v-pre>&quot;f&quot;</code>, <code class="hljs inline no-lang" v-pre>&quot;t&quot;</code>, <code class="hljs inline no-lang" v-pre>&quot;d&quot;</code>] [any other string][null]</p>
             </td>
           </tr>
           <tr>
             <td>
-              <p><code v-pre>squareRoot(String s): int</code><br>
-                Pre-conditions: s represents a positive integer<br>
-                Returns the square root of <code v-pre>s</code> if the square root is an integer; returns <code v-pre>0</code> otherwise.</p>
+              <p><code class="hljs inline no-lang" v-pre>squareRoot(String s): int</code><br>
+                Pre-conditions: <code class="hljs inline no-lang" v-pre>s</code> represents a positive integer.<br>
+                Returns the square root of <code class="hljs inline no-lang" v-pre>s</code> if the square root is an integer; returns <code class="hljs inline no-lang" v-pre>0</code> otherwise.</p>
             </td>
             <td>
-              <p>[<code v-pre>s</code> is not a valid number] [<code v-pre>s</code> is a negative integer] [<code v-pre>s</code> has an integer square root] [<code v-pre>s</code> does not have an integer square root]</p>
+              <p>[<code class="hljs inline no-lang" v-pre>s</code> is not a valid number] [<code class="hljs inline no-lang" v-pre>s</code> is a negative integer] [<code class="hljs inline no-lang" v-pre>s</code> has an integer square root] [<code class="hljs inline no-lang" v-pre>s</code> does not have an integer square root]</p>
             </td>
           </tr>
         </table>
@@ -92,25 +92,25 @@
     </div>
     <div>
       <div>
-        <panel expandable class="algolia-no-index"><template slot="_header">
+        <panel expandable class="algolia-no-index"><template slot="header">
             <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
           </template>
           <div>
-            <panel class="algolia-no-index"><template slot="_header">
-                <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> EPs for <code v-pre>isValidName</code> method</p>
+            <panel class="algolia-no-index"><template slot="header">
+                <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> EPs for <code class="hljs inline no-lang" v-pre>isValidName</code> method</p>
               </template>
               <question>
                 <p>Consider this SUT:</p>
                 <box>
-                  <p><code v-pre>isValidName (String s): boolean</code></p>
-                  <p>Description: returns true if <code v-pre>s</code> is not <code v-pre>null</code> and not longer than 50 characters.</p>
+                  <p><code class="hljs inline no-lang" v-pre>isValidName(String s): boolean</code></p>
+                  <p>Description: returns true if <code class="hljs inline no-lang" v-pre>s</code> is not <code class="hljs inline no-lang" v-pre>null</code> and not longer than 50 characters.</p>
                 </box>
-                <p>A. Which one of these is least likely to be an equivalence partition for the parameter s of the isValidName method given below?</p>
-                <ul radio-group="4c6ed" class="radio-list">
-                  <li class="radio-list-item"><label><input class="radio-list-input" name="4c6ed" type="radio"> a. null.</label></li>
-                  <li class="radio-list-item"><label><input class="radio-list-input" name="4c6ed" type="radio"> b. strings having more than 50 characters.</label></li>
-                  <li class="radio-list-item"><label><input class="radio-list-input" name="4c6ed" type="radio"> c. strings having 50 or fewer characters.</label></li>
-                  <li class="radio-list-item"><label><input class="radio-list-input" name="4c6ed" type="radio"> d. strings consisting of numbers instead of letters.</label></li>
+                <p>A. Which one of these is least likely to be an equivalence partition for the parameter <code class="hljs inline no-lang" v-pre>s</code> of the <code class="hljs inline no-lang" v-pre>isValidName</code> method given above?</p>
+                <ul radio-group="63042" class="radio-list">
+                  <li class="radio-list-item"><label><input class="radio-list-input" name="63042" type="radio"> a. null.</label></li>
+                  <li class="radio-list-item"><label><input class="radio-list-input" name="63042" type="radio"> b. strings having more than 50 characters.</label></li>
+                  <li class="radio-list-item"><label><input class="radio-list-input" name="63042" type="radio"> c. strings having 50 or fewer characters.</label></li>
+                  <li class="radio-list-item"><label><input class="radio-list-input" name="63042" type="radio"> d. strings consisting of numbers instead of letters.</label></li>
                 </ul>
                 <p>B. If you had to choose 3 test cases from the 4 given below, which one will you leave out based on the EP technique?</p>
                 <ul radio-group="f35e9" class="radio-list">
@@ -123,7 +123,7 @@
                   <p>A. (d)</p>
                   <p>Explanation: The description does not mention anything about the content of the string. Therefore, the method is unlikely to behave differently for strings consisting of numbers.</p>
                   <p>B. (a) or (c)</p>
-                  <p>Explanation: both belong to the same EP</p>
+                  <p>Explanation: both belong to the same EP.</p>
                 </div>
               </question>
             </panel>

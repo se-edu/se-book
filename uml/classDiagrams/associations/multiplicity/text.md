@@ -10,14 +10,14 @@
 <p/>
 
 Commonly used multiplicities:
-* `0..1` : _optional_, can be linked to 0 or 1 objects
+* `0..1` : _optional_, can be linked to 0 or 1 objects.
 * `1` : _compulsory_, must be linked to one object at all times.
 * `*` : can be linked to 0 or more objects.
-* `n..m` : the number of linked objects must be `n` to `m` inclusive
+* `n..m` : the number of linked objects must be within `n` to `m` inclusive.
 
 <box>
 
-{{ icon_example }} In the diagram below, an `Admin` object administers (in charge of) any number of students but a `Student` object must always be under the charge of exactly one `Admin` object
+{{ icon_example }} In the diagram below, an `Admin` object administers (is in charge of) any number of students but a `Student` object must always be under the charge of exactly one `Admin` object.
 
 <img src="{{baseUrl}}/uml/classDiagrams/associations/multiplicity/images/adminStudent.png" width="300" />
 

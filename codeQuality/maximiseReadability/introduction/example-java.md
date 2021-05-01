@@ -32,8 +32,8 @@ int calculateSubsidy() {
     int subsidy;
     if (isSenior) {
         subsidy = REJECT_SENIOR;
-    } else if (isAlreadySubsidised) {
-        subsidy = SUBSIDISED_SUBSIDY;
+    } else if (isAlreadySubsidized) {
+        subsidy = SUBSIDIZED_SUBSIDY;
     } else if (isPartTime) {
         subsidy = FULLTIME_SUBSIDY * RATIO;
     } else {

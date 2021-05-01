@@ -10,7 +10,7 @@ Consider the calculateGrade scenario given below:
 
 <box>
 
-* SUT : `calculateGrade(participation, projectGrade, isAbsent, examScore)`
+* SUT: `calculateGrade(participation, projectGrade, isAbsent, examScore)`
 * Values to test: invalid values are ++underlined++
   * participation: 0, 1, 19, 20, ++21++, ++22++
   * projectGrade: A, B, C, D, F

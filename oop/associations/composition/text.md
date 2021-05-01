@@ -18,7 +18,7 @@
 
 <box>
 
-{{ icon_example }} The ‘sub-folder’ association between `Folder` objects is a composition type association. That means if the `Folder` object `foo` is a sub folder of `Folder` object `bar`, `bar` cannot be a sub-folder of `foo`. 
+{{ icon_example }} The ‘sub-folder’ association between `Folder` objects is a composition type association. That means if the `Folder` object `foo` is a sub-folder of `Folder` object `bar`, `bar` cannot be a sub-folder of `foo`. 
 
 </box>
 
@@ -32,7 +32,7 @@
 
 </box>
 
-**A common use of composition is when parts of a big class is carved out as smaller classes** for the ease of managing the internal design. In such cases, the classes extracted out still act as _parts_ of the bigger class and the outside world has no business knowing about them.
+**A common use of composition is when parts of a big class are carved out as smaller classes** for the ease of managing the internal design. In such cases, the classes extracted out still act as _parts_ of the bigger class and the outside world has no business knowing about them.
 
 **Cascading deletion alone is not sufficient for composition.** Suppose there is a design in which `Person` objects are attached to `Task` objects and the former get deleted whenever the latter is deleted. This fact alone does not mean there is a composition relationship between the two classes. For it to be composition, a `Person` must be an integral _part_ of a `Task` in the context of that association, at the concept level (not simply at implementation level).
 

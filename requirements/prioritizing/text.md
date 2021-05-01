@@ -6,7 +6,7 @@
 
 <div id="body">
 
-**Requirements can be prioritized based the importance and urgency**, while keeping in mind the constraints of schedule, budget, staff resources, quality goals, and other constraints.
+**Requirements can be prioritized based on the importance and urgency**, while keeping in mind the constraints of schedule, budget, staff resources, quality goals, and other constraints.
 
 A common approach is to group requirements into priority categories. Note that all such scales are subjective, and stakeholders define the meaning of each level in the scale for the project at hand.
 
@@ -14,8 +14,8 @@ A common approach is to group requirements into priority categories. Note that a
 
 {{ icon_example }} An example scheme for categorizing requirements:
 
-* `Essential`:  The product must have this requirement fulfilled or else it does not get user acceptance
-* `Typical`:  Most similar systems have this feature although the product can survive without it.
+* `Essential`: The product must have this requirement fulfilled or else it does not get user acceptance.
+* `Typical`: Most similar systems have this feature although the product can survive without it.
 * `Novel`: New features that could differentiate this product from the rest.
 
 {{ icon_example }} Other schemes:
@@ -30,7 +30,7 @@ A common approach is to group requirements into priority categories. Note that a
 
 <box>
 
-{{ icon_example }} The requirement given below is for a Calendar application. Stakeholder of the software (e.g. product designers) might decide the following requirement is not in the scope of the software.
+{{ icon_example }} The requirement given below is for a Calendar application. Stakeholders of the software (e.g. product designers) might decide the following requirement is not in the scope of the software.
 
 >The software records the actual time taken by each task and show the difference between the _actual_ and _scheduled_ time for the task.
 

@@ -1,4 +1,4 @@
-<panel header="{{ icon_Q_A }} correct statement about SoC">
+<panel header="{{ icon_Q_A }} Correct statements about SoC">
 <question>
 
 “Only the GUI class should interact with the user. The GUI class should only concern itself with user interactions”. This statement follows from,
@@ -11,7 +11,7 @@
 
 (a)(b)(c)
 
-Explanation: By making ‘user interaction’ GUI class’ sole responsibility, we increase its cohesion. This is also in line with separation of concerns (i.e., we separated the concern of user interaction) and single responsibility principle (GUI class has only one responsibility).
+Explanation: By making ‘user interaction’ the GUI class’s sole responsibility, we increase its cohesion. This is also in line with the separation of concerns (i.e., we separated the concern of user interaction) and the single responsibility principle (the GUI class has only one responsibility).
 
 </div>
 </question>

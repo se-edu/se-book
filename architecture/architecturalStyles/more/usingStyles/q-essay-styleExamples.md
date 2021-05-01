@@ -14,8 +14,8 @@ Comment on how each of the following architectural styles could be potentially u
 
 1. Client-server – Clients can be the game UI running on player PCs. The server can be the game logic running on one machine.
 2. Transaction-processing – Each player action can be packaged as transactions (by the client component running on the player PC) and sent to the server. Server processes them in the order they are received.
-3. SOA – The game can access a remote web services for things such as getting new puzzles, validating puzzles, charging players subscription fees, etc.
-4. Multi-layer – The server component can have two layers: logic layer and the storage layer.
+3. SOA – The game can access a remote web service for things such as getting new puzzles, validating puzzles, charging players subscription fees, etc.
+4. Multi-layer – The server component can have two layers: the logic layer and the storage layer.
 
 <img src="{{baseUrl}}/architecture/architecturalStyles/more/usingStyles/images/minesweeperExample.png" height="300" />
 <p/>

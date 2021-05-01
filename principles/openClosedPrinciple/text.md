@@ -6,7 +6,7 @@
 
 <div id="body">
 
-**The Open-Close Principle aims to make a code entity easy to adapt and reuse without needing to modify the code entity itself.**
+**The Open-Closed Principle aims to make a code entity easy to adapt and reuse without needing to modify the code entity itself.**
 
 <box type="definition" seamless>
   <include src="../../common/definitions.md#def-open-closed-principle"/>
@@ -16,7 +16,7 @@ In object-oriented programming, OCP can be achieved in various ways. This often 
 
 <box>
 
-{{ icon_example }} In the design given below, the behavior of the `CommandQueue` class can be altered by adding more concrete `Command` subclasses. For example, by including a `Delete` class alongside `List`, `Sort`, and `Reset`, the `CommandQueue` can now perform delete commands without modifying its code at all. That is, its behavior was extended without having to modify its code. Hence, it was open to extensions, but closed to modification.
+{{ icon_example }} In the design given below, the behavior of the `CommandQueue` class can be altered by adding more concrete `Command` subclasses. For example, by including a `Delete` class alongside `List`, `Sort`, and `Reset`, the `CommandQueue` can now perform delete commands without modifying its code at all. That is, its behavior was extended without having to modify its code. Hence, it is open to extensions, but closed to modification.
 
 <img src="{{baseUrl}}/principles/openClosedPrinciple/images/commandQueue.png" height="170" />
 <p/>

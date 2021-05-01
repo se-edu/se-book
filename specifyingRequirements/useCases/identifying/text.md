@@ -16,7 +16,7 @@ A use case is an interaction between a system and its _actors_.
 
 <box>
 
-{{ icon_example }} Some example actors for a Learning Management System
+{{ icon_example }} Some example actors for a Learning Management System:
 <div class="text-monospace">
 
 * Actors: Guest, Student, Staff, Admin, <tooltip content="an exam management system">ExamSys</tooltip>, <tooltip content="a library management system">LibSys</tooltip>.
@@ -29,7 +29,7 @@ A use case is an interaction between a system and its _actors_.
 <div class="text-monospace">
 
 * Software System: LearnSys
-* Use case: UC01 conduct survey
+* Use case: UC01 Conduct Survey
 * Actors: ==Staff, Student==
 </div>
 </box>
@@ -41,7 +41,7 @@ A use case is an interaction between a system and its _actors_.
 
 * Software System: LearnSys
 * Actor: Staff
-* Use cases: ==UC01 conduct survey, UC02 Set Up Course Schedule, UC03 Email Class, ...==
+* Use cases: ==UC01 Conduct Survey, UC02 Set Up Course Schedule, UC03 Email Class, ...==
 </div>
 </box>
 
@@ -62,8 +62,8 @@ A use case is an interaction between a system and its _actors_.
 <div class="text-monospace">
 
 * Software System: LearnSys
-* Actor(or role) : Student
-* Persons that can play this role : ==undergraduate student, graduate student, a staff member doing a part-time course, exchange student==
+* Actor (or role): Student
+* Persons that can play this role: ==undergraduate student, graduate student, a staff member doing a part-time course, exchange student==
 </div>
 </box>
 
@@ -87,7 +87,7 @@ A use case is an interaction between a system and its _actors_.
 
 {{ icon_tip }} While modeling user-system interactions,
 * Start with high level use cases and progressively work toward lower level use cases.
-* Be mindful at which level of details you are working on and not to mix use cases of different levels.
+* Be mindful of which level of detail you are working at and not to mix use cases of different levels.
 
 
 </div>

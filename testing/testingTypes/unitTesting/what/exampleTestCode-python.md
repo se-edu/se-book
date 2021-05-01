@@ -12,12 +12,12 @@ class Foo:
 
 class FooTest(unittest.TestCase):
   
-  def test_read(sefl):
+  def test_read(self):
       # a unit test for read() method
   
   def test_write_emptyIntput_ignored(self):
-      # a unit tests for write(string) method
+      # a unit test for write(string) method
   
   def test_write_normalInput_writtenCorrectly(self):
-      # another unit tests for write(string) method
+      # another unit test for write(string) method
 ```

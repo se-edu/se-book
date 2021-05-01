@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.16.0">
+  <meta name="generator" content="MarkBind 2.17.3">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - Software Design Fundamentals: Coupling</title>
   <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
   <link rel="stylesheet" href="../../markbind/css/octicons.css">
-  <link rel="stylesheet" href="../../markbind/css/github.min.css">
+  <link rel="stylesheet" href="../../markbind/css/codeblock-dark.min.css">
   <link rel="stylesheet" href="../../markbind/css/markbind.min.css">
   <script src="../../markbind/js/polyfill.min.js"></script>
   <script src="../../markbind/js/vue.min.js"></script>
@@ -199,7 +199,7 @@
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/uml/index.html">UML</a></div>
                 </li>
                 <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/intellij/index.html">Intellij IDEA</a></div>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/intellij/index.html">IntelliJ IDEA</a></div>
                 </li>
                 <li>
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/gitAndGithub/index.html">Git and GitHub</a></div>
@@ -237,15 +237,16 @@
         </div>
       </nav>
 
+
       <div id="content-wrapper">
-        <h1 id="software-engineering-for-self-directed-learners"><span class="text-dark"><small><strong><strong>Software Engineering for Self-Directed Learners »</strong></strong></small></span><a class="fa fa-anchor" href="#software-engineering-for-self-directed-learners" onclick="event.stopPropagation()"></a></h1>
+        <h1 id="software-engineering-for-self-directed-learners"><span id="software-engineering-for-self-directed-learners" class="anchor"></span><span class="text-dark"><small><strong><strong>Software Engineering for Self-Directed Learners »</strong></strong></small></span><a class="fa fa-anchor" href="#software-engineering-for-self-directed-learners" onclick="event.stopPropagation()"></a></h1>
         <div>
           <link rel="stylesheet" href="/se-book/css/textbook.css">
           <div class="website-content" id="all">
             <p><span class="dimmed"><strong><span>Design → Design Fundamentals →
                   </span></strong></span></p>
             <div id="title">
-              <h1 id="coupling"><span>Coupling</span><a class="fa fa-anchor" href="#coupling" onclick="event.stopPropagation()"></a></h1>
+              <h1 id="coupling"><span id="coupling" class="anchor"></span><span>Coupling</span><a class="fa fa-anchor" href="#coupling" onclick="event.stopPropagation()"></a></h1>
             </div>
             <div id="main">
               <div>
@@ -253,7 +254,7 @@
                   <panel type="seamless" expanded id="what">
                     <span slot="header" class="card-title">
                       <div>
-                        <h4 id="what"><span>What</span><a class="fa fa-anchor" href="#what" onclick="event.stopPropagation()"></a></h4>
+                        <h4 id="what"><span id="what" class="anchor"></span><span>What</span><a class="fa fa-anchor" href="#what" onclick="event.stopPropagation()"></a></h4>
                       </div>
                     </span>
                     <div class="indented">
@@ -269,18 +270,18 @@
                           <li><strong>Testing and reuse of the module is harder</strong> due to its dependence on other modules.</li>
                         </ul>
                         <box>
-                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In the example below, design <code v-pre>A</code> appears to have a more coupling between the components than design <code v-pre>B</code>.</p>
+                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In the example below, design <code class="hljs inline no-lang" v-pre>A</code> appears to have more coupling between the components than design <code class="hljs inline no-lang" v-pre>B</code>.</p>
                           <img src="/se-book/designFundamentals/coupling/what/images/playerPuzzleManager.png" height="220">
                           <p></p>
                         </box>
                       </div>
                       <div>
                         <div>
-                          <panel expandable class="algolia-no-index"><template slot="_header">
+                          <panel expandable class="algolia-no-index"><template slot="header">
                               <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                             </template>
                             <div>
-                              <panel class="algolia-no-index"><template slot="_header">
+                              <panel class="algolia-no-index"><template slot="header">
                                   <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Coupling levels of alternative designs</p>
                                 </template>
                                 <question has-input="true">
@@ -290,37 +291,37 @@
                                     <p></p>
                                   </box>
                                   <div slot="answer" class="algolia-no-index">
-                                    <p>Overall coupling levels in <em>x</em> and <em>y</em> seem to be similar (neither has more dependencies than the other). (Note that the number of dependency links is not a definitive measure of the level of coupling. Some links may be stronger than the others.). However, in <em>x</em>, <code v-pre>A</code> is highly-coupled to the rest of the system while <code v-pre>B</code>, <code v-pre>C</code>, <code v-pre>D</code>, and <code v-pre>E</code> are standalone (do not depend on anything else). In <em>y</em>, no component is as highly-coupled as <code v-pre>A</code> of <em>x</em>. However, only <code v-pre>D</code> and <code v-pre>E</code> are standalone.</p>
+                                    <p>Overall coupling levels in <em>x</em> and <em>y</em> seem to be similar (neither has more dependencies than the other). (Note that the number of dependency links is not a definitive measure of the level of coupling. Some links may be stronger than the others.). However, in <em>x</em>, <code class="hljs inline no-lang" v-pre>A</code> is highly-coupled to the rest of the system while <code class="hljs inline no-lang" v-pre>B</code>, <code class="hljs inline no-lang" v-pre>C</code>, <code class="hljs inline no-lang" v-pre>D</code>, and <code class="hljs inline no-lang" v-pre>E</code> are standalone (do not depend on anything else). In <em>y</em>, no component is as highly-coupled as <code class="hljs inline no-lang" v-pre>A</code> of <em>x</em>. However, only <code class="hljs inline no-lang" v-pre>D</code> and <code class="hljs inline no-lang" v-pre>E</code> are standalone.</p>
                                   </div>
                                 </question>
                               </panel>
                             </div>
                             <div>
-                              <panel class="algolia-no-index"><template slot="_header">
-                                  <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> regressions and coupling.</p>
+                              <panel class="algolia-no-index"><template slot="header">
+                                  <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Regressions and coupling</p>
                                 </template>
                                 <question has-input="true">
                                   <p>Explain the link (if any) between regressions and coupling.</p>
                                   <div slot="answer" class="algolia-no-index">
-                                    <p>When the system is highly-coupled, the risk of regressions is higher too <span class="dimmed">e.g. when component <code v-pre>A</code> is modified, all components ‘coupled’ to component <code v-pre>A</code> risk ‘unintended behavioral changes’</span>.</p>
+                                    <p>When the system is highly-coupled, the risk of regressions is higher too <span class="dimmed">e.g. when component <code class="hljs inline no-lang" v-pre>A</code> is modified, all components ‘coupled’ to component <code class="hljs inline no-lang" v-pre>A</code> risk ‘unintended behavioral changes’</span>.</p>
                                   </div>
                                 </question>
                               </panel>
                             </div>
                             <div>
-                              <panel class="algolia-no-index"><template slot="_header">
+                              <panel class="algolia-no-index"><template slot="header">
                                   <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Coupling and testability</p>
                                 </template>
                                 <question has-input="true">
                                   <p>Discuss the relationship between coupling and <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">a measure of how easily a given component can be tested</span>testability</span>.</p>
                                   <div slot="answer" class="algolia-no-index">
-                                    <p>Coupling decreases testability because if the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">Software Under Test</span>SUT</span> is coupled to many other components it becomes difficult to test the SUI in isolation of its dependencies.</p>
+                                    <p>Coupling decreases testability because if the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">Software Under Test</span>SUT</span> is coupled to many other components, it becomes difficult to test the SUT in isolation of its dependencies.</p>
                                   </div>
                                 </question>
                               </panel>
                             </div>
                             <div>
-                              <panel class="algolia-no-index"><template slot="_header">
+                              <panel class="algolia-no-index"><template slot="header">
                                   <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Statements about coupling</p>
                                 </template>
                                 <question>
@@ -334,7 +335,7 @@
                                   </ul>
                                   <div slot="answer" class="algolia-no-index">
                                     <p>(a)(b)(c)<s>(d)</s>(e)</p>
-                                    <p>Explanation: High coupling means either more components require to be integrated at once in a big-bang fashion (increasing the risk of things going wrong) or more drivers and stubs are required when integrating incrementally.</p>
+                                    <p>Explanation: High coupling means either more components are required to be integrated at once in a big-bang fashion (increasing the risk of things going wrong) or more drivers and stubs are required when integrating incrementally.</p>
                                   </div>
                                 </question>
                               </panel>
@@ -349,7 +350,7 @@
                   <panel type="seamless" expanded id="how">
                     <span slot="header" class="card-title">
                       <div>
-                        <h4 id="how"><span>How</span><a class="fa fa-anchor" href="#how" onclick="event.stopPropagation()"></a></h4>
+                        <h4 id="how"><span id="how" class="anchor"></span><span>How</span><a class="fa fa-anchor" href="#how" onclick="event.stopPropagation()"></a></h4>
                       </div>
                     </span>
                     <div class="indented">
@@ -360,22 +361,22 @@
                       <div>
                         <p><strong>X is <em>coupled</em> to Y if a change to Y can <mark>potentially</mark> require a change in X</strong>.</p>
                         <box>
-                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> If <code v-pre>Foo</code> class calls the method <code v-pre>Bar#read()</code>, <code v-pre>Foo</code> is coupled to <code v-pre>Bar</code> because a change to <code v-pre>Bar</code> can potentially (but not always) require a change in the <code v-pre>Foo</code> class <span class="dimmed">e.g. if the signature of the <code v-pre>Bar#read()</code> is changed, <code v-pre>Foo</code> needs to change as well, but a change to the <code v-pre>Bar#write()</code> method may not require a change in the <code v-pre>Foo</code> class because <code v-pre>Foo</code> does not call <code v-pre>Bar#write()</code></span>.</p>
-                          <panel type="seamless" class="algolia-no-index"><template slot="_header">
+                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> If the <code class="hljs inline no-lang" v-pre>Foo</code> class calls the method <code class="hljs inline no-lang" v-pre>Bar#read()</code>, <code class="hljs inline no-lang" v-pre>Foo</code> is coupled to <code class="hljs inline no-lang" v-pre>Bar</code> because a change to <code class="hljs inline no-lang" v-pre>Bar</code> can potentially (but not always) require a change in the <code class="hljs inline no-lang" v-pre>Foo</code> class <span class="dimmed">e.g. if the signature of <code class="hljs inline no-lang" v-pre>Bar#read()</code> is changed, <code class="hljs inline no-lang" v-pre>Foo</code> needs to change as well, but a change to the <code class="hljs inline no-lang" v-pre>Bar#write()</code> method may not require a change in the <code class="hljs inline no-lang" v-pre>Foo</code> class because <code class="hljs inline no-lang" v-pre>Foo</code> does not call <code class="hljs inline no-lang" v-pre>Bar#write()</code></span>.</p>
+                          <panel type="seamless" class="algolia-no-index"><template slot="header">
                               <p><span class="dimmed">code for the above example</span></p>
                             </template>
-                            <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span></span>{
+                            <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span> </span>{
 </span><span>    ...
 </span><span>    <span class="hljs-keyword">new</span> Bar().read();
 </span><span>    ...
 </span><span>}
 </span><span>
-</span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bar</span></span>{
-</span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">read</span><span class="hljs-params">()</span></span>{
+</span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bar</span> </span>{
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">read</span><span class="hljs-params">()</span> </span>{
 </span><span>        ...
 </span><span>    }
 </span><span>    
-</span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">write</span><span class="hljs-params">()</span></span>{
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">write</span><span class="hljs-params">()</span> </span>{
 </span><span>        ...
 </span><span>    }
 </span><span>}
@@ -383,31 +384,31 @@
                           </panel>
                         </box>
                         <box>
-                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Some examples of coupling: <code v-pre>A</code> is coupled to <code v-pre>B</code> if,</p>
+                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Some examples of coupling: <code class="hljs inline no-lang" v-pre>A</code> is coupled to <code class="hljs inline no-lang" v-pre>B</code> if,</p>
                           <ul>
-                            <li><code v-pre>A</code> has access to the internal structure of <code v-pre>B</code> (this results in a very high level of coupling)</li>
-                            <li><code v-pre>A</code> and <code v-pre>B</code> depend on the same global variable</li>
-                            <li><code v-pre>A</code> calls <code v-pre>B</code></li>
-                            <li><code v-pre>A</code> receives an object of <code v-pre>B</code> as a parameter or a return value</li>
-                            <li><code v-pre>A</code> inherits from <code v-pre>B</code></li>
-                            <li><code v-pre>A</code> and <code v-pre>B</code> are required to follow the same data format or communication protocol</li>
+                            <li><code class="hljs inline no-lang" v-pre>A</code> has access to the internal structure of <code class="hljs inline no-lang" v-pre>B</code> (this results in a very high level of coupling)</li>
+                            <li><code class="hljs inline no-lang" v-pre>A</code> and <code class="hljs inline no-lang" v-pre>B</code> depend on the same global variable</li>
+                            <li><code class="hljs inline no-lang" v-pre>A</code> calls <code class="hljs inline no-lang" v-pre>B</code></li>
+                            <li><code class="hljs inline no-lang" v-pre>A</code> receives an object of <code class="hljs inline no-lang" v-pre>B</code> as a parameter or a return value</li>
+                            <li><code class="hljs inline no-lang" v-pre>A</code> inherits from <code class="hljs inline no-lang" v-pre>B</code></li>
+                            <li><code class="hljs inline no-lang" v-pre>A</code> and <code class="hljs inline no-lang" v-pre>B</code> are required to follow the same data format or communication protocol</li>
                           </ul>
                         </box>
                       </div>
                       <div>
                         <div>
-                          <panel expandable class="algolia-no-index"><template slot="_header">
+                          <panel expandable class="algolia-no-index"><template slot="header">
                               <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                             </template>
                             <div>
-                              <panel class="algolia-no-index"><template slot="_header">
+                              <panel class="algolia-no-index"><template slot="header">
                                   <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which indicate coupling?</p>
                                 </template>
                                 <question>
-                                  <p>Which of these indicate a coupling between components A and B?</p>
+                                  <p>Which of these indicate coupling between components A and B?</p>
                                   <ul class="contains-task-list">
-                                    <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> a. component A has access to internal structure of component B.</li>
-                                    <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> b. component A and B are written by the same developer.</li>
+                                    <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> a. component A has access to the internal structure of component B.</li>
+                                    <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> b. components A and B are written by the same developer.</li>
                                     <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> c. component A calls component B.</li>
                                     <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. component A receives an object of component B as a parameter.</li>
                                     <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> e. component A inherits from component B.</li>
@@ -415,7 +416,7 @@
                                   </ul>
                                   <div slot="answer" class="algolia-no-index">
                                     <p>(a)<s>(b)</s>(c)(d)(e)(f)</p>
-                                    <p>Explanation: Being written by the same developer does not imply a coupling.</p>
+                                    <p>Explanation: Being written by the same developer does not imply coupling.</p>
                                   </div>
                                 </question>
                               </panel>
@@ -430,7 +431,7 @@
                   <panel type="seamless" expanded id="types-of-coupling">
                     <span slot="header" class="card-title">
                       <div>
-                        <h4 id="types-of-coupling"><span>Types of coupling</span><a class="fa fa-anchor" href="#types-of-coupling" onclick="event.stopPropagation()"></a></h4>
+                        <h4 id="types-of-coupling"><span id="types-of-coupling" class="anchor"></span><span>Types of coupling</span><a class="fa fa-anchor" href="#types-of-coupling" onclick="event.stopPropagation()"></a></h4>
                       </div>
                     </span>
                     <div class="indented">
@@ -460,13 +461,11 @@
         </div>
         <i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i>
       </div>
-
-
     </div>
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.16.0</a>, generated on Thu, Oct 29, 2020, 4:09:50 PM GMT+8]</small>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.3</a>, generated on Sat, 1 May 2021, 12:33:13 GMT+8]</small>
       </div>
     </footer>
   </div>
@@ -487,7 +486,7 @@
       debug: false,
     });
   }
-  MarkBind.afterSetup(initAlgolia);
+  initAlgolia();
 </script>
 <script src="../../markbind/layouts/default/scripts.js"></script>
 <script>

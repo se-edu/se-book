@@ -1,4 +1,4 @@
-<panel header="{{ icon_Q }} Draw a Class Diagram for the code (`StockItem`, `Inventory`, `Review` etc.)">
+<panel header="{{ icon_Q }} Draw a Class Diagram for the code (`StockItem`, `Inventory`, `Review`, etc.)">
 <question>
 
 Consider the code below:
@@ -23,7 +23,7 @@ public class StockItem extends Item {
     private String name;
 
     public StockItem(
-        String name, Rating rating){
+        String name, Rating rating) {
 
         this.name = name;
         this.review = new Review(rating);
@@ -63,11 +63,11 @@ import java.util.List;
 public class Inventory {
     private List<Item> items;
 
-    public int getItemCount(){
+    public int getItemCount() {
         return items.size();
     }
 
-    public void generateBill(Billable b){
+    public void generateBill(Billable b) {
         // ...
     }
 
@@ -80,7 +80,7 @@ public class Inventory {
 </div>
 
 (a) Draw a class diagram to represent the code. Show all attributes, methods, associations, navigabilities, visibilities, known multiplicities, and association roles. Show associations as lines.<br>
-(b) Draw an object diagram to represent the situation where the inventory has one item with a name `spanner` and a review of `POOR` rating<br>
+(b) Draw an object diagram to represent the situation where the inventory has one item named `spanner` and a review of `POOR` rating<br>
   i.e., `new Inventory().add(new StockItem("spanner", new Review(Rating.POOR)))`{.java}.
 
 </question>

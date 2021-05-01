@@ -3,7 +3,7 @@
 <p><span class="dimmed"><strong><span>Principles →</span></strong></span></p>
 <div id="title-and-body">
   <div>
-    <h4 id="interface-segregation-principle"><span>Interface segregation principle</span><a class="fa fa-anchor" href="#interface-segregation-principle" onclick="event.stopPropagation()"></a></h4>
+    <h4 id="interface-segregation-principle"><span id="interface-segregation-principle" class="anchor"></span><span>Interface segregation principle</span><a class="fa fa-anchor" href="#interface-segregation-principle" onclick="event.stopPropagation()"></a></h4>
   </div>
   <div id="main">
     <div>
@@ -13,19 +13,19 @@
         </div>
       </box>
       <box>
-        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The <code v-pre>Payroll</code> class should not depend on the <code v-pre>AdminStaff</code> class because it does not use the <code v-pre>arrangeMeeting()</code> method. Instead, it should depend on the <code v-pre>SalariedStaff</code> interface.</p>
+        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The <code class="hljs inline no-lang" v-pre>Payroll</code> class should not depend on the <code class="hljs inline no-lang" v-pre>AdminStaff</code> class because it does not use the <code class="hljs inline no-lang" v-pre>arrangeMeeting()</code> method. Instead, it should depend on the <code class="hljs inline no-lang" v-pre>SalariedStaff</code> interface.</p>
         <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Payroll</span> </span>{
-</span><span>    <span class="hljs-comment">//...    </span>
-</span><span>    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">adjustSalaries</span><span class="hljs-params">(AdminStaff adminStaff)</span></span>{ <span class="hljs-comment">//violates ISP</span>
-</span><span>        <span class="hljs-comment">//...</span>
+</span><span>    <span class="hljs-comment">// ...    </span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">adjustSalaries</span><span class="hljs-params">(AdminStaff adminStaff)</span> </span>{ <span class="hljs-comment">// violates ISP</span>
+</span><span>        <span class="hljs-comment">// ...</span>
 </span><span>    }
 </span><span>
 </span><span>}
 </span></code></pre>
         <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Payroll</span> </span>{
-</span><span>    <span class="hljs-comment">//...    </span>
-</span><span>    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">adjustSalaries</span><span class="hljs-params">(SalariedStaff staff)</span></span>{ <span class="hljs-comment">//does not violate ISP</span>
-</span><span>        <span class="hljs-comment">//...</span>
+</span><span>    <span class="hljs-comment">// ...    </span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">adjustSalaries</span><span class="hljs-params">(SalariedStaff staff)</span> </span>{ <span class="hljs-comment">// does not violate ISP</span>
+</span><span>        <span class="hljs-comment">// ...</span>
 </span><span>    }
 </span><span>}
 </span></code></pre><img src="/se-book/principles/interfaceSegregationPrinciple/images/payroll.png" height="200">

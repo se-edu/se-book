@@ -14,7 +14,7 @@ While architecture diagrams have no standard notation, try to follow these basic
 
 <box>
 
-{{ icon_example }} Consider the two architecture diagrams of the same software given below. Because `Diagram 2` uses double headed arrows, the important fact that GUI has a bi-directional dependency with the Logic component is no longer captured.
+{{ icon_example }} Consider the two architecture diagrams of the same software given below. Because `Diagram 2` uses double-headed arrows, the important fact that GUI has a bidirectional dependency with the Logic component is no longer captured.
 
 <img src="{{baseUrl}}/architecture/architectureDiagrams/drawing/images/tip.png" height="190" />
 <p/>

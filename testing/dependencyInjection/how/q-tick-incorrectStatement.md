@@ -1,7 +1,7 @@
-<panel header="{{ icon_Q_A }} statements about dependency injection">
+<panel header="{{ icon_Q_A }} Statements about dependency injection">
 <question>
 
-Choose correct statement about dependency injection
+Choose the correct statements about dependency injection.
 
 - [ ] a. It is a technique for increasing dependencies
 - [ ] b. It is useful for unit testing

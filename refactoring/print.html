@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.16.0">
+  <meta name="generator" content="MarkBind 2.17.3">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - Refactoring [Printable]</title>
   <link rel="stylesheet" href="../markbind/css/bootstrap.min.css">
@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="../markbind/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
   <link rel="stylesheet" href="../markbind/css/octicons.css">
-  <link rel="stylesheet" href="../markbind/css/github.min.css">
+  <link rel="stylesheet" href="../markbind/css/codeblock-dark.min.css">
   <link rel="stylesheet" href="../markbind/css/markbind.min.css">
   <script src="../markbind/js/polyfill.min.js"></script>
   <script src="../markbind/js/vue.min.js"></script>
@@ -199,7 +199,7 @@
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/uml/index.html">UML</a></div>
                 </li>
                 <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/intellij/index.html">Intellij IDEA</a></div>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/intellij/index.html">IntelliJ IDEA</a></div>
                 </li>
                 <li>
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/gitAndGithub/index.html">Git and GitHub</a></div>
@@ -237,16 +237,17 @@
         </div>
       </nav>
 
+
       <div id="content-wrapper">
-        <h1 id="software-engineering-for-self-directed-learners"><span class="text-dark"><small><strong><strong>Software Engineering for Self-Directed Learners »</strong></strong></small></span><a class="fa fa-anchor" href="#software-engineering-for-self-directed-learners" onclick="event.stopPropagation()"></a></h1>
+        <h1 id="software-engineering-for-self-directed-learners"><span id="software-engineering-for-self-directed-learners" class="anchor"></span><span class="text-dark"><small><strong><strong>Software Engineering for Self-Directed Learners »</strong></strong></small></span><a class="fa fa-anchor" href="#software-engineering-for-self-directed-learners" onclick="event.stopPropagation()"></a></h1>
         <link rel="stylesheet" href="/se-book/css/textbook.css">
         <div class="website-content">
           <div id="main">
-            <h1 id="refactoring">Refactoring<a class="fa fa-anchor" href="#refactoring" onclick="event.stopPropagation()"></a></h1>
+            <h1 id="refactoring"><span id="refactoring" class="anchor"></span>Refactoring<a class="fa fa-anchor" href="#refactoring" onclick="event.stopPropagation()"></a></h1>
             <div>
               <p>
               <div>
-                <h4 id="what"><span>What</span><a class="fa fa-anchor" href="#what" onclick="event.stopPropagation()"></a></h4>
+                <h4 id="what"><span id="what" class="anchor"></span><span>What</span><a class="fa fa-anchor" href="#what" onclick="event.stopPropagation()"></a></h4>
               </div>
               </p>
               <div>
@@ -266,7 +267,7 @@
                 <b-modal id="modal:refactoring-catalog-what" hide-footer size modal-class="mb-zoom" ref="modal:refactoring-catalog-what" class="algolia-no-index"><template slot="modal-title"><strong>Refactoring Catalogs</strong></template>
                   <div>
                     <ul>
-                      <li>Java: <a href="http://refactoring.com/catalog/">http://refactoring.com/catalog/</a> - This is a list of common refactorings, maintained by Martin Fowler, a leading authority on refactoring. He is also the author of the ‘bestseller’ on refactoring: <a href="https://martinfowler.com/books/#refactoring">Refactoring: Improving the Design of Existing Code</a></li>
+                      <li>Java: <a href="http://refactoring.com/catalog/">http://refactoring.com/catalog/</a> -- This is a list of common refactorings maintained by Martin Fowler, a leading authority on refactoring. He is also the author of the ‘bestseller’ on refactoring: <a href="https://martinfowler.com/books/#refactoring">Refactoring: Improving the Design of Existing Code</a></li>
                       <li>Python: <a href="https://refactoring.guru/refactoring/catalog">https://refactoring.guru/refactoring/catalog</a> -- A catalog of refactorings applicable to Python code.</li>
                     </ul>
                   </div>
@@ -292,7 +293,7 @@
                           </td>
                           <td valign="center">&nbsp;→&nbsp;</td>
                           <td valign="top">
-                            <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">if</span> (isSpecialDeal()){
+                            <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">if</span> (isSpecialDeal()) {
 </span><span>    total = price * <span class="hljs-number">0.95</span>;
 </span><span>} <span class="hljs-keyword">else</span> {
 </span><span>    total = price * <span class="hljs-number">0.98</span>;
@@ -343,9 +344,9 @@
                       <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">printOwing</span><span class="hljs-params">()</span> </span>{
 </span><span>    printBanner();
 </span><span>
-</span><span>    <span class="hljs-comment">//print details</span>
-</span><span>    System.out.println(<span class="hljs-string">"name:	"</span> + name);
-</span><span>    System.out.println(<span class="hljs-string">"amount	"</span> + getOutstanding());
+</span><span>    <span class="hljs-comment">// print details</span>
+</span><span>    System.out.println(<span class="hljs-string">&quot;name:	&quot;</span> + name);
+</span><span>    System.out.println(<span class="hljs-string">&quot;amount	&quot;</span> + getOutstanding());
 </span><span>}
 </span></code></pre>
                       <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
@@ -354,35 +355,35 @@
 </span><span>    printDetails(getOutstanding());
 </span><span>}
 </span><span>
-</span><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">printDetails</span> <span class="hljs-params">(<span class="hljs-keyword">double</span> outstanding)</span> </span>{
-</span><span>    System.out.println(<span class="hljs-string">"name:	"</span> + name);
-</span><span>    System.out.println(<span class="hljs-string">"amount	"</span> + outstanding);
+</span><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">printDetails</span><span class="hljs-params">(<span class="hljs-keyword">double</span> outstanding)</span> </span>{
+</span><span>    System.out.println(<span class="hljs-string">&quot;name:	&quot;</span> + name);
+</span><span>    System.out.println(<span class="hljs-string">&quot;amount	&quot;</span> + outstanding);
 </span><span>}
 </span></code></pre>
                     </div>
                   </div>
                   <div class="alt-python">
                     <div>
-                      <pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_owing</span><span class="hljs-params">()</span>:</span>
+                      <pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_owing</span>():</span>
 </span><span>    print_banner()
 </span><span>
-</span><span>    //<span class="hljs-keyword">print</span> details
-</span><span>    print(<span class="hljs-string">"name:	"</span> + name)
-</span><span>    print(<span class="hljs-string">"amount	"</span> + get_outstanding())
+</span><span>    <span class="hljs-comment"># print details</span>
+</span><span>    print(<span class="hljs-string">&quot;name:	&quot;</span> + name)
+</span><span>    print(<span class="hljs-string">&quot;amount	&quot;</span> + get_outstanding())
 </span></code></pre>
                       <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
-                      <pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_owing</span><span class="hljs-params">()</span>:</span>
+                      <pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_owing</span>():</span>
 </span><span>    print_banner()
 </span><span>    print_details(get_outstanding())
 </span><span>
-</span><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_details</span><span class="hljs-params">(amount)</span>:</span>
-</span><span>    print(<span class="hljs-string">"name:	"</span> + name)
-</span><span>    print(<span class="hljs-string">"amount	"</span> + amount)
+</span><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_details</span>(<span class="hljs-params">amount</span>):</span>
+</span><span>    print(<span class="hljs-string">&quot;name:	&quot;</span> + name)
+</span><span>    print(<span class="hljs-string">&quot;amount	&quot;</span> + amount)
 </span></code></pre>
                     </div>
                   </div>
                 </box>
-                <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Some IDEs have built in support for basic refactorings such as automatically renaming a variable/method/class in all places it has been used.</p>
+                <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Some IDEs have builtin support for basic refactorings such as automatically renaming a variable/method/class in all places it has been used.</p>
                 <p>
                   <font color="red"><big><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></big></font> Refactoring, even if done with the aid of an IDE, may still result in regressions. Therefore, each small refactoring should be followed by regression testing.
                 </p>
@@ -391,15 +392,15 @@
             <div>
               <p>
               <div>
-                <h4 id="how"><span>How</span><a class="fa fa-anchor" href="#how" onclick="event.stopPropagation()"></a></h4>
+                <h4 id="how"><span id="how" class="anchor"></span><span>How</span><a class="fa fa-anchor" href="#how" onclick="event.stopPropagation()"></a></h4>
               </div>
               </p>
               <div>
-                <p>Given below are some more commonly used refactorings. A more comprehensive list is available at <trigger trigger="click" for="modal:refactoring-catalog-how"> refactoring-catalog </trigger>.</p>
+                <p>Given below are some more commonly used refactorings. A more comprehensive list is available at <trigger trigger="click" for="modal:refactoring-catalog-how">refactoring-catalog</trigger>.</p>
                 <b-modal id="modal:refactoring-catalog-how" hide-footer size modal-class="mb-zoom" ref="modal:refactoring-catalog-how" class="algolia-no-index"><template slot="modal-title"><strong>Refactoring Catalog</strong></template>
                   <div>
                     <ul>
-                      <li>Java: <a href="http://refactoring.com/catalog/">http://refactoring.com/catalog/</a> - This is a list of common refactorings, maintained by Martin Fowler, a leading authority on refactoring. He is also the author of the ‘bestseller’ on refactoring: <a href="https://martinfowler.com/books/#refactoring">Refactoring: Improving the Design of Existing Code</a></li>
+                      <li>Java: <a href="http://refactoring.com/catalog/">http://refactoring.com/catalog/</a> -- This is a list of common refactorings maintained by Martin Fowler, a leading authority on refactoring. He is also the author of the ‘bestseller’ on refactoring: <a href="https://martinfowler.com/books/#refactoring">Refactoring: Improving the Design of Existing Code</a></li>
                       <li>Python: <a href="https://refactoring.guru/refactoring/catalog">https://refactoring.guru/refactoring/catalog</a> -- A catalog of refactorings applicable to Python code.</li>
                     </ul>
                   </div>
@@ -421,7 +422,7 @@
             <div>
               <p>
               <div>
-                <h4 id="when"><span>When</span><a class="fa fa-anchor" href="#when" onclick="event.stopPropagation()"></a></h4>
+                <h4 id="when"><span id="when" class="anchor"></span><span>When</span><a class="fa fa-anchor" href="#when" onclick="event.stopPropagation()"></a></h4>
               </div>
               </p>
               <div>
@@ -432,13 +433,11 @@
         </div>
         <p><i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i></p>
       </div>
-
-
     </div>
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.16.0</a>, generated on Thu, Oct 29, 2020, 4:09:50 PM GMT+8]</small>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.3</a>, generated on Sat, 1 May 2021, 12:33:13 GMT+8]</small>
       </div>
     </footer>
   </div>
@@ -459,7 +458,7 @@
       debug: false,
     });
   }
-  MarkBind.afterSetup(initAlgolia);
+  initAlgolia();
 </script>
 <script src="../markbind/layouts/default/scripts.js"></script>
 <script>

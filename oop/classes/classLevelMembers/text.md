@@ -6,11 +6,11 @@
 
 <div id="body">
 
-While all objects of a class has the same attributes, each object has its own copy of the attribute value.
+While all objects of a class have the same attributes, each object has its own copy of the attribute value.
 
 <box>
 
-{{ icon_example }} All `Person` objects have the `Name` attribute but the value of that attribute varies between `Person` objects.
+{{ icon_example }} All `Person` objects have the `name` attribute but the value of that attribute varies between `Person` objects.
 
 </box>
 
@@ -30,7 +30,7 @@ Similarly, when a normal method is being called, a message is being sent to the 
 
 </box>
 
-However, there can be methods related to a specific class but not suitable for sending message to a specific object of that class. Such **methods that are called using the class instead of a specific instance are called ==_class-level methods_==**.
+However, there can be methods related to a specific class but not suitable for sending messages to a specific object of that class. Such **methods that are called using the class instead of a specific instance are called ==_class-level methods_==**.
 
 <box>
 

@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.16.0">
+  <meta name="generator" content="MarkBind 2.17.3">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - Revision Control: Forking Workflow</title>
   <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
   <link rel="stylesheet" href="../../markbind/css/octicons.css">
-  <link rel="stylesheet" href="../../markbind/css/github.min.css">
+  <link rel="stylesheet" href="../../markbind/css/codeblock-dark.min.css">
   <link rel="stylesheet" href="../../markbind/css/markbind.min.css">
   <script src="../../markbind/js/polyfill.min.js"></script>
   <script src="../../markbind/js/vue.min.js"></script>
@@ -199,7 +199,7 @@
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/uml/index.html">UML</a></div>
                 </li>
                 <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/intellij/index.html">Intellij IDEA</a></div>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/intellij/index.html">IntelliJ IDEA</a></div>
                 </li>
                 <li>
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/gitAndGithub/index.html">Git and GitHub</a></div>
@@ -237,8 +237,9 @@
         </div>
       </nav>
 
+
       <div id="content-wrapper">
-        <h1 id="software-engineering-for-self-directed-learners"><span class="text-dark"><small><strong><strong>Software Engineering for Self-Directed Learners »</strong></strong></small></span><a class="fa fa-anchor" href="#software-engineering-for-self-directed-learners" onclick="event.stopPropagation()"></a></h1>
+        <h1 id="software-engineering-for-self-directed-learners"><span id="software-engineering-for-self-directed-learners" class="anchor"></span><span class="text-dark"><small><strong><strong>Software Engineering for Self-Directed Learners »</strong></strong></small></span><a class="fa fa-anchor" href="#software-engineering-for-self-directed-learners" onclick="event.stopPropagation()"></a></h1>
         <div>
           <link rel="stylesheet" href="/se-book/css/textbook.css">
           <div class="website-content">
@@ -253,17 +254,17 @@
                     </span></strong></span></p>
               <div id="title-and-body">
                 <div>
-                  <h4 id="forking-flow"><span>Forking flow</span><a class="fa fa-anchor" href="#forking-flow" onclick="event.stopPropagation()"></a></h4>
+                  <h4 id="forking-flow"><span id="forking-flow" class="anchor"></span><span>Forking flow</span><a class="fa fa-anchor" href="#forking-flow" onclick="event.stopPropagation()"></a></h4>
                 </div>
                 <div id="main">
                   <div>
                     <img src="/se-book/revisionControl/forkingWorkflow/images/diagram.png" height="330">
                     <p></p>
-                    <p><strong>In the <em>forking workflow</em>, the 'official' version of the software is kept in a remote repo designated as the 'main repo'. All team members fork the main repo create pull requests from their fork to the main repo.</strong></p>
+                    <p><strong>In the <em>forking workflow</em>, the 'official' version of the software is kept in a remote repo designated as the 'main repo'. All team members fork the main repo and create pull requests from their fork to the main repo.</strong></p>
                     <p>To illustrate how the workflow goes, let’s assume Jean wants to fix a bug in the code. Here are the steps:</p>
                     <ol>
                       <li>Jean creates a separate branch in her local repo and fixes the bug in that branch.<br>
-                        <font color="red"><big><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></big></font> Common mistake: Done the proposed changes in the <code v-pre>master</code> branch -- if Jean does that, she will not be able to have more than one open PR at any time because any changes to the <code v-pre>master</code> branch will be reflected in all open PRs.
+                        <font color="red"><big><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></big></font> Common mistake: Doing the proposed changes in the <code class="hljs inline no-lang" v-pre>master</code> branch -- if Jean does that, she will not be able to have more than one PR open at any time because any changes to the <code class="hljs inline no-lang" v-pre>master</code> branch will be reflected in all open PRs.
                       </li>
                       <li>Jean pushes the branch to her fork.</li>
                       <li>Jean creates a pull request from that branch in her fork to the main repo.</li>
@@ -271,13 +272,15 @@
                       <li>If reviewers suggested any changes, Jean updates the PR accordingly.</li>
                       <li>When reviewers are satisfied with the PR, one of the members (usually the team lead or a designated 'maintainer' of the main repo) merges the PR, which brings Jean’s code to the main repo.</li>
                       <li>Other members, realizing there is new code in the upstream repo, sync their forks with the new upstream repo (i.e. the main repo). This is done by pulling the new code to their own local repo and pushing the updated code to their own fork.<br>
-                        <font color="red"><big><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></big></font> Possible mistake: Creating another 'reverse' PR from the team repo to team member fork to syn the member's fork with the merged code. PRs are meant to go from downstream repos to upstream repos, not in the other direction.
+                        <font color="red"><big><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></big></font> Possible mistake: Creating another 'reverse' PR from the team repo to the team member's fork to sync the member's fork with the merged code. PRs are meant to go from downstream repos to upstream repos, not in the other direction.
                       </li>
                     </ol>
+                    <p>One main benefit of this workflow is that it does not require most contributors to have write permissions to the main repository. Only those who are merging PRs need write permissions.
+                      The main drawback of this workflow is the extra overhead of sending everything through forks.</p>
                   </div>
                   <div>
                     <div>
-                      <panel expanded><template slot="_header">
+                      <panel expanded><template slot="header">
                           <p><span><span aria-hidden="true" class="fas fa-paperclip"></span></span> Resources</p>
                         </template>
                         <ul>
@@ -293,13 +296,11 @@
         </div>
         <i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i>
       </div>
-
-
     </div>
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.16.0</a>, generated on Thu, Oct 29, 2020, 4:09:50 PM GMT+8]</small>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.3</a>, generated on Sat, 1 May 2021, 12:33:13 GMT+8]</small>
       </div>
     </footer>
   </div>
@@ -320,7 +321,7 @@
       debug: false,
     });
   }
-  MarkBind.afterSetup(initAlgolia);
+  initAlgolia();
 </script>
 <script src="../../markbind/layouts/default/scripts.js"></script>
 <script>

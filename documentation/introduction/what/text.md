@@ -17,7 +17,7 @@
 <div class="alt-java">
 
 * {{ icon_example }} Example of API Documentation: [String API]({{ java_api }}/java/lang/String.html).
-* {{ icon_example }} Example of tutorial-style documentation: [Java Internationalization Tutorial]({{ java_tutorial }}/i18n/index.html)
+* {{ icon_example }} Example of tutorial-style documentation: [Java Internationalization Tutorial]({{ java_tutorial }}/i18n/index.html).
 
 </div>
 <div class="alt-python">
@@ -29,7 +29,7 @@
 
 </box>
 
-2. **Documentation for _developer-as-maintainer_**: There is a need to document how a system or a component is designed, implemented and tested so that other developers can maintain and evolve the code. Writing documentation of this type is harder because of the need to explain complex internal details. However, given that readers of this type of documentation usually have access to the source code itself, only _some_ information need to be included in the documentation, as code (and code comments) can also serve as a complementary source of information.
+2. **Documentation for _developer-as-maintainer_**: There is a need to document how a system or a component is designed, implemented and tested so that other developers can maintain and evolve the code. Writing documentation of this type is harder because of the need to explain complex internal details. However, given that readers of this type of documentation usually have access to the source code itself, only _some_ information needs to be included in the documentation, as code (and code comments) can also serve as a complementary source of information.
 
 <box>
 
@@ -37,7 +37,7 @@
 
 </box>
 
-Another view proposed by Daniele Procida in [this article](https://www.divio.com/blog/documentation/), is as follows:
+Another view proposed by Daniele Procida in [this article](https://www.divio.com/blog/documentation/) is as follows:
 
 <blockquote>
 
@@ -97,7 +97,7 @@ Analogy: a reference encyclopedia article
 
 </blockquote>
 
-**Software documentation (applies to both user-facing and developer-facing) is best kept in a text format**, for the ease of version tracking. **A writer friendly source format is also desirable** as non-programmers (e.g., technical writers) may need to author/edit such documents. As a result, formats such as Markdown, Asciidoc, and PlantUML are often used for software documentation.
+**Software documentation (applies to both user-facing and developer-facing) is best kept in a text format** for ease of version tracking. **A writer-friendly source format is also desirable** as non-programmers (e.g., technical writers) may need to author/edit such documents. As a result, formats such as Markdown, AsciiDoc, and PlantUML are often used for software documentation.
 
 </div>
 

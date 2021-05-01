@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.16.0">
+  <meta name="generator" content="MarkBind 2.17.3">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - JUnit: Basic</title>
   <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="../../../markbind/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
   <link rel="stylesheet" href="../../../markbind/css/octicons.css">
-  <link rel="stylesheet" href="../../../markbind/css/github.min.css">
+  <link rel="stylesheet" href="../../../markbind/css/codeblock-dark.min.css">
   <link rel="stylesheet" href="../../../markbind/css/markbind.min.css">
   <script src="../../../markbind/js/polyfill.min.js"></script>
   <script src="../../../markbind/js/vue.min.js"></script>
@@ -199,7 +199,7 @@
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/uml/index.html">UML</a></div>
                 </li>
                 <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/intellij/index.html">Intellij IDEA</a></div>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/intellij/index.html">IntelliJ IDEA</a></div>
                 </li>
                 <li>
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/gitAndGithub/index.html">Git and GitHub</a></div>
@@ -237,8 +237,9 @@
         </div>
       </nav>
 
+
       <div id="content-wrapper">
-        <h1 id="software-engineering-for-self-directed-learners"><span class="text-dark"><small><strong><strong>Software Engineering for Self-Directed Learners »</strong></strong></small></span><a class="fa fa-anchor" href="#software-engineering-for-self-directed-learners" onclick="event.stopPropagation()"></a></h1>
+        <h1 id="software-engineering-for-self-directed-learners"><span id="software-engineering-for-self-directed-learners" class="anchor"></span><span class="text-dark"><small><strong><strong>Software Engineering for Self-Directed Learners »</strong></strong></small></span><a class="fa fa-anchor" href="#software-engineering-for-self-directed-learners" onclick="event.stopPropagation()"></a></h1>
         <div>
           <link rel="stylesheet" href="/se-book/css/textbook.css">
           <div class="website-content">
@@ -253,13 +254,13 @@
                     </span></strong></span></p>
               <div id="title-and-body">
                 <div>
-                  <h4 id="junit-basic"><span>JUnit: Basic</span><a class="fa fa-anchor" href="#junit-basic" onclick="event.stopPropagation()"></a></h4>
+                  <h4 id="junit-basic"><span id="junit-basic" class="anchor"></span><span>JUnit: Basic</span><a class="fa fa-anchor" href="#junit-basic" onclick="event.stopPropagation()"></a></h4>
                 </div>
                 <div id="main">
                   <div>
-                    <p>When writing JUnit tests for a class <code v-pre>Foo</code>, the common practice is to create a <code v-pre>FooTest</code> class, which will contain various test methods.</p>
+                    <p>When writing JUnit tests for a class <code class="hljs inline no-lang" v-pre>Foo</code>, the common practice is to create a <code class="hljs inline no-lang" v-pre>FooTest</code> class, which will contain various test methods.</p>
                     <box>
-                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Suppose we want to write tests for the <code v-pre>IntPair</code> class below.</p>
+                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Suppose we want to write tests for the <code class="hljs inline no-lang" v-pre>IntPair</code> class below.</p>
                       <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">IntPair</span> </span>{
 </span><span>    <span class="hljs-keyword">int</span> first;
 </span><span>    <span class="hljs-keyword">int</span> second;
@@ -271,18 +272,18 @@
 </span><span>
 </span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">intDivision</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> Exception </span>{
 </span><span>        <span class="hljs-keyword">if</span> (second == <span class="hljs-number">0</span>){
-</span><span>            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Exception(<span class="hljs-string">"Divisor is zero"</span>);
+</span><span>            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Exception(<span class="hljs-string">&quot;Divisor is zero&quot;</span>);
 </span><span>        }
 </span><span>        <span class="hljs-keyword">return</span> first/second;
 </span><span>    }
 </span><span>
 </span><span>    <span class="hljs-meta">@Override</span>
 </span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span><span class="hljs-params">()</span> </span>{
-</span><span>        <span class="hljs-keyword">return</span> first + <span class="hljs-string">","</span> + second;
+</span><span>        <span class="hljs-keyword">return</span> first + <span class="hljs-string">&quot;,&quot;</span> + second;
 </span><span>    }
 </span><span>}
 </span></code></pre>
-                      <p>Here's a <code v-pre>IntPairTest</code> class to match (using JUnit 5).</p>
+                      <p>Here's a <code class="hljs inline no-lang" v-pre>IntPairTest</code> class to match (using JUnit 5).</p>
                       <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">import</span> org.junit.jupiter.api.Test;
 </span><span>
 </span><span><span class="hljs-keyword">import</span> <span class="hljs-keyword">static</span> org.junit.jupiter.api.Assertions.assertEquals;
@@ -293,7 +294,7 @@
 </span><span>
 </span><span>    <span class="hljs-meta">@Test</span>
 </span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">testStringConversion</span><span class="hljs-params">()</span> </span>{
-</span><span>        assertEquals(<span class="hljs-string">"4,7"</span>, <span class="hljs-keyword">new</span> IntPair(<span class="hljs-number">4</span>, <span class="hljs-number">7</span>).toString());
+</span><span>        assertEquals(<span class="hljs-string">&quot;4,7&quot;</span>, <span class="hljs-keyword">new</span> IntPair(<span class="hljs-number">4</span>, <span class="hljs-number">7</span>).toString());
 </span><span>    }
 </span><span>
 </span><span>    <span class="hljs-meta">@Test</span>
@@ -309,7 +310,7 @@
 </span><span>            assertEquals(<span class="hljs-number">0</span>, <span class="hljs-keyword">new</span> IntPair(<span class="hljs-number">1</span>, <span class="hljs-number">0</span>).intDivision());
 </span><span>            fail(); <span class="hljs-comment">// the test should not reach this line</span>
 </span><span>        } <span class="hljs-keyword">catch</span> (Exception e) {
-</span><span>            assertEquals(<span class="hljs-string">"Divisor is zero"</span>, e.getMessage());
+</span><span>            assertEquals(<span class="hljs-string">&quot;Divisor is zero&quot;</span>, e.getMessage());
 </span><span>        }
 </span><span>    }
 </span><span>}
@@ -317,10 +318,10 @@
                     </box>
                     <p>Notes:</p>
                     <ul>
-                      <li>Each test method is marked with a <code v-pre>@Test</code> annotation.</li>
-                      <li>Tests use <code v-pre>Assert.assertEquals(expected, actual)</code> methods to compare the expected output with the actual output. If they do not match, the test will fail. JUnit comes with other similar methods such as <code v-pre>Assert.assertNull</code> and <code v-pre>Assert.assertTrue</code>.</li>
-                      <li>Java code normally use camelCase for method names e.g., <code v-pre>testStringConversion</code> but when writing test methods, sometimes another convention is used: <code v-pre>whatIsBeingTested_descriptionOfTestInputs_expectedOutcome</code> e.g., <code v-pre>intDivision_zeroDivisor_exceptionThrown</code></li>
-                      <li>There are <a href="https://howtodoinjava.com/junit5/expected-exception-example/">several ways to verify the code throws the correct exception</a>. The third test method in the example above shows one of the simpler methods. If the exception is thrown, it will be caught and further verified inside the <code v-pre>catch</code> block. But if it is not thrown as expected, the test will reach <code v-pre>Assert.fail()</code> line and will fail as a result.</li>
+                      <li>Each test method is marked with a <code class="hljs inline no-lang" v-pre>@Test</code> annotation.</li>
+                      <li>Tests use <code class="hljs inline no-lang" v-pre>Assert.assertEquals(expected, actual)</code> methods to compare the expected output with the actual output. If they do not match, the test will fail. JUnit comes with other similar methods such as <code class="hljs inline no-lang" v-pre>Assert.assertNull</code> and <code class="hljs inline no-lang" v-pre>Assert.assertTrue</code>.</li>
+                      <li>Java code normally use camelCase for method names e.g., <code class="hljs inline no-lang" v-pre>testStringConversion</code> but when writing test methods, sometimes another convention is used: <code class="hljs inline no-lang" v-pre>whatIsBeingTested_descriptionOfTestInputs_expectedOutcome</code> e.g., <code class="hljs inline no-lang" v-pre>intDivision_zeroDivisor_exceptionThrown</code></li>
+                      <li>There are <a href="https://howtodoinjava.com/junit5/expected-exception-example/">several ways to verify the code throws the correct exception</a>. The third test method in the example above shows one of the simpler methods. If the exception is thrown, it will be caught and further verified inside the <code class="hljs inline no-lang" v-pre>catch</code> block. But if it is not thrown as expected, the test will reach <code class="hljs inline no-lang" v-pre>Assert.fail()</code> line and will fail as a result.</li>
                       <li>The easiest way to run JUnit tests is to do it via the IDE. For example, in Intellij you can right-click the folder containing test classes and choose 'Run all tests...'</li>
                     </ul>
                     <div v-closeable alt="Junit tutorial video" class="non-printable">
@@ -332,7 +333,7 @@
                   </div>
                   <div>
                     <div>
-                      <panel expanded><template slot="_header">
+                      <panel expanded><template slot="header">
                           <p><span><span aria-hidden="true" class="fas fa-paperclip"></span></span> Resources</p>
                         </template>
                         <ul>
@@ -352,13 +353,11 @@
         </div>
         <i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i>
       </div>
-
-
     </div>
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.16.0</a>, generated on Thu, Oct 29, 2020, 4:09:50 PM GMT+8]</small>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.3</a>, generated on Sat, 1 May 2021, 12:33:13 GMT+8]</small>
       </div>
     </footer>
   </div>
@@ -379,7 +378,7 @@
       debug: false,
     });
   }
-  MarkBind.afterSetup(initAlgolia);
+  initAlgolia();
 </script>
 <script src="../../../markbind/layouts/default/scripts.js"></script>
 <script>

@@ -1,7 +1,7 @@
 <panel header="{{ icon_Q_A }} Statements about architecture">
 <question>
 
-Choose the correct statement
+Choose the correct statement.
 
 - [ ] a. The architecture of a system should be simple enough for all team members to understand it.
 - [ ] b. The architecture is primarily a high-level design of the system.
@@ -12,7 +12,7 @@ Choose the correct statement
 
 (a)(b)
 
-~~(c)~~ Reason: Architecture is usually designed by the Architect
+~~(c)~~ Reason: Architecture is usually designed by the Architect.
 
 ~~(d)~~ Reason: 
 >... private details of elements—details having to do solely with internal implementation—are not architectural.

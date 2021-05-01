@@ -6,7 +6,7 @@
 
 <div id="body">
 
-**A _supplementary requirements_ section can be used to capture _requirements that do not fit elsewhere_**. Typically, this is where most <trigger trigger="click" for="modal:supplementary-nfr">Non Functional Requirements</trigger> will be listed.
+**A _supplementary requirements_ section can be used to capture _requirements that do not fit elsewhere_**. Typically, this is where most <trigger trigger="click" for="modal:supplementary-nfr">Non-Functional Requirements</trigger> will be listed.
 
 <modal large header="%%Textbook »%%" id="modal:supplementary-nfr">
   <include src="../../../requirements/nonFunctionalRequirements/unit-inElsewhere-asFlat.md" boilerplate/>

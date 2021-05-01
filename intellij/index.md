@@ -1,5 +1,5 @@
 <frontmatter>
-title: "Intellij IDEA"
+title: "IntelliJ IDEA"
 pageNav: 4
 </frontmatter>
 

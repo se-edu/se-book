@@ -1,4 +1,4 @@
-<span id="title">Intellij IDEA</span>
+<span id="title">IntelliJ IDEA</span>
 
 <div id="body">
 

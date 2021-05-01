@@ -4,7 +4,7 @@
 ‘Extract method’ and ‘Inline method’ refactorings
 
 - ( ) a. are opposites of each other.
-- ( ) b. sounds like opposites but they are not.
+- ( ) b. sound like opposites but are not.
 
 <div slot="answer">
 

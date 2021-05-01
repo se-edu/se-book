@@ -6,13 +6,13 @@
 
 <div id="body">
 
-Given below are some basic strategies for generating a set of test cases by combining multiple test input combination strategies.
+Given below are some basic strategies for generating a set of test cases by combining multiple test inputs.
 
 <box>
 
 {{ icon_example }} Let's assume the SUT has the following three inputs and you have selected the given values for testing:
 
-SUT: `foo(p1 char, p2 int, p3 boolean)`
+SUT: `foo(char p1, int p2, boolean p3)`
 
 Values to test:
 
@@ -28,7 +28,7 @@ Values to test:
 
 <box>
 
-{{ icon_example }} the strategy generates 3x3x2=18 test cases
+{{ icon_example }} This strategy generates 3x3x2=18 test cases.
 
 | Test Case   | p1      | p2      | p3      |
 | :---------: | :-----: | :-----: | :-----: |
@@ -44,7 +44,7 @@ Values to test:
 
 <box>
 
-{{ icon_example }} this strategy generates 3 test cases.
+{{ icon_example }} This strategy generates 3 test cases.
 
 | Test Case   | p1      | p2      | p3      |
 | :---------: | :-----: | :-----: | :-----: |
@@ -56,13 +56,13 @@ VV/IV = Any Valid Value / Any Invalid Value
 
 </box>
 
-**The _all pairs_ strategy creates test cases so that for any given pair of inputs, all combinations between them are tested.** It is based on the observations that a bug is rarely the result of more than two interacting factors. The resulting number of test cases is lower than the _all combinations_ strategy, but higher than the _at least once_ approach.
+**The _all pairs_ strategy creates test cases so that for any given pair of inputs, all combinations between them are tested.** It is based on the observation that a bug is rarely the result of more than two interacting factors. The resulting number of test cases is lower than the _all combinations_ strategy, but higher than the _at least once_ approach.
 
 <box>
 
-{{ icon_example }} this strategy generates 9 test cases:
+{{ icon_example }} This strategy generates 9 test cases:
 
-<panel type="seamless" header="see steps">
+<panel type="seamless" header="See steps">
 
 Let's first consider inputs p1 and p2:
 
@@ -82,9 +82,9 @@ Next, let's consider p1 and p3.
 
 These values can generate <tooltip content="(a,T)(a,F)(b,T)(b,F),...">3x2=6 combinations</tooltip>, and the test cases should cover all of them.
 
-Similarly, inputs p2 and p3 generates another 6 combinations. 
+Similarly, inputs p2 and p3 generate another 6 combinations.
 
-The 9 test cases given below covers all those 9+6+6 combinations.
+The 9 test cases given below cover all the above 9+6+6 combinations.
 
 </panel>
 
@@ -119,7 +119,7 @@ A variation of this strategy is to test all pairs of inputs but only for inputs 
 
 </box>
 
-**The _random_ strategy generates test cases using one of the other strategies and then pick a subset randomly** (presumably because the original set of test cases is too big).
+**The _random_ strategy generates test cases using one of the other strategies and then picks a subset randomly** (presumably because the original set of test cases is too big).
 
 **There are other strategies that can be used too.**
 

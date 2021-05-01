@@ -6,7 +6,7 @@
 
 <div id="body">
 
-**Javadoc is a tool for generating API documentation in HTML format from doc comments in source.** In addition, modern IDEs use JavaDoc comments to generate explanatory tool tips.
+**JavaDoc is a tool for generating API documentation in HTML format from comments in the source code.** In addition, modern IDEs use JavaDoc comments to generate explanatory tooltips.
 
 <box>
 
@@ -28,13 +28,13 @@
  * @return the image at the specified URL
  * @see Image
  */
- public Image getImage(URL url, String name) {
-        try {
-            return getImage(new URL(url, name));
-        } catch (MalformedURLException e) {
-            return null;
-        }
- }
+public Image getImage(URL url, String name) {
+    try {
+        return getImage(new URL(url, name));
+    } catch (MalformedURLException e) {
+        return null;
+    }
+}
 ```
 
 {{ icon_example }} Generated HTML documentation:

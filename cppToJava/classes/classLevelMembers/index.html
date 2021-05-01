@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.16.0">
+  <meta name="generator" content="MarkBind 2.17.3">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - C++ to Java: Objects: Getters and Setters</title>
   <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="../../../markbind/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
   <link rel="stylesheet" href="../../../markbind/css/octicons.css">
-  <link rel="stylesheet" href="../../../markbind/css/github.min.css">
+  <link rel="stylesheet" href="../../../markbind/css/codeblock-dark.min.css">
   <link rel="stylesheet" href="../../../markbind/css/markbind.min.css">
   <script src="../../../markbind/js/polyfill.min.js"></script>
   <script src="../../../markbind/js/vue.min.js"></script>
@@ -199,7 +199,7 @@
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/uml/index.html">UML</a></div>
                 </li>
                 <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/intellij/index.html">Intellij IDEA</a></div>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/intellij/index.html">IntelliJ IDEA</a></div>
                 </li>
                 <li>
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/gitAndGithub/index.html">Git and GitHub</a></div>
@@ -237,8 +237,9 @@
         </div>
       </nav>
 
+
       <div id="content-wrapper">
-        <h1 id="software-engineering-for-self-directed-learners"><span class="text-dark"><small><strong><strong>Software Engineering for Self-Directed Learners »</strong></strong></small></span><a class="fa fa-anchor" href="#software-engineering-for-self-directed-learners" onclick="event.stopPropagation()"></a></h1>
+        <h1 id="software-engineering-for-self-directed-learners"><span id="software-engineering-for-self-directed-learners" class="anchor"></span><span class="text-dark"><small><strong><strong>Software Engineering for Self-Directed Learners »</strong></strong></small></span><a class="fa fa-anchor" href="#software-engineering-for-self-directed-learners" onclick="event.stopPropagation()"></a></h1>
         <div>
           <link rel="stylesheet" href="/se-book/css/textbook.css">
           <div class="website-content">
@@ -253,16 +254,16 @@
                     </span></strong></span></p>
               <div id="title-and-body">
                 <div>
-                  <h4 id="class-level-members"><span>Class-level members</span><a class="fa fa-anchor" href="#class-level-members" onclick="event.stopPropagation()"></a></h4>
+                  <h4 id="class-level-members"><span id="class-level-members" class="anchor"></span><span>Class-level members</span><a class="fa fa-anchor" href="#class-level-members" onclick="event.stopPropagation()"></a></h4>
                 </div>
                 <div id="main">
                   <div>
                     <p>The content below is an extract from <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small>, with slight adaptations.</p>
                     <div class="indented">
-                      <p>When a number of objects are created from the same class blueprint, they each have their own distinct copies of instance variables. In the case of a <code v-pre>Bicycle</code> class, the instance variables are gear, and speed. Each Bicycle object has its own values for these variables, stored in different memory locations.</p>
-                      <p><strong>Sometimes, you want to have variables that are common to all objects. This is accomplished with the <code v-pre>static</code> modifier.</strong> Fields that have the <code v-pre>static</code> modifier in their declaration are called <em>static fields</em> or <em>class variables</em>. They are associated with the class, rather than with any object. Every instance of the class shares a class variable, which is in one fixed location in memory. Any object can change the value of a class variable, but class variables can also be manipulated without creating an instance of the class.</p>
+                      <p>When a number of objects are created from the same class blueprint, they each have their own distinct copies of instance variables. In the case of a <code class="hljs inline no-lang" v-pre>Bicycle</code> class, the instance variables are gear, and speed. Each Bicycle object has its own values for these variables, stored in different memory locations.</p>
+                      <p><strong>Sometimes, you want to have variables that are common to all objects. This is accomplished with the <code class="hljs inline no-lang" v-pre>static</code> modifier.</strong> Fields that have the <code class="hljs inline no-lang" v-pre>static</code> modifier in their declaration are called <em>static fields</em> or <em>class variables</em>. They are associated with the class, rather than with any object. Every instance of the class shares a class variable, which is in one fixed location in memory. Any object can change the value of a class variable, but class variables can also be manipulated without creating an instance of the class.</p>
                       <box>
-                        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Suppose you want to create a number of Bicycle objects and assign each a serial number, beginning with 1 for the first object. This ID number is unique to each object and is therefore an instance variable. At the same time, you need a field to keep track of how many <code v-pre>Bicycle</code> objects have been created so that you know what ID to assign to the next one. Such a field is not related to any individual object, but to the class as a whole. For this you need a class variable, <code v-pre>numberOfBicycles</code>, as follows:</p>
+                        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Suppose you want to create a number of Bicycle objects and assign each a serial number, beginning with 1 for the first object. This ID number is unique to each object and is therefore an instance variable. At the same time, you need a field to keep track of how many <code class="hljs inline no-lang" v-pre>Bicycle</code> objects have been created so that you know what ID to assign to the next one. Such a field is not related to any individual object, but to the class as a whole. For this you need a class variable, <code class="hljs inline no-lang" v-pre>numberOfBicycles</code>, as follows:</p>
                         <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bicycle</span> </span>{
 </span><span>
 </span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> gear;
@@ -277,10 +278,10 @@
 </span><span>}
 </span></code></pre>
                       </box>
-                      <p><strong><em>Class variables</em> are referenced by the class name itself</strong>, as in <code v-pre>Bicycle.numberOfBicycles</code> This makes it clear that they are class variables.</p>
-                      <p>The Java programming language supports static methods as well as static variables. Static methods, which have the <code v-pre>static</code> modifier in their declarations, should be invoked with the class name, without the need for creating an instance of the class, as in <code v-pre>ClassName.methodName(args)</code></p>
-                      <p><strong>The <code v-pre>static</code> modifier, in combination with the <code v-pre>final</code> modifier, is also used to define constants.</strong> The final modifier indicates that the value of this field cannot change. For example, the following variable declaration defines a constant named <code v-pre>PI</code>, whose value is an approximation of pi (the ratio of the circumference of a circle to its diameter):
-                        <code v-pre>static final double PI = 3.141592653589793;</code>
+                      <p><strong><em>Class variables</em> are referenced by the class name itself</strong>, as in <code class="hljs inline no-lang" v-pre>Bicycle.numberOfBicycles</code> This makes it clear that they are class variables.</p>
+                      <p>The Java programming language supports static methods as well as static variables. Static methods, which have the <code class="hljs inline no-lang" v-pre>static</code> modifier in their declarations, should be invoked with the class name, without the need for creating an instance of the class, as in <code class="hljs inline no-lang" v-pre>ClassName.methodName(args)</code></p>
+                      <p><strong>The <code class="hljs inline no-lang" v-pre>static</code> modifier, in combination with the <code class="hljs inline no-lang" v-pre>final</code> modifier, is also used to define constants.</strong> The final modifier indicates that the value of this field cannot change. For example, the following variable declaration defines a constant named <code class="hljs inline no-lang" v-pre>PI</code>, whose value is an approximation of pi (the ratio of the circumference of a circle to its diameter):
+                        <code class="hljs inline no-lang" v-pre>static final double PI = 3.141592653589793;</code>
                       </p>
                       <box>
                         <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Here is an example with class-level variables and class-level methods:</p>
@@ -291,7 +292,7 @@
 </span><span>
 </span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> id;
 </span><span>
-</span><span class="highlighted">    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> numberOfBicycles = <span class="hljs-number">0</span>;
+</span><span>    <span class="highlighted"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> numberOfBicycles = <span class="hljs-number">0</span>;</span>
 </span><span>
 </span><span>
 </span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Bicycle</span><span class="hljs-params">(<span class="hljs-keyword">int</span> startSpeed, <span class="hljs-keyword">int</span> startGear)</span> </span>{
@@ -306,7 +307,7 @@
 </span><span>        <span class="hljs-keyword">return</span> id;
 </span><span>    }
 </span><span>
-</span><span class="highlighted">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getNumberOfBicycles</span><span class="hljs-params">()</span> </span>{
+</span><span>    <span class="highlighted"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getNumberOfBicycles</span><span class="hljs-params">()</span> </span>{</span>
 </span><span>        <span class="hljs-keyword">return</span> numberOfBicycles;
 </span><span>    }
 </span><span>
@@ -329,25 +330,25 @@
                       </box>
                     </div>
                     <box>
-                      <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Explanation of <strong><code v-pre>System.out.println(...)</code></strong>:</p>
+                      <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Explanation of <strong><code class="hljs inline no-lang" v-pre>System.out.println(...)</code></strong>:</p>
                       <ul>
-                        <li><code v-pre>out</code> is a class-level public attribute of the <code v-pre>System</code> class.</li>
-                        <li><code v-pre>println</code> is a instance level method of the <code v-pre>out</code> object.</li>
+                        <li><code class="hljs inline no-lang" v-pre>out</code> is a class-level public attribute of the <code class="hljs inline no-lang" v-pre>System</code> class.</li>
+                        <li><code class="hljs inline no-lang" v-pre>println</code> is an instance level method of the <code class="hljs inline no-lang" v-pre>out</code> object.</li>
                       </ul>
                     </box>
                   </div>
                   <div>
                     <div>
-                      <panel expanded><template slot="_header">
+                      <panel expanded><template slot="header">
                           <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                         </template>
                         <div>
                           <div>
-                            <panel type="dark" expanded id="key-exercise-add-getmaxradius-to-the-circle-class"><template slot="_header">
-                                <h3 id="key-exercise-add-getmaxradius-to-the-circle-class"><small><small><span><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></span> [Key Exercise] add getMaxRadius to the <code v-pre>Circle</code> class</small></small><a class="fa fa-anchor" href="#key-exercise-add-getmaxradius-to-the-circle-class" onclick="event.stopPropagation()"></a></h3>
+                            <panel type="dark" expanded id="key-exercise-add-getmaxradius-to-the-circle-class"><template slot="header">
+                                <h3 id="key-exercise-add-getmaxradius-to-the-circle-class"><span id="key-exercise-add-getmaxradius-to-the-circle-class" class="anchor"></span><small><small><span><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></span> [Key Exercise] add getMaxRadius to the <code class="hljs inline no-lang" v-pre>Circle</code> class</small></small><a class="fa fa-anchor" href="#key-exercise-add-getmaxradius-to-the-circle-class" onclick="event.stopPropagation()"></a></h3>
                               </template>
                               <question>
-                                <p>Consider the <code v-pre>Circle</code> class below:</p>
+                                <p>Consider the <code class="hljs inline no-lang" v-pre>Circle</code> class below:</p>
                                 <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Circle</span> </span>{
 </span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> x;
 </span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> y;
@@ -395,18 +396,18 @@
 </span></code></pre>
                                 <p>Update it as follows so that code given below produces the given output.</p>
                                 <ul>
-                                  <li>Add a class-level <code v-pre>getMaxRadius</code> method that returns the maximum radius that has been used in all <code v-pre>Circle</code> objects created thus far.</li>
+                                  <li>Add a class-level <code class="hljs inline no-lang" v-pre>getMaxRadius</code> method that returns the maximum radius that has been used in all <code class="hljs inline no-lang" v-pre>Circle</code> objects created thus far.</li>
                                 </ul>
                                 <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
 </span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
 </span><span>        Circle c = <span class="hljs-keyword">new</span> Circle();
-</span><span>        System.out.println(<span class="hljs-string">"max radius used so far : "</span> + Circle.getMaxRadius());
+</span><span>        System.out.println(<span class="hljs-string">&quot;max radius used so far : &quot;</span> + Circle.getMaxRadius());
 </span><span>        c = <span class="hljs-keyword">new</span> Circle(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">10</span>);
-</span><span>        System.out.println(<span class="hljs-string">"max radius used so far : "</span> + Circle.getMaxRadius());
+</span><span>        System.out.println(<span class="hljs-string">&quot;max radius used so far : &quot;</span> + Circle.getMaxRadius());
 </span><span>        c = <span class="hljs-keyword">new</span> Circle(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, -<span class="hljs-number">15</span>);
-</span><span>        System.out.println(<span class="hljs-string">"max radius used so far : "</span> + Circle.getMaxRadius());
+</span><span>        System.out.println(<span class="hljs-string">&quot;max radius used so far : &quot;</span> + Circle.getMaxRadius());
 </span><span>        c.setRadius(<span class="hljs-number">12</span>);
-</span><span>        System.out.println(<span class="hljs-string">"max radius used so far : "</span> + Circle.getMaxRadius());
+</span><span>        System.out.println(<span class="hljs-string">&quot;max radius used so far : &quot;</span> + Circle.getMaxRadius());
 </span><span>    }
 </span><span>}
 </span></code></pre>
@@ -417,7 +418,7 @@
 </span><span>max radius used so far : 12.0
 </span></code></pre>
                                 <div slot="hint" class="algolia-no-index">
-                                  <p>You can use a <code v-pre>static</code> variable <code v-pre>maxRadius</code> to track the maximum value used for the <code v-pre>radius</code> attribute so far.</p>
+                                  <p>You can use a <code class="hljs inline no-lang" v-pre>static</code> variable <code class="hljs inline no-lang" v-pre>maxRadius</code> to track the maximum value used for the <code class="hljs inline no-lang" v-pre>radius</code> attribute so far.</p>
                                   <p>Partial solution:</p>
                                   <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setRadius</span><span class="hljs-params">(<span class="hljs-keyword">double</span> radius)</span> </span>{
 </span><span>    <span class="hljs-keyword">this</span>.radius = Math.max(radius, <span class="hljs-number">0</span>);
@@ -441,13 +442,11 @@
         </div>
         <i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i>
       </div>
-
-
     </div>
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.16.0</a>, generated on Thu, Oct 29, 2020, 4:09:50 PM GMT+8]</small>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.3</a>, generated on Sat, 1 May 2021, 12:33:13 GMT+8]</small>
       </div>
     </footer>
   </div>
@@ -468,7 +467,7 @@
       debug: false,
     });
   }
-  MarkBind.afterSetup(initAlgolia);
+  initAlgolia();
 </script>
 <script src="../../../markbind/layouts/default/scripts.js"></script>
 <script>

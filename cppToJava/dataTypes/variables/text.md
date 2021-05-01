@@ -24,7 +24,7 @@ You can display the value of a variable using `System.out.print` or `System.out.
 
 ```java
 int hour = 11;
-int mintue = 59;
+int minute = 59;
 System.out.print("The current time is ");
 System.out.print(hour);
 System.out.print(":");

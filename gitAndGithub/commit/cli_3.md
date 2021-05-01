@@ -1,10 +1,10 @@
 Use the `commit` command to commit. The `-m` switch is used to specify the commit message.
 
 ```sh
-git commit -m "add fruits.txt"
+git commit -m "Add fruits.txt"
 ```
 
-You can use the `log` command to see the commit history
+You can use the `log` command to see the commit history.
 
 ```sh
 git log

@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.16.0">
+  <meta name="generator" content="MarkBind 2.17.3">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - Software Design Patterns: Observer</title>
   <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
   <link rel="stylesheet" href="../../markbind/css/octicons.css">
-  <link rel="stylesheet" href="../../markbind/css/github.min.css">
+  <link rel="stylesheet" href="../../markbind/css/codeblock-dark.min.css">
   <link rel="stylesheet" href="../../markbind/css/markbind.min.css">
   <script src="../../markbind/js/polyfill.min.js"></script>
   <script src="../../markbind/js/vue.min.js"></script>
@@ -199,7 +199,7 @@
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/uml/index.html">UML</a></div>
                 </li>
                 <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/intellij/index.html">Intellij IDEA</a></div>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/intellij/index.html">IntelliJ IDEA</a></div>
                 </li>
                 <li>
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/gitAndGithub/index.html">Git and GitHub</a></div>
@@ -237,15 +237,16 @@
         </div>
       </nav>
 
+
       <div id="content-wrapper">
-        <h1 id="software-engineering-for-self-directed-learners"><span class="text-dark"><small><strong><strong>Software Engineering for Self-Directed Learners »</strong></strong></small></span><a class="fa fa-anchor" href="#software-engineering-for-self-directed-learners" onclick="event.stopPropagation()"></a></h1>
+        <h1 id="software-engineering-for-self-directed-learners"><span id="software-engineering-for-self-directed-learners" class="anchor"></span><span class="text-dark"><small><strong><strong>Software Engineering for Self-Directed Learners »</strong></strong></small></span><a class="fa fa-anchor" href="#software-engineering-for-self-directed-learners" onclick="event.stopPropagation()"></a></h1>
         <div>
           <link rel="stylesheet" href="/se-book/css/textbook.css">
           <div class="website-content" id="all">
             <p><span class="dimmed"><strong><span>Design → Design Patterns →
                   </span></strong></span></p>
             <div id="title">
-              <h1 id="observer-pattern"><span>Observer pattern</span><a class="fa fa-anchor" href="#observer-pattern" onclick="event.stopPropagation()"></a></h1>
+              <h1 id="observer-pattern"><span id="observer-pattern" class="anchor"></span><span>Observer pattern</span><a class="fa fa-anchor" href="#observer-pattern" onclick="event.stopPropagation()"></a></h1>
             </div>
             <div id="main">
               <div>
@@ -253,7 +254,7 @@
                   <panel type="seamless" expanded id="what">
                     <span slot="header" class="card-title">
                       <div>
-                        <h4 id="what"><span>What</span><a class="fa fa-anchor" href="#what" onclick="event.stopPropagation()"></a></h4>
+                        <h4 id="what"><span id="what" class="anchor"></span><span>What</span><a class="fa fa-anchor" href="#what" onclick="event.stopPropagation()"></a></h4>
                       </div>
                     </span>
                     <div class="indented">
@@ -263,20 +264,20 @@
                       <p></p>
                       <div>
                         <p><strong>Context</strong></p>
-                        <p>An object (possibly, more than one) is interested to get notified when a change happens to another object. That is, some objects want to ‘observe’ another object.</p>
+                        <p>An object (possibly more than one) is interested in being notified when a change happens to another object. That is, some objects want to ‘observe’ another object.</p>
                         <box>
-                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider this scenario from the a student management system where the user is adding a new student to the system.</p>
+                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider this scenario from a student management system where the user is adding a new student to the system.</p>
                           <img src="/se-book/designPatterns/observer/what/images/sequenceDiagram.png" height="330">
                           <p></p>
                           <p>Now, assume the system has two additional views used in parallel by different users:</p>
                           <ul>
-                            <li><code v-pre>StudentListUi</code>: that accesses a list of students and</li>
-                            <li><code v-pre>StudentStatsUi</code>: that generates statistics of current students.</li>
+                            <li><code class="hljs inline no-lang" v-pre>StudentListUi</code>: that accesses a list of students and</li>
+                            <li><code class="hljs inline no-lang" v-pre>StudentStatsUi</code>: that generates statistics of current students.</li>
                           </ul>
-                          <p>When a student is added to the database using <code v-pre>NewStudentUi</code> shown above, both <code v-pre>StudentListUi</code> and <code v-pre>StudentStatsUi</code> should get updated automatically, as shown below.</p>
+                          <p>When a student is added to the database using <code class="hljs inline no-lang" v-pre>NewStudentUi</code> shown above, both <code class="hljs inline no-lang" v-pre>StudentListUi</code> and <code class="hljs inline no-lang" v-pre>StudentStatsUi</code> should get updated automatically, as shown below.</p>
                           <img src="/se-book/designPatterns/observer/what/images/studentListUI.png" height="180">
                           <p></p>
-                          <p>However, the <code v-pre>StudentList</code> object has no knowledge about <code v-pre>StudentListUi</code> and <code v-pre>StudentStatsUi</code> (note the direction of the navigability) and has no way to inform those objects. This is an example of the type of problem addressed by the Observer pattern.</p>
+                          <p>However, the <code class="hljs inline no-lang" v-pre>StudentList</code> object has no knowledge about <code class="hljs inline no-lang" v-pre>StudentListUi</code> and <code class="hljs inline no-lang" v-pre>StudentStatsUi</code> (note the direction of the navigability) and has no way to inform those objects. This is an example of the type of problem addressed by the Observer pattern.</p>
                         </box>
                         <p><strong>Problem</strong></p>
                         <p>The ‘observed’ object does not want to be coupled to objects that are ‘observing’ it.</p>
@@ -292,45 +293,45 @@
                               <p>First, create the relevant objects.</p>
                               <pre><code class="hljs java" v-pre><span>StudentList studentList = <span class="hljs-keyword">new</span> StudentList();
 </span><span>StudentListUi listUi = <span class="hljs-keyword">new</span> StudentListUi();
-</span><span>StudentStatusUi statusUi = <span class="hljs-keyword">new</span> StudentStatsUi();
+</span><span>StudentStatsUi statsUi = <span class="hljs-keyword">new</span> StudentStatsUi();
 </span></code></pre>
                             </li>
                             <li>
-                              <p>Next, the two UIs indicate to the <code v-pre>StudentList</code> that they are interested in being updated whenever <code v-pre>StudentList</code> changes. This is also known as ‘subscribing for updates’.</p>
+                              <p>Next, the two UIs indicate to the <code class="hljs inline no-lang" v-pre>StudentList</code> that they are interested in being updated whenever <code class="hljs inline no-lang" v-pre>StudentList</code> changes. This is also known as ‘subscribing for updates’.</p>
                               <pre><code class="hljs java" v-pre><span>studentList.addUi(listUi);
-</span><span>studentList.addUi(statusUi);
+</span><span>studentList.addUi(statsUi);
 </span></code></pre>
                             </li>
                             <li>
-                              <p>Within the <code v-pre>addUi</code> operation of <code v-pre>StudentList</code>, all Observer objects subscribers are added to an internal data structure called <code v-pre>observerList</code>.</p>
-                              <pre><code class="hljs java" v-pre><span><span class="hljs-comment">//StudentList class</span>
+                              <p>Within the <code class="hljs inline no-lang" v-pre>addUi</code> operation of <code class="hljs inline no-lang" v-pre>StudentList</code>, all Observer object subscribers are added to an internal data structure called <code class="hljs inline no-lang" v-pre>observerList</code>.</p>
+                              <pre><code class="hljs java" v-pre><span><span class="hljs-comment">// StudentList class</span>
 </span><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addUi</span><span class="hljs-params">(Observer o)</span> </span>{
 </span><span>    observerList.add(o);
 </span><span>}
 </span></code></pre>
                             </li>
                           </ol>
-                          <p><strong>Now, whenever the data in <code v-pre>StudentList</code> changes</strong> (e.g. when a new student is added to the <code v-pre>StudentList</code>),</p>
+                          <p><strong>Now, whenever the data in <code class="hljs inline no-lang" v-pre>StudentList</code> changes</strong> (e.g. when a new student is added to the <code class="hljs inline no-lang" v-pre>StudentList</code>),</p>
                           <ol>
                             <li>
-                              <p>All interested observers are updated by calling the <code v-pre>notifyUIs</code> operation.</p>
-                              <pre><code class="hljs java" v-pre><span><span class="hljs-comment">//StudentList class</span>
+                              <p>All interested observers are updated by calling the <code class="hljs inline no-lang" v-pre>notifyUIs</code> operation.</p>
+                              <pre><code class="hljs java" v-pre><span><span class="hljs-comment">// StudentList class</span>
 </span><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">notifyUIs</span><span class="hljs-params">()</span> </span>{
-</span><span>    <span class="hljs-comment">//for each observer in the list</span>
-</span><span>    <span class="hljs-keyword">for</span>(Observer o: observerList){
+</span><span>    <span class="hljs-comment">// for each observer in the list</span>
+</span><span>    <span class="hljs-keyword">for</span> (Observer o: observerList) {
 </span><span>        o.update();
 </span><span>    }
 </span><span>}
 </span></code></pre>
                             </li>
                             <li>
-                              <p>UIs can then pull data from the <code v-pre>StudentList</code> whenever the <code v-pre>update</code> operation is called.</p>
-                              <pre><code class="hljs java" v-pre><span><span class="hljs-comment">//StudentListUI class</span>
+                              <p>UIs can then pull data from the <code class="hljs inline no-lang" v-pre>StudentList</code> whenever the <code class="hljs inline no-lang" v-pre>update</code> operation is called.</p>
+                              <pre><code class="hljs java" v-pre><span><span class="hljs-comment">// StudentListUI class</span>
 </span><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">update</span><span class="hljs-params">()</span> </span>{
-</span><span>    <span class="hljs-comment">//refresh UI by pulling data from StudentList</span>
+</span><span>    <span class="hljs-comment">// refresh UI by pulling data from StudentList</span>
 </span><span>}
 </span></code></pre>
-                              <p>Note that <code v-pre>StudentList</code> is unaware of the exact nature of the two UIs but still manages to communicate with them via an intermediary.</p>
+                              <p>Note that <code class="hljs inline no-lang" v-pre>StudentList</code> is unaware of the exact nature of the two UIs but still manages to communicate with them via an intermediary.</p>
                             </li>
                           </ol>
                         </box>
@@ -338,30 +339,30 @@
                         <img src="/se-book/designPatterns/observer/what/images/observableInterfaceDiagram.png" height="100">
                         <p></p>
                         <ul>
-                          <li><code v-pre>&lt;&lt;Observer&gt;&gt;</code> is an interface: any class that implements it can observe an <code v-pre>&lt;&lt;Observable&gt;&gt;</code>. Any number of <code v-pre>&lt;&lt;Observer&gt;&gt;</code> objects can observe (i.e. listen to changes of) the <code v-pre>&lt;&lt;Observable&gt;&gt;</code> object.</li>
-                          <li>The <code v-pre>&lt;&lt;Observable&gt;&gt;</code> maintains a list of <code v-pre>&lt;&lt;Observer&gt;&gt;</code> objects. <code v-pre>addObserver(Observer)</code> operation adds a new <code v-pre>&lt;&lt;Observer&gt;&gt;</code> to the list of <code v-pre>&lt;&lt;Observer&gt;&gt;</code>'s.</li>
-                          <li>Whenever there is a change in the <code v-pre>&lt;&lt;Observable&gt;&gt;</code>, the <code v-pre>notifyObservers()</code> operation is called that will call the <code v-pre>update()</code> operation of all <code v-pre>&lt;&lt;Observer&gt;&gt;</code>'s in the list.</li>
+                          <li><code class="hljs inline no-lang" v-pre>&lt;&lt;Observer&gt;&gt;</code> is an interface: any class that implements it can observe an <code class="hljs inline no-lang" v-pre>&lt;&lt;Observable&gt;&gt;</code>. Any number of <code class="hljs inline no-lang" v-pre>&lt;&lt;Observer&gt;&gt;</code> objects can observe (i.e. listen to changes of) the <code class="hljs inline no-lang" v-pre>&lt;&lt;Observable&gt;&gt;</code> object.</li>
+                          <li>The <code class="hljs inline no-lang" v-pre>&lt;&lt;Observable&gt;&gt;</code> maintains a list of <code class="hljs inline no-lang" v-pre>&lt;&lt;Observer&gt;&gt;</code> objects. <code class="hljs inline no-lang" v-pre>addObserver(Observer)</code> operation adds a new <code class="hljs inline no-lang" v-pre>&lt;&lt;Observer&gt;&gt;</code> to the list of <code class="hljs inline no-lang" v-pre>&lt;&lt;Observer&gt;&gt;</code>s.</li>
+                          <li>Whenever there is a change in the <code class="hljs inline no-lang" v-pre>&lt;&lt;Observable&gt;&gt;</code>, the <code class="hljs inline no-lang" v-pre>notifyObservers()</code> operation is called that will call the <code class="hljs inline no-lang" v-pre>update()</code> operation of all <code class="hljs inline no-lang" v-pre>&lt;&lt;Observer&gt;&gt;</code>s in the list.</li>
                         </ul>
                         <box>
-                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In a GUI application, how is the Controller notified when the “save” button is clicked? UI frameworks such as JavaFX has inbuilt support for the Observer pattern.</p>
+                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In a GUI application, how is the Controller notified when the “save” button is clicked? UI frameworks such as JavaFX have inbuilt support for the Observer pattern.</p>
                         </box>
                       </div>
                       <div>
                         <div>
-                          <panel expandable class="algolia-no-index"><template slot="_header">
+                          <panel expandable class="algolia-no-index"><template slot="header">
                               <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                             </template>
                             <div>
-                              <panel class="algolia-no-index"><template slot="_header">
-                                  <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> polymorphism and Observer pattern.</p>
+                              <panel class="algolia-no-index"><template slot="header">
+                                  <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Polymorphism and the Observer pattern</p>
                                 </template>
                                 <question has-input="true">
                                   <p>Explain how polymorphism is used in the Observer pattern.</p>
                                   <div slot="answer" class="algolia-no-index">
                                     <img src="/se-book/designPatterns/observer/what/images/observableInterfaceNotation.png" height="90">
                                     <p></p>
-                                    <p>With respect to the general form of the Observer pattern given above, when the Observable object invokes the <code v-pre>notifyObservers()</code> method, it is treating all <code v-pre>ConcreteObserver</code> objects as a general type called <code v-pre>Observer</code> and calling the <code v-pre>update()</code> method of each of them. However, the <code v-pre>update()</code> method of each <code v-pre>ConcreteObserver</code> could potentially show different behavior based on its actual type. That is, <code v-pre>update()</code> method shows polymorphic behavior.</p>
-                                    <p>In the example given below, the <code v-pre>notifyUIs</code> operation can result in <code v-pre>StudentListUi</code> and <code v-pre>StudentStatsUi</code> changing their views in two different ways.</p>
+                                    <p>With respect to the general form of the Observer pattern given above, when the Observable object invokes the <code class="hljs inline no-lang" v-pre>notifyObservers()</code> method, it is treating all <code class="hljs inline no-lang" v-pre>ConcreteObserver</code> objects as a general type called <code class="hljs inline no-lang" v-pre>Observer</code> and calling the <code class="hljs inline no-lang" v-pre>update()</code> method of each of them. However, the <code class="hljs inline no-lang" v-pre>update()</code> method of each <code class="hljs inline no-lang" v-pre>ConcreteObserver</code> could potentially show different behavior based on its actual type. That is, the <code class="hljs inline no-lang" v-pre>update()</code> method shows polymorphic behavior.</p>
+                                    <p>In the example given below, the <code class="hljs inline no-lang" v-pre>notifyUIs</code> operation can result in <code class="hljs inline no-lang" v-pre>StudentListUi</code> and <code class="hljs inline no-lang" v-pre>StudentStatsUi</code> changing their views in two different ways.</p>
                                     <img src="/se-book/designPatterns/observer/what/images/studentListStudentListObserver.png" height="190">
                                     <p></p>
                                   </div>
@@ -369,7 +370,7 @@
                               </panel>
                             </div>
                             <div>
-                              <panel class="algolia-no-index"><template slot="_header">
+                              <panel class="algolia-no-index"><template slot="header">
                                   <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Observer pattern usage</p>
                                 </template>
                                 <question>
@@ -397,13 +398,11 @@
         </div>
         <i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i>
       </div>
-
-
     </div>
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.16.0</a>, generated on Thu, Oct 29, 2020, 4:09:50 PM GMT+8]</small>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.3</a>, generated on Sat, 1 May 2021, 12:33:13 GMT+8]</small>
       </div>
     </footer>
   </div>
@@ -424,7 +423,7 @@
       debug: false,
     });
   }
-  MarkBind.afterSetup(initAlgolia);
+  initAlgolia();
 </script>
 <script src="../../markbind/layouts/default/scripts.js"></script>
 <script>

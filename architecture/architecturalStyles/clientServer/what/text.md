@@ -14,7 +14,7 @@
 
 <box>
 
-{{ icon_example }} The online game and the Web application below uses the client-server style.
+{{ icon_example }} The online game and the web application below use the client-server style.
 
 <img src="{{baseUrl}}/architecture/architecturalStyles/clientServer/what/images/clientServerExamples.png" height="200" />
 

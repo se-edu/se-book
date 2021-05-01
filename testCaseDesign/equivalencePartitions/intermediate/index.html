@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.16.0">
+  <meta name="generator" content="MarkBind 2.17.3">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - Test Case Design: Equivalence Partitions: Intermediate</title>
   <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="../../../markbind/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
   <link rel="stylesheet" href="../../../markbind/css/octicons.css">
-  <link rel="stylesheet" href="../../../markbind/css/github.min.css">
+  <link rel="stylesheet" href="../../../markbind/css/codeblock-dark.min.css">
   <link rel="stylesheet" href="../../../markbind/css/markbind.min.css">
   <script src="../../../markbind/js/polyfill.min.js"></script>
   <script src="../../../markbind/js/vue.min.js"></script>
@@ -199,7 +199,7 @@
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/uml/index.html">UML</a></div>
                 </li>
                 <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/intellij/index.html">Intellij IDEA</a></div>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/intellij/index.html">IntelliJ IDEA</a></div>
                 </li>
                 <li>
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/gitAndGithub/index.html">Git and GitHub</a></div>
@@ -237,8 +237,9 @@
         </div>
       </nav>
 
+
       <div id="content-wrapper">
-        <h1 id="software-engineering-for-self-directed-learners"><span class="text-dark"><small><strong><strong>Software Engineering for Self-Directed Learners »</strong></strong></small></span><a class="fa fa-anchor" href="#software-engineering-for-self-directed-learners" onclick="event.stopPropagation()"></a></h1>
+        <h1 id="software-engineering-for-self-directed-learners"><span id="software-engineering-for-self-directed-learners" class="anchor"></span><span class="text-dark"><small><strong><strong>Software Engineering for Self-Directed Learners »</strong></strong></small></span><a class="fa fa-anchor" href="#software-engineering-for-self-directed-learners" onclick="event.stopPropagation()"></a></h1>
         <div>
           <link rel="stylesheet" href="/se-book/css/textbook.css">
           <div class="website-content">
@@ -253,56 +254,56 @@
                     </span></strong></span></p>
               <div id="title-and-body">
                 <div>
-                  <h4 id="intermediate"><span>Intermediate</span><a class="fa fa-anchor" href="#intermediate" onclick="event.stopPropagation()"></a></h4>
+                  <h4 id="intermediate"><span id="intermediate" class="anchor"></span><span>Intermediate</span><a class="fa fa-anchor" href="#intermediate" onclick="event.stopPropagation()"></a></h4>
                 </div>
                 <div id="main">
                   <div>
-                    <p>When deciding EPs of OOP methods, you need to identify EPs of all data participants that can potentially influence the behaviour of the method, such as,</p>
+                    <p>When deciding EPs of OOP methods, you need to identify the EPs of all data participants that can potentially influence the behaviour of the method, such as,</p>
                     <ul>
                       <li>the target object of the method call</li>
                       <li>input parameters of the method call</li>
-                      <li>other data/objects accessed by the method such as global variables. This category may not be applicable if using the black box approach (because the test case designer using the black box approach will not know how the method is implemented)</li>
+                      <li>other data/objects accessed by the method such as global variables. This category may not be applicable if using the black box approach (because the test case designer using the black box approach will not know how the method is implemented).</li>
                     </ul>
                     <box>
-                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider this method in the <code v-pre>DataStack</code> class:
-                        <code v-pre>push(Object o): boolean</code>
+                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider this method in the <code class="hljs inline no-lang" v-pre>DataStack</code> class:
+                        <code class="hljs inline no-lang" v-pre>push(Object o): boolean</code>
                       </p>
                       <ul>
-                        <li>Adds o to the top of the stack if the stack is not full.</li>
-                        <li>returns <code v-pre>true</code> if the push operation was a success.</li>
-                        <li>throws
+                        <li>Adds <code class="hljs inline no-lang" v-pre>o</code> to the top of the stack if the stack is not full.</li>
+                        <li>Returns <code class="hljs inline no-lang" v-pre>true</code> if the push operation was a success.</li>
+                        <li>Throws
                           <ul>
-                            <li><code v-pre>MutabilityException</code> if the global flag <code v-pre>FREEZE==true</code>.</li>
-                            <li><code v-pre>InvalidValueException</code> if o is null.</li>
+                            <li><code class="hljs inline no-lang" v-pre>MutabilityException</code> if the global flag <code class="hljs inline no-lang" v-pre>FREEZE==true</code>.</li>
+                            <li><code class="hljs inline no-lang" v-pre>InvalidValueException</code> if <code class="hljs inline no-lang" v-pre>o</code> is null.</li>
                           </ul>
                         </li>
                       </ul>
                       <p>EPs:</p>
                       <ul>
-                        <li><code v-pre>DataStack</code> object: [full] [not full]</li>
-                        <li><code v-pre>o</code>: [null] [not null]</li>
-                        <li><code v-pre>FREEZE</code>: [true][false]</li>
+                        <li><code class="hljs inline no-lang" v-pre>DataStack</code> object: [full] [not full]</li>
+                        <li><code class="hljs inline no-lang" v-pre>o</code>: [null] [not null]</li>
+                        <li><code class="hljs inline no-lang" v-pre>FREEZE</code>: [true][false]</li>
                       </ul>
                     </box>
                     <box>
-                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider a simple Minesweeper app. What are the EPs for the <code v-pre>newGame()</code> method of the <code v-pre>Logic</code> component?</p>
-                      <p>As <code v-pre>newGame()</code> does not have any parameters, the only obvious participant is the <code v-pre>Logic</code> object itself.</p>
-                      <p>Note that if the glass-box or the grey-box approach is used, other associated objects that are involved in the method might also be included as participants. For example, <code v-pre>Minefield</code> object can be considered as another participant of the <code v-pre>newGame()</code> method. Here, the black-box approach is assumed.</p>
-                      <p>Next, let us identify equivalence partitions for each participant. Will the <code v-pre>newGame()</code> method behave differently for different <code v-pre>Logic</code> objects? If yes, how will it differ? In this case, yes, it might behave differently based on the game state. Therefore, the equivalence partitions are:</p>
+                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider a simple Minesweeper app. What are the EPs for the <code class="hljs inline no-lang" v-pre>newGame()</code> method of the <code class="hljs inline no-lang" v-pre>Logic</code> component?</p>
+                      <p>As <code class="hljs inline no-lang" v-pre>newGame()</code> does not have any parameters, the only obvious participant is the <code class="hljs inline no-lang" v-pre>Logic</code> object itself.</p>
+                      <p>Note that if the glass-box or the grey-box approach is used, other associated objects that are involved in the method might also be included as participants. For example, the <code class="hljs inline no-lang" v-pre>Minefield</code> object can be considered as another participant of the <code class="hljs inline no-lang" v-pre>newGame()</code> method. Here, the black-box approach is assumed.</p>
+                      <p>Next, let us identify equivalence partitions for each participant. Will the <code class="hljs inline no-lang" v-pre>newGame()</code> method behave differently for different <code class="hljs inline no-lang" v-pre>Logic</code> objects? If yes, how will it differ? In this case, yes, it might behave differently based on the game state. Therefore, the equivalence partitions are:</p>
                       <ul>
-                        <li><code v-pre>PRE_GAME</code> : before the game starts, minefield does not exist yet</li>
-                        <li><code v-pre>READY</code> : a new minefield has been created and waiting for player’s first move</li>
-                        <li><code v-pre>IN_PLAY</code> : the current minefield is already in use</li>
-                        <li><code v-pre>WON</code>, <code v-pre>LOST</code> : let us assume the <code v-pre>newGame</code> behaves the same way for these two values</li>
+                        <li><code class="hljs inline no-lang" v-pre>PRE_GAME</code>: before the game starts, minefield does not exist yet</li>
+                        <li><code class="hljs inline no-lang" v-pre>READY</code>: a new minefield has been created and the app is waiting for the player’s first move</li>
+                        <li><code class="hljs inline no-lang" v-pre>IN_PLAY</code>: the current minefield is already in use</li>
+                        <li><code class="hljs inline no-lang" v-pre>WON</code>, <code class="hljs inline no-lang" v-pre>LOST</code>: let us assume that <code class="hljs inline no-lang" v-pre>newGame()</code> behaves the same way for these two values</li>
                       </ul>
                     </box>
                     <box>
-                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider the <code v-pre>Logic</code> component of the Minesweeper application. What are the EPs for the <code v-pre>markCellAt(int x, int y)</code> method?. The partitions in <strong>bold</strong> represent valid inputs.</p>
+                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider the <code class="hljs inline no-lang" v-pre>Logic</code> component of the Minesweeper application. What are the EPs for the <code class="hljs inline no-lang" v-pre>markCellAt(int x, int y)</code> method? The partitions in <strong>bold</strong> represent valid inputs.</p>
                       <ul>
-                        <li><code v-pre>Logic</code>: PRE_GAME, <strong>READY</strong>, <strong>IN_PLAY</strong>, WON, LOST</li>
-                        <li><code v-pre>x</code>: [MIN_INT..-1] <strong>[0..(W-1)]</strong> [W..MAX_INT] <span class="dimmed">(assuming a minefield size of WxH)</span></li>
-                        <li><code v-pre>y</code>: [MIN_INT..-1] <strong>[0..(H-1)]</strong> [H..MAX_INT]</li>
-                        <li><code v-pre>Cell</code> at <code v-pre>(x,y)</code>: <strong>HIDDEN</strong>, MARKED, CLEARED</li>
+                        <li><code class="hljs inline no-lang" v-pre>Logic</code>: PRE_GAME, <strong>READY</strong>, <strong>IN_PLAY</strong>, WON, LOST</li>
+                        <li><code class="hljs inline no-lang" v-pre>x</code>: [MIN_INT..-1] <strong>[0..(W-1)]</strong> [W..MAX_INT] <span class="dimmed">(assuming a minefield size of WxH)</span></li>
+                        <li><code class="hljs inline no-lang" v-pre>y</code>: [MIN_INT..-1] <strong>[0..(H-1)]</strong> [H..MAX_INT]</li>
+                        <li><code class="hljs inline no-lang" v-pre>Cell</code> at <code class="hljs inline no-lang" v-pre>(x,y)</code>: <strong>HIDDEN</strong>, MARKED, CLEARED</li>
                       </ul>
                     </box>
                   </div>
@@ -314,13 +315,11 @@
         </div>
         <i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i>
       </div>
-
-
     </div>
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.16.0</a>, generated on Thu, Oct 29, 2020, 4:09:50 PM GMT+8]</small>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.3</a>, generated on Sat, 1 May 2021, 12:33:13 GMT+8]</small>
       </div>
     </footer>
   </div>
@@ -341,7 +340,7 @@
       debug: false,
     });
   }
-  MarkBind.afterSetup(initAlgolia);
+  initAlgolia();
 </script>
 <script src="../../../markbind/layouts/default/scripts.js"></script>
 <script>

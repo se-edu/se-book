@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.16.0">
+  <meta name="generator" content="MarkBind 2.17.3">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - C++ to Java: Miscellaneous Topics: Casting</title>
   <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="../../../markbind/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
   <link rel="stylesheet" href="../../../markbind/css/octicons.css">
-  <link rel="stylesheet" href="../../../markbind/css/github.min.css">
+  <link rel="stylesheet" href="../../../markbind/css/codeblock-dark.min.css">
   <link rel="stylesheet" href="../../../markbind/css/markbind.min.css">
   <script src="../../../markbind/js/polyfill.min.js"></script>
   <script src="../../../markbind/js/vue.min.js"></script>
@@ -199,7 +199,7 @@
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/uml/index.html">UML</a></div>
                 </li>
                 <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/intellij/index.html">Intellij IDEA</a></div>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/intellij/index.html">IntelliJ IDEA</a></div>
                 </li>
                 <li>
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/gitAndGithub/index.html">Git and GitHub</a></div>
@@ -237,8 +237,9 @@
         </div>
       </nav>
 
+
       <div id="content-wrapper">
-        <h1 id="software-engineering-for-self-directed-learners"><span class="text-dark"><small><strong><strong>Software Engineering for Self-Directed Learners »</strong></strong></small></span><a class="fa fa-anchor" href="#software-engineering-for-self-directed-learners" onclick="event.stopPropagation()"></a></h1>
+        <h1 id="software-engineering-for-self-directed-learners"><span id="software-engineering-for-self-directed-learners" class="anchor"></span><span class="text-dark"><small><strong><strong>Software Engineering for Self-Directed Learners »</strong></strong></small></span><a class="fa fa-anchor" href="#software-engineering-for-self-directed-learners" onclick="event.stopPropagation()"></a></h1>
         <div>
           <link rel="stylesheet" href="/se-book/css/textbook.css">
           <div class="website-content">
@@ -253,20 +254,20 @@
                     </span></strong></span></p>
               <div id="title-and-body">
                 <div>
-                  <h4 id="casting"><span>Casting</span><a class="fa fa-anchor" href="#casting" onclick="event.stopPropagation()"></a></h4>
+                  <h4 id="casting"><span id="casting" class="anchor"></span><span>Casting</span><a class="fa fa-anchor" href="#casting" onclick="event.stopPropagation()"></a></h4>
                 </div>
                 <div id="main">
                   <div>
-                    <p><strong><mark><em>Casting</em></mark> is the action of converting from one type to another</strong>. You can use the <code v-pre>(newType)</code> syntax to cast a value to a type named <code v-pre>newType</code>.</p>
+                    <p><strong><mark><em>Casting</em></mark> is the action of converting from one type to another</strong>. You can use the <code class="hljs inline no-lang" v-pre>(newType)</code> syntax to cast a value to a type named <code class="hljs inline no-lang" v-pre>newType</code>.</p>
                     <p><strong>When you cast a primitive value to another type, there may be a loss of precision.</strong></p>
                     <box>
-                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The code below casts a <code v-pre>double</code> value to an <code v-pre>int</code> value and casts it back to a <code v-pre>double</code>. Note the loss of precision.</p>
+                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The code below casts a <code class="hljs inline no-lang" v-pre>double</code> value to an <code class="hljs inline no-lang" v-pre>int</code> value and casts it back to a <code class="hljs inline no-lang" v-pre>double</code>. Note the loss of precision.</p>
                       <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">double</span> d = <span class="hljs-number">5.3</span>;
-</span><span>System.out.println(<span class="hljs-string">"Before casting to an int: "</span> + d);
+</span><span>System.out.println(<span class="hljs-string">&quot;Before casting to an int: &quot;</span> + d);
 </span><span><span class="hljs-keyword">int</span> i = (<span class="hljs-keyword">int</span>)d; <span class="hljs-comment">// cast d to an int</span>
-</span><span>System.out.println(<span class="hljs-string">"After casting to an int: "</span> + i);
+</span><span>System.out.println(<span class="hljs-string">&quot;After casting to an int: &quot;</span> + i);
 </span><span>d = (<span class="hljs-keyword">double</span>)i; <span class="hljs-comment">// cast i back to a double</span>
-</span><span>System.out.println(<span class="hljs-string">"After casting back a double: "</span> + d);
+</span><span>System.out.println(<span class="hljs-string">&quot;After casting back a double: &quot;</span> + d);
 </span></code></pre>
                       <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
                       <pre><code class="hljs" v-pre><span>Before casting to an int: 5.3
@@ -279,25 +280,25 @@
                       <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Assume the following class hierarchy:</p>
                       <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Animal</span></span>{
 </span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">speak</span><span class="hljs-params">()</span></span>{
-</span><span>        System.out.println(<span class="hljs-string">"I'm an animal"</span>);
+</span><span>        System.out.println(<span class="hljs-string">&quot;I&#x27;m an animal&quot;</span>);
 </span><span>    }
 </span><span>}
 </span><span>
 </span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Cat</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Animal</span></span>{
 </span><span>    <span class="hljs-meta">@Override</span>
 </span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">speak</span><span class="hljs-params">()</span> </span>{
-</span><span>        System.out.println(<span class="hljs-string">"I'm a Cat"</span>);
+</span><span>        System.out.println(<span class="hljs-string">&quot;I&#x27;m a Cat&quot;</span>);
 </span><span>    }
 </span><span>}
 </span><span>
 </span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DomesticCat</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Cat</span></span>{
 </span><span>    <span class="hljs-meta">@Override</span>
 </span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">speak</span><span class="hljs-params">()</span> </span>{
-</span><span>        System.out.println(<span class="hljs-string">"I'm a DomesticCat"</span>);
+</span><span>        System.out.println(<span class="hljs-string">&quot;I&#x27;m a DomesticCat&quot;</span>);
 </span><span>    }
 </span><span>}
 </span></code></pre>
-                      <p>The <code v-pre>foo</code> method below downcasts an <code v-pre>Animal</code> object to its subclasses.</p>
+                      <p>The <code class="hljs inline no-lang" v-pre>foo</code> method below downcasts an <code class="hljs inline no-lang" v-pre>Animal</code> object to its subclasses.</p>
                       <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">foo</span><span class="hljs-params">(Animal a)</span></span>{
 </span><span>    a.speak();
 </span><span>    Cat c = (Cat)a; <span class="hljs-comment">// downcast a to a Cat</span>
@@ -309,7 +310,7 @@
                     </box>
                     <p><strong><mark><em>Upcasting</em></mark> is when you cast an object reference from a subclass to a superclass.</strong> However, upcasting is done automatically by the compiler even if you do not specify it explicitly.</p>
                     <box>
-                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This example upcasts a <code v-pre>Cat</code> object to its superclass <code v-pre>Animal</code>:</p>
+                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This example upcasts a <code class="hljs inline no-lang" v-pre>Cat</code> object to its superclass <code class="hljs inline no-lang" v-pre>Animal</code>:</p>
                       <pre><code class="hljs java" v-pre><span>Cat c = <span class="hljs-keyword">new</span> Cat();
 </span><span>Animal a1 = (Animal)c; <span class="hljs-comment">//upcasting c to the Animal class</span>
 </span><span>Animal a2 = c; <span class="hljs-comment">//upcasting is implicit</span>
@@ -318,7 +319,7 @@
                     </box>
                     <p>Note that due to polymorphism, the behavior of the object will reflect the actual type of the object irrespective of the type of the variable holding a reference to it.</p>
                     <box>
-                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The call to the <code v-pre>speak()</code> method in the code below always executes the <code v-pre>speak()</code> method of the <code v-pre>DomesticCat</code> class because the actual type of the object remains <code v-pre>DomesticCat</code> although the reference to it is being downcast/upcast to various other types.</p>
+                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The call to the <code class="hljs inline no-lang" v-pre>speak()</code> method in the code below always executes the <code class="hljs inline no-lang" v-pre>speak()</code> method of the <code class="hljs inline no-lang" v-pre>DomesticCat</code> class because the actual type of the object remains <code class="hljs inline no-lang" v-pre>DomesticCat</code> although the reference to it is being downcast/upcast to various other types.</p>
                       <pre><code class="hljs java" v-pre><span>Animal a = <span class="hljs-keyword">new</span> DomesticCat(); <span class="hljs-comment">//implicit upcast</span>
 </span><span>a.speak();
 </span><span>Cat c = (Cat)a; <span class="hljs-comment">//downcast</span>
@@ -332,9 +333,9 @@
 </span><span>I'm a DomesticCat
 </span></code></pre>
                     </box>
-                    <p><strong>Casting to an incompatible type can result in a <code v-pre>ClassCastException</code> at runtime.</strong></p>
+                    <p><strong>Casting to an incompatible type can result in a <code class="hljs inline no-lang" v-pre>ClassCastException</code> at runtime.</strong></p>
                     <box>
-                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This code will cause a <code v-pre>ClassCastException</code>:</p>
+                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This code will cause a <code class="hljs inline no-lang" v-pre>ClassCastException</code>:</p>
                       <pre><code class="hljs java" v-pre><span>Object o = <span class="hljs-keyword">new</span> Animal();
 </span><span>Integer x = (Integer)o;
 </span></code></pre>
@@ -343,9 +344,9 @@
 </span><span>cast to java.lang.Integer at misc.casting.CastingExamples.main(CastingExamples.java:14)
 </span></code></pre>
                     </box>
-                    <p>You can use the <code v-pre>instanceof</code> operator to check if a cast is safe to perform.</p>
+                    <p>You can use the <code class="hljs inline no-lang" v-pre>instanceof</code> operator to check if a cast is safe to perform.</p>
                     <box>
-                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This code checks if the object <code v-pre>a</code> is an instance of the <code v-pre>Cat</code> class before casting it to a <code v-pre>Cat</code>.</p>
+                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This code checks if the object <code class="hljs inline no-lang" v-pre>a</code> is an instance of the <code class="hljs inline no-lang" v-pre>Cat</code> class before casting it to a <code class="hljs inline no-lang" v-pre>Cat</code>.</p>
                       <pre><code class="hljs java" v-pre><span>Cat c;
 </span><span><span class="hljs-keyword">if</span> (a <span class="hljs-keyword">instanceof</span> Cat){
 </span><span>    c = (Cat)a;
@@ -361,13 +362,11 @@
         </div>
         <i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i>
       </div>
-
-
     </div>
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.16.0</a>, generated on Thu, Oct 29, 2020, 4:09:50 PM GMT+8]</small>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.3</a>, generated on Sat, 1 May 2021, 12:33:13 GMT+8]</small>
       </div>
     </footer>
   </div>
@@ -388,7 +387,7 @@
       debug: false,
     });
   }
-  MarkBind.afterSetup(initAlgolia);
+  initAlgolia();
 </script>
 <script src="../../../markbind/layouts/default/scripts.js"></script>
 <script>

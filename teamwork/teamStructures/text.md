@@ -19,13 +19,13 @@ However, the democratic nature of the team structure bears a higher risk of fall
 
 **Chief programmer team**
 
-Frederick Brooks proposed that software engineers learn from the medical surgical team in an operating room. In such a team, there is always a chief surgeon, assisted by experts in other areas. Similarly, in a chief programmer team structure, **there is a single authoritative figure, the chief programmer**. Major decisions, e.g. system architecture, are made solely by him/her and obeyed by all other team members. The chief programmer directs and coordinates the effort of other team members. When necessary, the chief will be assisted by domain specialists e.g. business specialists, database expert, network technology expert, etc. This allows individual group members to concentrate solely on the areas where they have sound knowledge and expertise.
+Frederick Brooks proposed that software engineers learn from the medical surgical team in an operating room. In such a team, there is always a chief surgeon, assisted by experts in other areas. Similarly, in a chief programmer team structure, **there is a single authoritative figure, the chief programmer**. Major decisions, e.g. system architecture, are made solely by him/her and obeyed by all other team members. The chief programmer directs and coordinates the effort of other team members. When necessary, the chief will be assisted by domain specialists e.g. business specialists, database experts, network technology experts, etc. This allows individual group members to concentrate solely on the areas in which they have sound knowledge and expertise.
 
-The success of such a team structure relies heavily on the chief programmer. Not only must he be a superb technical hand, he also needs good managerial skills. Under a suitably qualified leader, such a team structure is known to produce successful work. .
+The success of such a team structure relies heavily on the chief programmer. Not only must he/she be a superb technical hand, he/she also needs good managerial skills. Under a suitably qualified leader, such a team structure is known to produce successful work.
 
 **Strict hierarchy team**
 
-In the opposite extreme of an egoless team, a strict hierarchy team has **a strictly defined organization among the team members**, reminiscent of the military or bureaucratic government. Each team member only works on his assigned tasks and reports to a single “boss”.
+At the opposite extreme of an egoless team, a strict hierarchy team has **a strictly defined organization among the team members**, reminiscent of the military or a bureaucratic government. Each team member only works on his/her assigned tasks and reports to a single “boss”.
 
 In a large, resource-intensive, complex project, this could be a good team structure to reduce communication overhead.
 

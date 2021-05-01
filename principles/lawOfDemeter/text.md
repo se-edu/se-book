@@ -21,7 +21,7 @@ More concretely, a method `m` of an object `O` should invoke only the methods of
 
 <box>
 
-{{ icon_example }} The following code fragment violates LoD due to the reason: while `b` is a ‘friend’ of `foo` (because it receives it as a parameter), `g` is a ‘friend of a friend’ (which should be considered a ‘stranger’), and `g.doSomething()` is analogous to ‘talking to a stranger’.
+{{ icon_example }} The following code fragment violates LoD due to the following reason: while `b` is a ‘friend’ of `foo` (because it receives it as a parameter), `g` is a ‘friend of a friend’ (which should be considered a ‘stranger’), and `g.doSomething()` is analogous to ‘talking to a stranger’.
 
 ```java
 void foo(Bar b) {
@@ -32,7 +32,7 @@ void foo(Bar b) {
 
 </box>
 
-**LoD aims to prevent objects navigating internal structures of other objects.**
+**LoD aims to prevent objects from navigating the internal structures of other objects.**
  
 <box>
 

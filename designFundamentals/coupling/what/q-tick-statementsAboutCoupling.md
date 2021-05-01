@@ -13,7 +13,7 @@ Choose the correct statements.
 
 (a)(b)(c)~~(d)~~(e)
 
-Explanation: High coupling means either more components require to be integrated at once in a big-bang fashion (increasing the risk of things going wrong) or more drivers and stubs are required when integrating incrementally. 
+Explanation: High coupling means either more components are required to be integrated at once in a big-bang fashion (increasing the risk of things going wrong) or more drivers and stubs are required when integrating incrementally.
 
 </div>
 </question>

@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.16.0">
+  <meta name="generator" content="MarkBind 2.17.3">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - Code Quality: [Guideline] Maximise Readability</title>
   <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
   <link rel="stylesheet" href="../../markbind/css/octicons.css">
-  <link rel="stylesheet" href="../../markbind/css/github.min.css">
+  <link rel="stylesheet" href="../../markbind/css/codeblock-dark.min.css">
   <link rel="stylesheet" href="../../markbind/css/markbind.min.css">
   <script src="../../markbind/js/polyfill.min.js"></script>
   <script src="../../markbind/js/vue.min.js"></script>
@@ -199,7 +199,7 @@
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/uml/index.html">UML</a></div>
                 </li>
                 <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/intellij/index.html">Intellij IDEA</a></div>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/intellij/index.html">IntelliJ IDEA</a></div>
                 </li>
                 <li>
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/gitAndGithub/index.html">Git and GitHub</a></div>
@@ -237,15 +237,16 @@
         </div>
       </nav>
 
+
       <div id="content-wrapper">
-        <h1 id="software-engineering-for-self-directed-learners"><span class="text-dark"><small><strong><strong>Software Engineering for Self-Directed Learners »</strong></strong></small></span><a class="fa fa-anchor" href="#software-engineering-for-self-directed-learners" onclick="event.stopPropagation()"></a></h1>
+        <h1 id="software-engineering-for-self-directed-learners"><span id="software-engineering-for-self-directed-learners" class="anchor"></span><span class="text-dark"><small><strong><strong>Software Engineering for Self-Directed Learners »</strong></strong></small></span><a class="fa fa-anchor" href="#software-engineering-for-self-directed-learners" onclick="event.stopPropagation()"></a></h1>
         <div>
           <link rel="stylesheet" href="/se-book/css/textbook.css">
           <div class="website-content" id="all">
             <p><span class="dimmed"><strong><span>Implementation → Code Quality →
                   </span></strong></span></p>
             <div id="title">
-              <h1 id="guideline-maximise-readability"><span>Guideline: Maximise readability</span><a class="fa fa-anchor" href="#guideline-maximise-readability" onclick="event.stopPropagation()"></a></h1>
+              <h1 id="guideline-maximise-readability"><span id="guideline-maximise-readability" class="anchor"></span><span>Guideline: Maximise readability</span><a class="fa fa-anchor" href="#guideline-maximise-readability" onclick="event.stopPropagation()"></a></h1>
             </div>
             <div id="main">
               <div>
@@ -253,7 +254,7 @@
                   <panel type="seamless" expanded id="introduction">
                     <span slot="header" class="card-title">
                       <div>
-                        <h4 id="introduction"><span>Introduction</span><a class="fa fa-anchor" href="#introduction" onclick="event.stopPropagation()"></a></h4>
+                        <h4 id="introduction"><span id="introduction" class="anchor"></span><span>Introduction</span><a class="fa fa-anchor" href="#introduction" onclick="event.stopPropagation()"></a></h4>
                       </div>
                     </span>
                     <div class="indented">
@@ -304,8 +305,8 @@
 </span><span>    <span class="hljs-keyword">int</span> subsidy;
 </span><span>    <span class="hljs-keyword">if</span> (isSenior) {
 </span><span>        subsidy = REJECT_SENIOR;
-</span><span>    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (isAlreadySubsidised) {
-</span><span>        subsidy = SUBSIDISED_SUBSIDY;
+</span><span>    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (isAlreadySubsidized) {
+</span><span>        subsidy = SUBSIDIZED_SUBSIDY;
 </span><span>    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (isPartTime) {
 </span><span>        subsidy = FULLTIME_SUBSIDY * RATIO;
 </span><span>    } <span class="hljs-keyword">else</span> {
@@ -327,7 +328,7 @@
                                     <p>
                                       <font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font>
                                     </p>
-                                    <pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">calculate_subs</span><span class="hljs-params">()</span>:</span>
+                                    <pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">calculate_subs</span>():</span>
 </span><span>    <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> age:
 </span><span>        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> sub:
 </span><span>            <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> not_fulltime:
@@ -337,7 +338,7 @@
 </span><span>        <span class="hljs-keyword">else</span>:
 </span><span>            subsidy = <span class="hljs-number">250</span>
 </span><span>    <span class="hljs-keyword">else</span>:
-</span><span>        subsidy = <span class="hljs-number">-1</span>
+</span><span>        subsidy = -<span class="hljs-number">1</span>
 </span><span>    <span class="hljs-keyword">return</span> subsidy
 </span></code></pre>
                                   </td>
@@ -346,11 +347,11 @@
                                     <p>
                                       <font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong></span></font>
                                     </p>
-                                    <pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">calculate_subsidy</span><span class="hljs-params">()</span>:</span>
+                                    <pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">calculate_subsidy</span>():</span>
 </span><span>    <span class="hljs-keyword">if</span> is_senior:
 </span><span>        <span class="hljs-keyword">return</span> REJECT_SENIOR
-</span><span>    <span class="hljs-keyword">elif</span> is_already_subsidised:
-</span><span>        <span class="hljs-keyword">return</span> SUBSIDISED_SUBSIDY
+</span><span>    <span class="hljs-keyword">elif</span> is_already_subsidized:
+</span><span>        <span class="hljs-keyword">return</span> SUBSIDIZED_SUBSIDY
 </span><span>    <span class="hljs-keyword">elif</span> is_parttime:
 </span><span>        <span class="hljs-keyword">return</span> FULLTIME_SUBSIDY * RATIO
 </span><span>    <span class="hljs-keyword">else</span>:
@@ -371,7 +372,7 @@
                   <panel type="seamless" expanded id="basic">
                     <span slot="header" class="card-title">
                       <div>
-                        <h2 id="basic"><span>Basic</span><a class="fa fa-anchor" href="#basic" onclick="event.stopPropagation()"></a></h2>
+                        <h2 id="basic"><span id="basic" class="anchor"></span><span>Basic</span><a class="fa fa-anchor" href="#basic" onclick="event.stopPropagation()"></a></h2>
                       </div>
                     </span>
                     <div>
@@ -379,7 +380,7 @@
                         <panel type="seamless" expanded id="avoid-long-methods">
                           <span slot="header" class="card-title">
                             <div>
-                              <h4 id="avoid-long-methods"><span>Avoid long methods</span><a class="fa fa-anchor" href="#avoid-long-methods" onclick="event.stopPropagation()"></a></h4>
+                              <h4 id="avoid-long-methods"><span id="avoid-long-methods" class="anchor"></span><span>Avoid long methods</span><a class="fa fa-anchor" href="#avoid-long-methods" onclick="event.stopPropagation()"></a></h4>
                             </div>
                           </span>
                           <div class="indented">
@@ -398,7 +399,7 @@
                         <panel type="seamless" expanded id="avoid-deep-nesting">
                           <span slot="header" class="card-title">
                             <div>
-                              <h4 id="avoid-deep-nesting"><span>Avoid deep nesting</span><a class="fa fa-anchor" href="#avoid-deep-nesting" onclick="event.stopPropagation()"></a></h4>
+                              <h4 id="avoid-deep-nesting"><span id="avoid-deep-nesting" class="anchor"></span><span>Avoid deep nesting</span><a class="fa fa-anchor" href="#avoid-deep-nesting" onclick="event.stopPropagation()"></a></h4>
                             </div>
                           </span>
                           <div class="indented">
@@ -408,7 +409,7 @@
                             <p></p>
                             <div>
                               <blockquote>
-                                <p>If you need more than 3 levels of indentation, you're screwed anyway, and should fix your program. <sub>--Linux 1.3.53 CodingStyle</sub></p>
+                                <p>If you need more than 3 levels of indentation, you're screwed anyway, and should fix your program. <sub>--Linux 1.3.53 Coding Style</sub></p>
                               </blockquote>
                               <p>In particular, avoid <a href="https://blog.codinghorror.com/flattening-arrow-code/"><em>arrowhead</em> style code</a>.</p>
                               <img src="/se-book/codeQuality/maximiseReadability/basic/avoidDeepNesting/images/arrowheadStyle.png" width="500">
@@ -451,8 +452,8 @@
 </span><span>    <span class="hljs-keyword">int</span> subsidy;
 </span><span>    <span class="hljs-keyword">if</span> (isSenior) {
 </span><span>        subsidy = REJECT_SENIOR;
-</span><span>    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (isAlreadySubsidised) {
-</span><span>        subsidy = SUBSIDISED_SUBSIDY;
+</span><span>    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (isAlreadySubsidized) {
+</span><span>        subsidy = SUBSIDIZED_SUBSIDY;
 </span><span>    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (isPartTime) {
 </span><span>        subsidy = FULLTIME_SUBSIDY * RATIO;
 </span><span>    } <span class="hljs-keyword">else</span> {
@@ -474,7 +475,7 @@
                                           <p>
                                             <font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font>
                                           </p>
-                                          <pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">calculate_subs</span><span class="hljs-params">()</span>:</span>
+                                          <pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">calculate_subs</span>():</span>
 </span><span>    <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> age:
 </span><span>        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> sub:
 </span><span>            <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> not_fulltime:
@@ -484,7 +485,7 @@
 </span><span>        <span class="hljs-keyword">else</span>:
 </span><span>            subsidy = <span class="hljs-number">250</span>
 </span><span>    <span class="hljs-keyword">else</span>:
-</span><span>        subsidy = <span class="hljs-number">-1</span>
+</span><span>        subsidy = -<span class="hljs-number">1</span>
 </span><span>    <span class="hljs-keyword">return</span> subsidy
 </span></code></pre>
                                         </td>
@@ -493,11 +494,11 @@
                                           <p>
                                             <font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong></span></font>
                                           </p>
-                                          <pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">calculate_subsidy</span><span class="hljs-params">()</span>:</span>
+                                          <pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">calculate_subsidy</span>():</span>
 </span><span>    <span class="hljs-keyword">if</span> is_senior:
 </span><span>        <span class="hljs-keyword">return</span> REJECT_SENIOR
-</span><span>    <span class="hljs-keyword">elif</span> is_already_subsidised:
-</span><span>        <span class="hljs-keyword">return</span> SUBSIDISED_SUBSIDY
+</span><span>    <span class="hljs-keyword">elif</span> is_already_subsidized:
+</span><span>        <span class="hljs-keyword">return</span> SUBSIDIZED_SUBSIDY
 </span><span>    <span class="hljs-keyword">elif</span> is_parttime:
 </span><span>        <span class="hljs-keyword">return</span> FULLTIME_SUBSIDY * RATIO
 </span><span>    <span class="hljs-keyword">else</span>:
@@ -518,7 +519,7 @@
                         <panel type="seamless" expanded id="avoid-complicated-expressions">
                           <span slot="header" class="card-title">
                             <div>
-                              <h4 id="avoid-complicated-expressions"><span>Avoid complicated expressions</span><a class="fa fa-anchor" href="#avoid-complicated-expressions" onclick="event.stopPropagation()"></a></h4>
+                              <h4 id="avoid-complicated-expressions"><span id="avoid-complicated-expressions" class="anchor"></span><span>Avoid complicated expressions</span><a class="fa fa-anchor" href="#avoid-complicated-expressions" onclick="event.stopPropagation()"></a></h4>
                             </div>
                           </span>
                           <div class="indented">
@@ -540,8 +541,7 @@
                                     <p>
                                       <font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong></span></font>
                                     </p>
-                                    <pre><code class="hljs java" v-pre><span>
-</span><span><span class="hljs-keyword">boolean</span> isWithinSizeLimit = length &lt; MAX_LENGTH;
+                                    <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">boolean</span> isWithinSizeLimit = length &lt; MAX_LENGTH;
 </span><span><span class="hljs-keyword">boolean</span> isSameSize = previousSize != length;
 </span><span><span class="hljs-keyword">boolean</span> isValidCode = isWithinSizeLimit || isSameSize;
 </span><span>
@@ -587,7 +587,7 @@
                         <panel type="seamless" expanded id="avoid-magic-numbers">
                           <span slot="header" class="card-title">
                             <div>
-                              <h4 id="avoid-magic-numbers"><span>Avoid magic numbers</span><a class="fa fa-anchor" href="#avoid-magic-numbers" onclick="event.stopPropagation()"></a></h4>
+                              <h4 id="avoid-magic-numbers"><span id="avoid-magic-numbers" class="anchor"></span><span>Avoid magic numbers</span><a class="fa fa-anchor" href="#avoid-magic-numbers" onclick="event.stopPropagation()"></a></h4>
                             </div>
                           </span>
                           <div class="indented">
@@ -596,7 +596,7 @@
                             <p></p>
                             <p></p>
                             <div>
-                              <p>When the code has a number that does not explain the meaning of the number, it is called a &quot;magic number&quot; (as in &quot;the number appears as if by magic&quot;). Using a <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">e.g., <code v-pre>PI</code></span><em>named constant</em></span> makes the code easier to understand because the name tells us more about the meaning of the number.</p>
+                              <p>When the code has a number that does not explain the meaning of the number, it is called a &quot;magic number&quot; (as in &quot;the number appears as if by magic&quot;). Using a <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">e.g., <code class="hljs inline no-lang" v-pre>PI</code></span><em>named constant</em></span> makes the code easier to understand because the name tells us more about the meaning of the number.</p>
                               <box>
                                 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example:</p>
                                 <div class="alt-java">
@@ -622,7 +622,7 @@
 </span><span>...
 </span><span><span class="hljs-keyword">return</span> PI;
 </span><span>...
-</span><span><span class="hljs-keyword">return</span> MAX_SIZE-<span class="hljs-number">1</span>;
+</span><span><span class="hljs-keyword">return</span> MAX_SIZE - <span class="hljs-number">1</span>;
 </span></code></pre>
                                         </td>
                                       </tr>
@@ -631,7 +631,7 @@
                                 </div>
                                 <div class="alt-python">
                                   <div>
-                                    <p>Note: Python does not have a way to make a variable a constant. However, you can use a normal variable with an <code v-pre>ALL_CAPS</code> name to simulate a constant.</p>
+                                    <p>Note: Python does not have a way to make a variable a constant. However, you can use a normal variable with an <code class="hljs inline no-lang" v-pre>ALL_CAPS</code> name to simulate a constant.</p>
                                     <table>
                                       <tr>
                                         <td valign="top">
@@ -653,7 +653,7 @@
 </span><span>...
 </span><span><span class="hljs-keyword">return</span> PI
 </span><span>...
-</span><span><span class="hljs-keyword">return</span> MAX_SIZE<span class="hljs-number">-1</span>
+</span><span><span class="hljs-keyword">return</span> MAX_SIZE - <span class="hljs-number">1</span>
 </span></code></pre>
                                         </td>
                                       </tr>
@@ -667,11 +667,11 @@
                                   <font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font>
                                 </p>
                                 <div class="alt-java">
-                                  <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">return</span> <span class="hljs-string">"Error 1432"</span>  <span class="hljs-comment">// A magic string!</span>
+                                  <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">return</span> <span class="hljs-string">&quot;Error 1432&quot;</span>; <span class="hljs-comment">// A magic string!</span>
 </span></code></pre>
                                 </div>
                                 <div class="alt-python">
-                                  <pre><code class="hljs python" v-pre><span><span class="hljs-keyword">return</span> <span class="hljs-string">"Error 1432"</span>  <span class="hljs-comment"># A magic string!</span>
+                                  <pre><code class="hljs python" v-pre><span><span class="hljs-keyword">return</span> <span class="hljs-string">&quot;Error 1432&quot;</span> <span class="hljs-comment"># A magic string!</span>
 </span></code></pre>
                                 </div>
                               </box>
@@ -685,7 +685,7 @@
                         <panel type="seamless" expanded id="make-the-code-obvious">
                           <span slot="header" class="card-title">
                             <div>
-                              <h4 id="make-the-code-obvious"><span>Make the code obvious</span><a class="fa fa-anchor" href="#make-the-code-obvious" onclick="event.stopPropagation()"></a></h4>
+                              <h4 id="make-the-code-obvious"><span id="make-the-code-obvious" class="anchor"></span><span>Make the code obvious</span><a class="fa fa-anchor" href="#make-the-code-obvious" onclick="event.stopPropagation()"></a></h4>
                             </div>
                           </span>
                           <div class="indented">
@@ -696,9 +696,9 @@
                             <div>
                               <p>Make the code as explicit as possible, even if the language syntax allows them to be implicit. Here are some examples:</p>
                               <ul>
-                                <li>[<code v-pre>Java</code>] Use explicit type conversion instead of implicit type conversion.</li>
-                                <li>[<code v-pre>Java</code>, <code v-pre>Python</code>] Use parentheses/braces to show grouping even when they can be skipped.</li>
-                                <li>[<code v-pre>Java</code>, <code v-pre>Python</code>] Use <trigger trigger="click" for="modal:obviousCode-enums">enumerations</trigger> when a certain variable can take only a small number of finite values. For example, instead of declaring the variable 'state' as an integer and using values 0,1,2 to denote the states 'starting', 'enabled', and 'disabled' respectively, declare 'state' as type <code v-pre>SystemState</code> and define an enumeration <code v-pre>SystemState</code> that has values <code v-pre>'STARTING'</code>, <code v-pre>'ENABLED'</code>, and <code v-pre>'DISABLED'</code>.</li>
+                                <li>[<code class="hljs inline no-lang" v-pre>Java</code>] Use explicit type conversion instead of implicit type conversion.</li>
+                                <li>[<code class="hljs inline no-lang" v-pre>Java</code>, <code class="hljs inline no-lang" v-pre>Python</code>] Use parentheses/braces to show groupings even when they can be skipped.</li>
+                                <li>[<code class="hljs inline no-lang" v-pre>Java</code>, <code class="hljs inline no-lang" v-pre>Python</code>] Use <trigger trigger="click" for="modal:obviousCode-enums">enumerations</trigger> when a certain variable can take only a small number of finite values. For example, instead of declaring the variable 'state' as an integer and using values 0, 1, 2 to denote the states 'starting', 'enabled', and 'disabled' respectively, declare 'state' as type <code class="hljs inline no-lang" v-pre>SystemState</code> and define an enumeration <code class="hljs inline no-lang" v-pre>SystemState</code> that has values <code class="hljs inline no-lang" v-pre>'STARTING'</code>, <code class="hljs inline no-lang" v-pre>'ENABLED'</code>, and <code class="hljs inline no-lang" v-pre>'DISABLED'</code>.</li>
                               </ul>
                               <b-modal id="modal:obviousCode-enums" hide-footer size modal-class="mb-zoom" ref="modal:obviousCode-enums" class="algolia-no-index"><template slot="modal-title">More about enumerations</template>
                                 <ul>
@@ -718,7 +718,7 @@
                   <panel type="seamless" expanded id="intermediate">
                     <span slot="header" class="card-title">
                       <div>
-                        <h2 id="intermediate"><span>Intermediate</span><a class="fa fa-anchor" href="#intermediate" onclick="event.stopPropagation()"></a></h2>
+                        <h2 id="intermediate"><span id="intermediate" class="anchor"></span><span>Intermediate</span><a class="fa fa-anchor" href="#intermediate" onclick="event.stopPropagation()"></a></h2>
                       </div>
                     </span>
                     <div>
@@ -726,7 +726,7 @@
                         <panel type="seamless" expanded id="structure-code-logically">
                           <span slot="header" class="card-title">
                             <div>
-                              <h4 id="structure-code-logically"><span>Structure code logically</span><a class="fa fa-anchor" href="#structure-code-logically" onclick="event.stopPropagation()"></a></h4>
+                              <h4 id="structure-code-logically"><span id="structure-code-logically" class="anchor"></span><span>Structure code logically</span><a class="fa fa-anchor" href="#structure-code-logically" onclick="event.stopPropagation()"></a></h4>
                             </div>
                           </span>
                           <div class="indented">
@@ -735,8 +735,8 @@
                             <p></p>
                             <p></p>
                             <div>
-                              <p>Lay out the code so that it adheres to the logical structure. The code should read like a story. Just like you use section breaks, chapters and paragraphs to organize a story, use classes, methods, indentation and line spacing in your code to group related segments of the code. For example, you can use blank lines to group related statements together.
-                                Sometimes, the correctness of your code does not depend on the order in which you perform certain intermediary steps. Nevertheless, this order may affect the clarity of the story you are trying to tell. Choose the order that makes the story most readable.</p>
+                              <p>Lay out the code so that it adheres to the logical structure. The code should read like a story. Just like how you use section breaks, chapters and paragraphs to organize a story, use classes, methods, indentation and line spacing in your code to group related segments of the code. For example, you can use blank lines to group related statements together.</p>
+                              <p>Sometimes, the correctness of your code does not depend on the order in which you perform certain intermediary steps. Nevertheless, this order may affect the clarity of the story you are trying to tell. Choose the order that makes the story most readable.</p>
                             </div>
                             <div></div>
                           </div>
@@ -746,7 +746,7 @@
                         <panel type="seamless" expanded id="do-not-trip-up-reader">
                           <span slot="header" class="card-title">
                             <div>
-                              <h4 id="do-not-trip-up-reader"><span>Do not 'Trip Up' reader</span><a class="fa fa-anchor" href="#do-not-trip-up-reader" onclick="event.stopPropagation()"></a></h4>
+                              <h4 id="do-not-trip-up-reader"><span id="do-not-trip-up-reader" class="anchor"></span><span>Do not 'Trip Up' reader</span><a class="fa fa-anchor" href="#do-not-trip-up-reader" onclick="event.stopPropagation()"></a></h4>
                             </div>
                           </span>
                           <div class="indented">
@@ -772,21 +772,21 @@
                         <panel type="seamless" expanded id="practice-kissing">
                           <span slot="header" class="card-title">
                             <div>
-                              <h4 id="practice-kissing"><span>Practice KISSing</span><a class="fa fa-anchor" href="#practice-kissing" onclick="event.stopPropagation()"></a></h4>
+                              <h4 id="practice-kissing"><span id="practice-kissing" class="anchor"></span><span>Practice KISSing</span><a class="fa fa-anchor" href="#practice-kissing" onclick="event.stopPropagation()"></a></h4>
                             </div>
                           </span>
                           <div class="indented">
-                            <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can improve code quality using technique: practice kissing </span></span></span></span></p>
+                            <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can improve code quality using technique: practice KISSing </span></span></span></span></p>
                             <p></p>
                             <p></p>
                             <p></p>
                             <div>
                               <p>As the old adage goes, <strong>&quot;keep it simple, stupid” (KISS). Do not try to write ‘clever’ code.</strong> For example, do not dismiss the brute-force yet simple solution in favor of a complicated one because of some ‘supposed benefits’ such as 'better reusability' unless you have a strong justification.</p>
                               <blockquote>
-                                <p><span><span aria-hidden="true" class="fas fa-quote-left"></span></span> Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it. <span><span aria-hidden="true" class="fas fa-quote-right"></span></span> <sub>--Brian W. Kernighan </sub></p>
+                                <p><span><span aria-hidden="true" class="fas fa-quote-left"></span></span> Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it. <span><span aria-hidden="true" class="fas fa-quote-right"></span></span> <sub>-- Brian W. Kernighan </sub></p>
                               </blockquote>
                               <blockquote>
-                                <p><span><span aria-hidden="true" class="fas fa-quote-left"></span></span> Programs must be written for people to read, and only incidentally for machines to execute. <span><span aria-hidden="true" class="fas fa-quote-right"></span></span> <sub>--Abelson and Sussman</sub></p>
+                                <p><span><span aria-hidden="true" class="fas fa-quote-left"></span></span> Programs must be written for people to read, and only incidentally for machines to execute. <span><span aria-hidden="true" class="fas fa-quote-right"></span></span> <sub>-- Abelson and Sussman</sub></p>
                               </blockquote>
                             </div>
                             <div></div>
@@ -797,7 +797,7 @@
                         <panel type="seamless" expanded id="avoid-premature-optimizations">
                           <span slot="header" class="card-title">
                             <div>
-                              <h4 id="avoid-premature-optimizations"><span>Avoid premature optimizations</span><a class="fa fa-anchor" href="#avoid-premature-optimizations" onclick="event.stopPropagation()"></a></h4>
+                              <h4 id="avoid-premature-optimizations"><span id="avoid-premature-optimizations" class="anchor"></span><span>Avoid premature optimizations</span><a class="fa fa-anchor" href="#avoid-premature-optimizations" onclick="event.stopPropagation()"></a></h4>
                             </div>
                           </span>
                           <div class="indented">
@@ -809,14 +809,14 @@
                               <p><strong>Optimizing code prematurely has several drawbacks</strong>:</p>
                               <ul>
                                 <li><strong>You may not know which parts are the real performance bottlenecks</strong>. This is especially the case when the code undergoes transformations (e.g. compiling, minifying, transpiling, etc.) before it becomes an executable. Ideally, you should use a profiler tool to identify the actual bottlenecks of the code first, and optimize only those parts.</li>
-                                <li><strong>Optimizing can complicate the code</strong>, affecting correctness and understandability</li>
-                                <li><strong>Hand-optimized code can be harder for the compiler to optimize</strong> (the simpler the code, the easier for the compiler to optimize it). In many cases a compiler can do a better job of optimizing the runtime code if you don't get in the way by trying to hand-optimize the source code.</li>
+                                <li><strong>Optimizing can complicate the code</strong>, affecting correctness and understandability.</li>
+                                <li><strong>Hand-optimized code can be harder for the compiler to optimize</strong> (the simpler the code, the easier it is for the compiler to optimize). In many cases, a compiler can do a better job of optimizing the runtime code if you don't get in the way by trying to hand-optimize the source code.</li>
                               </ul>
-                              <p>A popular saying in the industry is <strong><em>make it work, make it right, make it fast</em></strong> which means in most cases getting the code to perform correctly should take priority over optimizing it. If the code doesn't work correctly, it has no value on matter how fast/efficient it it.</p>
+                              <p>A popular saying in the industry is <strong><em>make it work, make it right, make it fast</em></strong> which means in most cases, getting the code to perform correctly should take priority over optimizing it. If the code doesn't work correctly, it has no value no matter how fast/efficient it is.</p>
                               <blockquote>
-                                <p><span><span aria-hidden="true" class="fas fa-quote-left"></span></span> Premature optimization is the root of all evil in programming. <sub>--<a href="https://en.wikipedia.org/wiki/Donald_Knuth">Donald Knuth</a></sub></p>
+                                <p><span><span aria-hidden="true" class="fas fa-quote-left"></span></span> Premature optimization is the root of all evil in programming. <span><span aria-hidden="true" class="fas fa-quote-right"></span></span> <sub>-- <a href="https://en.wikipedia.org/wiki/Donald_Knuth">Donald Knuth</a></sub></p>
                               </blockquote>
-                              <p>Note that <strong>there are cases where optimizing takes priority over other things</strong> <span class="dimmed">e.g. when writing code for resource-constrained environments</span>. This guideline simply a caution that you should optimize only when it is really needed.</p>
+                              <p>Note that <strong>there are cases where optimizing takes priority over other things</strong> <span class="dimmed">e.g. when writing code for resource-constrained environments</span>. This guideline is simply a caution that you should optimize only when it is really needed.</p>
                             </div>
                             <div></div>
                           </div>
@@ -826,7 +826,7 @@
                         <panel type="seamless" expanded id="slap-hard">
                           <span slot="header" class="card-title">
                             <div>
-                              <h4 id="slap-hard"><span>SLAP hard</span><a class="fa fa-anchor" href="#slap-hard" onclick="event.stopPropagation()"></a></h4>
+                              <h4 id="slap-hard"><span id="slap-hard" class="anchor"></span><span>SLAP hard</span><a class="fa fa-anchor" href="#slap-hard" onclick="event.stopPropagation()"></a></h4>
                             </div>
                           </span>
                           <div class="indented">
@@ -836,15 +836,15 @@
                             <p></p>
                             <div>
                               <p>Avoid varying the level of <trigger trigger="click" for="modal:slap-abstraction">abstraction</trigger> within a code fragment.
-                                Note: The <em>Productive Programmer</em> (by Neal Ford) calls this the <em>SLAP principle</em> i.e. Single Level of Abstraction Per method.</p>
+                                Note: The book <em>The Productive Programmer</em> (by Neal Ford) calls this the <strong><em>Single Level of Abstraction Principle</em> (SLAP)</strong> <span class="dimmed">while the book <em>Clean Code</em> (by Robert C. Martin) calls this <em>One Level of Abstraction per Function</em></span>.</p>
                               <box>
                                 <p>Example:</p>
                                 <p>
-                                  <font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font> (<code v-pre>readData();</code> and <code v-pre>salary = basic*rise+1000;</code> are at different levels of abstraction)
+                                  <font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font> (<code class="hljs inline no-lang" v-pre>readData();</code> and <code class="hljs inline no-lang" v-pre>salary = basic * rise + 1000;</code> are at different levels of abstraction)
                                 </p>
                                 <pre><code class="hljs java" v-pre><span>readData();
-</span><span>salary = basic*rise+<span class="hljs-number">1000</span>;
-</span><span>tax = (taxable?salary*<span class="hljs-number">0.07</span>:<span class="hljs-number">0</span>);
+</span><span>salary = basic * rise + <span class="hljs-number">1000</span>;
+</span><span>tax = (taxable ? salary * <span class="hljs-number">0.07</span> : <span class="hljs-number">0</span>);
 </span><span>displayResult();
 </span></code></pre>
                                 <p>
@@ -863,7 +863,7 @@
                                         </span></strong></span></p>
                                   <div id="title-and-body">
                                     <div>
-                                      <h4 id="what"><span>What</span><a class="fa fa-anchor" href="#what" onclick="event.stopPropagation()"></a></h4>
+                                      <h4 id="what"><span id="what" class="anchor"></span><span>What</span><a class="fa fa-anchor" href="#what" onclick="event.stopPropagation()"></a></h4>
                                     </div>
                                     <div id="main">
                                       <div>
@@ -872,19 +872,19 @@
                                             <p><strong>Abstraction</strong> is a technique for dealing with complexity. It works by establishing a level of complexity we are interested in, and suppressing the more complex details below that level.</p>
                                           </div>
                                         </box>
-                                        <p><strong>The guiding principle of abstraction is that only details that are relevant to the current perspective or the task at hand needs to be considered.</strong> As most programs are written to solve complex problems involving large amounts of intricate details, it is impossible to deal with all these details at the same time. That is where abstraction can help.</p>
+                                        <p><strong>The guiding principle of abstraction is that only details that are relevant to the current perspective or the task at hand need to be considered.</strong> As most programs are written to solve complex problems involving large amounts of intricate details, it is impossible to deal with all these details at the same time. That is where abstraction can help.</p>
                                         <p><strong><mark><em>Data abstraction</em></mark>: abstracting away the lower level data items and thinking in terms of bigger entities</strong></p>
                                         <box>
                                           <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Within a certain software component, you might deal with a <em>user</em> data type, while ignoring the details contained in the user data item such as <em>name</em>, and <em>date of birth</em>. These details have been ‘abstracted away’ as they do not affect the task of that software component.</p>
                                         </box>
                                         <p><strong><mark><em>Control abstraction</em></mark>: abstracting away details of the actual control flow to focus on tasks at a higher level</strong></p>
                                         <box>
-                                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> <code v-pre>print(“Hello”)</code> is an abstraction of the actual output mechanism within the computer.</p>
+                                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> <code class="hljs inline no-lang" v-pre>print(“Hello”)</code> is an abstraction of the actual output mechanism within the computer.</p>
                                         </box>
-                                        <p><strong>Abstraction can be applied repeatedly to obtain progressively <em>higher levels of abstractions</em>.</strong></p>
+                                        <p><strong>Abstraction can be applied repeatedly to obtain progressively <em>higher levels of abstraction</em>.</strong></p>
                                         <box>
-                                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> An example of different levels of data abstraction: a <code v-pre>File</code> is a data item that is at a higher level than an array and an array is at a higher level than a bit.</p>
-                                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> An example of different levels of control abstraction: <code v-pre>execute(Game)</code> is at a higher level than <code v-pre>print(Char)</code> which is at a higher than an Assembly language instruction <code v-pre>MOV</code>.</p>
+                                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> An example of different levels of data abstraction: a <code class="hljs inline no-lang" v-pre>File</code> is a data item that is at a higher level than an array and an array is at a higher level than a bit.</p>
+                                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> An example of different levels of control abstraction: <code class="hljs inline no-lang" v-pre>execute(Game)</code> is at a higher level than <code class="hljs inline no-lang" v-pre>print(Char)</code> which is at a higher level than an Assembly language instruction <code class="hljs inline no-lang" v-pre>MOV</code>.</p>
                                         </box>
                                         <p><strong>Abstraction is a general concept that is not limited to just data or control abstractions.</strong></p>
                                         <box>
@@ -913,7 +913,7 @@
                   <panel type="seamless" expanded id="advanced">
                     <span slot="header" class="card-title">
                       <div>
-                        <h2 id="advanced"><span>Advanced</span><a class="fa fa-anchor" href="#advanced" onclick="event.stopPropagation()"></a></h2>
+                        <h2 id="advanced"><span id="advanced" class="anchor"></span><span>Advanced</span><a class="fa fa-anchor" href="#advanced" onclick="event.stopPropagation()"></a></h2>
                       </div>
                     </span>
                     <div>
@@ -921,7 +921,7 @@
                         <panel type="seamless" expanded id="make-the-happy-path-prominent">
                           <span slot="header" class="card-title">
                             <div>
-                              <h4 id="make-the-happy-path-prominent"><span>Make the happy path prominent</span><a class="fa fa-anchor" href="#make-the-happy-path-prominent" onclick="event.stopPropagation()"></a></h4>
+                              <h4 id="make-the-happy-path-prominent"><span id="make-the-happy-path-prominent" class="anchor"></span><span>Make the happy path prominent</span><a class="fa fa-anchor" href="#make-the-happy-path-prominent" onclick="event.stopPropagation()"></a></h4>
                             </div>
                           </span>
                           <div class="indented">
@@ -951,8 +951,8 @@
 </span></code></pre>
                                 <p>In the code above,</p>
                                 <ul>
-                                  <li>Unusual condition detection is separated from their handling.</li>
-                                  <li>Main path is nested deeply.</li>
+                                  <li>unusual condition detections are separated from their handling.</li>
+                                  <li>the main path is nested deeply.</li>
                                 </ul>
                                 <p>
                                   <font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong></span></font>
@@ -992,13 +992,11 @@
         </div>
         <i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i>
       </div>
-
-
     </div>
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.16.0</a>, generated on Thu, Oct 29, 2020, 4:09:50 PM GMT+8]</small>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.3</a>, generated on Sat, 1 May 2021, 12:33:13 GMT+8]</small>
       </div>
     </footer>
   </div>
@@ -1019,7 +1017,7 @@
       debug: false,
     });
   }
-  MarkBind.afterSetup(initAlgolia);
+  initAlgolia();
 </script>
 <script src="../../markbind/layouts/default/scripts.js"></script>
 <script>

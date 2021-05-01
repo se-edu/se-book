@@ -6,7 +6,7 @@
 
 <div id="body">
 
-To reduce clutter, **activation bars and return arrows may be omitted** if they do not result in ambiguities or loss of information. Informal operation descriptions such as those given in the example below can be used, if more precise details are not required for the task at hand.
+To reduce clutter, **activation bars and return arrows may be omitted** if they do not result in ambiguities or loss of <tooltip content="i.e., information relevant to the purpose of the diagram">_relevant_ information</tooltip>. Informal operation descriptions such as those given in the example below can be used, if more precise details are not required for the task at hand.
 
 <box>
 

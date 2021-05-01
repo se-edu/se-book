@@ -1,7 +1,7 @@
 <panel header="{{ icon_Q_A }} Implement `Marriage`">
 <question has-input="true">
 
-Implement the classes defensively with appropriate references and operations to establish the association among the classes. Follow the defensive coding approach. Let the `Marriage` class handle setting/removal of reference.
+Implement the classes defensively with appropriate references and operations to establish the associations among the classes. Follow the defensive coding approach. Let the `Marriage` class handle the setting/removal of references.
 
 <img src="{{baseUrl}}/errorHandling/defensiveProgramming/compulsoryAssociations/images/manMarriageWoman.jpg" height="55" />
 <p/>
@@ -29,7 +29,7 @@ public class Marriage {
     }
 
     public Man getHusband() throws Exception {
-        if(husband == null) {
+        if (husband == null) {
             throw new Exception("error state");
         } else {
             return husband;
@@ -37,7 +37,7 @@ public class Marriage {
     }
 
     public Woman getWife() throws Exception {
-        if(wife == null) {
+        if (wife == null) {
             throw new Exception("error state");
         } else {
             return wife;
@@ -46,7 +46,7 @@ public class Marriage {
 
     // removal of both ends of 'Marriage'
     public void divorce() throws Exception {
-        if (husband==null || wife==null) {
+        if (husband == null || wife == null) {
             throw new Exception("no marriage");
         }
         husband.removeFromMarriage(this);

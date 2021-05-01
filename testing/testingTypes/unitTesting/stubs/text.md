@@ -80,7 +80,7 @@ class StorageStub implements Storage {
 
     @Override
     public String getName(int index) {
-        if(index == 5) {
+        if (index == 5) {
             return "Adam";
         } else {
             throw new UnsupportedOperationException();
@@ -88,7 +88,7 @@ class StorageStub implements Storage {
     }
 }
 ```
-Note how the `StorageStub` has the same interface as `DatabaseStorage`, is so simple that it is unlikely to contain bugs, and is pre-configured to respond with a hard-coded response, presumably, the correct response `DatabaseStorage` is expected to return for the given test input.
+Note how the `StorageStub` has the same interface as `DatabaseStorage`, but is so simple that it is unlikely to contain bugs, and is pre-configured to respond with a hard-coded response, presumably, the correct response `DatabaseStorage` is expected to return for the given test input.
 
 Here is how you can use the stub to write a unit test. This test is not affected by any bugs in the `DatabaseStorage` class and hence is a pure unit test.
 ```java
@@ -101,7 +101,7 @@ void getName() {
 
 </box>
 
-In addition to Stubs, there are other type of replacements you can use during testing. E.g. _Mocks_, _Fakes_, _Dummies_, _Spies_.
+In addition to Stubs, there are other type of replacements you can use during testing, e.g. _Mocks_, _Fakes_, _Dummies_, _Spies_.
 
 </div>
 

@@ -6,7 +6,7 @@
 
 <div id="body">
 
-**Here are two alternative approaches to testing a software: _Scripted_ testing and _Exploratory_ testing**
+**Here are two alternative approaches to testing a software: _Scripted_ testing and _Exploratory_ testing.**
 
 1. **Scripted testing:**  First write a set of test cases based on the expected behavior of the SUT, and then perform testing based on that set of test cases.
 

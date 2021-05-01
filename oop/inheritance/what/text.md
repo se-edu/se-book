@@ -14,8 +14,8 @@
 
 </box>
 
-* Other names for Base class: _Parent_ class, _Super_ class
-* Other names for Derived class: _Child_ class, _Sub_ class, _Extended_ class
+* Other names for Base class: _Parent_ class, _Superclass_
+* Other names for Derived class: _Child_ class, _Subclass_, _Extended_ class
 
 **A superclass is said to be _more general_ than the subclass.** Conversely, a subclass is said to be more _specialized_ than the superclass.
 
@@ -23,7 +23,7 @@
 
 <box>
 
-{{ icon_example }} `Man` and `Woman` behaves the same way for certain things. However, the two classes cannot be simply replaced with a more general class `Person` because of the need to distinguish between `Man` and `Woman` for certain other things. A solution is to add the `Person` class as a superclass (to contain the code common to men and women) and let `Man` and `Woman` inherit from `Person` class.
+{{ icon_example }} `Man` and `Woman` behave the same way for certain things. However, the two classes cannot be simply replaced with a more general class `Person` because of the need to distinguish between `Man` and `Woman` for certain other things. A solution is to add the `Person` class as a superclass (to contain the code common to men and women) and let `Man` and `Woman` inherit from `Person` class.
 
 </box>
 
@@ -55,7 +55,7 @@
 
 <box>
 
-{{ icon_example }} The `Honey` class inherits from the `Food` class _and_ the `Medicine` class %%because honey can be consumed as a food as well as a medicine (in some oriental medicine practices)%%. Similarly, a `Car` is an `Vehicle`, an `Asset` and a `Liability`.
+{{ icon_example }} The `Honey` class inherits from the `Food` class _and_ the `Medicine` class %%because honey can be consumed as a food as well as a medicine (in some oriental medicine practices)%%. Similarly, a `Car` is a `Vehicle`, an `Asset` and a `Liability`.
 
 <img src="{{baseUrl}}/oop/inheritance/what/images/multipleInheritanceExamples.png" width="440" />
 

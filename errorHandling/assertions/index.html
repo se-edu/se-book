@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.16.0">
+  <meta name="generator" content="MarkBind 2.17.3">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - Error Handling: Assertions</title>
   <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
   <link rel="stylesheet" href="../../markbind/css/octicons.css">
-  <link rel="stylesheet" href="../../markbind/css/github.min.css">
+  <link rel="stylesheet" href="../../markbind/css/codeblock-dark.min.css">
   <link rel="stylesheet" href="../../markbind/css/markbind.min.css">
   <script src="../../markbind/js/polyfill.min.js"></script>
   <script src="../../markbind/js/vue.min.js"></script>
@@ -199,7 +199,7 @@
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/uml/index.html">UML</a></div>
                 </li>
                 <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/intellij/index.html">Intellij IDEA</a></div>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/intellij/index.html">IntelliJ IDEA</a></div>
                 </li>
                 <li>
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/gitAndGithub/index.html">Git and GitHub</a></div>
@@ -237,15 +237,16 @@
         </div>
       </nav>
 
+
       <div id="content-wrapper">
-        <h1 id="software-engineering-for-self-directed-learners"><span class="text-dark"><small><strong><strong>Software Engineering for Self-Directed Learners »</strong></strong></small></span><a class="fa fa-anchor" href="#software-engineering-for-self-directed-learners" onclick="event.stopPropagation()"></a></h1>
+        <h1 id="software-engineering-for-self-directed-learners"><span id="software-engineering-for-self-directed-learners" class="anchor"></span><span class="text-dark"><small><strong><strong>Software Engineering for Self-Directed Learners »</strong></strong></small></span><a class="fa fa-anchor" href="#software-engineering-for-self-directed-learners" onclick="event.stopPropagation()"></a></h1>
         <div>
           <link rel="stylesheet" href="/se-book/css/textbook.css">
           <div class="website-content" id="all">
             <p><span class="dimmed"><strong><span>Implementation → Error Handling →
                   </span></strong></span></p>
             <div id="title">
-              <h1 id="assertions"><span>Assertions</span><a class="fa fa-anchor" href="#assertions" onclick="event.stopPropagation()"></a></h1>
+              <h1 id="assertions"><span id="assertions" class="anchor"></span><span>Assertions</span><a class="fa fa-anchor" href="#assertions" onclick="event.stopPropagation()"></a></h1>
             </div>
             <div id="main">
               <div>
@@ -253,7 +254,7 @@
                   <panel type="seamless" expanded id="what">
                     <span slot="header" class="card-title">
                       <div>
-                        <h4 id="what"><span>What</span><a class="fa fa-anchor" href="#what" onclick="event.stopPropagation()"></a></h4>
+                        <h4 id="what"><span id="what" class="anchor"></span><span>What</span><a class="fa fa-anchor" href="#what" onclick="event.stopPropagation()"></a></h4>
                       </div>
                     </span>
                     <div class="indented">
@@ -264,11 +265,11 @@
                       <div>
                         <p><strong><em>Assertions</em> are used to define assumptions about the program state so that the runtime can verify them.</strong> An assertion failure indicates a possible bug in the code <span class="dimmed">because the code has resulted in a program state that violates an assumption about how the code <em>should</em> behave</span>.</p>
                         <box>
-                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> An assertion can be used to express something like <em>when the execution comes to this point, the variable <code v-pre>v</code> cannot be null</em>.</p>
+                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> An assertion can be used to express something like <em>when the execution comes to this point, the variable <code class="hljs inline no-lang" v-pre>v</code> cannot be null</em>.</p>
                         </box>
-                        <p><strong>If the runtime detects an <em>assertion failure</em>, it typically take some drastic action</strong> such as terminating the execution with an error message. This is because an assertion failure indicates a possible bug and the sooner the execution stops, the safer it is.</p>
+                        <p><strong>If the runtime detects an <em>assertion failure</em>, it typically takes some drastic action</strong> such as terminating the execution with an error message. This is because an assertion failure indicates a possible bug and the sooner the execution stops, the safer it is.</p>
                         <box>
-                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In the Java code below, suppose you set an assertion that <code v-pre>timeout</code> returned by <code v-pre>Config.getTimeout()</code> is greater than <code v-pre>0</code>. Now, if the <code v-pre>Config.getTimeout()</code> returned <code v-pre>-1</code> in a specific execution of this line, the runtime can detect it as a <em>assertion failure</em> -- i.e. an assumption about the expected behavior of the code turned out to be wrong which could potentially be the result of a bug -- and take some drastic action such as terminating the execution.</p>
+                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In the Java code below, suppose you set an assertion that <code class="hljs inline no-lang" v-pre>timeout</code> returned by <code class="hljs inline no-lang" v-pre>Config.getTimeout()</code> is greater than <code class="hljs inline no-lang" v-pre>0</code>. Now, if <code class="hljs inline no-lang" v-pre>Config.getTimeout()</code> returns <code class="hljs inline no-lang" v-pre>-1</code> in a specific execution of this line, the runtime can detect it as an <em>assertion failure</em> -- i.e. an assumption about the expected behavior of the code turned out to be wrong which could potentially be the result of a bug -- and take some drastic action such as terminating the execution.</p>
                           <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">int</span> timeout = Config.getTimeout(); 
 </span></code></pre>
                         </box>
@@ -281,7 +282,7 @@
                   <panel type="seamless" expanded id="how">
                     <span slot="header" class="card-title">
                       <div>
-                        <h4 id="how"><span>How</span><a class="fa fa-anchor" href="#how" onclick="event.stopPropagation()"></a></h4>
+                        <h4 id="how"><span id="how" class="anchor"></span><span>How</span><a class="fa fa-anchor" href="#how" onclick="event.stopPropagation()"></a></h4>
                       </div>
                     </span>
                     <div class="indented">
@@ -290,27 +291,27 @@
                       <p></p>
                       <p></p>
                       <div>
-                        <p>Use the <code v-pre>assert</code> keyword to define assertions.</p>
+                        <p>Use the <code class="hljs inline no-lang" v-pre>assert</code> keyword to define assertions.</p>
                         <box>
-                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This assertion will fail with the message <code v-pre>x should be 0</code> if <code v-pre>x</code> is not 0 at this point.</p>
+                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This assertion will fail with the message <code class="hljs inline no-lang" v-pre>x should be 0</code> if <code class="hljs inline no-lang" v-pre>x</code> is not 0 at this point.</p>
                           <pre><code class="hljs java" v-pre><span>x = getX();
-</span><span><span class="hljs-keyword">assert</span> x == <span class="hljs-number">0</span> : <span class="hljs-string">"x should be 0"</span>;
+</span><span><span class="hljs-keyword">assert</span> x == <span class="hljs-number">0</span> : <span class="hljs-string">&quot;x should be 0&quot;</span>;
 </span><span>...
 </span></code></pre>
                         </box>
                         <p><strong>Assertions can be disabled without modifying the code.</strong></p>
                         <box>
-                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> <code v-pre>java -enableassertions HelloWorld</code> (or <code v-pre>java -ea HelloWorld</code>) will run <code v-pre>HelloWorld</code> with assertions enabled while <code v-pre>java -disableassertions HelloWorld</code> will run it without verifying assertions.</p>
+                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> <code class="hljs inline no-lang" v-pre>java -enableassertions HelloWorld</code> (or <code class="hljs inline no-lang" v-pre>java -ea HelloWorld</code>) will run <code class="hljs inline no-lang" v-pre>HelloWorld</code> with assertions enabled while <code class="hljs inline no-lang" v-pre>java -disableassertions HelloWorld</code> will run it without verifying assertions.</p>
                         </box>
                         <box type="important">
-                          <p><strong>Java disables assertions by default.</strong> This could create a situation where you think all assertions are being verified as <code v-pre>true</code> while in fact they are not being verified at all. Therefore, remember to enable assertions when you run the program if you want them to be in effect.</p>
+                          <p><strong>Java disables assertions by default.</strong> This could create a situation where you think all assertions are being verified as <code class="hljs inline no-lang" v-pre>true</code> while in fact they are not being verified at all. Therefore, remember to enable assertions when you run the program if you want them to be in effect.</p>
                         </box>
-                        <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Enable assertions in Intellij (<a href="https://stackoverflow.com/questions/18168257/where-to-add-compiler-options-like-ea-in-intellij-idea">how?</a>) and get an assertion to fail temporarily (e.g. insert an <code v-pre>assert false</code> into the code temporarily) to confirm assertions are being verified.</p>
-                        <p><span><span aria-hidden="true" class="fas fa-info-circle"></span></span> <strong>Java <code v-pre>assert</code> vs JUnit assertions: They are similar in purpose but JUnit assertions are more powerful and customized for testing.</strong> In addition, JUnit assertions are not disabled by default. We recommend you use JUnit assertions in test code and Java <code v-pre>assert</code> in functional code.</p>
+                        <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Enable assertions in Intellij (<a href="https://se-education.org/guides/tutorials/intellijUsefulSettings.html">how?</a>) and get an assertion to fail temporarily (e.g. insert an <code class="hljs inline no-lang" v-pre>assert false</code> into the code temporarily) to confirm assertions are being verified.</p>
+                        <p><span><span aria-hidden="true" class="fas fa-info-circle"></span></span> <strong>Java <code class="hljs inline no-lang" v-pre>assert</code> vs JUnit assertions: They are similar in purpose but JUnit assertions are more powerful and customized for testing.</strong> In addition, JUnit assertions are not disabled by default. We recommend you use JUnit assertions in test code and Java <code class="hljs inline no-lang" v-pre>assert</code> in functional code.</p>
                       </div>
                       <div>
                         <div>
-                          <panel expanded><template slot="_header">
+                          <panel expanded><template slot="header">
                               <p><span><span aria-hidden="true" class="fas fa-paperclip"></span></span> Resources</p>
                             </template>
                             <p><strong>Tutorials</strong>:</p>
@@ -332,7 +333,7 @@
                   <panel type="seamless" expanded id="when">
                     <span slot="header" class="card-title">
                       <div>
-                        <h4 id="when"><span>When</span><a class="fa fa-anchor" href="#when" onclick="event.stopPropagation()"></a></h4>
+                        <h4 id="when"><span id="when" class="anchor"></span><span>When</span><a class="fa fa-anchor" href="#when" onclick="event.stopPropagation()"></a></h4>
                       </div>
                     </span>
                     <div class="indented">
@@ -344,9 +345,9 @@
                         <p><strong>It is recommended that assertions be used liberally in the code.</strong> Their impact on performance is considered low and worth the additional safety they provide.</p>
                         <p><strong>Do not use assertions to do <em>work</em></strong> because assertions can be disabled. If not, your program will stop working when assertions are not enabled.</p>
                         <box>
-                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The code below will not invoke the <code v-pre>writeFile()</code> method when assertions are disabled. <span class="dimmed">If that method is performing some work that is necessary for your program, your program will not work correctly when assertions are disabled.</span></p>
+                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The code below will not invoke the <code class="hljs inline no-lang" v-pre>writeFile()</code> method when assertions are disabled. <span class="dimmed">If that method is performing some work that is necessary for your program, your program will not work correctly when assertions are disabled.</span></p>
                           <pre><code class="hljs java" v-pre><span>...
-</span><span><span class="hljs-function"><span class="hljs-keyword">assert</span> <span class="hljs-title">writeFile</span><span class="hljs-params">()</span> : "File writing is supposed to return <span class="hljs-keyword">true</span>"</span>;
+</span><span><span class="hljs-function"><span class="hljs-keyword">assert</span> <span class="hljs-title">writeFile</span><span class="hljs-params">()</span> : &quot;File writing is supposed to return <span class="hljs-keyword">true</span>&quot;</span>;
 </span></code></pre>
                         </box>
                         <p><strong>Assertions are suitable for verifying assumptions about <em>Internal Invariants</em>, <em>Control-Flow Invariants</em>,
@@ -359,12 +360,12 @@
                       </div>
                       <div>
                         <div>
-                          <panel expandable class="algolia-no-index"><template slot="_header">
+                          <panel expandable class="algolia-no-index"><template slot="header">
                               <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                             </template>
                             <div>
-                              <panel class="algolia-no-index"><template slot="_header">
-                                  <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Assertions failure in Calculator</p>
+                              <panel class="algolia-no-index"><template slot="header">
+                                  <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Assertion failure in Calculator</p>
                                 </template>
                                 <question>
                                   <p>A Calculator program crashes with an ‘assertion failure’ message when you try to find the square root of a negative number.</p>
@@ -382,14 +383,14 @@
                               </panel>
                             </div>
                             <div>
-                              <panel class="algolia-no-index"><template slot="_header">
+                              <panel class="algolia-no-index"><template slot="header">
                                   <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Statement about exceptions and assertions</p>
                                 </template>
                                 <question>
                                   <p>Which statements are correct?</p>
                                   <ul class="contains-task-list">
-                                    <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> a. Use assertions to indicate the programmer messed up; Use exceptions to indicate the user or the environment messed up.</li>
-                                    <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> b. Use exceptions to indicate the programmer messed up; Use assertions to indicate the user or the environment messed up.</li>
+                                    <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> a. Use assertions to indicate that the programmer messed up; use exceptions to indicate that the user or the environment messed up.</li>
+                                    <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> b. Use exceptions to indicate that the programmer messed up; use assertions to indicate that the user or the environment messed up.</li>
                                   </ul>
                                   <div slot="answer" class="algolia-no-index">
                                     <p>(a)</p>
@@ -409,13 +410,11 @@
         </div>
         <i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i>
       </div>
-
-
     </div>
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.16.0</a>, generated on Thu, Oct 29, 2020, 4:09:50 PM GMT+8]</small>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.3</a>, generated on Sat, 1 May 2021, 12:33:13 GMT+8]</small>
       </div>
     </footer>
   </div>
@@ -436,7 +435,7 @@
       debug: false,
     });
   }
-  MarkBind.afterSetup(initAlgolia);
+  initAlgolia();
 </script>
 <script src="../../markbind/layouts/default/scripts.js"></script>
 <script>

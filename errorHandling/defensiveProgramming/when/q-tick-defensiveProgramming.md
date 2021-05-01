@@ -13,7 +13,7 @@ Defensive programming,
 
 (a)(b)(c)(d)(e)
 
-Explanation: Defensive programming requires a more checks, possibly making the code longer, more complex, and possibly slower. Use it only when benefits outweigh costs, which is often.
+Explanation: Defensive programming requires a lot more checks, possibly making the code longer, more complex, and slower. Use it only when benefits outweigh costs, which is often.
 
 </div>
 </question>

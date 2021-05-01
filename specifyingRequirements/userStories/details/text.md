@@ -38,7 +38,7 @@ You can add more characteristics to the `{user role}` to provide more context to
 * As a lecturer, I can view webcast view records of each student<br>
   so that I can identify the students who did not view webcasts
 * As a lecturer, I can view file download statistics of each student<br>
-  so that I can identify the students who do not download lecture materials
+  so that I can identify the students who did not download lecture materials
 </div>
 </box>
 

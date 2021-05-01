@@ -1,7 +1,7 @@
 <panel header="{{ icon_Q_A }} Which are frameworks?">
 <question>
 
-Which one of these are frameworks ?
+Which of these are frameworks?
 
 - [ ] a. JUnit
 - [ ] b. Eclipse
@@ -12,7 +12,7 @@ Which one of these are frameworks ?
 
 (a)(b)(c)(d)
 
-Explanation: These are frameworks.
+Explanation: These are all frameworks.
 
 </div>
 </question>

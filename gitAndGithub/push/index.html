@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.16.0">
+  <meta name="generator" content="MarkBind 2.17.3">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - Git and GitHub: Push</title>
   <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
   <link rel="stylesheet" href="../../markbind/css/octicons.css">
-  <link rel="stylesheet" href="../../markbind/css/github.min.css">
+  <link rel="stylesheet" href="../../markbind/css/codeblock-dark.min.css">
   <link rel="stylesheet" href="../../markbind/css/markbind.min.css">
   <script src="../../markbind/js/polyfill.min.js"></script>
   <script src="../../markbind/js/vue.min.js"></script>
@@ -199,7 +199,7 @@
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/uml/index.html">UML</a></div>
                 </li>
                 <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/intellij/index.html">Intellij IDEA</a></div>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/intellij/index.html">IntelliJ IDEA</a></div>
                 </li>
                 <li>
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/gitAndGithub/index.html">Git and GitHub</a></div>
@@ -237,8 +237,9 @@
         </div>
       </nav>
 
+
       <div id="content-wrapper">
-        <h1 id="software-engineering-for-self-directed-learners"><span class="text-dark"><small><strong><strong>Software Engineering for Self-Directed Learners »</strong></strong></small></span><a class="fa fa-anchor" href="#software-engineering-for-self-directed-learners" onclick="event.stopPropagation()"></a></h1>
+        <h1 id="software-engineering-for-self-directed-learners"><span id="software-engineering-for-self-directed-learners" class="anchor"></span><span class="text-dark"><small><strong><strong>Software Engineering for Self-Directed Learners »</strong></strong></small></span><a class="fa fa-anchor" href="#software-engineering-for-self-directed-learners" onclick="event.stopPropagation()"></a></h1>
         <div>
           <link rel="stylesheet" href="/se-book/css/textbook.css">
           <div class="website-content">
@@ -249,7 +250,7 @@
             <div>
               <div>
                 <p>
-                  <panel src="/se-book/gitAndGithub/pull/unit-inElsewhere-asFlat._include_.html" popup-url="/se-book/gitAndGithub/pull" class="algolia-no-index"><template slot="_header">
+                  <panel src="/se-book/gitAndGithub/pull/unit-inElsewhere-asFlat._include_.html" popup-url="/se-book/gitAndGithub/pull" class="algolia-no-index"><template slot="header">
                       <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> <span class="dimmed">Tools → Git &amp; GitHub → Pull</span></p>
                     </template></panel>
                 </p>
@@ -259,7 +260,7 @@
                     </span></strong></span></p>
               <div id="title-and-body">
                 <div>
-                  <h4 id="push-uploading-data-to-other-repos"><span><code v-pre>push</code>: Uploading data to other repos</span><a class="fa fa-anchor" href="#push-uploading-data-to-other-repos" onclick="event.stopPropagation()"></a></h4>
+                  <h4 id="push-uploading-data-to-other-repos"><span id="push-uploading-data-to-other-repos" class="anchor"></span><span><code class="hljs inline no-lang" v-pre>push</code>: Uploading data to other repos</span><a class="fa fa-anchor" href="#push-uploading-data-to-other-repos" onclick="event.stopPropagation()"></a></h4>
                 </div>
                 <div id="main">
                   <div>
@@ -267,21 +268,21 @@
                       <p>Given below is a scenario you can try in order to learn how to <trigger trigger="click" for="modal:githubPushing-rcsPushing">push</trigger> commits to a remote repo hosted on GitHub:</p>
                       <b-modal id="modal:githubPushing-rcsPushing" hide-footer size="lg" modal-class="mb-zoom" ref="modal:githubPushing-rcsPushing" class="algolia-no-index"><template slot="modal-title">Project Management → Revision Control → Remote Repositories →</template>
                         <div>
-                          <p><strong>You can <mark><em>push</em></mark> new commits in one repo to another repo</strong> which will copy the new commits onto the destination repo. Note that pushing to a repo requires you to have write-access to it. Furthermore, you can push between repos only if those repos have a shared history among them (i.e, one was created by copying the other at some point in the past).</p>
+                          <p><strong>You can <mark><em>push</em></mark> new commits in one repo to another repo</strong> which will copy the new commits onto the destination repo. Note that pushing to a repo requires you to have write-access to it. Furthermore, you can push between repos only if those repos have a shared history among them (i.e., one was created by copying the other at some point in the past).</p>
                         </div>
                       </b-modal>
-                      <p><strong>1. Fork</strong> an existing GitHub repo (e.g., <a href="https://github.com/se-edu/samplerepo-things">samplerepo-things</a>) to your GitHub account:</p>
+                      <p><strong>1. Fork</strong> an existing GitHub repo (e.g., <a href="https://github.com/se-edu/samplerepo-things">samplerepo-things</a>) to your GitHub account.</p>
                       <p><strong>2. Clone the fork</strong> (not the original) to your computer.</p>
                       <p><strong>3. Commit</strong> some changes in your local repo.</p>
                       <p><strong>4. Push</strong> the new commits to your fork on GitHub</p>
                       <tabs>
                         <tab><template slot="_header">SourceTree</template>
                           <div>
-                            <p>Click the <code v-pre>Push</code> button on the main menu, ensure the settings are as follows in the next dialog, and click the <code v-pre>Push</code> button on the dialog.</p>
+                            <p>Click the <code class="hljs inline no-lang" v-pre>Push</code> button on the main menu, ensure the settings are as follows in the next dialog, and click the <code class="hljs inline no-lang" v-pre>Push</code> button on the dialog.</p>
                             <img src="/se-book/gitAndGithub/push/images/sourcetree_1.png" height="150">
                             <p></p>
                             <box type="warning">
-                              <p>Tags are not included in a normal push. Remember to tick <code v-pre>Push all tags</code> when pushing to the remote repo if you want them to be pushed to the repo.<br>
+                              <p>Tags are not included in a normal push. Remember to tick <code class="hljs inline no-lang" v-pre>Push all tags</code> when pushing to the remote repo if you want them to be pushed to the repo.<br>
                                 <img src="/se-book/gitAndGithub/push/images/pushTags.png" width="500">
                               </p>
                             </box>
@@ -290,9 +291,9 @@
                         </tab>
                         <tab class="algolia-no-index"><template slot="_header">CLI</template>
                           <div>
-                            <p>Use the command <code v-pre>git push origin master</code>. Enter Github username and password when prompted.</p>
+                            <p>Use the command <code class="hljs inline no-lang" v-pre>git push origin master</code>. Enter your Github username and password when prompted.</p>
                             <box type="warning">
-                              <p>Tags are not included in a normal push. To push a tag, use this command: <code v-pre>git push origin &lt;tag_name&gt;</code> e.g.. <code v-pre>git push origin v1.0</code></p>
+                              <p>Tags are not included in a normal push. To push a tag, use this command: <code class="hljs inline no-lang" v-pre>git push origin &lt;tag_name&gt;</code> e.g. <code class="hljs inline no-lang" v-pre>git push origin v1.0</code></p>
                             </box>
                             <p></p>
                           </div>
@@ -309,11 +310,11 @@
                     </ol>
                     <b-modal id="modal:push-addRemoteForNormalPushing" hide-footer size="lg" modal-class="mb-zoom" ref="modal:push-addRemoteForNormalPushing" class="algolia-no-index"><template slot="modal-title">Git &amp; GitHub → Pull →</template>
                       <div>
-                        <h5 id="working-with-multiple-remotes">Working with multiple remotes<a class="fa fa-anchor" href="#working-with-multiple-remotes" onclick="event.stopPropagation()"></a></h5>
-                        <p><strong>When you clone a repo, Git automatically adds a <em>remote</em> repo named <code v-pre>origin</code></strong> to your repo configuration. As you know, you can pull commits from that repo. As you know, <trigger trigger="click" for="modal:gitPull-rcsMultipleRepos">a Git repo can work with remote repos other than the one it was cloned from</trigger>.</p>
+                        <h5 id="working-with-multiple-remotes"><span id="working-with-multiple-remotes" class="anchor"></span>Working with multiple remotes<a class="fa fa-anchor" href="#working-with-multiple-remotes" onclick="event.stopPropagation()"></a></h5>
+                        <p><strong>When you clone a repo, Git automatically adds a <em>remote</em> repo named <code class="hljs inline no-lang" v-pre>origin</code></strong> to your repo configuration. As you know, you can pull commits from that repo. As you know, <trigger trigger="click" for="modal:gitPull-rcsMultipleRepos">a Git repo can work with remote repos other than the one it was cloned from</trigger>.</p>
                         <b-modal id="modal:gitPull-rcsMultipleRepos" hide-footer size="lg" modal-class="mb-zoom" ref="modal:gitPull-rcsMultipleRepos" class="algolia-no-index"><template slot="modal-title">Project Management → Revision Control → Remote Repositories →</template>
                           <div>
-                            <p><strong>A repo can work with any number of other repositories as long as they have a shared history</strong> e.g., <code v-pre>repo1</code> can pull from (or push to) <code v-pre>repo2</code> and <code v-pre>repo3</code> if they have a shared history between them.</p>
+                            <p><strong>A repo can work with any number of other repositories as long as they have a shared history</strong> e.g., <code class="hljs inline no-lang" v-pre>repo1</code> can pull from (or push to) <code class="hljs inline no-lang" v-pre>repo2</code> and <code class="hljs inline no-lang" v-pre>repo3</code> if they have a shared history between them.</p>
                           </div>
                         </b-modal>
                         <p><strong>To communicate with another remote repo, you can first add it as a <em>remote</em> of your repo</strong>. Here is an example scenario you can follow to learn how to pull from another repo:</p>
@@ -322,33 +323,33 @@
                             <div>
                               <ol>
                                 <li>
-                                  <p>Open the local repo in SourceTree. Suggested: Use your local clone of the <code v-pre>samplerepo-things</code> repo.</p>
+                                  <p>Open the local repo in SourceTree. Suggested: Use your local clone of the <code class="hljs inline no-lang" v-pre>samplerepo-things</code> repo.</p>
                                 </li>
                                 <li>
-                                  <p>Choose <code v-pre>Repository</code> → <code v-pre>Repository Settings</code> menu option.</p>
+                                  <p>Choose <code class="hljs inline no-lang" v-pre>Repository</code> → <code class="hljs inline no-lang" v-pre>Repository Settings</code> menu option.</p>
                                 </li>
                                 <li>
                                   <p>Add a new <em>remote</em> to the repo with the following values.</p>
                                   <img src="/se-book/gitAndGithub/pull/images/fillRemoteInfoForSourceTree.png" width="450">
                                   <ul>
-                                    <li><code v-pre>Remote name</code>: the name you want to assign to the remote repo e.g., <code v-pre>upstream1</code></li>
-                                    <li><code v-pre>URL/path</code>: the URL of your repo (ending in <code v-pre>.git</code>) that. Suggested: <code v-pre>https://github.com/se-edu/samplerepo-things-2.git</code> (<a href="https://github.com/se-edu/samplerepo-things-2"><code v-pre>samplerepo-things-2</code></a> is another repo that has a shared history with <code v-pre>samplerepo-things</code>)</li>
-                                    <li><code v-pre>Username</code>: your GitHub username<br><br></li>
+                                    <li><code class="hljs inline no-lang" v-pre>Remote name</code>: the name you want to assign to the remote repo e.g., <code class="hljs inline no-lang" v-pre>upstream1</code></li>
+                                    <li><code class="hljs inline no-lang" v-pre>URL/path</code>: the URL of your repo (ending in <code class="hljs inline no-lang" v-pre>.git</code>) that. Suggested: <code class="hljs inline no-lang" v-pre>https://github.com/se-edu/samplerepo-things-2.git</code> (<a href="https://github.com/se-edu/samplerepo-things-2"><code class="hljs inline no-lang" v-pre>samplerepo-things-2</code></a> is another repo that has a shared history with <code class="hljs inline no-lang" v-pre>samplerepo-things</code>)</li>
+                                    <li><code class="hljs inline no-lang" v-pre>Username</code>: your GitHub username<br><br></li>
                                   </ul>
                                 </li>
                                 <li>
-                                  <p>Now, you can pull from the added repo as you did before <mark>but choose the remote name of the repo you want to pull from</mark> (instead of <code v-pre>origin</code>):<br>
+                                  <p>Now, you can pull from the added repo as you did before <mark>but choose the remote name of the repo you want to pull from</mark> (instead of <code class="hljs inline no-lang" v-pre>origin</code>):<br>
                                     <img src="/se-book/gitAndGithub/pull/images/sourcetree_3.png" height="160">
                                   </p>
                                   <p></p>
                                   <box type="tip" seamless>
-                                    <p>If the <code v-pre>Remote branch to pull</code> dropdown is empty, click the <code v-pre>Refresh</code> button on its right.
+                                    <p>If the <code class="hljs inline no-lang" v-pre>Remote branch to pull</code> dropdown is empty, click the <code class="hljs inline no-lang" v-pre>Refresh</code> button on its right.
                                     </p>
                                   </box>
                                   <p></p>
                                 </li>
                                 <li>
-                                  <p>If the pull from the <code v-pre>samplerepo-things-2</code> was successful, you should have received one more commit into your local repo.</p>
+                                  <p>If the pull from the <code class="hljs inline no-lang" v-pre>samplerepo-things-2</code> was successful, you should have received one more commit into your local repo.</p>
                                 </li>
                               </ol>
                             </div>
@@ -361,12 +362,12 @@
                                 </li>
                                 <li>
                                   <p>Set the new remote repo as a <em>remote</em> of the local repo.<br>
-                                    command: <code v-pre>git remote add {remote_name} {remote_repo_url}</code><br>
-                                    e.g., <code v-pre>git remote add upstream1 https://github.com/johndoe/foobar.git</code></p>
+                                    command: <code class="hljs inline no-lang" v-pre>git remote add {remote_name} {remote_repo_url}</code><br>
+                                    e.g., <code class="hljs inline no-lang" v-pre>git remote add upstream1 https://github.com/johndoe/foobar.git</code></p>
                                 </li>
                                 <li>
                                   <p>Now you can pull from the new remote.<br>
-                                    e.g., <code v-pre>git pull upstream1 master</code></p>
+                                    e.g., <code class="hljs inline no-lang" v-pre>git pull upstream1 master</code></p>
                                 </li>
                               </ol>
                             </div>
@@ -376,12 +377,12 @@
                     </b-modal>
                     <tabs>
                       <tab><template slot="_header">SourceTree</template>
-                        <p>Push your repo to the new remote the usual way, but select the name of target remote instead of <code v-pre>origin</code> and remember to select the <code v-pre>Track</code> checkbox.<br>
+                        <p>Push your repo to the new remote the usual way, but select the name of target remote instead of <code class="hljs inline no-lang" v-pre>origin</code> and remember to select the <code class="hljs inline no-lang" v-pre>Track</code> checkbox.<br>
                           <img src="/se-book/gitAndGithub/push/images/pushToRemote.png" width="470">
                         </p>
                       </tab>
                       <tab class="algolia-no-index"><template slot="_header">CLI</template>
-                        <p>Push to the new remote the usual way e.g., <code v-pre>git push upstream1 master</code> (assuming the you gave the name <code v-pre>upstream1</code> to the remote).</p>
+                        <p>Push to the new remote the usual way e.g., <code class="hljs inline no-lang" v-pre>git push upstream1 master</code> (assuming you gave the name <code class="hljs inline no-lang" v-pre>upstream1</code> to the remote).</p>
                       </tab>
                     </tabs>
                     <p></p>
@@ -394,25 +395,25 @@
                         </p>
                       </li>
                       <li>
-                        <p>In the next screen, provide a name for your repo but keep the <code v-pre>Initialize this repo ...</code> tick box unchecked.<br>
+                        <p>In the next screen, provide a name for your repo but keep the <code class="hljs inline no-lang" v-pre>Initialize this repo ...</code> tick box unchecked.<br>
                           <img src="/se-book/gitAndGithub/push/images/fillNewRepoInfo.png" width="600">
                         </p>
                       </li>
                       <li>
-                        <p>Note the URL of the repo. It will be of the form <code v-pre>https://github.com/{your_user_name}/{repo_name}.git</code><br>
-                          e.g., <code v-pre>https://github.com/johndoe/foobar.git</code> (not the <code v-pre>.git</code> at the end)<br>
+                        <p>Note the URL of the repo. It will be of the form <code class="hljs inline no-lang" v-pre>https://github.com/{your_user_name}/{repo_name}.git</code>.<br>
+                          e.g., <code class="hljs inline no-lang" v-pre>https://github.com/johndoe/foobar.git</code> (note the <code class="hljs inline no-lang" v-pre>.git</code> at the end)<br>
                           <img src="/se-book/gitAndGithub/push/images/newRepoUrl.png" width="450">
                         </p>
                       </li>
                     </ol>
-                    <p><strong>2. <trigger trigger="click" for="modal:push-addRemote">Add the GitHub repo URL as a remote</trigger></strong> of the local repo. You can give it the name <code v-pre>origin</code> (or any other name).</p>
+                    <p><strong>2. <trigger trigger="click" for="modal:push-addRemote">Add the GitHub repo URL as a remote</trigger></strong> of the local repo. You can give it the name <code class="hljs inline no-lang" v-pre>origin</code> (or any other name).</p>
                     <b-modal id="modal:push-addRemote" hide-footer size="lg" modal-class="mb-zoom" ref="modal:push-addRemote" class="algolia-no-index"><template slot="modal-title">Git &amp; GitHub → Pull →</template>
                       <div>
-                        <h5 id="working-with-multiple-remotes-2">Working with multiple remotes<a class="fa fa-anchor" href="#working-with-multiple-remotes-2" onclick="event.stopPropagation()"></a></h5>
-                        <p><strong>When you clone a repo, Git automatically adds a <em>remote</em> repo named <code v-pre>origin</code></strong> to your repo configuration. As you know, you can pull commits from that repo. As you know, <trigger trigger="click" for="modal:gitPull-rcsMultipleRepos">a Git repo can work with remote repos other than the one it was cloned from</trigger>.</p>
+                        <h5 id="working-with-multiple-remotes-2"><span id="working-with-multiple-remotes-2" class="anchor"></span>Working with multiple remotes<a class="fa fa-anchor" href="#working-with-multiple-remotes-2" onclick="event.stopPropagation()"></a></h5>
+                        <p><strong>When you clone a repo, Git automatically adds a <em>remote</em> repo named <code class="hljs inline no-lang" v-pre>origin</code></strong> to your repo configuration. As you know, you can pull commits from that repo. As you know, <trigger trigger="click" for="modal:gitPull-rcsMultipleRepos">a Git repo can work with remote repos other than the one it was cloned from</trigger>.</p>
                         <b-modal id="modal:gitPull-rcsMultipleRepos" hide-footer size="lg" modal-class="mb-zoom" ref="modal:gitPull-rcsMultipleRepos" class="algolia-no-index"><template slot="modal-title">Project Management → Revision Control → Remote Repositories →</template>
                           <div>
-                            <p><strong>A repo can work with any number of other repositories as long as they have a shared history</strong> e.g., <code v-pre>repo1</code> can pull from (or push to) <code v-pre>repo2</code> and <code v-pre>repo3</code> if they have a shared history between them.</p>
+                            <p><strong>A repo can work with any number of other repositories as long as they have a shared history</strong> e.g., <code class="hljs inline no-lang" v-pre>repo1</code> can pull from (or push to) <code class="hljs inline no-lang" v-pre>repo2</code> and <code class="hljs inline no-lang" v-pre>repo3</code> if they have a shared history between them.</p>
                           </div>
                         </b-modal>
                         <p><strong>To communicate with another remote repo, you can first add it as a <em>remote</em> of your repo</strong>. Here is an example scenario you can follow to learn how to pull from another repo:</p>
@@ -421,33 +422,33 @@
                             <div>
                               <ol>
                                 <li>
-                                  <p>Open the local repo in SourceTree. Suggested: Use your local clone of the <code v-pre>samplerepo-things</code> repo.</p>
+                                  <p>Open the local repo in SourceTree. Suggested: Use your local clone of the <code class="hljs inline no-lang" v-pre>samplerepo-things</code> repo.</p>
                                 </li>
                                 <li>
-                                  <p>Choose <code v-pre>Repository</code> → <code v-pre>Repository Settings</code> menu option.</p>
+                                  <p>Choose <code class="hljs inline no-lang" v-pre>Repository</code> → <code class="hljs inline no-lang" v-pre>Repository Settings</code> menu option.</p>
                                 </li>
                                 <li>
                                   <p>Add a new <em>remote</em> to the repo with the following values.</p>
                                   <img src="/se-book/gitAndGithub/pull/images/fillRemoteInfoForSourceTree.png" width="450">
                                   <ul>
-                                    <li><code v-pre>Remote name</code>: the name you want to assign to the remote repo e.g., <code v-pre>upstream1</code></li>
-                                    <li><code v-pre>URL/path</code>: the URL of your repo (ending in <code v-pre>.git</code>) that. Suggested: <code v-pre>https://github.com/se-edu/samplerepo-things-2.git</code> (<a href="https://github.com/se-edu/samplerepo-things-2"><code v-pre>samplerepo-things-2</code></a> is another repo that has a shared history with <code v-pre>samplerepo-things</code>)</li>
-                                    <li><code v-pre>Username</code>: your GitHub username<br><br></li>
+                                    <li><code class="hljs inline no-lang" v-pre>Remote name</code>: the name you want to assign to the remote repo e.g., <code class="hljs inline no-lang" v-pre>upstream1</code></li>
+                                    <li><code class="hljs inline no-lang" v-pre>URL/path</code>: the URL of your repo (ending in <code class="hljs inline no-lang" v-pre>.git</code>) that. Suggested: <code class="hljs inline no-lang" v-pre>https://github.com/se-edu/samplerepo-things-2.git</code> (<a href="https://github.com/se-edu/samplerepo-things-2"><code class="hljs inline no-lang" v-pre>samplerepo-things-2</code></a> is another repo that has a shared history with <code class="hljs inline no-lang" v-pre>samplerepo-things</code>)</li>
+                                    <li><code class="hljs inline no-lang" v-pre>Username</code>: your GitHub username<br><br></li>
                                   </ul>
                                 </li>
                                 <li>
-                                  <p>Now, you can pull from the added repo as you did before <mark>but choose the remote name of the repo you want to pull from</mark> (instead of <code v-pre>origin</code>):<br>
+                                  <p>Now, you can pull from the added repo as you did before <mark>but choose the remote name of the repo you want to pull from</mark> (instead of <code class="hljs inline no-lang" v-pre>origin</code>):<br>
                                     <img src="/se-book/gitAndGithub/pull/images/sourcetree_3.png" height="160">
                                   </p>
                                   <p></p>
                                   <box type="tip" seamless>
-                                    <p>If the <code v-pre>Remote branch to pull</code> dropdown is empty, click the <code v-pre>Refresh</code> button on its right.
+                                    <p>If the <code class="hljs inline no-lang" v-pre>Remote branch to pull</code> dropdown is empty, click the <code class="hljs inline no-lang" v-pre>Refresh</code> button on its right.
                                     </p>
                                   </box>
                                   <p></p>
                                 </li>
                                 <li>
-                                  <p>If the pull from the <code v-pre>samplerepo-things-2</code> was successful, you should have received one more commit into your local repo.</p>
+                                  <p>If the pull from the <code class="hljs inline no-lang" v-pre>samplerepo-things-2</code> was successful, you should have received one more commit into your local repo.</p>
                                 </li>
                               </ol>
                             </div>
@@ -460,12 +461,12 @@
                                 </li>
                                 <li>
                                   <p>Set the new remote repo as a <em>remote</em> of the local repo.<br>
-                                    command: <code v-pre>git remote add {remote_name} {remote_repo_url}</code><br>
-                                    e.g., <code v-pre>git remote add upstream1 https://github.com/johndoe/foobar.git</code></p>
+                                    command: <code class="hljs inline no-lang" v-pre>git remote add {remote_name} {remote_repo_url}</code><br>
+                                    e.g., <code class="hljs inline no-lang" v-pre>git remote add upstream1 https://github.com/johndoe/foobar.git</code></p>
                                 </li>
                                 <li>
                                   <p>Now you can pull from the new remote.<br>
-                                    e.g., <code v-pre>git pull upstream1 master</code></p>
+                                    e.g., <code class="hljs inline no-lang" v-pre>git pull upstream1 master</code></p>
                                 </li>
                               </ol>
                             </div>
@@ -479,8 +480,8 @@
                         <img src="/se-book/gitAndGithub/push/images/pushToRemote.png" width="470">
                       </tab>
                       <tab class="algolia-no-index"><template slot="_header">CLI</template>
-                        <p>Push each branch to the new remote the usual way <mark>but use the <code v-pre>-u</code> flag</mark> to inform Git that you wish to <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">i.e., remember which branch in the remote repo corresponds to which branch in the local repo</span>track</span> the branch.<br>
-                          e.g., <code v-pre>git push -u origin master</code></p>
+                        <p>Push each branch to the new remote the usual way <mark>but use the <code class="hljs inline no-lang" v-pre>-u</code> flag</mark> to inform Git that you wish to <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">i.e., remember which branch in the remote repo corresponds to which branch in the local repo</span>track</span> the branch.<br>
+                          e.g., <code class="hljs inline no-lang" v-pre>git push -u origin master</code></p>
                       </tab>
                     </tabs>
                   </div>
@@ -492,13 +493,11 @@
         </div>
         <i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i>
       </div>
-
-
     </div>
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.16.0</a>, generated on Thu, Oct 29, 2020, 4:09:50 PM GMT+8]</small>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.3</a>, generated on Sat, 1 May 2021, 12:33:13 GMT+8]</small>
       </div>
     </footer>
   </div>
@@ -519,7 +518,7 @@
       debug: false,
     });
   }
-  MarkBind.afterSetup(initAlgolia);
+  initAlgolia();
 </script>
 <script src="../../markbind/layouts/default/scripts.js"></script>
 <script>

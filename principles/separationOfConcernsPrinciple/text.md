@@ -16,7 +16,7 @@ A _concern_ in this context is a set of information that affects the code of a c
 
 {{ icon_example }} Examples for _concerns_:
 
-*	A specific feature, such as the code related to `add employee` feature
+*	A specific feature, such as the code related to the `add employee` feature
 *	A specific aspect, such as the code related to `persistence` or `security`
 *	A specific entity, such as the code related to the `Employee` entity
 
@@ -30,7 +30,7 @@ A _concern_ in this context is a set of information that affects the code of a c
 
 </box>
 
-**This principle can be applied at the class level, as well as on higher levels.** 
+**This principle can be applied at the class level, as well as at higher levels.**
 
 <box>
 

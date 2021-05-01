@@ -1,6 +1,6 @@
 <div>
   <p>
-    <panel src="/se-book/errorHandling/defensiveProgramming/what/unit-inElsewhere-asFlat._include_.html" popup-url="/se-book/errorHandling/defensiveProgramming/what" class="algolia-no-index"><template slot="_header">
+    <panel src="/se-book/errorHandling/defensiveProgramming/what/unit-inElsewhere-asFlat._include_.html" popup-url="/se-book/errorHandling/defensiveProgramming/what" class="algolia-no-index"><template slot="header">
         <p><span class="dimmed"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> Implementation → Error Handling → Defensive Programming → What</span></p>
       </template></panel>
   </p>
@@ -10,7 +10,7 @@
       </span></strong></span></p>
 <div id="title-and-body">
   <div>
-    <h4 id="enforcing-referential-integrity"><span>Enforcing referential integrity</span><a class="fa fa-anchor" href="#enforcing-referential-integrity" onclick="event.stopPropagation()"></a></h4>
+    <h4 id="enforcing-referential-integrity"><span id="enforcing-referential-integrity" class="anchor"></span><span>Enforcing referential integrity</span><a class="fa fa-anchor" href="#enforcing-referential-integrity" onclick="event.stopPropagation()"></a></h4>
   </div>
   <div id="main">
     <div>
@@ -41,13 +41,14 @@
 </span><span>james.setGirlfriend(jean);
 </span><span>jean.setBoyfriend(james);
 </span></code></pre>
-      <p>Suppose the two classes were used this instead:</p>
-      <pre><code class="hljs java" v-pre><span>Woman jean; Man james, yong;
+      <p>Suppose the two classes were used like this instead:</p>
+      <pre><code class="hljs java" v-pre><span>Woman jean;
+</span><span>Man james, yong;
 </span><span>…
 </span><span>james.setGirlfriend(jean);  
 </span><span>jean.setBoyfriend(yong);  
 </span></code></pre>
-      <p>Now James' girlfriend is Jean, while Jean's boyfriend is not James. This situation results as the code was not defensive enough to stop this &quot;love triangle&quot;. In such a situation, you should say that <em>the referential integrity has been violated</em>. It simply means <em>there is an inconsistency in object references</em>.</p>
+      <p>Now James' girlfriend is Jean, while Jean's boyfriend is not James. This situation is a result of the code not being defensive enough to stop this &quot;love triangle&quot;. In such a situation, you could say that <em>the referential integrity has been violated</em>. This means that <em>there is an inconsistency in object references</em>.</p>
       <img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/woman.png" height="50">
       <p></p>
       <p>One way to prevent this situation is to implement the two classes as shown below. Note how the referential integrity is maintained.</p>
@@ -55,7 +56,7 @@
 </span><span>    <span class="hljs-keyword">private</span> Man boyfriend;
 </span><span>
 </span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setBoyfriend</span><span class="hljs-params">(Man m)</span> </span>{
-</span><span>        <span class="hljs-keyword">if</span>(boyfriend == m){
+</span><span>        <span class="hljs-keyword">if</span> (boyfriend == m) {
 </span><span>            <span class="hljs-keyword">return</span>;
 </span><span>        }
 </span><span>        <span class="hljs-keyword">if</span> (boyfriend != <span class="hljs-keyword">null</span>) {
@@ -71,11 +72,11 @@
 </span><span>    ...
 </span><span>}
 </span></code></pre>
-      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Man</span></span>{
+      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Man</span> </span>{
 </span><span>    <span class="hljs-keyword">private</span> Woman girlfriend;
 </span><span>
 </span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setGirlfriend</span><span class="hljs-params">(Woman w)</span> </span>{
-</span><span>        <span class="hljs-keyword">if</span>(girlfriend == w){
+</span><span>        <span class="hljs-keyword">if</span> (girlfriend == w) {
 </span><span>            <span class="hljs-keyword">return</span>;
 </span><span>        }
 </span><span>        <span class="hljs-keyword">if</span> (girlfriend != <span class="hljs-keyword">null</span>) {
@@ -90,28 +91,28 @@
 </span><span>   ...
 </span><span>}
 </span></code></pre>
-      <p>When the code <code v-pre>james.setGirlfriend(jean)</code> is executed, the code ensures that <code v-pre>james</code> break up with any current girlfriend before he accepts <code v-pre>jean</code> as the girlfriend. Furthermore, the code ensures that <code v-pre>jean</code> breaks up with any existing boyfriends and accepts <code v-pre>james</code> as the boyfriend.</p>
+      <p>When <code class="hljs inline no-lang" v-pre>james.setGirlfriend(jean)</code> is executed, the code ensures that <code class="hljs inline no-lang" v-pre>james</code> breaks up with any current girlfriend before he accepts <code class="hljs inline no-lang" v-pre>jean</code> as his girlfriend. Furthermore, the code ensures that <code class="hljs inline no-lang" v-pre>jean</code> breaks up with any existing boyfriends before accepting <code class="hljs inline no-lang" v-pre>james</code> as her boyfriend.</p>
     </div>
     <div>
       <div>
-        <panel expandable class="algolia-no-index"><template slot="_header">
+        <panel expandable class="algolia-no-index"><template slot="header">
             <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
           </template>
           <div>
-            <panel class="algolia-no-index"><template slot="_header">
-                <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Implement <code v-pre>Player</code> and <code v-pre>Region</code></p>
+            <panel class="algolia-no-index"><template slot="header">
+                <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Implement <code class="hljs inline no-lang" v-pre>Player</code> and <code class="hljs inline no-lang" v-pre>Region</code></p>
               </template>
               <question has-input="true">
                 <p>Imagine that you now support the following feature in our Minesweeper game.</p>
                 <box>
-                  <p>Feature ID: multiplayer<br>
+                  <p>Feature ID: Multiplayer<br>
                     Description: A minefield is divided into mine regions. Each region is assigned to a single player. Players can swap regions. To win the game, all regions must be cleared.</p>
                 </box>
                 <p>Given below is an extract from our class diagram.</p>
                 <img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/playerRegion.png" height="100">
                 <p></p>
                 <p>Minimally, this can be implemented like this.</p>
-                <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Player</span></span>{
+                <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Player</span> </span>{
 </span><span>    Region region;
 </span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setRegion</span><span class="hljs-params">(Region r)</span> </span>{
 </span><span>        region = r;
@@ -123,10 +124,10 @@
 </span><span>
 </span><span><span class="hljs-comment">// Region class is similar</span>
 </span></code></pre>
-                <p>However, this is not very defensive. For example, a user of this class can pass a <code v-pre>null</code> to either of the methods, thus violating the multiplicity of the relationship.</p>
+                <p>However, this is not very defensive. For example, a user of this class can pass a <code class="hljs inline no-lang" v-pre>null</code> to either of the methods, thus violating the multiplicity of the relationship.</p>
                 <p>Implement the two classes using a more defensive approach. Take note of the bidirectional link which requires us to preserve referential integrity at all times.</p>
                 <div slot="answer" class="algolia-no-index">
-                  <p>In this solution, assume <code v-pre>Regions</code> can be created without <code v-pre>Players</code> (note that you cannot be 100% defensive all the time). The usage will be something like this:</p>
+                  <p>In this solution, assume <code class="hljs inline no-lang" v-pre>Regions</code> can be created without <code class="hljs inline no-lang" v-pre>Players</code> (note that you cannot be 100% defensive all the time). The usage will be something like this:</p>
                   <pre><code class="hljs java" v-pre><span>Region r1 = <span class="hljs-keyword">new</span> Region();
 </span><span>Player p1 = <span class="hljs-keyword">new</span> Player(r1);
 </span><span>Region r2 = <span class="hljs-keyword">new</span> Region();
@@ -144,7 +145,7 @@
 </span><span>
 </span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setPlayer</span><span class="hljs-params">(Player newPlayer)</span> </span>{
 </span><span>        <span class="hljs-keyword">if</span> (newPlayer == <span class="hljs-keyword">null</span>) {
-</span><span>            stopSystemWithErrorMessage(<span class="hljs-string">"Multiplicity violation"</span>);
+</span><span>            stopSystemWithErrorMessage(<span class="hljs-string">&quot;Multiplicity violation&quot;</span>);
 </span><span>        }
 </span><span>        <span class="hljs-keyword">if</span> (myPlayer == newPlayer) {
 </span><span>            <span class="hljs-keyword">return</span>; <span class="hljs-comment">// same player</span>
@@ -159,10 +160,10 @@
 </span><span>    }
 </span><span>
 </span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">removePlayer</span><span class="hljs-params">(Player disconnectingPlayer)</span> </span>{
-</span><span>        <span class="hljs-keyword">if</span> (myPlayer == disconnectingPlayer){
+</span><span>        <span class="hljs-keyword">if</span> (myPlayer == disconnectingPlayer) {
 </span><span>            myPlayer = <span class="hljs-keyword">null</span>;
 </span><span>        } <span class="hljs-keyword">else</span> {
-</span><span>            stopSystemWithErrorMessage(<span class="hljs-string">"Unknown Player trying to disconnect"</span>);
+</span><span>            stopSystemWithErrorMessage(<span class="hljs-string">&quot;Unknown Player trying to disconnect&quot;</span>);
 </span><span>        }
 </span><span>    }
 </span><span>
@@ -180,7 +181,7 @@
 </span><span>
 </span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setRegion</span><span class="hljs-params">(Region newRegion)</span> </span>{
 </span><span>        <span class="hljs-keyword">if</span> (newRegion == <span class="hljs-keyword">null</span>) {
-</span><span>            stopSystemWithErrorMessage(<span class="hljs-string">"Multiplicity violation"</span>);
+</span><span>            stopSystemWithErrorMessage(<span class="hljs-string">&quot;Multiplicity violation&quot;</span>);
 </span><span>        }
 </span><span>        <span class="hljs-keyword">if</span> (myRegion == newRegion) {
 </span><span>            <span class="hljs-keyword">return</span>; <span class="hljs-comment">// no change in Region!</span>
@@ -212,39 +213,39 @@
             </panel>
           </div>
           <div>
-            <panel class="algolia-no-index"><template slot="_header">
-                <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Bidirectional association between <code v-pre>Bank</code> and <code v-pre>Account</code></p>
+            <panel class="algolia-no-index"><template slot="header">
+                <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Bidirectional association between <code class="hljs inline no-lang" v-pre>Bank</code> and <code class="hljs inline no-lang" v-pre>Account</code></p>
               </template>
               <question has-input="true">
-                <p>Implement this bidirectional association. Note that the <code v-pre>Bank</code> uses <code v-pre>accNumber</code> attribute to uniquely identify an <code v-pre>Account</code> object. Assume the <code v-pre>Bank</code> class is responsible for maintaining the links between objects.</p>
+                <p>Implement this bidirectional association. Note that the <code class="hljs inline no-lang" v-pre>Bank</code> uses the <code class="hljs inline no-lang" v-pre>accNumber</code> attribute to uniquely identify an <code class="hljs inline no-lang" v-pre>Account</code> object. Assume the <code class="hljs inline no-lang" v-pre>Bank</code> class is responsible for maintaining the links between objects.</p>
                 <img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/bankAccount.jpg" height="60">
                 <p></p>
                 <div slot="answer" class="algolia-no-index">
-                  <p>The code below contains a method in the <code v-pre>Bank</code> class to create an account; the bank field in the new account is thereby filled by the bank creating it.</p>
-                  <p>Assume that once an <code v-pre>Account</code> has been assigned to one <code v-pre>Bank</code>, it cannot be assigned to a different <code v-pre>Bank</code>. Once the <code v-pre>Account</code> is removed from the <code v-pre>Bank</code>, it will not be used any more (hence, no need to remove the link from <code v-pre>Account</code> to <code v-pre>Bank</code>).</p>
+                  <p>The code below contains a method in the <code class="hljs inline no-lang" v-pre>Bank</code> class to create an account; the bank field in the new account is thereby filled by the bank creating it.</p>
+                  <p>Assume that once an <code class="hljs inline no-lang" v-pre>Account</code> has been assigned to a <code class="hljs inline no-lang" v-pre>Bank</code>, it cannot be assigned to a different <code class="hljs inline no-lang" v-pre>Bank</code>. Once the <code class="hljs inline no-lang" v-pre>Account</code> is removed from the <code class="hljs inline no-lang" v-pre>Bank</code>, it will not be used anymore (hence, no need to remove the link from <code class="hljs inline no-lang" v-pre>Account</code> to <code class="hljs inline no-lang" v-pre>Bank</code>).</p>
                   <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{
-</span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> accNumber ;
-</span><span>    <span class="hljs-keyword">private</span> Bank theBank ;
+</span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> accNumber;
+</span><span>    <span class="hljs-keyword">private</span> Bank theBank;
 </span><span>
 </span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Account</span><span class="hljs-params">(<span class="hljs-keyword">int</span> n, Bank b)</span> </span>{
-</span><span>        accno = n ;
-</span><span>        theBank = b ;
+</span><span>        accNumber = n;
+</span><span>        theBank = b;
 </span><span>    }
 </span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getNumber</span><span class="hljs-params">()</span> </span>{
 </span><span>        <span class="hljs-keyword">return</span> accNumber;
 </span><span>    }
 </span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> Bank <span class="hljs-title">getBank</span><span class="hljs-params">()</span> </span>{
-</span><span>        <span class="hljs-keyword">return</span> theBank ;
+</span><span>        <span class="hljs-keyword">return</span> theBank;
 </span><span>    }
 </span><span>}
 </span></code></pre>
                   <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">import</span> java.util.*;
 </span><span>
 </span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bank</span> </span>{
-</span><span>    <span class="hljs-keyword">private</span> HashMap&lt; Integer, Account &gt; theAccounts = <span class="hljs-keyword">new</span> HashMap &lt; Integer, Account &gt; ();
+</span><span>    <span class="hljs-keyword">private</span> HashMap&lt;Integer, Account&gt; theAccounts = <span class="hljs-keyword">new</span> HashMap&lt;Integer, Account&gt;();
 </span><span>
 </span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">createAccount</span><span class="hljs-params">(<span class="hljs-keyword">int</span> n)</span> </span>{
-</span><span>        addAccount(<span class="hljs-keyword">new</span> Account(n, <span class="hljs-keyword">this</span>)) ;
+</span><span>        addAccount(<span class="hljs-keyword">new</span> Account(n, <span class="hljs-keyword">this</span>));
 </span><span>    }
 </span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addAccount</span><span class="hljs-params">(Account a)</span> </span>{          
 </span><span>        theAccounts.put(a.getNumber(), a);
@@ -262,23 +263,23 @@
             </panel>
           </div>
           <div>
-            <panel class="algolia-no-index"><template slot="_header">
-                <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Is the code defensive? <code v-pre>Teacher</code> and <code v-pre>Student</code></p>
+            <panel class="algolia-no-index"><template slot="header">
+                <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Is the code defensive? <code class="hljs inline no-lang" v-pre>Teacher</code> and <code class="hljs inline no-lang" v-pre>Student</code></p>
               </template>
               <question has-input="true">
                 <p>(a) Is the code given below a defensive translation of the associations shown in the class diagram? Explain your answer.</p>
-                <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Teacher</span></span>{
+                <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Teacher</span> </span>{
 </span><span>    <span class="hljs-keyword">private</span> Student favoriteStudent;
 </span><span>
-</span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setFavoriteStudent</span><span class="hljs-params">(Student s)</span></span>{
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setFavoriteStudent</span><span class="hljs-params">(Student s)</span> </span>{
 </span><span>        favoriteStudent = s;
 </span><span>    }
 </span><span>}
 </span></code></pre>
-                <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Student</span></span>{
+                <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Student</span> </span>{
 </span><span>    <span class="hljs-keyword">private</span> Teacher favoriteTeacher;
 </span><span>
-</span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setFavoriteTeacher</span><span class="hljs-params">(Teacher t)</span></span>{
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setFavoriteTeacher</span><span class="hljs-params">(Teacher t)</span> </span>{
 </span><span>        favoriteTeacher = t;
 </span><span>    }
 </span><span>}
@@ -289,21 +290,21 @@
                 <p></p>
                 <img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/manWomanAssoc.png" height="60">
                 <p></p>
-                <p>(c) Show a defensive implementation of the <code v-pre>remove(Member m)</code> of the <code v-pre>Club</code> class given below.</p>
+                <p>(c) Show a defensive implementation of the <code class="hljs inline no-lang" v-pre>remove(Member m)</code> method of the <code class="hljs inline no-lang" v-pre>Club</code> class given below.</p>
                 <img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/clubMember.png" height="60">
                 <p></p>
                 <div slot="answer" class="algolia-no-index">
-                  <p>(a) Yes. Each links is mutable and unidirectional. A simple reference variable is suitable to hold the link.</p>
-                  <p><code v-pre>Teacher</code> class can be made even more defensive by introducing a <code v-pre>resetFavoriteStudent()</code> method to unlink the current favorite student from a teacher. In that case, <code v-pre>setFavoriteStudent(Student)</code> method should not accept null. This approach is more defensive because it prevents a null value being passed to <code v-pre>setFavoriteStudent(Student)</code> by mistake and being interpreted as a request to de-link the current favorite student from the <code v-pre>Teacher</code> object.</p>
+                  <p>(a) Yes. Each link is mutable and unidirectional. A simple reference variable is suitable to hold the link.</p>
+                  <p>The <code class="hljs inline no-lang" v-pre>Teacher</code> class can be made even more defensive by introducing a <code class="hljs inline no-lang" v-pre>resetFavoriteStudent()</code> method to unlink the current favorite student from a teacher. In that case, the <code class="hljs inline no-lang" v-pre>setFavoriteStudent(Student)</code> method should not accept <code class="hljs inline no-lang" v-pre>null</code>. This approach is more defensive because it prevents a <code class="hljs inline no-lang" v-pre>null</code> value being passed to <code class="hljs inline no-lang" v-pre>setFavoriteStudent(Student)</code> by mistake and being interpreted as a request to de-link the current favorite student from the <code class="hljs inline no-lang" v-pre>Teacher</code> object.</p>
                   <p>(b) First diagram has unidirectional links. Second has a bidirectional link. RI is only applicable to the second.</p>
                   <p>(c)</p>
                   <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">removeMember</span><span class="hljs-params">(Member m)</span> </span>{
 </span><span>    <span class="hljs-keyword">if</span> (m==<span class="hljs-keyword">null</span>) {
-</span><span>        <span class="hljs-keyword">throw</span> exception(<span class="hljs-string">"this is null, not a member!"</span>);
-</span><span>    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(member_count == <span class="hljs-number">10</span>) {
-</span><span>        <span class="hljs-keyword">throw</span> exception(<span class="hljs-string">"we need at least 10 members to survive!"</span>);
-</span><span>    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(!isMember(m)) {
-</span><span>        <span class="hljs-keyword">throw</span> exception (<span class="hljs-string">"this fellow is not a member of our club!"</span>);
+</span><span>        <span class="hljs-keyword">throw</span> exception(<span class="hljs-string">&quot;this is null, not a member!&quot;</span>);
+</span><span>    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (member_count == <span class="hljs-number">10</span>) {
+</span><span>        <span class="hljs-keyword">throw</span> exception(<span class="hljs-string">&quot;we need at least 10 members to survive!&quot;</span>);
+</span><span>    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (!isMember(m)) {
+</span><span>        <span class="hljs-keyword">throw</span> exception(<span class="hljs-string">&quot;this fellow is not a member of our club!&quot;</span>);
 </span><span>    } <span class="hljs-keyword">else</span> {
 </span><span>        members.remove(m); <span class="hljs-comment">// members is a data structure such as ArrayList</span>
 </span><span>    }
@@ -314,7 +315,7 @@
             </panel>
           </div>
           <div>
-            <panel class="algolia-no-index"><template slot="_header">
+            <panel class="algolia-no-index"><template slot="header">
                 <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> True or False?</p>
               </template>
               <question>

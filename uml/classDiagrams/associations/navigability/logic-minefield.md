@@ -1,12 +1,13 @@
 <div class="alt-java">
 
 ```java
-class Logic{
+class Logic {
     Minefield minefield;
+    // ...
 }
 
-class Minefield{
-    ...
+class Minefield {
+    //...
 }
 ```
 </div>
@@ -15,8 +16,8 @@ class Minefield{
 ```python
 class Logic:
   
-  def __init__(self, minefield):
-    self.minefield = minefield
+  def __init__(self):
+    self.minefield = None
     
   # ...
 

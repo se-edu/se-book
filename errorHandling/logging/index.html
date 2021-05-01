@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.16.0">
+  <meta name="generator" content="MarkBind 2.17.3">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - Error Handling: Logging</title>
   <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
   <link rel="stylesheet" href="../../markbind/css/octicons.css">
-  <link rel="stylesheet" href="../../markbind/css/github.min.css">
+  <link rel="stylesheet" href="../../markbind/css/codeblock-dark.min.css">
   <link rel="stylesheet" href="../../markbind/css/markbind.min.css">
   <script src="../../markbind/js/polyfill.min.js"></script>
   <script src="../../markbind/js/vue.min.js"></script>
@@ -199,7 +199,7 @@
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/uml/index.html">UML</a></div>
                 </li>
                 <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/intellij/index.html">Intellij IDEA</a></div>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/intellij/index.html">IntelliJ IDEA</a></div>
                 </li>
                 <li>
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/gitAndGithub/index.html">Git and GitHub</a></div>
@@ -237,15 +237,16 @@
         </div>
       </nav>
 
+
       <div id="content-wrapper">
-        <h1 id="software-engineering-for-self-directed-learners"><span class="text-dark"><small><strong><strong>Software Engineering for Self-Directed Learners »</strong></strong></small></span><a class="fa fa-anchor" href="#software-engineering-for-self-directed-learners" onclick="event.stopPropagation()"></a></h1>
+        <h1 id="software-engineering-for-self-directed-learners"><span id="software-engineering-for-self-directed-learners" class="anchor"></span><span class="text-dark"><small><strong><strong>Software Engineering for Self-Directed Learners »</strong></strong></small></span><a class="fa fa-anchor" href="#software-engineering-for-self-directed-learners" onclick="event.stopPropagation()"></a></h1>
         <div>
           <link rel="stylesheet" href="/se-book/css/textbook.css">
           <div class="website-content" id="all">
             <p><span class="dimmed"><strong><span>Implementation → Error Handling →
                   </span></strong></span></p>
             <div id="title">
-              <h1 id="logging"><span>Logging</span><a class="fa fa-anchor" href="#logging" onclick="event.stopPropagation()"></a></h1>
+              <h1 id="logging"><span id="logging" class="anchor"></span><span>Logging</span><a class="fa fa-anchor" href="#logging" onclick="event.stopPropagation()"></a></h1>
             </div>
             <div id="main">
               <div>
@@ -253,7 +254,7 @@
                   <panel type="seamless" expanded id="what">
                     <span slot="header" class="card-title">
                       <div>
-                        <h4 id="what"><span>What</span><a class="fa fa-anchor" href="#what" onclick="event.stopPropagation()"></a></h4>
+                        <h4 id="what"><span id="what" class="anchor"></span><span>What</span><a class="fa fa-anchor" href="#what" onclick="event.stopPropagation()"></a></h4>
                       </div>
                     </span>
                     <div class="indented">
@@ -263,13 +264,13 @@
                       <p></p>
                       <div>
                         <p><strong><em>Logging</em> is the deliberate recording of certain information during a program execution for future reference.</strong> Logs are typically written to a log file but it is also possible to log information in other ways <span class="dimmed">e.g. into a database or a remote server</span>.</p>
-                        <p><strong><em>Logging</em> can be useful for troubleshooting problems</strong>. A good logging system records some system information regularly. When bad things happen to a system <span class="dimmed">e.g. an unanticipated failure</span>, their associated log files may provide indications of what went wrong and action can then be taken to prevent it from happening again.</p>
+                        <p><strong><em>Logging</em> can be useful for troubleshooting problems</strong>. A good logging system records some system information regularly. When bad things happen to a system <span class="dimmed">e.g. an unanticipated failure</span>, their associated log files may provide indications of what went wrong and actions can then be taken to prevent it from happening again.</p>
                         <div v-closeable alt="blackbox photo">
                           <box>
                             <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> <strong>A log file is like the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">flight data recorder</span>black box</span> of an airplane</strong>; they don't prevent problems but they can be helpful in understanding what went wrong after the fact.</p>
                             <div class="non-printable">
                               <p><img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Flight_data_recorder_displayed_at_HAL_Museum_7893.JPG" width="250"><br>
-                                <sub>source:<a href="https://upload.wikimedia.org/wikipedia/commons/5/5b/Flight_data_recorder_displayed_at_HAL_Museum_7893.JPG">https://commons.wikimedia.org</a></sub>
+                                <sub>source: <a href="https://upload.wikimedia.org/wikipedia/commons/5/5b/Flight_data_recorder_displayed_at_HAL_Museum_7893.JPG">https://commons.wikimedia.org</a></sub>
                               </p>
                             </div>
                           </box>
@@ -277,11 +278,11 @@
                       </div>
                       <div>
                         <div>
-                          <panel expandable class="algolia-no-index"><template slot="_header">
+                          <panel expandable class="algolia-no-index"><template slot="header">
                               <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                             </template>
                             <div>
-                              <panel class="algolia-no-index"><template slot="_header">
+                              <panel class="algolia-no-index"><template slot="header">
                                   <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Logging vs blackbox</p>
                                 </template>
                                 <question>
@@ -289,7 +290,7 @@
                                   <ul radio-group="6f5b0" class="radio-list">
                                     <li class="radio-list-item"><label><input class="radio-list-input" name="6f5b0" type="radio"> a. Because they can be used to find more info about how the system behaved before/during an ‘incident’.</label></li>
                                     <li class="radio-list-item"><label><input class="radio-list-input" name="6f5b0" type="radio"> b. Because they are hidden from the view of normal users.</label></li>
-                                    <li class="radio-list-item"><label><input class="radio-list-input" name="6f5b0" type="radio"> c. Because they both can be in hardcopy form or digital form.</label></li>
+                                    <li class="radio-list-item"><label><input class="radio-list-input" name="6f5b0" type="radio"> c. Because they can both be in hardcopy form or digital form.</label></li>
                                     <li class="radio-list-item"><label><input class="radio-list-input" name="6f5b0" type="radio"> d. Because they are hard to open by normal users.</label></li>
                                   </ul>
                                   <div slot="answer" class="algolia-no-index">
@@ -308,7 +309,7 @@
                   <panel type="seamless" expanded id="how">
                     <span slot="header" class="card-title">
                       <div>
-                        <h4 id="how"><span>How</span><a class="fa fa-anchor" href="#how" onclick="event.stopPropagation()"></a></h4>
+                        <h4 id="how"><span id="how" class="anchor"></span><span>How</span><a class="fa fa-anchor" href="#how" onclick="event.stopPropagation()"></a></h4>
                       </div>
                     </span>
                     <div class="indented">
@@ -323,26 +324,26 @@
                           <p>First, import the relevant Java package:</p>
                           <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">import</span> java.util.logging.*;
 </span></code></pre>
-                          <p>Next, create a <code v-pre>Logger</code>:</p>
-                          <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Logger logger = Logger.getLogger(<span class="hljs-string">"Foo"</span>);
+                          <p>Next, create a <code class="hljs inline no-lang" v-pre>Logger</code>:</p>
+                          <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Logger logger = Logger.getLogger(<span class="hljs-string">&quot;Foo&quot;</span>);
 </span></code></pre>
-                          <p>Now, you can use the <code v-pre>Logger</code> object to log information. Note the use of <span data-mb-component-type="popover" v-b-popover.hover.top.html="popoverInnerGetters" class="trigger"><span data-mb-slot-name="content"><code v-pre>INFO</code>, <code v-pre>WARNING</code> etc.</span>logging level</span> for each message. When running the code, the logging level can be set to <code v-pre>WARNING</code> so that log messages specified as <code v-pre>INFO</code> level (which is a lower level than <code v-pre>WARNING</code>) will not be written to the log file at all.</p>
+                          <p>Now, you can use the <code class="hljs inline no-lang" v-pre>Logger</code> object to log information. Note the use of a <span data-mb-component-type="popover" v-b-popover.hover.top.html="popoverInnerGetters" class="trigger"><span data-mb-slot-name="content"><code class="hljs inline no-lang" v-pre>INFO</code>, <code class="hljs inline no-lang" v-pre>WARNING</code> etc.</span>logging level</span> for each message. When running the code, the logging level can be set to <code class="hljs inline no-lang" v-pre>WARNING</code> so that log messages specified as having <code class="hljs inline no-lang" v-pre>INFO</code> level (which is a lower level than <code class="hljs inline no-lang" v-pre>WARNING</code>) will not be written to the log file at all.</p>
                           <pre><code class="hljs java" v-pre><span><span class="hljs-comment">// log a message at INFO level</span>
-</span><span>logger.log(Level.INFO, <span class="hljs-string">"going to start processing"</span>);
-</span><span><span class="hljs-comment">//...</span>
+</span><span>logger.log(Level.INFO, <span class="hljs-string">&quot;going to start processing&quot;</span>);
+</span><span><span class="hljs-comment">// ...</span>
 </span><span>processInput();
-</span><span><span class="hljs-keyword">if</span>(error){
-</span><span>    <span class="hljs-comment">//log a message at WARNING level</span>
-</span><span>    logger.log(Level.WARNING, <span class="hljs-string">"processing error"</span>, ex);
+</span><span><span class="hljs-keyword">if</span> (error) {
+</span><span>    <span class="hljs-comment">// log a message at WARNING level</span>
+</span><span>    logger.log(Level.WARNING, <span class="hljs-string">&quot;processing error&quot;</span>, ex);
 </span><span>}
-</span><span><span class="hljs-comment">//...</span>
-</span><span>logger.log(Level.INFO, <span class="hljs-string">"end of processing"</span>);
+</span><span><span class="hljs-comment">// ...</span>
+</span><span>logger.log(Level.INFO, <span class="hljs-string">&quot;end of processing&quot;</span>);
 </span></code></pre>
                         </box>
                       </div>
                       <div>
                         <div>
-                          <panel expanded><template slot="_header">
+                          <panel expanded><template slot="header">
                               <p><span><span aria-hidden="true" class="fas fa-paperclip"></span></span> Resources</p>
                             </template>
                             <p><strong>Tutorials</strong>:</p>
@@ -373,13 +374,11 @@
         </div>
         <i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i>
       </div>
-
-
     </div>
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.16.0</a>, generated on Thu, Oct 29, 2020, 4:09:50 PM GMT+8]</small>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.3</a>, generated on Sat, 1 May 2021, 12:33:13 GMT+8]</small>
       </div>
     </footer>
   </div>
@@ -400,7 +399,7 @@
       debug: false,
     });
   }
-  MarkBind.afterSetup(initAlgolia);
+  initAlgolia();
 </script>
 <script src="../../markbind/layouts/default/scripts.js"></script>
 <script>

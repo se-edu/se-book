@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.16.0">
+  <meta name="generator" content="MarkBind 2.17.3">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - Error Handling: Logging: How</title>
   <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="../../../markbind/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
   <link rel="stylesheet" href="../../../markbind/css/octicons.css">
-  <link rel="stylesheet" href="../../../markbind/css/github.min.css">
+  <link rel="stylesheet" href="../../../markbind/css/codeblock-dark.min.css">
   <link rel="stylesheet" href="../../../markbind/css/markbind.min.css">
   <script src="../../../markbind/js/polyfill.min.js"></script>
   <script src="../../../markbind/js/vue.min.js"></script>
@@ -199,7 +199,7 @@
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/uml/index.html">UML</a></div>
                 </li>
                 <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/intellij/index.html">Intellij IDEA</a></div>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/intellij/index.html">IntelliJ IDEA</a></div>
                 </li>
                 <li>
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/gitAndGithub/index.html">Git and GitHub</a></div>
@@ -237,8 +237,9 @@
         </div>
       </nav>
 
+
       <div id="content-wrapper">
-        <h1 id="software-engineering-for-self-directed-learners"><span class="text-dark"><small><strong><strong>Software Engineering for Self-Directed Learners »</strong></strong></small></span><a class="fa fa-anchor" href="#software-engineering-for-self-directed-learners" onclick="event.stopPropagation()"></a></h1>
+        <h1 id="software-engineering-for-self-directed-learners"><span id="software-engineering-for-self-directed-learners" class="anchor"></span><span class="text-dark"><small><strong><strong>Software Engineering for Self-Directed Learners »</strong></strong></small></span><a class="fa fa-anchor" href="#software-engineering-for-self-directed-learners" onclick="event.stopPropagation()"></a></h1>
         <div>
           <link rel="stylesheet" href="/se-book/css/textbook.css">
           <div class="website-content">
@@ -253,7 +254,7 @@
                     </span></strong></span></p>
               <div id="title-and-body">
                 <div>
-                  <h4 id="how"><span>How</span><a class="fa fa-anchor" href="#how" onclick="event.stopPropagation()"></a></h4>
+                  <h4 id="how"><span id="how" class="anchor"></span><span>How</span><a class="fa fa-anchor" href="#how" onclick="event.stopPropagation()"></a></h4>
                 </div>
                 <div id="main">
                   <div>
@@ -263,26 +264,26 @@
                       <p>First, import the relevant Java package:</p>
                       <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">import</span> java.util.logging.*;
 </span></code></pre>
-                      <p>Next, create a <code v-pre>Logger</code>:</p>
-                      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Logger logger = Logger.getLogger(<span class="hljs-string">"Foo"</span>);
+                      <p>Next, create a <code class="hljs inline no-lang" v-pre>Logger</code>:</p>
+                      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Logger logger = Logger.getLogger(<span class="hljs-string">&quot;Foo&quot;</span>);
 </span></code></pre>
-                      <p>Now, you can use the <code v-pre>Logger</code> object to log information. Note the use of <span data-mb-component-type="popover" v-b-popover.hover.top.html="popoverInnerGetters" class="trigger"><span data-mb-slot-name="content"><code v-pre>INFO</code>, <code v-pre>WARNING</code> etc.</span>logging level</span> for each message. When running the code, the logging level can be set to <code v-pre>WARNING</code> so that log messages specified as <code v-pre>INFO</code> level (which is a lower level than <code v-pre>WARNING</code>) will not be written to the log file at all.</p>
+                      <p>Now, you can use the <code class="hljs inline no-lang" v-pre>Logger</code> object to log information. Note the use of a <span data-mb-component-type="popover" v-b-popover.hover.top.html="popoverInnerGetters" class="trigger"><span data-mb-slot-name="content"><code class="hljs inline no-lang" v-pre>INFO</code>, <code class="hljs inline no-lang" v-pre>WARNING</code> etc.</span>logging level</span> for each message. When running the code, the logging level can be set to <code class="hljs inline no-lang" v-pre>WARNING</code> so that log messages specified as having <code class="hljs inline no-lang" v-pre>INFO</code> level (which is a lower level than <code class="hljs inline no-lang" v-pre>WARNING</code>) will not be written to the log file at all.</p>
                       <pre><code class="hljs java" v-pre><span><span class="hljs-comment">// log a message at INFO level</span>
-</span><span>logger.log(Level.INFO, <span class="hljs-string">"going to start processing"</span>);
-</span><span><span class="hljs-comment">//...</span>
+</span><span>logger.log(Level.INFO, <span class="hljs-string">&quot;going to start processing&quot;</span>);
+</span><span><span class="hljs-comment">// ...</span>
 </span><span>processInput();
-</span><span><span class="hljs-keyword">if</span>(error){
-</span><span>    <span class="hljs-comment">//log a message at WARNING level</span>
-</span><span>    logger.log(Level.WARNING, <span class="hljs-string">"processing error"</span>, ex);
+</span><span><span class="hljs-keyword">if</span> (error) {
+</span><span>    <span class="hljs-comment">// log a message at WARNING level</span>
+</span><span>    logger.log(Level.WARNING, <span class="hljs-string">&quot;processing error&quot;</span>, ex);
 </span><span>}
-</span><span><span class="hljs-comment">//...</span>
-</span><span>logger.log(Level.INFO, <span class="hljs-string">"end of processing"</span>);
+</span><span><span class="hljs-comment">// ...</span>
+</span><span>logger.log(Level.INFO, <span class="hljs-string">&quot;end of processing&quot;</span>);
 </span></code></pre>
                     </box>
                   </div>
                   <div>
                     <div>
-                      <panel expanded><template slot="_header">
+                      <panel expanded><template slot="header">
                           <p><span><span aria-hidden="true" class="fas fa-paperclip"></span></span> Resources</p>
                         </template>
                         <p><strong>Tutorials</strong>:</p>
@@ -311,13 +312,11 @@
         </div>
         <i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i>
       </div>
-
-
     </div>
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.16.0</a>, generated on Thu, Oct 29, 2020, 4:09:50 PM GMT+8]</small>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.3</a>, generated on Sat, 1 May 2021, 12:33:13 GMT+8]</small>
       </div>
     </footer>
   </div>
@@ -338,7 +337,7 @@
       debug: false,
     });
   }
-  MarkBind.afterSetup(initAlgolia);
+  initAlgolia();
 </script>
 <script src="../../../markbind/layouts/default/scripts.js"></script>
 <script>

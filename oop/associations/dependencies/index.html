@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.16.0">
+  <meta name="generator" content="MarkBind 2.17.3">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - Object Oriented Programming: Associations: Dependencies</title>
   <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="../../../markbind/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
   <link rel="stylesheet" href="../../../markbind/css/octicons.css">
-  <link rel="stylesheet" href="../../../markbind/css/github.min.css">
+  <link rel="stylesheet" href="../../../markbind/css/codeblock-dark.min.css">
   <link rel="stylesheet" href="../../../markbind/css/markbind.min.css">
   <script src="../../../markbind/js/polyfill.min.js"></script>
   <script src="../../../markbind/js/vue.min.js"></script>
@@ -199,7 +199,7 @@
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/uml/index.html">UML</a></div>
                 </li>
                 <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/intellij/index.html">Intellij IDEA</a></div>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/intellij/index.html">IntelliJ IDEA</a></div>
                 </li>
                 <li>
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/gitAndGithub/index.html">Git and GitHub</a></div>
@@ -237,8 +237,9 @@
         </div>
       </nav>
 
+
       <div id="content-wrapper">
-        <h1 id="software-engineering-for-self-directed-learners"><span class="text-dark"><small><strong><strong>Software Engineering for Self-Directed Learners »</strong></strong></small></span><a class="fa fa-anchor" href="#software-engineering-for-self-directed-learners" onclick="event.stopPropagation()"></a></h1>
+        <h1 id="software-engineering-for-self-directed-learners"><span id="software-engineering-for-self-directed-learners" class="anchor"></span><span class="text-dark"><small><strong><strong>Software Engineering for Self-Directed Learners »</strong></strong></small></span><a class="fa fa-anchor" href="#software-engineering-for-self-directed-learners" onclick="event.stopPropagation()"></a></h1>
         <div>
           <link rel="stylesheet" href="/se-book/css/textbook.css">
           <div class="website-content">
@@ -253,29 +254,28 @@
                     </span></strong></span></p>
               <div id="title-and-body">
                 <div>
-                  <h4 id="dependencies"><span>Dependencies</span><a class="fa fa-anchor" href="#dependencies" onclick="event.stopPropagation()"></a></h4>
+                  <h4 id="dependencies"><span id="dependencies" class="anchor"></span><span>Dependencies</span><a class="fa fa-anchor" href="#dependencies" onclick="event.stopPropagation()"></a></h4>
                 </div>
                 <div id="main">
                   <div>
-                    <p>In the context of OOP associations, <strong>a <em>dependency</em> is a need for one class to depend on another without having a direct association with it.</strong> One cause of dependencies is interactions between objects that do not have a long-term link between them.</p>
+                    <p>In the context of OOP associations, <strong>a <em>dependency</em> is a need for one class to depend on another without having a direct association in the same direction.</strong> Reason for the exclusion: If there is an association from class <code class="hljs inline no-lang" v-pre>Foo</code> to class <code class="hljs inline no-lang" v-pre>Bar</code> (i.e., navigable from <code class="hljs inline no-lang" v-pre>Foo</code> to <code class="hljs inline no-lang" v-pre>Bar</code>), that means <code class="hljs inline no-lang" v-pre>Foo</code> is <em>obviously</em> dependent on <code class="hljs inline no-lang" v-pre>Bar</code> and hence there is no point in mentioning <em>dependency</em> specifically. In other words, we are only concerned about <em>non-obvious</em> dependencies here. One cause of such dependencies is interactions between objects that do not have a long-term link between them.</p>
                     <box>
-                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> A <code v-pre>Course</code> object can have a dependency on a <code v-pre>Registrar</code> object to obtain the maximum number of students it can support.</p>
+                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> A <code class="hljs inline no-lang" v-pre>Course</code> class can have a dependency on a <code class="hljs inline no-lang" v-pre>Registrar</code> class because the <code class="hljs inline no-lang" v-pre>Course</code> class needs to refer to the <code class="hljs inline no-lang" v-pre>Registrar</code> class to obtain the the maximum number of students it can support (e.g., <code class="hljs inline no-lang" v-pre>Registrar.MAX_COURSE_CAPACITY</code>).</p>
                     </box>
-                    <h5 id="implementing-dependencies">Implementing dependencies<a class="fa fa-anchor" href="#implementing-dependencies" onclick="event.stopPropagation()"></a></h5>
                     <box>
-                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In the code below, <code v-pre>Foo</code> has a dependency on <code v-pre>Bar</code> but it is not an association because it is only a <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">temporary</span>transient</span> interaction and there is no long term relationship between a <code v-pre>Foo</code> object and a <code v-pre>Bar</code> object. <span class="dimmed">i.e. the <code v-pre>Foo</code> object does not keep the <code v-pre>Bar</code> object it receives as a parameter</span>.</p>
+                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In the code below, <code class="hljs inline no-lang" v-pre>Foo</code> has a dependency on <code class="hljs inline no-lang" v-pre>Bar</code> but it is not an association because it is only a <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">temporary</span>transient</span> interaction and there is no long term relationship between a <code class="hljs inline no-lang" v-pre>Foo</code> object and a <code class="hljs inline no-lang" v-pre>Bar</code> object. <span class="dimmed">i.e. the <code class="hljs inline no-lang" v-pre>Foo</code> object does not keep the <code class="hljs inline no-lang" v-pre>Bar</code> object it receives as a parameter</span>.</p>
                       <div class="alt-java">
-                        <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span></span>{
+                        <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span> </span>{
 </span><span>    
-</span><span>    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">calculate</span><span class="hljs-params">(Bar bar)</span></span>{
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">calculate</span><span class="hljs-params">(Bar bar)</span> </span>{
 </span><span>        <span class="hljs-keyword">return</span> bar.getValue();
 </span><span>    }
 </span><span>}
 </span><span>
-</span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bar</span></span>{
+</span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bar</span> </span>{
 </span><span>    <span class="hljs-keyword">int</span> value;
 </span><span>    
-</span><span>    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">getValue</span><span class="hljs-params">()</span></span>{
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">getValue</span><span class="hljs-params">()</span> </span>{
 </span><span>        <span class="hljs-keyword">return</span> value;
 </span><span>    }
 </span><span>}
@@ -284,12 +284,12 @@
                       <div class="alt-python">
                         <pre><code class="hljs python" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span>:</span>
 </span><span>    
-</span><span>    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">calculate</span><span class="hljs-params">(self, bar)</span>:</span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">calculate</span>(<span class="hljs-params">self, bar</span>):</span>
 </span><span>        <span class="hljs-keyword">return</span> bar.value;
 </span><span>
 </span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bar</span>:</span>
 </span><span>    
-</span><span>    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, value)</span>:</span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span>(<span class="hljs-params">self, value</span>):</span>
 </span><span>      self.value = value
 </span></code></pre>
                       </div>
@@ -303,13 +303,11 @@
         </div>
         <i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i>
       </div>
-
-
     </div>
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.16.0</a>, generated on Thu, Oct 29, 2020, 4:09:50 PM GMT+8]</small>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.3</a>, generated on Sat, 1 May 2021, 12:33:13 GMT+8]</small>
       </div>
     </footer>
   </div>
@@ -330,7 +328,7 @@
       debug: false,
     });
   }
-  MarkBind.afterSetup(initAlgolia);
+  initAlgolia();
 </script>
 <script src="../../../markbind/layouts/default/scripts.js"></script>
 <script>

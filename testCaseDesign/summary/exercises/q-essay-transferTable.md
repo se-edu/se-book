@@ -1,12 +1,12 @@
 <panel header="{{ icon_Q_A }} transferTable">
 <question has-input="true">
 
-Given below is an operation description taken from a restaurant booking system. Use equivalence partitions and boundary value analysis technique to design a set of test cases for it.
+Given below is an operation description taken from a restaurant booking system. Use equivalence partitions and the boundary value analysis technique to design a set of test cases for it.
 
-* boolean transferTable (Booking b, Table t)
-* Description:  Used to transfer a Booking b to Table t, if t has enough room.
-* Preconditions:  t has room for b , b.getTable() != t
-* Postconditions:  b.getTable() == t
+* `boolean transferTable(Booking b, Table t)`
+* Description: Used to transfer a Booking `b` to Table `t`, if `t` has enough room.
+* Preconditions: `t` has room for `b`, `b.getTable() != t`
+* Postconditions: `b.getTable() == t`
 
 <div slot="answer">
 
@@ -14,20 +14,20 @@ Given below is an operation description taken from a restaurant booking system. 
 
 * Booking:
 
-  * Invalid: null, not null and b.getTable==t
-  * Valid: not null and b.getTable != t
+  * Invalid: null, not null and `b.getTable == t`
+  * Valid: not null and `b.getTable != t`
 
 * Table:
 
-  * Invalid: null, not vacant, vacant but doesn’t have enough room,
-  * Valid: vacant and has enough room.
+  * Invalid: null, not vacant, vacant but doesn’t have enough room
+  * Valid: vacant and has enough room
 
 **Boundary values:**
 
 * Booking:
 
-  * Invalid: null, not null and b.getTable==t
-  * Valid:not null and b.getTable != t
+  * Invalid: null, not null and `b.getTable == t`
+  * Valid: not null and `b.getTable != t`
 
 * Table:
 

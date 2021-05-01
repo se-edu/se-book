@@ -4,48 +4,48 @@
       </span></strong></span></p>
 <div id="title-and-body">
   <div>
-    <h4 id="class-level-members"><span>Class-level members</span><a class="fa fa-anchor" href="#class-level-members" onclick="event.stopPropagation()"></a></h4>
+    <h4 id="class-level-members"><span id="class-level-members" class="anchor"></span><span>Class-level members</span><a class="fa fa-anchor" href="#class-level-members" onclick="event.stopPropagation()"></a></h4>
   </div>
   <div id="main">
     <div>
-      <p>While all objects of a class has the same attributes, each object has its own copy of the attribute value.</p>
+      <p>While all objects of a class have the same attributes, each object has its own copy of the attribute value.</p>
       <box>
-        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> All <code v-pre>Person</code> objects have the <code v-pre>Name</code> attribute but the value of that attribute varies between <code v-pre>Person</code> objects.</p>
+        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> All <code class="hljs inline no-lang" v-pre>Person</code> objects have the <code class="hljs inline no-lang" v-pre>name</code> attribute but the value of that attribute varies between <code class="hljs inline no-lang" v-pre>Person</code> objects.</p>
       </box>
       <p>However, some attributes are not suitable to be maintained by individual objects. Instead, they should be maintained centrally, shared by all objects of the class. They are like ‘global variables’ but attached to a specific class. Such <strong>variables whose value is shared by all instances of a class are called <mark><em>class-level attributes</em></mark></strong>.</p>
       <box>
-        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The attribute <code v-pre>totalPersons</code> should be maintained centrally and shared by all <code v-pre>Person</code> objects rather than copied at each <code v-pre>Person</code> object.</p>
+        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The attribute <code class="hljs inline no-lang" v-pre>totalPersons</code> should be maintained centrally and shared by all <code class="hljs inline no-lang" v-pre>Person</code> objects rather than copied at each <code class="hljs inline no-lang" v-pre>Person</code> object.</p>
       </box>
       <p>Similarly, when a normal method is being called, a message is being sent to the receiving object and the result may depend on the receiving object.</p>
       <box>
-        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Sending the <code v-pre>getName()</code> message to the <code v-pre>Adam</code> object results in the response <code v-pre>&quot;Adam&quot;</code> while sending the same message to the <code v-pre>Beth</code> object results in the response <code v-pre>&quot;Beth&quot;</code>.</p>
+        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Sending the <code class="hljs inline no-lang" v-pre>getName()</code> message to the <code class="hljs inline no-lang" v-pre>Adam</code> object results in the response <code class="hljs inline no-lang" v-pre>&quot;Adam&quot;</code> while sending the same message to the <code class="hljs inline no-lang" v-pre>Beth</code> object results in the response <code class="hljs inline no-lang" v-pre>&quot;Beth&quot;</code>.</p>
       </box>
-      <p>However, there can be methods related to a specific class but not suitable for sending message to a specific object of that class. Such <strong>methods that are called using the class instead of a specific instance are called <mark><em>class-level methods</em></mark></strong>.</p>
+      <p>However, there can be methods related to a specific class but not suitable for sending messages to a specific object of that class. Such <strong>methods that are called using the class instead of a specific instance are called <mark><em>class-level methods</em></mark></strong>.</p>
       <box>
-        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The method <code v-pre>getTotalPersons()</code> is not suitable to send to a specific <code v-pre>Person</code> object <span class="dimmed">because a specific object of the <code v-pre>Person</code> class should not have to know about the total number of <code v-pre>Person</code> objects</span>.</p>
+        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The method <code class="hljs inline no-lang" v-pre>getTotalPersons()</code> is not suitable to send to a specific <code class="hljs inline no-lang" v-pre>Person</code> object <span class="dimmed">because a specific object of the <code class="hljs inline no-lang" v-pre>Person</code> class should not have to know about the total number of <code class="hljs inline no-lang" v-pre>Person</code> objects</span>.</p>
       </box>
-      <p><strong>Class-level attributes and methods are collectively called <mark><em>class-level members</em></mark></strong> (also called <em>static members</em> sometimes because some programming languages use the keyword <code v-pre>static</code> to identify class-level members). <strong>They are to be accessed using the class name rather than an instance of the class</strong>.</p>
+      <p><strong>Class-level attributes and methods are collectively called <mark><em>class-level members</em></mark></strong> (also called <em>static members</em> sometimes because some programming languages use the keyword <code class="hljs inline no-lang" v-pre>static</code> to identify class-level members). <strong>They are to be accessed using the class name rather than an instance of the class</strong>.</p>
     </div>
     <div>
       <div>
-        <panel expandable class="algolia-no-index"><template slot="_header">
+        <panel expandable class="algolia-no-index"><template slot="header">
             <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
           </template>
           <div>
-            <panel class="algolia-no-index"><template slot="_header">
-                <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Suitable as a class-level variables</p>
+            <panel class="algolia-no-index"><template slot="header">
+                <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Suitable as class-level variables</p>
               </template>
               <question>
                 <p>Which of these are suitable as class-level variables?</p>
                 <ul class="contains-task-list">
-                  <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> a. system: multi-player Pac Man game, Class: <code v-pre>Player</code>, variable: <code v-pre>totalScore</code></li>
-                  <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> b. system: eLearning system, class: <code v-pre>Course</code>, variable: <code v-pre>totalStudents</code></li>
-                  <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> c. system: ToDo manager, class: <code v-pre>Task</code>, variable: <code v-pre>totalPendingTasks</code></li>
-                  <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. system: any, class: <code v-pre>ArrayList</code>, variable: <code v-pre>total</code> (i.e., total items in a given <code v-pre>ArrayList</code> object)</li>
+                  <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> a. system: multi-player Pac Man game, Class: <code class="hljs inline no-lang" v-pre>Player</code>, variable: <code class="hljs inline no-lang" v-pre>totalScore</code></li>
+                  <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> b. system: eLearning system, class: <code class="hljs inline no-lang" v-pre>Course</code>, variable: <code class="hljs inline no-lang" v-pre>totalStudents</code></li>
+                  <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> c. system: ToDo manager, class: <code class="hljs inline no-lang" v-pre>Task</code>, variable: <code class="hljs inline no-lang" v-pre>totalPendingTasks</code></li>
+                  <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. system: any, class: <code class="hljs inline no-lang" v-pre>ArrayList</code>, variable: <code class="hljs inline no-lang" v-pre>total</code> (i.e., total items in a given <code class="hljs inline no-lang" v-pre>ArrayList</code> object)</li>
                 </ul>
                 <div slot="answer" class="algolia-no-index">
                   <p>(c)</p>
-                  <p>Explanation: <code v-pre>totalPendingTasks</code> should not be managed by individual <code v-pre>Task</code> objects and therefore suitable to be maintained as a class-level variable. The other variables should be managed at instance level as their value varies from instance to instance. e.g., <code v-pre>totalStudents</code> for one <code v-pre>Course</code> object will differ from <code v-pre>totalStudents</code> of another.</p>
+                  <p>Explanation: <code class="hljs inline no-lang" v-pre>totalPendingTasks</code> should not be managed by individual <code class="hljs inline no-lang" v-pre>Task</code> objects and is therefore suitable to be maintained as a class-level variable. The other variables should be managed at instance level as their value varies from instance to instance. e.g., <code class="hljs inline no-lang" v-pre>totalStudents</code> for one <code class="hljs inline no-lang" v-pre>Course</code> object will differ from <code class="hljs inline no-lang" v-pre>totalStudents</code> of another.</p>
                 </div>
               </question>
             </panel>

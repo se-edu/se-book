@@ -14,7 +14,7 @@ Big-bang is not recommended because it will uncover too many problems at the sam
 
 </box>
 
-**_Incremental integration_: integrate few components at a time.** This approach is better than the big-bang integration because it surfaces integration problems in a more manageable way.
+**_Incremental integration_: integrate a few components at a time.** This approach is better than big-bang integration because it surfaces integration problems in a more manageable way.
 
 <div v-closeable alt="slideshow: comparison" class="non-printable">
 

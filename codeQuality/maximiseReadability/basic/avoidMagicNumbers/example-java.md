@@ -19,7 +19,7 @@ static final int MAX_SIZE = 10;
 ...
 return PI;
 ...
-return MAX_SIZE-1;
+return MAX_SIZE - 1;
 ```
   </td>
 </tr>

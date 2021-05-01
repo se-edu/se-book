@@ -5,7 +5,7 @@ Imagine that you now support the following feature in our Minesweeper game.
 
 <box>
 
-Feature ID: multiplayer<br>
+Feature ID: Multiplayer<br>
 Description: A minefield is divided into mine regions. Each region is assigned to a single player. Players can swap regions. To win the game, all regions must be cleared.
 
 </box>
@@ -18,7 +18,7 @@ Given below is an extract from our class diagram.
 Minimally, this can be implemented like this.
 
 ```java
-class Player{
+class Player {
     Region region;
     void setRegion(Region r) {
         region = r;
@@ -75,7 +75,7 @@ public class Region {
     }
 
     public void removePlayer(Player disconnectingPlayer) {
-        if (myPlayer == disconnectingPlayer){
+        if (myPlayer == disconnectingPlayer) {
             myPlayer = null;
         } else {
             stopSystemWithErrorMessage("Unknown Player trying to disconnect");

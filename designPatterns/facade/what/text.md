@@ -21,7 +21,7 @@ Components need to access functionality deep inside other components.
 
 **Problem**
 
-Access to the component should be allowed without exposing its internal details. %%e.g.  the `UI` component should access the functionality of the `Logic` component without knowing that it contained a `Book` class within it.%%
+Access to the component should be allowed without exposing its internal details. %%e.g.  the `UI` component should access the functionality of the `Logic` component without knowing that it contains a `Book` class within it.%%
 
 **Solution**
 
@@ -29,7 +29,7 @@ Include a <tooltip content="a French word that means 'front of a building'">Faç
 
 <box>
 
-{{ icon_example }} The following class diagram applies the Façade pattern to the `Library System` example. The `LibraryLogic` class is the Facade class.
+{{ icon_example }} The following class diagram applies the Facade pattern to the `Library System` example. The `LibraryLogic` class is the Facade class.
 
 <img src="{{baseUrl}}/designPatterns/facade/what/images/textLibraryBook.png" height="120" />
 <p/>

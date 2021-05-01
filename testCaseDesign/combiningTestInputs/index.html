@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.16.0">
+  <meta name="generator" content="MarkBind 2.17.3">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - Test Case Design: Combining Test Inputs</title>
   <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
   <link rel="stylesheet" href="../../markbind/css/octicons.css">
-  <link rel="stylesheet" href="../../markbind/css/github.min.css">
+  <link rel="stylesheet" href="../../markbind/css/codeblock-dark.min.css">
   <link rel="stylesheet" href="../../markbind/css/markbind.min.css">
   <script src="../../markbind/js/polyfill.min.js"></script>
   <script src="../../markbind/js/vue.min.js"></script>
@@ -199,7 +199,7 @@
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/uml/index.html">UML</a></div>
                 </li>
                 <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/intellij/index.html">Intellij IDEA</a></div>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/intellij/index.html">IntelliJ IDEA</a></div>
                 </li>
                 <li>
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/gitAndGithub/index.html">Git and GitHub</a></div>
@@ -237,15 +237,16 @@
         </div>
       </nav>
 
+
       <div id="content-wrapper">
-        <h1 id="software-engineering-for-self-directed-learners"><span class="text-dark"><small><strong><strong>Software Engineering for Self-Directed Learners »</strong></strong></small></span><a class="fa fa-anchor" href="#software-engineering-for-self-directed-learners" onclick="event.stopPropagation()"></a></h1>
+        <h1 id="software-engineering-for-self-directed-learners"><span id="software-engineering-for-self-directed-learners" class="anchor"></span><span class="text-dark"><small><strong><strong>Software Engineering for Self-Directed Learners »</strong></strong></small></span><a class="fa fa-anchor" href="#software-engineering-for-self-directed-learners" onclick="event.stopPropagation()"></a></h1>
         <div>
           <link rel="stylesheet" href="/se-book/css/textbook.css">
           <div class="website-content" id="all">
             <p><span class="dimmed"><strong><span>Quality Assurance → Test Case Design →
                   </span></strong></span></p>
             <div id="title">
-              <h1 id="combining-test-inputs"><span>Combining test inputs</span><a class="fa fa-anchor" href="#combining-test-inputs" onclick="event.stopPropagation()"></a></h1>
+              <h1 id="combining-test-inputs"><span id="combining-test-inputs" class="anchor"></span><span>Combining test inputs</span><a class="fa fa-anchor" href="#combining-test-inputs" onclick="event.stopPropagation()"></a></h1>
             </div>
             <div id="main">
               <div>
@@ -253,7 +254,7 @@
                   <panel type="seamless" expanded id="why">
                     <span slot="header" class="card-title">
                       <div>
-                        <h4 id="why"><span>Why</span><a class="fa fa-anchor" href="#why" onclick="event.stopPropagation()"></a></h4>
+                        <h4 id="why"><span id="why" class="anchor"></span><span>Why</span><a class="fa fa-anchor" href="#why" onclick="event.stopPropagation()"></a></h4>
                       </div>
                     </span>
                     <div class="indented">
@@ -264,16 +265,16 @@
                       <div>
                         <p><strong>An SUT can take multiple inputs.</strong> You can select values for each input (using equivalence partitioning, boundary value analysis, or some other technique).</p>
                         <box>
-                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> an SUT that takes multiple inputs and some values chosen as values for each input:</p>
+                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> An SUT that takes multiple inputs and some values chosen for each input:</p>
                           <ul>
-                            <li>Method to test: <code v-pre>calculateGrade(participation, projectGrade, isAbsent, examScore)</code></li>
+                            <li>Method to test: <code class="hljs inline no-lang" v-pre>calculateGrade(participation, projectGrade, isAbsent, examScore)</code></li>
                             <li>Values to test:<div class="table-responsive">
                                 <table class="markbind-table table table-bordered table-striped">
                                   <thead>
                                     <tr>
                                       <th>Input</th>
-                                      <th>valid values to test</th>
-                                      <th>invalid values to test</th>
+                                      <th>Valid values to test</th>
+                                      <th>Invalid values to test</th>
                                     </tr>
                                   </thead>
                                   <tbody>
@@ -303,7 +304,7 @@
                             </li>
                           </ul>
                         </box>
-                        <p><strong>Testing all possible combinations is effective but not efficient.</strong> If you test all possible combinations for the above example, you need to test 6x5x2x6=360 cases. Doing so has a higher chance of discovering bugs (i.e. effective) but the number of test cases can be too high (i.e. not efficient). Therefore, <strong>you need smarter ways to combine test inputs that are both effective and efficient.</strong></p>
+                        <p><strong>Testing all possible combinations is effective but not efficient.</strong> If you test all possible combinations for the above example, you need to test 6x5x2x6=360 cases. Doing so has a higher chance of discovering bugs (i.e. effective) but the number of test cases will be too high (i.e. not efficient). Therefore, <strong>you need smarter ways to combine test inputs that are both effective and efficient.</strong></p>
                       </div>
                       <div></div>
                     </div>
@@ -313,7 +314,7 @@
                   <panel type="seamless" expanded id="test-input-combination-strategies">
                     <span slot="header" class="card-title">
                       <div>
-                        <h4 id="test-input-combination-strategies"><span>Test input combination strategies</span><a class="fa fa-anchor" href="#test-input-combination-strategies" onclick="event.stopPropagation()"></a></h4>
+                        <h4 id="test-input-combination-strategies"><span id="test-input-combination-strategies" class="anchor"></span><span>Test input combination strategies</span><a class="fa fa-anchor" href="#test-input-combination-strategies" onclick="event.stopPropagation()"></a></h4>
                       </div>
                     </span>
                     <div class="indented">
@@ -322,10 +323,10 @@
                       <p></p>
                       <p></p>
                       <div>
-                        <p>Given below are some basic strategies for generating a set of test cases by combining multiple test input combination strategies.</p>
+                        <p>Given below are some basic strategies for generating a set of test cases by combining multiple test inputs.</p>
                         <box>
                           <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Let's assume the SUT has the following three inputs and you have selected the given values for testing:</p>
-                          <p>SUT: <code v-pre>foo(p1 char, p2 int, p3 boolean)</code></p>
+                          <p>SUT: <code class="hljs inline no-lang" v-pre>foo(char p1, int p2, boolean p3)</code></p>
                           <p>Values to test:</p>
                           <div class="table-responsive">
                             <table class="markbind-table table table-bordered table-striped">
@@ -354,7 +355,7 @@
                         </box>
                         <p><strong>The <em>all combinations</em> strategy generates test cases for each unique combination of test inputs.</strong></p>
                         <box>
-                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> the strategy generates 3x3x2=18 test cases</p>
+                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This strategy generates 3x3x2=18 test cases.</p>
                           <div class="table-responsive">
                             <table class="markbind-table table table-bordered table-striped">
                               <thead>
@@ -402,7 +403,7 @@
                         </box>
                         <p><strong>The <em>at least once</em> strategy includes each test input at least once.</strong></p>
                         <box>
-                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> this strategy generates 3 test cases.</p>
+                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This strategy generates 3 test cases.</p>
                           <div class="table-responsive">
                             <table class="markbind-table table table-bordered table-striped">
                               <thead>
@@ -437,11 +438,11 @@
                           </div>
                           <p>VV/IV = Any Valid Value / Any Invalid Value</p>
                         </box>
-                        <p><strong>The <em>all pairs</em> strategy creates test cases so that for any given pair of inputs, all combinations between them are tested.</strong> It is based on the observations that a bug is rarely the result of more than two interacting factors. The resulting number of test cases is lower than the <em>all combinations</em> strategy, but higher than the <em>at least once</em> approach.</p>
+                        <p><strong>The <em>all pairs</em> strategy creates test cases so that for any given pair of inputs, all combinations between them are tested.</strong> It is based on the observation that a bug is rarely the result of more than two interacting factors. The resulting number of test cases is lower than the <em>all combinations</em> strategy, but higher than the <em>at least once</em> approach.</p>
                         <box>
-                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> this strategy generates 9 test cases:</p>
-                          <panel type="seamless" class="algolia-no-index"><template slot="_header">
-                              <p>see steps</p>
+                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This strategy generates 9 test cases:</p>
+                          <panel type="seamless" class="algolia-no-index"><template slot="header">
+                              <p>See steps</p>
                             </template>
                             <p>Let's first consider inputs p1 and p2:</p>
                             <div class="table-responsive">
@@ -487,8 +488,8 @@
                               </table>
                             </div>
                             <p>These values can generate <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">(a,T)(a,F)(b,T)(b,F),...</span>3x2=6 combinations</span>, and the test cases should cover all of them.</p>
-                            <p>Similarly, inputs p2 and p3 generates another 6 combinations.</p>
-                            <p>The 9 test cases given below covers all those 9+6+6 combinations.</p>
+                            <p>Similarly, inputs p2 and p3 generate another 6 combinations.</p>
+                            <p>The 9 test cases given below cover all the above 9+6+6 combinations.</p>
                           </panel>
                           <div class="table-responsive">
                             <table class="markbind-table table table-bordered table-striped">
@@ -613,7 +614,7 @@
                             </table>
                           </div>
                         </box>
-                        <p><strong>The <em>random</em> strategy generates test cases using one of the other strategies and then pick a subset randomly</strong> (presumably because the original set of test cases is too big).</p>
+                        <p><strong>The <em>random</em> strategy generates test cases using one of the other strategies and then picks a subset randomly</strong> (presumably because the original set of test cases is too big).</p>
                         <p><strong>There are other strategies that can be used too.</strong></p>
                       </div>
                       <div></div>
@@ -624,7 +625,7 @@
                   <panel type="seamless" expanded id="heuristic-each-valid-input-at-least-once-in-a-positive-test-case">
                     <span slot="header" class="card-title">
                       <div>
-                        <h4 id="heuristic-each-valid-input-at-least-once-in-a-positive-test-case"><span>Heuristic: Each valid input at least once in a positive test case</span><a class="fa fa-anchor" href="#heuristic-each-valid-input-at-least-once-in-a-positive-test-case" onclick="event.stopPropagation()"></a></h4>
+                        <h4 id="heuristic-each-valid-input-at-least-once-in-a-positive-test-case"><span id="heuristic-each-valid-input-at-least-once-in-a-positive-test-case" class="anchor"></span><span>Heuristic: Each valid input at least once in a positive test case</span><a class="fa fa-anchor" href="#heuristic-each-valid-input-at-least-once-in-a-positive-test-case" onclick="event.stopPropagation()"></a></h4>
                       </div>
                     </span>
                     <div class="indented">
@@ -635,8 +636,8 @@
                       <div>
                         <p>Consider the following scenario.</p>
                         <box>
-                          <p>SUT: <code v-pre>printLabel(fruitName String, unitPrice int)</code></p>
-                          <p><strong>Selected values for</strong> <code v-pre>fruitName</code> (invalid values are <ins>underlined</ins> ):</p>
+                          <p>SUT: <code class="hljs inline no-lang" v-pre>printLabel(String fruitName, int unitPrice)</code></p>
+                          <p><strong>Selected values for</strong> <code class="hljs inline no-lang" v-pre>fruitName</code> (invalid values are <ins>underlined</ins>):</p>
                           <div class="table-responsive">
                             <table class="markbind-table table table-bordered table-striped">
                               <thead>
@@ -665,7 +666,7 @@
                               </tbody>
                             </table>
                           </div>
-                          <p><strong>Selected values for</strong> <code v-pre>unitPrice</code>:</p>
+                          <p><strong>Selected values for</strong> <code class="hljs inline no-lang" v-pre>unitPrice</code>:</p>
                           <div class="table-responsive">
                             <table class="markbind-table table table-bordered table-striped">
                               <thead>
@@ -736,12 +737,12 @@
                             </table>
                           </div>
                         </box>
-                        <p>It looks like the test cases were created using the <em>at least once</em> strategy. After running these tests, can you confirm that square-format label printing is done correctly?</p>
+                        <p>It looks like the test cases were created using the <em>at least once</em> strategy. After running these tests, can you confirm that the square-format label printing is done correctly?</p>
                         <ul>
                           <li>Answer: No.</li>
-                          <li>Reason: <code v-pre>Cherry</code> -- the only input that can produce a square-format label -- is in a negative test case which produces an error message instead of a label. If there is a bug in the code that prints labels in square-format, these tests cases will not trigger that bug.</li>
+                          <li>Reason: <code class="hljs inline no-lang" v-pre>Cherry</code> -- the only input that can produce a square-format label -- is in a negative test case which produces an error message instead of a label. If there is a bug in the code that prints labels in square-format, these tests cases will not trigger that bug.</li>
                         </ul>
-                        <p>In this case a useful heuristic to apply is <strong>each valid input must appear at least once in a positive test case</strong>. <code v-pre>Cherry</code> is a valid test input and you must ensure that it appears at least once in a positive test case. Here are the updated test cases after applying that heuristic.</p>
+                        <p>In this case, a useful heuristic to apply is <strong>each valid input must appear at least once in a positive test case</strong>. <code class="hljs inline no-lang" v-pre>Cherry</code> is a valid test input and you must ensure that it appears at least once in a positive test case. Here are the updated test cases after applying that heuristic.</p>
                         <box>
                           <div id="heuristic-valid-test-case">
                             <div class="table-responsive">
@@ -788,7 +789,7 @@
                                 </tbody>
                               </table>
                             </div>
-                            <p>VV/IV = Any Invalid or Valid Value VV=Any Valid Value</p>
+                            <p>VV/IV = Any Invalid or Valid Value VV = Any Valid Value</p>
                           </div>
                         </box>
                       </div>
@@ -800,7 +801,7 @@
                   <panel type="seamless" expanded id="heuristic-no-more-than-one-invalid-input-in-a-test-case">
                     <span slot="header" class="card-title">
                       <div>
-                        <h4 id="heuristic-no-more-than-one-invalid-input-in-a-test-case"><span>Heuristic: No more than one invalid input in a test case</span><a class="fa fa-anchor" href="#heuristic-no-more-than-one-invalid-input-in-a-test-case" onclick="event.stopPropagation()"></a></h4>
+                        <h4 id="heuristic-no-more-than-one-invalid-input-in-a-test-case"><span id="heuristic-no-more-than-one-invalid-input-in-a-test-case" class="anchor"></span><span>Heuristic: No more than one invalid input in a test case</span><a class="fa fa-anchor" href="#heuristic-no-more-than-one-invalid-input-in-a-test-case" onclick="event.stopPropagation()"></a></h4>
                       </div>
                     </span>
                     <div class="indented">
@@ -856,15 +857,15 @@
                                 </tbody>
                               </table>
                             </div>
-                            <p>VV/IV = Any Invalid or Valid Value VV=Any Valid Value</p>
+                            <p>VV/IV = Any Invalid or Valid Value VV = Any Valid Value</p>
                           </div>
                         </b-modal>
-                        <p>After running these test cases can you be sure that the error message “invalid price” is shown for negative prices?</p>
+                        <p>After running these test cases, can you be sure that the error message “invalid price” is shown for negative prices?</p>
                         <ul>
                           <li>Answer: No.</li>
-                          <li>Reason: <code v-pre>-1</code> -- the only input that is a negative price -– is in a test case that produces the error message “invalid fruit”.</li>
+                          <li>Reason: <code class="hljs inline no-lang" v-pre>-1</code> -- the only input that is a negative price -– is in a test case that produces the error message “invalid fruit”.</li>
                         </ul>
-                        <p>In this case a useful heuristic to apply is <strong>no more than one invalid input in a test case</strong>. After applying that, you get the following test cases.</p>
+                        <p>In this case, a useful heuristic to apply is <strong>no more than one invalid input in a test case</strong>. After applying that, you get the following test cases.</p>
                         <box>
                           <div class="table-responsive">
                             <table class="markbind-table table table-bordered table-striped">
@@ -916,16 +917,16 @@
                               </tbody>
                             </table>
                           </div>
-                          <p>VV/IV = Any Invalid or Valid Value VV=Any Valid Value</p>
+                          <p>VV/IV = Any Invalid or Valid Value VV = Any Valid Value</p>
                         </box>
                       </div>
                       <div>
                         <div>
-                          <panel expandable class="algolia-no-index"><template slot="_header">
+                          <panel expandable class="algolia-no-index"><template slot="header">
                               <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                             </template>
                             <div>
-                              <panel class="algolia-no-index"><template slot="_header">
+                              <panel class="algolia-no-index"><template slot="header">
                                   <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Can define test cases precisely</p>
                                 </template>
                                 <question>
@@ -936,7 +937,7 @@
                                   </ul>
                                   <div slot="answer" class="algolia-no-index">
                                     <p>False</p>
-                                    <p>Explanation: These heuristics are, well, heuristics only. They will help you to make better decisions about test case design. However, they are speculative in nature (especially, when testing in black-box fashion) and cannot give you precise number of test cases.</p>
+                                    <p>Explanation: These heuristics are, well, heuristics only. They will help you to make better decisions about test case design. However, they are speculative in nature (especially, when testing in black-box fashion) and cannot give you the precise number of test cases.</p>
                                   </div>
                                 </question>
                               </panel>
@@ -951,7 +952,7 @@
                   <panel type="seamless" expanded id="mix">
                     <span slot="header" class="card-title">
                       <div>
-                        <h4 id="mix"><span>Mix</span><a class="fa fa-anchor" href="#mix" onclick="event.stopPropagation()"></a></h4>
+                        <h4 id="mix"><span id="mix" class="anchor"></span><span>Mix</span><a class="fa fa-anchor" href="#mix" onclick="event.stopPropagation()"></a></h4>
                       </div>
                     </span>
                     <div class="indented">
@@ -963,7 +964,7 @@
                         <p>Consider the calculateGrade scenario given below:</p>
                         <box>
                           <ul>
-                            <li>SUT : <code v-pre>calculateGrade(participation, projectGrade, isAbsent, examScore)</code></li>
+                            <li>SUT: <code class="hljs inline no-lang" v-pre>calculateGrade(participation, projectGrade, isAbsent, examScore)</code></li>
                             <li>Values to test: invalid values are <ins>underlined</ins>
                               <ul>
                                 <li>participation: 0, 1, 19, 20, <ins>21</ins>, <ins>22</ins></li>
@@ -1043,7 +1044,7 @@
                           </div>
                           <p>VV/IV = Any Valid or Invalid Value, Err Msg = Error Message</p>
                         </box>
-                        <p>Next, let’s apply the <em>each valid input at least once in a positive test case</em> heuristic. Test case 5 has a valid value for <code v-pre>projectGrade=F</code> that doesn't appear in any other positive test case. Let's replace test case 5 with 5.1 and 5.2 to rectify that.</p>
+                        <p>Next, let’s apply the <em>each valid input at least once in a positive test case</em> heuristic. Test case 5 has a valid value for <code class="hljs inline no-lang" v-pre>projectGrade=F</code> that doesn't appear in any other positive test case. Let's replace test case 5 with 5.1 and 5.2 to rectify that.</p>
                         <box>
                           <p><strong>Test cases for calculateGrade V2</strong></p>
                           <div class="table-responsive">
@@ -1212,7 +1213,7 @@
                             </table>
                           </div>
                         </box>
-                        <p>Next, you can assume that there is a dependency between the inputs <code v-pre>examScore</code> and <code v-pre>isAbsent</code> such that an absent student can only have <code v-pre>examScore=0</code>. To cater for the hidden invalid case arising from this, you can add a new test case where <code v-pre>isAbsent=true</code> and <code v-pre>examScore!=0</code>. In addition, test cases 3-6.2 should have <code v-pre>isAbsent=false</code> so that the input remains valid.</p>
+                        <p>Next, you can assume that there is a dependency between the inputs <code class="hljs inline no-lang" v-pre>examScore</code> and <code class="hljs inline no-lang" v-pre>isAbsent</code> such that an absent student can only have <code class="hljs inline no-lang" v-pre>examScore=0</code>. To cater for the hidden invalid case arising from this, you can add a new test case where <code class="hljs inline no-lang" v-pre>isAbsent=true</code> and <code class="hljs inline no-lang" v-pre>examScore!=0</code>. In addition, test cases 3-6.2 should have <code class="hljs inline no-lang" v-pre>isAbsent=false</code> so that the input remains valid.</p>
                         <box>
                           <p><strong>Test cases for calculateGrade V4</strong></p>
                           <div class="table-responsive">
@@ -1315,37 +1316,37 @@
                       </div>
                       <div>
                         <div>
-                          <panel expanded><template slot="_header">
+                          <panel expanded><template slot="header">
                               <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                             </template>
                             <div>
                               <div>
-                                <panel class="algolia-no-index"><template slot="_header">
-                                    <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> statements about test input combinations</p>
+                                <panel class="algolia-no-index"><template slot="header">
+                                    <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Statements about test input combinations</p>
                                   </template>
                                   <question>
-                                    <p>Which of these contradict the heuristics recommended when creating test cases with multiple inputs?</p>
-                                    <ul radio-group="1da4e" class="radio-list">
-                                      <li class="radio-list-item"><label><input class="radio-list-input" name="1da4e" type="radio"> a. All invalid test inputs must be tested together.</label></li>
-                                      <li class="radio-list-item"><label><input class="radio-list-input" name="1da4e" type="radio"> b. It is ok to combine valid values for different inputs.</label></li>
-                                      <li class="radio-list-item"><label><input class="radio-list-input" name="1da4e" type="radio"> c. No more than one invalid test input should be in a given test case.</label></li>
-                                      <li class="radio-list-item"><label><input class="radio-list-input" name="1da4e" type="radio"> d. Each valid test input should appear at least once in a test case that doesn’t have any invalid inputs.</label></li>
+                                    <p>Which one of these contradicts the heuristics recommended when creating test cases with multiple inputs?</p>
+                                    <ul radio-group="63fa5" class="radio-list">
+                                      <li class="radio-list-item"><label><input class="radio-list-input" name="63fa5" type="radio"> a. All invalid test inputs must be tested together.</label></li>
+                                      <li class="radio-list-item"><label><input class="radio-list-input" name="63fa5" type="radio"> b. It is OK to combine valid values for different inputs.</label></li>
+                                      <li class="radio-list-item"><label><input class="radio-list-input" name="63fa5" type="radio"> c. No more than one invalid test input should be in a given test case.</label></li>
+                                      <li class="radio-list-item"><label><input class="radio-list-input" name="63fa5" type="radio"> d. Each valid test input should appear at least once in a test case that doesn’t have any invalid inputs.</label></li>
                                     </ul>
                                     <div slot="answer" class="algolia-no-index">
                                       <p>a</p>
-                                      <p>Explanation: If you test all invalid test inputs together, you will not know if each one of the invalid inputs are handled correctly by the SUT. This is because most SUTs return an error message upon encountering the first invalid input.</p>
+                                      <p>Explanation: If you test all invalid test inputs together, you will not know if each of the invalid inputs is handled correctly by the SUT. This is because most SUTs return an error message upon encountering the first invalid input.</p>
                                     </div>
                                   </question>
                                 </panel>
                               </div>
                               <div>
-                                <panel class="algolia-no-index"><template slot="_header">
-                                    <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Combine test inputs for the <code v-pre>consume</code> method</p>
+                                <panel class="algolia-no-index"><template slot="header">
+                                    <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Combine test inputs for the <code class="hljs inline no-lang" v-pre>consume</code> method</p>
                                   </template>
                                   <question>
-                                    <p>Apply heuristics for combining multiple test inputs to improve the E&amp;E of the following test cases, assuming all 6 values in the table need to be tested. <ins>underlines</ins> indicate invalid values. Point out where the heuristics are contradicted and how to improve the test cases.</p>
+                                    <p>Apply heuristics for combining multiple test inputs to improve the E&amp;E of the following test cases, assuming all 6 values in the table need to be tested. <ins>Underlines</ins> indicate invalid values. Point out where the heuristics are contradicted and how to improve the test cases.</p>
                                     <box>
-                                      <p>SUT: <code v-pre>consume(food, drink)</code></p>
+                                      <p>SUT: <code class="hljs inline no-lang" v-pre>consume(food, drink)</code></p>
                                       <div class="table-responsive">
                                         <table class="markbind-table table table-bordered table-striped">
                                           <thead>
@@ -1391,13 +1392,11 @@
         </div>
         <i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i>
       </div>
-
-
     </div>
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.16.0</a>, generated on Thu, Oct 29, 2020, 4:09:50 PM GMT+8]</small>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.3</a>, generated on Sat, 1 May 2021, 12:33:13 GMT+8]</small>
       </div>
     </footer>
   </div>
@@ -1418,7 +1417,7 @@
       debug: false,
     });
   }
-  MarkBind.afterSetup(initAlgolia);
+  initAlgolia();
 </script>
 <script src="../../markbind/layouts/default/scripts.js"></script>
 <script>

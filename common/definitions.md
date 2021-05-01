@@ -97,7 +97,7 @@ e.g., `createEmptyList`, `listOfIntegers`, `htmlText`, `dvdPlayer`. This book de
 
 <div id="def-coupling">
 
-**Coupling**: The degree of interdependence between software modules; a measure of how closely connected two routines or modules are; the strength of the relationships between module.
+**Coupling**: The degree of interdependence between software modules; a measure of how closely connected two routines or modules are; the strength of the relationships between modules.
 
 </div>
 
@@ -105,7 +105,7 @@ e.g., `createEmptyList`, `listOfIntegers`, `htmlText`, `dvdPlayer`. This book de
 
 <div id="def-dependency-inversion-principle">
 
-**Dependency inversion principle**:
+**Dependency inversion principle (DIP)**:
 
 1. High-level modules should not depend on low-level modules. Both should depend on abstractions.
 2. Abstractions should not depend on details. Details should depend on abstractions.
@@ -114,25 +114,25 @@ e.g., `createEmptyList`, `listOfIntegers`, `htmlText`, `dvdPlayer`. This book de
 
 <div id="def-design-pattern">
 
-**Design pattern** : An _elegant reusable solution_ to a _commonly recurring problem_ within a _given context_ in software design.
+**Design pattern**: An _elegant reusable solution_ to a _commonly recurring problem_ within a _given context_ in software design.
 
 </div>
 
 <div id="def-domain-expert">
 
-**Domain expert** : An expert of a discipline to which the product is connected %%e.g., for a software used for Accounting, a domain expert is someone who is an expert of Accounting%%.
+**Domain expert**: An expert of a discipline to which the product is connected %%e.g., for a software used for Accounting, a domain expert is someone who is an expert of Accounting%%.
 
 </div>
 
 <div id="def-dry-principle">
 
-**DRY (Don't Repeat Yourself) principle**: Every piece of knowledge must have a single, unambiguous, authoritative representation within a system <sub>_The Pragmatic Programmer_, by Andy Hunt and Dave Thomas</sub>
+**DRY (Don't Repeat Yourself) principle**: Every piece of knowledge must have a single, unambiguous, authoritative representation within a system. <sub>-- _The Pragmatic Programmer_, by Andy Hunt and Dave Thomas</sub>
 
 </div>
 
 <div id="def-dynamic-binding">
 
-**Dynamic binding** (<tooltip content="There are subtle differences between late binding and dynamic binding, but they are beyond the scope of this document">aka late binding</tooltip>) : a mechanism where method calls in code are <tooltip content="deciding which method implementation to execure">resolved</tooltip> at <tooltip content="at the moment the method call is executed">runtime</tooltip>, rather than at compile time.
+**Dynamic binding** (<tooltip content="There are subtle differences between late binding and dynamic binding, but they are beyond the scope of this document">aka late binding</tooltip>): a mechanism where method calls in code are <tooltip content="deciding which method implementation to execute">resolved</tooltip> at <tooltip content="at the moment the method call is executed">runtime</tooltip>, rather than at compile time.
 
 </div>
 
@@ -140,7 +140,7 @@ e.g., `createEmptyList`, `listOfIntegers`, `htmlText`, `dvdPlayer`. This book de
 
 <div id="def-enterprise-application">
 
-**Enterprise application**: ‘enterprise applications’ means software applications used at organizations level and therefore has to meet much higher demands (such as in scalability, security, performance, and robustness) than software meant for individual use.
+**Enterprise application**: ‘enterprise applications’ refer to software applications used by organizations and therefore have to meet much higher demands (such as in scalability, security, performance, and robustness) than software meant for individual use.
 
 </div>
 
@@ -312,7 +312,7 @@ Also known as
 
 <div id="def-stub">
 
-**Stub**: A stub has the same interface as the component it replaces, but its implementation is so simple that it is unlikely to have any bugs. It mimics the responses of the component, but only for the a limited set of predetermined inputs. That is, it does not know how to respond to any other inputs. Typically, these mimicked responses are hard-coded in the stub rather than computed or retrieved from elsewhere, e.g. from a database. 
+**Stub**: A stub has the same interface as the component it replaces, but its implementation is so simple that it is unlikely to have any bugs. It mimics the responses of the component, but only for a limited set of predetermined inputs. That is, it does not know how to respond to any other inputs. Typically, these mimicked responses are hard-coded in the stub rather than computed or retrieved from elsewhere, e.g. from a database. 
 
 </div>
 
@@ -357,13 +357,13 @@ Also known as
 
 <div id="def-uml">
 
-[**Unified Modeling Language (UML)**](http://www.uml.org/#UML2.0) is a graphical notation to describe various aspects of a software system. UML is the brainchild of three software modeling specialists James Rumbaugh, Grady Booch and Ivar Jacobson (also known as the Three Amigos). Each of them has developed their own notation for modeling software systems before joining force to create a unified modeling language (hence, the term ‘Unified’ in UML). UML is currently the _de facto_ modeling notation used in the software industry. 
+[**Unified Modeling Language (UML)**](http://www.uml.org/#UML2.0) is a graphical notation to describe various aspects of a software system. UML is the brainchild of three software modeling specialists James Rumbaugh, Grady Booch and Ivar Jacobson (also known as the Three Amigos). Each of them had developed their own notation for modeling software systems before joining forces to create a unified modeling language (hence, the term ‘Unified’ in UML). UML is currently the _de facto_ modeling notation used in the software industry.
 
 </div>
 
 <div id="def-unit-testing">
 
-**Unit testing**: testing individual units (methods, classes, subsystems, ...) to ensure each piece works correctly 
+**Unit testing**: testing individual units (methods, classes, subsystems, ...) to ensure each piece works correctly.
 
 </div>
 

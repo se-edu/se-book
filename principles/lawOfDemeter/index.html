@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.16.0">
+  <meta name="generator" content="MarkBind 2.17.3">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - Principles: Law of Demeter</title>
   <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
   <link rel="stylesheet" href="../../markbind/css/octicons.css">
-  <link rel="stylesheet" href="../../markbind/css/github.min.css">
+  <link rel="stylesheet" href="../../markbind/css/codeblock-dark.min.css">
   <link rel="stylesheet" href="../../markbind/css/markbind.min.css">
   <script src="../../markbind/js/polyfill.min.js"></script>
   <script src="../../markbind/js/vue.min.js"></script>
@@ -199,7 +199,7 @@
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/uml/index.html">UML</a></div>
                 </li>
                 <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/intellij/index.html">Intellij IDEA</a></div>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/intellij/index.html">IntelliJ IDEA</a></div>
                 </li>
                 <li>
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/gitAndGithub/index.html">Git and GitHub</a></div>
@@ -237,8 +237,9 @@
         </div>
       </nav>
 
+
       <div id="content-wrapper">
-        <h1 id="software-engineering-for-self-directed-learners"><span class="text-dark"><small><strong><strong>Software Engineering for Self-Directed Learners »</strong></strong></small></span><a class="fa fa-anchor" href="#software-engineering-for-self-directed-learners" onclick="event.stopPropagation()"></a></h1>
+        <h1 id="software-engineering-for-self-directed-learners"><span id="software-engineering-for-self-directed-learners" class="anchor"></span><span class="text-dark"><small><strong><strong>Software Engineering for Self-Directed Learners »</strong></strong></small></span><a class="fa fa-anchor" href="#software-engineering-for-self-directed-learners" onclick="event.stopPropagation()"></a></h1>
         <div>
           <link rel="stylesheet" href="/se-book/css/textbook.css">
           <div class="website-content">
@@ -252,7 +253,7 @@
               <p><span class="dimmed"><strong><span>Principles →</span></strong></span></p>
               <div id="title-and-body">
                 <div>
-                  <h4 id="law-of-demeter"><span>Law of Demeter</span><a class="fa fa-anchor" href="#law-of-demeter" onclick="event.stopPropagation()"></a></h4>
+                  <h4 id="law-of-demeter"><span id="law-of-demeter" class="anchor"></span><span>Law of Demeter</span><a class="fa fa-anchor" href="#law-of-demeter" onclick="event.stopPropagation()"></a></h4>
                 </div>
                 <div id="main">
                   <div>
@@ -270,75 +271,75 @@
                         </ul>
                       </div>
                     </box>
-                    <p>More concretely, a method <code v-pre>m</code> of an object <code v-pre>O</code> should invoke only the methods of the following kinds of objects:</p>
+                    <p>More concretely, a method <code class="hljs inline no-lang" v-pre>m</code> of an object <code class="hljs inline no-lang" v-pre>O</code> should invoke only the methods of the following kinds of objects:</p>
                     <ul>
-                      <li>The object <code v-pre>O</code> itself</li>
-                      <li>Objects passed as parameters of <code v-pre>m</code></li>
-                      <li>Objects created/instantiated in <code v-pre>m</code> (directly or indirectly)</li>
-                      <li>Objects from the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">objects that are held by instance variables of</span>direct association of</span> <code v-pre>O</code></li>
+                      <li>The object <code class="hljs inline no-lang" v-pre>O</code> itself</li>
+                      <li>Objects passed as parameters of <code class="hljs inline no-lang" v-pre>m</code></li>
+                      <li>Objects created/instantiated in <code class="hljs inline no-lang" v-pre>m</code> (directly or indirectly)</li>
+                      <li>Objects from the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">objects that are held by instance variables of</span>direct association of</span> <code class="hljs inline no-lang" v-pre>O</code></li>
                     </ul>
                     <box>
-                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The following code fragment violates LoD due to the reason: while <code v-pre>b</code> is a ‘friend’ of <code v-pre>foo</code> (because it receives it as a parameter), <code v-pre>g</code> is a ‘friend of a friend’ (which should be considered a ‘stranger’), and <code v-pre>g.doSomething()</code> is analogous to ‘talking to a stranger’.</p>
+                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The following code fragment violates LoD due to the following reason: while <code class="hljs inline no-lang" v-pre>b</code> is a ‘friend’ of <code class="hljs inline no-lang" v-pre>foo</code> (because it receives it as a parameter), <code class="hljs inline no-lang" v-pre>g</code> is a ‘friend of a friend’ (which should be considered a ‘stranger’), and <code class="hljs inline no-lang" v-pre>g.doSomething()</code> is analogous to ‘talking to a stranger’.</p>
                       <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">foo</span><span class="hljs-params">(Bar b)</span> </span>{
 </span><span>    Goo g = b.getGoo();
 </span><span>    g.doSomething();
 </span><span>}
 </span></code></pre>
                     </box>
-                    <p><strong>LoD aims to prevent objects navigating internal structures of other objects.</strong></p>
+                    <p><strong>LoD aims to prevent objects from navigating the internal structures of other objects.</strong></p>
                     <box>
                       <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> An analogy for LoD can be drawn from Facebook. If Facebook followed LoD, you would not be allowed to see posts of friends of friends, unless they are your friends as well. If Jake is your friend and Adam is Jake’s friend, you should not be allowed to see Adam’s posts unless Adam is a friend of yours as well.</p>
                     </box>
                   </div>
                   <div>
                     <div>
-                      <panel expandable class="algolia-no-index"><template slot="_header">
+                      <panel expandable class="algolia-no-index"><template slot="header">
                           <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                         </template>
                         <div>
-                          <panel class="algolia-no-index"><template slot="_header">
+                          <panel class="algolia-no-index"><template slot="header">
                               <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Examples for LoD</p>
                             </template>
                             <question has-input="true">
                               <p>Explain the Law of Demeter using code examples. You are to make up your own code examples. Take Minesweeper as the basis for your code examples.</p>
                               <div slot="answer" class="algolia-no-index">
-                                <p>Let us take the <code v-pre>Logic</code> class as an example. Assume that it has the following operation.</p>
-                                <p><code v-pre>setMinefield(Minefield mf):void</code></p>
-                                <p>Consider the following that can happen inside this operation.</p>
+                                <p>Let us take the <code class="hljs inline no-lang" v-pre>Logic</code> class as an example. Assume that it has the following operation.</p>
+                                <p><code class="hljs inline no-lang" v-pre>setMinefield(Minefield mf): void</code></p>
+                                <p>Consider the following that can happen inside this operation:</p>
                                 <ul>
-                                  <li><code v-pre>mf.init();</code>: this does not violate LoD since LoD allows calling operations of parameters received.</li>
-                                  <li><code v-pre>mf.getCell(1,3).clear();</code>: //this violates LoD because <code v-pre>Logic</code> is handling <code v-pre>Cell</code> objects deep inside <code v-pre>Minefield</code>. Instead, it should be <code v-pre>mf.clearCellAt(1,3);</code></li>
-                                  <li><code v-pre>timer.start();</code>: //this does not violate LoD because <code v-pre>timer</code> appears to be an internal component (i.e. a variable) of <code v-pre>Logic</code> itself.</li>
-                                  <li><code v-pre>Cell c = new Cell();</code> <code v-pre>c.init();</code>: // this does not violate LoD because <code v-pre>c</code> was created inside the operation.</li>
+                                  <li><code class="hljs inline no-lang" v-pre>mf.init();</code>: this does not violate LoD since LoD allows calling operations of parameters received.</li>
+                                  <li><code class="hljs inline no-lang" v-pre>mf.getCell(1, 3).clear();</code>: this violates LoD because <code class="hljs inline no-lang" v-pre>Logic</code> is handling <code class="hljs inline no-lang" v-pre>Cell</code> objects deep inside <code class="hljs inline no-lang" v-pre>Minefield</code>. Instead, it should be <code class="hljs inline no-lang" v-pre>mf.clearCellAt(1, 3);</code>.</li>
+                                  <li><code class="hljs inline no-lang" v-pre>timer.start();</code>: this does not violate LoD because <code class="hljs inline no-lang" v-pre>timer</code> appears to be an internal component (i.e. a variable) of <code class="hljs inline no-lang" v-pre>Logic</code> itself.</li>
+                                  <li><code class="hljs inline no-lang" v-pre>Cell c = new Cell();</code> <code class="hljs inline no-lang" v-pre>c.init();</code>: this does not violate LoD because <code class="hljs inline no-lang" v-pre>c</code> was created inside the operation.</li>
                                 </ul>
                               </div>
                             </question>
                           </panel>
                         </div>
                         <div>
-                          <panel class="algolia-no-index"><template slot="_header">
+                          <panel class="algolia-no-index"><template slot="header">
                               <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> LoD violation?</p>
                             </template>
                             <question>
-                              <p>This violates Law of Demeter.</p>
+                              <p>This violates the Law of Demeter.</p>
                               <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">foo</span><span class="hljs-params">(Bar b)</span> </span>{
-</span><span>    Goo g =  <span class="hljs-keyword">new</span> Goo();
+</span><span>    Goo g = <span class="hljs-keyword">new</span> Goo();
 </span><span>    g.doSomething();
 </span><span>}
 </span></code></pre>
-                              <ul radio-group="3cf8e" class="radio-list">
-                                <li class="radio-list-item"><label><input class="radio-list-input" name="3cf8e" type="radio"> True</label></li>
-                                <li class="radio-list-item"><label><input class="radio-list-input" name="3cf8e" type="radio"> False</label></li>
+                              <ul radio-group="b573e" class="radio-list">
+                                <li class="radio-list-item"><label><input class="radio-list-input" name="b573e" type="radio"> True</label></li>
+                                <li class="radio-list-item"><label><input class="radio-list-input" name="b573e" type="radio"> False</label></li>
                               </ul>
                               <div slot="answer" class="algolia-no-index">
                                 <p>False</p>
-                                <p>Explanation: The line <code v-pre>g.doSomething()</code> does not violate LoD because it is OK to invoke methods of objects created within a method.</p>
+                                <p>Explanation: The line <code class="hljs inline no-lang" v-pre>g.doSomething()</code> does not violate LoD because it is OK to invoke methods of objects created within a method.</p>
                               </div>
                             </question>
                           </panel>
                         </div>
                         <div>
-                          <panel class="algolia-no-index"><template slot="_header">
+                          <panel class="algolia-no-index"><template slot="header">
                               <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Odd one out</p>
                             </template>
                             <question>
@@ -367,13 +368,11 @@
         </div>
         <i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i>
       </div>
-
-
     </div>
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.16.0</a>, generated on Thu, Oct 29, 2020, 4:09:50 PM GMT+8]</small>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.3</a>, generated on Sat, 1 May 2021, 12:33:13 GMT+8]</small>
       </div>
     </footer>
   </div>
@@ -394,7 +393,7 @@
       debug: false,
     });
   }
-  MarkBind.afterSetup(initAlgolia);
+  initAlgolia();
 </script>
 <script src="../../markbind/layouts/default/scripts.js"></script>
 <script>

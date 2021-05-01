@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.16.0">
+  <meta name="generator" content="MarkBind 2.17.3">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - Software Design Patterns: More: Combining Design Patterns</title>
   <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="../../../markbind/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
   <link rel="stylesheet" href="../../../markbind/css/octicons.css">
-  <link rel="stylesheet" href="../../../markbind/css/github.min.css">
+  <link rel="stylesheet" href="../../../markbind/css/codeblock-dark.min.css">
   <link rel="stylesheet" href="../../../markbind/css/markbind.min.css">
   <script src="../../../markbind/js/polyfill.min.js"></script>
   <script src="../../../markbind/js/vue.min.js"></script>
@@ -199,7 +199,7 @@
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/uml/index.html">UML</a></div>
                 </li>
                 <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/intellij/index.html">Intellij IDEA</a></div>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/intellij/index.html">IntelliJ IDEA</a></div>
                 </li>
                 <li>
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/gitAndGithub/index.html">Git and GitHub</a></div>
@@ -237,8 +237,9 @@
         </div>
       </nav>
 
+
       <div id="content-wrapper">
-        <h1 id="software-engineering-for-self-directed-learners"><span class="text-dark"><small><strong><strong>Software Engineering for Self-Directed Learners »</strong></strong></small></span><a class="fa fa-anchor" href="#software-engineering-for-self-directed-learners" onclick="event.stopPropagation()"></a></h1>
+        <h1 id="software-engineering-for-self-directed-learners"><span id="software-engineering-for-self-directed-learners" class="anchor"></span><span class="text-dark"><small><strong><strong>Software Engineering for Self-Directed Learners »</strong></strong></small></span><a class="fa fa-anchor" href="#software-engineering-for-self-directed-learners" onclick="event.stopPropagation()"></a></h1>
         <div>
           <link rel="stylesheet" href="/se-book/css/textbook.css">
           <div class="website-content">
@@ -253,13 +254,13 @@
                     </span></strong></span></p>
               <div id="title-and-body">
                 <div>
-                  <h4 id="combining-design-patterns"><span>Combining design patterns</span><a class="fa fa-anchor" href="#combining-design-patterns" onclick="event.stopPropagation()"></a></h4>
+                  <h4 id="combining-design-patterns"><span id="combining-design-patterns" class="anchor"></span><span>Combining design patterns</span><a class="fa fa-anchor" href="#combining-design-patterns" onclick="event.stopPropagation()"></a></h4>
                 </div>
                 <div id="main">
                   <div>
                     <p><strong>Design patterns are usually embedded in a larger design and sometimes applied in combination with other design patterns.</strong></p>
                     <box>
-                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Let us look at a case study that shows how design patterns are used in the design of a class structure for a Stock Inventory System (SIS) for a shop. The shop sells appliances, and accessories for the appliances. SIS simply stores information about each item in the store.</p>
+                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Let us look at a case study that shows how design patterns are used in the design of a class structure for a Stock Inventory System (SIS) for a shop. The shop sells appliances and accessories for the appliances. SIS simply stores information about each item in the store.</p>
                       <p><strong>Use Cases</strong>:</p>
                       <ul>
                         <li>Create a new item</li>
@@ -268,18 +269,18 @@
                         <li>View all available accessories for a given appliance</li>
                         <li>List all items in the store</li>
                       </ul>
-                      <p>SIS can be accessed using multiple terminals. Shop assistants use their own terminals to access SIS, while the shop manager’s terminal continuously displays a list of all items in store. In the future, it is expected that suppliers of items use their own applications to connect to SIS to get real-time information about current stock status. User authentication is not required for the current version, but may be required in the future.</p>
+                      <p>SIS can be accessed using multiple terminals. Shop assistants use their own terminals to access SIS, while the shop manager’s terminal continuously displays a list of all items in the store. In the future, it is expected that suppliers of items use their own applications to connect to SIS to get real-time information about the current stock status. User authentication is not required for the current version, but may be required in the future.</p>
                       <p>A step by step explanation of the design is given below. Note that this is one out of many possible designs. Design patterns are also applied where appropriate.</p>
-                      <p>A <code v-pre>StockItem</code> can be an Appliance or an Accessory.</p>
+                      <p>A <code class="hljs inline no-lang" v-pre>StockItem</code> can be an Appliance or an Accessory.</p>
                       <img src="/se-book/designPatterns/more/combiningDesignPatterns/images/stockItem.png" height="100">
                       <p></p>
-                      <p>To track that each <code v-pre>Accessory</code> is associated with the correct <code v-pre>Appliance</code>, consider the following alternative class structures.</p>
+                      <p>To track that each <code class="hljs inline no-lang" v-pre>Accessory</code> is associated with the correct <code class="hljs inline no-lang" v-pre>Appliance</code>, consider the following alternative class structures.</p>
                       <img src="/se-book/designPatterns/more/combiningDesignPatterns/images/alternativeOne.png" height="120">
                       <p></p>
-                      <p>The third one seems more appropriate (the second one is suitable if accessories can have accessories). Next, consider between keeping a list of <code v-pre>Appliances</code>, and a list of <code v-pre>StockItems</code>. Which is more appropriate?</p>
+                      <p>The third one seems more appropriate (the second one is suitable if accessories can have accessories). Next, consider between keeping a list of <code class="hljs inline no-lang" v-pre>Appliances</code>, and a list of <code class="hljs inline no-lang" v-pre>StockItems</code>. Which is more appropriate?</p>
                       <img src="/se-book/designPatterns/more/combiningDesignPatterns/images/alternativeTwo.png" height="100">
                       <p></p>
-                      <p>The latter seems more suitable because it can handle both appliances and accessories the same way. Next, an abstraction occurrence pattern is applied to keep track of <code v-pre>StockItems</code>.</p>
+                      <p>The latter seems more suitable because it can handle both appliances and accessories the same way. Next, an abstraction occurrence pattern is applied to keep track of <code class="hljs inline no-lang" v-pre>StockItems</code>.</p>
                       <img src="/se-book/designPatterns/more/combiningDesignPatterns/images/alternativeThree.png" height="100">
                       <p></p>
                       <p>Note the inclusion of navigabilities. Here’s a sample object diagram based on the class model created thus far.</p>
@@ -291,7 +292,7 @@
                       <p>As UI consists of multiple views, the MVC pattern is applied here.</p>
                       <img src="/se-book/designPatterns/more/combiningDesignPatterns/images/withMVC.png" height="270">
                       <p></p>
-                      <p>Some views need to be updated when the data change; apply the Observer pattern here.</p>
+                      <p>Some views need to be updated when the data changes; apply the Observer pattern here.</p>
                       <img src="/se-book/designPatterns/more/combiningDesignPatterns/images/withObserver.png" height="270">
                       <p></p>
                       <p>In addition, the Singleton pattern can be applied to the façade class.</p>
@@ -305,13 +306,11 @@
         </div>
         <i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i>
       </div>
-
-
     </div>
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.16.0</a>, generated on Thu, Oct 29, 2020, 4:09:50 PM GMT+8]</small>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.3</a>, generated on Sat, 1 May 2021, 12:33:13 GMT+8]</small>
       </div>
     </footer>
   </div>
@@ -332,7 +331,7 @@
       debug: false,
     });
   }
-  MarkBind.afterSetup(initAlgolia);
+  initAlgolia();
 </script>
 <script src="../../../markbind/layouts/default/scripts.js"></script>
 <script>

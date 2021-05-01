@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.16.0">
+  <meta name="generator" content="MarkBind 2.17.3">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - C++ to Java: Inheritance: Polymorphism</title>
   <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="../../../markbind/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
   <link rel="stylesheet" href="../../../markbind/css/octicons.css">
-  <link rel="stylesheet" href="../../../markbind/css/github.min.css">
+  <link rel="stylesheet" href="../../../markbind/css/codeblock-dark.min.css">
   <link rel="stylesheet" href="../../../markbind/css/markbind.min.css">
   <script src="../../../markbind/js/polyfill.min.js"></script>
   <script src="../../../markbind/js/vue.min.js"></script>
@@ -199,7 +199,7 @@
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/uml/index.html">UML</a></div>
                 </li>
                 <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/intellij/index.html">Intellij IDEA</a></div>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/intellij/index.html">IntelliJ IDEA</a></div>
                 </li>
                 <li>
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/gitAndGithub/index.html">Git and GitHub</a></div>
@@ -237,8 +237,9 @@
         </div>
       </nav>
 
+
       <div id="content-wrapper">
-        <h1 id="software-engineering-for-self-directed-learners"><span class="text-dark"><small><strong><strong>Software Engineering for Self-Directed Learners »</strong></strong></small></span><a class="fa fa-anchor" href="#software-engineering-for-self-directed-learners" onclick="event.stopPropagation()"></a></h1>
+        <h1 id="software-engineering-for-self-directed-learners"><span id="software-engineering-for-self-directed-learners" class="anchor"></span><span class="text-dark"><small><strong><strong>Software Engineering for Self-Directed Learners »</strong></strong></small></span><a class="fa fa-anchor" href="#software-engineering-for-self-directed-learners" onclick="event.stopPropagation()"></a></h1>
         <div>
           <link rel="stylesheet" href="/se-book/css/textbook.css">
           <div class="website-content">
@@ -253,17 +254,17 @@
                     </span></strong></span></p>
               <div id="title-and-body">
                 <div>
-                  <h4 id="polymorphism"><span>Polymorphism</span><a class="fa fa-anchor" href="#polymorphism" onclick="event.stopPropagation()"></a></h4>
+                  <h4 id="polymorphism"><span id="polymorphism" class="anchor"></span><span>Polymorphism</span><a class="fa fa-anchor" href="#polymorphism" onclick="event.stopPropagation()"></a></h4>
                 </div>
                 <div id="main">
                   <div>
                     <p><strong>Java is a <em>strongly-typed</em> language which means the code works with only the object types that it targets.</strong></p>
                     <box>
-                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The following code <code v-pre>PetShelter</code> keeps a list of <code v-pre>Cat</code> objects and make them <code v-pre>speak</code>. The code will not work with any other type, for example, <code v-pre>Dog</code> objects.</p>
+                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The following code <code class="hljs inline no-lang" v-pre>PetShelter</code> keeps a list of <code class="hljs inline no-lang" v-pre>Cat</code> objects and make them <code class="hljs inline no-lang" v-pre>speak</code>. The code will not work with any other type, for example, <code class="hljs inline no-lang" v-pre>Dog</code> objects.</p>
                       <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PetShelter</span> </span>{
 </span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Cat[] cats = <span class="hljs-keyword">new</span> Cat[]{
-</span><span>            <span class="hljs-keyword">new</span> Cat(<span class="hljs-string">"Mittens"</span>),
-</span><span>            <span class="hljs-keyword">new</span> Cat(<span class="hljs-string">"Snowball"</span>)};
+</span><span>            <span class="hljs-keyword">new</span> Cat(<span class="hljs-string">&quot;Mittens&quot;</span>),
+</span><span>            <span class="hljs-keyword">new</span> Cat(<span class="hljs-string">&quot;Snowball&quot;</span>)};
 </span><span>
 </span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
 </span><span>        <span class="hljs-keyword">for</span> (Cat c: cats){
@@ -276,16 +277,18 @@
                       <pre><code class="hljs" v-pre><span>Mittens: Meow
 </span><span>Snowball: Meow
 </span></code></pre>
-                      <panel type="seamless" class="algolia-no-index"><template slot="_header">
-                          <p><span class="dimmed">The <code v-pre>Cat</code> class</span></p>
+                      <panel type="seamless" class="algolia-no-index"><template slot="header">
+                          <p><span class="dimmed">The <code class="hljs inline no-lang" v-pre>Cat</code> class</span></p>
                         </template>
                         <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Cat</span> </span>{
+</span><span>    <span class="hljs-keyword">private</span> String name;
+</span><span>
 </span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Cat</span><span class="hljs-params">(String name)</span> </span>{
-</span><span>        <span class="hljs-keyword">super</span>(name);
+</span><span>        <span class="hljs-keyword">this</span>.name = name;
 </span><span>    }
 </span><span>
 </span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">speak</span><span class="hljs-params">()</span> </span>{
-</span><span>        <span class="hljs-keyword">return</span> name + <span class="hljs-string">": Meow"</span>;
+</span><span>        <span class="hljs-keyword">return</span> name + <span class="hljs-string">&quot;: Meow&quot;</span>;
 </span><span>    }
 </span><span>}
 </span></code></pre>
@@ -293,13 +296,13 @@
                     </box>
                     <p>This <strong>strong-typing can lead to unnecessary verbosity</strong> caused by repetitive similar code that do similar things with different object types.</p>
                     <box>
-                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> If the <code v-pre>PetShelter</code> is to keep both cats and dogs, you'll need two arrays and two loops:</p>
+                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> If the <code class="hljs inline no-lang" v-pre>PetShelter</code> is to keep both cats and dogs, you'll need two arrays and two loops:</p>
                       <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PetShelter</span> </span>{
 </span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Cat[] cats = <span class="hljs-keyword">new</span> Cat[]{
-</span><span>            <span class="hljs-keyword">new</span> Cat(<span class="hljs-string">"Mittens"</span>),
-</span><span>            <span class="hljs-keyword">new</span> Cat(<span class="hljs-string">"Snowball"</span>)};
+</span><span>            <span class="hljs-keyword">new</span> Cat(<span class="hljs-string">&quot;Mittens&quot;</span>),
+</span><span>            <span class="hljs-keyword">new</span> Cat(<span class="hljs-string">&quot;Snowball&quot;</span>)};
 </span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Dog[] dogs = <span class="hljs-keyword">new</span> Dog[]{
-</span><span>            <span class="hljs-keyword">new</span> Dog(<span class="hljs-string">"Spot"</span>)};
+</span><span>            <span class="hljs-keyword">new</span> Dog(<span class="hljs-string">&quot;Spot&quot;</span>)};
 </span><span>
 </span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
 </span><span>        <span class="hljs-keyword">for</span> (Cat c: cats){
@@ -316,16 +319,18 @@
 </span><span>Snowball: Meow
 </span><span>Spot: Woof
 </span></code></pre>
-                      <panel type="seamless" class="algolia-no-index"><template slot="_header">
-                          <p><span class="dimmed">The <code v-pre>Dog</code> class</span></p>
+                      <panel type="seamless" class="algolia-no-index"><template slot="header">
+                          <p><span class="dimmed">The <code class="hljs inline no-lang" v-pre>Dog</code> class</span></p>
                         </template>
                         <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Dog</span> </span>{
+</span><span>    <span class="hljs-keyword">private</span> String name;
+</span><span>
 </span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Dog</span><span class="hljs-params">(String name)</span> </span>{
-</span><span>        <span class="hljs-keyword">super</span>(name);
+</span><span>        <span class="hljs-keyword">this</span>.name = name;
 </span><span>    }
 </span><span>
 </span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">speak</span><span class="hljs-params">()</span> </span>{
-</span><span>        <span class="hljs-keyword">return</span> name + <span class="hljs-string">": Woof"</span>;
+</span><span>        <span class="hljs-keyword">return</span> name + <span class="hljs-string">&quot;: Woof&quot;</span>;
 </span><span>    }
 </span><span>}
 </span></code></pre>
@@ -333,12 +338,12 @@
                     </box>
                     <p>A better way is to <strong>take advantage of polymorphism to write code that targets a superclass so that it works with any subclass objects.</strong></p>
                     <box>
-                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The <code v-pre>PetShelter2</code> uses one data structure to keep both types of animals and one loop to make them speak. The code targets the <code v-pre>Animal</code> superclass (assuming <code v-pre>Cat</code> and <code v-pre>Dog</code> inherits from the <code v-pre>Animal</code> class) instead of repeating the code for each animal type.</p>
+                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The <code class="hljs inline no-lang" v-pre>PetShelter2</code> uses one data structure to keep both types of animals and one loop to make them speak. The code targets the <code class="hljs inline no-lang" v-pre>Animal</code> superclass (assuming <code class="hljs inline no-lang" v-pre>Cat</code> and <code class="hljs inline no-lang" v-pre>Dog</code> inherits from the <code class="hljs inline no-lang" v-pre>Animal</code> class) instead of repeating the code for each animal type.</p>
                       <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PetShelter2</span> </span>{
 </span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Animal[] animals = <span class="hljs-keyword">new</span> Animal[]{
-</span><span>            <span class="hljs-keyword">new</span> Cat(<span class="hljs-string">"Mittens"</span>),
-</span><span>            <span class="hljs-keyword">new</span> Cat(<span class="hljs-string">"Snowball"</span>),
-</span><span>            <span class="hljs-keyword">new</span> Dog(<span class="hljs-string">"Spot"</span>)};
+</span><span>            <span class="hljs-keyword">new</span> Cat(<span class="hljs-string">&quot;Mittens&quot;</span>),
+</span><span>            <span class="hljs-keyword">new</span> Cat(<span class="hljs-string">&quot;Snowball&quot;</span>),
+</span><span>            <span class="hljs-keyword">new</span> Dog(<span class="hljs-string">&quot;Spot&quot;</span>)};
 </span><span>
 </span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
 </span><span>        <span class="hljs-keyword">for</span> (Animal a: animals){
@@ -352,8 +357,8 @@
 </span><span>Snowball: Meow
 </span><span>Spot: Woof
 </span></code></pre>
-                      <panel type="seamless" class="algolia-no-index"><template slot="_header">
-                          <p><span class="dimmed">The <code v-pre>Animal</code>, <code v-pre>Cat</code>, and <code v-pre>Dog</code> classes</span></p>
+                      <panel type="seamless" class="algolia-no-index"><template slot="header">
+                          <p><span class="dimmed">The <code class="hljs inline no-lang" v-pre>Animal</code>, <code class="hljs inline no-lang" v-pre>Cat</code>, and <code class="hljs inline no-lang" v-pre>Dog</code> classes</span></p>
                         </template>
                         <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Animal</span> </span>{
 </span><span>
@@ -374,7 +379,7 @@
 </span><span>
 </span><span>    <span class="hljs-meta">@Override</span>
 </span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">speak</span><span class="hljs-params">()</span> </span>{
-</span><span>        <span class="hljs-keyword">return</span> name + <span class="hljs-string">": Meow"</span>;
+</span><span>        <span class="hljs-keyword">return</span> name + <span class="hljs-string">&quot;: Meow&quot;</span>;
 </span><span>    }
 </span><span>}
 </span></code></pre>
@@ -385,13 +390,13 @@
 </span><span>
 </span><span>    <span class="hljs-meta">@Override</span>
 </span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">speak</span><span class="hljs-params">()</span> </span>{
-</span><span>        <span class="hljs-keyword">return</span> name + <span class="hljs-string">": Woof"</span>;
+</span><span>        <span class="hljs-keyword">return</span> name + <span class="hljs-string">&quot;: Woof&quot;</span>;
 </span><span>    }
 </span><span>}
 </span></code></pre>
                       </panel>
-                      <p><span class="dimmed">Explanation: Because Java supports polymorphism, you can store both <code v-pre>Cat</code> and <code v-pre>Dog</code> objects in an array of <code v-pre>Animal</code> objects. Similarly, you can call the <code v-pre>speak</code> method on any <code v-pre>Animal</code> object (as done in the loop) and yet get different behavior from <code v-pre>Cat</code> objects and <code v-pre>Dog</code> objects.</span></p>
-                      <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Suggestion: try to add an <code v-pre>Animal</code> object (e.g., <code v-pre>new Animal(&quot;Unnamed&quot;)</code>) to the <code v-pre>animals</code> array and see what happens.
+                      <p><span class="dimmed">Explanation: Because Java supports polymorphism, you can store both <code class="hljs inline no-lang" v-pre>Cat</code> and <code class="hljs inline no-lang" v-pre>Dog</code> objects in an array of <code class="hljs inline no-lang" v-pre>Animal</code> objects. Similarly, you can call the <code class="hljs inline no-lang" v-pre>speak</code> method on any <code class="hljs inline no-lang" v-pre>Animal</code> object (as done in the loop) and yet get different behavior from <code class="hljs inline no-lang" v-pre>Cat</code> objects and <code class="hljs inline no-lang" v-pre>Dog</code> objects.</span></p>
+                      <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Suggestion: try to add an <code class="hljs inline no-lang" v-pre>Animal</code> object (e.g., <code class="hljs inline no-lang" v-pre>new Animal(&quot;Unnamed&quot;)</code>) to the <code class="hljs inline no-lang" v-pre>animals</code> array and see what happens.
                       </p>
                     </box>
                     <p></p>
@@ -399,21 +404,21 @@
                     <ul>
                       <li>It is <strong>shorter</strong>.</li>
                       <li>It is <strong>simpler</strong>.</li>
-                      <li>It is more <strong>flexible</strong> (in the above example, the <code v-pre>main</code> method will work even if we add more animal types).</li>
+                      <li>It is more <strong>flexible</strong> (in the above example, the <code class="hljs inline no-lang" v-pre>main</code> method will work even if we add more animal types).</li>
                     </ul>
                   </div>
                   <div>
                     <div>
-                      <panel expanded><template slot="_header">
+                      <panel expanded><template slot="header">
                           <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                         </template>
                         <div>
                           <div>
-                            <panel type="dark" expanded id="key-exercise-print-shape-area"><template slot="_header">
-                                <h3 id="key-exercise-print-shape-area"><small><small><span><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></span> [Key Exercise] print shape area</small></small><a class="fa fa-anchor" href="#key-exercise-print-shape-area" onclick="event.stopPropagation()"></a></h3>
+                            <panel type="dark" expanded id="key-exercise-print-shape-area"><template slot="header">
+                                <h3 id="key-exercise-print-shape-area"><span id="key-exercise-print-shape-area" class="anchor"></span><small><small><span><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></span> [Key Exercise] print shape area</small></small><a class="fa fa-anchor" href="#key-exercise-print-shape-area" onclick="event.stopPropagation()"></a></h3>
                               </template>
                               <question>
-                                <p>The <code v-pre>Main</code> class below keeps a list of <code v-pre>Circle</code> and <code v-pre>Rectangle</code> objects and prints the area (as an <code v-pre>int</code> value) of each shape when requested.</p>
+                                <p>The <code class="hljs inline no-lang" v-pre>Main</code> class below keeps a list of <code class="hljs inline no-lang" v-pre>Circle</code> and <code class="hljs inline no-lang" v-pre>Rectangle</code> objects and prints the area (as an <code class="hljs inline no-lang" v-pre>int</code> value) of each shape when requested.</p>
                                 <p>Add the missing variables/methods to the code below so that it produces the output given.</p>
                                 <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
 </span><span>    <span class="hljs-comment">//TODO add your methods here</span>
@@ -437,7 +442,7 @@
 </span><span>314
 </span><span>16
 </span></code></pre>
-                                <p><code v-pre>Circle</code> class and <code v-pre>Rectangle</code> class is given below but you'll need to add a parent class <code v-pre>Shape</code>:</p>
+                                <p><code class="hljs inline no-lang" v-pre>Circle</code> class and <code class="hljs inline no-lang" v-pre>Rectangle</code> class is given below but you'll need to add a parent class <code class="hljs inline no-lang" v-pre>Shape</code>:</p>
                                 <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Circle</span> </span>{
 </span><span>
 </span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> radius;
@@ -466,7 +471,7 @@
 </span><span>}
 </span></code></pre>
                                 <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> You may use an array of size 100 to store the shapes.</p>
-                                <panel type="seamless" class="algolia-no-index"><template slot="_header">
+                                <panel type="seamless" class="algolia-no-index"><template slot="header">
                                     <p>Partial solution</p>
                                   </template>
                                   <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
@@ -497,13 +502,11 @@
         </div>
         <i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i>
       </div>
-
-
     </div>
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.16.0</a>, generated on Thu, Oct 29, 2020, 4:09:50 PM GMT+8]</small>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.3</a>, generated on Sat, 1 May 2021, 12:33:13 GMT+8]</small>
       </div>
     </footer>
   </div>
@@ -524,7 +527,7 @@
       debug: false,
     });
   }
-  MarkBind.afterSetup(initAlgolia);
+  initAlgolia();
 </script>
 <script src="../../../markbind/layouts/default/scripts.js"></script>
 <script>

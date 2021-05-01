@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.16.0">
+  <meta name="generator" content="MarkBind 2.17.3">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - Software Design Patterns: Command</title>
   <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
   <link rel="stylesheet" href="../../markbind/css/octicons.css">
-  <link rel="stylesheet" href="../../markbind/css/github.min.css">
+  <link rel="stylesheet" href="../../markbind/css/codeblock-dark.min.css">
   <link rel="stylesheet" href="../../markbind/css/markbind.min.css">
   <script src="../../markbind/js/polyfill.min.js"></script>
   <script src="../../markbind/js/vue.min.js"></script>
@@ -199,7 +199,7 @@
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/uml/index.html">UML</a></div>
                 </li>
                 <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/intellij/index.html">Intellij IDEA</a></div>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/intellij/index.html">IntelliJ IDEA</a></div>
                 </li>
                 <li>
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/gitAndGithub/index.html">Git and GitHub</a></div>
@@ -237,15 +237,16 @@
         </div>
       </nav>
 
+
       <div id="content-wrapper">
-        <h1 id="software-engineering-for-self-directed-learners"><span class="text-dark"><small><strong><strong>Software Engineering for Self-Directed Learners »</strong></strong></small></span><a class="fa fa-anchor" href="#software-engineering-for-self-directed-learners" onclick="event.stopPropagation()"></a></h1>
+        <h1 id="software-engineering-for-self-directed-learners"><span id="software-engineering-for-self-directed-learners" class="anchor"></span><span class="text-dark"><small><strong><strong>Software Engineering for Self-Directed Learners »</strong></strong></small></span><a class="fa fa-anchor" href="#software-engineering-for-self-directed-learners" onclick="event.stopPropagation()"></a></h1>
         <div>
           <link rel="stylesheet" href="/se-book/css/textbook.css">
           <div class="website-content" id="all">
             <p><span class="dimmed"><strong><span>Design → Design Patterns →
                   </span></strong></span></p>
             <div id="title">
-              <h1 id="command-pattern"><span>Command pattern</span><a class="fa fa-anchor" href="#command-pattern" onclick="event.stopPropagation()"></a></h1>
+              <h1 id="command-pattern"><span id="command-pattern" class="anchor"></span><span>Command pattern</span><a class="fa fa-anchor" href="#command-pattern" onclick="event.stopPropagation()"></a></h1>
             </div>
             <div id="main">
               <div>
@@ -253,7 +254,7 @@
                   <panel type="seamless" expanded id="what">
                     <span slot="header" class="card-title">
                       <div>
-                        <h4 id="what"><span>What</span><a class="fa fa-anchor" href="#what" onclick="event.stopPropagation()"></a></h4>
+                        <h4 id="what"><span id="what" class="anchor"></span><span>What</span><a class="fa fa-anchor" href="#what" onclick="event.stopPropagation()"></a></h4>
                       </div>
                     </span>
                     <div class="indented">
@@ -263,21 +264,21 @@
                       <p></p>
                       <div>
                         <p><strong>Context</strong></p>
-                        <p>A system is required to execute a number of commands, each doing a different task. For example, a system might have to support <code v-pre>Sort</code>, <code v-pre>List</code>, <code v-pre>Reset</code> commands.</p>
+                        <p>A system is required to execute a number of commands, each doing a different task. For example, a system might have to support <code class="hljs inline no-lang" v-pre>Sort</code>, <code class="hljs inline no-lang" v-pre>List</code>, <code class="hljs inline no-lang" v-pre>Reset</code> commands.</p>
                         <p><strong>Problem</strong></p>
-                        <p>It is preferable that some part of the code executes these commands without having to know each command type. <span class="dimmed">e.g., there can be a <code v-pre>CommandQueue</code> object that is responsible for queuing commands and executing them without knowledge of what each command does.</span></p>
+                        <p>It is preferable that some part of the code executes these commands without having to know each command type. <span class="dimmed">e.g., there can be a <code class="hljs inline no-lang" v-pre>CommandQueue</code> object that is responsible for queuing commands and executing them without knowledge of what each command does.</span></p>
                         <p><strong>Solution</strong></p>
-                        <p>The essential element of this pattern is to have a general <code v-pre>&lt;&lt;Command&gt;&gt;</code> object that can be passed around, stored, executed, etc without knowing the type of command (i.e. via polymorphism).</p>
+                        <p>The essential element of this pattern is to have a general <code class="hljs inline no-lang" v-pre>&lt;&lt;Command&gt;&gt;</code> object that can be passed around, stored, executed, etc without knowing the type of command (i.e. via polymorphism).</p>
                         <p>Let us examine an example application of the pattern first:</p>
                         <box>
-                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In the example solution below, the <code v-pre>CommandCreator</code> creates <code v-pre>List</code>, <code v-pre>Sort</code>, and <code v-pre>Reset Command</code> objects and adds them to the <code v-pre>CommandQueue</code> object. The <code v-pre>CommandQueue</code> object treats them all as <code v-pre>Command</code> objects and performs the execute/undo operation on each of them without knowledge of the specific <code v-pre>Command</code> type. When executed, each <code v-pre>Command</code> object will access the <code v-pre>DataStore</code> object to carry out its task. The <code v-pre>Command</code> class can also be an abstract class or an interface.</p>
+                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In the example solution below, the <code class="hljs inline no-lang" v-pre>CommandCreator</code> creates <code class="hljs inline no-lang" v-pre>List</code>, <code class="hljs inline no-lang" v-pre>Sort</code>, and <code class="hljs inline no-lang" v-pre>Reset Command</code> objects and adds them to the <code class="hljs inline no-lang" v-pre>CommandQueue</code> object. The <code class="hljs inline no-lang" v-pre>CommandQueue</code> object treats them all as <code class="hljs inline no-lang" v-pre>Command</code> objects and performs the execute/undo operation on each of them without knowledge of the specific <code class="hljs inline no-lang" v-pre>Command</code> type. When executed, each <code class="hljs inline no-lang" v-pre>Command</code> object will access the <code class="hljs inline no-lang" v-pre>DataStore</code> object to carry out its task. The <code class="hljs inline no-lang" v-pre>Command</code> class can also be an abstract class or an interface.</p>
                           <img src="/se-book/designPatterns/command/what/images/commandCreator.png" height="150">
                           <p></p>
                         </box>
                         <p>The general form of the solution is as follows.</p>
                         <img src="/se-book/designPatterns/command/what/images/clientInvoker.png" height="200">
                         <p></p>
-                        <p>The <code v-pre>&lt;&lt;Client&gt;&gt;</code> creates a <code v-pre>&lt;&lt;ConcreteCommand&gt;&gt;</code> object, and passes it to the <code v-pre>&lt;&lt;Invoker&gt;&gt;</code>. The <code v-pre>&lt;&lt;Invoker&gt;&gt;</code> object treats all commands as a general <code v-pre>&lt;&lt;Command&gt;&gt;</code> type. <code v-pre>&lt;&lt;Invoker&gt;&gt;</code> issues a request by calling <code v-pre>execute()</code> on the command. If a command is undoable, <code v-pre>&lt;&lt;ConcreteCommand&gt;&gt;</code> will store the state for undoing the command prior to invoking <code v-pre>execute()</code>. In addition, the <code v-pre>&lt;&lt;ConcreteCommand&gt;&gt;</code> object may have to be linked to any <code v-pre>&lt;&lt;Receiver&gt;&gt;</code> of the command (<span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">the object the command will operate on, in case different commands operate on different objects</span>?</span>) before it is passed to the <code v-pre>&lt;&lt;Invoker&gt;&gt;</code>. Note that an application of the command pattern does not have to follow the structure given above.</p>
+                        <p>The <code class="hljs inline no-lang" v-pre>&lt;&lt;Client&gt;&gt;</code> creates a <code class="hljs inline no-lang" v-pre>&lt;&lt;ConcreteCommand&gt;&gt;</code> object, and passes it to the <code class="hljs inline no-lang" v-pre>&lt;&lt;Invoker&gt;&gt;</code>. The <code class="hljs inline no-lang" v-pre>&lt;&lt;Invoker&gt;&gt;</code> object treats all commands as a general <code class="hljs inline no-lang" v-pre>&lt;&lt;Command&gt;&gt;</code> type. <code class="hljs inline no-lang" v-pre>&lt;&lt;Invoker&gt;&gt;</code> issues a request by calling <code class="hljs inline no-lang" v-pre>execute()</code> on the command. If a command is undoable, <code class="hljs inline no-lang" v-pre>&lt;&lt;ConcreteCommand&gt;&gt;</code> will store the state for undoing the command prior to invoking <code class="hljs inline no-lang" v-pre>execute()</code>. In addition, the <code class="hljs inline no-lang" v-pre>&lt;&lt;ConcreteCommand&gt;&gt;</code> object may have to be linked to any <code class="hljs inline no-lang" v-pre>&lt;&lt;Receiver&gt;&gt;</code> of the command (<span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">the object the command will operate on, in case different commands operate on different objects</span>?</span>) before it is passed to the <code class="hljs inline no-lang" v-pre>&lt;&lt;Invoker&gt;&gt;</code>. Note that an application of the command pattern does not have to follow the structure given above.</p>
                       </div>
                       <div></div>
                     </div>
@@ -289,13 +290,11 @@
         </div>
         <i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i>
       </div>
-
-
     </div>
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.16.0</a>, generated on Thu, Oct 29, 2020, 4:09:50 PM GMT+8]</small>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.3</a>, generated on Sat, 1 May 2021, 12:33:13 GMT+8]</small>
       </div>
     </footer>
   </div>
@@ -316,7 +315,7 @@
       debug: false,
     });
   }
-  MarkBind.afterSetup(initAlgolia);
+  initAlgolia();
 </script>
 <script src="../../markbind/layouts/default/scripts.js"></script>
 <script>

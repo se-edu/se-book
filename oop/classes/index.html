@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.16.0">
+  <meta name="generator" content="MarkBind 2.17.3">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - Object Oriented Programming: Classes</title>
   <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
   <link rel="stylesheet" href="../../markbind/css/octicons.css">
-  <link rel="stylesheet" href="../../markbind/css/github.min.css">
+  <link rel="stylesheet" href="../../markbind/css/codeblock-dark.min.css">
   <link rel="stylesheet" href="../../markbind/css/markbind.min.css">
   <script src="../../markbind/js/polyfill.min.js"></script>
   <script src="../../markbind/js/vue.min.js"></script>
@@ -199,7 +199,7 @@
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/uml/index.html">UML</a></div>
                 </li>
                 <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/intellij/index.html">Intellij IDEA</a></div>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/intellij/index.html">IntelliJ IDEA</a></div>
                 </li>
                 <li>
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/gitAndGithub/index.html">Git and GitHub</a></div>
@@ -237,15 +237,16 @@
         </div>
       </nav>
 
+
       <div id="content-wrapper">
-        <h1 id="software-engineering-for-self-directed-learners"><span class="text-dark"><small><strong><strong>Software Engineering for Self-Directed Learners »</strong></strong></small></span><a class="fa fa-anchor" href="#software-engineering-for-self-directed-learners" onclick="event.stopPropagation()"></a></h1>
+        <h1 id="software-engineering-for-self-directed-learners"><span id="software-engineering-for-self-directed-learners" class="anchor"></span><span class="text-dark"><small><strong><strong>Software Engineering for Self-Directed Learners »</strong></strong></small></span><a class="fa fa-anchor" href="#software-engineering-for-self-directed-learners" onclick="event.stopPropagation()"></a></h1>
         <div>
           <link rel="stylesheet" href="/se-book/css/textbook.css">
           <div class="website-content" id="all">
             <p><span class="dimmed"><strong><span>Paradigms → OOP →
                   </span></strong></span></p>
             <div id="title">
-              <h1 id="classes"><span>Classes</span><a class="fa fa-anchor" href="#classes" onclick="event.stopPropagation()"></a></h1>
+              <h1 id="classes"><span id="classes" class="anchor"></span><span>Classes</span><a class="fa fa-anchor" href="#classes" onclick="event.stopPropagation()"></a></h1>
             </div>
             <div id="main">
               <div>
@@ -253,7 +254,7 @@
                   <panel type="seamless" expanded id="what">
                     <span slot="header" class="card-title">
                       <div>
-                        <h4 id="what"><span>What</span><a class="fa fa-anchor" href="#what" onclick="event.stopPropagation()"></a></h4>
+                        <h4 id="what"><span id="what" class="anchor"></span><span>What</span><a class="fa fa-anchor" href="#what" onclick="event.stopPropagation()"></a></h4>
                       </div>
                     </span>
                     <div class="indented">
@@ -267,12 +268,12 @@
                           <li><strong>create the virtual world of the object network, and</strong></li>
                           <li><strong>provide it the inputs to produce the outcome you want.</strong></li>
                         </ol>
-                        <p><strong>A <mark><em>class</em></mark> contains instructions for creating a specific kind of objects</strong>. It turns out sometimes multiple objects keep the same type of data and have the same behavior because they are of the <em>same kind</em>. Instructions for creating a 'kind' (or ‘class’) of objects can be done once and that same instructions can be used to <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">i.e. create instances of</span><em>instantiate</em></span> objects of that kind. You call such instructions a <em>Class</em>.</p>
+                        <p><strong>A <mark><em>class</em></mark> contains instructions for creating a specific kind of objects</strong>. It turns out sometimes multiple objects keep the same type of data and have the same behavior because they are of the <em>same kind</em>. Instructions for creating a 'kind' (or ‘class’) of objects can be done once and those same instructions can be used to <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">i.e. create instances of</span><em>instantiate</em></span> objects of that kind. You call such instructions a <em>Class</em>.</p>
                         <box>
                           <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Classes and objects in an example scenario</p>
                           <p>Consider the example of writing an OOP program to calculate the average age of Adam, Beth, Charlie, and Daisy.</p>
-                          <p>Instructions for creating objects <code v-pre>Adam</code>, <code v-pre>Beth</code>, <code v-pre>Charlie</code>, and <code v-pre>Daisy</code> will be very similar because they are all of the same kind: they all represent ‘persons’ with the same interface, the same kind of data (i.e. <code v-pre>name</code>, <code v-pre>dateOfBrith</code>, etc.), and the same kind of behavior (i.e. <code v-pre>getAge(Date)</code>, <code v-pre>getName()</code>, etc.). Therefore, you can have a class called <code v-pre>Person</code> containing instructions on how to create <code v-pre>Person</code> objects and use that class to instantiate objects <code v-pre>Adam</code>, <code v-pre>Beth</code>, <code v-pre>Charlie</code>, and <code v-pre>Daisy</code>.</p>
-                          <p>Similarly, you need classes <code v-pre>AgeList</code>, <code v-pre>Calculator</code>, and <code v-pre>Main</code> classes to instantiate one each of <code v-pre>AgeList</code>, <code v-pre>Calculator</code>, and <code v-pre>Main</code> objects.</p>
+                          <p>Instructions for creating objects <code class="hljs inline no-lang" v-pre>Adam</code>, <code class="hljs inline no-lang" v-pre>Beth</code>, <code class="hljs inline no-lang" v-pre>Charlie</code>, and <code class="hljs inline no-lang" v-pre>Daisy</code> will be very similar because they are all of the same kind: they all represent ‘persons’ with the same interface, the same kind of data (i.e. <code class="hljs inline no-lang" v-pre>name</code>, <code class="hljs inline no-lang" v-pre>dateOfBirth</code>, etc.), and the same kind of behavior (i.e. <code class="hljs inline no-lang" v-pre>getAge(Date)</code>, <code class="hljs inline no-lang" v-pre>getName()</code>, etc.). Therefore, you can have a class called <code class="hljs inline no-lang" v-pre>Person</code> containing instructions on how to create <code class="hljs inline no-lang" v-pre>Person</code> objects and use that class to instantiate objects <code class="hljs inline no-lang" v-pre>Adam</code>, <code class="hljs inline no-lang" v-pre>Beth</code>, <code class="hljs inline no-lang" v-pre>Charlie</code>, and <code class="hljs inline no-lang" v-pre>Daisy</code>.</p>
+                          <p>Similarly, you need classes <code class="hljs inline no-lang" v-pre>AgeList</code>, <code class="hljs inline no-lang" v-pre>Calculator</code>, and <code class="hljs inline no-lang" v-pre>Main</code> classes to instantiate one each of <code class="hljs inline no-lang" v-pre>AgeList</code>, <code class="hljs inline no-lang" v-pre>Calculator</code>, and <code class="hljs inline no-lang" v-pre>Main</code> objects.</p>
                           <div class="table-responsive">
                             <table class="markbind-table table table-bordered table-striped">
                               <thead>
@@ -283,19 +284,19 @@
                               </thead>
                               <tbody>
                                 <tr>
-                                  <td><code v-pre>Person</code></td>
+                                  <td><code class="hljs inline no-lang" v-pre>Person</code></td>
                                   <td>objects representing Adam, Beth, Charlie, Daisy</td>
                                 </tr>
                                 <tr>
-                                  <td><code v-pre>AgeList</code></td>
+                                  <td><code class="hljs inline no-lang" v-pre>AgeList</code></td>
                                   <td>an object to represent the age list</td>
                                 </tr>
                                 <tr>
-                                  <td><code v-pre>Calculator</code></td>
+                                  <td><code class="hljs inline no-lang" v-pre>Calculator</code></td>
                                   <td>an object to do the calculations</td>
                                 </tr>
                                 <tr>
-                                  <td><code v-pre>Main</code></td>
+                                  <td><code class="hljs inline no-lang" v-pre>Main</code></td>
                                   <td>an object to represent you (i.e., the one who manages the whole operation)</td>
                                 </tr>
                               </tbody>
@@ -305,18 +306,18 @@
                       </div>
                       <div>
                         <div>
-                          <panel expanded><template slot="_header">
+                          <panel expanded><template slot="header">
                               <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                             </template>
                             <div>
                               <div>
-                                <panel class="algolia-no-index"><template slot="_header">
+                                <panel class="algolia-no-index"><template slot="header">
                                     <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Identify Classes and Objects</p>
                                   </template>
                                   <question>
                                     <p>Consider the following scenario. If you were to simulate this in an OOP program, what are the classes and the objects you would use?</p>
                                     <box>
-                                      <p>A customer (name: John) gave a cheque to the Cashier (name: Peter) to pay for the LoTR and GoT books he bought.</p>
+                                      <p>A customer (name: John) gave a cheque to the cashier (name: Peter) to pay for the LoTR and GoT books he bought.</p>
                                     </box>
                                     <div slot="answer" class="algolia-no-index">
                                       <div class="table-responsive">
@@ -329,20 +330,20 @@
                                           </thead>
                                           <tbody>
                                             <tr>
-                                              <td><code v-pre>Customer</code></td>
-                                              <td><code v-pre>john</code></td>
+                                              <td><code class="hljs inline no-lang" v-pre>Customer</code></td>
+                                              <td><code class="hljs inline no-lang" v-pre>john</code></td>
                                             </tr>
                                             <tr>
-                                              <td><code v-pre>Book</code></td>
-                                              <td><code v-pre>LoTR</code>, <code v-pre>GoT</code></td>
+                                              <td><code class="hljs inline no-lang" v-pre>Book</code></td>
+                                              <td><code class="hljs inline no-lang" v-pre>LoTR</code>, <code class="hljs inline no-lang" v-pre>GoT</code></td>
                                             </tr>
                                             <tr>
-                                              <td><code v-pre>Cheque</code></td>
-                                              <td><code v-pre>chequeJohnGave</code></td>
+                                              <td><code class="hljs inline no-lang" v-pre>Cheque</code></td>
+                                              <td><code class="hljs inline no-lang" v-pre>chequeJohnGave</code></td>
                                             </tr>
                                             <tr>
-                                              <td><code v-pre>Cashier</code></td>
-                                              <td><code v-pre>peter</code></td>
+                                              <td><code class="hljs inline no-lang" v-pre>Cashier</code></td>
+                                              <td><code class="hljs inline no-lang" v-pre>peter</code></td>
                                             </tr>
                                           </tbody>
                                         </table>
@@ -352,11 +353,11 @@
                                 </panel>
                               </div>
                               <div>
-                                <panel class="algolia-no-index"><template slot="_header">
+                                <panel class="algolia-no-index"><template slot="header">
                                     <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Classes for CityConnect app</p>
                                   </template>
                                   <question has-input="true">
-                                    <p>Assume you are writing a CLI program called <strong><code v-pre>CityConnect</code></strong> for storing and querying distances between cities. The behavior is as follows:</p>
+                                    <p>Assume you are writing a CLI program called <strong><code class="hljs inline no-lang" v-pre>CityConnect</code></strong> for storing and querying distances between cities. The behavior is as follows:</p>
                                     <pre><code class="hljs" v-pre><span>Welcome to CityConnect!
 </span><span>
 </span><span>Enter command: addroute Clementi BuonaVista 12
@@ -379,7 +380,7 @@
 </span></code></pre>
                                     <p>What classes would you have in your code if you write your program based on the OOP paradigm?</p>
                                     <div slot="hint" class="algolia-no-index">
-                                      <p>One class you can have is <code v-pre>Route</code></p>
+                                      <p>One class you can have is <code class="hljs inline no-lang" v-pre>Route</code></p>
                                     </div>
                                   </question>
                                 </panel>
@@ -395,7 +396,7 @@
                   <panel type="seamless" expanded id="class-level-members">
                     <span slot="header" class="card-title">
                       <div>
-                        <h4 id="class-level-members"><span>Class-level members</span><a class="fa fa-anchor" href="#class-level-members" onclick="event.stopPropagation()"></a></h4>
+                        <h4 id="class-level-members"><span id="class-level-members" class="anchor"></span><span>Class-level members</span><a class="fa fa-anchor" href="#class-level-members" onclick="event.stopPropagation()"></a></h4>
                       </div>
                     </span>
                     <div class="indented">
@@ -404,44 +405,44 @@
                       <p></p>
                       <p></p>
                       <div>
-                        <p>While all objects of a class has the same attributes, each object has its own copy of the attribute value.</p>
+                        <p>While all objects of a class have the same attributes, each object has its own copy of the attribute value.</p>
                         <box>
-                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> All <code v-pre>Person</code> objects have the <code v-pre>Name</code> attribute but the value of that attribute varies between <code v-pre>Person</code> objects.</p>
+                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> All <code class="hljs inline no-lang" v-pre>Person</code> objects have the <code class="hljs inline no-lang" v-pre>name</code> attribute but the value of that attribute varies between <code class="hljs inline no-lang" v-pre>Person</code> objects.</p>
                         </box>
                         <p>However, some attributes are not suitable to be maintained by individual objects. Instead, they should be maintained centrally, shared by all objects of the class. They are like ‘global variables’ but attached to a specific class. Such <strong>variables whose value is shared by all instances of a class are called <mark><em>class-level attributes</em></mark></strong>.</p>
                         <box>
-                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The attribute <code v-pre>totalPersons</code> should be maintained centrally and shared by all <code v-pre>Person</code> objects rather than copied at each <code v-pre>Person</code> object.</p>
+                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The attribute <code class="hljs inline no-lang" v-pre>totalPersons</code> should be maintained centrally and shared by all <code class="hljs inline no-lang" v-pre>Person</code> objects rather than copied at each <code class="hljs inline no-lang" v-pre>Person</code> object.</p>
                         </box>
                         <p>Similarly, when a normal method is being called, a message is being sent to the receiving object and the result may depend on the receiving object.</p>
                         <box>
-                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Sending the <code v-pre>getName()</code> message to the <code v-pre>Adam</code> object results in the response <code v-pre>&quot;Adam&quot;</code> while sending the same message to the <code v-pre>Beth</code> object results in the response <code v-pre>&quot;Beth&quot;</code>.</p>
+                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Sending the <code class="hljs inline no-lang" v-pre>getName()</code> message to the <code class="hljs inline no-lang" v-pre>Adam</code> object results in the response <code class="hljs inline no-lang" v-pre>&quot;Adam&quot;</code> while sending the same message to the <code class="hljs inline no-lang" v-pre>Beth</code> object results in the response <code class="hljs inline no-lang" v-pre>&quot;Beth&quot;</code>.</p>
                         </box>
-                        <p>However, there can be methods related to a specific class but not suitable for sending message to a specific object of that class. Such <strong>methods that are called using the class instead of a specific instance are called <mark><em>class-level methods</em></mark></strong>.</p>
+                        <p>However, there can be methods related to a specific class but not suitable for sending messages to a specific object of that class. Such <strong>methods that are called using the class instead of a specific instance are called <mark><em>class-level methods</em></mark></strong>.</p>
                         <box>
-                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The method <code v-pre>getTotalPersons()</code> is not suitable to send to a specific <code v-pre>Person</code> object <span class="dimmed">because a specific object of the <code v-pre>Person</code> class should not have to know about the total number of <code v-pre>Person</code> objects</span>.</p>
+                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The method <code class="hljs inline no-lang" v-pre>getTotalPersons()</code> is not suitable to send to a specific <code class="hljs inline no-lang" v-pre>Person</code> object <span class="dimmed">because a specific object of the <code class="hljs inline no-lang" v-pre>Person</code> class should not have to know about the total number of <code class="hljs inline no-lang" v-pre>Person</code> objects</span>.</p>
                         </box>
-                        <p><strong>Class-level attributes and methods are collectively called <mark><em>class-level members</em></mark></strong> (also called <em>static members</em> sometimes because some programming languages use the keyword <code v-pre>static</code> to identify class-level members). <strong>They are to be accessed using the class name rather than an instance of the class</strong>.</p>
+                        <p><strong>Class-level attributes and methods are collectively called <mark><em>class-level members</em></mark></strong> (also called <em>static members</em> sometimes because some programming languages use the keyword <code class="hljs inline no-lang" v-pre>static</code> to identify class-level members). <strong>They are to be accessed using the class name rather than an instance of the class</strong>.</p>
                       </div>
                       <div>
                         <div>
-                          <panel expandable class="algolia-no-index"><template slot="_header">
+                          <panel expandable class="algolia-no-index"><template slot="header">
                               <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                             </template>
                             <div>
-                              <panel class="algolia-no-index"><template slot="_header">
-                                  <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Suitable as a class-level variables</p>
+                              <panel class="algolia-no-index"><template slot="header">
+                                  <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Suitable as class-level variables</p>
                                 </template>
                                 <question>
                                   <p>Which of these are suitable as class-level variables?</p>
                                   <ul class="contains-task-list">
-                                    <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> a. system: multi-player Pac Man game, Class: <code v-pre>Player</code>, variable: <code v-pre>totalScore</code></li>
-                                    <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> b. system: eLearning system, class: <code v-pre>Course</code>, variable: <code v-pre>totalStudents</code></li>
-                                    <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> c. system: ToDo manager, class: <code v-pre>Task</code>, variable: <code v-pre>totalPendingTasks</code></li>
-                                    <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. system: any, class: <code v-pre>ArrayList</code>, variable: <code v-pre>total</code> (i.e., total items in a given <code v-pre>ArrayList</code> object)</li>
+                                    <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> a. system: multi-player Pac Man game, Class: <code class="hljs inline no-lang" v-pre>Player</code>, variable: <code class="hljs inline no-lang" v-pre>totalScore</code></li>
+                                    <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> b. system: eLearning system, class: <code class="hljs inline no-lang" v-pre>Course</code>, variable: <code class="hljs inline no-lang" v-pre>totalStudents</code></li>
+                                    <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> c. system: ToDo manager, class: <code class="hljs inline no-lang" v-pre>Task</code>, variable: <code class="hljs inline no-lang" v-pre>totalPendingTasks</code></li>
+                                    <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. system: any, class: <code class="hljs inline no-lang" v-pre>ArrayList</code>, variable: <code class="hljs inline no-lang" v-pre>total</code> (i.e., total items in a given <code class="hljs inline no-lang" v-pre>ArrayList</code> object)</li>
                                   </ul>
                                   <div slot="answer" class="algolia-no-index">
                                     <p>(c)</p>
-                                    <p>Explanation: <code v-pre>totalPendingTasks</code> should not be managed by individual <code v-pre>Task</code> objects and therefore suitable to be maintained as a class-level variable. The other variables should be managed at instance level as their value varies from instance to instance. e.g., <code v-pre>totalStudents</code> for one <code v-pre>Course</code> object will differ from <code v-pre>totalStudents</code> of another.</p>
+                                    <p>Explanation: <code class="hljs inline no-lang" v-pre>totalPendingTasks</code> should not be managed by individual <code class="hljs inline no-lang" v-pre>Task</code> objects and is therefore suitable to be maintained as a class-level variable. The other variables should be managed at instance level as their value varies from instance to instance. e.g., <code class="hljs inline no-lang" v-pre>totalStudents</code> for one <code class="hljs inline no-lang" v-pre>Course</code> object will differ from <code class="hljs inline no-lang" v-pre>totalStudents</code> of another.</p>
                                   </div>
                                 </question>
                               </panel>
@@ -456,7 +457,7 @@
                   <panel type="seamless" expanded id="enumerations">
                     <span slot="header" class="card-title">
                       <div>
-                        <h4 id="enumerations"><span>Enumerations</span><a class="fa fa-anchor" href="#enumerations" onclick="event.stopPropagation()"></a></h4>
+                        <h4 id="enumerations"><span id="enumerations" class="anchor"></span><span>Enumerations</span><a class="fa fa-anchor" href="#enumerations" onclick="event.stopPropagation()"></a></h4>
                       </div>
                     </span>
                     <div class="indented">
@@ -465,10 +466,10 @@
                       <p></p>
                       <p></p>
                       <div>
-                        <p><strong>An <em>Enumeration</em> is a fixed set of values that can be considered as a data type.</strong> An enumeration is often useful when using a regular data type such as <code v-pre>int</code> or <code v-pre>String</code> would allow invalid values to be assigned to a variable.</p>
+                        <p><strong>An <em>Enumeration</em> is a fixed set of values that can be considered as a data type.</strong> An enumeration is often useful when using a regular data type such as <code class="hljs inline no-lang" v-pre>int</code> or <code class="hljs inline no-lang" v-pre>String</code> would allow invalid values to be assigned to a variable.</p>
                         <box>
-                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Suppose you want a variable called <code v-pre>priority</code> to store the priority of something. There are only three priority levels: high, medium, and low. You can declare the variable <code v-pre>priority</code> as of type <code v-pre>int</code> and use only values <code v-pre>2</code>, <code v-pre>1</code>, and <code v-pre>0</code> to indicate the three priority levels. However, this opens the possibility of an invalid values such as <code v-pre>9</code> being assigned to it. But if you define an enumeration type called <code v-pre>Priority</code> that has three values <code v-pre>HIGH</code>, <code v-pre>MEDIUM</code>, <code v-pre>LOW</code> only, a variable of type <code v-pre>Priority</code> will never be assigned an invalid value because the compiler is able to catch such an error.</p>
-                          <p><code v-pre>Priority</code>: <code v-pre>HIGH</code>, <code v-pre>MEDIUM</code>, <code v-pre>LOW</code></p>
+                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Suppose you want a variable called <code class="hljs inline no-lang" v-pre>priority</code> to store the priority of something. There are only three priority levels: high, medium, and low. You can declare the variable <code class="hljs inline no-lang" v-pre>priority</code> as of type <code class="hljs inline no-lang" v-pre>int</code> and use only values <code class="hljs inline no-lang" v-pre>2</code>, <code class="hljs inline no-lang" v-pre>1</code>, and <code class="hljs inline no-lang" v-pre>0</code> to indicate the three priority levels. However, this opens the possibility of an invalid value such as <code class="hljs inline no-lang" v-pre>9</code> being assigned to it. But if you define an enumeration type called <code class="hljs inline no-lang" v-pre>Priority</code> that has three values <code class="hljs inline no-lang" v-pre>HIGH</code>, <code class="hljs inline no-lang" v-pre>MEDIUM</code> and <code class="hljs inline no-lang" v-pre>LOW</code> only, a variable of type <code class="hljs inline no-lang" v-pre>Priority</code> will never be assigned an invalid value because the compiler is able to catch such an error.</p>
+                          <p><code class="hljs inline no-lang" v-pre>Priority</code>: <code class="hljs inline no-lang" v-pre>HIGH</code>, <code class="hljs inline no-lang" v-pre>MEDIUM</code>, <code class="hljs inline no-lang" v-pre>LOW</code></p>
                         </box>
                       </div>
                       <div></div>
@@ -481,13 +482,11 @@
         </div>
         <i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i>
       </div>
-
-
     </div>
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.16.0</a>, generated on Thu, Oct 29, 2020, 4:09:50 PM GMT+8]</small>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.3</a>, generated on Sat, 1 May 2021, 12:33:13 GMT+8]</small>
       </div>
     </footer>
   </div>
@@ -508,7 +507,7 @@
       debug: false,
     });
   }
-  MarkBind.afterSetup(initAlgolia);
+  initAlgolia();
 </script>
 <script src="../../markbind/layouts/default/scripts.js"></script>
 <script>

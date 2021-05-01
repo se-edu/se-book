@@ -1,4 +1,4 @@
-Right-click on the commit (in the graphical revision graph) you want to tag and choose `Tag…`
+Right-click on the commit (in the graphical revision graph) you want to tag and choose `Tag…`.
 
 Specify the tag name e.g. `v1.0` and click `Add Tag`.
 

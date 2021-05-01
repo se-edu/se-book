@@ -1,6 +1,6 @@
 <div>
   <p>
-    <panel src="/se-book/errorHandling/defensiveProgramming/what/unit-inElsewhere-asFlat._include_.html" popup-url="/se-book/errorHandling/defensiveProgramming/what" class="algolia-no-index"><template slot="_header">
+    <panel src="/se-book/errorHandling/defensiveProgramming/what/unit-inElsewhere-asFlat._include_.html" popup-url="/se-book/errorHandling/defensiveProgramming/what" class="algolia-no-index"><template slot="header">
         <p><span class="dimmed"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> Implementation → Error Handling → Defensive Programming → What</span></p>
       </template></panel>
   </p>
@@ -10,16 +10,16 @@
       </span></strong></span></p>
 <div id="title-and-body">
   <div>
-    <h4 id="enforcing-compulsory-associations"><span>Enforcing compulsory associations</span><a class="fa fa-anchor" href="#enforcing-compulsory-associations" onclick="event.stopPropagation()"></a></h4>
+    <h4 id="enforcing-compulsory-associations"><span id="enforcing-compulsory-associations" class="anchor"></span><span>Enforcing compulsory associations</span><a class="fa fa-anchor" href="#enforcing-compulsory-associations" onclick="event.stopPropagation()"></a></h4>
   </div>
   <div id="main">
     <div>
-      <p>Consider two classes, <code v-pre>Account</code> and <code v-pre>Guarantor</code>, with an association as shown in the following diagram:</p>
+      <p>Consider two classes, <code class="hljs inline no-lang" v-pre>Account</code> and <code class="hljs inline no-lang" v-pre>Guarantor</code>, with an association as shown in the following diagram:</p>
       <box>
         <p>Example:</p>
         <img src="/se-book/errorHandling/defensiveProgramming/compulsoryAssociations/images/accountGuarantor.png" height="50">
         <p></p>
-        <p>Here, the association is compulsory i.e. an <code v-pre>Account</code> object should always be linked to a <code v-pre>Guarantor</code>. One way to implement this is to simply use a reference variable, like this:</p>
+        <p>Here, the association is compulsory i.e. an <code class="hljs inline no-lang" v-pre>Account</code> object should always be linked to a <code class="hljs inline no-lang" v-pre>Guarantor</code>. One way to implement this is to simply use a reference variable, like this:</p>
         <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{
 </span><span>    Guarantor guarantor;
 </span><span>
@@ -28,23 +28,23 @@
 </span><span>    }
 </span><span>}
 </span></code></pre>
-        <p>However, what if someone else used the <code v-pre>Account</code> class like this?</p>
+        <p>However, what if someone else used the <code class="hljs inline no-lang" v-pre>Account</code> class like this?</p>
         <pre><code class="hljs java" v-pre><span>Account a = <span class="hljs-keyword">new</span> Account();
 </span><span>a.setGuarantor(<span class="hljs-keyword">null</span>);
 </span></code></pre>
-        <p>This results in an <code v-pre>Account</code> without a <code v-pre>Guarantor</code>! In a real banking system, this could have serious consequences! The code here did not try to prevent such a thing from happening. You can make the code more defensive by proactively enforcing the multiplicity constraint, like this:</p>
+        <p>This results in an <code class="hljs inline no-lang" v-pre>Account</code> without a <code class="hljs inline no-lang" v-pre>Guarantor</code>! In a real banking system, this could have serious consequences! The code here did not try to prevent such a thing from happening. You can make the code more defensive by proactively enforcing the multiplicity constraint, like this:</p>
         <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{
 </span><span>    <span class="hljs-keyword">private</span> Guarantor guarantor;
 </span><span>
-</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Account</span><span class="hljs-params">(Guarantor g)</span></span>{
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Account</span><span class="hljs-params">(Guarantor g)</span> </span>{
 </span><span>        <span class="hljs-keyword">if</span> (g == <span class="hljs-keyword">null</span>) {
-</span><span>            stopSystemWithMessage(<span class="hljs-string">"multiplicity violated. Null Guarantor"</span>);
+</span><span>            stopSystemWithMessage(<span class="hljs-string">&quot;multiplicity violated. Null Guarantor&quot;</span>);
 </span><span>        }
 </span><span>        guarantor = g;
 </span><span>    }
-</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setGuarantor</span> <span class="hljs-params">(Guarantor g)</span></span>{
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setGuarantor</span><span class="hljs-params">(Guarantor g)</span> </span>{
 </span><span>        <span class="hljs-keyword">if</span> (g == <span class="hljs-keyword">null</span>) {
-</span><span>            stopSystemWithMessage(<span class="hljs-string">"multiplicity violated. Null Guarantor"</span>);
+</span><span>            stopSystemWithMessage(<span class="hljs-string">&quot;multiplicity violated. Null Guarantor&quot;</span>);
 </span><span>        }
 </span><span>        guarantor = g;
 </span><span>    }
@@ -55,15 +55,15 @@
     </div>
     <div>
       <div>
-        <panel expandable class="algolia-no-index"><template slot="_header">
+        <panel expandable class="algolia-no-index"><template slot="header">
             <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
           </template>
           <div>
-            <panel class="algolia-no-index"><template slot="_header">
-                <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Write a <code v-pre>Manager#addAccount()</code></p>
+            <panel class="algolia-no-index"><template slot="header">
+                <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Write a <code class="hljs inline no-lang" v-pre>Manager#addAccount()</code></p>
               </template>
               <question has-input="true">
-                <p>For the <code v-pre>Manager</code> class shown below, write an <code v-pre>addAccount()</code> method that</p>
+                <p>For the <code class="hljs inline no-lang" v-pre>Manager</code> class shown below, write an <code class="hljs inline no-lang" v-pre>addAccount()</code> method that</p>
                 <ul>
                   <li>restricts the maximum number of Accounts to 8</li>
                   <li>avoids adding duplicate Accounts</li>
@@ -74,11 +74,11 @@
                   <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">import</span> java.util.*;
 </span><span>
 </span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Manager</span> </span>{
-</span><span>    <span class="hljs-keyword">private</span> ArrayList&lt; Account &gt; theAccounts ;
+</span><span>    <span class="hljs-keyword">private</span> ArrayList&lt;Account&gt; theAccounts;
 </span><span>
 </span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addAccount</span><span class="hljs-params">(Account acc)</span> <span class="hljs-keyword">throws</span> Exception </span>{
-</span><span>        <span class="hljs-keyword">if</span> (theAccounts.size( ) == <span class="hljs-number">8</span>){
-</span><span>            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Exception (<span class="hljs-string">"adding more than 8 accounts"</span>);
+</span><span>        <span class="hljs-keyword">if</span> (theAccounts.size() == <span class="hljs-number">8</span>) {
+</span><span>            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Exception(<span class="hljs-string">&quot;adding more than 8 accounts&quot;</span>);
 </span><span>        }
 </span><span>        
 </span><span>        <span class="hljs-keyword">if</span> (!theAccounts.contains(acc)) {
@@ -96,11 +96,11 @@
             </panel>
           </div>
           <div>
-            <panel class="algolia-no-index"><template slot="_header">
-                <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Implement <code v-pre>Marriage</code></p>
+            <panel class="algolia-no-index"><template slot="header">
+                <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Implement <code class="hljs inline no-lang" v-pre>Marriage</code></p>
               </template>
               <question has-input="true">
-                <p>Implement the classes defensively with appropriate references and operations to establish the association among the classes. Follow the defensive coding approach. Let the <code v-pre>Marriage</code> class handle setting/removal of reference.</p>
+                <p>Implement the classes defensively with appropriate references and operations to establish the associations among the classes. Follow the defensive coding approach. Let the <code class="hljs inline no-lang" v-pre>Marriage</code> class handle the setting/removal of references.</p>
                 <img src="/se-book/errorHandling/defensiveProgramming/compulsoryAssociations/images/manMarriageWoman.jpg" height="55">
                 <p></p>
                 <div slot="answer" class="algolia-no-index">
@@ -112,10 +112,10 @@
 </span><span>
 </span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Marriage</span><span class="hljs-params">(Man m, Woman w)</span> <span class="hljs-keyword">throws</span> Exception </span>{
 </span><span>        <span class="hljs-keyword">if</span> (m == <span class="hljs-keyword">null</span> || w == <span class="hljs-keyword">null</span>) {
-</span><span>            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Exception(<span class="hljs-string">"no man/woman"</span>);
+</span><span>            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Exception(<span class="hljs-string">&quot;no man/woman&quot;</span>);
 </span><span>        }
 </span><span>        <span class="hljs-keyword">if</span> (m.isMarried() || w.isMarried()) {
-</span><span>            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Exception(<span class="hljs-string">"already married"</span>);
+</span><span>            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Exception(<span class="hljs-string">&quot;already married&quot;</span>);
 </span><span>        }
 </span><span>        husband = m;
 </span><span>        m.enterMarriage(<span class="hljs-keyword">this</span>);
@@ -124,25 +124,25 @@
 </span><span>    }
 </span><span>
 </span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> Man <span class="hljs-title">getHusband</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> Exception </span>{
-</span><span>        <span class="hljs-keyword">if</span>(husband == <span class="hljs-keyword">null</span>) {
-</span><span>            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Exception(<span class="hljs-string">"error state"</span>);
+</span><span>        <span class="hljs-keyword">if</span> (husband == <span class="hljs-keyword">null</span>) {
+</span><span>            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Exception(<span class="hljs-string">&quot;error state&quot;</span>);
 </span><span>        } <span class="hljs-keyword">else</span> {
 </span><span>            <span class="hljs-keyword">return</span> husband;
 </span><span>        }
 </span><span>    }
 </span><span>
 </span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> Woman <span class="hljs-title">getWife</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> Exception </span>{
-</span><span>        <span class="hljs-keyword">if</span>(wife == <span class="hljs-keyword">null</span>) {
-</span><span>            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Exception(<span class="hljs-string">"error state"</span>);
+</span><span>        <span class="hljs-keyword">if</span> (wife == <span class="hljs-keyword">null</span>) {
+</span><span>            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Exception(<span class="hljs-string">&quot;error state&quot;</span>);
 </span><span>        } <span class="hljs-keyword">else</span> {
 </span><span>            <span class="hljs-keyword">return</span> wife;
 </span><span>        }
 </span><span>    }
 </span><span>
-</span><span>    <span class="hljs-comment">// removal of both ends of 'Marriage'</span>
+</span><span>    <span class="hljs-comment">// removal of both ends of &#x27;Marriage&#x27;</span>
 </span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">divorce</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> Exception </span>{
-</span><span>        <span class="hljs-keyword">if</span> (husband==<span class="hljs-keyword">null</span> || wife==<span class="hljs-keyword">null</span>) {
-</span><span>            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Exception(<span class="hljs-string">"no marriage"</span>);
+</span><span>        <span class="hljs-keyword">if</span> (husband == <span class="hljs-keyword">null</span> || wife == <span class="hljs-keyword">null</span>) {
+</span><span>            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Exception(<span class="hljs-string">&quot;no marriage&quot;</span>);
 </span><span>        }
 </span><span>        husband.removeFromMarriage(<span class="hljs-keyword">this</span>);
 </span><span>        husband = <span class="hljs-keyword">null</span>;
@@ -156,19 +156,19 @@
             </panel>
           </div>
           <div>
-            <panel class="algolia-no-index"><template slot="_header">
-                <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Immutable <code v-pre>Account</code> class</p>
+            <panel class="algolia-no-index"><template slot="header">
+                <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Immutable <code class="hljs inline no-lang" v-pre>Account</code> class</p>
               </template>
               <question has-input="true">
-                <p>Give a suitable defensive implementation to the <code v-pre>Account</code> class in the following class diagram. Note that “{immutable}” means once the association is formed, it cannot be changed.</p>
+                <p>Give a suitable defensive implementation to the <code class="hljs inline no-lang" v-pre>Account</code> class in the following class diagram. Note that “{immutable}” means once the association is formed, it cannot be changed.</p>
                 <img src="/se-book/errorHandling/defensiveProgramming/compulsoryAssociations/images/accountGuarantorImmutable.png" height="80">
                 <p></p>
                 <div slot="answer" class="algolia-no-index">
                   <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{
 </span><span>    <span class="hljs-keyword">private</span> Guarantor myGuarantor; <span class="hljs-comment">// should not be public</span>
 </span><span>
-</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Account</span><span class="hljs-params">(Guarantor g)</span></span>{
-</span><span>        <span class="hljs-keyword">if</span> (g==<span class="hljs-keyword">null</span>) {
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Account</span><span class="hljs-params">(Guarantor g)</span> </span>{
+</span><span>        <span class="hljs-keyword">if</span> (g == <span class="hljs-keyword">null</span>) {
 </span><span>            haltWithErrorMessage(“Account must have a guarantor”);
 </span><span>        }
 </span><span>        myGuarantor = g;
@@ -181,16 +181,16 @@
             </panel>
           </div>
           <div>
-            <panel class="algolia-no-index"><template slot="_header">
+            <panel class="algolia-no-index"><template slot="header">
                 <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Is this defensive?</p>
               </template>
               <question>
                 <img src="/se-book/errorHandling/defensiveProgramming/compulsoryAssociations/images/countryCity.png" height="45">
                 <p></p>
-                <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">City</span></span>{
+                <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">City</span> </span>{
 </span><span>    Country country;
 </span><span>    
-</span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setCountry</span><span class="hljs-params">(Country country)</span></span>{
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setCountry</span><span class="hljs-params">(Country country)</span> </span>{
 </span><span>        <span class="hljs-keyword">this</span>.country = country;
 </span><span>    }
 </span><span>}
@@ -202,7 +202,7 @@
                 </ul>
                 <div slot="answer" class="algolia-no-index">
                   <p>False</p>
-                  <p>Explanation: While the design requires a City to be connected to exactly one Country, the code allows it to be connected to zero Country objects (by passing null to the setCountry() method).</p>
+                  <p>Explanation: While the design requires a <code class="hljs inline no-lang" v-pre>City</code> to be connected to exactly one <code class="hljs inline no-lang" v-pre>Country</code>, the code allows it to be connected to zero <code class="hljs inline no-lang" v-pre>Country</code> objects (by passing <code class="hljs inline no-lang" v-pre>null</code> to the <code class="hljs inline no-lang" v-pre>setCountry()</code> method).</p>
                 </div>
               </question>
             </panel>

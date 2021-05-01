@@ -6,7 +6,7 @@
 
 <div id="body">
 
-**UML uses an `X` at the end of the lifeline of an object to show it's deletion.**
+**UML uses an `X` at the end of the lifeline of an object to show its deletion.**
 
 <box>
 
@@ -21,7 +21,7 @@ Notation:
 
 <box>
 
-{{ icon_example }} Note how the diagrams shows the deletion of the `Minefield` object
+{{ icon_example }} Note how the below diagram shows the deletion of the `Minefield` object.
 
 <img src="{{baseUrl}}/uml/sequenceDiagrams/objectDeletion/images/logicMinefield.png" height="120" />
 <p/>

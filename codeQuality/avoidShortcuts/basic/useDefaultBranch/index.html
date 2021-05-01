@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.16.0">
+  <meta name="generator" content="MarkBind 2.17.3">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - Coding Best Practices: [Practice] Use Default Branch</title>
   <link rel="stylesheet" href="../../../../markbind/css/bootstrap.min.css">
@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="../../../../markbind/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="../../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
   <link rel="stylesheet" href="../../../../markbind/css/octicons.css">
-  <link rel="stylesheet" href="../../../../markbind/css/github.min.css">
+  <link rel="stylesheet" href="../../../../markbind/css/codeblock-dark.min.css">
   <link rel="stylesheet" href="../../../../markbind/css/markbind.min.css">
   <script src="../../../../markbind/js/polyfill.min.js"></script>
   <script src="../../../../markbind/js/vue.min.js"></script>
@@ -199,7 +199,7 @@
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/uml/index.html">UML</a></div>
                 </li>
                 <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/intellij/index.html">Intellij IDEA</a></div>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/intellij/index.html">IntelliJ IDEA</a></div>
                 </li>
                 <li>
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/gitAndGithub/index.html">Git and GitHub</a></div>
@@ -237,8 +237,9 @@
         </div>
       </nav>
 
+
       <div id="content-wrapper">
-        <h1 id="software-engineering-for-self-directed-learners"><span class="text-dark"><small><strong><strong>Software Engineering for Self-Directed Learners »</strong></strong></small></span><a class="fa fa-anchor" href="#software-engineering-for-self-directed-learners" onclick="event.stopPropagation()"></a></h1>
+        <h1 id="software-engineering-for-self-directed-learners"><span id="software-engineering-for-self-directed-learners" class="anchor"></span><span class="text-dark"><small><strong><strong>Software Engineering for Self-Directed Learners »</strong></strong></small></span><a class="fa fa-anchor" href="#software-engineering-for-self-directed-learners" onclick="event.stopPropagation()"></a></h1>
         <div>
           <link rel="stylesheet" href="/se-book/css/textbook.css">
           <div class="website-content">
@@ -253,25 +254,25 @@
                     </span></strong></span></p>
               <div id="title-and-body">
                 <div>
-                  <h4 id="use-the-default-branch"><span>Use the default branch</span><a class="fa fa-anchor" href="#use-the-default-branch" onclick="event.stopPropagation()"></a></h4>
+                  <h4 id="use-the-default-branch"><span id="use-the-default-branch" class="anchor"></span><span>Use the default branch</span><a class="fa fa-anchor" href="#use-the-default-branch" onclick="event.stopPropagation()"></a></h4>
                 </div>
                 <div id="main">
                   <div>
-                    <p>Always include a default branch in <code v-pre>case</code> statements.</p>
-                    <p>Furthermore, use it for the intended default action and not just to execute the last option. If there is no default action, you can use the 'default' branch to detect errors (i.e. if execution reached the <code v-pre>default</code> branch, raise a suitable error). This also applies to the final <code v-pre>else</code> of an <code v-pre>if-else</code> construct. That is, the final <code v-pre>else</code> should mean 'everything else', and not the final option. Do not use <code v-pre>else</code> when an <code v-pre>if</code> condition can be explicitly specified, unless there is absolutely no other possibility.</p>
+                    <p>Always include a default branch in <code class="hljs inline no-lang" v-pre>case</code> statements.</p>
+                    <p>Furthermore, use it for the intended default action and not just to execute the last option. If there is no default action, you can use the <code class="hljs inline no-lang" v-pre>default</code> branch to detect errors (i.e. if execution reached the <code class="hljs inline no-lang" v-pre>default</code> branch, raise a suitable error). This also applies to the final <code class="hljs inline no-lang" v-pre>else</code> of an <code class="hljs inline no-lang" v-pre>if-else</code> construct. That is, the final <code class="hljs inline no-lang" v-pre>else</code> should mean 'everything else', and not the final option. Do not use <code class="hljs inline no-lang" v-pre>else</code> when an <code class="hljs inline no-lang" v-pre>if</code> condition can be explicitly specified, unless there is absolutely no other possibility.</p>
                     <box>
                       <p>
                         <font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font>
                       </p>
-                      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">if</span> (red) print <span class="hljs-string">"red"</span>;
-</span><span><span class="hljs-keyword">else</span> print <span class="hljs-string">"blue"</span>;
+                      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">if</span> (red) print <span class="hljs-string">&quot;red&quot;</span>;
+</span><span><span class="hljs-keyword">else</span> print <span class="hljs-string">&quot;blue&quot;</span>;
 </span></code></pre>
                       <p>
                         <font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong></span></font>
                       </p>
-                      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">if</span> (red) print <span class="hljs-string">"red"</span>;
-</span><span><span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (blue) print <span class="hljs-string">"blue"</span>;
-</span><span><span class="hljs-keyword">else</span> error(<span class="hljs-string">"incorrect input"</span>);
+                      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">if</span> (red) print <span class="hljs-string">&quot;red&quot;</span>;
+</span><span><span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (blue) print <span class="hljs-string">&quot;blue&quot;</span>;
+</span><span><span class="hljs-keyword">else</span> error(<span class="hljs-string">&quot;incorrect input&quot;</span>);
 </span></code></pre>
                     </box>
                   </div>
@@ -283,13 +284,11 @@
         </div>
         <i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i>
       </div>
-
-
     </div>
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.16.0</a>, generated on Thu, Oct 29, 2020, 4:09:50 PM GMT+8]</small>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.3</a>, generated on Sat, 1 May 2021, 12:33:13 GMT+8]</small>
       </div>
     </footer>
   </div>
@@ -310,7 +309,7 @@
       debug: false,
     });
   }
-  MarkBind.afterSetup(initAlgolia);
+  initAlgolia();
 </script>
 <script src="../../../../markbind/layouts/default/scripts.js"></script>
 <script>

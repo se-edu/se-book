@@ -20,7 +20,7 @@
 
 <box>
 
-{{ icon_example }} An example of a NFR captured as a user story:
+{{ icon_example }} An example of an NFR captured as a user story:
 
 As a | I want to | so that
 -----|-----------|--------
@@ -45,7 +45,7 @@ Even if you already have some idea of what your product will look/behave like in
 
 ****Step 1:**** **Define the _target user_ as a _persona_:**
 
-Decide your target user's profile (e.g. a student, office worker, programmer, sales person) and work patterns (e.g. Does he work in groups or alone? Does he share his computer with others?). A clear understanding of the target user will help when deciding the importance of a user story. You can even narrow it down to a _persona_. Here is an example:
+Decide your target user's profile (e.g. a student, office worker, programmer, salesperson) and work patterns (e.g. Does he work in groups or alone? Does he share his computer with others?). A clear understanding of the target user will help when deciding the importance of a user story. You can even narrow it down to a _persona_. Here is an example:
 
 > Jean is a university student studying in a non-IT field. She interacts with a lot of people due to her involvement in university clubs/societies. ...
 
@@ -64,7 +64,7 @@ Think of the various scenarios your target user is likely to go through as she u
 <blockquote>
 
 **A. First use:**
-1. Jean get to know about ProductX. She downloads it and launches it to check out what it can do.
+1. Jean gets to know about ProductX. She downloads it and launches it to check out what it can do.
 1. After playing around with the product for a bit, Jean wants to start using it for real.
 1. ...
 
@@ -88,15 +88,15 @@ More examples that might apply to some products:
 
 * Jean uses the app at the start of the day to ...
 * Jean uses the app before going to sleep to ...
-* Jean doesn't use app for a while because she was on a three-month training programme. She is now back at work and wants to resume her daily use of the app.
+* Jean hasn't used the app for a while because she was on a three-month training programme. She is now back at work and wants to resume her daily use of the app.
 * Jean moves to another company. Some of her clients come with her but some don't.
-* Jean starts freelancing in her spare time. She wants to keep her free-lancing clients separate from her other clients.
+* Jean starts freelancing in her spare time. She wants to keep her freelancing clients separate from her other clients.
 </blockquote>
 
 
 ****Step 4:**** **List the user stories to support the scenarios:**
 
-Based on the scenarios, decide user stories you need to support each. For example, based on the scenario 'A. First use', you might have user stories such as these:
+Based on the scenarios, decide on the user stories you need to support. For example, based on the scenario 'A. First use', you might have user stories such as these:
 
 <blockquote>
 
@@ -116,7 +116,7 @@ To give another example, based on the scenario 'D. 100th use', you might have us
 
 ****Other tips:****
 
-* **Don't be too hasty to discard 'unusual' user stories:**
+* **Don't be too hasty to discard 'unusual' user stories:**  
   Those might make your product unique and stand out from the rest, at least for the target users.
 * **Don't go into too much details:**  
   For example, consider this user story: `As a user, I want to see a list of tasks that needs my attention most at the present time, so that I pay attention to them first.`<br> 

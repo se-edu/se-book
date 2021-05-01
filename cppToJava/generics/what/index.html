@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.16.0">
+  <meta name="generator" content="MarkBind 2.17.3">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - C++ to Java: Generics: What are Generics?</title>
   <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="../../../markbind/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
   <link rel="stylesheet" href="../../../markbind/css/octicons.css">
-  <link rel="stylesheet" href="../../../markbind/css/github.min.css">
+  <link rel="stylesheet" href="../../../markbind/css/codeblock-dark.min.css">
   <link rel="stylesheet" href="../../../markbind/css/markbind.min.css">
   <script src="../../../markbind/js/polyfill.min.js"></script>
   <script src="../../../markbind/js/vue.min.js"></script>
@@ -199,7 +199,7 @@
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/uml/index.html">UML</a></div>
                 </li>
                 <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/intellij/index.html">Intellij IDEA</a></div>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/intellij/index.html">IntelliJ IDEA</a></div>
                 </li>
                 <li>
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/gitAndGithub/index.html">Git and GitHub</a></div>
@@ -237,8 +237,9 @@
         </div>
       </nav>
 
+
       <div id="content-wrapper">
-        <h1 id="software-engineering-for-self-directed-learners"><span class="text-dark"><small><strong><strong>Software Engineering for Self-Directed Learners »</strong></strong></small></span><a class="fa fa-anchor" href="#software-engineering-for-self-directed-learners" onclick="event.stopPropagation()"></a></h1>
+        <h1 id="software-engineering-for-self-directed-learners"><span id="software-engineering-for-self-directed-learners" class="anchor"></span><span class="text-dark"><small><strong><strong>Software Engineering for Self-Directed Learners »</strong></strong></small></span><a class="fa fa-anchor" href="#software-engineering-for-self-directed-learners" onclick="event.stopPropagation()"></a></h1>
         <div>
           <link rel="stylesheet" href="/se-book/css/textbook.css">
           <div class="website-content">
@@ -253,7 +254,7 @@
                     </span></strong></span></p>
               <div id="title-and-body">
                 <div>
-                  <h4 id="what-are-generics"><span>What are Generics?</span><a class="fa fa-anchor" href="#what-are-generics" onclick="event.stopPropagation()"></a></h4>
+                  <h4 id="what-are-generics"><span id="what-are-generics" class="anchor"></span><span>What are Generics?</span><a class="fa fa-anchor" href="#what-are-generics" onclick="event.stopPropagation()"></a></h4>
                 </div>
                 <div id="main">
                   <div>
@@ -261,7 +262,7 @@
                     <div class="indented">
                       <p><strong>You can use polymorphism to write code that can work with multiple types, but that approach has some shortcomings.</strong></p>
                       <box>
-                        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider the following <code v-pre>Box</code> class. It can be used only for storing <code v-pre>Integer</code> objects.</p>
+                        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider the following <code class="hljs inline no-lang" v-pre>Box</code> class. It can be used only for storing <code class="hljs inline no-lang" v-pre>Integer</code> objects.</p>
                         <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">BoxForIntegers</span> </span>{
 </span><span>    <span class="hljs-keyword">private</span> Integer x;
 </span><span>
@@ -273,7 +274,7 @@
 </span><span>    }
 </span><span>}
 </span></code></pre>
-                        <p>To store <code v-pre>String</code> objects, another similar class is needed, resulting in the duplication of the entire class. As you can see, if you need to store many different types of objects, you could end up writing many similar classes.</p>
+                        <p>To store <code class="hljs inline no-lang" v-pre>String</code> objects, another similar class is needed, resulting in the duplication of the entire class. As you can see, if you need to store many different types of objects, you could end up writing many similar classes.</p>
                         <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">BoxForString</span> </span>{
 </span><span>    <span class="hljs-keyword">private</span> String x;
 </span><span>
@@ -285,7 +286,7 @@
 </span><span>    }
 </span><span>}
 </span></code></pre>
-                        <p>One solution for this problem is to use <em>polymorphism</em> i.e., write the <code v-pre>Box</code> class to store <code v-pre>Object</code> objects.</p>
+                        <p>One solution for this problem is to use <em>polymorphism</em> i.e., write the <code class="hljs inline no-lang" v-pre>Box</code> class to store <code class="hljs inline no-lang" v-pre>Object</code> objects.</p>
                         <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Box</span> </span>{
 </span><span>    <span class="hljs-keyword">private</span> Object x;
 </span><span>
@@ -297,13 +298,13 @@
 </span><span>    }
 </span><span>}
 </span></code></pre>
-                        <p>The problem with this solution is, since its methods accept or return an <code v-pre>Object</code>, you are free to pass in whatever you want, provided that it is not one of the primitive types. There is no way to verify, at compile time, how the class is used. One part of the code may place an <code v-pre>Integer</code> in the box and expect to get <code v-pre>Integers</code> out of it, while another part of the code may mistakenly pass in a <code v-pre>String</code>, resulting in a runtime error.
+                        <p>The problem with this solution is, since its methods accept or return an <code class="hljs inline no-lang" v-pre>Object</code>, you are free to pass in whatever you want, provided that it is not one of the primitive types. There is no way to verify, at compile time, how the class is used. One part of the code may place an <code class="hljs inline no-lang" v-pre>Integer</code> in the box and expect to get <code class="hljs inline no-lang" v-pre>Integers</code> out of it, while another part of the code may mistakenly pass in a <code class="hljs inline no-lang" v-pre>String</code>, resulting in a runtime error.
                         </p>
                       </box>
                       <p></p>
-                      <p><strong>Generics enable types (classes and interfaces) to be parameters when defining classes, interfaces and methods.</strong> Much like the more familiar <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">In a method <code v-pre>getName(Person p)</code>, <code v-pre>p</code> is a <em>formal parameter</em></span><em>formal parameters</em> used in method declarations</span>, <em>type parameters</em> provide a way for you to re-use the same code with different inputs. The difference is that the inputs to formal parameters are values, while the inputs to type parameters are types.</p>
+                      <p><strong>Generics enable types (classes and interfaces) to be parameters when defining classes, interfaces and methods.</strong> Much like the more familiar <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">In a method <code class="hljs inline no-lang" v-pre>getName(Person p)</code>, <code class="hljs inline no-lang" v-pre>p</code> is a <em>formal parameter</em></span><em>formal parameters</em> used in method declarations</span>, <em>type parameters</em> provide a way for you to re-use the same code with different inputs. The difference is that the inputs to formal parameters are values, while the inputs to type parameters are types.</p>
                       <box>
-                        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> A <em>generic</em> <code v-pre>Box</code> class allows you to define what type of elements will be put in the <code v-pre>Box</code>. For example, you can instantiate a <code v-pre>Box</code> object to keep <code v-pre>Integer</code> elements so that any attempt to put a non-<code v-pre>Integer</code> object in that <code v-pre>Box</code> object will result in a compile error.</p>
+                        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> A <em>generic</em> <code class="hljs inline no-lang" v-pre>Box</code> class allows you to define what type of elements will be put in the <code class="hljs inline no-lang" v-pre>Box</code>. For example, you can instantiate a <code class="hljs inline no-lang" v-pre>Box</code> object to keep <code class="hljs inline no-lang" v-pre>Integer</code> elements so that any attempt to put a non-<code class="hljs inline no-lang" v-pre>Integer</code> object in that <code class="hljs inline no-lang" v-pre>Box</code> object will result in a compile error.</p>
                       </box>
                     </div>
                   </div>
@@ -315,13 +316,11 @@
         </div>
         <i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i>
       </div>
-
-
     </div>
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.16.0</a>, generated on Thu, Oct 29, 2020, 4:09:50 PM GMT+8]</small>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.3</a>, generated on Sat, 1 May 2021, 12:33:13 GMT+8]</small>
       </div>
     </footer>
   </div>
@@ -342,7 +341,7 @@
       debug: false,
     });
   }
-  MarkBind.afterSetup(initAlgolia);
+  initAlgolia();
 </script>
 <script src="../../../markbind/layouts/default/scripts.js"></script>
 <script>

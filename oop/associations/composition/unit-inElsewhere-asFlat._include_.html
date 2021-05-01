@@ -4,30 +4,30 @@
       </span></strong></span></p>
 <div id="title-and-body">
   <div>
-    <h4 id="composition"><span>Composition</span><a class="fa fa-anchor" href="#composition" onclick="event.stopPropagation()"></a></h4>
+    <h4 id="composition"><span id="composition" class="anchor"></span><span>Composition</span><a class="fa fa-anchor" href="#composition" onclick="event.stopPropagation()"></a></h4>
   </div>
   <div id="main">
     <div>
       <p><strong>A composition is an association that represents a strong <em>whole-part</em> relationship.</strong> When the <em>whole</em> is destroyed, <em>parts</em> are destroyed too i.e., the <em>part</em> should not exist without being attached to a <em>whole</em>.</p>
       <box>
-        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> A <code v-pre>Board</code> (used for playing board games) consists of <code v-pre>Square</code> objects.</p>
+        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> A <code class="hljs inline no-lang" v-pre>Board</code> (used for playing board games) consists of <code class="hljs inline no-lang" v-pre>Square</code> objects.</p>
       </box>
       <p><strong>Composition also implies that there cannot be cyclical links</strong>.</p>
       <box>
-        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The ‘sub-folder’ association between <code v-pre>Folder</code> objects is a composition type association. That means if the <code v-pre>Folder</code> object <code v-pre>foo</code> is a sub folder of <code v-pre>Folder</code> object <code v-pre>bar</code>, <code v-pre>bar</code> cannot be a sub-folder of <code v-pre>foo</code>.</p>
+        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The ‘sub-folder’ association between <code class="hljs inline no-lang" v-pre>Folder</code> objects is a composition type association. That means if the <code class="hljs inline no-lang" v-pre>Folder</code> object <code class="hljs inline no-lang" v-pre>foo</code> is a sub-folder of <code class="hljs inline no-lang" v-pre>Folder</code> object <code class="hljs inline no-lang" v-pre>bar</code>, <code class="hljs inline no-lang" v-pre>bar</code> cannot be a sub-folder of <code class="hljs inline no-lang" v-pre>foo</code>.</p>
       </box>
       <p><strong>Whether a relationship is a composition can depend on the context</strong>.</p>
       <box>
-        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Is the relationship between <code v-pre>Email</code> and <code v-pre>EmailSubject</code> composition? That is, is the email subject <em>part</em> of an email to the extent that an email subject cannot exist without an email?</p>
+        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Is the relationship between <code class="hljs inline no-lang" v-pre>Email</code> and <code class="hljs inline no-lang" v-pre>EmailSubject</code> composition? That is, is the email subject <em>part</em> of an email to the extent that an email subject cannot exist without an email?</p>
         <ul>
           <li>When modeling an application that sends emails, the answer is 'yes'.</li>
           <li>When modeling an application that gather analytics about email traffic, the answer may be 'no' <span class="dimmed">(e.g., the application might collect just the email subjects for text analysis)</span>.</li>
         </ul>
       </box>
-      <p><strong>A common use of composition is when parts of a big class is carved out as smaller classes</strong> for the ease of managing the internal design. In such cases, the classes extracted out still act as <em>parts</em> of the bigger class and the outside world has no business knowing about them.</p>
-      <p><strong>Cascading deletion alone is not sufficient for composition.</strong> Suppose there is a design in which <code v-pre>Person</code> objects are attached to <code v-pre>Task</code> objects and the former get deleted whenever the latter is deleted. This fact alone does not mean there is a composition relationship between the two classes. For it to be composition, a <code v-pre>Person</code> must be an integral <em>part</em> of a <code v-pre>Task</code> in the context of that association, at the concept level (not simply at implementation level).</p>
+      <p><strong>A common use of composition is when parts of a big class are carved out as smaller classes</strong> for the ease of managing the internal design. In such cases, the classes extracted out still act as <em>parts</em> of the bigger class and the outside world has no business knowing about them.</p>
+      <p><strong>Cascading deletion alone is not sufficient for composition.</strong> Suppose there is a design in which <code class="hljs inline no-lang" v-pre>Person</code> objects are attached to <code class="hljs inline no-lang" v-pre>Task</code> objects and the former get deleted whenever the latter is deleted. This fact alone does not mean there is a composition relationship between the two classes. For it to be composition, a <code class="hljs inline no-lang" v-pre>Person</code> must be an integral <em>part</em> of a <code class="hljs inline no-lang" v-pre>Task</code> in the context of that association, at the concept level (not simply at implementation level).</p>
       <p><strong>Identifying and keeping track of composition relationships in the design has benefits</strong> such as helping to maintain the data integrity of the system. For example, when you know that a certain relationship is a composition, you can take extra care in your implementation to ensure that when the <em>whole</em> object is deleted, all its <em>parts</em> are deleted too.</p>
-      <h5 id="implementing-composition">Implementing composition<a class="fa fa-anchor" href="#implementing-composition" onclick="event.stopPropagation()"></a></h5>
+      <h5 id="implementing-composition"><span id="implementing-composition" class="anchor"></span>Implementing composition<a class="fa fa-anchor" href="#implementing-composition" onclick="event.stopPropagation()"></a></h5>
       <p><strong>Composition is implemented using a normal variable.</strong> If correctly implemented, the ‘part’ object will be deleted when the ‘whole’ object is deleted. Ideally, the ‘part’ object may not even be visible to clients of the ‘whole’ object.</p>
       <box>
         <div class="alt-java float-right ml-5">
@@ -40,11 +40,11 @@
         <div class="alt-python  float-right ml-5">
           <pre><code class="hljs python" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Email</span>:</span>
 </span><span>
-</span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span>
+</span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span>(<span class="hljs-params">self</span>):</span>
 </span><span>    self.__subject = Subject()
 </span></code></pre>
         </div>
-        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In this code, the <code v-pre>Email</code> has a composition type relationship with the <code v-pre>Subject</code> class, in the sense that the subject is part of the email.</p>
+        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In this code, the <code class="hljs inline no-lang" v-pre>Email</code> has a composition type relationship with the <code class="hljs inline no-lang" v-pre>Subject</code> class, in the sense that the subject is part of the email.</p>
       </box>
     </div>
     <div></div>

@@ -40,17 +40,17 @@ set_number(n:int)
 <div class="alt-java">
 
 ```java
-class Table{
+class Table {
 
     Integer number;
     Chair[] chairs = null;
     
-    Integer getNumber(){
-        //...
+    Integer getNumber() {
+        // ...
     }
 
-    void setNumber(Integer n){
-        //...
+    void setNumber(Integer n) {
+        // ...
     }
 }
 ```
@@ -93,12 +93,12 @@ class Table:
 
 <panel type="seamless" header="How visibilities map to programming language features">
 
-visibility | Java | Python
+Visibility | Java | Python
 -----------|------|-------
-`-`  private | `private` | at least two leading underscores (and at most one trailing underscores) in the name
-`#`  protected | `protected` | one leading underscore in the name
-`+`  public | `public` | all other cases
-`~`  package private | default visibility | not applicable
+`-` private | `private` | at least two leading underscores (and at most one trailing underscores) in the name
+`#` protected | `protected` | one leading underscore in the name
+`+` public | `public` | all other cases
+`~` package private | default visibility | not applicable
 
 </panel><p/>
 
@@ -130,16 +130,16 @@ class Table {
 <div class="alt-java">
 
 ```java
-class Table{
+class Table {
 
     private Integer number;
     private Chair[] chairs = null;
 
-    public Integer getNumber(){
+    public Integer getNumber() {
         //...
     }
 
-    public void setNumber(Integer n){
+    public void setNumber(Integer n) {
         //...
     }
 }
@@ -165,6 +165,16 @@ class Table:
 </panel>
 
 </box>
+
+
+<div class="alt-java">
+
+
+**Generic classes can be shown as given below**. The notation format is shown on the left, followed by two examples.
+
+<img src="images/generic.png" width="618"/>
+<p/>
+</div>
 
 </div>
 

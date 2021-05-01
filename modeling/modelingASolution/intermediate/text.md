@@ -7,7 +7,7 @@
 
 <div id="body">
 
-Continuing with the example in [<trigger trigger="click" for="modal:conceptualingIntermediate-basic">Design → Modeling → Modeling a Solution → Basic</trigger>], next let us model how the TextUi interacts with the Logic to support the mark or clear operations until the game is won or lost.
+Continuing with the example in [<trigger trigger="click" for="modal:conceptualingIntermediate-basic">Design → Modeling → Modeling a Solution → Basic</trigger>], next let us model how the `TextUi` interacts with the `Logic` to support the mark and clear operations until the game is won or lost.
 
 <modal large header="" id="modal:conceptualingIntermediate-basic">
   <include src="../basic/unit-inElsewhere-asFlat.md" boilerplate/>
@@ -22,17 +22,17 @@ Continuing with the example in [<trigger trigger="click" for="modal:conceptualin
 
 </box>
 
-This interaction adds the following methods to the `Logic` class
+This interaction adds the following methods to the `Logic` class:
 
 * `clearCellAt(int x, int y)`
 * `markCellAt(int x, int y)`
-* `getGameState() :GAME_STATE (GAME_STATE: READY, IN_PLAY, WON, LOST, …)`
+* `getGameState(): GAME_STATE (GAME_STATE: READY, IN_PLAY, WON, LOST, …)`
 
 And it adds the following operation to Logic API:
 
-* `getAppearanceOfCellAt(int,int):CELL_APPEARANCE (CELL_APPEARANCE: HIDDEN, ZERO, ONE, TWO, THREE, …, MARKED, INCORRECTLY_MARKED, INCORRECTLY_CLEARED)`
+* `getAppearanceOfCellAt(int,int): CELL_APPEARANCE (CELL_APPEARANCE: HIDDEN, ZERO, ONE, TWO, THREE, …, MARKED, INCORRECTLY_MARKED, INCORRECTLY_CLEARED)`
 
-In the above design, `TextUi` does not access `Cell` objects directly. Instead, it gets values of type `CELL_APPEARANCE` from `Logic` to be displayed as a minefield to the player. Alternatively, each cell or the entire Minefield can be passed directly to `TextUi`.
+In the above design, `TextUi` does not access `Cell` objects directly. Instead, it gets values of type `CELL_APPEARANCE` from `Logic` to be displayed as a minefield to the player. Alternatively, each cell or the entire minefield can be passed directly to `TextUi`.
 
 Here is the updated class diagram:
 
@@ -86,10 +86,10 @@ The updated class diagram:
 
 </box>
 
-How is `getGameState()` operation supported? Given below are two ways (there could be other ways):
+How is the `getGameState()` operation supported? Given below are two ways (there could be other ways):
 
-1. `Minefield` class knows the state of the game at any time. `Logic` class retrieves it from the `Minefield` class as and when required.
-2. `Logic` class maintains the state of the game at all times.
+1. The `Minefield` class knows the state of the game at any time. The `Logic` class retrieves it from the `Minefield` class as and when required.
+2. The `Logic` class maintains the state of the game at all times.
 
 Here’s the SD for option 1.
 
@@ -99,7 +99,7 @@ Here’s the SD for option 1.
 
 </box>
 
-Here’s the SD for option 2. Here, assume that the game state is updated after every mark/clear action.
+Here’s the SD for option 2. Assume that the game state is updated after every mark/clear action.
 
 <box>
 
@@ -107,7 +107,7 @@ Here’s the SD for option 2. Here, assume that the game state is updated after 
 
 </box>
 
-It is now time to explore what happens inside the `Minefield` constructor? One way is to design it as follows.
+It is now time to explore what happens inside the `Minefield` constructor. One way is to design it as follows.
 
 <box>
 

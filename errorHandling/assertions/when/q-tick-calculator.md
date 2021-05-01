@@ -1,4 +1,4 @@
-<panel header="{{ icon_Q_A }} Assertions failure in Calculator">
+<panel header="{{ icon_Q_A }} Assertion failure in Calculator">
 <question>
 
 A Calculator program crashes with an ‘assertion failure’ message when you try to find the square root of a negative number.

@@ -1,7 +1,7 @@
 <panel header="{{ icon_Q_A }} Statement about agile design">
 <question>
 
-Agile design camp expects the design to change over the product’s lifetime.
+The agile design camp expects the design to change over the product’s lifetime.
 
 - ( ) True
 - ( ) False

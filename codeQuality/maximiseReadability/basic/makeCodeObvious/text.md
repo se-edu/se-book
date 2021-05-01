@@ -9,8 +9,8 @@
 Make the code as explicit as possible, even if the language syntax allows them to be implicit. Here are some examples:
 
 * [`Java`] Use explicit type conversion instead of implicit type conversion.
-* [`Java`, `Python`] Use parentheses/braces to show grouping even when they can be skipped.
-* [`Java`, `Python`] Use <trigger trigger="click" for="modal:obviousCode-enums">enumerations</trigger> when a certain variable can take only a small number of finite values. For example, instead of declaring the variable 'state' as an integer and using values 0,1,2 to denote the states 'starting', 'enabled', and 'disabled' respectively, declare 'state' as type `SystemState` and define an enumeration `SystemState` that has values `'STARTING'`, `'ENABLED'`, and `'DISABLED'`.
+* [`Java`, `Python`] Use parentheses/braces to show groupings even when they can be skipped.
+* [`Java`, `Python`] Use <trigger trigger="click" for="modal:obviousCode-enums">enumerations</trigger> when a certain variable can take only a small number of finite values. For example, instead of declaring the variable 'state' as an integer and using values 0, 1, 2 to denote the states 'starting', 'enabled', and 'disabled' respectively, declare 'state' as type `SystemState` and define an enumeration `SystemState` that has values `'STARTING'`, `'ENABLED'`, and `'DISABLED'`.
 
 <modal header="More about enumerations" id="modal:obviousCode-enums">
 

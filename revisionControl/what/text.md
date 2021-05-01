@@ -23,7 +23,7 @@ Manually managing multiple versions of even a single file is an error-prone task
 
 **It will help you to work simultaneously on, and manage the drift between, multiple versions of your project.** Most of these reasons are equally valid, at least in theory, whether you're working on a project by yourself, or with a hundred other people.
 
- -- [adapted from <trigger trigger="click" for="modal:rcsWhat-bryanMercurialGuide">bryan-mercurial-guide</trigger>
+ -- [adapted from <trigger trigger="click" for="modal:rcsWhat-bryanMercurialGuide">bryan-mercurial-guide</trigger>]
 
   </blockquote>
 

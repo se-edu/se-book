@@ -31,7 +31,7 @@
 
 <box>
 
-{{ icon_example }} In the code below, the `Logic` class will always have a `ConfigGenerator` object, provided the variable is not set to null at some point.
+{{ icon_example }} In the code below, the `Logic` class will always have a `ConfigGenerator` object, provided the variable is not set to `null` at some point.
 
 
 <div class="alt-java">
@@ -56,7 +56,7 @@ class Logic:
 
 </box>
 
-**Bi-directional associations require matching variables in both classes.**
+**Bidirectional associations require matching variables in both classes.**
 
 <box>
 
@@ -102,7 +102,7 @@ class Bar:
 <box>
 <div class="alt-java">
 
-{{ icon_example }} This code uses an two-dimensional array to implement a 1-to-many association from the `Minefield` to `Cell`.
+{{ icon_example }} This code uses a two-dimensional array to implement a 1-to-many association from the `Minefield` to `Cell`.
 ```java
 class Minefield {
     Cell[][] cell;

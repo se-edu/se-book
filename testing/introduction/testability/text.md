@@ -6,7 +6,7 @@
 
 <div id="body">
 
-**_Testability_ is an indication of how easy it is to test an SUT.** As testability depends a lot on the design and implementation. You should try to increase the testability when you design and implement a software. The higher the testability, the easier it is to achieve a better quality software.
+**_Testability_ is an indication of how easy it is to test an SUT.** As testability depends a lot on the design and implementation, you should try to increase the testability when you design and implement software. The higher the testability, the easier it is to achieve better quality software.
 
 </div>
 

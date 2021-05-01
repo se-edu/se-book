@@ -14,11 +14,11 @@ Which of these follow the correct UML notation?
 
 <div slot="answer">
 
-1. Incorrect : _Attributes_ compartment should be above the _Methods_ compartment.
-2. Incorrect : All attributes should be inside the same compartment.
+1. Incorrect: _Attributes_ compartment should be above the _Methods_ compartment.
+2. Incorrect: All attributes should be inside the same compartment.
 3. Correct
-4. Correct : Both _Attributes_ and _Methods_ compartments can be omitted.
-5. Correct : The _Attributes_ and _Methods_ compartments can be empty.
+4. Correct: Both _Attributes_ and _Methods_ compartments can be omitted.
+5. Correct: The _Attributes_ and _Methods_ compartments can be empty.
 
 </div>
 </question>

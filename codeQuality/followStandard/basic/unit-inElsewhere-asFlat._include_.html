@@ -4,7 +4,7 @@
       </span></strong></span></p>
 <div id="title-and-body">
   <div>
-    <h4 id="what"><span>What</span><a class="fa fa-anchor" href="#what" onclick="event.stopPropagation()"></a></h4>
+    <h4 id="what"><span id="what" class="anchor"></span><span>What</span><a class="fa fa-anchor" href="#what" onclick="event.stopPropagation()"></a></h4>
   </div>
   <div id="main">
     <div>
@@ -16,21 +16,22 @@
       </div>
     </div>
     <div>
-      <div>
-        <panel expanded><template slot="_header">
-            <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
-          </template>
-          <div>
+      <div class="alt-java">
+        <div>
+          <panel expanded><template slot="header">
+              <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
+            </template>
             <div>
-              <panel class="algolia-no-index"><template slot="_header">
-                  <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Find basic coding standard violations</p>
-                </template>
-                <question>
-                  <p>Consider the code given below:</p>
-                  <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">import</span> java.util.*;
+              <div>
+                <panel class="algolia-no-index"><template slot="header">
+                    <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Find basic coding standard violations</p>
+                  </template>
+                  <question>
+                    <p>Consider the code given below:</p>
+                    <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">import</span> java.util.*;
 </span><span>
 </span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Task</span> </span>{
-</span><span>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String descriptionPrefix = <span class="hljs-string">"description: "</span>;
+</span><span>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String descriptionPrefix = <span class="hljs-string">&quot;description: &quot;</span>;
 </span><span>    <span class="hljs-keyword">private</span> String description;
 </span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">boolean</span> important;
 </span><span>    List&lt;String&gt; pastDescription = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;(); <span class="hljs-comment">// a list of past descriptions</span>
@@ -41,7 +42,7 @@
 </span><span>          <span class="hljs-keyword">this</span>.important = <span class="hljs-keyword">true</span>;
 </span><span>    }
 </span><span>
-</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getAsXML</span><span class="hljs-params">()</span> </span>{ <span class="hljs-keyword">return</span> <span class="hljs-string">"&lt;task&gt;"</span>+description+<span class="hljs-string">"&lt;/task&gt;"</span>; }
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getAsXML</span><span class="hljs-params">()</span> </span>{ <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;&lt;task&gt;&quot;</span>+description+<span class="hljs-string">&quot;&lt;/task&gt;&quot;</span>; }
 </span><span>
 </span><span>    <span class="hljs-comment">/**</span>
 </span><span><span class="hljs-comment">     * Print the description as a string.</span>
@@ -52,21 +53,22 @@
 </span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span><span class="hljs-params">()</span> </span>{ <span class="hljs-keyword">return</span> descriptionPrefix + description; }
 </span><span>}
 </span></code></pre>
-                  <p>In what ways the code violate the coding standard you are expected to follow?</p>
-                  <div slot="hint" class="algolia-no-index">
-                    <p>Here are three:</p>
-                    <ul>
-                      <li><code v-pre>descriptionPrefix</code> is a constant and should be named <code v-pre>DESCRIPTION_PREFIX</code></li>
-                      <li>method name <code v-pre>printingDescription()</code> should be named as <code v-pre>printDescription()</code></li>
-                      <li>boolean variable <code v-pre>important</code> should be named to sound boolean e.g., <code v-pre>isImportant</code></li>
-                    </ul>
-                    <p>There are many more.</p>
-                  </div>
-                </question>
-              </panel>
+                    <p>In what ways do the code violate the coding standard you are expected to follow?</p>
+                    <div slot="hint" class="algolia-no-index">
+                      <p>Here are three:</p>
+                      <ul>
+                        <li><code class="hljs inline no-lang" v-pre>descriptionPrefix</code> is a constant and should be named <code class="hljs inline no-lang" v-pre>DESCRIPTION_PREFIX</code></li>
+                        <li>method name <code class="hljs inline no-lang" v-pre>printingDescription()</code> should be named as <code class="hljs inline no-lang" v-pre>printDescription()</code></li>
+                        <li>boolean variable <code class="hljs inline no-lang" v-pre>important</code> should be named to sound boolean e.g., <code class="hljs inline no-lang" v-pre>isImportant</code></li>
+                      </ul>
+                      <p>There are many more.</p>
+                    </div>
+                  </question>
+                </panel>
+              </div>
             </div>
-          </div>
-        </panel>
+          </panel>
+        </div>
       </div>
     </div>
   </div>

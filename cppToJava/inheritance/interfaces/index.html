@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.16.0">
+  <meta name="generator" content="MarkBind 2.17.3">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SEforSDL - C++ to Java: Inheritance: Interfaces</title>
   <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="../../../markbind/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
   <link rel="stylesheet" href="../../../markbind/css/octicons.css">
-  <link rel="stylesheet" href="../../../markbind/css/github.min.css">
+  <link rel="stylesheet" href="../../../markbind/css/codeblock-dark.min.css">
   <link rel="stylesheet" href="../../../markbind/css/markbind.min.css">
   <script src="../../../markbind/js/polyfill.min.js"></script>
   <script src="../../../markbind/js/vue.min.js"></script>
@@ -199,7 +199,7 @@
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/uml/index.html">UML</a></div>
                 </li>
                 <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/intellij/index.html">Intellij IDEA</a></div>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/intellij/index.html">IntelliJ IDEA</a></div>
                 </li>
                 <li>
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/gitAndGithub/index.html">Git and GitHub</a></div>
@@ -237,8 +237,9 @@
         </div>
       </nav>
 
+
       <div id="content-wrapper">
-        <h1 id="software-engineering-for-self-directed-learners"><span class="text-dark"><small><strong><strong>Software Engineering for Self-Directed Learners »</strong></strong></small></span><a class="fa fa-anchor" href="#software-engineering-for-self-directed-learners" onclick="event.stopPropagation()"></a></h1>
+        <h1 id="software-engineering-for-self-directed-learners"><span id="software-engineering-for-self-directed-learners" class="anchor"></span><span class="text-dark"><small><strong><strong>Software Engineering for Self-Directed Learners »</strong></strong></small></span><a class="fa fa-anchor" href="#software-engineering-for-self-directed-learners" onclick="event.stopPropagation()"></a></h1>
         <div>
           <link rel="stylesheet" href="/se-book/css/textbook.css">
           <div class="website-content">
@@ -253,14 +254,14 @@
                     </span></strong></span></p>
               <div id="title-and-body">
                 <div>
-                  <h4 id="interfaces"><span>Interfaces</span><a class="fa fa-anchor" href="#interfaces" onclick="event.stopPropagation()"></a></h4>
+                  <h4 id="interfaces"><span id="interfaces" class="anchor"></span><span>Interfaces</span><a class="fa fa-anchor" href="#interfaces" onclick="event.stopPropagation()"></a></h4>
                 </div>
                 <div id="main">
                   <div>
                     <p>The text given in this section borrows some explanations and code examples from the <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small>.</p>
-                    <p>In Java, <strong>an <em>interface</em> is a reference type, similar to a class, mainly containing method signatures.</strong> Defining an interface is similar to creating a new class except it uses the keyword <code v-pre>interface</code> in place of <code v-pre>class</code>.</p>
+                    <p>In Java, <strong>an <em>interface</em> is a reference type, similar to a class, mainly containing method signatures.</strong> Defining an interface is similar to creating a new class except it uses the keyword <code class="hljs inline no-lang" v-pre>interface</code> in place of <code class="hljs inline no-lang" v-pre>class</code>.</p>
                     <box>
-                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Here is an interface named <code v-pre>DrivableVehicle</code> that defines methods needed to drive a vehicle.</p>
+                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Here is an interface named <code class="hljs inline no-lang" v-pre>DrivableVehicle</code> that defines methods needed to drive a vehicle.</p>
                       <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">DrivableVehicle</span> </span>{
 </span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">turn</span><span class="hljs-params">(Direction direction)</span></span>;
 </span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">changeLanes</span><span class="hljs-params">(Direction direction)</span></span>;
@@ -268,13 +269,13 @@
 </span><span>    <span class="hljs-comment">// more method signatures</span>
 </span><span>}
 </span></code></pre>
-                      <p>Note that the method signatures have no braces (<code v-pre>{ }</code>) and are terminated with a semicolon.
+                      <p>Note that the method signatures have no braces (<code class="hljs inline no-lang" v-pre>{ }</code>) and are terminated with a semicolon.
                       </p>
                     </box>
                     <p></p>
-                    <p><strong>Interfaces cannot be instantiated—they can only be <em>implemented</em> by classes</strong>. When an instantiable class implements an interface, indicated by the keyword <code v-pre>implements</code>, it provides a method body for each of the methods declared in the interface.</p>
+                    <p><strong>Interfaces cannot be instantiated—they can only be <em>implemented</em> by classes</strong>. When an instantiable class implements an interface, indicated by the keyword <code class="hljs inline no-lang" v-pre>implements</code>, it provides a method body for each of the methods declared in the interface.</p>
                     <box>
-                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Here is how a class <code v-pre>CarModelX</code> can implement the <code v-pre>DrivableVehicle</code> interface.</p>
+                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Here is how a class <code class="hljs inline no-lang" v-pre>CarModelX</code> can implement the <code class="hljs inline no-lang" v-pre>DrivableVehicle</code> interface.</p>
                       <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CarModelX</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">DrivableVehicle</span> </span>{
 </span><span>
 </span><span>    <span class="hljs-meta">@Override</span>
@@ -286,10 +287,10 @@
 </span><span>}
 </span></code></pre>
                     </box>
-                    <p><strong>An interface can be used as a type</strong> e.g., <code class="hljs inline java" v-pre>DrivableVechile dv = <span class="hljs-keyword">new</span> CarModelX();</code>.</p>
-                    <p><strong>Interfaces can inherit from other interfaces</strong> using the <code v-pre>extends</code> keyword, similar to a class inheriting another.</p>
+                    <p><strong>An interface can be used as a type</strong> e.g., <code class="hljs inline java" v-pre>DrivableVechicle dv = <span class="hljs-keyword">new</span> CarModelX();</code>.</p>
+                    <p><strong>Interfaces can inherit from other interfaces</strong> using the <code class="hljs inline no-lang" v-pre>extends</code> keyword, similar to a class inheriting another.</p>
                     <box>
-                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Here is an interface named <code v-pre>SelfDrivableVehicle</code> that inherits the <code v-pre>DrivableVehicle</code> interface.</p>
+                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Here is an interface named <code class="hljs inline no-lang" v-pre>SelfDrivableVehicle</code> that inherits the <code class="hljs inline no-lang" v-pre>DrivableVehicle</code> interface.</p>
                       <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">SelfDrivableVehicle</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">DrivableVehicle</span> </span>{
 </span><span>   <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">goToAutoPilotMode</span><span class="hljs-params">()</span></span>;
 </span><span>}
@@ -304,10 +305,10 @@
                       <img src="/se-book/oop/inheritance/interfaces/images/studentStaff.png" height="250">
                       <p></p>
                       <ol>
-                        <li><code v-pre>Staff</code> interface inherits (note the solid lines) the interfaces <code v-pre>TaxPayer</code> and <code v-pre>Citizen</code>.</li>
-                        <li><code v-pre>TA</code> class implements both <code v-pre>Student</code> interface and the <code v-pre>Staff</code> interface.</li>
-                        <li>Because of point 1 above, <code v-pre>TA</code> class has to implement all methods in the interfaces <code v-pre>TaxPayer</code> and <code v-pre>Citizen</code>.</li>
-                        <li>Because of points 1,2,3, a <code v-pre>TA</code> <em>is a</em> <code v-pre>Staff</code>, <em>is a</em> <code v-pre>TaxPayer</code> and <em>is a</em> <code v-pre>Citizen</code>.</li>
+                        <li><code class="hljs inline no-lang" v-pre>Staff</code> interface inherits (note the solid lines) the interfaces <code class="hljs inline no-lang" v-pre>TaxPayer</code> and <code class="hljs inline no-lang" v-pre>Citizen</code>.</li>
+                        <li><code class="hljs inline no-lang" v-pre>TA</code> class implements both <code class="hljs inline no-lang" v-pre>Student</code> interface and the <code class="hljs inline no-lang" v-pre>Staff</code> interface.</li>
+                        <li>Because of point 1 above, <code class="hljs inline no-lang" v-pre>TA</code> class has to implement all methods in the interfaces <code class="hljs inline no-lang" v-pre>TaxPayer</code> and <code class="hljs inline no-lang" v-pre>Citizen</code>.</li>
+                        <li>Because of points 1,2,3, a <code class="hljs inline no-lang" v-pre>TA</code> <em>is a</em> <code class="hljs inline no-lang" v-pre>Staff</code>, <em>is a</em> <code class="hljs inline no-lang" v-pre>TaxPayer</code> and <em>is a</em> <code class="hljs inline no-lang" v-pre>Citizen</code>.</li>
                       </ol>
                     </box>
                     <p><strong>Interfaces can also contain <trigger trigger="click" for="modal:javaInterfaces-constants">constants</trigger> and static methods</strong>.</p>
@@ -319,20 +320,20 @@
                               </span></strong></span></p>
                         <div id="title-and-body">
                           <div>
-                            <h4 id="constants"><span>Constants</span><a class="fa fa-anchor" href="#constants" onclick="event.stopPropagation()"></a></h4>
+                            <h4 id="constants"><span id="constants" class="anchor"></span><span>Constants</span><a class="fa fa-anchor" href="#constants" onclick="event.stopPropagation()"></a></h4>
                           </div>
                           <div id="main">
                             <div>
-                              <p>Java does not directly support constants. The convention is to use a <code v-pre>static</code> <code v-pre>final</code> variable where a constant is needed. The <code v-pre>static</code> modifier causes the variable to be available without instantiating an object. The <code v-pre>final</code> modifier causes the variable to be unchangeable. Java constants are normally declared in ALL CAPS separated by underscores.</p>
+                              <p>Java does not directly support constants. The convention is to use a <code class="hljs inline no-lang" v-pre>static</code> <code class="hljs inline no-lang" v-pre>final</code> variable where a constant is needed. The <code class="hljs inline no-lang" v-pre>static</code> modifier causes the variable to be available without instantiating an object. The <code class="hljs inline no-lang" v-pre>final</code> modifier causes the variable to be unchangeable. Java constants are normally declared in ALL CAPS separated by underscores.</p>
                               <box>
-                                <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Here is an example of a constant named <code v-pre>MAX_BALANCE</code> which can be accessed as <code v-pre>Account.MAX_BALANCE</code>.</p>
+                                <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Here is an example of a constant named <code class="hljs inline no-lang" v-pre>MAX_BALANCE</code> which can be accessed as <code class="hljs inline no-lang" v-pre>Account.MAX_BALANCE</code>.</p>
                                 <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span></span>{
 </span><span>
 </span><span>  <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">double</span> MAX_BALANCE = <span class="hljs-number">1000000.0</span>;
 </span><span>
 </span><span>}
 </span></code></pre>
-                                <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> <a href="https://docs.oracle.com/javase/9/docs/api/java/lang/Math.html#PI"><code v-pre>Math.PI</code></a> is an example constant that comes with Java.</p>
+                                <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> <a href="https://docs.oracle.com/javase/9/docs/api/java/lang/Math.html#PI"><code class="hljs inline no-lang" v-pre>Math.PI</code></a> is an example constant that comes with Java.</p>
                               </box>
                             </div>
                             <div></div>
@@ -341,7 +342,7 @@
                       </div>
                     </b-modal>
                     <box>
-                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This example adds a constant <code v-pre>MAX_SPEED</code> and a static method <code v-pre>isSpeedAllowed</code> to the interface <code v-pre>DrivableVehicle</code>.</p>
+                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This example adds a constant <code class="hljs inline no-lang" v-pre>MAX_SPEED</code> and a static method <code class="hljs inline no-lang" v-pre>isSpeedAllowed</code> to the interface <code class="hljs inline no-lang" v-pre>DrivableVehicle</code>.</p>
                       <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">DrivableVehicle</span> </span>{
 </span><span>
 </span><span>    <span class="hljs-keyword">int</span> MAX_SPEED = <span class="hljs-number">150</span>;
@@ -361,16 +362,16 @@
                   </div>
                   <div>
                     <div>
-                      <panel expanded><template slot="_header">
+                      <panel expanded><template slot="header">
                           <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                         </template>
                         <div>
                           <div>
-                            <panel type="dark" expanded id="key-exercise-print-printable-items"><template slot="_header">
-                                <h3 id="key-exercise-print-printable-items"><small><small><span><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></span> [Key Exercise] print <code v-pre>Printable</code> items</small></small><a class="fa fa-anchor" href="#key-exercise-print-printable-items" onclick="event.stopPropagation()"></a></h3>
+                            <panel type="dark" expanded id="key-exercise-print-printable-items"><template slot="header">
+                                <h3 id="key-exercise-print-printable-items"><span id="key-exercise-print-printable-items" class="anchor"></span><small><small><span><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></span> [Key Exercise] print <code class="hljs inline no-lang" v-pre>Printable</code> items</small></small><a class="fa fa-anchor" href="#key-exercise-print-printable-items" onclick="event.stopPropagation()"></a></h3>
                               </template>
                               <question>
-                                <p>The <code v-pre>Main</code> class below passes a list of <code v-pre>Printable</code> objects (i.e., objects that implement the <code v-pre>Printable</code> interface) for another method to be printed.</p>
+                                <p>The <code class="hljs inline no-lang" v-pre>Main</code> class below passes a list of <code class="hljs inline no-lang" v-pre>Printable</code> objects (i.e., objects that implement the <code class="hljs inline no-lang" v-pre>Printable</code> interface) for another method to be printed.</p>
                                 <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
 </span><span>
 </span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printObjects</span><span class="hljs-params">(Printable[] items)</span> </span>{
@@ -383,7 +384,7 @@
 </span><span>        Printable[] printableItems = <span class="hljs-keyword">new</span> Printable[]{
 </span><span>                <span class="hljs-keyword">new</span> Circle(<span class="hljs-number">5</span>),
 </span><span>                <span class="hljs-keyword">new</span> Rectangle(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>),
-</span><span>                <span class="hljs-keyword">new</span> Person(<span class="hljs-string">"James Cook"</span>)};
+</span><span>                <span class="hljs-keyword">new</span> Person(<span class="hljs-string">&quot;James Cook&quot;</span>)};
 </span><span>
 </span><span>        printObjects(printableItems);
 </span><span>    }
@@ -394,7 +395,7 @@
 </span><span>Rectangle of area 12
 </span><span>Person of name James Cook
 </span></code></pre>
-                                <p>Classes <code v-pre>Shape</code>, <code v-pre>Circle</code>, and <code v-pre>Rectangle</code> are given below:</p>
+                                <p>Classes <code class="hljs inline no-lang" v-pre>Shape</code>, <code class="hljs inline no-lang" v-pre>Circle</code>, and <code class="hljs inline no-lang" v-pre>Rectangle</code> are given below:</p>
                                 <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Shape</span> </span>{
 </span><span>
 </span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-keyword">int</span> <span class="hljs-title">area</span><span class="hljs-params">()</span></span>;
@@ -415,7 +416,7 @@
 </span><span>
 </span><span>    <span class="hljs-meta">@Override</span>
 </span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span> </span>{
-</span><span>        System.out.println(<span class="hljs-string">"Circle of area "</span> + area());
+</span><span>        System.out.println(<span class="hljs-string">&quot;Circle of area &quot;</span> + area());
 </span><span>    }
 </span><span>}
 </span></code></pre>
@@ -435,11 +436,11 @@
 </span><span>
 </span><span>    <span class="hljs-meta">@Override</span>
 </span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span> </span>{
-</span><span>        System.out.println(<span class="hljs-string">"Rectangle of area "</span> + area());
+</span><span>        System.out.println(<span class="hljs-string">&quot;Rectangle of area &quot;</span> + area());
 </span><span>    }
 </span><span>}
 </span></code></pre>
-                                <p>Add the missing <code v-pre>Printable</code> interface. Add the missing methods of the <code v-pre>Person</code> class given below.</p>
+                                <p>Add the missing <code class="hljs inline no-lang" v-pre>Printable</code> interface. Add the missing methods of the <code class="hljs inline no-lang" v-pre>Person</code> class given below.</p>
                                 <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Printable</span> </span>{
 </span><span>
 </span><span>    <span class="hljs-keyword">private</span> String name;
@@ -447,7 +448,7 @@
 </span><span>    <span class="hljs-comment">// todo: add missing methods</span>
 </span><span>}
 </span></code></pre>
-                                <panel type="seamless" class="algolia-no-index"><template slot="_header">
+                                <panel type="seamless" class="algolia-no-index"><template slot="header">
                                     <p>Partial solution</p>
                                   </template>
                                   <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Printable</span> </span>{
@@ -469,13 +470,11 @@
         </div>
         <i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i>
       </div>
-
-
     </div>
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.16.0</a>, generated on Thu, Oct 29, 2020, 4:09:50 PM GMT+8]</small>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.3</a>, generated on Sat, 1 May 2021, 12:33:13 GMT+8]</small>
       </div>
     </footer>
   </div>
@@ -496,7 +495,7 @@
       debug: false,
     });
   }
-  MarkBind.afterSetup(initAlgolia);
+  initAlgolia();
 </script>
 <script src="../../../markbind/layouts/default/scripts.js"></script>
 <script>

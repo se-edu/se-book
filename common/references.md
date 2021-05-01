@@ -29,7 +29,7 @@ pageNav: 3
 
   <span id="refactoring-catalog">
   
-  * Java: [http://refactoring.com/catalog/](http://refactoring.com/catalog/) - This is a list of common refactorings, maintained by Martin Fowler, a leading authority on refactoring. He is also the author of the ‘bestseller’ on refactoring: [Refactoring: Improving the Design of Existing Code](https://martinfowler.com/books/#refactoring)
+  * Java: [http://refactoring.com/catalog/](http://refactoring.com/catalog/) -- This is a list of common refactorings maintained by Martin Fowler, a leading authority on refactoring. He is also the author of the ‘bestseller’ on refactoring: [Refactoring: Improving the Design of Existing Code](https://martinfowler.com/books/#refactoring)
   * Python: [https://refactoring.guru/refactoring/catalog](https://refactoring.guru/refactoring/catalog) -- A catalog of refactorings applicable to Python code.
   
   </span>
@@ -39,7 +39,7 @@ pageNav: 3
 
   <div id="bach-et-explained">
   
-  [_**Exploratory Testing Explained**_](http://www.satisfice.com/articles/et-article.pdf), an online article by [James Bach](http://www.satisfice.com/aboutjames.shtml)  -- James Bach is an industry thought leader in software testing).
+  [_**Exploratory Testing Explained**_](http://www.satisfice.com/articles/et-article.pdf), an online article by [James Bach](http://www.satisfice.com/aboutjames.shtml)  -- James Bach is an industry thought leader in software testing.
   
   </div>
 

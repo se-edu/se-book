@@ -1,6 +1,6 @@
 <div>
   <p>
-    <panel src="/se-book/revisionControl/usingHistory/unit-inElsewhere-asFlat._include_.html" popup-url="/se-book/revisionControl/usingHistory" class="algolia-no-index"><template slot="_header">
+    <panel src="/se-book/revisionControl/usingHistory/unit-inElsewhere-asFlat._include_.html" popup-url="/se-book/revisionControl/usingHistory" class="algolia-no-index"><template slot="header">
         <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> <span class="dimmed">Project Management → Revision Control → Using History</span></p>
       </template></panel>
   </p>
@@ -10,7 +10,7 @@
       </span></strong></span></p>
 <div id="title-and-body">
   <div>
-    <h4 id="checkout-retrieving-a-specific-revision"><span><code v-pre>checkout</code>: Retrieving a specific revision</span><a class="fa fa-anchor" href="#checkout-retrieving-a-specific-revision" onclick="event.stopPropagation()"></a></h4>
+    <h4 id="checkout-retrieving-a-specific-revision"><span id="checkout-retrieving-a-specific-revision" class="anchor"></span><span><code class="hljs inline no-lang" v-pre>checkout</code>: Retrieving a specific revision</span><a class="fa fa-anchor" href="#checkout-retrieving-a-specific-revision" onclick="event.stopPropagation()"></a></h4>
   </div>
   <div id="main">
     <div>
@@ -25,10 +25,10 @@
             <p></p>
             <p></p>
             <div>
-              <p><strong>You can use the git's <mark><em>stash</em></mark> feature to temporarily shelve (or stash) changes you've made to your working copy</strong> so that you can work on something else, and then come back and re-apply the stashed changes later on. <sub>-- adapted from <a href="https://www.atlassian.com/git/tutorials/git-stash">this</a></sub></p>
+              <p><strong>You can use Git's <mark><em>stash</em></mark> feature to temporarily shelve (or stash) changes you've made to your working copy</strong> so that you can work on something else, and then come back and re-apply the stashed changes later on. <sub>-- adapted from <a href="https://www.atlassian.com/git/tutorials/git-stash">Atlassian</a></sub></p>
               <tabs>
                 <tab><template slot="_header">Source Tree</template>
-                  <p>Follow <a href="https://confluence.atlassian.com/sourcetreekb/stash-a-file-with-sourcetree-785332122.html">this article from SourceTree creators</a>. <span class="dimmed">Note the GUI shown in the article is slightly outdated but you should be able to map it to the current GUI.</span></p>
+                  <p>Follow <a href="https://confluence.atlassian.com/sourcetreekb/stash-a-file-with-sourcetree-785332122.html">this article from SourceTree creators</a>. <span class="dimmed">Note that the GUI shown in the article is slightly outdated but you should be able to map it to the current GUI.</span></p>
                 </tab>
                 <tab class="algolia-no-index"><template slot="_header">CLI</template>
                   <p>Follow <a href="https://www.atlassian.com/git/tutorials/git-stash">this article from Atlassian</a>.</p>
@@ -42,14 +42,14 @@
       <tabs>
         <tab><template slot="_header">SourceTree</template>
           <div>
-            <p>Double-click the commit you want to load to the working directory, or right-click on that commit and choose <code v-pre>Checkout...</code>.</p>
-            <p>Click <code v-pre>OK</code> to the warning about ‘detached HEAD’ (similar to below).</p>
+            <p>Double-click the commit you want to load to the working directory, or right-click on that commit and choose <code class="hljs inline no-lang" v-pre>Checkout...</code>.</p>
+            <p>Click <code class="hljs inline no-lang" v-pre>OK</code> to the warning about ‘detached HEAD’ (similar to below).</p>
             <img src="/se-book/gitAndGithub/checkout/images/warning.png" height="140">
             <p></p>
-            <p>The specified version is now loaded to the working folder, as indicated by the <code v-pre>HEAD</code> label. <code v-pre>HEAD</code> is a reference to the currently checked out commit.</p>
+            <p>The specified version is now loaded to the working folder, as indicated by the <code class="hljs inline no-lang" v-pre>HEAD</code> label. <code class="hljs inline no-lang" v-pre>HEAD</code> is a reference to the currently checked out commit.</p>
             <img src="/se-book/gitAndGithub/checkout/images/sourcetree_4.png" height="100">
             <p></p>
-            <p>If you checkout a commit that comes before the commit in which you added the <code v-pre>.gitignore</code> file, Git will now show ignored files as ‘unstaged modifications’ because at that stage Git hasn’t been told to ignore those files.</p>
+            <p>If you checkout a commit that comes before the commit in which you added the <code class="hljs inline no-lang" v-pre>.gitignore</code> file, Git will now show ignored files as ‘unstaged modifications’ because at that stage Git hasn’t been told to ignore those files.</p>
             <img src="/se-book/gitAndGithub/checkout/images/sourcetree_5.png" height="260">
             <p></p>
             <p>To go back to the latest commit, double-click it.</p>
@@ -57,11 +57,11 @@
         </tab>
         <tab class="algolia-no-index"><template slot="_header">CLI</template>
           <div>
-            <p>Use the <code v-pre>checkout &lt;commit-identifier&gt;</code> command to change the working directory to the state it was in at a specific past commit.</p>
+            <p>Use the <code class="hljs inline no-lang" v-pre>checkout &lt;commit-identifier&gt;</code> command to change the working directory to the state it was in at a specific past commit.</p>
             <ul>
-              <li><code v-pre>git checkout v1.0</code>: loads the state as at commit tagged <code v-pre>v1.0</code></li>
-              <li><code v-pre>git checkout 0023cdd</code>: loads the state as at commit with the hash <code v-pre>0023cdd</code></li>
-              <li><code v-pre>git checkout HEAD~2</code>: loads the state that is 2 commits behind the most recent commit</li>
+              <li><code class="hljs inline no-lang" v-pre>git checkout v1.0</code>: loads the state as at commit tagged <code class="hljs inline no-lang" v-pre>v1.0</code></li>
+              <li><code class="hljs inline no-lang" v-pre>git checkout 0023cdd</code>: loads the state as at commit with the hash <code class="hljs inline no-lang" v-pre>0023cdd</code></li>
+              <li><code class="hljs inline no-lang" v-pre>git checkout HEAD~2</code>: loads the state that is 2 commits behind the most recent commit</li>
             </ul>
             <p>For now, you can ignore the warning about ‘detached HEAD’.</p>
           </div>
