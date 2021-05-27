@@ -31,7 +31,17 @@ pageNav: 3
   
   * Java: [http://refactoring.com/catalog/](http://refactoring.com/catalog/) -- This is a list of common refactorings maintained by Martin Fowler, a leading authority on refactoring. He is also the author of the ‘bestseller’ on refactoring: [Refactoring: Improving the Design of Existing Code](https://martinfowler.com/books/#refactoring)
   * Python: [https://refactoring.guru/refactoring/catalog](https://refactoring.guru/refactoring/catalog) -- A catalog of refactorings applicable to Python code.
-  
+
+  </span>
+
+* [code-smell-catalog]
+
+  <span id="code-smell-catalog">
+
+  * Code Smell: [https://refactoring.guru/refactoring/smells](https://refactoring.guru/refactoring/smells)  -- A catalog of code smells.
+  * An essay on Code Smell, by Martin Fowler: [https://martinfowler.com/bliki/CodeSmell.html](https://martinfowler.com/bliki/CodeSmell.html) 
+  * A comprehensive list of code smell can be found in [Refactoring: Improving the Design of Existing Code](https://martinfowler.com/books/#refactoring).
+
   </span>
 
 

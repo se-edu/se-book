@@ -13,6 +13,7 @@ title: "Refactoring [Printable]"
 <include src="what/unit-inParent-asFlat-print.md" boilerplate />
 <include src="how/unit-inParent-asFlat-print.md" boilerplate />
 <include src="when/unit-inParent-asFlat-print.md" boilerplate />
+<include src="codeSmell/unit-inParent-asFlat-print.md" boilerplate />
 
 </div>
 
