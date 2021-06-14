@@ -25,9 +25,9 @@ In this case, a useful heuristic to apply is **no more than one invalid input in
 | 1      | Apple      | 1          | Print round label              |
 | 2      | Banana     | 20         | Print oval label               |
 | 2.1    | Cherry     | VV         | Print square label             |
-| 3      | VV         | ++0++      | Error message “invalid price”  |
-| 4      | VV         | ++-1++     | Error message “invalid price"  |
-| 4.1    | ++Dog++    | VV         | Error message “invalid fruit"  |
+| 3      | VV         | !!0!!      | Error message “invalid price”  |
+| 4      | VV         | !!-1!!     | Error message “invalid price"  |
+| 4.1    | !!Dog!!    | VV         | Error message “invalid fruit"  |
 
 VV/IV = Any Invalid or Valid Value VV = Any Valid Value
 
