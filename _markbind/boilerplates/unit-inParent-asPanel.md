@@ -3,7 +3,7 @@
   <div class="indented">
   {{ outcomes | safe}}<p/>
   <include src="text.md#body" />
-  <include src="text.md#extras" />
+  <include src="text.md#extras" optional />
   </div>
 </panel>
 

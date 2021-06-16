@@ -20,7 +20,7 @@
 <nav id="site-nav" class="fixed-header-padding">
 <div class="nav-component slim-scroll">
 <site-nav>
-* **About this books**
+* **About this book**
   * [About]({{baseUrl}}/about/acknowledgements.html)
   * [How to use this book]({{baseUrl}}/about/usage.html)
 * **Software engineering**
