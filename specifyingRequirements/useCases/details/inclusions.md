@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="{{baseUrl}}/css/common.css">
 
-**A use case can ==include== another use case.** ++Underlined text++ is commonly used to show an inclusion of a use case.
+**A use case can ==include== another use case.** !!Underlined text!! is commonly used to show an inclusion of a use case.
 
 <box>
 
@@ -12,8 +12,8 @@
 * Use case:  UC01 - Conduct Survey
 * Actors: Staff, Student
 * MSS:
-  1. Staff ==++creates the survey (UC44)++==.
-  1. Student ==++completes the survey (UC50)++==.
+  1. Staff ==!!creates the survey (UC44)!!==.
+  1. Student ==!!completes the survey (UC50)!!==.
   1. Staff views the survey results.<br>
      Use case ends.
 </div>

@@ -80,7 +80,7 @@ class Table:
 
 <box>
 
-<img src="{{baseUrl}}/uml/classDiagrams/classes/what/images/classes.png" height="100" />
+<pic src="{{baseUrl}}/uml/classDiagrams/classes/what/images/classes.png" height="100" />
 
 </box>
 
@@ -172,7 +172,7 @@ class Table:
 
 **Generic classes can be shown as given below**. The notation format is shown on the left, followed by two examples.
 
-<img src="images/generic.png" width="618"/>
+<pic src="images/generic.png" width="618"/>
 <p/>
 </div>
 

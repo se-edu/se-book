@@ -12,7 +12,7 @@
 
 {{ icon_example }} An example component diagram:
 
-<img src="{{baseUrl}}/modeling/modelingStructures/componentDiagrams/images/diagram.png" height="500" /><br>
+<pic src="{{baseUrl}}/modeling/modelingStructures/componentDiagrams/images/diagram.png" height="500" /><br>
 
 <sub>source:[https://commons.wikimedia.org](https://en.wikipedia.org/wiki/Component_diagram)</sub>
 

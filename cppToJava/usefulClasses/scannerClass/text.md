@@ -34,13 +34,13 @@ public class Echo {
 
 {{ icon_example }} The code below uses the `nextInt` method of the `Scanner` class to read an input as an integer.
 
-```java
+```java{highlight-lines="5['nextInt()']"}
 
 Scanner in = new Scanner(System.in);
 
 System.out.print("What is your age? ");
 int age = in.nextInt();
-in.nextLine();  // read the newline character the user enters following the integer
+in.nextLine();  // read the new-line character that follows the integer
 System.out.print("What is your name? ");
 String name = in.nextLine();
 System.out.printf("Hello %s, age %d\n", name, age);

@@ -4,7 +4,8 @@
 
 {{bad}}
 ```java
-return ((length < MAX_LENGTH) || (previousSize != length)) && (typeCode == URGENT);
+return ((length < MAX_LENGTH) || (previousSize != length))
+        && (typeCode == URGENT);
 ```
 
 {{good}}

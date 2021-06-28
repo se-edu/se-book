@@ -1,418 +1,85 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.17.3">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SEforSDL - C++ to Java: Collections</title>
-  <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../../markbind/css/bootstrap-vue.min.css">
-  <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
-  <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
-  <link rel="stylesheet" href="../../markbind/css/octicons.css">
-  <link rel="stylesheet" href="../../markbind/css/codeblock-dark.min.css">
-  <link rel="stylesheet" href="../../markbind/css/markbind.min.css">
-  <script src="../../markbind/js/polyfill.min.js"></script>
-  <script src="../../markbind/js/vue.min.js"></script>
-  <script src="../../markbind/js/markbind.min.js"></script>
-  <script src="../../markbind/js/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
-  <link rel="stylesheet" href="/se-book/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
-  <link rel="stylesheet" href="../../markbind/layouts/default/styles.css">
-  <link rel="icon" href="/se-book/favicon.ico">
-</head>
-
-<body>
-  <div id="app">
-    <header>
-      <navbar placement="top" type="dark" class="temp-navbar">
-        <a slot="brand" href="https://se-education.org" title="SE-EDU" class="navbar-brand"><span><span aria-hidden="true" class="fas fa-chevron-circle-left"></span> <strong><strong>SE-EDU</strong></strong></span></a>
-        <li><a href="/se-book/index.html" class="nav-link"><span><strong>Home</strong></span></a></li>
-        <li><a href="/se-book/about/acknowledgements.html" class="nav-link"><span><strong>About</strong></span></a></li>
-        <li><a href="https://github.com/se-edu/se-book" class="nav-link"><span><span aria-hidden="true" class="fab fa-github"></span></span></a></li>
-        <li slot="right" class="nav-link">
-          <form class="navbar-form">
-            <searchbar placeholder="Search" algolia menu-align-right></searchbar>
-          </form>
-        </li>
-      </navbar>
-    </header>
-    <div id="flex-body">
-      <nav id="site-nav" class="navbar navbar-light bg-transparent">
-        <div class="border-right-grey nav-inner position-sticky slim-scroll">
-          <ul class="site-nav-list site-nav-list-root">
-            <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>About this book</strong>
-                <i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
-                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i>
-              </div>
-              <ul class="site-nav-dropdown-container site-nav-list">
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/about/acknowledgements.html">About</a></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/about/usage.html">How to use this book</a></div>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>Software engineering</strong>
-                <i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
-                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i>
-              </div>
-              <ul class="site-nav-dropdown-container site-nav-list">
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/softwareEngineering/index.html">Software engineering</a></div>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>Object-oriented programming</strong>
-                <i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
-                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i>
-              </div>
-              <ul class="site-nav-dropdown-container site-nav-list">
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/oop/index.html">Object-oriented programming</a></div>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>Requirements</strong>
-                <i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
-                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i>
-              </div>
-              <ul class="site-nav-dropdown-container site-nav-list">
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/requirements/index.html">Requirements</a></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/gatheringRequirements/index.html">Gathering requirements</a></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/specifyingRequirements/index.html">Specifying requirements</a></div>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>Design</strong>
-                <i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
-                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i>
-              </div>
-              <ul class="site-nav-dropdown-container site-nav-list">
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/design/index.html">Design</a></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/designFundamentals/index.html">Design fundamentals</a></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/modeling/index.html">Modeling</a></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/architecture/index.html">Architecture</a></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/designPatterns/index.html">Design patterns</a></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/designApproaches/index.html">Design approaches</a></div>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>Implementation</strong>
-                <i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
-                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i>
-              </div>
-              <ul class="site-nav-dropdown-container site-nav-list">
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/ides/index.html">IDEs</a></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/codeQuality/index.html">Code quality</a></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/refactoring/index.html">Refactoring</a></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/documentation/index.html">Documentation</a></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/errorHandling/index.html">Error handling</a></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/integration/index.html">Integration</a></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/reuse/index.html">Reuse</a></div>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>Quality assurance</strong>
-                <i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
-                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i>
-              </div>
-              <ul class="site-nav-dropdown-container site-nav-list">
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/qualityAssurance/index.html">Quality assurance</a></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/testing/index.html">Testing</a></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/testCaseDesign/index.html">Test case design</a></div>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>Project management</strong>
-                <i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
-                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i>
-              </div>
-              <ul class="site-nav-dropdown-container site-nav-list">
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/revisionControl/index.html">Revision control</a></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/projectPlanning/index.html">Project planning</a></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/teamwork/index.html">Teamwork</a></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/processModels/index.html">SDLC process models</a></div>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>Tools</strong>
-                <i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
-                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i>
-              </div>
-              <ul class="site-nav-dropdown-container site-nav-list">
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/uml/index.html">UML</a></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/intellij/index.html">IntelliJ IDEA</a></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/gitAndGithub/index.html">Git and GitHub</a></div>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>Principles</strong>
-                <i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
-                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i>
-              </div>
-              <ul class="site-nav-dropdown-container site-nav-list">
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/principles/index.html">Principles</a></div>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>Supplementary</strong>
-                <i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
-                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i>
-              </div>
-              <ul class="site-nav-dropdown-container site-nav-list">
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/cppToJava/index.html">C++ to Java</a></div>
-                </li>
-              </ul>
-            </li>
-            <li class="site-nav-custom-list-item site-nav-list-item-0"><strong><a href="/se-book/combined/exercises.html">Combined exercises</a></strong></li>
-            <li class="site-nav-custom-list-item site-nav-list-item-0"><strong><a href="/se-book/common/definitions.html">List of definitions</a></strong></li>
-            <li class="site-nav-custom-list-item site-nav-list-item-0"><strong><a href="/se-book/common/references.html">List of references</a></strong></li>
-            <li class="site-nav-custom-list-item site-nav-list-item-0"><strong><a href="/se-book/common/outcomes.html">List of learning outcomes</a></strong></li>
-            <li class="site-nav-custom-list-item site-nav-list-item-0"><strong><a href="/se-book/common/print.html">Printable version</a></strong></li>
-          </ul>
-        </div>
-      </nav>
-
-
-      <div id="content-wrapper">
-        <h1 id="software-engineering-for-self-directed-learners"><span id="software-engineering-for-self-directed-learners" class="anchor"></span><span class="text-dark"><small><strong><strong>Software Engineering for Self-Directed Learners »</strong></strong></small></span><a class="fa fa-anchor" href="#software-engineering-for-self-directed-learners" onclick="event.stopPropagation()"></a></h1>
-        <div>
-          <link rel="stylesheet" href="/se-book/css/textbook.css">
-          <div class="website-content" id="all">
-            <p><span class="dimmed"><strong><span>C++ to Java →
-                  </span></strong></span></p>
-            <div id="title">
-              <h1 id="collections"><span id="collections" class="anchor"></span><span>Collections</span><a class="fa fa-anchor" href="#collections" onclick="event.stopPropagation()"></a></h1>
-            </div>
-            <div id="main">
-              <div>
-                <div>
-                  <panel type="seamless" expanded id="the-collections-framework">
-                    <span slot="header" class="card-title">
-                      <div>
-                        <h4 id="the-collections-framework"><span id="the-collections-framework" class="anchor"></span><span>The collections framework</span><a class="fa fa-anchor" href="#the-collections-framework" onclick="event.stopPropagation()"></a></h4>
-                      </div>
-                    </span>
-                    <div class="indented">
-                      <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain the Collections framework</span></span></span></span></p>
-                      <p></p>
-                      <p></p>
-                      <p></p>
-                      <div>
-                        <p>This section uses extracts from the <small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small>, with some adaptations.</p>
-                        <p><strong>A <em>collection</em> — sometimes called a <em>container</em> — is simply an object that groups multiple elements into a single unit.</strong> Collections are used to store, retrieve, manipulate, and communicate aggregate data.</p>
-                        <box>
-                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Typically, collections represent data items that form a natural group, such as a poker hand (a collection of cards), a mail folder (a collection of letters), or a telephone directory (a mapping of names to phone numbers).</p>
-                        </box>
-                        <p><strong>The collections framework is a unified architecture for representing and manipulating collections.</strong> It contains the following:</p>
-                        <ul>
-                          <li>
-                            <p><strong>Interfaces</strong>: These are abstract data types that represent collections. Interfaces allow collections to be manipulated independently of the details of their representation.<br>
-                              <span class="dimmed"><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example: the <code class="hljs inline no-lang" v-pre>List&lt;E&gt;</code> interface can be used to manipulate list-like collections which may be implemented in different ways such as <code class="hljs inline no-lang" v-pre>ArrayList&lt;E&gt;</code> or <code class="hljs inline no-lang" v-pre>LinkedList&lt;E&gt;</code>.</span><br>
-                            </p>
-                          </li>
-                          <li>
-                            <p><strong>Implementations</strong>: These are the concrete implementations of the collection interfaces. In essence, they are reusable data structures.<br>
-                              <span class="dimmed"><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example: the <code class="hljs inline no-lang" v-pre>ArrayList&lt;E&gt;</code> class implements the <code class="hljs inline no-lang" v-pre>List&lt;E&gt;</code> interface while the <code class="hljs inline no-lang" v-pre>HashMap&lt;K, V&gt;</code> class implements the <code class="hljs inline no-lang" v-pre>Map&lt;K, V&gt;</code> interface.</span><br>
-                            </p>
-                          </li>
-                          <li>
-                            <p><strong>Algorithms</strong>: These are the methods that perform useful computations, such as <em>searching</em> and <em>sorting</em>, on objects that implement collection interfaces. The algorithms are said to be polymorphic: that is, the same method can be used on many different implementations of the appropriate collection interface.<br>
-                              <span class="dimmed"><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example: the <code class="hljs inline no-lang" v-pre>sort(List&lt;E&gt;)</code> method can sort a collection that implements the <code class="hljs inline no-lang" v-pre>List&lt;E&gt;</code> interface.</span>
-                            </p>
-                          </li>
-                        </ul>
-                        <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span><span aria-hidden="true" class="fas fa-equals"></span></span></span></span> <strong>A well-known example of collections frameworks is the C++ <em>Standard Template Library (STL)</em></strong>. <span style="opacity: 0.5"> <span class="badge badge-pill badge-danger"><span><span aria-hidden="true" class="fas fa-not-equal"></span></span></span></span> Although both are collections frameworks and the syntax look similar, note that there are important philosophical and implementation differences between the two.</p>
-                        <p>The following list describes the core collection interfaces:</p>
-                        <ul>
-                          <li>
-                            <p><strong><code class="hljs inline no-lang" v-pre>Collection</code></strong> — the root of the collection hierarchy. A collection represents a group of objects known as its elements. The Collection interface is the least common denominator that all collections implement and is used to pass collections around and to manipulate them when maximum generality is desired. Some types of collections allow duplicate elements, and others do not. Some are ordered and others are unordered. The Java platform doesn't provide any direct implementations of this interface but provides implementations of more specific subinterfaces, such as <code class="hljs inline no-lang" v-pre>Set</code> and <code class="hljs inline no-lang" v-pre>List</code>. <span class="dimmed">Also see the <a href="https://docs.oracle.com/javase/9/docs/api/java/util/Collection.html"><code class="hljs inline no-lang" v-pre>Collection</code> API</a>.</span></p>
-                          </li>
-                          <li>
-                            <p><strong><code class="hljs inline no-lang" v-pre>Set</code></strong> — a collection that cannot contain duplicate elements. This interface models the mathematical set abstraction and is used to represent sets, such as the cards comprising a poker hand, the courses making up a student's schedule, or the processes running on a machine. <span class="dimmed">Also see the <a href="https://docs.oracle.com/javase/9/docs/api/java/util/Set.html"><code class="hljs inline no-lang" v-pre>Set</code> API</a>.</span></p>
-                          </li>
-                          <li>
-                            <p><strong><code class="hljs inline no-lang" v-pre>List</code></strong> — an ordered collection (sometimes called a <em>sequence</em>). <code class="hljs inline no-lang" v-pre>List</code>s can contain duplicate elements. The user of a <code class="hljs inline no-lang" v-pre>List</code> generally has precise control over where in the list each element is inserted and can access elements by their integer index (position). <span class="dimmed">Also see the <a href="https://docs.oracle.com/javase/9/docs/api/java/util/List.html"><code class="hljs inline no-lang" v-pre>List</code> API</a>.</span></p>
-                          </li>
-                          <li>
-                            <p><strong><code class="hljs inline no-lang" v-pre>Queue</code></strong> — a collection used to hold multiple elements prior to processing. Besides basic <code class="hljs inline no-lang" v-pre>Collection</code> operations, a <code class="hljs inline no-lang" v-pre>Queue</code> provides additional insertion, extraction, and inspection operations. <span class="dimmed">Also see the <a href="https://docs.oracle.com/javase/9/docs/api/java/util/Queue.html"><code class="hljs inline no-lang" v-pre>Queue</code> API</a>.</span></p>
-                          </li>
-                          <li>
-                            <p><strong><code class="hljs inline no-lang" v-pre>Map</code></strong> — an object that maps keys to values. A <code class="hljs inline no-lang" v-pre>Map</code> cannot contain duplicate keys; each key can map to at most one value. <span class="dimmed">Also see the <a href="https://docs.oracle.com/javase/9/docs/api/java/util/Map.html"><code class="hljs inline no-lang" v-pre>Map</code> API</a>.</span></p>
-                          </li>
-                          <li>
-                            <p>Others: <code class="hljs inline no-lang" v-pre>Deque</code>, <code class="hljs inline no-lang" v-pre>SortedSet</code>, <code class="hljs inline no-lang" v-pre>SortedMap</code></p>
-                          </li>
-                        </ul>
-                      </div>
-                      <div></div>
-                    </div>
-                  </panel>
-                </div>
-                <div>
-                  <panel type="seamless" expanded id="the-arraylist-class">
-                    <span slot="header" class="card-title">
-                      <div>
-                        <h4 id="the-arraylist-class"><span id="the-arraylist-class" class="anchor"></span><span>The <code class="hljs inline no-lang" v-pre>ArrayList</code> class</span><a class="fa fa-anchor" href="#the-arraylist-class" onclick="event.stopPropagation()"></a></h4>
-                      </div>
-                    </span>
-                    <div class="indented">
-                      <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can use the ArrayList class</span></span></span></span></p>
-                      <p></p>
-                      <p></p>
-                      <p></p>
-                      <div>
-                        <p>The <code class="hljs inline no-lang" v-pre>ArrayList</code> class is a resizable-array implementation of the <code class="hljs inline no-lang" v-pre>List</code> interface. Unlike a normal <code class="hljs inline no-lang" v-pre>array</code>, an <code class="hljs inline no-lang" v-pre>ArrayList</code> can grow in size as you add more items to it. The example below illustrates some of the useful methods of the <code class="hljs inline no-lang" v-pre>ArrayList</code> class using an <code class="hljs inline no-lang" v-pre>ArrayList</code> of <code class="hljs inline no-lang" v-pre>String</code> objects.</p>
-                        <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">import</span> java.util.ArrayList;
-</span><span>
-</span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ArrayListDemo</span> </span>{
-</span><span>
-</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String args[])</span> </span>{
-</span><span>        ArrayList&lt;String&gt; items = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
-</span><span>
-</span><span>        System.out.println(<span class="hljs-string">&quot;Before adding any items:&quot;</span> + items);
-</span><span>
-</span><span>        items.add(<span class="hljs-string">&quot;Apple&quot;</span>);
-</span><span>        items.add(<span class="hljs-string">&quot;Box&quot;</span>);
-</span><span>        items.add(<span class="hljs-string">&quot;Cup&quot;</span>);
-</span><span>        items.add(<span class="hljs-string">&quot;Dart&quot;</span>);
-</span><span>        print(<span class="hljs-string">&quot;After adding four items: &quot;</span> + items);
-</span><span>
-</span><span>        items.remove(<span class="hljs-string">&quot;Box&quot;</span>); <span class="hljs-comment">// remove item &quot;Box&quot;</span>
-</span><span>        print(<span class="hljs-string">&quot;After removing Box: &quot;</span> + items);
-</span><span>
-</span><span>        items.add(<span class="hljs-number">1</span>, <span class="hljs-string">&quot;Banana&quot;</span>); <span class="hljs-comment">// add &quot;Banana&quot; at index 1</span>
-</span><span>        print(<span class="hljs-string">&quot;After adding Banana: &quot;</span> + items);
-</span><span>
-</span><span>        items.add(<span class="hljs-string">&quot;Egg&quot;</span>); <span class="hljs-comment">// add &quot;Egg&quot;, will be added to the end</span>
-</span><span>        items.add(<span class="hljs-string">&quot;Cup&quot;</span>); <span class="hljs-comment">// add another &quot;Cup&quot;</span>
-</span><span>        print(<span class="hljs-string">&quot;After adding Egg: &quot;</span> + items);
-</span><span>
-</span><span>        print(<span class="hljs-string">&quot;Number of items: &quot;</span> + items.size());
-</span><span>
-</span><span>        print(<span class="hljs-string">&quot;Index of Cup: &quot;</span> + items.indexOf(<span class="hljs-string">&quot;Cup&quot;</span>));
-</span><span>        print(<span class="hljs-string">&quot;Index of Zebra: &quot;</span> + items.indexOf(<span class="hljs-string">&quot;Zebra&quot;</span>));
-</span><span>
-</span><span>        print(<span class="hljs-string">&quot;Item at index 3 is: &quot;</span> + items.get(<span class="hljs-number">2</span>));
-</span><span>
-</span><span>        print(<span class="hljs-string">&quot;Do we have a Box?: &quot;</span> + items.contains(<span class="hljs-string">&quot;Box&quot;</span>));
-</span><span>        print(<span class="hljs-string">&quot;Do we have an Apple?: &quot;</span> + items.contains(<span class="hljs-string">&quot;Apple&quot;</span>));
-</span><span>
-</span><span>        items.clear();
-</span><span>        print(<span class="hljs-string">&quot;After clearing: &quot;</span> + items);
-</span><span>    }
-</span><span>
-</span><span>    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">(String text)</span> </span>{
-</span><span>        System.out.println(text);
-</span><span>    }
-</span><span>}
-</span></code></pre>
-                        <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
-                        <pre><code class="hljs" v-pre><span>Before adding any items:[]
-</span><span>After adding four items: [Apple, Box, Cup, Dart]
-</span><span>After removing Box: [Apple, Cup, Dart]
-</span><span>After adding Banana: [Apple, Banana, Cup, Dart]
-</span><span>After adding Egg: [Apple, Banana, Cup, Dart, Egg, Cup]
-</span><span>Number of items: 6
-</span><span>Index of Cup: 2
-</span><span>Index of Zebra: -1
-</span><span>Item at index 3 is: Cup
-</span><span>Do we have a Box?: false
-</span><span>Do we have an Apple?: true
-</span><span>After clearing: []
-</span></code></pre>
-                        <p><small>[<a href="https://repl.it/@seedu/Demo-ArrayList">Try the above code on Repl.it</a>]</small></p>
-                      </div>
-                      <div>
-                        <div>
-                          <panel expanded><template slot="header">
-                              <p><span><span aria-hidden="true" class="fas fa-paperclip"></span></span> Resources</p>
-                            </template>
-                            <div>
-                              <ul>
-                                <li><a href="https://docs.oracle.com/javase/9/docs/api/java/util/ArrayList.html"><code class="hljs inline no-lang" v-pre>ArrayList</code> API</a></li>
-                                <li><a href="https://beginnersbook.com/2013/12/java-arraylist/">A tutorial on ArrayLists</a> from <a href="http://beginnersbook.com">beginnersbook.com</a></li>
-                              </ul>
-                            </div>
-                          </panel>
-                        </div>
-                        <div>
-                          <panel expanded><template slot="header">
-                              <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
-                            </template>
-                            <div>
-                              <div>
-                                <panel type="dark" expanded id="key-exercise-numbers-list"><template slot="header">
-                                    <h3 id="key-exercise-numbers-list"><span id="key-exercise-numbers-list" class="anchor"></span><small><small><span><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></span> [Key Exercise] Numbers list</small></small><a class="fa fa-anchor" href="#key-exercise-numbers-list" onclick="event.stopPropagation()"></a></h3>
-                                  </template>
-                                  <question>
-                                    <p>Add the missing methods to the class given below so that it produces the output given.</p>
-                                    <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Use an <code class="hljs inline no-lang" v-pre>ArrayList</code> to store the numbers.</p>
-                                    <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="MarkBind 3.0.3">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SEforSDL - C++ to Java: Collections</title>
+    <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../markbind/css/bootstrap-vue.min.css">
+    <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+    <link rel="stylesheet" href="../../markbind/css/octicons.css">
+    <link rel="stylesheet" href="../../markbind/css/codeblock-light.min.css"><link rel="stylesheet" href="../../markbind/css/markbind.min.css"><script src="../../markbind/js/polyfill.min.js"></script>
+    <script src="../../markbind/js/vue.min.js"></script>
+    <script src="../../markbind/js/markbind.min.js"></script>
+    <script src="index.page-vue-render.js"></script>
+    <script src="../../markbind/js/jquery.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/se-book/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
+    
+  <link rel="stylesheet" href="/se-book/css/textbook.css">
+<link rel="icon" href="/se-book/favicon.ico"></head>
+<script>
+  const baseUrl = '/se-book'
+</script>
+<body >
+<div id="app" data-server-rendered="true"><header fixed=""><div placement="top" data-v-15113a2f><nav class="navbar navbar-expand-md navbar-dark bg-dark" data-v-15113a2f><div class="container-fluid" data-v-15113a2f><div class="navbar-brand" data-v-15113a2f><a href="https://se-education.org" title="SE-EDU" class="navbar-brand" data-v-15113a2f><span data-v-15113a2f><span aria-hidden="true" class="fas fa-chevron-circle-left" data-v-15113a2f></span> <strong data-v-15113a2f><strong data-v-15113a2f>SE-EDU</strong></strong></span></a></div> <button type="button" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-v-15113a2f><span class="navbar-toggler-icon" data-v-15113a2f></span> </button> <div class="navbar-collapse collapse" data-v-15113a2f><ul class="navbar-nav mr-auto mt-2 mt-lg-0" data-v-15113a2f> <li data-v-15113a2f><a href="/se-book/index.html" class="nav-link" data-v-15113a2f><span data-v-15113a2f><strong data-v-15113a2f>Home</strong></span></a></li> <li data-v-15113a2f><a href="/se-book/about/acknowledgements.html" class="nav-link" data-v-15113a2f><span data-v-15113a2f><strong data-v-15113a2f>About</strong></span></a></li> <li data-v-15113a2f><a href="https://github.com/se-edu/se-book" class="nav-link" data-v-15113a2f><span data-v-15113a2f><span aria-hidden="true" class="fab fa-github" data-v-15113a2f></span></span></a></li></ul> <ul class="navbar-nav navbar-right" data-v-15113a2f><li class="nav-link" data-v-15113a2f><form class="navbar-form" data-v-15113a2f><div style="position:relative;"><input id="algolia-search-input" type="text" placeholder="Search" autocomplete="off" value="" class="form-control"> <ul class="dropdown-menu search-dropdown-menu dropdown-menu-right"></ul></div></form></li></ul></div></div></nav> <div class="lower-navbar-container" style="display:none;" data-v-15113a2f><!----> <!----></div></div></header> <div id="flex-body"><nav id="site-nav" class="fixed-header-padding" data-v-e8c82f88><div class="nav-component slim-scroll" data-v-e8c82f88><div class="site-nav-root"><ul class="site-nav-list site-nav-list-root" data-v-e8c82f88><li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e8c82f88><strong data-v-e8c82f88>About this book</strong> <i onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();" class="site-nav-dropdown-btn-icon" data-v-e8c82f88><span aria-hidden="true" class="glyphicon glyphicon-menu-down" data-v-e8c82f88></span></i></div><ul class="site-nav-dropdown-container site-nav-list" data-v-e8c82f88><li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/about/acknowledgements.html" data-v-e8c82f88>About</a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/about/usage.html" data-v-e8c82f88>How to use this book</a></div></li></ul></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e8c82f88><strong data-v-e8c82f88>Software engineering</strong> <i onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();" class="site-nav-dropdown-btn-icon" data-v-e8c82f88><span aria-hidden="true" class="glyphicon glyphicon-menu-down" data-v-e8c82f88></span></i></div><ul class="site-nav-dropdown-container site-nav-list" data-v-e8c82f88><li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/softwareEngineering/index.html" data-v-e8c82f88>Software engineering</a></div></li></ul></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e8c82f88><strong data-v-e8c82f88>Object-oriented programming</strong> <i onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();" class="site-nav-dropdown-btn-icon" data-v-e8c82f88><span aria-hidden="true" class="glyphicon glyphicon-menu-down" data-v-e8c82f88></span></i></div><ul class="site-nav-dropdown-container site-nav-list" data-v-e8c82f88><li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/oop/index.html" data-v-e8c82f88>Object-oriented programming</a></div></li></ul></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e8c82f88><strong data-v-e8c82f88>Requirements</strong> <i onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();" class="site-nav-dropdown-btn-icon" data-v-e8c82f88><span aria-hidden="true" class="glyphicon glyphicon-menu-down" data-v-e8c82f88></span></i></div><ul class="site-nav-dropdown-container site-nav-list" data-v-e8c82f88><li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/requirements/index.html" data-v-e8c82f88>Requirements</a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/gatheringRequirements/index.html" data-v-e8c82f88>Gathering requirements</a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/specifyingRequirements/index.html" data-v-e8c82f88>Specifying requirements</a></div></li></ul></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e8c82f88><strong data-v-e8c82f88>Design</strong> <i onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();" class="site-nav-dropdown-btn-icon" data-v-e8c82f88><span aria-hidden="true" class="glyphicon glyphicon-menu-down" data-v-e8c82f88></span></i></div><ul class="site-nav-dropdown-container site-nav-list" data-v-e8c82f88><li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/design/index.html" data-v-e8c82f88>Design</a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/designFundamentals/index.html" data-v-e8c82f88>Design fundamentals</a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/modeling/index.html" data-v-e8c82f88>Modeling</a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/architecture/index.html" data-v-e8c82f88>Architecture</a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/designPatterns/index.html" data-v-e8c82f88>Design patterns</a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/designApproaches/index.html" data-v-e8c82f88>Design approaches</a></div></li></ul></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e8c82f88><strong data-v-e8c82f88>Implementation</strong> <i onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();" class="site-nav-dropdown-btn-icon" data-v-e8c82f88><span aria-hidden="true" class="glyphicon glyphicon-menu-down" data-v-e8c82f88></span></i></div><ul class="site-nav-dropdown-container site-nav-list" data-v-e8c82f88><li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/ides/index.html" data-v-e8c82f88>IDEs</a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/codeQuality/index.html" data-v-e8c82f88>Code quality</a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/refactoring/index.html" data-v-e8c82f88>Refactoring</a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/documentation/index.html" data-v-e8c82f88>Documentation</a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/errorHandling/index.html" data-v-e8c82f88>Error handling</a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/integration/index.html" data-v-e8c82f88>Integration</a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/reuse/index.html" data-v-e8c82f88>Reuse</a></div></li></ul></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e8c82f88><strong data-v-e8c82f88>Quality assurance</strong> <i onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();" class="site-nav-dropdown-btn-icon" data-v-e8c82f88><span aria-hidden="true" class="glyphicon glyphicon-menu-down" data-v-e8c82f88></span></i></div><ul class="site-nav-dropdown-container site-nav-list" data-v-e8c82f88><li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/qualityAssurance/index.html" data-v-e8c82f88>Quality assurance</a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/testing/index.html" data-v-e8c82f88>Testing</a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/testCaseDesign/index.html" data-v-e8c82f88>Test case design</a></div></li></ul></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e8c82f88><strong data-v-e8c82f88>Project management</strong> <i onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();" class="site-nav-dropdown-btn-icon" data-v-e8c82f88><span aria-hidden="true" class="glyphicon glyphicon-menu-down" data-v-e8c82f88></span></i></div><ul class="site-nav-dropdown-container site-nav-list" data-v-e8c82f88><li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/revisionControl/index.html" data-v-e8c82f88>Revision control</a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/projectPlanning/index.html" data-v-e8c82f88>Project planning</a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/teamwork/index.html" data-v-e8c82f88>Teamwork</a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/processModels/index.html" data-v-e8c82f88>SDLC process models</a></div></li></ul></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e8c82f88><strong data-v-e8c82f88>Tools</strong> <i onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();" class="site-nav-dropdown-btn-icon" data-v-e8c82f88><span aria-hidden="true" class="glyphicon glyphicon-menu-down" data-v-e8c82f88></span></i></div><ul class="site-nav-dropdown-container site-nav-list" data-v-e8c82f88><li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/uml/index.html" data-v-e8c82f88>UML</a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/intellij/index.html" data-v-e8c82f88>IntelliJ IDEA</a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/gitAndGithub/index.html" data-v-e8c82f88>Git and GitHub</a></div></li></ul></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e8c82f88><strong data-v-e8c82f88>Principles</strong> <i onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();" class="site-nav-dropdown-btn-icon" data-v-e8c82f88><span aria-hidden="true" class="glyphicon glyphicon-menu-down" data-v-e8c82f88></span></i></div><ul class="site-nav-dropdown-container site-nav-list" data-v-e8c82f88><li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/principles/index.html" data-v-e8c82f88>Principles</a></div></li></ul></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e8c82f88><strong data-v-e8c82f88>Supplementary</strong> <i onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();" class="site-nav-dropdown-btn-icon" data-v-e8c82f88><span aria-hidden="true" class="glyphicon glyphicon-menu-down" data-v-e8c82f88></span></i></div><ul class="site-nav-dropdown-container site-nav-list" data-v-e8c82f88><li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/cppToJava/index.html" data-v-e8c82f88>C++ to Java</a></div></li></ul></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e8c82f88><a href="/se-book/combined/exercises.html" data-v-e8c82f88><strong data-v-e8c82f88>Combined exercises</strong></a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e8c82f88><a href="/se-book/common/definitions.html" data-v-e8c82f88><strong data-v-e8c82f88>List of definitions</strong></a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e8c82f88><a href="/se-book/common/references.html" data-v-e8c82f88><strong data-v-e8c82f88>List of references</strong></a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e8c82f88><a href="/se-book/common/outcomes.html" data-v-e8c82f88><strong data-v-e8c82f88>List of learning outcomes</strong></a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e8c82f88><a href="/se-book/common/print.html" data-v-e8c82f88><strong data-v-e8c82f88>Printable version</strong></a></div></li> <!----></ul></div></div> <!----></nav> <div id="content-wrapper" class="fixed-header-padding"><h1 id="software-engineering-for-self-directed-learners"><span id="software-engineering-for-self-directed-learners" class="anchor"></span><span class="text-dark"><small><strong><strong>Software Engineering for Self-Directed Learners »</strong></strong></small></span><a href="#software-engineering-for-self-directed-learners" onclick="event.stopPropagation()" class="fa fa-anchor"></a></h1> <p></p><div><link rel="stylesheet" href="/se-book/css/textbook.css"> <div id="all" class="website-content"><p><span class="dimmed"><strong><span>C++ to Java →
+</span></strong></span></p> <div id="title"><h1 id="collections"><span id="collections" class="anchor"></span><span>Collections</span></h1></div> <div id="main"><div><div><div id="-2" expanded="" class="card-container" data-v-5681bde8><div class="card expandable-card border-0" data-v-5681bde8><div class="card-header header-toggle bg-white border-0" data-v-5681bde8><div class="caret-wrapper" data-v-5681bde8><span class="glyphicon glyphicon-chevron-down" data-v-5681bde8></span></div> <div class="header-wrapper card-title bg-white" data-v-5681bde8><span class="card-title" data-v-5681bde8><div data-v-5681bde8><h4 id="-2" data-v-5681bde8><span id="-2" class="anchor" data-v-5681bde8></span><span data-v-5681bde8>The collections framework</span><a href="#-2" onclick="event.stopPropagation()" class="fa fa-anchor" data-v-5681bde8></a></h4></div></span></div> <div class="button-wrapper" data-v-5681bde8><button type="button" class="collapse-button btn btn-outline-secondary" style="display:none;" data-v-5681bde8><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down opened"></span></button> <button type="button" class="close-button btn btn-outline-secondary seamless-button" data-v-5681bde8><span aria-hidden="true" class="glyphicon glyphicon-remove" data-v-5681bde8></span></button> <button type="button" class="popup-button btn btn-outline-secondary seamless-button" style="display:none;" data-v-5681bde8><span aria-hidden="true" class="glyphicon glyphicon-new-window" data-v-5681bde8></span></button></div></div> <div class="card-collapse" data-v-5681bde8><div class="card-body" data-v-5681bde8> <div class="indented" data-v-5681bde8><p data-v-5681bde8><span class="badge badge-light" data-v-5681bde8><span data-v-5681bde8><span class="dimmed" data-v-5681bde8><span data-v-5681bde8><span data-v-5681bde8><span aria-hidden="true" class="fas fa-trophy" data-v-5681bde8></span></span> Can explain the Collections framework</span></span></span></span></p><p data-v-5681bde8></p><p data-v-5681bde8></p> <p data-v-5681bde8></p> <div data-v-5681bde8><p data-v-5681bde8>This section uses extracts from the <small data-v-5681bde8><span style="opacity:0.5;" data-v-5681bde8><span class="badge badge-secondary" data-v-5681bde8>-- Java Tutorial</span></span></small>, with some adaptations.</p> <p data-v-5681bde8><strong data-v-5681bde8>A <em data-v-5681bde8>collection</em> — sometimes called a <em data-v-5681bde8>container</em> — is simply an object that groups multiple elements into a single unit.</strong> Collections are used to store, retrieve, manipulate, and communicate aggregate data.</p> <div class="alert box-container alert-default" data-v-7d17494f><!----> <div class="header-and-body" data-v-7d17494f><!----> <div class="box-body-wrapper" data-v-7d17494f><!----> <!----> <div class="contents" data-v-7d17494f><p data-v-7d17494f><span data-v-7d17494f><span aria-hidden="true" class="fas fa-cube" data-v-7d17494f></span></span> Typically, collections represent data items that form a natural group, such as a poker hand (a collection of cards), a mail folder (a collection of letters), or a telephone directory (a mapping of names to phone numbers).</p></div> <!----></div></div></div> <p data-v-5681bde8><strong data-v-5681bde8>The collections framework is a unified architecture for representing and manipulating collections.</strong> It contains the following:</p> <ul data-v-5681bde8><li data-v-5681bde8><p data-v-5681bde8><strong data-v-5681bde8>Interfaces</strong>: These are abstract data types that represent collections. Interfaces allow collections to be manipulated independently of the details of their representation.<br data-v-5681bde8> <span class="dimmed" data-v-5681bde8><span data-v-5681bde8><span aria-hidden="true" class="fas fa-cube" data-v-5681bde8></span></span> Example: the <code class="hljs inline no-lang" data-v-5681bde8>List&lt;E&gt;</code> interface can be used to manipulate list-like collections which may be implemented in different ways such as <code class="hljs inline no-lang" data-v-5681bde8>ArrayList&lt;E&gt;</code> or <code class="hljs inline no-lang" data-v-5681bde8>LinkedList&lt;E&gt;</code>.</span><br data-v-5681bde8></p></li> <li data-v-5681bde8><p data-v-5681bde8><strong data-v-5681bde8>Implementations</strong>: These are the concrete implementations of the collection interfaces. In essence, they are reusable data structures.<br data-v-5681bde8> <span class="dimmed" data-v-5681bde8><span data-v-5681bde8><span aria-hidden="true" class="fas fa-cube" data-v-5681bde8></span></span> Example: the <code class="hljs inline no-lang" data-v-5681bde8>ArrayList&lt;E&gt;</code> class implements the <code class="hljs inline no-lang" data-v-5681bde8>List&lt;E&gt;</code> interface while the <code class="hljs inline no-lang" data-v-5681bde8>HashMap&lt;K, V&gt;</code> class implements the <code class="hljs inline no-lang" data-v-5681bde8>Map&lt;K, V&gt;</code> interface.</span><br data-v-5681bde8></p></li> <li data-v-5681bde8><p data-v-5681bde8><strong data-v-5681bde8>Algorithms</strong>: These are the methods that perform useful computations, such as <em data-v-5681bde8>searching</em> and <em data-v-5681bde8>sorting</em>, on objects that implement collection interfaces. The algorithms are said to be polymorphic: that is, the same method can be used on many different implementations of the appropriate collection interface.<br data-v-5681bde8> <span class="dimmed" data-v-5681bde8><span data-v-5681bde8><span aria-hidden="true" class="fas fa-cube" data-v-5681bde8></span></span> Example: the <code class="hljs inline no-lang" data-v-5681bde8>sort(List&lt;E&gt;)</code> method can sort a collection that implements the <code class="hljs inline no-lang" data-v-5681bde8>List&lt;E&gt;</code> interface.</span></p></li></ul> <p data-v-5681bde8><span style="opacity:0.5;" data-v-5681bde8><span class="badge badge-pill badge-success" data-v-5681bde8><span data-v-5681bde8><span aria-hidden="true" class="fas fa-equals" data-v-5681bde8></span></span></span></span> <strong data-v-5681bde8>A well-known example of collections frameworks is the C++ <em data-v-5681bde8>Standard Template Library (STL)</em></strong>. <span style="opacity:0.5;" data-v-5681bde8><span class="badge badge-pill badge-danger" data-v-5681bde8><span data-v-5681bde8><span aria-hidden="true" class="fas fa-not-equal" data-v-5681bde8></span></span></span></span> Although both are collections frameworks and the syntax look similar, note that there are important philosophical and implementation differences between the two.</p> <p data-v-5681bde8>The following list describes the core collection interfaces:</p> <ul data-v-5681bde8><li data-v-5681bde8><p data-v-5681bde8><strong data-v-5681bde8><code class="hljs inline no-lang" data-v-5681bde8>Collection</code></strong> — the root of the collection hierarchy. A collection represents a group of objects known as its elements. The Collection interface is the least common denominator that all collections implement and is used to pass collections around and to manipulate them when maximum generality is desired. Some types of collections allow duplicate elements, and others do not. Some are ordered and others are unordered. The Java platform doesn't provide any direct implementations of this interface but provides implementations of more specific subinterfaces, such as <code class="hljs inline no-lang" data-v-5681bde8>Set</code> and <code class="hljs inline no-lang" data-v-5681bde8>List</code>. <span class="dimmed" data-v-5681bde8>Also see the <a href="https://docs.oracle.com/javase/9/docs/api/java/util/Collection.html" data-v-5681bde8><code class="hljs inline no-lang" data-v-5681bde8>Collection</code> API</a>.</span></p></li> <li data-v-5681bde8><p data-v-5681bde8><strong data-v-5681bde8><code class="hljs inline no-lang" data-v-5681bde8>Set</code></strong> — a collection that cannot contain duplicate elements. This interface models the mathematical set abstraction and is used to represent sets, such as the cards comprising a poker hand, the courses making up a student's schedule, or the processes running on a machine. <span class="dimmed" data-v-5681bde8>Also see the <a href="https://docs.oracle.com/javase/9/docs/api/java/util/Set.html" data-v-5681bde8><code class="hljs inline no-lang" data-v-5681bde8>Set</code> API</a>.</span></p></li> <li data-v-5681bde8><p data-v-5681bde8><strong data-v-5681bde8><code class="hljs inline no-lang" data-v-5681bde8>List</code></strong> — an ordered collection (sometimes called a <em data-v-5681bde8>sequence</em>). <code class="hljs inline no-lang" data-v-5681bde8>List</code>s can contain duplicate elements. The user of a <code class="hljs inline no-lang" data-v-5681bde8>List</code> generally has precise control over where in the list each element is inserted and can access elements by their integer index (position). <span class="dimmed" data-v-5681bde8>Also see the <a href="https://docs.oracle.com/javase/9/docs/api/java/util/List.html" data-v-5681bde8><code class="hljs inline no-lang" data-v-5681bde8>List</code> API</a>.</span></p></li> <li data-v-5681bde8><p data-v-5681bde8><strong data-v-5681bde8><code class="hljs inline no-lang" data-v-5681bde8>Queue</code></strong> — a collection used to hold multiple elements prior to processing. Besides basic <code class="hljs inline no-lang" data-v-5681bde8>Collection</code> operations, a <code class="hljs inline no-lang" data-v-5681bde8>Queue</code> provides additional insertion, extraction, and inspection operations. <span class="dimmed" data-v-5681bde8>Also see the <a href="https://docs.oracle.com/javase/9/docs/api/java/util/Queue.html" data-v-5681bde8><code class="hljs inline no-lang" data-v-5681bde8>Queue</code> API</a>.</span></p></li> <li data-v-5681bde8><p data-v-5681bde8><strong data-v-5681bde8><code class="hljs inline no-lang" data-v-5681bde8>Map</code></strong> — an object that maps keys to values. A <code class="hljs inline no-lang" data-v-5681bde8>Map</code> cannot contain duplicate keys; each key can map to at most one value. <span class="dimmed" data-v-5681bde8>Also see the <a href="https://docs.oracle.com/javase/9/docs/api/java/util/Map.html" data-v-5681bde8><code class="hljs inline no-lang" data-v-5681bde8>Map</code> API</a>.</span></p></li> <li data-v-5681bde8><p data-v-5681bde8>Others: <code class="hljs inline no-lang" data-v-5681bde8>Deque</code>, <code class="hljs inline no-lang" data-v-5681bde8>SortedSet</code>, <code class="hljs inline no-lang" data-v-5681bde8>SortedMap</code></p></li></ul></div> <div data-v-5681bde8></div></div> <!----> <button type="button" class="collapse-button btn btn-outline-secondary" data-v-5681bde8><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down opened"></span></button></div> <hr style="display:;" data-v-5681bde8></div> <!----></div></div></div> <div><div id="-3" expanded="" class="card-container" data-v-5681bde8><div class="card expandable-card border-0" data-v-5681bde8><div class="card-header header-toggle bg-white border-0" data-v-5681bde8><div class="caret-wrapper" data-v-5681bde8><span class="glyphicon glyphicon-chevron-down" data-v-5681bde8></span></div> <div class="header-wrapper card-title bg-white" data-v-5681bde8><span class="card-title" data-v-5681bde8><div data-v-5681bde8><h4 id="-3" data-v-5681bde8><span id="-3" class="anchor" data-v-5681bde8></span><span data-v-5681bde8>The <code class="hljs inline no-lang" data-v-5681bde8>ArrayList</code> class</span><a href="#-3" onclick="event.stopPropagation()" class="fa fa-anchor" data-v-5681bde8></a></h4></div></span></div> <div class="button-wrapper" data-v-5681bde8><button type="button" class="collapse-button btn btn-outline-secondary" style="display:none;" data-v-5681bde8><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down opened"></span></button> <button type="button" class="close-button btn btn-outline-secondary seamless-button" data-v-5681bde8><span aria-hidden="true" class="glyphicon glyphicon-remove" data-v-5681bde8></span></button> <button type="button" class="popup-button btn btn-outline-secondary seamless-button" style="display:none;" data-v-5681bde8><span aria-hidden="true" class="glyphicon glyphicon-new-window" data-v-5681bde8></span></button></div></div> <div class="card-collapse" data-v-5681bde8><div class="card-body" data-v-5681bde8> <div class="indented" data-v-5681bde8><p data-v-5681bde8><span class="badge badge-light" data-v-5681bde8><span data-v-5681bde8><span class="dimmed" data-v-5681bde8><span data-v-5681bde8><span data-v-5681bde8><span aria-hidden="true" class="fas fa-trophy" data-v-5681bde8></span></span> Can use the ArrayList class</span></span></span></span></p><p data-v-5681bde8></p><p data-v-5681bde8></p> <p data-v-5681bde8></p> <div data-v-5681bde8><p data-v-5681bde8>The <code class="hljs inline no-lang" data-v-5681bde8>ArrayList</code> class is a resizable-array implementation of the <code class="hljs inline no-lang" data-v-5681bde8>List</code> interface. Unlike a normal <code class="hljs inline no-lang" data-v-5681bde8>array</code>, an <code class="hljs inline no-lang" data-v-5681bde8>ArrayList</code> can grow in size as you add more items to it. The example below illustrates some of the useful methods of the <code class="hljs inline no-lang" data-v-5681bde8>ArrayList</code> class using an <code class="hljs inline no-lang" data-v-5681bde8>ArrayList</code> of <code class="hljs inline no-lang" data-v-5681bde8>String</code> objects.</p> <pre data-v-5681bde8><code class="hljs java" data-v-5681bde8><span data-v-5681bde8><span class="hljs-keyword" data-v-5681bde8>import</span> java.util.ArrayList;
+</span><span data-v-5681bde8>
+</span><span data-v-5681bde8><span class="hljs-keyword" data-v-5681bde8>public</span> <span class="hljs-class" data-v-5681bde8><span class="hljs-keyword" data-v-5681bde8>class</span> <span class="hljs-title" data-v-5681bde8>ArrayListDemo</span> </span>{
+</span><span data-v-5681bde8>
+</span><span data-v-5681bde8>    <span class="hljs-function" data-v-5681bde8><span class="hljs-keyword" data-v-5681bde8>public</span> <span class="hljs-keyword" data-v-5681bde8>static</span> <span class="hljs-keyword" data-v-5681bde8>void</span> <span class="hljs-title" data-v-5681bde8>main</span><span class="hljs-params" data-v-5681bde8>(String args[])</span> </span>{
+</span><span data-v-5681bde8>        ArrayList&lt;String&gt; items = <span class="hljs-keyword" data-v-5681bde8>new</span> ArrayList&lt;&gt;();
+</span><span data-v-5681bde8>
+</span><span data-v-5681bde8>        System.out.println(<span class="hljs-string" data-v-5681bde8>&quot;Before adding any items:&quot;</span> + items);
+</span><span data-v-5681bde8>
+</span><span data-v-5681bde8>        items.add(<span class="hljs-string" data-v-5681bde8>&quot;Apple&quot;</span>);
+</span><span data-v-5681bde8>        items.add(<span class="hljs-string" data-v-5681bde8>&quot;Box&quot;</span>);
+</span><span data-v-5681bde8>        items.add(<span class="hljs-string" data-v-5681bde8>&quot;Cup&quot;</span>);
+</span><span data-v-5681bde8>        items.add(<span class="hljs-string" data-v-5681bde8>&quot;Dart&quot;</span>);
+</span><span data-v-5681bde8>        print(<span class="hljs-string" data-v-5681bde8>&quot;After adding four items: &quot;</span> + items);
+</span><span data-v-5681bde8>
+</span><span data-v-5681bde8>        items.remove(<span class="hljs-string" data-v-5681bde8>&quot;Box&quot;</span>); <span class="hljs-comment" data-v-5681bde8>// remove item &quot;Box&quot;</span>
+</span><span data-v-5681bde8>        print(<span class="hljs-string" data-v-5681bde8>&quot;After removing Box: &quot;</span> + items);
+</span><span data-v-5681bde8>
+</span><span data-v-5681bde8>        items.add(<span class="hljs-number" data-v-5681bde8>1</span>, <span class="hljs-string" data-v-5681bde8>&quot;Banana&quot;</span>); <span class="hljs-comment" data-v-5681bde8>// add &quot;Banana&quot; at index 1</span>
+</span><span data-v-5681bde8>        print(<span class="hljs-string" data-v-5681bde8>&quot;After adding Banana: &quot;</span> + items);
+</span><span data-v-5681bde8>
+</span><span data-v-5681bde8>        items.add(<span class="hljs-string" data-v-5681bde8>&quot;Egg&quot;</span>); <span class="hljs-comment" data-v-5681bde8>// add &quot;Egg&quot;, will be added to the end</span>
+</span><span data-v-5681bde8>        items.add(<span class="hljs-string" data-v-5681bde8>&quot;Cup&quot;</span>); <span class="hljs-comment" data-v-5681bde8>// add another &quot;Cup&quot;</span>
+</span><span data-v-5681bde8>        print(<span class="hljs-string" data-v-5681bde8>&quot;After adding Egg: &quot;</span> + items);
+</span><span data-v-5681bde8>
+</span><span data-v-5681bde8>        print(<span class="hljs-string" data-v-5681bde8>&quot;Number of items: &quot;</span> + items.size());
+</span><span data-v-5681bde8>
+</span><span data-v-5681bde8>        print(<span class="hljs-string" data-v-5681bde8>&quot;Index of Cup: &quot;</span> + items.indexOf(<span class="hljs-string" data-v-5681bde8>&quot;Cup&quot;</span>));
+</span><span data-v-5681bde8>        print(<span class="hljs-string" data-v-5681bde8>&quot;Index of Zebra: &quot;</span> + items.indexOf(<span class="hljs-string" data-v-5681bde8>&quot;Zebra&quot;</span>));
+</span><span data-v-5681bde8>
+</span><span data-v-5681bde8>        print(<span class="hljs-string" data-v-5681bde8>&quot;Item at index 3 is: &quot;</span> + items.get(<span class="hljs-number" data-v-5681bde8>2</span>));
+</span><span data-v-5681bde8>
+</span><span data-v-5681bde8>        print(<span class="hljs-string" data-v-5681bde8>&quot;Do we have a Box?: &quot;</span> + items.contains(<span class="hljs-string" data-v-5681bde8>&quot;Box&quot;</span>));
+</span><span data-v-5681bde8>        print(<span class="hljs-string" data-v-5681bde8>&quot;Do we have an Apple?: &quot;</span> + items.contains(<span class="hljs-string" data-v-5681bde8>&quot;Apple&quot;</span>));
+</span><span data-v-5681bde8>
+</span><span data-v-5681bde8>        items.clear();
+</span><span data-v-5681bde8>        print(<span class="hljs-string" data-v-5681bde8>&quot;After clearing: &quot;</span> + items);
+</span><span data-v-5681bde8>    }
+</span><span data-v-5681bde8>
+</span><span data-v-5681bde8>    <span class="hljs-function" data-v-5681bde8><span class="hljs-keyword" data-v-5681bde8>private</span> <span class="hljs-keyword" data-v-5681bde8>static</span> <span class="hljs-keyword" data-v-5681bde8>void</span> <span class="hljs-title" data-v-5681bde8>print</span><span class="hljs-params" data-v-5681bde8>(String text)</span> </span>{
+</span><span data-v-5681bde8>        System.out.println(text);
+</span><span data-v-5681bde8>    }
+</span><span data-v-5681bde8>}
+</span></code></pre><p data-v-5681bde8><span data-v-5681bde8><span aria-hidden="true" class="fas fa-arrow-down" data-v-5681bde8></span></span></p> <pre data-v-5681bde8><code class="hljs" data-v-5681bde8><span data-v-5681bde8>Before adding any items:[]
+</span><span data-v-5681bde8>After adding four items: [Apple, Box, Cup, Dart]
+</span><span data-v-5681bde8>After removing Box: [Apple, Cup, Dart]
+</span><span data-v-5681bde8>After adding Banana: [Apple, Banana, Cup, Dart]
+</span><span data-v-5681bde8>After adding Egg: [Apple, Banana, Cup, Dart, Egg, Cup]
+</span><span data-v-5681bde8>Number of items: 6
+</span><span data-v-5681bde8>Index of Cup: 2
+</span><span data-v-5681bde8>Index of Zebra: -1
+</span><span data-v-5681bde8>Item at index 3 is: Cup
+</span><span data-v-5681bde8>Do we have a Box?: false
+</span><span data-v-5681bde8>Do we have an Apple?: true
+</span><span data-v-5681bde8>After clearing: []
+</span></code></pre><p data-v-5681bde8><small data-v-5681bde8>[<a href="https://repl.it/@seedu/Demo-ArrayList" data-v-5681bde8>Try the above code on Repl.it</a>]</small></p></div> <div data-v-5681bde8><div data-v-5681bde8><div expanded="" class="card-container" data-v-5681bde8><div class="card expandable-card" data-v-5681bde8><div class="card-header header-toggle bg-light" data-v-5681bde8><div class="caret-wrapper" data-v-5681bde8><!----></div> <div class="header-wrapper card-title bg-light" data-v-5681bde8><p data-v-5681bde8><span data-v-5681bde8><span aria-hidden="true" class="fas fa-paperclip" data-v-5681bde8></span></span> Resources</p></div> <div class="button-wrapper" data-v-5681bde8><button type="button" class="collapse-button btn btn-outline-secondary" data-v-5681bde8><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down opened"></span></button> <button type="button" class="close-button btn btn-outline-secondary" data-v-5681bde8><span aria-hidden="true" class="glyphicon glyphicon-remove" data-v-5681bde8></span></button> <button type="button" class="popup-button btn btn-outline-secondary" style="display:none;" data-v-5681bde8><span aria-hidden="true" class="glyphicon glyphicon-new-window" data-v-5681bde8></span></button></div></div> <div class="card-collapse" data-v-5681bde8><div class="card-body" data-v-5681bde8> <div data-v-5681bde8><ul data-v-5681bde8><li data-v-5681bde8><a href="https://docs.oracle.com/javase/9/docs/api/java/util/ArrayList.html" data-v-5681bde8><code class="hljs inline no-lang" data-v-5681bde8>ArrayList</code> API</a></li> <li data-v-5681bde8><a href="https://beginnersbook.com/2013/12/java-arraylist/" data-v-5681bde8>A tutorial on ArrayLists</a> from <a href="http://beginnersbook.com" data-v-5681bde8>beginnersbook.com</a></li></ul></div> <!----> <button type="button" class="collapse-button btn btn-outline-secondary" data-v-5681bde8><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down opened"></span></button></div> <hr style="display:none;" data-v-5681bde8></div> <!----></div></div></div> <div data-v-5681bde8><div expanded="" class="card-container" data-v-5681bde8><div class="card expandable-card" data-v-5681bde8><div class="card-header header-toggle bg-light" data-v-5681bde8><div class="caret-wrapper" data-v-5681bde8><!----></div> <div class="header-wrapper card-title bg-light" data-v-5681bde8><p data-v-5681bde8><span data-v-5681bde8><span aria-hidden="true" class="fas fa-dumbbell" data-v-5681bde8></span></span> Exercises</p></div> <div class="button-wrapper" data-v-5681bde8><button type="button" class="collapse-button btn btn-outline-secondary" data-v-5681bde8><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down opened"></span></button> <button type="button" class="close-button btn btn-outline-secondary" data-v-5681bde8><span aria-hidden="true" class="glyphicon glyphicon-remove" data-v-5681bde8></span></button> <button type="button" class="popup-button btn btn-outline-secondary" style="display:none;" data-v-5681bde8><span aria-hidden="true" class="glyphicon glyphicon-new-window" data-v-5681bde8></span></button></div></div> <div class="card-collapse" data-v-5681bde8><div class="card-body" data-v-5681bde8> <div data-v-5681bde8><div data-v-5681bde8><div id="span-aria-hidden-true-class-glyphicon-glyphicon-exclamation-sign-span-key-exercise-numbers-list" expanded="" class="card-container" data-v-5681bde8><div class="card expandable-card border-dark" data-v-5681bde8><div class="card-header header-toggle bg-dark border-dark" data-v-5681bde8><div class="caret-wrapper" data-v-5681bde8><!----></div> <div class="header-wrapper card-title bg-dark text-white" data-v-5681bde8><h3 id="span-aria-hidden-true-class-glyphicon-glyphicon-exclamation-sign-span-key-exercise-numbers-list" data-v-5681bde8><span id="span-aria-hidden-true-class-glyphicon-glyphicon-exclamation-sign-span-key-exercise-numbers-list" class="anchor" data-v-5681bde8></span><small data-v-5681bde8><small data-v-5681bde8><span data-v-5681bde8><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign" data-v-5681bde8></span></span> [Key Exercise] Numbers list</small></small><a href="#span-aria-hidden-true-class-glyphicon-glyphicon-exclamation-sign-span-key-exercise-numbers-list" onclick="event.stopPropagation()" class="fa fa-anchor" data-v-5681bde8></a></h3></div> <div class="button-wrapper" data-v-5681bde8><button type="button" class="collapse-button btn btn-outline-light" data-v-5681bde8><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down opened"></span></button> <button type="button" class="close-button btn btn-outline-light" data-v-5681bde8><span aria-hidden="true" class="glyphicon glyphicon-remove" data-v-5681bde8></span></button> <button type="button" class="popup-button btn btn-outline-light" style="display:none;" data-v-5681bde8><span aria-hidden="true" class="glyphicon glyphicon-new-window" data-v-5681bde8></span></button></div></div> <div class="card-collapse" data-v-5681bde8><div class="card-body" data-v-5681bde8> <div class="card question" data-v-48074a07 data-v-48074a07><!----> <div class="card-body" data-v-48074a07><p>Add the missing methods to the class given below so that it produces the output given.</p> <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Use an <code class="hljs inline no-lang">ArrayList</code> to store the numbers.</p> <pre><code class="hljs java"><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
 </span><span>
 </span><span>    <span class="hljs-comment">//<span class="hljs-doctag">TODO:</span> add your methods here</span>
 </span><span>
@@ -429,9 +96,7 @@
 </span><span>    }
 </span><span>
 </span><span>}
-</span></code></pre>
-                                    <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
-                                    <pre><code class="hljs" v-pre><span>Adding numbers to the list
+</span></code></pre><p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p> <pre><code class="hljs"><span>Adding numbers to the list
 </span><span>[3]
 </span><span>[3, 8]
 </span><span>[3, 8, 24]
@@ -440,123 +105,65 @@
 </span><span>5 in the list : false
 </span><span>[3, 24]
 </span><span>The total is: 27
-</span></code></pre>
-                                    <div slot="hint" class="algolia-no-index">
-                                      <p>Partial solution:</p>
-                                      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">import</span> java.util.ArrayList;
-</span><span>
-</span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
-</span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> ArrayList&lt;Integer&gt; numbers = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
-</span><span>
-</span><span>    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addNumber</span><span class="hljs-params">(<span class="hljs-keyword">int</span> i)</span> </span>{
-</span><span>        numbers.add(Integer.valueOf(i));
-</span><span>        System.out.println(numbers);
-</span><span>    }
-</span><span>
-</span><span>    <span class="hljs-comment">// ...</span>
-</span><span>
-</span><span>}
-</span></code></pre>
-                                    </div>
-                                  </question>
-                                </panel>
-                              </div>
-                            </div>
-                          </panel>
-                        </div>
-                      </div>
-                    </div>
-                  </panel>
-                </div>
-                <div>
-                  <panel type="seamless" expanded id="the-hashmap-class">
-                    <span slot="header" class="card-title">
-                      <div>
-                        <h4 id="the-hashmap-class"><span id="the-hashmap-class" class="anchor"></span><span>The <code class="hljs inline no-lang" v-pre>HashMap</code> class</span><a class="fa fa-anchor" href="#the-hashmap-class" onclick="event.stopPropagation()"></a></h4>
-                      </div>
-                    </span>
-                    <div class="indented">
-                      <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can use the HashMap class</span></span></span></span></p>
-                      <p></p>
-                      <p></p>
-                      <p></p>
-                      <div>
-                        <p><code class="hljs inline no-lang" v-pre>HashMap</code> is an implementation of the <code class="hljs inline no-lang" v-pre>Map</code> interface. It allows you to store a collection of <em>key-value pairs</em>. The example below illustrates how to use a <code class="hljs inline no-lang" v-pre>HashMap&lt;String, Point&gt;</code> to maintain a list of coordinates and their identifiers e.g., the identifier <code class="hljs inline no-lang" v-pre>x1</code> is used to identify the point <code class="hljs inline no-lang" v-pre>0,0</code> where <code class="hljs inline no-lang" v-pre>x1</code> is the <em>key</em> and <code class="hljs inline no-lang" v-pre>0,0</code> is the <em>value</em>.</p>
-                        <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">import</span> java.awt.Point;
-</span><span><span class="hljs-keyword">import</span> java.util.HashMap;
-</span><span><span class="hljs-keyword">import</span> java.util.Map;
-</span><span>
-</span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">HashMapDemo</span> </span>{
-</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
-</span><span>        HashMap&lt;String, Point&gt; points = <span class="hljs-keyword">new</span> HashMap&lt;&gt;();
-</span><span>
-</span><span>        <span class="hljs-comment">// put the key-value pairs in the HashMap</span>
-</span><span>        points.put(<span class="hljs-string">&quot;x1&quot;</span>, <span class="hljs-keyword">new</span> Point(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>));
-</span><span>        points.put(<span class="hljs-string">&quot;x2&quot;</span>, <span class="hljs-keyword">new</span> Point(<span class="hljs-number">0</span>, <span class="hljs-number">5</span>));
-</span><span>        points.put(<span class="hljs-string">&quot;x3&quot;</span>, <span class="hljs-keyword">new</span> Point(<span class="hljs-number">5</span>, <span class="hljs-number">5</span>));
-</span><span>        points.put(<span class="hljs-string">&quot;x4&quot;</span>, <span class="hljs-keyword">new</span> Point(<span class="hljs-number">5</span>, <span class="hljs-number">0</span>));
-</span><span>
-</span><span>        <span class="hljs-comment">// retrieve a value for a key using the get method</span>
-</span><span>        print(<span class="hljs-string">&quot;Coordinates of x1: &quot;</span> + pointAsString(points.get(<span class="hljs-string">&quot;x1&quot;</span>)));
-</span><span>
-</span><span>        <span class="hljs-comment">// check if a key or a value exists</span>
-</span><span>        print(<span class="hljs-string">&quot;Key x1 exists? &quot;</span> + points.containsKey(<span class="hljs-string">&quot;x1&quot;</span>));
-</span><span>        print(<span class="hljs-string">&quot;Key x1 exists? &quot;</span> + points.containsKey(<span class="hljs-string">&quot;y1&quot;</span>));
-</span><span>        print(<span class="hljs-string">&quot;Value (0,0) exists? &quot;</span> + points.containsValue(<span class="hljs-keyword">new</span> Point(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>)));
-</span><span>        print(<span class="hljs-string">&quot;Value (1,2) exists? &quot;</span> + points.containsValue(<span class="hljs-keyword">new</span> Point(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>)));
-</span><span>
-</span><span>        <span class="hljs-comment">// update the value of a key to a new value</span>
-</span><span>        points.put(<span class="hljs-string">&quot;x1&quot;</span>, <span class="hljs-keyword">new</span> Point(-<span class="hljs-number">1</span>,-<span class="hljs-number">1</span>));
-</span><span>
-</span><span>        <span class="hljs-comment">// iterate over the entries</span>
-</span><span>        <span class="hljs-keyword">for</span> (Map.Entry&lt;String, Point&gt; entry : points.entrySet()) {
-</span><span>            print(entry.getKey() + <span class="hljs-string">&quot; = &quot;</span> + pointAsString(entry.getValue()));
-</span><span>        }
-</span><span>
-</span><span>        print(<span class="hljs-string">&quot;Number of keys: &quot;</span> + points.size());
-</span><span>        points.clear();
-</span><span>        print(<span class="hljs-string">&quot;Number of keys after clearing: &quot;</span> + points.size());
-</span><span>
-</span><span>    }
-</span><span>
-</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> String <span class="hljs-title">pointAsString</span><span class="hljs-params">(Point p)</span> </span>{
-</span><span>        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;[&quot;</span> + p.x + <span class="hljs-string">&quot;,&quot;</span> + p.y + <span class="hljs-string">&quot;]&quot;</span>;
-</span><span>    }
-</span><span>
-</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">(String s)</span> </span>{
-</span><span>        System.out.println(s);
-</span><span>    }
-</span><span>}
-</span></code></pre>
-                        <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
-                        <pre><code class="hljs" v-pre><span>Coordinates of x1: [0,0]
-</span><span>Key x1 exists? true
-</span><span>Key x1 exists? false
-</span><span>Value (0,0) exists? true
-</span><span>Value (1,2) exists? false
-</span><span>x1 = [-1,-1]
-</span><span>x2 = [0,5]
-</span><span>x3 = [5,5]
-</span><span>x4 = [5,0]
-</span><span>Number of keys: 4
-</span><span>Number of keys after clearing: 0
-</span></code></pre>
-                        <p><small>[<a href="https://repl.it/@seedu/Demo-HashMap">Try the above code on Repl.it</a>]</small></p>
-                      </div>
-                      <div>
-                        <div>
-                          <panel expanded><template slot="header">
-                              <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
-                            </template>
-                            <div>
-                              <div>
-                                <panel type="dark" expanded id="key-exercise-weekly-roster"><template slot="header">
-                                    <h3 id="key-exercise-weekly-roster"><span id="key-exercise-weekly-roster" class="anchor"></span><small><small><span><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></span> [Key Exercise] weekly roster</small></small><a class="fa fa-anchor" href="#key-exercise-weekly-roster" onclick="event.stopPropagation()"></a></h3>
-                                  </template>
-                                  <question>
-                                    <p>The class given below keeps track of how many people signup to attend an event on each day of the week. Add the missing methods so that it produces the output given.</p>
-                                    <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Use an <code class="hljs inline no-lang" v-pre>HashMap</code> to store the number of entries for each day.</p>
-                                    <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+</span></code></pre> <!----> <!----> <!----></div> <div class="card-footer alert-light border-top border-light text-dark" data-v-48074a07><!----> <div class="float-right" data-v-48074a07><button type="button" class="btn btn-success q-btn ml-1" data-v-48074a07>
+          Hint
+        </button></div></div></div> <!----> <button type="button" class="collapse-button btn btn-outline-secondary" data-v-5681bde8><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down opened"></span></button></div> <hr style="display:none;" data-v-5681bde8></div> <!----></div></div></div></div> <!----> <button type="button" class="collapse-button btn btn-outline-secondary" data-v-5681bde8><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down opened"></span></button></div> <hr style="display:none;" data-v-5681bde8></div> <!----></div></div></div></div></div> <!----> <button type="button" class="collapse-button btn btn-outline-secondary" data-v-5681bde8><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down opened"></span></button></div> <hr style="display:;" data-v-5681bde8></div> <!----></div></div></div> <div><div id="-4" expanded="" class="card-container" data-v-5681bde8><div class="card expandable-card border-0" data-v-5681bde8><div class="card-header header-toggle bg-white border-0" data-v-5681bde8><div class="caret-wrapper" data-v-5681bde8><span class="glyphicon glyphicon-chevron-down" data-v-5681bde8></span></div> <div class="header-wrapper card-title bg-white" data-v-5681bde8><span class="card-title" data-v-5681bde8><div data-v-5681bde8><h4 id="-4" data-v-5681bde8><span id="-4" class="anchor" data-v-5681bde8></span><span data-v-5681bde8>The <code class="hljs inline no-lang" data-v-5681bde8>HashMap</code> class</span><a href="#-4" onclick="event.stopPropagation()" class="fa fa-anchor" data-v-5681bde8></a></h4></div></span></div> <div class="button-wrapper" data-v-5681bde8><button type="button" class="collapse-button btn btn-outline-secondary" style="display:none;" data-v-5681bde8><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down opened"></span></button> <button type="button" class="close-button btn btn-outline-secondary seamless-button" data-v-5681bde8><span aria-hidden="true" class="glyphicon glyphicon-remove" data-v-5681bde8></span></button> <button type="button" class="popup-button btn btn-outline-secondary seamless-button" style="display:none;" data-v-5681bde8><span aria-hidden="true" class="glyphicon glyphicon-new-window" data-v-5681bde8></span></button></div></div> <div class="card-collapse" data-v-5681bde8><div class="card-body" data-v-5681bde8> <div class="indented" data-v-5681bde8><p data-v-5681bde8><span class="badge badge-light" data-v-5681bde8><span data-v-5681bde8><span class="dimmed" data-v-5681bde8><span data-v-5681bde8><span data-v-5681bde8><span aria-hidden="true" class="fas fa-trophy" data-v-5681bde8></span></span> Can use the HashMap class</span></span></span></span></p><p data-v-5681bde8></p><p data-v-5681bde8></p> <p data-v-5681bde8></p> <div data-v-5681bde8><p data-v-5681bde8><code class="hljs inline no-lang" data-v-5681bde8>HashMap</code> is an implementation of the <code class="hljs inline no-lang" data-v-5681bde8>Map</code> interface. It allows you to store a collection of <em data-v-5681bde8>key-value pairs</em>. The example below illustrates how to use a <code class="hljs inline no-lang" data-v-5681bde8>HashMap&lt;String, Point&gt;</code> to maintain a list of coordinates and their identifiers e.g., the identifier <code class="hljs inline no-lang" data-v-5681bde8>x1</code> is used to identify the point <code class="hljs inline no-lang" data-v-5681bde8>0,0</code> where <code class="hljs inline no-lang" data-v-5681bde8>x1</code> is the <em data-v-5681bde8>key</em> and <code class="hljs inline no-lang" data-v-5681bde8>0,0</code> is the <em data-v-5681bde8>value</em>.</p> <pre data-v-5681bde8><code class="hljs java" data-v-5681bde8><span data-v-5681bde8><span class="hljs-keyword" data-v-5681bde8>import</span> java.awt.Point;
+</span><span data-v-5681bde8><span class="hljs-keyword" data-v-5681bde8>import</span> java.util.HashMap;
+</span><span data-v-5681bde8><span class="hljs-keyword" data-v-5681bde8>import</span> java.util.Map;
+</span><span data-v-5681bde8>
+</span><span data-v-5681bde8><span class="hljs-keyword" data-v-5681bde8>public</span> <span class="hljs-class" data-v-5681bde8><span class="hljs-keyword" data-v-5681bde8>class</span> <span class="hljs-title" data-v-5681bde8>HashMapDemo</span> </span>{
+</span><span data-v-5681bde8>    <span class="hljs-function" data-v-5681bde8><span class="hljs-keyword" data-v-5681bde8>public</span> <span class="hljs-keyword" data-v-5681bde8>static</span> <span class="hljs-keyword" data-v-5681bde8>void</span> <span class="hljs-title" data-v-5681bde8>main</span><span class="hljs-params" data-v-5681bde8>(String[] args)</span> </span>{
+</span><span data-v-5681bde8>        HashMap&lt;String, Point&gt; points = <span class="hljs-keyword" data-v-5681bde8>new</span> HashMap&lt;&gt;();
+</span><span data-v-5681bde8>
+</span><span data-v-5681bde8>        <span class="hljs-comment" data-v-5681bde8>// put the key-value pairs in the HashMap</span>
+</span><span data-v-5681bde8>        points.put(<span class="hljs-string" data-v-5681bde8>&quot;x1&quot;</span>, <span class="hljs-keyword" data-v-5681bde8>new</span> Point(<span class="hljs-number" data-v-5681bde8>0</span>, <span class="hljs-number" data-v-5681bde8>0</span>));
+</span><span data-v-5681bde8>        points.put(<span class="hljs-string" data-v-5681bde8>&quot;x2&quot;</span>, <span class="hljs-keyword" data-v-5681bde8>new</span> Point(<span class="hljs-number" data-v-5681bde8>0</span>, <span class="hljs-number" data-v-5681bde8>5</span>));
+</span><span data-v-5681bde8>        points.put(<span class="hljs-string" data-v-5681bde8>&quot;x3&quot;</span>, <span class="hljs-keyword" data-v-5681bde8>new</span> Point(<span class="hljs-number" data-v-5681bde8>5</span>, <span class="hljs-number" data-v-5681bde8>5</span>));
+</span><span data-v-5681bde8>        points.put(<span class="hljs-string" data-v-5681bde8>&quot;x4&quot;</span>, <span class="hljs-keyword" data-v-5681bde8>new</span> Point(<span class="hljs-number" data-v-5681bde8>5</span>, <span class="hljs-number" data-v-5681bde8>0</span>));
+</span><span data-v-5681bde8>
+</span><span data-v-5681bde8>        <span class="hljs-comment" data-v-5681bde8>// retrieve a value for a key using the get method</span>
+</span><span data-v-5681bde8>        print(<span class="hljs-string" data-v-5681bde8>&quot;Coordinates of x1: &quot;</span> + pointAsString(points.get(<span class="hljs-string" data-v-5681bde8>&quot;x1&quot;</span>)));
+</span><span data-v-5681bde8>
+</span><span data-v-5681bde8>        <span class="hljs-comment" data-v-5681bde8>// check if a key or a value exists</span>
+</span><span data-v-5681bde8>        print(<span class="hljs-string" data-v-5681bde8>&quot;Key x1 exists? &quot;</span> + points.containsKey(<span class="hljs-string" data-v-5681bde8>&quot;x1&quot;</span>));
+</span><span data-v-5681bde8>        print(<span class="hljs-string" data-v-5681bde8>&quot;Key x1 exists? &quot;</span> + points.containsKey(<span class="hljs-string" data-v-5681bde8>&quot;y1&quot;</span>));
+</span><span data-v-5681bde8>        print(<span class="hljs-string" data-v-5681bde8>&quot;Value (0,0) exists? &quot;</span> + points.containsValue(<span class="hljs-keyword" data-v-5681bde8>new</span> Point(<span class="hljs-number" data-v-5681bde8>0</span>, <span class="hljs-number" data-v-5681bde8>0</span>)));
+</span><span data-v-5681bde8>        print(<span class="hljs-string" data-v-5681bde8>&quot;Value (1,2) exists? &quot;</span> + points.containsValue(<span class="hljs-keyword" data-v-5681bde8>new</span> Point(<span class="hljs-number" data-v-5681bde8>1</span>, <span class="hljs-number" data-v-5681bde8>2</span>)));
+</span><span data-v-5681bde8>
+</span><span data-v-5681bde8>        <span class="hljs-comment" data-v-5681bde8>// update the value of a key to a new value</span>
+</span><span data-v-5681bde8>        points.put(<span class="hljs-string" data-v-5681bde8>&quot;x1&quot;</span>, <span class="hljs-keyword" data-v-5681bde8>new</span> Point(-<span class="hljs-number" data-v-5681bde8>1</span>,-<span class="hljs-number" data-v-5681bde8>1</span>));
+</span><span data-v-5681bde8>
+</span><span data-v-5681bde8>        <span class="hljs-comment" data-v-5681bde8>// iterate over the entries</span>
+</span><span data-v-5681bde8>        <span class="hljs-keyword" data-v-5681bde8>for</span> (Map.Entry&lt;String, Point&gt; entry : points.entrySet()) {
+</span><span data-v-5681bde8>            print(entry.getKey() + <span class="hljs-string" data-v-5681bde8>&quot; = &quot;</span> + pointAsString(entry.getValue()));
+</span><span data-v-5681bde8>        }
+</span><span data-v-5681bde8>
+</span><span data-v-5681bde8>        print(<span class="hljs-string" data-v-5681bde8>&quot;Number of keys: &quot;</span> + points.size());
+</span><span data-v-5681bde8>        points.clear();
+</span><span data-v-5681bde8>        print(<span class="hljs-string" data-v-5681bde8>&quot;Number of keys after clearing: &quot;</span> + points.size());
+</span><span data-v-5681bde8>
+</span><span data-v-5681bde8>    }
+</span><span data-v-5681bde8>
+</span><span data-v-5681bde8>    <span class="hljs-function" data-v-5681bde8><span class="hljs-keyword" data-v-5681bde8>public</span> <span class="hljs-keyword" data-v-5681bde8>static</span> String <span class="hljs-title" data-v-5681bde8>pointAsString</span><span class="hljs-params" data-v-5681bde8>(Point p)</span> </span>{
+</span><span data-v-5681bde8>        <span class="hljs-keyword" data-v-5681bde8>return</span> <span class="hljs-string" data-v-5681bde8>&quot;[&quot;</span> + p.x + <span class="hljs-string" data-v-5681bde8>&quot;,&quot;</span> + p.y + <span class="hljs-string" data-v-5681bde8>&quot;]&quot;</span>;
+</span><span data-v-5681bde8>    }
+</span><span data-v-5681bde8>
+</span><span data-v-5681bde8>    <span class="hljs-function" data-v-5681bde8><span class="hljs-keyword" data-v-5681bde8>public</span> <span class="hljs-keyword" data-v-5681bde8>static</span> <span class="hljs-keyword" data-v-5681bde8>void</span> <span class="hljs-title" data-v-5681bde8>print</span><span class="hljs-params" data-v-5681bde8>(String s)</span> </span>{
+</span><span data-v-5681bde8>        System.out.println(s);
+</span><span data-v-5681bde8>    }
+</span><span data-v-5681bde8>}
+</span></code></pre><p data-v-5681bde8><span data-v-5681bde8><span aria-hidden="true" class="fas fa-arrow-down" data-v-5681bde8></span></span></p> <pre data-v-5681bde8><code class="hljs" data-v-5681bde8><span data-v-5681bde8>Coordinates of x1: [0,0]
+</span><span data-v-5681bde8>Key x1 exists? true
+</span><span data-v-5681bde8>Key x1 exists? false
+</span><span data-v-5681bde8>Value (0,0) exists? true
+</span><span data-v-5681bde8>Value (1,2) exists? false
+</span><span data-v-5681bde8>x1 = [-1,-1]
+</span><span data-v-5681bde8>x2 = [0,5]
+</span><span data-v-5681bde8>x3 = [5,5]
+</span><span data-v-5681bde8>x4 = [5,0]
+</span><span data-v-5681bde8>Number of keys: 4
+</span><span data-v-5681bde8>Number of keys after clearing: 0
+</span></code></pre><p data-v-5681bde8><small data-v-5681bde8>[<a href="https://repl.it/@seedu/Demo-HashMap" data-v-5681bde8>Try the above code on Repl.it</a>]</small></p></div> <div data-v-5681bde8><div data-v-5681bde8><div expanded="" class="card-container" data-v-5681bde8><div class="card expandable-card" data-v-5681bde8><div class="card-header header-toggle bg-light" data-v-5681bde8><div class="caret-wrapper" data-v-5681bde8><!----></div> <div class="header-wrapper card-title bg-light" data-v-5681bde8><p data-v-5681bde8><span data-v-5681bde8><span aria-hidden="true" class="fas fa-dumbbell" data-v-5681bde8></span></span> Exercises</p></div> <div class="button-wrapper" data-v-5681bde8><button type="button" class="collapse-button btn btn-outline-secondary" data-v-5681bde8><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down opened"></span></button> <button type="button" class="close-button btn btn-outline-secondary" data-v-5681bde8><span aria-hidden="true" class="glyphicon glyphicon-remove" data-v-5681bde8></span></button> <button type="button" class="popup-button btn btn-outline-secondary" style="display:none;" data-v-5681bde8><span aria-hidden="true" class="glyphicon glyphicon-new-window" data-v-5681bde8></span></button></div></div> <div class="card-collapse" data-v-5681bde8><div class="card-body" data-v-5681bde8> <div data-v-5681bde8><div data-v-5681bde8><div id="span-aria-hidden-true-class-glyphicon-glyphicon-exclamation-sign-span-key-exercise-weekly-roster" expanded="" class="card-container" data-v-5681bde8><div class="card expandable-card border-dark" data-v-5681bde8><div class="card-header header-toggle bg-dark border-dark" data-v-5681bde8><div class="caret-wrapper" data-v-5681bde8><!----></div> <div class="header-wrapper card-title bg-dark text-white" data-v-5681bde8><h3 id="span-aria-hidden-true-class-glyphicon-glyphicon-exclamation-sign-span-key-exercise-weekly-roster" data-v-5681bde8><span id="span-aria-hidden-true-class-glyphicon-glyphicon-exclamation-sign-span-key-exercise-weekly-roster" class="anchor" data-v-5681bde8></span><small data-v-5681bde8><small data-v-5681bde8><span data-v-5681bde8><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign" data-v-5681bde8></span></span> [Key Exercise] weekly roster</small></small><a href="#span-aria-hidden-true-class-glyphicon-glyphicon-exclamation-sign-span-key-exercise-weekly-roster" onclick="event.stopPropagation()" class="fa fa-anchor" data-v-5681bde8></a></h3></div> <div class="button-wrapper" data-v-5681bde8><button type="button" class="collapse-button btn btn-outline-light" data-v-5681bde8><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down opened"></span></button> <button type="button" class="close-button btn btn-outline-light" data-v-5681bde8><span aria-hidden="true" class="glyphicon glyphicon-remove" data-v-5681bde8></span></button> <button type="button" class="popup-button btn btn-outline-light" style="display:none;" data-v-5681bde8><span aria-hidden="true" class="glyphicon glyphicon-new-window" data-v-5681bde8></span></button></div></div> <div class="card-collapse" data-v-5681bde8><div class="card-body" data-v-5681bde8> <div class="card question" data-v-48074a07 data-v-48074a07><!----> <div class="card-body" data-v-48074a07><p>The class given below keeps track of how many people signup to attend an event on each day of the week. Add the missing methods so that it produces the output given.</p> <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Use an <code class="hljs inline no-lang">HashMap</code> to store the number of entries for each day.</p> <pre><code class="hljs java"><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
 </span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> HashMap&lt;String, Integer&gt; roster = <span class="hljs-keyword">new</span> HashMap&lt;&gt;();
 </span><span>
 </span><span>    <span class="hljs-comment">//<span class="hljs-doctag">TODO:</span> add your methods here</span>
@@ -571,78 +178,18 @@
 </span><span>    }
 </span><span>
 </span><span>}
-</span></code></pre>
-                                    <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
-                                    <pre><code class="hljs" v-pre><span>Monday =&gt; 2
+</span></code></pre><p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p> <pre><code class="hljs"><span>Monday =&gt; 2
 </span><span>Friday =&gt; 1
 </span><span>Wednesday =&gt; 2
-</span></code></pre>
-                                    <div slot="hint" class="algolia-no-index">
-                                      <p>Partial solution:</p>
-                                      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">import</span> java.util.HashMap;
-</span><span><span class="hljs-keyword">import</span> java.util.Map;
-</span><span>
-</span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
-</span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> HashMap&lt;String, Integer&gt; roster = <span class="hljs-keyword">new</span> HashMap&lt;&gt;();
-</span><span>
-</span><span>    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addToRoster</span><span class="hljs-params">(String day)</span> </span>{
-</span><span>        <span class="hljs-keyword">if</span> (roster.containsKey(day)){
-</span><span>            Integer newValue = Integer.valueOf(roster.get(day).intValue() + <span class="hljs-number">1</span>);
-</span><span>            roster.put(day, newValue);
-</span><span>        } <span class="hljs-keyword">else</span> {
-</span><span>            roster.put(day, Integer.valueOf(<span class="hljs-number">1</span>));
-</span><span>        }
-</span><span>    }
-</span><span>
-</span><span>    <span class="hljs-comment">// ...</span>
-</span><span>}
-</span></code></pre>
-                                    </div>
-                                  </question>
-                                </panel>
-                              </div>
-                            </div>
-                          </panel>
-                        </div>
-                        <div>
-                          <panel expanded><template slot="header">
-                              <p><span><span aria-hidden="true" class="fas fa-paperclip"></span></span> Resources</p>
-                            </template>
-                            <div>
-                              <ul>
-                                <li><a href="https://docs.oracle.com/javase/9/docs/api/java/util/HashMap.html"><code class="hljs inline no-lang" v-pre>HashMap</code> API</a></li>
-                                <li><a href="https://www.journaldev.com/11560/java-hashmap">A tutorial on HashMaps</a> from <a href="http://journaldev.com">journaldev.com</a></li>
-                              </ul>
-                            </div>
-                          </panel>
-                        </div>
-                      </div>
-                    </div>
-                  </panel>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i>
-      </div>
-    </div>
-    <footer>
-
-      <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.3</a>, generated on Sat, 1 May 2021, 12:33:13 GMT+8]</small>
-      </div>
-    </footer>
-  </div>
-</body>
-<script src="../../markbind/js/bootstrap-utility.min.js"></script>
+</span></code></pre> <!----> <!----> <!----></div> <div class="card-footer alert-light border-top border-light text-dark" data-v-48074a07><!----> <div class="float-right" data-v-48074a07><button type="button" class="btn btn-success q-btn ml-1" data-v-48074a07>
+          Hint
+        </button></div></div></div> <!----> <button type="button" class="collapse-button btn btn-outline-secondary" data-v-5681bde8><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down opened"></span></button></div> <hr style="display:none;" data-v-5681bde8></div> <!----></div></div></div></div> <!----> <button type="button" class="collapse-button btn btn-outline-secondary" data-v-5681bde8><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down opened"></span></button></div> <hr style="display:none;" data-v-5681bde8></div> <!----></div></div></div> <div data-v-5681bde8><div expanded="" class="card-container" data-v-5681bde8><div class="card expandable-card" data-v-5681bde8><div class="card-header header-toggle bg-light" data-v-5681bde8><div class="caret-wrapper" data-v-5681bde8><!----></div> <div class="header-wrapper card-title bg-light" data-v-5681bde8><p data-v-5681bde8><span data-v-5681bde8><span aria-hidden="true" class="fas fa-paperclip" data-v-5681bde8></span></span> Resources</p></div> <div class="button-wrapper" data-v-5681bde8><button type="button" class="collapse-button btn btn-outline-secondary" data-v-5681bde8><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down opened"></span></button> <button type="button" class="close-button btn btn-outline-secondary" data-v-5681bde8><span aria-hidden="true" class="glyphicon glyphicon-remove" data-v-5681bde8></span></button> <button type="button" class="popup-button btn btn-outline-secondary" style="display:none;" data-v-5681bde8><span aria-hidden="true" class="glyphicon glyphicon-new-window" data-v-5681bde8></span></button></div></div> <div class="card-collapse" data-v-5681bde8><div class="card-body" data-v-5681bde8> <div data-v-5681bde8><ul data-v-5681bde8><li data-v-5681bde8><a href="https://docs.oracle.com/javase/9/docs/api/java/util/HashMap.html" data-v-5681bde8><code class="hljs inline no-lang" data-v-5681bde8>HashMap</code> API</a></li> <li data-v-5681bde8><a href="https://www.journaldev.com/11560/java-hashmap" data-v-5681bde8>A tutorial on HashMaps</a> from <a href="http://journaldev.com" data-v-5681bde8>journaldev.com</a></li></ul></div> <!----> <button type="button" class="collapse-button btn btn-outline-secondary" data-v-5681bde8><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down opened"></span></button></div> <hr style="display:none;" data-v-5681bde8></div> <!----></div></div></div></div></div> <!----> <button type="button" class="collapse-button btn btn-outline-secondary" data-v-5681bde8><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down opened"></span></button></div> <hr style="display:;" data-v-5681bde8></div> <!----></div></div></div></div></div></div></div> <i id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true" class="fa fa-arrow-circle-up fa-lg d-print-none"></i><p></p></div> <nav id="page-nav" class="fixed-header-padding" data-v-e8c82f88><div class="nav-component slim-scroll" data-v-e8c82f88></div> <!----></nav></div> <footer><div class="text-center"><small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 3.0.3</a>, generated on Mon, 28 Jun 2021, 17:04:50 GMT+8]</small></div></footer></div>
+</body><script src="../../markbind/js/bootstrap-utility.min.js"></script>
 <script>
-  const baseUrl = '/se-book'
-  MarkBind.setupWithSearch()
+  MarkBind.setup()
 </script>
-<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
-<script>
-  function initAlgolia() {
+    <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+    <script>
     docsearch({
       apiKey: "8310bb56d1ece8950bd20b0b8c080e10",
       indexName: "se-edu",
@@ -650,12 +197,5 @@
       algoliaOptions: {},
       debug: false,
     });
-  }
-  initAlgolia();
-</script>
-<script src="../../markbind/layouts/default/scripts.js"></script>
-<script>
-  if (MarkBind.AfterSetup) MarkBind.AfterSetup()
-</script>
-
+  </script>
 </html>

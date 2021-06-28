@@ -1,20 +1,15 @@
-<div></div>
-<p></p>
+<div></div><p></p>
 <p><span class="dimmed"><strong><span>Implementation → Code Quality → Readability → Advanced →
-      </span></strong></span></p>
+</span></strong></span></p>
 <div id="title-and-body">
-  <div>
-    <h4 id="make-the-happy-path-prominent"><span id="make-the-happy-path-prominent" class="anchor"></span><span>Make the happy path prominent</span><a class="fa fa-anchor" href="#make-the-happy-path-prominent" onclick="event.stopPropagation()"></a></h4>
-  </div>
-  <div id="main">
-    <div>
-      <p>The happy path (i.e. the execution path taken when everything goes well) should be clear and prominent in your code. Restructure the code to make the happy path unindented as much as possible. It is the ‘unusual’ cases that should be indented. Someone reading the code should not get distracted by alternative paths taken when error conditions happen. One technique that could help in this regard is the use of <a href="http://wiki.c2.com/?GuardClause">guard clauses</a>.</p>
-      <box>
-        <p>Example:</p>
-        <p>
-          <font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font>
-        </p>
-        <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">if</span> (!isUnusualCase) {  <span class="hljs-comment">//detecting an unusual condition</span>
+<div><h4 id="make-the-happy-path-prominent"><span id="make-the-happy-path-prominent" class="anchor"></span><span>Make the happy path prominent</span></h4></div>
+<div id="main">
+<div>
+<p>The happy path (i.e. the execution path taken when everything goes well) should be clear and prominent in your code. Restructure the code to make the happy path unindented as much as possible. It is the ‘unusual’ cases that should be indented. Someone reading the code should not get distracted by alternative paths taken when error conditions happen. One technique that could help in this regard is the use of <a href="http://wiki.c2.com/?GuardClause">guard clauses</a>.</p>
+<box>
+<p>Example:</p>
+<p><span style="color: red"><span><strong><span aria-hidden="true" class="fas fa-thumbs-down"></span> Bad</strong></span></span></p>
+<pre><code class="hljs java" v-pre><span><span class="hljs-keyword">if</span> (!isUnusualCase) {  <span class="hljs-comment">//detecting an unusual condition</span>
 </span><span>    <span class="hljs-keyword">if</span> (!isErrorCase) {
 </span><span>        start();    <span class="hljs-comment">//main path</span>
 </span><span>        process();
@@ -26,16 +21,12 @@
 </span><span>} <span class="hljs-keyword">else</span> {
 </span><span>    handleUnusualCase(); <span class="hljs-comment">//handling that unusual condition</span>
 </span><span>}
-</span></code></pre>
-        <p>In the code above,</p>
-        <ul>
-          <li>unusual condition detections are separated from their handling.</li>
-          <li>the main path is nested deeply.</li>
-        </ul>
-        <p>
-          <font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong></span></font>
-        </p>
-        <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">if</span> (isUnusualCase) { <span class="hljs-comment">//Guard Clause</span>
+</span></code></pre><p>In the code above,</p>
+<ul>
+<li>unusual condition detections are separated from their handling.</li>
+<li>the main path is nested deeply.</li></ul>
+<p><span style="color: green"><span><strong><span aria-hidden="true" class="fas fa-thumbs-up"></span> Good</strong></span></span></p>
+<pre><code class="hljs java" v-pre><span><span class="hljs-keyword">if</span> (isUnusualCase) { <span class="hljs-comment">//Guard Clause</span>
 </span><span>    handleUnusualCase();
 </span><span>    <span class="hljs-keyword">return</span>;
 </span><span>}
@@ -49,14 +40,8 @@
 </span><span>process();
 </span><span>cleanup();
 </span><span>exit();
-</span></code></pre>
-        <p>In contrast, the above code</p>
-        <ul>
-          <li>deals with unusual conditions as soon as they are detected so that the reader doesn't have to remember them for long.</li>
-          <li>keeps the main path un-indented.</li>
-        </ul>
-      </box>
-    </div>
-    <div></div>
-  </div>
-</div>
+</span></code></pre><p>In contrast, the above code</p>
+<ul>
+<li>deals with unusual conditions as soon as they are detected so that the reader doesn't have to remember them for long.</li>
+<li>keeps the main path un-indented.</li></ul></box></div>
+<div></div></div></div>

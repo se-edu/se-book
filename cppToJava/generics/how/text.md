@@ -22,7 +22,7 @@ class name<T1, T2, ..., Tn> { /* ... */ }
   <div class="col-sm-6">
 
 Using `Object` as the type:
-```java
+```java{.no-line-numbers}
 public class Box {
     private Object x;
 
@@ -40,7 +40,7 @@ public class Box {
   <div class="col-sm-6">
 
 A generic `Box` using type parameter `T`:
-```java
+```java{highlight-lines="1['<T>'],4['T'],8['T']"}
 public class Box<T> {
     private T x;
 

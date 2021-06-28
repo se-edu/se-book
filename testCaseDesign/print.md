@@ -3,6 +3,7 @@ title: "Test Case Design [Printable]"
 </frontmatter>
 
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
+<link rel="stylesheet" href="{{baseUrl}}/css/print.css">
 
 <div class="website-content">
 

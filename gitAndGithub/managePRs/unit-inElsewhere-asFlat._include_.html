@@ -1,64 +1,48 @@
-<div></div>
-<p></p>
+<div></div><p></p>
 <p><span class="dimmed"><strong><span>Tools → Git and GitHub →
-      </span></strong></span></p>
+</span></strong></span></p>
 <div id="title-and-body">
-  <div>
-    <h4 id="merging-prs"><span id="merging-prs" class="anchor"></span><span>Merging PRs</span><a class="fa fa-anchor" href="#merging-prs" onclick="event.stopPropagation()"></a></h4>
-  </div>
-  <div id="main">
-    <div>
-      <p>Let's look at the steps involved in merging a PR, assuming the PR has been reviewed, refined, and approved for merging already.</p>
-      <p>Preparation: If you would like to try merging a PR yourself, you can create a dummy PR in the following manner.</p>
-      <ol>
-        <li>Fork any repo (e.g., <a href="https://github.com/se-edu/samplerepo-pr-practice">samplerepo-pr-practice</a>).</li>
-        <li>Clone in to your computer.</li>
-        <li>Create a new branch e.g., (<code class="hljs inline no-lang" v-pre>feature1</code>) and add some commits to it.</li>
-        <li>Push the new branch to the fork.</li>
-        <li>Create a PR from that branch to the <code class="hljs inline no-lang" v-pre>master</code> branch in your fork. Yes, it is possible to create a PR within the same repo.</li>
-      </ol>
-      <p><strong>1. Locate the PR</strong> to be merged in your repo's GitHub page.</p>
-      <p><strong>2. Click on the <span class="tab"><span aria-hidden="true" class="far fa-comments"></span> Conversation</span> tab</strong> and scroll to the bottom. You'll see a panel containing the PR status summary.<br>
-        <img src="/se-book/gitAndGithub/managePRs/images/mergePr.png" width="800">
-      </p>
-      <p><strong>3. If the PR is not merge-able in the current state</strong>, the <span class="btn btn-light pl-1 pr-1 pb-0 pt-0 border">Merge pull request <svg version="1.1" width="12" height="16" viewBox="0 0 12 16" class="octicon octicon-triangle-down" aria-hidden="true">
-            <path fill-rule="evenodd" d="M0 5l6 6 6-6H0z" />
-          </svg></span> will not be green. Here are the possible reasons and remedies:</p>
-      <ul>
-        <li><strong>Problem: The PR code is out-of-date</strong>, indicated by the message <strong><span class="dimmed">This branch is out-of-date with the base branch</span></strong>. That means the repo's <code class="hljs inline no-lang" v-pre>master</code> branch has been updated since the PR code was last updated.
-          <ul>
-            <li>If the PR author has allowed you to update the PR and you have sufficient permissions, GitHub will allow you to update the PR simply by clicking the <span class="btn btn-light pl-1 pr-1 pb-0 pt-0 border">Update branch</span> on the right side of the 'out-of-date' error message.
-              If that option is not available, post a message in the PR requesting the PR author to update the PR.</li>
-          </ul>
-        </li>
-        <li><strong>Problem: There are merge conflicts</strong>, indicated by the message <strong><span class="dimmed">This branch has conflicts that must be resolved</span></strong>. That means the repo's <code class="hljs inline no-lang" v-pre>master</code> branch has been updated since the PR code was last updated, in a way that the PR code conflicts with the current <code class="hljs inline no-lang" v-pre>master</code> branch. Those <trigger trigger="click" for="modal:managePRs-mergeConflics">conflicts must be resolved</trigger> before the PR can be merged.
-          <ul>
-            <li>If the conflicts are simple, GitHub might allow you to resolve them using the Web interface.</li>
-            <li>If that option is not available, post a message in the PR requesting the PR author to update the PR.</li>
-          </ul>
-        </li>
-      </ul>
-      <b-modal id="modal:managePRs-mergeConflics" hide-footer size="lg" modal-class="mb-zoom" ref="modal:managePRs-mergeConflics" class="algolia-no-index"><template slot="modal-title">Tools → Git &amp; GitHub → Merge Conflicts</template>
-        <div>
-          <div></div>
-          <p></p>
-          <p><span class="dimmed"><strong><span>Tools → Git and GitHub →
-                </span></strong></span></p>
-          <div id="title-and-body">
-            <div>
-              <h4 id="dealing-with-merge-conflicts"><span id="dealing-with-merge-conflicts" class="anchor"></span><span>Dealing with merge conflicts</span><a class="fa fa-anchor" href="#dealing-with-merge-conflicts" onclick="event.stopPropagation()"></a></h4>
-            </div>
-            <div id="main">
-              <div>
-                <p><strong>Merge conflicts happen when you try to combine two incompatible versions</strong> (e.g., merging a branch to another but each branch changed the same part of the code in a different way).</p>
-                <p>Here are the steps to simulate a merge conflict and use it to learn how to resolve merge conflicts.</p>
-                <p><strong>0. Create an empty repo or clone an existing repo</strong>, to be used for this activity.</p>
-                <p><strong>1. Start a branch named <code class="hljs inline no-lang" v-pre>fix1</code> in the repo. Create a commit</strong> that adds a line with some text to one of the files.</p>
-                <p><strong>2. Switch back to <code class="hljs inline no-lang" v-pre>master</code> branch. Create a commit with a conflicting change</strong> i.e. it adds a line with some different text in the exact location the previous line was added.</p>
-                <img src="/se-book/gitAndGithub/mergeConflicts/images/sourcetree_1.png" height="350">
-                <p></p>
-                <p><strong>3. Try to merge the <code class="hljs inline no-lang" v-pre>fix1</code> branch onto the <code class="hljs inline no-lang" v-pre>master</code> branch.</strong> Git will pause mid-way during the merge and report a merge conflict. If you open the conflicted file, you will see something like this:</p>
-                <pre><code class="hljs txt" v-pre><span>COLORS
+<div><h4 id="merging-prs"><span id="merging-prs" class="anchor"></span><span>Merging PRs</span></h4></div>
+<div id="main">
+<div>
+<p>Let's look at the steps involved in merging a PR, assuming the PR has been reviewed, refined, and approved for merging already.</p>
+<p>Preparation: If you would like to try merging a PR yourself, you can create a dummy PR in the following manner.</p>
+<ol>
+<li>Fork any repo (e.g., <a href="https://github.com/se-edu/samplerepo-pr-practice">samplerepo-pr-practice</a>).</li>
+<li>Clone in to your computer.</li>
+<li>Create a new branch e.g., (<code class="hljs inline no-lang" v-pre>feature1</code>) and add some commits to it.</li>
+<li>Push the new branch to the fork.</li>
+<li>Create a PR from that branch to the <code class="hljs inline no-lang" v-pre>master</code> branch in your fork. Yes, it is possible to create a PR within the same repo.</li></ol>
+<p><strong>1. Locate the PR</strong> to be merged in your repo's GitHub page.</p>
+<p><strong>2. Click on the <span class="tab"><span aria-hidden="true" class="far fa-comments"></span> Conversation</span> tab</strong> and scroll to the bottom. You'll see a panel containing the PR status summary.<br>
+<pic src="/se-book/gitAndGithub/managePRs/images/mergePr.png" width="800"></pic></p>
+<p><strong>3. If the PR is not merge-able in the current state</strong>, the <span class="btn btn-light pl-1 pr-1 pb-0 pt-0 border">Merge pull request <svg version="1.1" width="12" height="16" viewBox="0 0 12 16" class="octicon octicon-triangle-down" aria-hidden="true"><path fill-rule="evenodd" d="M0 5l6 6 6-6H0z"/></svg></span> will not be green. Here are the possible reasons and remedies:</p>
+<ul>
+<li><strong>Problem: The PR code is out-of-date</strong>, indicated by the message <strong><span class="dimmed">This branch is out-of-date with the base branch</span></strong>. That means the repo's <code class="hljs inline no-lang" v-pre>master</code> branch has been updated since the PR code was last updated.
+<ul>
+<li>If the PR author has allowed you to update the PR and you have sufficient permissions, GitHub will allow you to update the PR simply by clicking the <span class="btn btn-light pl-1 pr-1 pb-0 pt-0 border">Update branch</span> on the right side of the 'out-of-date' error message.
+If that option is not available, post a message in the PR requesting the PR author to update the PR.</li></ul></li>
+<li><strong>Problem: There are merge conflicts</strong>, indicated by the message <strong><span class="dimmed">This branch has conflicts that must be resolved</span></strong>. That means the repo's <code class="hljs inline no-lang" v-pre>master</code> branch has been updated since the PR code was last updated, in a way that the PR code conflicts with the current <code class="hljs inline no-lang" v-pre>master</code> branch. Those <trigger trigger="click" for="modal:managePRs-mergeConflics">conflicts must be resolved</trigger>  before the PR can be merged.
+<ul>
+<li>If the conflicts are simple, GitHub might allow you to resolve them using the Web interface.</li>
+<li>If that option is not available, post a message in the PR requesting the PR author to update the PR.</li></ul></li></ul>
+<b-modal id="modal:managePRs-mergeConflics" hide-footer size="lg" modal-class="mb-zoom" ref="modal:managePRs-mergeConflics" class="algolia-no-index"><template #modal-title>Tools → Git &amp; GitHub → Merge Conflicts</template>
+  <div><div></div><p></p>
+<p><span class="dimmed"><strong><span>Tools → Git and GitHub →
+</span></strong></span></p>
+<div id="title-and-body">
+<div><h4 id="-2"><span id="-2" class="anchor"></span><span>Dealing with merge conflicts</span><a class="fa fa-anchor" href="#-2" onclick="event.stopPropagation()"></a></h4></div>
+<div id="main">
+<div>
+<p><strong>Merge conflicts happen when you try to combine two incompatible versions</strong> (e.g., merging a branch to another but each branch changed the same part of the code in a different way).</p>
+<p>Here are the steps to simulate a merge conflict and use it to learn how to resolve merge conflicts.</p>
+<p><strong>0. Create an empty repo or clone an existing repo</strong>, to be used for this activity.</p>
+<p><strong>1. Start a branch named <code class="hljs inline no-lang" v-pre>fix1</code> in the repo. Create a commit</strong> that adds a line with some text to one of the files.</p>
+<p><strong>2. Switch back to <code class="hljs inline no-lang" v-pre>master</code> branch. Create a commit with a conflicting change</strong> i.e. it adds a line with some different text in the exact location the previous line was added.</p>
+<img src="/se-book/gitAndGithub/mergeConflicts/images/sourcetree_1.png" height="350">
+<p></p>
+<p><strong>3. Try to merge the <code class="hljs inline no-lang" v-pre>fix1</code> branch onto the <code class="hljs inline no-lang" v-pre>master</code> branch.</strong> Git will pause mid-way during the merge and report a merge conflict. If you open the conflicted file, you will see something like this:</p>
+<pre><code class="hljs txt" v-pre><span>COLORS
 </span><span>------
 </span><span>blue
 </span><span><span class="highlighted">&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span>
@@ -68,52 +52,35 @@
 </span><span><span class="highlighted">&gt;&gt;&gt;&gt;&gt;&gt; fix1</span>
 </span><span>red
 </span><span>white
-</span></code></pre>
-                <p><strong>4. Observe how the conflicted part is marked</strong> between a line starting with <code class="hljs inline no-lang" v-pre>&lt;&lt;&lt;&lt;&lt;&lt; </code> and a line starting with <code class="hljs inline no-lang" v-pre>&gt;&gt;&gt;&gt;&gt;&gt;</code>, separated by another line starting with <code class="hljs inline no-lang" v-pre>=======</code>.</p>
-                <p>Highlighted below is the conflicting part that is coming from the <code class="hljs inline no-lang" v-pre>master</code> branch:</p>
-                <pre><code style="counter-reset: line 2;" class="hljs txt" v-pre><span>blue
+</span></code></pre><p><strong>4. Observe how the conflicted part is marked</strong> between a line starting with <code class="hljs inline no-lang" v-pre>&lt;&lt;&lt;&lt;&lt;&lt; </code> and a line starting with <code class="hljs inline no-lang" v-pre>&gt;&gt;&gt;&gt;&gt;&gt;</code>, separated by another line starting with <code class="hljs inline no-lang" v-pre>=======</code>.</p>
+<p>Highlighted below is the conflicting part that is coming from the <code class="hljs inline no-lang" v-pre>master</code> branch:</p>
+<pre><code style="counter-reset: line 2;" class="hljs txt" v-pre><span>blue
 </span><span>&lt;&lt;&lt;&lt;&lt;&lt; HEAD
 </span><span><span class="highlighted">black</span>
 </span><span>=======
 </span><span>green
 </span><span>&gt;&gt;&gt;&gt;&gt;&gt; fix1
 </span><span>red
-</span></code></pre>
-                <p>This is the conflicting part that is coming from the <code class="hljs inline no-lang" v-pre>fix1</code> branch:</p>
-                <pre><code style="counter-reset: line 2;" class="hljs txt" v-pre><span>blue
+</span></code></pre><p>This is the conflicting part that is coming from the <code class="hljs inline no-lang" v-pre>fix1</code> branch:</p>
+<pre><code style="counter-reset: line 2;" class="hljs txt" v-pre><span>blue
 </span><span>&lt;&lt;&lt;&lt;&lt;&lt; HEAD
 </span><span>black
 </span><span>=======
 </span><span><span class="highlighted">green</span>
 </span><span>&gt;&gt;&gt;&gt;&gt;&gt; fix1
 </span><span>red
-</span></code></pre>
-                <p><strong>5. Resolve the conflict by editing the file</strong>. Let us assume you want to keep both lines in the merged version. You can modify the file to be like this:</p>
-                <pre><code class="hljs txt" v-pre><span>COLORS
+</span></code></pre><p><strong>5. Resolve the conflict by editing the file</strong>. Let us assume you want to keep both lines in the merged version. You can modify the file to be like this:</p>
+<pre><code class="hljs txt" v-pre><span>COLORS
 </span><span>------
 </span><span>blue
 </span><span><span class="highlighted">black</span>
 </span><span><span class="highlighted">green</span>
 </span><span>red
 </span><span>white
-</span></code></pre>
-                <p><strong>6. Stage the changes, and commit.</strong></p>
-              </div>
-              <div></div>
-            </div>
-          </div>
-        </div>
-      </b-modal>
-      <p><strong>3. Merge the PR</strong> by clicking on the <span class="btn btn-success pl-1 pr-1 pb-0 pt-0">Merge pull request <svg version="1.1" width="12" height="16" viewBox="0 0 12 16" class="octicon octicon-triangle-down" aria-hidden="true">
-            <path fill-rule="evenodd" d="M0 5l6 6 6-6H0z" />
-          </svg></span> button, followed by the <code class="hljs inline no-lang" v-pre>Confirm merge</code> button. You should see a <code class="hljs inline no-lang" v-pre>Pull request successfully merged and closed</code> message after the PR is merged.<br></p>
-      <ul>
-        <li>You can choose between three merging options by clicking on the down-arrow in the <span class="btn btn-success pl-1 pr-1 pb-0 pt-0">Merge pull request <svg version="1.1" width="12" height="16" viewBox="0 0 12 16" class="octicon octicon-triangle-down" aria-hidden="true">
-              <path fill-rule="evenodd" d="M0 5l6 6 6-6H0z" />
-            </svg></span> button. If you are new to Git and GitHub, the <code class="hljs inline no-lang" v-pre>Create merge commit</code> options are recommended.</li>
-      </ul>
-      <p><strong>Next, sync your local repos (and forks).</strong> Merging a PR simply merges the code in the upstream remote repository in which it was merged. The PR author (and other members of the repo) needs to pull the merged code from the upstream repo to their local repos and push the new code to their respective forks to sync the fork with the upstream repo.</p>
-    </div>
-    <div></div>
-  </div>
-</div>
+</span></code></pre><p><strong>6. Stage the changes, and commit.</strong></p></div>
+<div></div></div></div></div></b-modal>
+<p><strong>3. Merge the PR</strong> by clicking on the <span class="btn btn-success pl-1 pr-1 pb-0 pt-0">Merge pull request <svg version="1.1" width="12" height="16" viewBox="0 0 12 16" class="octicon octicon-triangle-down" aria-hidden="true"><path fill-rule="evenodd" d="M0 5l6 6 6-6H0z"/></svg></span> button, followed by the <code class="hljs inline no-lang" v-pre>Confirm merge</code> button. You should see a <code class="hljs inline no-lang" v-pre>Pull request successfully merged and closed</code> message after the PR is merged.<br></p>
+<ul>
+<li>You can choose between three merging options by clicking on the down-arrow in the <span class="btn btn-success pl-1 pr-1 pb-0 pt-0">Merge pull request <svg version="1.1" width="12" height="16" viewBox="0 0 12 16" class="octicon octicon-triangle-down" aria-hidden="true"><path fill-rule="evenodd" d="M0 5l6 6 6-6H0z"/></svg></span> button. If you are new to Git and GitHub, the <code class="hljs inline no-lang" v-pre>Create merge commit</code> options are recommended.</li></ul>
+<p><strong>Next, sync your local repos (and forks).</strong> Merging a PR simply merges the code in the upstream remote repository in which it was merged. The PR author (and other members of the repo) needs to pull the merged code from the upstream repo to their local repos and push the new code to their respective forks to sync the fork with the upstream repo.</p></div>
+<div></div></div></div>

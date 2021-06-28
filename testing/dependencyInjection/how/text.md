@@ -51,12 +51,13 @@ class SalaryManager {
 
 During testing, you can inject a `SalaryManagerStub` object to replace the `SalaryManager` object.
 
-```java
+```java{highlight-lines="5,6"}
 class PayrollTest {
     public static void main(String[] args) {
         // test setup
         Payroll p = new Payroll();
-        p.setSalaryManager(new SalaryManagerStub()); // dependency injection
+        // dependency injection
+        p.setSalaryManager(new SalaryManagerStub());
         // test case 1
         p.setEmployees(new String[]{"E001", "E002"});
         assertEquals(2500.0, p.totalSalary());

@@ -213,13 +213,13 @@ Second "line"
 
 {{ icon_example }} Using `System.lineSeparator()` to print a line break.
 
-```java
-System.out.println("First line" + System.lineSeparator() + "Second line");
+```java{.no-line-numbers}
+System.out.println("First" + System.lineSeparator() + "Second");
 ```
 {{ icon_output }}
-```
-First line
-Second line
+```{.no-line-numbers}
+First
+Second
 ```
 </box>
 
@@ -234,7 +234,7 @@ Sometimes programs need to create strings that are formatted in a certain way. `
 
 {{ icon_example }} The following method returns a time string in 12-hour format. The format specifier `\%02d` means “two digit integer padded with zeros”, so `timeString(19, 5)` returns the string `"07:05 PM"`.
 
-```java{highlight-lines="12"}
+```java{highlight-lines="13-14"}
 public static String timeString(int hour, int minute) {
     String ampm;
     if (hour < 12) {
@@ -246,7 +246,9 @@ public static String timeString(int hour, int minute) {
         ampm = "PM";
         hour = hour - 12;
     }
-    return String.format("%02d:%02d %s", hour, minute, ampm); // returns "07:05 PM"
+
+    // returns "07:05 PM"
+    return String.format("%02d:%02d %s", hour, minute, ampm);
 }
 ```
 </box>

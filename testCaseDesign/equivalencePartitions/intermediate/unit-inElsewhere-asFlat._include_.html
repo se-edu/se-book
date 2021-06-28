@@ -1,62 +1,45 @@
-<div></div>
-<p></p>
+<div></div><p></p>
 <p><span class="dimmed"><strong><span>Quality Assurance → Test Case Design → Equivalence Partitions →
-      </span></strong></span></p>
+</span></strong></span></p>
 <div id="title-and-body">
-  <div>
-    <h4 id="intermediate"><span id="intermediate" class="anchor"></span><span>Intermediate</span><a class="fa fa-anchor" href="#intermediate" onclick="event.stopPropagation()"></a></h4>
-  </div>
-  <div id="main">
-    <div>
-      <p>When deciding EPs of OOP methods, you need to identify the EPs of all data participants that can potentially influence the behaviour of the method, such as,</p>
-      <ul>
-        <li>the target object of the method call</li>
-        <li>input parameters of the method call</li>
-        <li>other data/objects accessed by the method such as global variables. This category may not be applicable if using the black box approach (because the test case designer using the black box approach will not know how the method is implemented).</li>
-      </ul>
-      <box>
-        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider this method in the <code class="hljs inline no-lang" v-pre>DataStack</code> class:
-          <code class="hljs inline no-lang" v-pre>push(Object o): boolean</code>
-        </p>
-        <ul>
-          <li>Adds <code class="hljs inline no-lang" v-pre>o</code> to the top of the stack if the stack is not full.</li>
-          <li>Returns <code class="hljs inline no-lang" v-pre>true</code> if the push operation was a success.</li>
-          <li>Throws
-            <ul>
-              <li><code class="hljs inline no-lang" v-pre>MutabilityException</code> if the global flag <code class="hljs inline no-lang" v-pre>FREEZE==true</code>.</li>
-              <li><code class="hljs inline no-lang" v-pre>InvalidValueException</code> if <code class="hljs inline no-lang" v-pre>o</code> is null.</li>
-            </ul>
-          </li>
-        </ul>
-        <p>EPs:</p>
-        <ul>
-          <li><code class="hljs inline no-lang" v-pre>DataStack</code> object: [full] [not full]</li>
-          <li><code class="hljs inline no-lang" v-pre>o</code>: [null] [not null]</li>
-          <li><code class="hljs inline no-lang" v-pre>FREEZE</code>: [true][false]</li>
-        </ul>
-      </box>
-      <box>
-        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider a simple Minesweeper app. What are the EPs for the <code class="hljs inline no-lang" v-pre>newGame()</code> method of the <code class="hljs inline no-lang" v-pre>Logic</code> component?</p>
-        <p>As <code class="hljs inline no-lang" v-pre>newGame()</code> does not have any parameters, the only obvious participant is the <code class="hljs inline no-lang" v-pre>Logic</code> object itself.</p>
-        <p>Note that if the glass-box or the grey-box approach is used, other associated objects that are involved in the method might also be included as participants. For example, the <code class="hljs inline no-lang" v-pre>Minefield</code> object can be considered as another participant of the <code class="hljs inline no-lang" v-pre>newGame()</code> method. Here, the black-box approach is assumed.</p>
-        <p>Next, let us identify equivalence partitions for each participant. Will the <code class="hljs inline no-lang" v-pre>newGame()</code> method behave differently for different <code class="hljs inline no-lang" v-pre>Logic</code> objects? If yes, how will it differ? In this case, yes, it might behave differently based on the game state. Therefore, the equivalence partitions are:</p>
-        <ul>
-          <li><code class="hljs inline no-lang" v-pre>PRE_GAME</code>: before the game starts, minefield does not exist yet</li>
-          <li><code class="hljs inline no-lang" v-pre>READY</code>: a new minefield has been created and the app is waiting for the player’s first move</li>
-          <li><code class="hljs inline no-lang" v-pre>IN_PLAY</code>: the current minefield is already in use</li>
-          <li><code class="hljs inline no-lang" v-pre>WON</code>, <code class="hljs inline no-lang" v-pre>LOST</code>: let us assume that <code class="hljs inline no-lang" v-pre>newGame()</code> behaves the same way for these two values</li>
-        </ul>
-      </box>
-      <box>
-        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider the <code class="hljs inline no-lang" v-pre>Logic</code> component of the Minesweeper application. What are the EPs for the <code class="hljs inline no-lang" v-pre>markCellAt(int x, int y)</code> method? The partitions in <strong>bold</strong> represent valid inputs.</p>
-        <ul>
-          <li><code class="hljs inline no-lang" v-pre>Logic</code>: PRE_GAME, <strong>READY</strong>, <strong>IN_PLAY</strong>, WON, LOST</li>
-          <li><code class="hljs inline no-lang" v-pre>x</code>: [MIN_INT..-1] <strong>[0..(W-1)]</strong> [W..MAX_INT] <span class="dimmed">(assuming a minefield size of WxH)</span></li>
-          <li><code class="hljs inline no-lang" v-pre>y</code>: [MIN_INT..-1] <strong>[0..(H-1)]</strong> [H..MAX_INT]</li>
-          <li><code class="hljs inline no-lang" v-pre>Cell</code> at <code class="hljs inline no-lang" v-pre>(x,y)</code>: <strong>HIDDEN</strong>, MARKED, CLEARED</li>
-        </ul>
-      </box>
-    </div>
-    <div></div>
-  </div>
-</div>
+<div><h4 id="intermediate"><span id="intermediate" class="anchor"></span><span>Intermediate</span></h4></div>
+<div id="main">
+<div>
+<p>When deciding EPs of OOP methods, you need to identify the EPs of all data participants that can potentially influence the behaviour of the method, such as,</p>
+<ul>
+<li>the target object of the method call</li>
+<li>input parameters of the method call</li>
+<li>other data/objects accessed by the method such as global variables. This category may not be applicable if using the black box approach (because the test case designer using the black box approach will not know how the method is implemented).</li></ul>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider this method in the <code class="hljs inline no-lang" v-pre>DataStack</code> class:
+<code class="hljs inline no-lang" v-pre>push(Object o): boolean</code></p>
+<ul>
+<li>Adds <code class="hljs inline no-lang" v-pre>o</code> to the top of the stack if the stack is not full.</li>
+<li>Returns <code class="hljs inline no-lang" v-pre>true</code> if the push operation was a success.</li>
+<li>Throws
+<ul>
+<li><code class="hljs inline no-lang" v-pre>MutabilityException</code> if the global flag <code class="hljs inline no-lang" v-pre>FREEZE==true</code>.</li>
+<li><code class="hljs inline no-lang" v-pre>InvalidValueException</code> if <code class="hljs inline no-lang" v-pre>o</code> is null.</li></ul></li></ul>
+<p>EPs:</p>
+<ul>
+<li><code class="hljs inline no-lang" v-pre>DataStack</code> object: [full] [not full]</li>
+<li><code class="hljs inline no-lang" v-pre>o</code>: [null] [not null]</li>
+<li><code class="hljs inline no-lang" v-pre>FREEZE</code>: [true][false]</li></ul></box>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider a simple Minesweeper app. What are the EPs for the <code class="hljs inline no-lang" v-pre>newGame()</code> method of the <code class="hljs inline no-lang" v-pre>Logic</code> component?</p>
+<p>As <code class="hljs inline no-lang" v-pre>newGame()</code> does not have any parameters, the only obvious participant is the <code class="hljs inline no-lang" v-pre>Logic</code> object itself.</p>
+<p>Note that if the glass-box or the grey-box approach is used, other associated objects that are involved in the method might also be included as participants. For example, the <code class="hljs inline no-lang" v-pre>Minefield</code> object can be considered as another participant of the <code class="hljs inline no-lang" v-pre>newGame()</code> method. Here, the black-box approach is assumed.</p>
+<p>Next, let us identify equivalence partitions for each participant. Will the <code class="hljs inline no-lang" v-pre>newGame()</code> method behave differently for different <code class="hljs inline no-lang" v-pre>Logic</code> objects? If yes, how will it differ? In this case, yes, it might behave differently based on the game state. Therefore, the equivalence partitions are:</p>
+<ul>
+<li><code class="hljs inline no-lang" v-pre>PRE_GAME</code>: before the game starts, minefield does not exist yet</li>
+<li><code class="hljs inline no-lang" v-pre>READY</code>: a new minefield has been created and the app is waiting for the player’s first move</li>
+<li><code class="hljs inline no-lang" v-pre>IN_PLAY</code>: the current minefield is already in use</li>
+<li><code class="hljs inline no-lang" v-pre>WON</code>, <code class="hljs inline no-lang" v-pre>LOST</code>: let us assume that <code class="hljs inline no-lang" v-pre>newGame()</code> behaves the same way for these two values</li></ul></box>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider the <code class="hljs inline no-lang" v-pre>Logic</code> component of the Minesweeper application. What are the EPs for the <code class="hljs inline no-lang" v-pre>markCellAt(int x, int y)</code> method? The partitions in <strong>bold</strong> represent valid inputs.</p>
+<ul>
+<li><code class="hljs inline no-lang" v-pre>Logic</code>: PRE_GAME, <strong>READY</strong>, <strong>IN_PLAY</strong>, WON, LOST</li>
+<li><code class="hljs inline no-lang" v-pre>x</code>: [MIN_INT..-1] <strong>[0..(W-1)]</strong> [W..MAX_INT] <span class="dimmed">(assuming a minefield size of WxH)</span></li>
+<li><code class="hljs inline no-lang" v-pre>y</code>: [MIN_INT..-1] <strong>[0..(H-1)]</strong> [H..MAX_INT]</li>
+<li><code class="hljs inline no-lang" v-pre>Cell</code> at <code class="hljs inline no-lang" v-pre>(x,y)</code>: <strong>HIDDEN</strong>, MARKED, CLEARED</li></ul></box></div>
+<div></div></div></div>

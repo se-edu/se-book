@@ -4,6 +4,7 @@ pageNav: 3
 </frontmatter>
 
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
+<link rel="stylesheet" href="{{baseUrl}}/css/print.css">
 
 <div class="website-content">
 

@@ -1,432 +1,43 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.17.3">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SEforSDL - Error Handling: Assertions</title>
-  <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../../markbind/css/bootstrap-vue.min.css">
-  <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
-  <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
-  <link rel="stylesheet" href="../../markbind/css/octicons.css">
-  <link rel="stylesheet" href="../../markbind/css/codeblock-dark.min.css">
-  <link rel="stylesheet" href="../../markbind/css/markbind.min.css">
-  <script src="../../markbind/js/polyfill.min.js"></script>
-  <script src="../../markbind/js/vue.min.js"></script>
-  <script src="../../markbind/js/markbind.min.js"></script>
-  <script src="../../markbind/js/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
-  <link rel="stylesheet" href="/se-book/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
-  <link rel="stylesheet" href="../../markbind/layouts/default/styles.css">
-  <link rel="icon" href="/se-book/favicon.ico">
-</head>
-
-<body>
-  <div id="app">
-    <header>
-      <navbar placement="top" type="dark" class="temp-navbar">
-        <a slot="brand" href="https://se-education.org" title="SE-EDU" class="navbar-brand"><span><span aria-hidden="true" class="fas fa-chevron-circle-left"></span> <strong><strong>SE-EDU</strong></strong></span></a>
-        <li><a href="/se-book/index.html" class="nav-link"><span><strong>Home</strong></span></a></li>
-        <li><a href="/se-book/about/acknowledgements.html" class="nav-link"><span><strong>About</strong></span></a></li>
-        <li><a href="https://github.com/se-edu/se-book" class="nav-link"><span><span aria-hidden="true" class="fab fa-github"></span></span></a></li>
-        <li slot="right" class="nav-link">
-          <form class="navbar-form">
-            <searchbar placeholder="Search" algolia menu-align-right></searchbar>
-          </form>
-        </li>
-      </navbar>
-    </header>
-    <div id="flex-body">
-      <nav id="site-nav" class="navbar navbar-light bg-transparent">
-        <div class="border-right-grey nav-inner position-sticky slim-scroll">
-          <ul class="site-nav-list site-nav-list-root">
-            <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>About this book</strong>
-                <i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
-                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i>
-              </div>
-              <ul class="site-nav-dropdown-container site-nav-list">
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/about/acknowledgements.html">About</a></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/about/usage.html">How to use this book</a></div>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>Software engineering</strong>
-                <i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
-                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i>
-              </div>
-              <ul class="site-nav-dropdown-container site-nav-list">
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/softwareEngineering/index.html">Software engineering</a></div>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>Object-oriented programming</strong>
-                <i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
-                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i>
-              </div>
-              <ul class="site-nav-dropdown-container site-nav-list">
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/oop/index.html">Object-oriented programming</a></div>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>Requirements</strong>
-                <i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
-                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i>
-              </div>
-              <ul class="site-nav-dropdown-container site-nav-list">
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/requirements/index.html">Requirements</a></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/gatheringRequirements/index.html">Gathering requirements</a></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/specifyingRequirements/index.html">Specifying requirements</a></div>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>Design</strong>
-                <i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
-                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i>
-              </div>
-              <ul class="site-nav-dropdown-container site-nav-list">
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/design/index.html">Design</a></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/designFundamentals/index.html">Design fundamentals</a></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/modeling/index.html">Modeling</a></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/architecture/index.html">Architecture</a></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/designPatterns/index.html">Design patterns</a></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/designApproaches/index.html">Design approaches</a></div>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>Implementation</strong>
-                <i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
-                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i>
-              </div>
-              <ul class="site-nav-dropdown-container site-nav-list">
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/ides/index.html">IDEs</a></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/codeQuality/index.html">Code quality</a></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/refactoring/index.html">Refactoring</a></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/documentation/index.html">Documentation</a></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/errorHandling/index.html">Error handling</a></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/integration/index.html">Integration</a></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/reuse/index.html">Reuse</a></div>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>Quality assurance</strong>
-                <i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
-                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i>
-              </div>
-              <ul class="site-nav-dropdown-container site-nav-list">
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/qualityAssurance/index.html">Quality assurance</a></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/testing/index.html">Testing</a></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/testCaseDesign/index.html">Test case design</a></div>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>Project management</strong>
-                <i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
-                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i>
-              </div>
-              <ul class="site-nav-dropdown-container site-nav-list">
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/revisionControl/index.html">Revision control</a></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/projectPlanning/index.html">Project planning</a></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/teamwork/index.html">Teamwork</a></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/processModels/index.html">SDLC process models</a></div>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>Tools</strong>
-                <i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
-                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i>
-              </div>
-              <ul class="site-nav-dropdown-container site-nav-list">
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/uml/index.html">UML</a></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/intellij/index.html">IntelliJ IDEA</a></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/gitAndGithub/index.html">Git and GitHub</a></div>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>Principles</strong>
-                <i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
-                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i>
-              </div>
-              <ul class="site-nav-dropdown-container site-nav-list">
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/principles/index.html">Principles</a></div>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>Supplementary</strong>
-                <i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
-                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i>
-              </div>
-              <ul class="site-nav-dropdown-container site-nav-list">
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/cppToJava/index.html">C++ to Java</a></div>
-                </li>
-              </ul>
-            </li>
-            <li class="site-nav-custom-list-item site-nav-list-item-0"><strong><a href="/se-book/combined/exercises.html">Combined exercises</a></strong></li>
-            <li class="site-nav-custom-list-item site-nav-list-item-0"><strong><a href="/se-book/common/definitions.html">List of definitions</a></strong></li>
-            <li class="site-nav-custom-list-item site-nav-list-item-0"><strong><a href="/se-book/common/references.html">List of references</a></strong></li>
-            <li class="site-nav-custom-list-item site-nav-list-item-0"><strong><a href="/se-book/common/outcomes.html">List of learning outcomes</a></strong></li>
-            <li class="site-nav-custom-list-item site-nav-list-item-0"><strong><a href="/se-book/common/print.html">Printable version</a></strong></li>
-          </ul>
-        </div>
-      </nav>
-
-
-      <div id="content-wrapper">
-        <h1 id="software-engineering-for-self-directed-learners"><span id="software-engineering-for-self-directed-learners" class="anchor"></span><span class="text-dark"><small><strong><strong>Software Engineering for Self-Directed Learners »</strong></strong></small></span><a class="fa fa-anchor" href="#software-engineering-for-self-directed-learners" onclick="event.stopPropagation()"></a></h1>
-        <div>
-          <link rel="stylesheet" href="/se-book/css/textbook.css">
-          <div class="website-content" id="all">
-            <p><span class="dimmed"><strong><span>Implementation → Error Handling →
-                  </span></strong></span></p>
-            <div id="title">
-              <h1 id="assertions"><span id="assertions" class="anchor"></span><span>Assertions</span><a class="fa fa-anchor" href="#assertions" onclick="event.stopPropagation()"></a></h1>
-            </div>
-            <div id="main">
-              <div>
-                <div>
-                  <panel type="seamless" expanded id="what">
-                    <span slot="header" class="card-title">
-                      <div>
-                        <h4 id="what"><span id="what" class="anchor"></span><span>What</span><a class="fa fa-anchor" href="#what" onclick="event.stopPropagation()"></a></h4>
-                      </div>
-                    </span>
-                    <div class="indented">
-                      <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain assertions</span></span></span></span></p>
-                      <p></p>
-                      <p></p>
-                      <p></p>
-                      <div>
-                        <p><strong><em>Assertions</em> are used to define assumptions about the program state so that the runtime can verify them.</strong> An assertion failure indicates a possible bug in the code <span class="dimmed">because the code has resulted in a program state that violates an assumption about how the code <em>should</em> behave</span>.</p>
-                        <box>
-                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> An assertion can be used to express something like <em>when the execution comes to this point, the variable <code class="hljs inline no-lang" v-pre>v</code> cannot be null</em>.</p>
-                        </box>
-                        <p><strong>If the runtime detects an <em>assertion failure</em>, it typically takes some drastic action</strong> such as terminating the execution with an error message. This is because an assertion failure indicates a possible bug and the sooner the execution stops, the safer it is.</p>
-                        <box>
-                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In the Java code below, suppose you set an assertion that <code class="hljs inline no-lang" v-pre>timeout</code> returned by <code class="hljs inline no-lang" v-pre>Config.getTimeout()</code> is greater than <code class="hljs inline no-lang" v-pre>0</code>. Now, if <code class="hljs inline no-lang" v-pre>Config.getTimeout()</code> returns <code class="hljs inline no-lang" v-pre>-1</code> in a specific execution of this line, the runtime can detect it as an <em>assertion failure</em> -- i.e. an assumption about the expected behavior of the code turned out to be wrong which could potentially be the result of a bug -- and take some drastic action such as terminating the execution.</p>
-                          <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">int</span> timeout = Config.getTimeout(); 
-</span></code></pre>
-                        </box>
-                      </div>
-                      <div></div>
-                    </div>
-                  </panel>
-                </div>
-                <div>
-                  <panel type="seamless" expanded id="how">
-                    <span slot="header" class="card-title">
-                      <div>
-                        <h4 id="how"><span id="how" class="anchor"></span><span>How</span><a class="fa fa-anchor" href="#how" onclick="event.stopPropagation()"></a></h4>
-                      </div>
-                    </span>
-                    <div class="indented">
-                      <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can use assertions</span></span></span></span></p>
-                      <p></p>
-                      <p></p>
-                      <p></p>
-                      <div>
-                        <p>Use the <code class="hljs inline no-lang" v-pre>assert</code> keyword to define assertions.</p>
-                        <box>
-                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This assertion will fail with the message <code class="hljs inline no-lang" v-pre>x should be 0</code> if <code class="hljs inline no-lang" v-pre>x</code> is not 0 at this point.</p>
-                          <pre><code class="hljs java" v-pre><span>x = getX();
-</span><span><span class="hljs-keyword">assert</span> x == <span class="hljs-number">0</span> : <span class="hljs-string">&quot;x should be 0&quot;</span>;
-</span><span>...
-</span></code></pre>
-                        </box>
-                        <p><strong>Assertions can be disabled without modifying the code.</strong></p>
-                        <box>
-                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> <code class="hljs inline no-lang" v-pre>java -enableassertions HelloWorld</code> (or <code class="hljs inline no-lang" v-pre>java -ea HelloWorld</code>) will run <code class="hljs inline no-lang" v-pre>HelloWorld</code> with assertions enabled while <code class="hljs inline no-lang" v-pre>java -disableassertions HelloWorld</code> will run it without verifying assertions.</p>
-                        </box>
-                        <box type="important">
-                          <p><strong>Java disables assertions by default.</strong> This could create a situation where you think all assertions are being verified as <code class="hljs inline no-lang" v-pre>true</code> while in fact they are not being verified at all. Therefore, remember to enable assertions when you run the program if you want them to be in effect.</p>
-                        </box>
-                        <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Enable assertions in Intellij (<a href="https://se-education.org/guides/tutorials/intellijUsefulSettings.html">how?</a>) and get an assertion to fail temporarily (e.g. insert an <code class="hljs inline no-lang" v-pre>assert false</code> into the code temporarily) to confirm assertions are being verified.</p>
-                        <p><span><span aria-hidden="true" class="fas fa-info-circle"></span></span> <strong>Java <code class="hljs inline no-lang" v-pre>assert</code> vs JUnit assertions: They are similar in purpose but JUnit assertions are more powerful and customized for testing.</strong> In addition, JUnit assertions are not disabled by default. We recommend you use JUnit assertions in test code and Java <code class="hljs inline no-lang" v-pre>assert</code> in functional code.</p>
-                      </div>
-                      <div>
-                        <div>
-                          <panel expanded><template slot="header">
-                              <p><span><span aria-hidden="true" class="fas fa-paperclip"></span></span> Resources</p>
-                            </template>
-                            <p><strong>Tutorials</strong>:</p>
-                            <ul>
-                              <li><a href="https://www.javatpoint.com/assertion-in-java"><strong>Java Assertions</strong></a> -- a simple tutorial from <em><a href="http://javatpoint.com">javatpoint.com</a></em></li>
-                              <li><a href="http://docs.oracle.com/javase/8/docs/technotes/guides/language/assert.html"><strong>Programming with Assertions</strong> (first half)</a> -- a more detailed tutorial from <em>Oracle</em></li>
-                            </ul>
-                            <p><strong>Best practices</strong>:</p>
-                            <ul>
-                              <li><a href="http://docs.oracle.com/javase/8/docs/technotes/guides/language/assert.html#usage"><strong>Programming with Assertions</strong> (second half)</a> -- <em>from Oracle</em> (also listed above as a tutorial) contains some best practices towards the end of the article.</li>
-                            </ul>
-                          </panel>
-                        </div>
-                      </div>
-                    </div>
-                  </panel>
-                </div>
-                <div>
-                  <panel type="seamless" expanded id="when">
-                    <span slot="header" class="card-title">
-                      <div>
-                        <h4 id="when"><span id="when" class="anchor"></span><span>When</span><a class="fa fa-anchor" href="#when" onclick="event.stopPropagation()"></a></h4>
-                      </div>
-                    </span>
-                    <div class="indented">
-                      <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can use assertions optimally</span></span></span></span></p>
-                      <p></p>
-                      <p></p>
-                      <p></p>
-                      <div>
-                        <p><strong>It is recommended that assertions be used liberally in the code.</strong> Their impact on performance is considered low and worth the additional safety they provide.</p>
-                        <p><strong>Do not use assertions to do <em>work</em></strong> because assertions can be disabled. If not, your program will stop working when assertions are not enabled.</p>
-                        <box>
-                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The code below will not invoke the <code class="hljs inline no-lang" v-pre>writeFile()</code> method when assertions are disabled. <span class="dimmed">If that method is performing some work that is necessary for your program, your program will not work correctly when assertions are disabled.</span></p>
-                          <pre><code class="hljs java" v-pre><span>...
-</span><span><span class="hljs-function"><span class="hljs-keyword">assert</span> <span class="hljs-title">writeFile</span><span class="hljs-params">()</span> : &quot;File writing is supposed to return <span class="hljs-keyword">true</span>&quot;</span>;
-</span></code></pre>
-                        </box>
-                        <p><strong>Assertions are suitable for verifying assumptions about <em>Internal Invariants</em>, <em>Control-Flow Invariants</em>,
-                            <em>Preconditions</em>, <em>Postconditions</em>, and <em>Class Invariants</em>.</strong> Refer to [<a href="http://docs.oracle.com/javase/8/docs/technotes/guides/language/assert.html#usage">Programming with Assertions (second half)</a>] to learn more.</p>
-                        <p><strong>Exceptions and assertions are two complementary ways of handling errors in software but they serve different purposes.</strong> Therefore, both assertions and exceptions should be used in code.</p>
-                        <ul>
-                          <li>The raising of an exception indicates an unusual condition created by the user <span class="dimmed">(e.g. user inputs an unacceptable input)</span> or the environment <span class="dimmed">(e.g., a file needed for the program is missing)</span>.</li>
-                          <li>An assertion failure indicates the programmer made a mistake in the code <span class="dimmed">(e.g., a null value is returned from a method that is not supposed to return null under any circumstances)</span>.</li>
-                        </ul>
-                      </div>
-                      <div>
-                        <div>
-                          <panel expandable class="algolia-no-index"><template slot="header">
-                              <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
-                            </template>
-                            <div>
-                              <panel class="algolia-no-index"><template slot="header">
-                                  <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Assertion failure in Calculator</p>
-                                </template>
-                                <question>
-                                  <p>A Calculator program crashes with an ‘assertion failure’ message when you try to find the square root of a negative number.</p>
-                                  <ul radio-group="f7dad" class="radio-list">
-                                    <li class="radio-list-item"><label><input class="radio-list-input" name="f7dad" type="radio"> a. This is a correct use of assertions.</label></li>
-                                    <li class="radio-list-item"><label><input class="radio-list-input" name="f7dad" type="radio"> b. The application should have terminated with an exception instead.</label></li>
-                                    <li class="radio-list-item"><label><input class="radio-list-input" name="f7dad" type="radio"> c. The program has a bug.</label></li>
-                                    <li class="radio-list-item"><label><input class="radio-list-input" name="f7dad" type="radio"> d. All statements above are incorrect.</label></li>
-                                  </ul>
-                                  <div slot="answer" class="algolia-no-index">
-                                    <p>(c)</p>
-                                    <p>Explanation: An assertion failure indicates a bug in the code. (b) is not acceptable because of the word &quot;terminated&quot;. The application should not fail at all for this input. But it could have used an exception to handle the situation internally.</p>
-                                  </div>
-                                </question>
-                              </panel>
-                            </div>
-                            <div>
-                              <panel class="algolia-no-index"><template slot="header">
-                                  <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Statement about exceptions and assertions</p>
-                                </template>
-                                <question>
-                                  <p>Which statements are correct?</p>
-                                  <ul class="contains-task-list">
-                                    <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> a. Use assertions to indicate that the programmer messed up; use exceptions to indicate that the user or the environment messed up.</li>
-                                    <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> b. Use exceptions to indicate that the programmer messed up; use assertions to indicate that the user or the environment messed up.</li>
-                                  </ul>
-                                  <div slot="answer" class="algolia-no-index">
-                                    <p>(a)</p>
-                                  </div>
-                                </question>
-                              </panel>
-                            </div>
-                          </panel>
-                        </div>
-                      </div>
-                    </div>
-                  </panel>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i>
-      </div>
-    </div>
-    <footer>
-
-      <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.3</a>, generated on Sat, 1 May 2021, 12:33:13 GMT+8]</small>
-      </div>
-    </footer>
-  </div>
-</body>
-<script src="../../markbind/js/bootstrap-utility.min.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="MarkBind 3.0.3">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SEforSDL - Error Handling: Assertions</title>
+    <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../markbind/css/bootstrap-vue.min.css">
+    <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+    <link rel="stylesheet" href="../../markbind/css/octicons.css">
+    <link rel="stylesheet" href="../../markbind/css/codeblock-light.min.css"><link rel="stylesheet" href="../../markbind/css/markbind.min.css"><script src="../../markbind/js/polyfill.min.js"></script>
+    <script src="../../markbind/js/vue.min.js"></script>
+    <script src="../../markbind/js/markbind.min.js"></script>
+    <script src="index.page-vue-render.js"></script>
+    <script src="../../markbind/js/jquery.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/se-book/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
+    
+  <link rel="stylesheet" href="/se-book/css/textbook.css">
+<link rel="icon" href="/se-book/favicon.ico"></head>
 <script>
   const baseUrl = '/se-book'
-  MarkBind.setupWithSearch()
 </script>
-<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<body >
+<div id="app" data-server-rendered="true"><header fixed=""><div placement="top" data-v-15113a2f><nav class="navbar navbar-expand-md navbar-dark bg-dark" data-v-15113a2f><div class="container-fluid" data-v-15113a2f><div class="navbar-brand" data-v-15113a2f><a href="https://se-education.org" title="SE-EDU" class="navbar-brand" data-v-15113a2f><span data-v-15113a2f><span aria-hidden="true" class="fas fa-chevron-circle-left" data-v-15113a2f></span> <strong data-v-15113a2f><strong data-v-15113a2f>SE-EDU</strong></strong></span></a></div> <button type="button" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-v-15113a2f><span class="navbar-toggler-icon" data-v-15113a2f></span> </button> <div class="navbar-collapse collapse" data-v-15113a2f><ul class="navbar-nav mr-auto mt-2 mt-lg-0" data-v-15113a2f> <li data-v-15113a2f><a href="/se-book/index.html" class="nav-link" data-v-15113a2f><span data-v-15113a2f><strong data-v-15113a2f>Home</strong></span></a></li> <li data-v-15113a2f><a href="/se-book/about/acknowledgements.html" class="nav-link" data-v-15113a2f><span data-v-15113a2f><strong data-v-15113a2f>About</strong></span></a></li> <li data-v-15113a2f><a href="https://github.com/se-edu/se-book" class="nav-link" data-v-15113a2f><span data-v-15113a2f><span aria-hidden="true" class="fab fa-github" data-v-15113a2f></span></span></a></li></ul> <ul class="navbar-nav navbar-right" data-v-15113a2f><li class="nav-link" data-v-15113a2f><form class="navbar-form" data-v-15113a2f><div style="position:relative;"><input id="algolia-search-input" type="text" placeholder="Search" autocomplete="off" value="" class="form-control"> <ul class="dropdown-menu search-dropdown-menu dropdown-menu-right"></ul></div></form></li></ul></div></div></nav> <div class="lower-navbar-container" style="display:none;" data-v-15113a2f><!----> <!----></div></div></header> <div id="flex-body"><nav id="site-nav" class="fixed-header-padding" data-v-e8c82f88><div class="nav-component slim-scroll" data-v-e8c82f88><div class="site-nav-root"><ul class="site-nav-list site-nav-list-root" data-v-e8c82f88><li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e8c82f88><strong data-v-e8c82f88>About this book</strong> <i onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();" class="site-nav-dropdown-btn-icon" data-v-e8c82f88><span aria-hidden="true" class="glyphicon glyphicon-menu-down" data-v-e8c82f88></span></i></div><ul class="site-nav-dropdown-container site-nav-list" data-v-e8c82f88><li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/about/acknowledgements.html" data-v-e8c82f88>About</a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/about/usage.html" data-v-e8c82f88>How to use this book</a></div></li></ul></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e8c82f88><strong data-v-e8c82f88>Software engineering</strong> <i onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();" class="site-nav-dropdown-btn-icon" data-v-e8c82f88><span aria-hidden="true" class="glyphicon glyphicon-menu-down" data-v-e8c82f88></span></i></div><ul class="site-nav-dropdown-container site-nav-list" data-v-e8c82f88><li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/softwareEngineering/index.html" data-v-e8c82f88>Software engineering</a></div></li></ul></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e8c82f88><strong data-v-e8c82f88>Object-oriented programming</strong> <i onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();" class="site-nav-dropdown-btn-icon" data-v-e8c82f88><span aria-hidden="true" class="glyphicon glyphicon-menu-down" data-v-e8c82f88></span></i></div><ul class="site-nav-dropdown-container site-nav-list" data-v-e8c82f88><li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/oop/index.html" data-v-e8c82f88>Object-oriented programming</a></div></li></ul></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e8c82f88><strong data-v-e8c82f88>Requirements</strong> <i onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();" class="site-nav-dropdown-btn-icon" data-v-e8c82f88><span aria-hidden="true" class="glyphicon glyphicon-menu-down" data-v-e8c82f88></span></i></div><ul class="site-nav-dropdown-container site-nav-list" data-v-e8c82f88><li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/requirements/index.html" data-v-e8c82f88>Requirements</a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/gatheringRequirements/index.html" data-v-e8c82f88>Gathering requirements</a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/specifyingRequirements/index.html" data-v-e8c82f88>Specifying requirements</a></div></li></ul></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e8c82f88><strong data-v-e8c82f88>Design</strong> <i onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();" class="site-nav-dropdown-btn-icon" data-v-e8c82f88><span aria-hidden="true" class="glyphicon glyphicon-menu-down" data-v-e8c82f88></span></i></div><ul class="site-nav-dropdown-container site-nav-list" data-v-e8c82f88><li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/design/index.html" data-v-e8c82f88>Design</a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/designFundamentals/index.html" data-v-e8c82f88>Design fundamentals</a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/modeling/index.html" data-v-e8c82f88>Modeling</a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/architecture/index.html" data-v-e8c82f88>Architecture</a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/designPatterns/index.html" data-v-e8c82f88>Design patterns</a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/designApproaches/index.html" data-v-e8c82f88>Design approaches</a></div></li></ul></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e8c82f88><strong data-v-e8c82f88>Implementation</strong> <i onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();" class="site-nav-dropdown-btn-icon" data-v-e8c82f88><span aria-hidden="true" class="glyphicon glyphicon-menu-down" data-v-e8c82f88></span></i></div><ul class="site-nav-dropdown-container site-nav-list" data-v-e8c82f88><li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/ides/index.html" data-v-e8c82f88>IDEs</a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/codeQuality/index.html" data-v-e8c82f88>Code quality</a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/refactoring/index.html" data-v-e8c82f88>Refactoring</a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/documentation/index.html" data-v-e8c82f88>Documentation</a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/errorHandling/index.html" data-v-e8c82f88>Error handling</a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/integration/index.html" data-v-e8c82f88>Integration</a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/reuse/index.html" data-v-e8c82f88>Reuse</a></div></li></ul></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e8c82f88><strong data-v-e8c82f88>Quality assurance</strong> <i onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();" class="site-nav-dropdown-btn-icon" data-v-e8c82f88><span aria-hidden="true" class="glyphicon glyphicon-menu-down" data-v-e8c82f88></span></i></div><ul class="site-nav-dropdown-container site-nav-list" data-v-e8c82f88><li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/qualityAssurance/index.html" data-v-e8c82f88>Quality assurance</a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/testing/index.html" data-v-e8c82f88>Testing</a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/testCaseDesign/index.html" data-v-e8c82f88>Test case design</a></div></li></ul></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e8c82f88><strong data-v-e8c82f88>Project management</strong> <i onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();" class="site-nav-dropdown-btn-icon" data-v-e8c82f88><span aria-hidden="true" class="glyphicon glyphicon-menu-down" data-v-e8c82f88></span></i></div><ul class="site-nav-dropdown-container site-nav-list" data-v-e8c82f88><li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/revisionControl/index.html" data-v-e8c82f88>Revision control</a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/projectPlanning/index.html" data-v-e8c82f88>Project planning</a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/teamwork/index.html" data-v-e8c82f88>Teamwork</a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/processModels/index.html" data-v-e8c82f88>SDLC process models</a></div></li></ul></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e8c82f88><strong data-v-e8c82f88>Tools</strong> <i onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();" class="site-nav-dropdown-btn-icon" data-v-e8c82f88><span aria-hidden="true" class="glyphicon glyphicon-menu-down" data-v-e8c82f88></span></i></div><ul class="site-nav-dropdown-container site-nav-list" data-v-e8c82f88><li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/uml/index.html" data-v-e8c82f88>UML</a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/intellij/index.html" data-v-e8c82f88>IntelliJ IDEA</a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/gitAndGithub/index.html" data-v-e8c82f88>Git and GitHub</a></div></li></ul></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e8c82f88><strong data-v-e8c82f88>Principles</strong> <i onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();" class="site-nav-dropdown-btn-icon" data-v-e8c82f88><span aria-hidden="true" class="glyphicon glyphicon-menu-down" data-v-e8c82f88></span></i></div><ul class="site-nav-dropdown-container site-nav-list" data-v-e8c82f88><li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/principles/index.html" data-v-e8c82f88>Principles</a></div></li></ul></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e8c82f88><strong data-v-e8c82f88>Supplementary</strong> <i onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();" class="site-nav-dropdown-btn-icon" data-v-e8c82f88><span aria-hidden="true" class="glyphicon glyphicon-menu-down" data-v-e8c82f88></span></i></div><ul class="site-nav-dropdown-container site-nav-list" data-v-e8c82f88><li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/cppToJava/index.html" data-v-e8c82f88>C++ to Java</a></div></li></ul></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e8c82f88><a href="/se-book/combined/exercises.html" data-v-e8c82f88><strong data-v-e8c82f88>Combined exercises</strong></a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e8c82f88><a href="/se-book/common/definitions.html" data-v-e8c82f88><strong data-v-e8c82f88>List of definitions</strong></a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e8c82f88><a href="/se-book/common/references.html" data-v-e8c82f88><strong data-v-e8c82f88>List of references</strong></a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e8c82f88><a href="/se-book/common/outcomes.html" data-v-e8c82f88><strong data-v-e8c82f88>List of learning outcomes</strong></a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e8c82f88><a href="/se-book/common/print.html" data-v-e8c82f88><strong data-v-e8c82f88>Printable version</strong></a></div></li> <!----></ul></div></div> <!----></nav> <div id="content-wrapper" class="fixed-header-padding"><h1 id="software-engineering-for-self-directed-learners"><span id="software-engineering-for-self-directed-learners" class="anchor"></span><span class="text-dark"><small><strong><strong>Software Engineering for Self-Directed Learners »</strong></strong></small></span><a href="#software-engineering-for-self-directed-learners" onclick="event.stopPropagation()" class="fa fa-anchor"></a></h1> <p></p><div><link rel="stylesheet" href="/se-book/css/textbook.css"> <div id="all" class="website-content"><p><span class="dimmed"><strong><span>Implementation → Error Handling →
+</span></strong></span></p> <div id="title"><h1 id="assertions"><span id="assertions" class="anchor"></span><span>Assertions</span></h1></div> <div id="main"><div><div><div id="-2" expanded="" class="card-container" data-v-5681bde8><div class="card expandable-card border-0" data-v-5681bde8><div class="card-header header-toggle bg-white border-0" data-v-5681bde8><div class="caret-wrapper" data-v-5681bde8><span class="glyphicon glyphicon-chevron-down" data-v-5681bde8></span></div> <div class="header-wrapper card-title bg-white" data-v-5681bde8><span class="card-title" data-v-5681bde8><div data-v-5681bde8><h4 id="-2" data-v-5681bde8><span id="-2" class="anchor" data-v-5681bde8></span><span data-v-5681bde8>What</span><a href="#-2" onclick="event.stopPropagation()" class="fa fa-anchor" data-v-5681bde8></a></h4></div></span></div> <div class="button-wrapper" data-v-5681bde8><button type="button" class="collapse-button btn btn-outline-secondary" style="display:none;" data-v-5681bde8><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down opened"></span></button> <button type="button" class="close-button btn btn-outline-secondary seamless-button" data-v-5681bde8><span aria-hidden="true" class="glyphicon glyphicon-remove" data-v-5681bde8></span></button> <button type="button" class="popup-button btn btn-outline-secondary seamless-button" style="display:none;" data-v-5681bde8><span aria-hidden="true" class="glyphicon glyphicon-new-window" data-v-5681bde8></span></button></div></div> <div class="card-collapse" data-v-5681bde8><div class="card-body" data-v-5681bde8> <div class="indented" data-v-5681bde8><p data-v-5681bde8><span class="badge badge-light" data-v-5681bde8><span data-v-5681bde8><span class="dimmed" data-v-5681bde8><span data-v-5681bde8><span data-v-5681bde8><span aria-hidden="true" class="fas fa-trophy" data-v-5681bde8></span></span> Can explain assertions</span></span></span></span></p><p data-v-5681bde8></p><p data-v-5681bde8></p> <p data-v-5681bde8></p> <div data-v-5681bde8><p data-v-5681bde8><strong data-v-5681bde8><em data-v-5681bde8>Assertions</em> are used to define assumptions about the program state so that the runtime can verify them.</strong> An assertion failure indicates a possible bug in the code <span class="dimmed" data-v-5681bde8>because the code has resulted in a program state that violates an assumption about how the code <em data-v-5681bde8>should</em> behave</span>.</p> <div class="alert box-container alert-default" data-v-7d17494f><!----> <div class="header-and-body" data-v-7d17494f><!----> <div class="box-body-wrapper" data-v-7d17494f><!----> <!----> <div class="contents" data-v-7d17494f><p data-v-7d17494f><span data-v-7d17494f><span aria-hidden="true" class="fas fa-cube" data-v-7d17494f></span></span> An assertion can be used to express something like <em data-v-7d17494f>when the execution comes to this point, the variable <code class="hljs inline no-lang" data-v-7d17494f>v</code> cannot be null</em>.</p></div> <!----></div></div></div> <p data-v-5681bde8><strong data-v-5681bde8>If the runtime detects an <em data-v-5681bde8>assertion failure</em>, it typically takes some drastic action</strong> such as terminating the execution with an error message. This is because an assertion failure indicates a possible bug and the sooner the execution stops, the safer it is.</p> <div class="alert box-container alert-default" data-v-7d17494f><!----> <div class="header-and-body" data-v-7d17494f><!----> <div class="box-body-wrapper" data-v-7d17494f><!----> <!----> <div class="contents" data-v-7d17494f><p data-v-7d17494f><span data-v-7d17494f><span aria-hidden="true" class="fas fa-cube" data-v-7d17494f></span></span> In the Java code below, suppose you set an assertion that <code class="hljs inline no-lang" data-v-7d17494f>timeout</code> returned by <code class="hljs inline no-lang" data-v-7d17494f>Config.getTimeout()</code> is greater than <code class="hljs inline no-lang" data-v-7d17494f>0</code>. Now, if <code class="hljs inline no-lang" data-v-7d17494f>Config.getTimeout()</code> returns <code class="hljs inline no-lang" data-v-7d17494f>-1</code> in a specific execution of this line, the runtime can detect it as an <em data-v-7d17494f>assertion failure</em> -- i.e. an assumption about the expected behavior of the code turned out to be wrong which could potentially be the result of a bug -- and take some drastic action such as terminating the execution.</p> <pre data-v-7d17494f><code class="hljs java" data-v-7d17494f><span data-v-7d17494f><span class="hljs-keyword" data-v-7d17494f>int</span> timeout = Config.getTimeout(); 
+</span></code></pre></div> <!----></div></div></div></div> <div data-v-5681bde8></div></div> <!----> <button type="button" class="collapse-button btn btn-outline-secondary" data-v-5681bde8><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down opened"></span></button></div> <hr style="display:;" data-v-5681bde8></div> <!----></div></div></div> <div><div id="-3" expanded="" class="card-container" data-v-5681bde8><div class="card expandable-card border-0" data-v-5681bde8><div class="card-header header-toggle bg-white border-0" data-v-5681bde8><div class="caret-wrapper" data-v-5681bde8><span class="glyphicon glyphicon-chevron-down" data-v-5681bde8></span></div> <div class="header-wrapper card-title bg-white" data-v-5681bde8><span class="card-title" data-v-5681bde8><div data-v-5681bde8><h4 id="-3" data-v-5681bde8><span id="-3" class="anchor" data-v-5681bde8></span><span data-v-5681bde8>How</span><a href="#-3" onclick="event.stopPropagation()" class="fa fa-anchor" data-v-5681bde8></a></h4></div></span></div> <div class="button-wrapper" data-v-5681bde8><button type="button" class="collapse-button btn btn-outline-secondary" style="display:none;" data-v-5681bde8><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down opened"></span></button> <button type="button" class="close-button btn btn-outline-secondary seamless-button" data-v-5681bde8><span aria-hidden="true" class="glyphicon glyphicon-remove" data-v-5681bde8></span></button> <button type="button" class="popup-button btn btn-outline-secondary seamless-button" style="display:none;" data-v-5681bde8><span aria-hidden="true" class="glyphicon glyphicon-new-window" data-v-5681bde8></span></button></div></div> <div class="card-collapse" data-v-5681bde8><div class="card-body" data-v-5681bde8> <div class="indented" data-v-5681bde8><p data-v-5681bde8><span class="badge badge-light" data-v-5681bde8><span data-v-5681bde8><span class="dimmed" data-v-5681bde8><span data-v-5681bde8><span data-v-5681bde8><span aria-hidden="true" class="fas fa-trophy" data-v-5681bde8></span></span> Can use assertions</span></span></span></span></p><p data-v-5681bde8></p><p data-v-5681bde8></p> <p data-v-5681bde8></p> <div data-v-5681bde8><p data-v-5681bde8>Use the <code class="hljs inline no-lang" data-v-5681bde8>assert</code> keyword to define assertions.</p> <div class="alert box-container alert-default" data-v-7d17494f><!----> <div class="header-and-body" data-v-7d17494f><!----> <div class="box-body-wrapper" data-v-7d17494f><!----> <!----> <div class="contents" data-v-7d17494f><p data-v-7d17494f><span data-v-7d17494f><span aria-hidden="true" class="fas fa-cube" data-v-7d17494f></span></span> This assertion will fail with the message <code class="hljs inline no-lang" data-v-7d17494f>x should be 0</code> if <code class="hljs inline no-lang" data-v-7d17494f>x</code> is not 0 at this point.</p> <pre data-v-7d17494f><code class="hljs java" data-v-7d17494f><span data-v-7d17494f>x = getX();
+</span><span data-v-7d17494f><span class="hljs-keyword" data-v-7d17494f>assert</span> x == <span class="hljs-number" data-v-7d17494f>0</span> : <span class="hljs-string" data-v-7d17494f>&quot;x should be 0&quot;</span>;
+</span><span data-v-7d17494f>...
+</span></code></pre></div> <!----></div></div></div> <p data-v-5681bde8><strong data-v-5681bde8>Assertions can be disabled without modifying the code.</strong></p> <div class="alert box-container alert-default" data-v-7d17494f><!----> <div class="header-and-body" data-v-7d17494f><!----> <div class="box-body-wrapper" data-v-7d17494f><!----> <!----> <div class="contents" data-v-7d17494f><p data-v-7d17494f><span data-v-7d17494f><span aria-hidden="true" class="fas fa-cube" data-v-7d17494f></span></span> <code class="hljs inline no-lang" data-v-7d17494f>java -enableassertions HelloWorld</code> (or <code class="hljs inline no-lang" data-v-7d17494f>java -ea HelloWorld</code>) will run <code class="hljs inline no-lang" data-v-7d17494f>HelloWorld</code> with assertions enabled while <code class="hljs inline no-lang" data-v-7d17494f>java -disableassertions HelloWorld</code> will run it without verifying assertions.</p></div> <!----></div></div></div> <div class="alert box-container alert-danger" data-v-7d17494f><!----> <div class="header-and-body" data-v-7d17494f><!----> <div class="box-body-wrapper" data-v-7d17494f><div class="icon-wrapper" data-v-7d17494f><i class="fas fa-flag" data-v-7d17494f></i></div> <!----> <div class="contents" data-v-7d17494f><p data-v-7d17494f><strong data-v-7d17494f>Java disables assertions by default.</strong> This could create a situation where you think all assertions are being verified as <code class="hljs inline no-lang" data-v-7d17494f>true</code> while in fact they are not being verified at all. Therefore, remember to enable assertions when you run the program if you want them to be in effect.</p></div> <!----></div></div></div> <p data-v-5681bde8><span class="badge badge-pill badge-warning" data-v-5681bde8><span aria-hidden="true" class="fas fa-lightbulb" data-v-5681bde8></span></span> Enable assertions in Intellij (<a href="https://se-education.org/guides/tutorials/intellijUsefulSettings.html" data-v-5681bde8>how?</a>) and get an assertion to fail temporarily (e.g. insert an <code class="hljs inline no-lang" data-v-5681bde8>assert false</code> into the code temporarily) to confirm assertions are being verified.</p> <p data-v-5681bde8><span data-v-5681bde8><span aria-hidden="true" class="fas fa-info-circle" data-v-5681bde8></span></span> <strong data-v-5681bde8>Java <code class="hljs inline no-lang" data-v-5681bde8>assert</code> vs JUnit assertions: They are similar in purpose but JUnit assertions are more powerful and customized for testing.</strong> In addition, JUnit assertions are not disabled by default. We recommend you use JUnit assertions in test code and Java <code class="hljs inline no-lang" data-v-5681bde8>assert</code> in functional code.</p></div> <div data-v-5681bde8><div data-v-5681bde8><div expanded="" class="card-container" data-v-5681bde8><div class="card expandable-card" data-v-5681bde8><div class="card-header header-toggle bg-light" data-v-5681bde8><div class="caret-wrapper" data-v-5681bde8><!----></div> <div class="header-wrapper card-title bg-light" data-v-5681bde8><p data-v-5681bde8><span data-v-5681bde8><span aria-hidden="true" class="fas fa-paperclip" data-v-5681bde8></span></span> Resources</p></div> <div class="button-wrapper" data-v-5681bde8><button type="button" class="collapse-button btn btn-outline-secondary" data-v-5681bde8><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down opened"></span></button> <button type="button" class="close-button btn btn-outline-secondary" data-v-5681bde8><span aria-hidden="true" class="glyphicon glyphicon-remove" data-v-5681bde8></span></button> <button type="button" class="popup-button btn btn-outline-secondary" style="display:none;" data-v-5681bde8><span aria-hidden="true" class="glyphicon glyphicon-new-window" data-v-5681bde8></span></button></div></div> <div class="card-collapse" data-v-5681bde8><div class="card-body" data-v-5681bde8> <p data-v-5681bde8><strong data-v-5681bde8>Tutorials</strong>:</p> <ul data-v-5681bde8><li data-v-5681bde8><a href="https://www.javatpoint.com/assertion-in-java" data-v-5681bde8><strong data-v-5681bde8>Java Assertions</strong></a> -- a simple tutorial from <em data-v-5681bde8><a href="http://javatpoint.com" data-v-5681bde8>javatpoint.com</a></em></li> <li data-v-5681bde8><a href="http://docs.oracle.com/javase/8/docs/technotes/guides/language/assert.html" data-v-5681bde8><strong data-v-5681bde8>Programming with Assertions</strong> (first half)</a> -- a more detailed tutorial from <em data-v-5681bde8>Oracle</em></li></ul> <p data-v-5681bde8><strong data-v-5681bde8>Best practices</strong>:</p> <ul data-v-5681bde8><li data-v-5681bde8><a href="http://docs.oracle.com/javase/8/docs/technotes/guides/language/assert.html#usage" data-v-5681bde8><strong data-v-5681bde8>Programming with Assertions</strong> (second half)</a> -- <em data-v-5681bde8>from Oracle</em> (also listed above as a tutorial) contains some best practices towards the end of the article.</li></ul> <!----> <button type="button" class="collapse-button btn btn-outline-secondary" data-v-5681bde8><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down opened"></span></button></div> <hr style="display:none;" data-v-5681bde8></div> <!----></div></div></div></div></div> <!----> <button type="button" class="collapse-button btn btn-outline-secondary" data-v-5681bde8><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down opened"></span></button></div> <hr style="display:;" data-v-5681bde8></div> <!----></div></div></div> <div><div id="-4" expanded="" class="card-container" data-v-5681bde8><div class="card expandable-card border-0" data-v-5681bde8><div class="card-header header-toggle bg-white border-0" data-v-5681bde8><div class="caret-wrapper" data-v-5681bde8><span class="glyphicon glyphicon-chevron-down" data-v-5681bde8></span></div> <div class="header-wrapper card-title bg-white" data-v-5681bde8><span class="card-title" data-v-5681bde8><div data-v-5681bde8><h4 id="-4" data-v-5681bde8><span id="-4" class="anchor" data-v-5681bde8></span><span data-v-5681bde8>When</span><a href="#-4" onclick="event.stopPropagation()" class="fa fa-anchor" data-v-5681bde8></a></h4></div></span></div> <div class="button-wrapper" data-v-5681bde8><button type="button" class="collapse-button btn btn-outline-secondary" style="display:none;" data-v-5681bde8><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down opened"></span></button> <button type="button" class="close-button btn btn-outline-secondary seamless-button" data-v-5681bde8><span aria-hidden="true" class="glyphicon glyphicon-remove" data-v-5681bde8></span></button> <button type="button" class="popup-button btn btn-outline-secondary seamless-button" style="display:none;" data-v-5681bde8><span aria-hidden="true" class="glyphicon glyphicon-new-window" data-v-5681bde8></span></button></div></div> <div class="card-collapse" data-v-5681bde8><div class="card-body" data-v-5681bde8> <div class="indented" data-v-5681bde8><p data-v-5681bde8><span class="badge badge-light" data-v-5681bde8><span data-v-5681bde8><span class="dimmed" data-v-5681bde8><span data-v-5681bde8><span data-v-5681bde8><span aria-hidden="true" class="fas fa-trophy" data-v-5681bde8></span></span> Can use assertions optimally</span></span></span></span></p><p data-v-5681bde8></p><p data-v-5681bde8></p> <p data-v-5681bde8></p> <div data-v-5681bde8><p data-v-5681bde8><strong data-v-5681bde8>It is recommended that assertions be used liberally in the code.</strong> Their impact on performance is considered low and worth the additional safety they provide.</p> <p data-v-5681bde8><strong data-v-5681bde8>Do not use assertions to do <em data-v-5681bde8>work</em></strong> because assertions can be disabled. If not, your program will stop working when assertions are not enabled.</p> <div class="alert box-container alert-default" data-v-7d17494f><!----> <div class="header-and-body" data-v-7d17494f><!----> <div class="box-body-wrapper" data-v-7d17494f><!----> <!----> <div class="contents" data-v-7d17494f><p data-v-7d17494f><span data-v-7d17494f><span aria-hidden="true" class="fas fa-cube" data-v-7d17494f></span></span> The code below will not invoke the <code class="hljs inline no-lang" data-v-7d17494f>writeFile()</code> method when assertions are disabled. <span class="dimmed" data-v-7d17494f>If that method is performing some work that is necessary for your program, your program will not work correctly when assertions are disabled.</span></p> <pre data-v-7d17494f><code class="hljs java" data-v-7d17494f><span data-v-7d17494f>...
+</span><span data-v-7d17494f><span class="hljs-function" data-v-7d17494f><span class="hljs-keyword" data-v-7d17494f>assert</span> <span class="hljs-title" data-v-7d17494f>writeFile</span><span class="hljs-params" data-v-7d17494f>()</span> : &quot;File writing is supposed to return <span class="hljs-keyword" data-v-7d17494f>true</span>&quot;</span>;
+</span></code></pre></div> <!----></div></div></div> <p data-v-5681bde8><strong data-v-5681bde8>Assertions are suitable for verifying assumptions about <em data-v-5681bde8>Internal Invariants</em>, <em data-v-5681bde8>Control-Flow Invariants</em>,
+<em data-v-5681bde8>Preconditions</em>, <em data-v-5681bde8>Postconditions</em>, and <em data-v-5681bde8>Class Invariants</em>.</strong> Refer to [<a href="http://docs.oracle.com/javase/8/docs/technotes/guides/language/assert.html#usage" data-v-5681bde8>Programming with Assertions (second half)</a>] to learn more.</p> <p data-v-5681bde8><strong data-v-5681bde8>Exceptions and assertions are two complementary ways of handling errors in software but they serve different purposes.</strong> Therefore, both assertions and exceptions should be used in code.</p> <ul data-v-5681bde8><li data-v-5681bde8>The raising of an exception indicates an unusual condition created by the user <span class="dimmed" data-v-5681bde8>(e.g.  user inputs an unacceptable input)</span> or the environment <span class="dimmed" data-v-5681bde8>(e.g., a file needed for the program is missing)</span>.</li> <li data-v-5681bde8>An assertion failure indicates the programmer made a mistake in the code <span class="dimmed" data-v-5681bde8>(e.g., a null value is returned from a method that is not supposed to return null under any circumstances)</span>.</li></ul></div> <div data-v-5681bde8><div data-v-5681bde8><div expandable="" class="algolia-no-index card-container" data-v-5681bde8><div class="card expandable-card" data-v-5681bde8><div class="card-header header-toggle bg-light" data-v-5681bde8><div class="caret-wrapper" data-v-5681bde8><!----></div> <div class="header-wrapper card-title bg-light" data-v-5681bde8><p data-v-5681bde8><span data-v-5681bde8><span aria-hidden="true" class="fas fa-dumbbell" data-v-5681bde8></span></span> Exercises</p></div> <div class="button-wrapper" data-v-5681bde8><button type="button" class="collapse-button btn btn-outline-secondary" data-v-5681bde8><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down"></span></button> <button type="button" class="close-button btn btn-outline-secondary" data-v-5681bde8><span aria-hidden="true" class="glyphicon glyphicon-remove" data-v-5681bde8></span></button> <button type="button" class="popup-button btn btn-outline-secondary" style="display:none;" data-v-5681bde8><span aria-hidden="true" class="glyphicon glyphicon-new-window" data-v-5681bde8></span></button></div></div> <div class="card-collapse" data-v-5681bde8><!----> <hr style="display:none;" data-v-5681bde8></div> <!----></div></div></div></div></div> <!----> <button type="button" class="collapse-button btn btn-outline-secondary" data-v-5681bde8><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down opened"></span></button></div> <hr style="display:;" data-v-5681bde8></div> <!----></div></div></div></div></div></div></div> <i id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true" class="fa fa-arrow-circle-up fa-lg d-print-none"></i><p></p></div> <nav id="page-nav" class="fixed-header-padding" data-v-e8c82f88><div class="nav-component slim-scroll" data-v-e8c82f88></div> <!----></nav></div> <footer><div class="text-center"><small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 3.0.3</a>, generated on Mon, 28 Jun 2021, 17:04:50 GMT+8]</small></div></footer></div>
+</body><script src="../../markbind/js/bootstrap-utility.min.js"></script>
 <script>
-  function initAlgolia() {
+  MarkBind.setup()
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+    <script>
     docsearch({
       apiKey: "8310bb56d1ece8950bd20b0b8c080e10",
       indexName: "se-edu",
@@ -434,12 +45,5 @@
       algoliaOptions: {},
       debug: false,
     });
-  }
-  initAlgolia();
-</script>
-<script src="../../markbind/layouts/default/scripts.js"></script>
-<script>
-  if (MarkBind.AfterSetup) MarkBind.AfterSetup()
-</script>
-
+  </script>
 </html>

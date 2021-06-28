@@ -38,7 +38,7 @@ public class Main {
 
 <div class="indented-level2">
 
-```java
+```java{.no-line-numbers}
 public class IllegalShapeException extends Exception {
   //no other code needed
 }

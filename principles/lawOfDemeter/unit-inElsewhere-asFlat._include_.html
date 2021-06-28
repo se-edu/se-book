@@ -1,115 +1,71 @@
-<div></div>
-<p></p>
+<div></div><p></p>
 <p><span class="dimmed"><strong><span>Principles →</span></strong></span></p>
 <div id="title-and-body">
-  <div>
-    <h4 id="law-of-demeter"><span id="law-of-demeter" class="anchor"></span><span>Law of Demeter</span><a class="fa fa-anchor" href="#law-of-demeter" onclick="event.stopPropagation()"></a></h4>
-  </div>
-  <div id="main">
-    <div>
-      <box type="definition" seamless>
-        <div>
-          <p><strong>Law of Demeter (LoD)</strong>:</p>
-          <ul>
-            <li>An object should have limited knowledge of another object.</li>
-            <li>An object should only interact with objects that are closely related to it.</li>
-          </ul>
-          <p>Also known as</p>
-          <ul>
-            <li>Don’t talk to strangers.</li>
-            <li>Principle of least knowledge</li>
-          </ul>
-        </div>
-      </box>
-      <p>More concretely, a method <code class="hljs inline no-lang" v-pre>m</code> of an object <code class="hljs inline no-lang" v-pre>O</code> should invoke only the methods of the following kinds of objects:</p>
-      <ul>
-        <li>The object <code class="hljs inline no-lang" v-pre>O</code> itself</li>
-        <li>Objects passed as parameters of <code class="hljs inline no-lang" v-pre>m</code></li>
-        <li>Objects created/instantiated in <code class="hljs inline no-lang" v-pre>m</code> (directly or indirectly)</li>
-        <li>Objects from the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">objects that are held by instance variables of</span>direct association of</span> <code class="hljs inline no-lang" v-pre>O</code></li>
-      </ul>
-      <box>
-        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The following code fragment violates LoD due to the following reason: while <code class="hljs inline no-lang" v-pre>b</code> is a ‘friend’ of <code class="hljs inline no-lang" v-pre>foo</code> (because it receives it as a parameter), <code class="hljs inline no-lang" v-pre>g</code> is a ‘friend of a friend’ (which should be considered a ‘stranger’), and <code class="hljs inline no-lang" v-pre>g.doSomething()</code> is analogous to ‘talking to a stranger’.</p>
-        <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">foo</span><span class="hljs-params">(Bar b)</span> </span>{
+<div><h4 id="law-of-demeter"><span id="law-of-demeter" class="anchor"></span><span>Law of Demeter</span></h4></div>
+<div id="main">
+<div>
+<box type="definition" seamless>
+<div>
+<p><strong>Law of Demeter (LoD)</strong>:</p>
+<ul>
+<li>An object should have limited knowledge of another object.</li>
+<li>An object should only interact with objects that are closely related to it.</li></ul>
+<p>Also known as</p>
+<ul>
+<li>Don’t talk to strangers.</li>
+<li>Principle of least knowledge</li></ul></div></box>
+<p>More concretely, a method <code class="hljs inline no-lang" v-pre>m</code> of an object <code class="hljs inline no-lang" v-pre>O</code> should invoke only the methods of the following kinds of objects:</p>
+<ul>
+<li>The object <code class="hljs inline no-lang" v-pre>O</code> itself</li>
+<li>Objects passed as parameters of <code class="hljs inline no-lang" v-pre>m</code></li>
+<li>Objects created/instantiated in <code class="hljs inline no-lang" v-pre>m</code> (directly or indirectly)</li>
+<li>Objects from the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content" class="algolia-no-index">objects that are held by instance variables of</span>direct association of</span> <code class="hljs inline no-lang" v-pre>O</code></li></ul>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The following code fragment violates LoD due to the following reason: while <code class="hljs inline no-lang" v-pre>b</code> is a ‘friend’ of <code class="hljs inline no-lang" v-pre>foo</code> (because it receives it as a parameter), <code class="hljs inline no-lang" v-pre>g</code> is a ‘friend of a friend’ (which should be considered a ‘stranger’), and <code class="hljs inline no-lang" v-pre>g.doSomething()</code> is analogous to ‘talking to a stranger’.</p>
+<pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">foo</span><span class="hljs-params">(Bar b)</span> </span>{
 </span><span>    Goo g = b.getGoo();
 </span><span>    g.doSomething();
 </span><span>}
-</span></code></pre>
-      </box>
-      <p><strong>LoD aims to prevent objects from navigating the internal structures of other objects.</strong></p>
-      <box>
-        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> An analogy for LoD can be drawn from Facebook. If Facebook followed LoD, you would not be allowed to see posts of friends of friends, unless they are your friends as well. If Jake is your friend and Adam is Jake’s friend, you should not be allowed to see Adam’s posts unless Adam is a friend of yours as well.</p>
-      </box>
-    </div>
-    <div>
-      <div>
-        <panel expandable class="algolia-no-index"><template slot="header">
-            <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
-          </template>
-          <div>
-            <panel class="algolia-no-index"><template slot="header">
-                <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Examples for LoD</p>
-              </template>
-              <question has-input="true">
-                <p>Explain the Law of Demeter using code examples. You are to make up your own code examples. Take Minesweeper as the basis for your code examples.</p>
-                <div slot="answer" class="algolia-no-index">
-                  <p>Let us take the <code class="hljs inline no-lang" v-pre>Logic</code> class as an example. Assume that it has the following operation.</p>
-                  <p><code class="hljs inline no-lang" v-pre>setMinefield(Minefield mf): void</code></p>
-                  <p>Consider the following that can happen inside this operation:</p>
-                  <ul>
-                    <li><code class="hljs inline no-lang" v-pre>mf.init();</code>: this does not violate LoD since LoD allows calling operations of parameters received.</li>
-                    <li><code class="hljs inline no-lang" v-pre>mf.getCell(1, 3).clear();</code>: this violates LoD because <code class="hljs inline no-lang" v-pre>Logic</code> is handling <code class="hljs inline no-lang" v-pre>Cell</code> objects deep inside <code class="hljs inline no-lang" v-pre>Minefield</code>. Instead, it should be <code class="hljs inline no-lang" v-pre>mf.clearCellAt(1, 3);</code>.</li>
-                    <li><code class="hljs inline no-lang" v-pre>timer.start();</code>: this does not violate LoD because <code class="hljs inline no-lang" v-pre>timer</code> appears to be an internal component (i.e. a variable) of <code class="hljs inline no-lang" v-pre>Logic</code> itself.</li>
-                    <li><code class="hljs inline no-lang" v-pre>Cell c = new Cell();</code> <code class="hljs inline no-lang" v-pre>c.init();</code>: this does not violate LoD because <code class="hljs inline no-lang" v-pre>c</code> was created inside the operation.</li>
-                  </ul>
-                </div>
-              </question>
-            </panel>
-          </div>
-          <div>
-            <panel class="algolia-no-index"><template slot="header">
-                <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> LoD violation?</p>
-              </template>
-              <question>
-                <p>This violates the Law of Demeter.</p>
-                <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">foo</span><span class="hljs-params">(Bar b)</span> </span>{
+</span></code></pre></box>
+<p><strong>LoD aims to prevent objects from navigating the internal structures of other objects.</strong></p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> An analogy for LoD can be drawn from Facebook. If Facebook followed LoD, you would not be allowed to see posts of friends of friends, unless they are your friends as well. If Jake is your friend and Adam is Jake’s friend, you should not be allowed to see Adam’s posts unless Adam is a friend of yours as well.</p></box></div>
+<div>
+  <div><panel expandable class="algolia-no-index"><template #header><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
+  <div><panel class="algolia-no-index"><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Examples for LoD</p></template>
+<question has-input="true">
+<p>Explain the Law of Demeter using code examples. You are to make up your own code examples. Take Minesweeper as the basis for your code examples.</p>
+<template #answer><div class="algolia-no-index">
+<p>Let us take the <code class="hljs inline no-lang" v-pre>Logic</code> class as an example.  Assume that it has the following operation.</p>
+<p><code class="hljs inline no-lang" v-pre>setMinefield(Minefield mf): void</code></p>
+<p>Consider the following that can happen inside this operation:</p>
+<ul>
+<li><code class="hljs inline no-lang" v-pre>mf.init();</code>: this does not violate LoD since LoD allows calling operations of parameters received.</li>
+<li><code class="hljs inline no-lang" v-pre>mf.getCell(1, 3).clear();</code>: this violates LoD because <code class="hljs inline no-lang" v-pre>Logic</code> is handling <code class="hljs inline no-lang" v-pre>Cell</code> objects deep inside <code class="hljs inline no-lang" v-pre>Minefield</code>. Instead, it should be <code class="hljs inline no-lang" v-pre>mf.clearCellAt(1, 3);</code>.</li>
+<li><code class="hljs inline no-lang" v-pre>timer.start();</code>: this does not violate LoD because <code class="hljs inline no-lang" v-pre>timer</code> appears to be an internal component (i.e. a variable) of <code class="hljs inline no-lang" v-pre>Logic</code> itself.</li>
+<li><code class="hljs inline no-lang" v-pre>Cell c = new Cell();</code> <code class="hljs inline no-lang" v-pre>c.init();</code>: this does not violate LoD because <code class="hljs inline no-lang" v-pre>c</code> was created inside the operation.</li></ul></div></template></question></panel></div>
+  <div><panel class="algolia-no-index"><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> LoD violation?</p></template>
+<question>
+<p>This violates the Law of Demeter.</p>
+<pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">foo</span><span class="hljs-params">(Bar b)</span> </span>{
 </span><span>    Goo g = <span class="hljs-keyword">new</span> Goo();
 </span><span>    g.doSomething();
 </span><span>}
-</span></code></pre>
-                <ul radio-group="b573e" class="radio-list">
-                  <li class="radio-list-item"><label><input class="radio-list-input" name="b573e" type="radio"> True</label></li>
-                  <li class="radio-list-item"><label><input class="radio-list-input" name="b573e" type="radio"> False</label></li>
-                </ul>
-                <div slot="answer" class="algolia-no-index">
-                  <p>False</p>
-                  <p>Explanation: The line <code class="hljs inline no-lang" v-pre>g.doSomething()</code> does not violate LoD because it is OK to invoke methods of objects created within a method.</p>
-                </div>
-              </question>
-            </panel>
-          </div>
-          <div>
-            <panel class="algolia-no-index"><template slot="header">
-                <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Odd one out</p>
-              </template>
-              <question>
-                <p>Pick the odd one out.</p>
-                <ul class="contains-task-list">
-                  <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> a. Law of Demeter.</li>
-                  <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> b. Don’t add people to a late project.</li>
-                  <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> c. Don’t talk to strangers.</li>
-                  <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. Principle of least knowledge.</li>
-                  <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> e. Coupling.</li>
-                </ul>
-                <div slot="answer" class="algolia-no-index">
-                  <p>(b)</p>
-                  <p>Explanation: Law of Demeter, which aims to reduce coupling, is also known as ‘Don’t talk to strangers’ and ‘Principle of least knowledge’.</p>
-                </div>
-              </question>
-            </panel>
-          </div>
-        </panel>
-      </div>
-    </div>
-  </div>
-</div>
+</span></code></pre><ul radio-group="b573e" class="radio-list">
+<li class="radio-list-item"><label><input class="radio-list-input" name="b573e" type="radio"> True</label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="b573e" type="radio"> False</label></li></ul>
+<template #answer><div class="algolia-no-index">
+<p>False</p>
+<p>Explanation: The line <code class="hljs inline no-lang" v-pre>g.doSomething()</code> does not violate LoD because it is OK to invoke methods of objects created within a method.</p></div></template></question></panel></div>
+  <div><panel class="algolia-no-index"><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Odd one out</p></template>
+<question>
+<p>Pick the odd one out.</p>
+<ul class="contains-task-list">
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> a. Law of Demeter.</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> b. Don’t add people to a late project.</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> c. Don’t talk to strangers.</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. Principle of least knowledge.</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> e. Coupling.</li></ul>
+<template #answer><div class="algolia-no-index">
+<p>(b)</p>
+<p>Explanation: Law of Demeter, which aims to reduce coupling, is also known as ‘Don’t talk to strangers’ and ‘Principle of least knowledge’.</p></div></template></question></panel></div></panel></div></div></div></div>

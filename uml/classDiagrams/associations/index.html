@@ -1,577 +1,96 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.17.3">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SEforSDL - UML: Class Diagrams: Associations</title>
-  <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../../../markbind/css/bootstrap-vue.min.css">
-  <link rel="stylesheet" href="../../../markbind/fontawesome/css/all.min.css">
-  <link rel="stylesheet" href="../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
-  <link rel="stylesheet" href="../../../markbind/css/octicons.css">
-  <link rel="stylesheet" href="../../../markbind/css/codeblock-dark.min.css">
-  <link rel="stylesheet" href="../../../markbind/css/markbind.min.css">
-  <script src="../../../markbind/js/polyfill.min.js"></script>
-  <script src="../../../markbind/js/vue.min.js"></script>
-  <script src="../../../markbind/js/markbind.min.js"></script>
-  <script src="../../../markbind/js/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
-  <link rel="stylesheet" href="/se-book/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
-  <link rel="stylesheet" href="../../../markbind/layouts/default/styles.css">
-  <link rel="icon" href="/se-book/favicon.ico">
-</head>
-
-<body>
-  <div id="app">
-    <header>
-      <navbar placement="top" type="dark" class="temp-navbar">
-        <a slot="brand" href="https://se-education.org" title="SE-EDU" class="navbar-brand"><span><span aria-hidden="true" class="fas fa-chevron-circle-left"></span> <strong><strong>SE-EDU</strong></strong></span></a>
-        <li><a href="/se-book/index.html" class="nav-link"><span><strong>Home</strong></span></a></li>
-        <li><a href="/se-book/about/acknowledgements.html" class="nav-link"><span><strong>About</strong></span></a></li>
-        <li><a href="https://github.com/se-edu/se-book" class="nav-link"><span><span aria-hidden="true" class="fab fa-github"></span></span></a></li>
-        <li slot="right" class="nav-link">
-          <form class="navbar-form">
-            <searchbar placeholder="Search" algolia menu-align-right></searchbar>
-          </form>
-        </li>
-      </navbar>
-    </header>
-    <div id="flex-body">
-      <nav id="site-nav" class="navbar navbar-light bg-transparent">
-        <div class="border-right-grey nav-inner position-sticky slim-scroll">
-          <ul class="site-nav-list site-nav-list-root">
-            <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>About this book</strong>
-                <i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
-                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i>
-              </div>
-              <ul class="site-nav-dropdown-container site-nav-list">
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/about/acknowledgements.html">About</a></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/about/usage.html">How to use this book</a></div>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>Software engineering</strong>
-                <i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
-                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i>
-              </div>
-              <ul class="site-nav-dropdown-container site-nav-list">
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/softwareEngineering/index.html">Software engineering</a></div>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>Object-oriented programming</strong>
-                <i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
-                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i>
-              </div>
-              <ul class="site-nav-dropdown-container site-nav-list">
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/oop/index.html">Object-oriented programming</a></div>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>Requirements</strong>
-                <i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
-                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i>
-              </div>
-              <ul class="site-nav-dropdown-container site-nav-list">
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/requirements/index.html">Requirements</a></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/gatheringRequirements/index.html">Gathering requirements</a></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/specifyingRequirements/index.html">Specifying requirements</a></div>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>Design</strong>
-                <i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
-                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i>
-              </div>
-              <ul class="site-nav-dropdown-container site-nav-list">
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/design/index.html">Design</a></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/designFundamentals/index.html">Design fundamentals</a></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/modeling/index.html">Modeling</a></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/architecture/index.html">Architecture</a></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/designPatterns/index.html">Design patterns</a></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/designApproaches/index.html">Design approaches</a></div>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>Implementation</strong>
-                <i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
-                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i>
-              </div>
-              <ul class="site-nav-dropdown-container site-nav-list">
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/ides/index.html">IDEs</a></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/codeQuality/index.html">Code quality</a></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/refactoring/index.html">Refactoring</a></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/documentation/index.html">Documentation</a></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/errorHandling/index.html">Error handling</a></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/integration/index.html">Integration</a></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/reuse/index.html">Reuse</a></div>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>Quality assurance</strong>
-                <i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
-                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i>
-              </div>
-              <ul class="site-nav-dropdown-container site-nav-list">
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/qualityAssurance/index.html">Quality assurance</a></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/testing/index.html">Testing</a></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/testCaseDesign/index.html">Test case design</a></div>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>Project management</strong>
-                <i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
-                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i>
-              </div>
-              <ul class="site-nav-dropdown-container site-nav-list">
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/revisionControl/index.html">Revision control</a></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/projectPlanning/index.html">Project planning</a></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/teamwork/index.html">Teamwork</a></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/processModels/index.html">SDLC process models</a></div>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>Tools</strong>
-                <i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
-                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i>
-              </div>
-              <ul class="site-nav-dropdown-container site-nav-list">
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/uml/index.html">UML</a></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/intellij/index.html">IntelliJ IDEA</a></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/gitAndGithub/index.html">Git and GitHub</a></div>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>Principles</strong>
-                <i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
-                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i>
-              </div>
-              <ul class="site-nav-dropdown-container site-nav-list">
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/principles/index.html">Principles</a></div>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>Supplementary</strong>
-                <i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
-                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i>
-              </div>
-              <ul class="site-nav-dropdown-container site-nav-list">
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/se-book/cppToJava/index.html">C++ to Java</a></div>
-                </li>
-              </ul>
-            </li>
-            <li class="site-nav-custom-list-item site-nav-list-item-0"><strong><a href="/se-book/combined/exercises.html">Combined exercises</a></strong></li>
-            <li class="site-nav-custom-list-item site-nav-list-item-0"><strong><a href="/se-book/common/definitions.html">List of definitions</a></strong></li>
-            <li class="site-nav-custom-list-item site-nav-list-item-0"><strong><a href="/se-book/common/references.html">List of references</a></strong></li>
-            <li class="site-nav-custom-list-item site-nav-list-item-0"><strong><a href="/se-book/common/outcomes.html">List of learning outcomes</a></strong></li>
-            <li class="site-nav-custom-list-item site-nav-list-item-0"><strong><a href="/se-book/common/print.html">Printable version</a></strong></li>
-          </ul>
-        </div>
-      </nav>
-
-
-      <div id="content-wrapper">
-        <h1 id="software-engineering-for-self-directed-learners"><span id="software-engineering-for-self-directed-learners" class="anchor"></span><span class="text-dark"><small><strong><strong>Software Engineering for Self-Directed Learners »</strong></strong></small></span><a class="fa fa-anchor" href="#software-engineering-for-self-directed-learners" onclick="event.stopPropagation()"></a></h1>
-        <div>
-          <link rel="stylesheet" href="/se-book/css/textbook.css">
-          <div class="website-content" id="all">
-            <p><span class="dimmed"><strong><span>Tools → UML → Class Diagrams →
-                  </span></strong></span></p>
-            <div id="title">
-              <h1 id="associations"><span id="associations" class="anchor"></span><span>Associations</span><a class="fa fa-anchor" href="#associations" onclick="event.stopPropagation()"></a></h1>
-            </div>
-            <div id="main">
-              <div>
-                <div>
-                  <panel type="seamless" expanded id="what">
-                    <span slot="header" class="card-title">
-                      <div>
-                        <h4 id="what"><span id="what" class="anchor"></span><span>What</span><a class="fa fa-anchor" href="#what" onclick="event.stopPropagation()"></a></h4>
-                      </div>
-                    </span>
-                    <div class="indented">
-                      <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can interpret simple associations in a class diagram</span></span></span></span></p>
-                      <p></p>
-                      <p></p>
-                      <p></p>
-                      <div>
-                        <p>You should use a solid line to show an association between two classes.</p>
-                        <img src="/se-book/uml/classDiagrams/associations/what/images/notation.png" width="300">
-                        <p></p>
-                        <box>
-                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This example shows an association between the <code class="hljs inline no-lang" v-pre>Admin</code> class and the <code class="hljs inline no-lang" v-pre>Student</code> class:<br>
-                            <img src="/se-book/uml/classDiagrams/associations/what/images/example.png" width="300">
-                          </p>
-                        </box>
-                      </div>
-                      <div></div>
-                    </div>
-                  </panel>
-                </div>
-                <div>
-                  <panel type="seamless" expanded id="navigability">
-                    <span slot="header" class="card-title">
-                      <div>
-                        <h4 id="navigability"><span id="navigability" class="anchor"></span><span>Navigability</span><a class="fa fa-anchor" href="#navigability" onclick="event.stopPropagation()"></a></h4>
-                      </div>
-                    </span>
-                    <div class="indented">
-                      <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can interpret association navigabilities in class diagrams</span></span></span></span></p>
-                      <p></p>
-                      <p></p>
-                      <p></p>
-                      <div>
-                        <p><strong>Use arrowheads to indicate the navigability of an association.</strong></p>
-                        <box>
-                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In this example, the navigability is unidirectional, and is from the <code class="hljs inline no-lang" v-pre>Logic</code> class to the <code class="hljs inline no-lang" v-pre>Minefield</code> class. That means if a <code class="hljs inline no-lang" v-pre>Logic</code> object <code class="hljs inline no-lang" v-pre>L</code> is associated with a <code class="hljs inline no-lang" v-pre>Minefield</code> object <code class="hljs inline no-lang" v-pre>M</code>, <code class="hljs inline no-lang" v-pre>L</code> has a reference to <code class="hljs inline no-lang" v-pre>M</code> but <code class="hljs inline no-lang" v-pre>M</code> doesn't have a reference to <code class="hljs inline no-lang" v-pre>L</code>.</p>
-                          <img src="/se-book/uml/classDiagrams/associations/navigability/images/logicMinefield.png" height="40">
-                          <div>
-                            <div class="alt-java">
-                              <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span> </span>{
-</span><span>    Minefield minefield;
-</span><span>    <span class="hljs-comment">// ...</span>
-</span><span>}
-</span><span>
-</span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Minefield</span> </span>{
-</span><span>    <span class="hljs-comment">//...</span>
-</span><span>}
-</span></code></pre>
-                            </div>
-                            <div class="alt-python">
-                              <pre><code class="hljs python" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span>:</span>
-</span><span>  
-</span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span>(<span class="hljs-params">self</span>):</span>
-</span><span>    self.minefield = <span class="hljs-literal">None</span>
-</span><span>    
-</span><span>  <span class="hljs-comment"># ...</span>
-</span><span>
-</span><span>
-</span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Minefield</span>:</span>
-</span><span>  <span class="hljs-comment"># ...</span>
-</span></code></pre>
-                            </div>
-                          </div>
-                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Here is an example of a bidirectional navigability; i.e., if a <code class="hljs inline no-lang" v-pre>Dog</code> object <code class="hljs inline no-lang" v-pre>d</code> is associated with a <code class="hljs inline no-lang" v-pre>Man</code> object <code class="hljs inline no-lang" v-pre>m</code>, <code class="hljs inline no-lang" v-pre>d</code> has a reference to <code class="hljs inline no-lang" v-pre>m</code> and <code class="hljs inline no-lang" v-pre>m</code> has a reference to <code class="hljs inline no-lang" v-pre>d</code>.</p>
-                          <p></p>
-                          <img src="/se-book/uml/classDiagrams/associations/navigability/images/manDog.png" height="40">
-                          <p></p>
-                          <div>
-                            <div class="alt-java">
-                              <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Dog</span> </span>{
-</span><span>    Man man;
-</span><span>    <span class="hljs-comment">// ...</span>
-</span><span>}
-</span><span>
-</span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Man</span> </span>{
-</span><span>    Dog dog;
-</span><span>    <span class="hljs-comment">// ...</span>
-</span><span>}
-</span></code></pre>
-                            </div>
-                            <div class="alt-python">
-                              <pre><code class="hljs python" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Dog</span>:</span>
-</span><span>  
-</span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span>(<span class="hljs-params">self</span>):</span>
-</span><span>    self.man = <span class="hljs-literal">None</span>
-</span><span>    
-</span><span>  <span class="hljs-comment"># ...</span>
-</span><span>
-</span><span>
-</span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Man</span>:</span>
-</span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span>(<span class="hljs-params">self</span>):</span>
-</span><span>    self.dog = <span class="hljs-literal">None</span>
-</span><span>
-</span><span>  <span class="hljs-comment"># ...</span>
-</span></code></pre>
-                            </div>
-                          </div>
-                        </box>
-                        <p><strong>Navigability can be shown in class diagrams as well as object diagrams</strong>.</p>
-                        <box>
-                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> According to this object diagram, the given <code class="hljs inline no-lang" v-pre>Logic</code> object is associated with and aware of two <code class="hljs inline no-lang" v-pre>MineField</code> objects.</p>
-                          <img src="/se-book/uml/classDiagrams/associations/navigability/images/logicMinefieldObjects.png" height="80">
-                        </box>
-                      </div>
-                      <div>
-                        <div>
-                          <panel expandable class="algolia-no-index"><template slot="header">
-                              <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
-                            </template>
-                            <div>
-                              <panel class="algolia-no-index"><template slot="header">
-                                  <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> What does the navigability given by this diagram mean?</p>
-                                </template>
-                                <question>
-                                  <img src="/se-book/uml/classDiagrams/associations/navigability/images/unitItem.png" height="100">
-                                  <p></p>
-                                  <ul radio-group="de8af" class="radio-list">
-                                    <li class="radio-list-item"><label><input class="radio-list-input" name="de8af" type="radio"> a. A <code class="hljs inline no-lang" v-pre>Unit</code> object knows about the <code class="hljs inline no-lang" v-pre>Item</code> object it is linked to</label></li>
-                                    <li class="radio-list-item"><label><input class="radio-list-input" name="de8af" type="radio"> b. An <code class="hljs inline no-lang" v-pre>Item</code> object knows about the <code class="hljs inline no-lang" v-pre>Unit</code> object it is linked to</label></li>
-                                    <li class="radio-list-item"><label><input class="radio-list-input" name="de8af" type="radio"> c. Depends on the programming language</label></li>
-                                  </ul>
-                                  <div slot="answer" class="algolia-no-index">
-                                    <p>(a)</p>
-                                    <p>Explanation: The diagram indicates that the <code class="hljs inline no-lang" v-pre>Unit</code> object should know about the <code class="hljs inline no-lang" v-pre>Item</code> object. In the implementation, the <code class="hljs inline no-lang" v-pre>Unit</code> object will hold an <code class="hljs inline no-lang" v-pre>Item</code> object in one of its variables.</p>
-                                  </div>
-                                </question>
-                              </panel>
-                            </div>
-                          </panel>
-                        </div>
-                      </div>
-                    </div>
-                  </panel>
-                </div>
-                <div>
-                  <panel type="seamless" expanded id="roles">
-                    <span slot="header" class="card-title">
-                      <div>
-                        <h4 id="roles"><span id="roles" class="anchor"></span><span>Roles</span><a class="fa fa-anchor" href="#roles" onclick="event.stopPropagation()"></a></h4>
-                      </div>
-                    </span>
-                    <div class="indented">
-                      <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain/use association roles in class diagrams</span></span></span></span></p>
-                      <p></p>
-                      <p></p>
-                      <p></p>
-                      <div>
-                        <p><strong><em>Association Role</em> labels are used to indicate the role played by the classes in the association.</strong></p>
-                        <img src="/se-book/uml/classDiagrams/associations/roles/images/notation.png" height="60">
-                        <box>
-                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This association represents a marriage between a <code class="hljs inline no-lang" v-pre>Man</code> object and a <code class="hljs inline no-lang" v-pre>Woman</code> object. The respective roles played by objects of these two classes are <code class="hljs inline no-lang" v-pre>husband</code> and <code class="hljs inline no-lang" v-pre>wife</code>.</p>
-                          <img src="/se-book/uml/classDiagrams/associations/roles/images/husbandWife.png" width="300">
-                          <p></p>
-                          <p>Note how the variable names match closely with the association roles.</p>
-                          <div class="alt-java">
-                            <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Man</span> </span>{
-</span><span>    Woman wife;
-</span><span>}
-</span><span>
-</span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Woman</span> </span>{
-</span><span>    Man husband;
-</span><span>}
-</span></code></pre>
-                          </div>
-                          <div class="alt-python">
-                            <pre><code class="hljs python" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Man</span>:</span>
-</span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span>(<span class="hljs-params">self</span>):</span>
-</span><span>    self.wife = <span class="hljs-literal">None</span> <span class="hljs-comment"># a Woman object</span>
-</span><span>
-</span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Woman</span>:</span>
-</span><span>   <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span>(<span class="hljs-params">self</span>):</span>
-</span><span>     self.husband = <span class="hljs-literal">None</span> <span class="hljs-comment"># a Man object</span>
-</span></code></pre>
-                          </div>
-                        </box>
-                        <box>
-                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The role of <code class="hljs inline no-lang" v-pre>Student</code> objects in this association is <code class="hljs inline no-lang" v-pre>charges</code> <span class="dimmed">(i.e. Admin is in charge of students)</span></p>
-                          <img src="/se-book/uml/classDiagrams/associations/roles/images/adminStudent.png" height="70">
-                          <p></p>
-                          <div class="alt-java">
-                            <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Admin</span> </span>{
-</span><span>    List&lt;Student&gt; charges;
-</span><span>}
-</span></code></pre>
-                          </div>
-                          <div class="alt-python">
-                            <pre><code class="hljs python" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Admin</span>:</span>
-</span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span>(<span class="hljs-params">self</span>):</span>
-</span><span>    self.charges = [] <span class="hljs-comment"># list of Student objects</span>
-</span></code></pre>
-                          </div>
-                        </box>
-                      </div>
-                      <div></div>
-                    </div>
-                  </panel>
-                </div>
-                <div>
-                  <panel type="seamless" expanded id="labels">
-                    <span slot="header" class="card-title">
-                      <div>
-                        <h4 id="labels"><span id="labels" class="anchor"></span><span>Labels</span><a class="fa fa-anchor" href="#labels" onclick="event.stopPropagation()"></a></h4>
-                      </div>
-                    </span>
-                    <div class="indented">
-                      <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain/use association labels in class diagrams</span></span></span></span></p>
-                      <p></p>
-                      <p></p>
-                      <p></p>
-                      <div>
-                        <p><strong><em>Association labels</em> describe the meaning of the association.</strong> The arrow head indicates the direction in which the label is to be read.</p>
-                        <img src="/se-book/uml/classDiagrams/associations/labels/images/notation.png" width="400">
-                        <box>
-                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In this example, the same association is described using two different labels.</p>
-                          <img src="/se-book/uml/classDiagrams/associations/labels/images/adminStudent.png" width="600">
-                          <p></p>
-                          <ul>
-                            <li>Diagram on the left: <code class="hljs inline no-lang" v-pre>Admin</code> class is associated with <code class="hljs inline no-lang" v-pre>Student</code> class because an <code class="hljs inline no-lang" v-pre>Admin</code> object <em>uses</em> a <code class="hljs inline no-lang" v-pre>Student</code> object.</li>
-                            <li>Diagram on the right: <code class="hljs inline no-lang" v-pre>Admin</code> class is associated with <code class="hljs inline no-lang" v-pre>Student</code> class because a <code class="hljs inline no-lang" v-pre>Student</code> object is <em>used by</em> an <code class="hljs inline no-lang" v-pre>Admin</code> object.</li>
-                          </ul>
-                        </box>
-                      </div>
-                      <div></div>
-                    </div>
-                  </panel>
-                </div>
-                <div>
-                  <panel type="seamless" expanded id="multiplicity">
-                    <span slot="header" class="card-title">
-                      <div>
-                        <h4 id="multiplicity"><span id="multiplicity" class="anchor"></span><span>Multiplicity</span><a class="fa fa-anchor" href="#multiplicity" onclick="event.stopPropagation()"></a></h4>
-                      </div>
-                    </span>
-                    <div class="indented">
-                      <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain what is the multiplicity of an association</span></span></span></span></p>
-                      <p></p>
-                      <p></p>
-                      <p></p>
-                      <div>
-                        <img src="/se-book/uml/classDiagrams/associations/multiplicity/images/notation.png" height="120">
-                        <p></p>
-                        <p>Commonly used multiplicities:</p>
-                        <ul>
-                          <li><code class="hljs inline no-lang" v-pre>0..1</code> : <em>optional</em>, can be linked to 0 or 1 objects.</li>
-                          <li><code class="hljs inline no-lang" v-pre>1</code> : <em>compulsory</em>, must be linked to one object at all times.</li>
-                          <li><code class="hljs inline no-lang" v-pre>*</code> : can be linked to 0 or more objects.</li>
-                          <li><code class="hljs inline no-lang" v-pre>n..m</code> : the number of linked objects must be within <code class="hljs inline no-lang" v-pre>n</code> to <code class="hljs inline no-lang" v-pre>m</code> inclusive.</li>
-                        </ul>
-                        <box>
-                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In the diagram below, an <code class="hljs inline no-lang" v-pre>Admin</code> object administers (is in charge of) any number of students but a <code class="hljs inline no-lang" v-pre>Student</code> object must always be under the charge of exactly one <code class="hljs inline no-lang" v-pre>Admin</code> object.</p>
-                          <img src="/se-book/uml/classDiagrams/associations/multiplicity/images/adminStudent.png" width="300">
-                        </box>
-                        <box>
-                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In the diagram below,</p>
-                          <ul>
-                            <li>Each student must be supervised by exactly one professor. i.e. There cannot be a student who doesn't have a supervisor or has multiple supervisors.</li>
-                            <li>A professor cannot supervise more than 5 students but can have no students to supervise.</li>
-                            <li>An admin can handle any number of professors and any number of students, including none.</li>
-                            <li>A professor/student can be handled by any number of admins, including none.</li>
-                          </ul>
-                          <img src="/se-book/uml/classDiagrams/associations/multiplicity/images/adminProfessorStudent.png" height="70">
-                        </box>
-                      </div>
-                      <div>
-                        <div>
-                          <panel expandable class="algolia-no-index"><template slot="header">
-                              <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
-                            </template>
-                            <div>
-                              <panel class="algolia-no-index"><template slot="header">
-                                  <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which statement agrees with the multiplicity shown in this diagram?</p>
-                                </template>
-                                <question>
-                                  <img src="/se-book/uml/classDiagrams/associations/multiplicity/images/unitItem.png" height="100">
-                                  <p></p>
-                                  <ul class="contains-task-list">
-                                    <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> a. A <code class="hljs inline no-lang" v-pre>Unit</code> object can be linked to any number of <code class="hljs inline no-lang" v-pre>Item</code> objects.</li>
-                                    <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> b. An <code class="hljs inline no-lang" v-pre>Item</code> object must be linked to 1, 2, 3 or 4 <code class="hljs inline no-lang" v-pre>Unit</code> objects.</li>
-                                    <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> c. A <code class="hljs inline no-lang" v-pre>Unit</code> object must be linked to 1, 2, 3, or 4 <code class="hljs inline no-lang" v-pre>Item</code> objects.</li>
-                                    <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. A <code class="hljs inline no-lang" v-pre>Item</code> object can be linked to 0 or more <code class="hljs inline no-lang" v-pre>Unit</code> objects.</li>
-                                  </ul>
-                                  <div slot="answer" class="algolia-no-index">
-                                    <p>(c)(d)</p>
-                                  </div>
-                                </question>
-                              </panel>
-                            </div>
-                          </panel>
-                        </div>
-                      </div>
-                    </div>
-                  </panel>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i>
-      </div>
-    </div>
-    <footer>
-
-      <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.3</a>, generated on Sat, 1 May 2021, 12:33:13 GMT+8]</small>
-      </div>
-    </footer>
-  </div>
-</body>
-<script src="../../../markbind/js/bootstrap-utility.min.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="MarkBind 3.0.3">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SEforSDL - UML: Class Diagrams: Associations</title>
+    <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../markbind/css/bootstrap-vue.min.css">
+    <link rel="stylesheet" href="../../../markbind/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+    <link rel="stylesheet" href="../../../markbind/css/octicons.css">
+    <link rel="stylesheet" href="../../../markbind/css/codeblock-light.min.css"><link rel="stylesheet" href="../../../markbind/css/markbind.min.css"><script src="../../../markbind/js/polyfill.min.js"></script>
+    <script src="../../../markbind/js/vue.min.js"></script>
+    <script src="../../../markbind/js/markbind.min.js"></script>
+    <script src="index.page-vue-render.js"></script>
+    <script src="../../../markbind/js/jquery.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/se-book/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
+    
+  <link rel="stylesheet" href="/se-book/css/textbook.css">
+<link rel="icon" href="/se-book/favicon.ico"></head>
 <script>
   const baseUrl = '/se-book'
-  MarkBind.setupWithSearch()
 </script>
-<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<body >
+<div id="app" data-server-rendered="true"><header fixed=""><div placement="top" data-v-15113a2f><nav class="navbar navbar-expand-md navbar-dark bg-dark" data-v-15113a2f><div class="container-fluid" data-v-15113a2f><div class="navbar-brand" data-v-15113a2f><a href="https://se-education.org" title="SE-EDU" class="navbar-brand" data-v-15113a2f><span data-v-15113a2f><span aria-hidden="true" class="fas fa-chevron-circle-left" data-v-15113a2f></span> <strong data-v-15113a2f><strong data-v-15113a2f>SE-EDU</strong></strong></span></a></div> <button type="button" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-v-15113a2f><span class="navbar-toggler-icon" data-v-15113a2f></span> </button> <div class="navbar-collapse collapse" data-v-15113a2f><ul class="navbar-nav mr-auto mt-2 mt-lg-0" data-v-15113a2f> <li data-v-15113a2f><a href="/se-book/index.html" class="nav-link" data-v-15113a2f><span data-v-15113a2f><strong data-v-15113a2f>Home</strong></span></a></li> <li data-v-15113a2f><a href="/se-book/about/acknowledgements.html" class="nav-link" data-v-15113a2f><span data-v-15113a2f><strong data-v-15113a2f>About</strong></span></a></li> <li data-v-15113a2f><a href="https://github.com/se-edu/se-book" class="nav-link" data-v-15113a2f><span data-v-15113a2f><span aria-hidden="true" class="fab fa-github" data-v-15113a2f></span></span></a></li></ul> <ul class="navbar-nav navbar-right" data-v-15113a2f><li class="nav-link" data-v-15113a2f><form class="navbar-form" data-v-15113a2f><div style="position:relative;"><input id="algolia-search-input" type="text" placeholder="Search" autocomplete="off" value="" class="form-control"> <ul class="dropdown-menu search-dropdown-menu dropdown-menu-right"></ul></div></form></li></ul></div></div></nav> <div class="lower-navbar-container" style="display:none;" data-v-15113a2f><!----> <!----></div></div></header> <div id="flex-body"><nav id="site-nav" class="fixed-header-padding" data-v-e8c82f88><div class="nav-component slim-scroll" data-v-e8c82f88><div class="site-nav-root"><ul class="site-nav-list site-nav-list-root" data-v-e8c82f88><li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e8c82f88><strong data-v-e8c82f88>About this book</strong> <i onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();" class="site-nav-dropdown-btn-icon" data-v-e8c82f88><span aria-hidden="true" class="glyphicon glyphicon-menu-down" data-v-e8c82f88></span></i></div><ul class="site-nav-dropdown-container site-nav-list" data-v-e8c82f88><li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/about/acknowledgements.html" data-v-e8c82f88>About</a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/about/usage.html" data-v-e8c82f88>How to use this book</a></div></li></ul></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e8c82f88><strong data-v-e8c82f88>Software engineering</strong> <i onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();" class="site-nav-dropdown-btn-icon" data-v-e8c82f88><span aria-hidden="true" class="glyphicon glyphicon-menu-down" data-v-e8c82f88></span></i></div><ul class="site-nav-dropdown-container site-nav-list" data-v-e8c82f88><li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/softwareEngineering/index.html" data-v-e8c82f88>Software engineering</a></div></li></ul></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e8c82f88><strong data-v-e8c82f88>Object-oriented programming</strong> <i onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();" class="site-nav-dropdown-btn-icon" data-v-e8c82f88><span aria-hidden="true" class="glyphicon glyphicon-menu-down" data-v-e8c82f88></span></i></div><ul class="site-nav-dropdown-container site-nav-list" data-v-e8c82f88><li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/oop/index.html" data-v-e8c82f88>Object-oriented programming</a></div></li></ul></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e8c82f88><strong data-v-e8c82f88>Requirements</strong> <i onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();" class="site-nav-dropdown-btn-icon" data-v-e8c82f88><span aria-hidden="true" class="glyphicon glyphicon-menu-down" data-v-e8c82f88></span></i></div><ul class="site-nav-dropdown-container site-nav-list" data-v-e8c82f88><li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/requirements/index.html" data-v-e8c82f88>Requirements</a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/gatheringRequirements/index.html" data-v-e8c82f88>Gathering requirements</a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/specifyingRequirements/index.html" data-v-e8c82f88>Specifying requirements</a></div></li></ul></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e8c82f88><strong data-v-e8c82f88>Design</strong> <i onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();" class="site-nav-dropdown-btn-icon" data-v-e8c82f88><span aria-hidden="true" class="glyphicon glyphicon-menu-down" data-v-e8c82f88></span></i></div><ul class="site-nav-dropdown-container site-nav-list" data-v-e8c82f88><li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/design/index.html" data-v-e8c82f88>Design</a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/designFundamentals/index.html" data-v-e8c82f88>Design fundamentals</a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/modeling/index.html" data-v-e8c82f88>Modeling</a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/architecture/index.html" data-v-e8c82f88>Architecture</a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/designPatterns/index.html" data-v-e8c82f88>Design patterns</a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/designApproaches/index.html" data-v-e8c82f88>Design approaches</a></div></li></ul></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e8c82f88><strong data-v-e8c82f88>Implementation</strong> <i onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();" class="site-nav-dropdown-btn-icon" data-v-e8c82f88><span aria-hidden="true" class="glyphicon glyphicon-menu-down" data-v-e8c82f88></span></i></div><ul class="site-nav-dropdown-container site-nav-list" data-v-e8c82f88><li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/ides/index.html" data-v-e8c82f88>IDEs</a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/codeQuality/index.html" data-v-e8c82f88>Code quality</a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/refactoring/index.html" data-v-e8c82f88>Refactoring</a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/documentation/index.html" data-v-e8c82f88>Documentation</a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/errorHandling/index.html" data-v-e8c82f88>Error handling</a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/integration/index.html" data-v-e8c82f88>Integration</a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/reuse/index.html" data-v-e8c82f88>Reuse</a></div></li></ul></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e8c82f88><strong data-v-e8c82f88>Quality assurance</strong> <i onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();" class="site-nav-dropdown-btn-icon" data-v-e8c82f88><span aria-hidden="true" class="glyphicon glyphicon-menu-down" data-v-e8c82f88></span></i></div><ul class="site-nav-dropdown-container site-nav-list" data-v-e8c82f88><li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/qualityAssurance/index.html" data-v-e8c82f88>Quality assurance</a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/testing/index.html" data-v-e8c82f88>Testing</a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/testCaseDesign/index.html" data-v-e8c82f88>Test case design</a></div></li></ul></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e8c82f88><strong data-v-e8c82f88>Project management</strong> <i onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();" class="site-nav-dropdown-btn-icon" data-v-e8c82f88><span aria-hidden="true" class="glyphicon glyphicon-menu-down" data-v-e8c82f88></span></i></div><ul class="site-nav-dropdown-container site-nav-list" data-v-e8c82f88><li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/revisionControl/index.html" data-v-e8c82f88>Revision control</a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/projectPlanning/index.html" data-v-e8c82f88>Project planning</a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/teamwork/index.html" data-v-e8c82f88>Teamwork</a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/processModels/index.html" data-v-e8c82f88>SDLC process models</a></div></li></ul></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e8c82f88><strong data-v-e8c82f88>Tools</strong> <i onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();" class="site-nav-dropdown-btn-icon" data-v-e8c82f88><span aria-hidden="true" class="glyphicon glyphicon-menu-down" data-v-e8c82f88></span></i></div><ul class="site-nav-dropdown-container site-nav-list" data-v-e8c82f88><li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/uml/index.html" data-v-e8c82f88>UML</a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/intellij/index.html" data-v-e8c82f88>IntelliJ IDEA</a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/gitAndGithub/index.html" data-v-e8c82f88>Git and GitHub</a></div></li></ul></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e8c82f88><strong data-v-e8c82f88>Principles</strong> <i onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();" class="site-nav-dropdown-btn-icon" data-v-e8c82f88><span aria-hidden="true" class="glyphicon glyphicon-menu-down" data-v-e8c82f88></span></i></div><ul class="site-nav-dropdown-container site-nav-list" data-v-e8c82f88><li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/principles/index.html" data-v-e8c82f88>Principles</a></div></li></ul></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e8c82f88><strong data-v-e8c82f88>Supplementary</strong> <i onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();" class="site-nav-dropdown-btn-icon" data-v-e8c82f88><span aria-hidden="true" class="glyphicon glyphicon-menu-down" data-v-e8c82f88></span></i></div><ul class="site-nav-dropdown-container site-nav-list" data-v-e8c82f88><li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-1" data-v-e8c82f88><a href="/se-book/cppToJava/index.html" data-v-e8c82f88>C++ to Java</a></div></li></ul></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e8c82f88><a href="/se-book/combined/exercises.html" data-v-e8c82f88><strong data-v-e8c82f88>Combined exercises</strong></a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e8c82f88><a href="/se-book/common/definitions.html" data-v-e8c82f88><strong data-v-e8c82f88>List of definitions</strong></a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e8c82f88><a href="/se-book/common/references.html" data-v-e8c82f88><strong data-v-e8c82f88>List of references</strong></a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e8c82f88><a href="/se-book/common/outcomes.html" data-v-e8c82f88><strong data-v-e8c82f88>List of learning outcomes</strong></a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e8c82f88><a href="/se-book/common/print.html" data-v-e8c82f88><strong data-v-e8c82f88>Printable version</strong></a></div></li> <!----></ul></div></div> <!----></nav> <div id="content-wrapper" class="fixed-header-padding"><h1 id="software-engineering-for-self-directed-learners"><span id="software-engineering-for-self-directed-learners" class="anchor"></span><span class="text-dark"><small><strong><strong>Software Engineering for Self-Directed Learners »</strong></strong></small></span><a href="#software-engineering-for-self-directed-learners" onclick="event.stopPropagation()" class="fa fa-anchor"></a></h1> <p></p><div><link rel="stylesheet" href="/se-book/css/textbook.css"> <div id="all" class="website-content"><p><span class="dimmed"><strong><span>Tools → UML → Class Diagrams →
+</span></strong></span></p> <div id="title"><h1 id="associations"><span id="associations" class="anchor"></span><span>Associations</span></h1></div> <div id="main"><div><div><div id="-2" expanded="" class="card-container" data-v-5681bde8><div class="card expandable-card border-0" data-v-5681bde8><div class="card-header header-toggle bg-white border-0" data-v-5681bde8><div class="caret-wrapper" data-v-5681bde8><span class="glyphicon glyphicon-chevron-down" data-v-5681bde8></span></div> <div class="header-wrapper card-title bg-white" data-v-5681bde8><span class="card-title" data-v-5681bde8><div data-v-5681bde8><h4 id="-2" data-v-5681bde8><span id="-2" class="anchor" data-v-5681bde8></span><span data-v-5681bde8>What</span><a href="#-2" onclick="event.stopPropagation()" class="fa fa-anchor" data-v-5681bde8></a></h4></div></span></div> <div class="button-wrapper" data-v-5681bde8><button type="button" class="collapse-button btn btn-outline-secondary" style="display:none;" data-v-5681bde8><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down opened"></span></button> <button type="button" class="close-button btn btn-outline-secondary seamless-button" data-v-5681bde8><span aria-hidden="true" class="glyphicon glyphicon-remove" data-v-5681bde8></span></button> <button type="button" class="popup-button btn btn-outline-secondary seamless-button" style="display:none;" data-v-5681bde8><span aria-hidden="true" class="glyphicon glyphicon-new-window" data-v-5681bde8></span></button></div></div> <div class="card-collapse" data-v-5681bde8><div class="card-body" data-v-5681bde8> <div class="indented" data-v-5681bde8><p data-v-5681bde8><span class="badge badge-light" data-v-5681bde8><span data-v-5681bde8><span class="dimmed" data-v-5681bde8><span data-v-5681bde8><span data-v-5681bde8><span aria-hidden="true" class="fas fa-trophy" data-v-5681bde8></span></span> Can interpret simple associations in a class diagram</span></span></span></span></p><p data-v-5681bde8></p><p data-v-5681bde8></p> <p data-v-5681bde8></p> <div data-v-5681bde8><p data-v-5681bde8>You should use a solid line to show an association between two classes.</p> <img src="/se-book/uml/classDiagrams/associations/what/images/notation.png" width="300" data-v-5681bde8> <p data-v-5681bde8></p> <div class="alert box-container alert-default" data-v-7d17494f><!----> <div class="header-and-body" data-v-7d17494f><!----> <div class="box-body-wrapper" data-v-7d17494f><!----> <!----> <div class="contents" data-v-7d17494f><p data-v-7d17494f><span data-v-7d17494f><span aria-hidden="true" class="fas fa-cube" data-v-7d17494f></span></span> This example shows an association between the <code class="hljs inline no-lang" data-v-7d17494f>Admin</code> class and the <code class="hljs inline no-lang" data-v-7d17494f>Student</code> class:<br data-v-7d17494f> <img src="/se-book/uml/classDiagrams/associations/what/images/example.png" width="300" data-v-7d17494f></p></div> <!----></div></div></div></div> <div data-v-5681bde8></div></div> <!----> <button type="button" class="collapse-button btn btn-outline-secondary" data-v-5681bde8><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down opened"></span></button></div> <hr style="display:;" data-v-5681bde8></div> <!----></div></div></div> <div><div id="-3" expanded="" class="card-container" data-v-5681bde8><div class="card expandable-card border-0" data-v-5681bde8><div class="card-header header-toggle bg-white border-0" data-v-5681bde8><div class="caret-wrapper" data-v-5681bde8><span class="glyphicon glyphicon-chevron-down" data-v-5681bde8></span></div> <div class="header-wrapper card-title bg-white" data-v-5681bde8><span class="card-title" data-v-5681bde8><div data-v-5681bde8><h4 id="-3" data-v-5681bde8><span id="-3" class="anchor" data-v-5681bde8></span><span data-v-5681bde8>Navigability</span><a href="#-3" onclick="event.stopPropagation()" class="fa fa-anchor" data-v-5681bde8></a></h4></div></span></div> <div class="button-wrapper" data-v-5681bde8><button type="button" class="collapse-button btn btn-outline-secondary" style="display:none;" data-v-5681bde8><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down opened"></span></button> <button type="button" class="close-button btn btn-outline-secondary seamless-button" data-v-5681bde8><span aria-hidden="true" class="glyphicon glyphicon-remove" data-v-5681bde8></span></button> <button type="button" class="popup-button btn btn-outline-secondary seamless-button" style="display:none;" data-v-5681bde8><span aria-hidden="true" class="glyphicon glyphicon-new-window" data-v-5681bde8></span></button></div></div> <div class="card-collapse" data-v-5681bde8><div class="card-body" data-v-5681bde8> <div class="indented" data-v-5681bde8><p data-v-5681bde8><span class="badge badge-light" data-v-5681bde8><span data-v-5681bde8><span class="dimmed" data-v-5681bde8><span data-v-5681bde8><span data-v-5681bde8><span aria-hidden="true" class="fas fa-trophy" data-v-5681bde8></span></span> Can interpret association navigabilities in class diagrams</span></span></span></span></p><p data-v-5681bde8></p><p data-v-5681bde8></p> <p data-v-5681bde8></p> <div data-v-5681bde8><p data-v-5681bde8><strong data-v-5681bde8>Use arrowheads to indicate the navigability of an association.</strong></p> <div class="alert box-container alert-default" data-v-7d17494f><!----> <div class="header-and-body" data-v-7d17494f><!----> <div class="box-body-wrapper" data-v-7d17494f><!----> <!----> <div class="contents" data-v-7d17494f><p data-v-7d17494f><span data-v-7d17494f><span aria-hidden="true" class="fas fa-cube" data-v-7d17494f></span></span> In this example, the navigability is unidirectional, and is from the <code class="hljs inline no-lang" data-v-7d17494f>Logic</code> class to the <code class="hljs inline no-lang" data-v-7d17494f>Minefield</code> class. That means if a <code class="hljs inline no-lang" data-v-7d17494f>Logic</code> object <code class="hljs inline no-lang" data-v-7d17494f>L</code> is associated with a <code class="hljs inline no-lang" data-v-7d17494f>Minefield</code> object <code class="hljs inline no-lang" data-v-7d17494f>M</code>, <code class="hljs inline no-lang" data-v-7d17494f>L</code> has a reference to <code class="hljs inline no-lang" data-v-7d17494f>M</code> but <code class="hljs inline no-lang" data-v-7d17494f>M</code> doesn't have a reference to <code class="hljs inline no-lang" data-v-7d17494f>L</code>.</p> <img src="/se-book/uml/classDiagrams/associations/navigability/images/logicMinefield.png" height="40" data-v-7d17494f> <div data-v-7d17494f><div class="alt-java" data-v-7d17494f><pre data-v-7d17494f><code class="hljs java" data-v-7d17494f><span data-v-7d17494f><span class="hljs-class" data-v-7d17494f><span class="hljs-keyword" data-v-7d17494f>class</span> <span class="hljs-title" data-v-7d17494f>Logic</span> </span>{
+</span><span data-v-7d17494f>    Minefield minefield;
+</span><span data-v-7d17494f>    <span class="hljs-comment" data-v-7d17494f>// ...</span>
+</span><span data-v-7d17494f>}
+</span><span data-v-7d17494f>
+</span><span data-v-7d17494f><span class="hljs-class" data-v-7d17494f><span class="hljs-keyword" data-v-7d17494f>class</span> <span class="hljs-title" data-v-7d17494f>Minefield</span> </span>{
+</span><span data-v-7d17494f>    <span class="hljs-comment" data-v-7d17494f>//...</span>
+</span><span data-v-7d17494f>}
+</span></code></pre></div> <div class="alt-python" data-v-7d17494f><pre data-v-7d17494f><code class="hljs python" data-v-7d17494f><span data-v-7d17494f><span class="hljs-class" data-v-7d17494f><span class="hljs-keyword" data-v-7d17494f>class</span> <span class="hljs-title" data-v-7d17494f>Logic</span>:</span>
+</span><span data-v-7d17494f>  
+</span><span data-v-7d17494f>  <span class="hljs-function" data-v-7d17494f><span class="hljs-keyword" data-v-7d17494f>def</span> <span class="hljs-title" data-v-7d17494f>__init__</span>(<span class="hljs-params" data-v-7d17494f>self</span>):</span>
+</span><span data-v-7d17494f>    self.minefield = <span class="hljs-literal" data-v-7d17494f>None</span>
+</span><span data-v-7d17494f>    
+</span><span data-v-7d17494f>  <span class="hljs-comment" data-v-7d17494f># ...</span>
+</span><span data-v-7d17494f>
+</span><span data-v-7d17494f>
+</span><span data-v-7d17494f><span class="hljs-class" data-v-7d17494f><span class="hljs-keyword" data-v-7d17494f>class</span> <span class="hljs-title" data-v-7d17494f>Minefield</span>:</span>
+</span><span data-v-7d17494f>  <span class="hljs-comment" data-v-7d17494f># ...</span>
+</span></code></pre></div></div> <p data-v-7d17494f><span data-v-7d17494f><span aria-hidden="true" class="fas fa-cube" data-v-7d17494f></span></span> Here is an example of a bidirectional navigability; i.e., if a <code class="hljs inline no-lang" data-v-7d17494f>Dog</code> object <code class="hljs inline no-lang" data-v-7d17494f>d</code> is associated with a <code class="hljs inline no-lang" data-v-7d17494f>Man</code> object <code class="hljs inline no-lang" data-v-7d17494f>m</code>, <code class="hljs inline no-lang" data-v-7d17494f>d</code> has a reference to <code class="hljs inline no-lang" data-v-7d17494f>m</code> and <code class="hljs inline no-lang" data-v-7d17494f>m</code> has a reference to <code class="hljs inline no-lang" data-v-7d17494f>d</code>.</p><p data-v-7d17494f></p> <img src="/se-book/uml/classDiagrams/associations/navigability/images/manDog.png" height="40" data-v-7d17494f><p data-v-7d17494f></p> <div data-v-7d17494f><div class="alt-java" data-v-7d17494f><pre data-v-7d17494f><code class="hljs java" data-v-7d17494f><span data-v-7d17494f><span class="hljs-class" data-v-7d17494f><span class="hljs-keyword" data-v-7d17494f>class</span> <span class="hljs-title" data-v-7d17494f>Dog</span> </span>{
+</span><span data-v-7d17494f>    Man man;
+</span><span data-v-7d17494f>    <span class="hljs-comment" data-v-7d17494f>// ...</span>
+</span><span data-v-7d17494f>}
+</span><span data-v-7d17494f>
+</span><span data-v-7d17494f><span class="hljs-class" data-v-7d17494f><span class="hljs-keyword" data-v-7d17494f>class</span> <span class="hljs-title" data-v-7d17494f>Man</span> </span>{
+</span><span data-v-7d17494f>    Dog dog;
+</span><span data-v-7d17494f>    <span class="hljs-comment" data-v-7d17494f>// ...</span>
+</span><span data-v-7d17494f>}
+</span></code></pre></div> <div class="alt-python" data-v-7d17494f><pre data-v-7d17494f><code class="hljs python" data-v-7d17494f><span data-v-7d17494f><span class="hljs-class" data-v-7d17494f><span class="hljs-keyword" data-v-7d17494f>class</span> <span class="hljs-title" data-v-7d17494f>Dog</span>:</span>
+</span><span data-v-7d17494f>  
+</span><span data-v-7d17494f>  <span class="hljs-function" data-v-7d17494f><span class="hljs-keyword" data-v-7d17494f>def</span> <span class="hljs-title" data-v-7d17494f>__init__</span>(<span class="hljs-params" data-v-7d17494f>self</span>):</span>
+</span><span data-v-7d17494f>    self.man = <span class="hljs-literal" data-v-7d17494f>None</span>
+</span><span data-v-7d17494f>    
+</span><span data-v-7d17494f>  <span class="hljs-comment" data-v-7d17494f># ...</span>
+</span><span data-v-7d17494f>
+</span><span data-v-7d17494f>
+</span><span data-v-7d17494f><span class="hljs-class" data-v-7d17494f><span class="hljs-keyword" data-v-7d17494f>class</span> <span class="hljs-title" data-v-7d17494f>Man</span>:</span>
+</span><span data-v-7d17494f>  <span class="hljs-function" data-v-7d17494f><span class="hljs-keyword" data-v-7d17494f>def</span> <span class="hljs-title" data-v-7d17494f>__init__</span>(<span class="hljs-params" data-v-7d17494f>self</span>):</span>
+</span><span data-v-7d17494f>    self.dog = <span class="hljs-literal" data-v-7d17494f>None</span>
+</span><span data-v-7d17494f>
+</span><span data-v-7d17494f>  <span class="hljs-comment" data-v-7d17494f># ...</span>
+</span></code></pre></div></div></div> <!----></div></div></div> <p data-v-5681bde8><strong data-v-5681bde8>Navigability can be shown in class diagrams as well as object diagrams</strong>.</p> <div class="alert box-container alert-default" data-v-7d17494f><!----> <div class="header-and-body" data-v-7d17494f><!----> <div class="box-body-wrapper" data-v-7d17494f><!----> <!----> <div class="contents" data-v-7d17494f><p data-v-7d17494f><span data-v-7d17494f><span aria-hidden="true" class="fas fa-cube" data-v-7d17494f></span></span> According to this object diagram, the given <code class="hljs inline no-lang" data-v-7d17494f>Logic</code> object is associated with and aware of two <code class="hljs inline no-lang" data-v-7d17494f>MineField</code> objects.</p> <img src="/se-book/uml/classDiagrams/associations/navigability/images/logicMinefieldObjects.png" height="80" data-v-7d17494f></div> <!----></div></div></div></div> <div data-v-5681bde8><div data-v-5681bde8><div expandable="" class="algolia-no-index card-container" data-v-5681bde8><div class="card expandable-card" data-v-5681bde8><div class="card-header header-toggle bg-light" data-v-5681bde8><div class="caret-wrapper" data-v-5681bde8><!----></div> <div class="header-wrapper card-title bg-light" data-v-5681bde8><p data-v-5681bde8><span data-v-5681bde8><span aria-hidden="true" class="fas fa-dumbbell" data-v-5681bde8></span></span> Exercises</p></div> <div class="button-wrapper" data-v-5681bde8><button type="button" class="collapse-button btn btn-outline-secondary" data-v-5681bde8><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down"></span></button> <button type="button" class="close-button btn btn-outline-secondary" data-v-5681bde8><span aria-hidden="true" class="glyphicon glyphicon-remove" data-v-5681bde8></span></button> <button type="button" class="popup-button btn btn-outline-secondary" style="display:none;" data-v-5681bde8><span aria-hidden="true" class="glyphicon glyphicon-new-window" data-v-5681bde8></span></button></div></div> <div class="card-collapse" data-v-5681bde8><!----> <hr style="display:none;" data-v-5681bde8></div> <!----></div></div></div></div></div> <!----> <button type="button" class="collapse-button btn btn-outline-secondary" data-v-5681bde8><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down opened"></span></button></div> <hr style="display:;" data-v-5681bde8></div> <!----></div></div></div> <div><div id="-4" expanded="" class="card-container" data-v-5681bde8><div class="card expandable-card border-0" data-v-5681bde8><div class="card-header header-toggle bg-white border-0" data-v-5681bde8><div class="caret-wrapper" data-v-5681bde8><span class="glyphicon glyphicon-chevron-down" data-v-5681bde8></span></div> <div class="header-wrapper card-title bg-white" data-v-5681bde8><span class="card-title" data-v-5681bde8><div data-v-5681bde8><h4 id="-4" data-v-5681bde8><span id="-4" class="anchor" data-v-5681bde8></span><span data-v-5681bde8>Roles</span><a href="#-4" onclick="event.stopPropagation()" class="fa fa-anchor" data-v-5681bde8></a></h4></div></span></div> <div class="button-wrapper" data-v-5681bde8><button type="button" class="collapse-button btn btn-outline-secondary" style="display:none;" data-v-5681bde8><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down opened"></span></button> <button type="button" class="close-button btn btn-outline-secondary seamless-button" data-v-5681bde8><span aria-hidden="true" class="glyphicon glyphicon-remove" data-v-5681bde8></span></button> <button type="button" class="popup-button btn btn-outline-secondary seamless-button" style="display:none;" data-v-5681bde8><span aria-hidden="true" class="glyphicon glyphicon-new-window" data-v-5681bde8></span></button></div></div> <div class="card-collapse" data-v-5681bde8><div class="card-body" data-v-5681bde8> <div class="indented" data-v-5681bde8><p data-v-5681bde8><span class="badge badge-light" data-v-5681bde8><span data-v-5681bde8><span class="dimmed" data-v-5681bde8><span data-v-5681bde8><span data-v-5681bde8><span aria-hidden="true" class="fas fa-trophy" data-v-5681bde8></span></span> Can explain/use association roles in class diagrams</span></span></span></span></p><p data-v-5681bde8></p><p data-v-5681bde8></p> <p data-v-5681bde8></p> <div data-v-5681bde8><p data-v-5681bde8><strong data-v-5681bde8><em data-v-5681bde8>Association Role</em> labels are used to indicate the role played by the classes in the association.</strong></p> <img src="/se-book/uml/classDiagrams/associations/roles/images/notation.png" height="60" data-v-5681bde8> <div class="alert box-container alert-default" data-v-7d17494f><!----> <div class="header-and-body" data-v-7d17494f><!----> <div class="box-body-wrapper" data-v-7d17494f><!----> <!----> <div class="contents" data-v-7d17494f><p data-v-7d17494f><span data-v-7d17494f><span aria-hidden="true" class="fas fa-cube" data-v-7d17494f></span></span> This association represents a marriage between a <code class="hljs inline no-lang" data-v-7d17494f>Man</code> object and a <code class="hljs inline no-lang" data-v-7d17494f>Woman</code> object. The respective roles played by objects of these two classes are <code class="hljs inline no-lang" data-v-7d17494f>husband</code> and <code class="hljs inline no-lang" data-v-7d17494f>wife</code>.</p> <img src="/se-book/uml/classDiagrams/associations/roles/images/husbandWife.png" width="300" data-v-7d17494f> <p data-v-7d17494f></p> <p data-v-7d17494f>Note how the variable names match closely with the association roles.</p> <div class="alt-java" data-v-7d17494f><pre data-v-7d17494f><code class="hljs java" data-v-7d17494f><span data-v-7d17494f><span class="hljs-class" data-v-7d17494f><span class="hljs-keyword" data-v-7d17494f>class</span> <span class="hljs-title" data-v-7d17494f>Man</span> </span>{
+</span><span data-v-7d17494f>    Woman wife;
+</span><span data-v-7d17494f>}
+</span><span data-v-7d17494f>
+</span><span data-v-7d17494f><span class="hljs-class" data-v-7d17494f><span class="hljs-keyword" data-v-7d17494f>class</span> <span class="hljs-title" data-v-7d17494f>Woman</span> </span>{
+</span><span data-v-7d17494f>    Man husband;
+</span><span data-v-7d17494f>}
+</span></code></pre></div> <div class="alt-python" data-v-7d17494f><pre data-v-7d17494f><code class="hljs python" data-v-7d17494f><span data-v-7d17494f><span class="hljs-class" data-v-7d17494f><span class="hljs-keyword" data-v-7d17494f>class</span> <span class="hljs-title" data-v-7d17494f>Man</span>:</span>
+</span><span data-v-7d17494f>  <span class="hljs-function" data-v-7d17494f><span class="hljs-keyword" data-v-7d17494f>def</span> <span class="hljs-title" data-v-7d17494f>__init__</span>(<span class="hljs-params" data-v-7d17494f>self</span>):</span>
+</span><span data-v-7d17494f>    self.wife = <span class="hljs-literal" data-v-7d17494f>None</span> <span class="hljs-comment" data-v-7d17494f># a Woman object</span>
+</span><span data-v-7d17494f>
+</span><span data-v-7d17494f><span class="hljs-class" data-v-7d17494f><span class="hljs-keyword" data-v-7d17494f>class</span> <span class="hljs-title" data-v-7d17494f>Woman</span>:</span>
+</span><span data-v-7d17494f>   <span class="hljs-function" data-v-7d17494f><span class="hljs-keyword" data-v-7d17494f>def</span> <span class="hljs-title" data-v-7d17494f>__init__</span>(<span class="hljs-params" data-v-7d17494f>self</span>):</span>
+</span><span data-v-7d17494f>     self.husband = <span class="hljs-literal" data-v-7d17494f>None</span> <span class="hljs-comment" data-v-7d17494f># a Man object</span>
+</span></code></pre></div></div> <!----></div></div></div> <div class="alert box-container alert-default" data-v-7d17494f><!----> <div class="header-and-body" data-v-7d17494f><!----> <div class="box-body-wrapper" data-v-7d17494f><!----> <!----> <div class="contents" data-v-7d17494f><p data-v-7d17494f><span data-v-7d17494f><span aria-hidden="true" class="fas fa-cube" data-v-7d17494f></span></span> The role of <code class="hljs inline no-lang" data-v-7d17494f>Student</code> objects in this association is <code class="hljs inline no-lang" data-v-7d17494f>charges</code> <span class="dimmed" data-v-7d17494f>(i.e. Admin is in charge of students)</span></p> <img src="/se-book/uml/classDiagrams/associations/roles/images/adminStudent.png" height="70" data-v-7d17494f> <p data-v-7d17494f></p> <div class="alt-java" data-v-7d17494f><pre data-v-7d17494f><code class="hljs java" data-v-7d17494f><span data-v-7d17494f><span class="hljs-class" data-v-7d17494f><span class="hljs-keyword" data-v-7d17494f>class</span> <span class="hljs-title" data-v-7d17494f>Admin</span> </span>{
+</span><span data-v-7d17494f>    List&lt;Student&gt; charges;
+</span><span data-v-7d17494f>}
+</span></code></pre></div> <div class="alt-python" data-v-7d17494f><pre data-v-7d17494f><code class="hljs python" data-v-7d17494f><span data-v-7d17494f><span class="hljs-class" data-v-7d17494f><span class="hljs-keyword" data-v-7d17494f>class</span> <span class="hljs-title" data-v-7d17494f>Admin</span>:</span>
+</span><span data-v-7d17494f>  <span class="hljs-function" data-v-7d17494f><span class="hljs-keyword" data-v-7d17494f>def</span> <span class="hljs-title" data-v-7d17494f>__init__</span>(<span class="hljs-params" data-v-7d17494f>self</span>):</span>
+</span><span data-v-7d17494f>    self.charges = [] <span class="hljs-comment" data-v-7d17494f># list of Student objects</span>
+</span></code></pre></div></div> <!----></div></div></div></div> <div data-v-5681bde8></div></div> <!----> <button type="button" class="collapse-button btn btn-outline-secondary" data-v-5681bde8><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down opened"></span></button></div> <hr style="display:;" data-v-5681bde8></div> <!----></div></div></div> <div><div id="-5" expanded="" class="card-container" data-v-5681bde8><div class="card expandable-card border-0" data-v-5681bde8><div class="card-header header-toggle bg-white border-0" data-v-5681bde8><div class="caret-wrapper" data-v-5681bde8><span class="glyphicon glyphicon-chevron-down" data-v-5681bde8></span></div> <div class="header-wrapper card-title bg-white" data-v-5681bde8><span class="card-title" data-v-5681bde8><div data-v-5681bde8><h4 id="-5" data-v-5681bde8><span id="-5" class="anchor" data-v-5681bde8></span><span data-v-5681bde8>Labels</span><a href="#-5" onclick="event.stopPropagation()" class="fa fa-anchor" data-v-5681bde8></a></h4></div></span></div> <div class="button-wrapper" data-v-5681bde8><button type="button" class="collapse-button btn btn-outline-secondary" style="display:none;" data-v-5681bde8><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down opened"></span></button> <button type="button" class="close-button btn btn-outline-secondary seamless-button" data-v-5681bde8><span aria-hidden="true" class="glyphicon glyphicon-remove" data-v-5681bde8></span></button> <button type="button" class="popup-button btn btn-outline-secondary seamless-button" style="display:none;" data-v-5681bde8><span aria-hidden="true" class="glyphicon glyphicon-new-window" data-v-5681bde8></span></button></div></div> <div class="card-collapse" data-v-5681bde8><div class="card-body" data-v-5681bde8> <div class="indented" data-v-5681bde8><p data-v-5681bde8><span class="badge badge-light" data-v-5681bde8><span data-v-5681bde8><span class="dimmed" data-v-5681bde8><span data-v-5681bde8><span data-v-5681bde8><span aria-hidden="true" class="fas fa-trophy" data-v-5681bde8></span></span> Can explain/use association labels in class diagrams</span></span></span></span></p><p data-v-5681bde8></p><p data-v-5681bde8></p> <p data-v-5681bde8></p> <div data-v-5681bde8><p data-v-5681bde8><strong data-v-5681bde8><em data-v-5681bde8>Association labels</em> describe the meaning of the association.</strong> The arrow head indicates the direction in which the label is to be read.</p> <img src="/se-book/uml/classDiagrams/associations/labels/images/notation.png" width="400" data-v-5681bde8> <div class="alert box-container alert-default" data-v-7d17494f><!----> <div class="header-and-body" data-v-7d17494f><!----> <div class="box-body-wrapper" data-v-7d17494f><!----> <!----> <div class="contents" data-v-7d17494f><p data-v-7d17494f><span data-v-7d17494f><span aria-hidden="true" class="fas fa-cube" data-v-7d17494f></span></span> In this example, the same association is described using two different labels.</p> <span class="image-wrapper"><img src="/se-book/uml/classDiagrams/associations/labels/images/adminStudent.png" width="600" class="img-fluid rounded"> <span class="image-caption"></span></span> <p data-v-7d17494f></p> <ul data-v-7d17494f><li data-v-7d17494f>Diagram on the left:  <code class="hljs inline no-lang" data-v-7d17494f>Admin</code> class is associated with <code class="hljs inline no-lang" data-v-7d17494f>Student</code> class because an <code class="hljs inline no-lang" data-v-7d17494f>Admin</code> object <em data-v-7d17494f>uses</em> a <code class="hljs inline no-lang" data-v-7d17494f>Student</code> object.</li> <li data-v-7d17494f>Diagram on the right: <code class="hljs inline no-lang" data-v-7d17494f>Admin</code> class is associated with <code class="hljs inline no-lang" data-v-7d17494f>Student</code> class because a <code class="hljs inline no-lang" data-v-7d17494f>Student</code> object is <em data-v-7d17494f>used by</em> an <code class="hljs inline no-lang" data-v-7d17494f>Admin</code> object.</li></ul></div> <!----></div></div></div></div> <div data-v-5681bde8></div></div> <!----> <button type="button" class="collapse-button btn btn-outline-secondary" data-v-5681bde8><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down opened"></span></button></div> <hr style="display:;" data-v-5681bde8></div> <!----></div></div></div> <div><div id="-6" expanded="" class="card-container" data-v-5681bde8><div class="card expandable-card border-0" data-v-5681bde8><div class="card-header header-toggle bg-white border-0" data-v-5681bde8><div class="caret-wrapper" data-v-5681bde8><span class="glyphicon glyphicon-chevron-down" data-v-5681bde8></span></div> <div class="header-wrapper card-title bg-white" data-v-5681bde8><span class="card-title" data-v-5681bde8><div data-v-5681bde8><h4 id="-6" data-v-5681bde8><span id="-6" class="anchor" data-v-5681bde8></span><span data-v-5681bde8>Multiplicity</span><a href="#-6" onclick="event.stopPropagation()" class="fa fa-anchor" data-v-5681bde8></a></h4></div></span></div> <div class="button-wrapper" data-v-5681bde8><button type="button" class="collapse-button btn btn-outline-secondary" style="display:none;" data-v-5681bde8><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down opened"></span></button> <button type="button" class="close-button btn btn-outline-secondary seamless-button" data-v-5681bde8><span aria-hidden="true" class="glyphicon glyphicon-remove" data-v-5681bde8></span></button> <button type="button" class="popup-button btn btn-outline-secondary seamless-button" style="display:none;" data-v-5681bde8><span aria-hidden="true" class="glyphicon glyphicon-new-window" data-v-5681bde8></span></button></div></div> <div class="card-collapse" data-v-5681bde8><div class="card-body" data-v-5681bde8> <div class="indented" data-v-5681bde8><p data-v-5681bde8><span class="badge badge-light" data-v-5681bde8><span data-v-5681bde8><span class="dimmed" data-v-5681bde8><span data-v-5681bde8><span data-v-5681bde8><span aria-hidden="true" class="fas fa-trophy" data-v-5681bde8></span></span> Can explain what is the multiplicity of an association</span></span></span></span></p><p data-v-5681bde8></p><p data-v-5681bde8></p> <p data-v-5681bde8></p> <div data-v-5681bde8><img src="/se-book/uml/classDiagrams/associations/multiplicity/images/notation.png" height="120" data-v-5681bde8> <p data-v-5681bde8></p> <p data-v-5681bde8>Commonly used multiplicities:</p> <ul data-v-5681bde8><li data-v-5681bde8><code class="hljs inline no-lang" data-v-5681bde8>0..1</code> : <em data-v-5681bde8>optional</em>, can be linked to 0 or 1 objects.</li> <li data-v-5681bde8><code class="hljs inline no-lang" data-v-5681bde8>1</code> : <em data-v-5681bde8>compulsory</em>, must be linked to one object at all times.</li> <li data-v-5681bde8><code class="hljs inline no-lang" data-v-5681bde8>*</code> : can be linked to 0 or more objects.</li> <li data-v-5681bde8><code class="hljs inline no-lang" data-v-5681bde8>n..m</code> : the number of linked objects must be within <code class="hljs inline no-lang" data-v-5681bde8>n</code> to <code class="hljs inline no-lang" data-v-5681bde8>m</code> inclusive.</li></ul> <div class="alert box-container alert-default" data-v-7d17494f><!----> <div class="header-and-body" data-v-7d17494f><!----> <div class="box-body-wrapper" data-v-7d17494f><!----> <!----> <div class="contents" data-v-7d17494f><p data-v-7d17494f><span data-v-7d17494f><span aria-hidden="true" class="fas fa-cube" data-v-7d17494f></span></span> In the diagram below, an <code class="hljs inline no-lang" data-v-7d17494f>Admin</code> object administers (is in charge of) any number of students but a <code class="hljs inline no-lang" data-v-7d17494f>Student</code> object must always be under the charge of exactly one <code class="hljs inline no-lang" data-v-7d17494f>Admin</code> object.</p> <img src="/se-book/uml/classDiagrams/associations/multiplicity/images/adminStudent.png" width="300" data-v-7d17494f></div> <!----></div></div></div> <div class="alert box-container alert-default" data-v-7d17494f><!----> <div class="header-and-body" data-v-7d17494f><!----> <div class="box-body-wrapper" data-v-7d17494f><!----> <!----> <div class="contents" data-v-7d17494f><p data-v-7d17494f><span data-v-7d17494f><span aria-hidden="true" class="fas fa-cube" data-v-7d17494f></span></span> In the diagram below,</p> <ul data-v-7d17494f><li data-v-7d17494f>Each student must be supervised by exactly one professor. i.e. There cannot be a student who doesn't have a supervisor or has multiple supervisors.</li> <li data-v-7d17494f>A professor cannot supervise more than 5 students but can have no students to supervise.</li> <li data-v-7d17494f>An admin can handle any number of professors and any number of students, including none.</li> <li data-v-7d17494f>A professor/student can be handled by any number of admins, including none.</li></ul> <img src="/se-book/uml/classDiagrams/associations/multiplicity/images/adminProfessorStudent.png" height="70" data-v-7d17494f></div> <!----></div></div></div></div> <div data-v-5681bde8><div data-v-5681bde8><div expandable="" class="algolia-no-index card-container" data-v-5681bde8><div class="card expandable-card" data-v-5681bde8><div class="card-header header-toggle bg-light" data-v-5681bde8><div class="caret-wrapper" data-v-5681bde8><!----></div> <div class="header-wrapper card-title bg-light" data-v-5681bde8><p data-v-5681bde8><span data-v-5681bde8><span aria-hidden="true" class="fas fa-dumbbell" data-v-5681bde8></span></span> Exercises</p></div> <div class="button-wrapper" data-v-5681bde8><button type="button" class="collapse-button btn btn-outline-secondary" data-v-5681bde8><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down"></span></button> <button type="button" class="close-button btn btn-outline-secondary" data-v-5681bde8><span aria-hidden="true" class="glyphicon glyphicon-remove" data-v-5681bde8></span></button> <button type="button" class="popup-button btn btn-outline-secondary" style="display:none;" data-v-5681bde8><span aria-hidden="true" class="glyphicon glyphicon-new-window" data-v-5681bde8></span></button></div></div> <div class="card-collapse" data-v-5681bde8><!----> <hr style="display:none;" data-v-5681bde8></div> <!----></div></div></div></div></div> <!----> <button type="button" class="collapse-button btn btn-outline-secondary" data-v-5681bde8><span aria-hidden="true" class="collapse-icon glyphicon glyphicon-menu-down opened"></span></button></div> <hr style="display:;" data-v-5681bde8></div> <!----></div></div></div></div></div></div></div> <i id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true" class="fa fa-arrow-circle-up fa-lg d-print-none"></i><p></p></div> <nav id="page-nav" class="fixed-header-padding" data-v-e8c82f88><div class="nav-component slim-scroll" data-v-e8c82f88></div> <!----></nav></div> <footer><div class="text-center"><small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 3.0.3</a>, generated on Mon, 28 Jun 2021, 17:04:50 GMT+8]</small></div></footer></div>
+</body><script src="../../../markbind/js/bootstrap-utility.min.js"></script>
 <script>
-  function initAlgolia() {
+  MarkBind.setup()
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+    <script>
     docsearch({
       apiKey: "8310bb56d1ece8950bd20b0b8c080e10",
       indexName: "se-edu",
@@ -579,12 +98,5 @@
       algoliaOptions: {},
       debug: false,
     });
-  }
-  initAlgolia();
-</script>
-<script src="../../../markbind/layouts/default/scripts.js"></script>
-<script>
-  if (MarkBind.AfterSetup) MarkBind.AfterSetup()
-</script>
-
+  </script>
 </html>

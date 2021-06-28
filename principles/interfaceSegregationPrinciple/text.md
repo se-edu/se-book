@@ -16,20 +16,20 @@
 
 {{ icon_example }} The `Payroll` class should not depend on the `AdminStaff` class because it does not use the `arrangeMeeting()` method. Instead, it should depend on the `SalariedStaff` interface.
 
-```java
+```java{highlight-lines="2"}
 public class Payroll {
-    // ...    
-    private void adjustSalaries(AdminStaff adminStaff) { // violates ISP
+    // violates ISP
+    private void adjustSalaries(AdminStaff adminStaff) {
         // ...
     }
 
 }
 ```
 
-```java
+```java{highlight-lines="2"}
 public class Payroll {
-    // ...    
-    private void adjustSalaries(SalariedStaff staff) { // does not violate ISP
+    // does not violate ISP
+    private void adjustSalaries(SalariedStaff staff) {
         // ...
     }
 }

@@ -1,101 +1,63 @@
-<div>
-  <p>
-    <panel src="/se-book/integration/approaches/bigBangVsIncremental/unit-inElsewhere-asFlat._include_.html" popup-url="/se-book/integration/approaches/bigBangVsIncremental" class="algolia-no-index"><template slot="header">
-        <p><span class="dimmed"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> Implementation → Integration → Approaches → Big-Bang Vs Incremental</span></p>
-      </template></panel>
-  </p>
-</div>
-<p></p>
+<div><panel src="/se-book/integration/approaches/bigBangVsIncremental/unit-inElsewhere-asFlat._include_.html" popup-url="/se-book/integration/approaches/bigBangVsIncremental" class="algolia-no-index"><template #header><p><span class="dimmed"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> Implementation → Integration → Approaches → Big-Bang Vs Incremental</span></p></template></panel></div><p></p>
 <p><span class="dimmed"><strong><span>Implementation → Integration → Approaches →
-      </span></strong></span></p>
+</span></strong></span></p>
 <div id="title-and-body">
-  <div>
-    <h4 id="top-down-versus-bottom-up-integration"><span id="top-down-versus-bottom-up-integration" class="anchor"></span><span>Top-down versus bottom-up integration</span><a class="fa fa-anchor" href="#top-down-versus-bottom-up-integration" onclick="event.stopPropagation()"></a></h4>
-  </div>
-  <div id="main">
+<div><h4 id="top-down-versus-bottom-up-integration"><span id="top-down-versus-bottom-up-integration" class="anchor"></span><span>Top-down versus bottom-up integration</span></h4></div>
+<div id="main">
+<div>
+<img src="/se-book/integration/approaches/topDownVsBottomUp/images/approaches.png" height="100">
+<p></p>
+<p><strong>Based on the order in which components are integrated, incremental integration can be done in three ways.</strong></p>
+<p><strong><em>Top-down</em> integration: higher-level components are integrated before bringing in the lower-level components.</strong> One advantage of this approach is that higher-level problems can be discovered early. One disadvantage is that this requires the use of <trigger for="pop:topdown-stub">stubs</trigger> in place of lower level components until the real lower-level components are integrated into the system. Otherwise, higher-level components cannot function as they depend on lower level ones.</p>
+<span id="pop:topdown-stub" placement="top" data-mb-component-type="popover" v-b-popover.hover.top.html="popoverInnerGetters" class="trigger"><span data-mb-slot-name="header" class="algolia-no-index"><span><span aria-hidden="true" class="glyphicon glyphicon-eye-open"></span></span></span>
+  <span data-mb-slot-name="content" class="algolia-no-index"><div>
     <div>
-      <img src="/se-book/integration/approaches/topDownVsBottomUp/images/approaches.png" height="100">
-      <p></p>
-      <p><strong>Based on the order in which components are integrated, incremental integration can be done in three ways.</strong></p>
-      <p><strong><em>Top-down</em> integration: higher-level components are integrated before bringing in the lower-level components.</strong> One advantage of this approach is that higher-level problems can be discovered early. One disadvantage is that this requires the use of <trigger for="pop:topdown-stub">stubs</trigger> in place of lower level components until the real lower-level components are integrated into the system. Otherwise, higher-level components cannot function as they depend on lower level ones.</p>
-      <span id="pop:topdown-stub" placement="top" data-mb-component-type="popover" v-b-popover.hover.top.html="popoverInnerGetters" class="trigger"><span data-mb-slot-name="header"><span><span aria-hidden="true" class="glyphicon glyphicon-eye-open"></span></span></span>
-        <div data-mb-slot-name="content">
-          <div>
-            <p><strong>Stub</strong>: A stub has the same interface as the component it replaces, but its implementation is so simple that it is unlikely to have any bugs. It mimics the responses of the component, but only for a limited set of predetermined inputs. That is, it does not know how to respond to any other inputs. Typically, these mimicked responses are hard-coded in the stub rather than computed or retrieved from elsewhere, e.g. from a database.</p>
-          </div>
-        </div>
-      </span>
-      <p><strong><em>Bottom-up</em> integration: the reverse of top-down integration.</strong> Note that when integrating lower level components, <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">additional code written to provide inputs to a component via an API</span>drivers</span> may be needed to test the integrated components <span class="dimmed">because the UI may not be integrated yet</span>, just like how top-down integration needs stubs.</p>
-      <p><strong><em>Sandwich</em> integration: a mix of the top-down and bottom-up approaches.</strong> The idea is to do both top-down and bottom-up so as to 'meet' in the middle.</p>
-      <div v-closeable alt="slideshow: comparison">
-        <p>Here is an animation that compares the three approaches:</p>
-        <div class="block-embed block-embed-service-powerpoint"><iframe type="text/html" src="https://onedrive.live.com/embed?cid=A5AF047C4CAD67AB&resid=A5AF047C4CAD67AB%212318&authkey=AD27jxfKqq3nqpQ&em=2&action=embedview&wdAr=1.3333333333333333" frameborder="0" width="610" height="481" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-      </div>
-    </div>
-    <div>
-      <div>
-        <panel expandable class="algolia-no-index"><template slot="header">
-            <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
-          </template>
-          <div>
-            <panel class="algolia-no-index"><template slot="header">
-                <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Suggest an integration strategy</p>
-              </template>
-              <question has-input="true">
-                <p>Suggest an integration strategy for the system represented by the following diagram. You need not follow a strict top-down, bottom-up, sandwich, or big bang approach. Dashed arrows represent dependencies between classes.</p>
-                <p>Also take into account the following facts in your test strategy:</p>
-                <ul>
-                  <li><code class="hljs inline no-lang" v-pre>HospitalUI</code> will be developed early, so as to get customer feedback early.</li>
-                  <li><code class="hljs inline no-lang" v-pre>HospitalFacade</code> shields the UI from the complexities of the application layer. It simply redirects the method calls received to the appropriate classes below.</li>
-                  <li><code class="hljs inline no-lang" v-pre>IO_Helper</code> is to be reused from an earlier project, with minor modifications.</li>
-                  <li>Development of the <code class="hljs inline no-lang" v-pre>OutPatient</code> component has been outsourced, and its delivery is not expected until the 2nd half of the project.</li>
-                </ul>
-                <img src="/se-book/integration/approaches/topDownVsBottomUp/images/hospital.png" height="250">
-                <p></p>
-                <div slot="answer" class="algolia-no-index">
-                  <p>There can be many acceptable answers to this question. But any good strategy should consider at least some of the following:</p>
-                  <ul>
-                    <li>Because <code class="hljs inline no-lang" v-pre>HospitalUI</code> will be developed early, it’s OK to integrate it early, using stubs, rather than wait for the rest of the system to finish. (i.e. a top-down integration is suitable for <code class="hljs inline no-lang" v-pre>HospitalUI</code>)</li>
-                    <li>Because <code class="hljs inline no-lang" v-pre>HospitalFacade</code> is unlikely to have a lot of business logic, it may not be worth to write stubs to test it (i.e. a bottom-up integration is better for <code class="hljs inline no-lang" v-pre>HospitalFacade</code>).</li>
-                    <li>Because <code class="hljs inline no-lang" v-pre>IO_Helper</code> is to be reused from an earlier project, you can finish it early. This is especially suitable since there are many classes that use it. Therefore <code class="hljs inline no-lang" v-pre>IO_Helper</code> can be integrated with the dependent classes in bottom-up fashion.</li>
-                    <li>Because the <code class="hljs inline no-lang" v-pre>OutPatient</code> class may be delayed, you may have to integrate <code class="hljs inline no-lang" v-pre>PatientMgr</code> using a stub.</li>
-                    <li><code class="hljs inline no-lang" v-pre>TypeA</code>, <code class="hljs inline no-lang" v-pre>TypeB</code>, and <code class="hljs inline no-lang" v-pre>TypeC</code> seem to be tightly coupled. It may be a good idea to test them together.</li>
-                  </ul>
-                  <p>Given below is one possible integration test strategy. The relative positioning of items is used to indicate a rough timeline.</p>
-                  <img src="/se-book/integration/approaches/topDownVsBottomUp/images/hospitalIntegration.png" height="250">
-                  <p></p>
-                </div>
-              </question>
-            </panel>
-          </div>
-          <div>
-            <panel class="algolia-no-index"><template slot="header">
-                <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Integration order</p>
-              </template>
-              <question has-input="false">
-                <p>Consider the architecture given below. Describe the order in which components will be integrated with one another if the following integration strategies were adopted.</p>
-                <p>a) top-down<br>
-                  b) bottom-up<br>
-                  c) sandwich</p>
-                <p>Note that dashed arrows show dependencies (e.g. A depends on B, C and D, and is therefore higher-level than B, C and D).</p>
-                <img src="/se-book/integration/approaches/topDownVsBottomUp/images/abc.png" height="190">
-                <p></p>
-                <div slot="answer" class="algolia-no-index">
-                  <p>a) Diagram:</p>
-                  <img src="/se-book/integration/approaches/topDownVsBottomUp/images/aAnswer.png" height="230">
-                  <p></p>
-                  <p>b) Diagram:</p>
-                  <img src="/se-book/integration/approaches/topDownVsBottomUp/images/bAnswer.png" height="230">
-                  <p></p>
-                  <p>c) Diagram:</p>
-                  <img src="/se-book/integration/approaches/topDownVsBottomUp/images/cAnswer.png" height="230">
-                  <p></p>
-                </div>
-              </question>
-            </panel>
-          </div>
-        </panel>
-      </div>
-    </div>
-  </div>
-</div>
+<p><strong>Stub</strong>: A stub has the same interface as the component it replaces, but its implementation is so simple that it is unlikely to have any bugs. It mimics the responses of the component, but only for a limited set of predetermined inputs. That is, it does not know how to respond to any other inputs. Typically, these mimicked responses are hard-coded in the stub rather than computed or retrieved from elsewhere, e.g. from a database.</p></div></div></span></span>
+<p><strong><em>Bottom-up</em> integration: the reverse of top-down integration.</strong> Note that when integrating lower level components, <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content" class="algolia-no-index">additional code written to provide inputs to a component via an API</span>drivers</span> may be needed to test the integrated components <span class="dimmed">because the UI may not be integrated yet</span>, just like how top-down integration needs stubs.</p>
+<p><strong><em>Sandwich</em> integration: a mix of the top-down and bottom-up approaches.</strong> The idea is to do both top-down and bottom-up so as to 'meet' in the middle.</p>
+<div v-closeable alt="slideshow: comparison">
+<p>Here is an animation that compares the three approaches:</p>
+<div class="block-embed block-embed-service-powerpoint"><iframe type="text/html" src="https://onedrive.live.com/embed?cid=A5AF047C4CAD67AB&resid=A5AF047C4CAD67AB%212318&authkey=AD27jxfKqq3nqpQ&em=2&action=embedview&wdAr=1.3333333333333333" frameborder="0" width="610" height="481" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div></div>
+<div>
+<div><panel expandable class="algolia-no-index"><template #header><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
+  <div><panel class="algolia-no-index"><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Suggest an integration strategy</p></template>
+<question has-input="true">
+<p>Suggest an integration strategy for the system represented by the following diagram. You need not follow a strict top-down, bottom-up, sandwich, or big bang approach. Dashed arrows represent dependencies between classes.</p>
+<p>Also take into account the following facts in your test strategy:</p>
+<ul>
+<li><code class="hljs inline no-lang" v-pre>HospitalUI</code> will be developed early, so as to get customer feedback early.</li>
+<li><code class="hljs inline no-lang" v-pre>HospitalFacade</code> shields the UI from the complexities of the application layer. It simply redirects the method calls received to the appropriate classes below.</li>
+<li><code class="hljs inline no-lang" v-pre>IO_Helper</code> is to be reused from an earlier project, with minor modifications.</li>
+<li>Development of the <code class="hljs inline no-lang" v-pre>OutPatient</code> component has been outsourced, and its delivery is not expected until the 2nd half of the project.</li></ul>
+<img src="/se-book/integration/approaches/topDownVsBottomUp/images/hospital.png" height="250">
+<p></p>
+<template #answer><div class="algolia-no-index">
+<p>There can be many acceptable answers to this question. But any good strategy should consider at least some of the following:</p>
+<ul>
+<li>Because <code class="hljs inline no-lang" v-pre>HospitalUI</code> will be developed early, it’s OK to integrate it early, using stubs, rather than wait for the rest of the system to finish. (i.e. a top-down integration is suitable for <code class="hljs inline no-lang" v-pre>HospitalUI</code>)</li>
+<li>Because <code class="hljs inline no-lang" v-pre>HospitalFacade</code> is unlikely to have a lot of business logic, it may not be worth to write stubs to test it (i.e. a bottom-up integration is better for <code class="hljs inline no-lang" v-pre>HospitalFacade</code>).</li>
+<li>Because <code class="hljs inline no-lang" v-pre>IO_Helper</code> is to be reused from an earlier project, you can finish it early. This is especially suitable since there are many classes that use it. Therefore <code class="hljs inline no-lang" v-pre>IO_Helper</code> can be integrated with the dependent classes in bottom-up fashion.</li>
+<li>Because the <code class="hljs inline no-lang" v-pre>OutPatient</code> class may be delayed, you may have to integrate <code class="hljs inline no-lang" v-pre>PatientMgr</code> using a stub.</li>
+<li><code class="hljs inline no-lang" v-pre>TypeA</code>, <code class="hljs inline no-lang" v-pre>TypeB</code>, and <code class="hljs inline no-lang" v-pre>TypeC</code> seem to be tightly coupled. It may be a good idea to test them together.</li></ul>
+<p>Given below is one possible integration test strategy. The relative positioning of items is used to indicate a rough timeline.</p>
+<img src="/se-book/integration/approaches/topDownVsBottomUp/images/hospitalIntegration.png" height="250">
+<p></p></div></template></question></panel></div>
+  <div><panel class="algolia-no-index"><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Integration order</p></template>
+<question has-input="false">
+<p>Consider the architecture given below. Describe the order in which components will be integrated with one another if the following integration strategies were adopted.</p>
+<p>a)	top-down<br>
+b)	bottom-up<br>
+c)	sandwich</p>
+<p>Note that dashed arrows show dependencies (e.g. A depends on B, C and D, and is therefore higher-level than B, C and D).</p>
+<img src="/se-book/integration/approaches/topDownVsBottomUp/images/abc.png" height="190">
+<p></p>
+<template #answer><div class="algolia-no-index">
+<p>a) Diagram:</p>
+<img src="/se-book/integration/approaches/topDownVsBottomUp/images/aAnswer.png" height="230">
+<p></p>
+<p>b) Diagram:</p>
+<img src="/se-book/integration/approaches/topDownVsBottomUp/images/bAnswer.png" height="230">
+<p></p>
+<p>c) Diagram:</p>
+<img src="/se-book/integration/approaches/topDownVsBottomUp/images/cAnswer.png" height="230">
+<p></p></div></template></question></panel></div></panel></div></div></div></div>
