@@ -63,11 +63,11 @@
   * [Principles]({{baseUrl}}/principles/index.html)
 * **Supplementary**
   * [C++ to Java]({{baseUrl}}/cppToJava/index.html)
-* **[Combined exercises]({{baseUrl}}/combined/exercises.html)**
-* **[List of definitions]({{baseUrl}}/common/definitions.html)**
-* **[List of references]({{baseUrl}}/common/references.html)**
-* **[List of learning outcomes]({{baseUrl}}/common/outcomes.html)**
-* **[Printable version]({{baseUrl}}/common/print.html)**
+* [**Combined exercises**]({{baseUrl}}/combined/exercises.html)
+* [**List of definitions**]({{baseUrl}}/common/definitions.html)
+* [**List of references**]({{baseUrl}}/common/references.html)
+* [**List of learning outcomes**]({{baseUrl}}/common/outcomes.html)
+* [**Printable version**]({{baseUrl}}/common/print.html)
 </site-nav>
 </div>
 </nav>
