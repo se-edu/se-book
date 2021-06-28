@@ -19,7 +19,7 @@ class Man {
     void setGirlfriend(Woman w) {
         girlfriend = w;
     }
-    …
+    // ...
 }
 ```
 
@@ -38,7 +38,7 @@ The two classes are meant to be used as follows:
 ```java
 Woman jean;
 Man james;
-…
+// ...
 james.setGirlfriend(jean);
 jean.setBoyfriend(james);
 ```
@@ -47,7 +47,7 @@ Suppose the two classes were used like this instead:
 ```java
 Woman jean;
 Man james, yong;
-…
+// ...
 james.setGirlfriend(jean);  
 jean.setBoyfriend(yong);  
 ```
@@ -77,7 +77,7 @@ public class Woman {
     public void breakUp() {
         boyfriend = null;
     }   
-    ...
+    // ...
 }
 ```
 
@@ -98,7 +98,7 @@ public class Man {
     public void breakUp() {
         girlfriend = null;
     }  
-   ...
+    // ...
 }
 ```
 

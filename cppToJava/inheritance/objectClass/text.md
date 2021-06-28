@@ -43,15 +43,16 @@ class Time {
 
 {{ icon_example }} Here's an example of overriding the `toString` method of the `Time` class:
 
-```java
+```java{highlight-lines="5"}
 class Time{
 
-   //...
+     //...
 
-   @Override
-   public String toString() {
-       return String.format("%02d:%02d:%02d\n", this.hours, this.minutes, this.seconds);
-   }
+     @Override
+     public String toString() {
+         return String.format("%02d:%02d:%02d\n",
+                 this.hours, this.minutes, this.seconds);
+     }
 }
 ```
 ```java

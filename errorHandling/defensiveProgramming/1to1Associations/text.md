@@ -23,7 +23,7 @@ class MinedCell {
         }
         mine = m;
     }
-    …
+    // ...
 }
 ```
 
@@ -37,7 +37,7 @@ class MinedCell {
     public MinedCell() {
         mine = new Mine();
     }
-    …
+    // ...
 }
 ```
 

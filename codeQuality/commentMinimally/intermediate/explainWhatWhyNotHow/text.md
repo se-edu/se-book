@@ -43,7 +43,8 @@ compact(input);
 
 {{bad}} %%Reason: Comment explains how the code works.%%
 ```java
-// return true if both left end and right end are correct or the size has not incremented
+// return true if both left end and right end are correct
+//    or the size has not incremented
 return (left && right) || (input.size() == size);
 ```
 

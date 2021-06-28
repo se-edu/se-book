@@ -1,8 +1,10 @@
-<table> 
-<tr>
-  <td>
 
-{{bad}}
+<table>
+<tr><td valign="top">
+
+{{bad}}&nbsp;
+</td><td>
+
 ```java
 int subsidy() {
     int subsidy;
@@ -22,11 +24,12 @@ int subsidy() {
     return subsidy;
 }
 ```
-  </td>
-  <td>&nbsp;&nbsp;<br><br></td>
-  <td valign="top">
+</td></tr>
+<tr><td valign="top">
 
-{{good}}
+{{good}}&nbsp;
+</td><td>
+
 ```java
 int calculateSubsidy() {
     int subsidy;
@@ -42,6 +45,5 @@ int calculateSubsidy() {
     return subsidy;
 }
 ```
-  </td>
-</tr>
+</td></tr>
 </table>

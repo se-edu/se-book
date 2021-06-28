@@ -14,7 +14,7 @@
 
 {{ icon_example }} In this example, the same association is described using two different labels.
 
-<img src="{{baseUrl}}/uml/classDiagrams/associations/labels/images/adminStudent.png" width="600" />
+<pic src="{{baseUrl}}/uml/classDiagrams/associations/labels/images/adminStudent.png" width="600" />
 <p/>
 
 * Diagram on the left:  `Admin` class is associated with `Student` class because an `Admin` object _uses_ a `Student` object.

@@ -7,19 +7,19 @@ Write a program to ask the user for a description of overseas expenses (presumab
 
 
 Here is one example output: {{ icon_output }}
-```
+```{.no-line-numbers}
 Your expenses while overseas?beer $4.50 books $3.00 $5.00 for food, that's all
 Expenses in overseas currency:[$4.50, $3.00, $5.00]
 Total in local currency: $21.25
 ```
 Here is another: {{ icon_output }}
-```
+```{.no-line-numbers}
 Your expenses while overseas?nothing. I lived off my friends all the time.
 Expenses in overseas currency:[]
 Total in local currency: $0.00
 ```
 One more: {{ icon_output }}
-```
+```{.no-line-numbers}
 Your expenses while overseas? Just $10
 Expenses in overseas currency:[$10]
 Total in local currency: $17.00
@@ -43,9 +43,12 @@ public class Main {
 ```
 
 {{ icon_tip }} You can use the `split` method of the `String` class to convert a sentence into an array of words. e.g.,<br>
-```java
+```java{highlight-lines="3-4"}
 String sentence = "hello my dear";
-String[] words = sentence.split(" "); // split using the space as the delimiter
+
+// split using the space as the delimiter
+String[] words = sentence.split(" ");
+
 System.out.println(Arrays.toString(words));
 ```
 {{ icon_output_right }} `[hello, my, dear]`

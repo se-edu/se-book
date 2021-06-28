@@ -7,7 +7,7 @@ Add a method `move(Point p, Rectangle r)` to the code below, to produce the give
 * Does not modify `p`
 * Updates `r` so that its attributes `x` and `y` match those of `p`
 
-```java
+```java{.no-line-numbers}
 import java.awt.Point;
 import java.awt.Rectangle;
 
@@ -21,16 +21,19 @@ public class Main {
         System.out.println("arguments: " + p1 + ", " + r1);
 
         Point p2 = move(p1, r1);
-        System.out.println("argument point after method call: " + p1);
-        System.out.println("argument rectangle after method call: " + r1);
-        System.out.println("returned point: " + p2);
+        System.out.println(
+                "argument point after method call: " + p1);
+        System.out.println(
+                "argument rectangle after method call: " + r1);
+        System.out.println(
+                "returned point: " + p2);
 
         System.out.println(move(null, null));
     }
 }
 ```
 {{ icon_output }}
-```
+```{.no-line-numbers}
 arguments: java.awt.Point[x=0,y=0], java.awt.Rectangle[x=2,y=3,width=5,height=6]
 argument point after method call: java.awt.Point[x=0,y=0]
 argument rectangle after method call: java.awt.Rectangle[x=0,y=0,width=5,height=6]

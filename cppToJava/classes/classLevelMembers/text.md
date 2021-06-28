@@ -18,7 +18,7 @@ When a number of objects are created from the same class blueprint, they each ha
 
 {{ icon_example }} Suppose you want to create a number of Bicycle objects and assign each a serial number, beginning with 1 for the first object. This ID number is unique to each object and is therefore an instance variable. At the same time, you need a field to keep track of how many `Bicycle` objects have been created so that you know what ID to assign to the next one. Such a field is not related to any individual object, but to the class as a whole. For this you need a class variable, `numberOfBicycles`, as follows:
 
-```java
+```java{highlight-lines="9-10, 11['static']"}
 public class Bicycle {
 
     private int gear;
@@ -27,7 +27,8 @@ public class Bicycle {
     // an instance variable for the object ID
     private int id;
 
-    // a class variable for the number of Bicycle objects instantiated
+    // a class variable for the number of Bicycle
+    //   objects instantiated
     private static int numberOfBicycles = 0;
         ...
 }

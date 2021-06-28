@@ -18,10 +18,11 @@ System testing is typically done by a testing team (also called a QA team).
 
 {{ icon_example }} Suppose the SUT is a browser that is supposedly capable of handling web pages containing up to 5000 characters. Given below is a test case to test if the SUT fails gracefully if pushed beyond its limits.
 
-```
+```{.no-line-numbers}
 Test case: load a web page that is too big
-* Input: load a web page containing more than 5000 characters. 
-* Expected behavior: abort the loading of the page and show a meaningful error message. 
+* Input: loads a web page containing more than 5000 characters.
+* Expected behavior: aborts the loading of the page
+  and shows a meaningful error message.
 ```
 
 This test case would fail if the browser attempted to load the large file anyway and crashed.

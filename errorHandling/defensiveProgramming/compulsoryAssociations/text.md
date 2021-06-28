@@ -42,17 +42,19 @@ class Account {
 
     public Account(Guarantor g) {
         if (g == null) {
-            stopSystemWithMessage("multiplicity violated. Null Guarantor");
+            stopSystemWithMessage(
+                    "multiplicity violated. Null Guarantor");
         }
         guarantor = g;
     }
     public void setGuarantor(Guarantor g) {
         if (g == null) {
-            stopSystemWithMessage("multiplicity violated. Null Guarantor");
+            stopSystemWithMessage(
+                    "multiplicity violated. Null Guarantor");
         }
         guarantor = g;
     }
-    …
+    // ...
 }
 ```
 

@@ -14,7 +14,7 @@ Notation:
 
 {{ icon_example }} In the class diagram below, there are two enumerations in use:
 
-<img src="{{baseUrl}}/uml/classDiagrams/enumerations/what/images/playerTurn.png" width="600" />
+<pic src="{{baseUrl}}/uml/classDiagrams/enumerations/what/images/playerTurn.png" width="600" />
 <p/>
 
 </box>

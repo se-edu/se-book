@@ -6,7 +6,7 @@
 
 <div id="body">
 
-...
+
 
 </div>
 

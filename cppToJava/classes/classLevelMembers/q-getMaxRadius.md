@@ -51,7 +51,7 @@ public class Circle {
 Update it as follows so that code given below produces the given output.
 * Add a class-level `getMaxRadius` method that returns the maximum radius that has been used in all `Circle` objects created thus far.
 
-```java
+```java{.no-line-numbers}
 public class Main {
     public static void main(String[] args) {
         Circle c = new Circle();

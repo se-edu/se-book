@@ -21,12 +21,12 @@ When you run a Java program, you can encounter a <tooltip content="so-called bec
 
 {{ icon_example }} For example, modify the HelloWorld code to include the following line, compile it again, and run it.
 
-```java
+```java{.no-line-numbers}
 System.out.println(5/0);
 ```
 
 You should get a message like this:
-```sh
+```sh{.no-line-numbers}
 Exception in thread "main" java.lang.ArithmeticException: / by zero
     at Hello.main(Hello.java:5)
 ```

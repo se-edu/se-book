@@ -29,21 +29,21 @@ Given below are some steps you can follow when reviewing a PR.
 1. Enter your comment.<br>
    {{ icon_resource }} [This page @SE-EDU/guides](https://se-education.org/guides/guidelines/PRs-reviewing.html) has some best practices PR reviewers can follow.
 1. After typing in the comment, click on the {{ button_green("Start a review") }} button (not the {{ button_light("Add single comment") }} button. This way, your comment is saved but not visible to others yet. It will be visible to others only when you have finished the entire review.<br>
-   <img src="images/addComment.png" width="800" />
+   <pic src="images/addComment.png" width="800" />
    <p/>
 1. Repeat the above steps to add more comments.
 
 **5. Submit the review:**<br>
-   <img src="images/submitReview.png" width="500" />
+   <pic src="images/submitReview.png" width="500" />
    <p/>
 
 1. When there are no more comments to add, click on the {{ button_green("Review changes :octicon-triangle-down:") }} button (on the top right of the diff page).
 1. Type in an overall comment about the PR, if any. e.g.,
-   ```
+   ```{.no-line-numbers}
    Overall, I found your code easy to read for the most part except a few places
    where the nesting was too deep. I noted a few minor coding standard violations
-   too. Some of the classes are getting quite long. Consider splitting into smaller
-   classes if that makes sense.
+   too. Some of the classes are getting quite long. Consider splitting into
+   smaller classes if that makes sense.
    ```
    {{ icon_tip }} `LGTM` is often used in such overall comments, to indicate `Looks good to merge`.<br>
    `nit` is another such term, used to indicate minor flaws e.g., `LGTM, almost. Just a few nits to fix.`.

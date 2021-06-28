@@ -22,7 +22,7 @@ Preparation: If you would like to try merging a PR yourself, you can create a du
 **1. Locate the PR** to be merged in your repo's GitHub page.
 
 **2. Click on the <span class="tab">:far-comments: Conversation</span> tab** and scroll to the bottom. You'll see a panel containing the PR status summary.<br>
-<img src="{{baseUrl}}/gitAndGithub/managePRs/images/mergePr.png" width="800" />
+<pic src="{{baseUrl}}/gitAndGithub/managePRs/images/mergePr.png" width="800" />
 
 **3. If the PR is not merge-able in the current state**, the {{ button_light("Merge pull request :octicon-triangle-down:") }} will not be green. Here are the possible reasons and remedies:
 

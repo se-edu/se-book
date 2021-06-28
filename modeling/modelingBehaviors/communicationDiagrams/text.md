@@ -12,7 +12,7 @@
 
 {{ icon_example }} An example:
 
-<img src="{{baseUrl}}/modeling/modelingBehaviors/communicationDiagrams/images/diagram.png" height="300" />
+<pic src="{{baseUrl}}/modeling/modelingBehaviors/communicationDiagrams/images/diagram.png" height="300" />
 <br>
 
 <sub>Adapted from: _UML Distilled_ by Martin Fowler</sub>
