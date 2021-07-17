@@ -38,12 +38,12 @@ Here are examples of lower level designs of some components of the same software
 <pic src="https://se-edu.github.io/addressbook-level3/images/UiClassDiagram.png" width="700" />
 
   </tab>
-  <tab header="Logic">
+  <tab header="Logic" class="d-print-none">
 
 <pic src="https://se-edu.github.io/addressbook-level3/images/LogicClassDiagram.png" width="800" />
 
   </tab>
-  <tab header="Storage">
+  <tab header="Storage" class="d-print-none">
 
 <pic src="https://se-edu.github.io/addressbook-level3/images/StorageClassDiagram.png" width="700" />
 
