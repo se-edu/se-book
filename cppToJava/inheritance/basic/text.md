@@ -154,5 +154,5 @@ There are two levels of access control:
 </div>
 
 <div id="extras">
-  <include src="exercisesPanel.md" boilerplate />
+  <include src="exercises.md" />
 </div>

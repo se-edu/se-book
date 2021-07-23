@@ -142,5 +142,5 @@ Notice how the single line `for (int value : values)` replaces the first two lin
 
 <div id="extras">
   <include src="resourcesPanel.md" boilerplate />
-  <include src="exercisesPanel.md" boilerplate />
+  <include src="exercises.md" />
 </div>

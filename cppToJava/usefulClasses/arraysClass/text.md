@@ -31,5 +31,5 @@ System.out.println(Arrays.toString(c));
 </div>
 
 <div id="extras">
-  <include src="exercisesPanel.md" boilerplate />
+  <include src="exercises.md" />
 </div>

@@ -52,5 +52,5 @@ System.out.printf("Hello %s, age %d\n", name, age);
 </div>
 
 <div id="extras">
-  <include src="exercisesPanel.md" boilerplate />
+  <include src="exercises.md" />
 </div>

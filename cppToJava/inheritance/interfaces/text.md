@@ -113,5 +113,5 @@ public interface DrivableVehicle {
 </div>
 
 <div id="extras">
-  <include src="exercisesPanel.md" boilerplate />
+  <include src="exercises.md" />
 </div>
