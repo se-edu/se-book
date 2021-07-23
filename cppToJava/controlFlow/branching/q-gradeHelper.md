@@ -1,5 +1,4 @@
 <panel type="dark" header="###  <small><small>{{ icon_important }} [Key Exercise] Grade Helper</small></small>" expanded >
-<question>
 
 Write a Java program that takes a letter grade e.g., `A+` as a command line argument and prints the CAP value for that grade.
 
@@ -18,7 +17,7 @@ Follow the sample output given below.
 
 You can assume that the input is always in the correct format %%i.e., no need to handle invalid input cases%%.
 
-<div slot="hint">
+<panel type="seamless" header="Hint">
 
 Partial solution:
 ```java
@@ -35,6 +34,5 @@ public class GradeHelper {
 }
 ```
 
-</div>
-</question>
+</panel>
 </panel>

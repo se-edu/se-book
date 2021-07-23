@@ -1,5 +1,4 @@
 <panel type="dark" header="###  <small><small>{{ icon_important }} [Key Exercise] Compare names</small></small>" expanded >
-<question>
 
 Write a Java program that takes two command line arguments and prints `true` or `false` to indicate if the two arguments have the same value. Follow the sample output given below.
 
@@ -28,7 +27,7 @@ boolean isSame = x.equals("bar") // false
 isSame = x.equals("foo") // true
 ```
 
-<div slot="hint">
+<panel type="seamless" header="Hint">
 
 * The two command line arguments can be accessed inside the `main` method using `args[0]` and `args[1]`.
 * When using multiple operators in the same expression, you might need to use parentheses to specify operator precedence. e.g., `"foo" + x == y` vs  `"foo" + (x == y)`
@@ -48,6 +47,5 @@ class Main {
 ```
 </panel>
 
-</div>
-</question>
+</panel>
 </panel>

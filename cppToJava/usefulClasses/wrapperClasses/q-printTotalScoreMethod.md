@@ -1,5 +1,4 @@
 <panel type="dark" header="###  <small><small>{{ icon_important }} [Key Exercise] `printTotalScore` method</small></small>" expanded >
-<question>
 
 Implement the `printTotalScore` method in the code below to produce the given output. Its behavior:
 * `values` is an array of strings, each string representing an integer e.g., `["5", "-1"]`
@@ -26,7 +25,7 @@ public class Main {
 109
 ```
 
-<div slot="hint">
+<panel slot="hint">
 
 {{ icon_tip }} You can use the [`Integer.parseInt()`](https://www.tutorialspoint.com/java/number_parseint.htm) method to convert a `String` to the equivalent `int` value.
 
@@ -41,6 +40,5 @@ public static void printTotalScore(String[] values){
 }
 ```
 
-</div>
-</question>
+</panel>
 </panel>

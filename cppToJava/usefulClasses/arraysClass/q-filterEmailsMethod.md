@@ -1,5 +1,4 @@
 <panel type="dark" header="###  <small><small>{{ icon_important }} [Key Exercise] `filterEmails` method</small></small>" expanded >
-<question>
 
 Implement the following two methods in the code below to produce the given output.
 * **`filterEmailsfilterEmails(String[] items): String[]`**
@@ -39,7 +38,7 @@ public class Main {
 
 ```
 
-<div slot="hint">
+<panel type="seamless" header="Hint">
 
 * **`filterEmails(String[] items): String[]`**
   1. create a new array (say `emails`) of the same size as `items`
@@ -68,6 +67,5 @@ public static void printItems(String[] items){
 ```
 </panel>
 
-</div>
-</question>
+</panel>
 </panel>

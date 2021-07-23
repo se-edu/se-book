@@ -1,5 +1,4 @@
 <panel type="dark" header="###  <small><small>{{ icon_important }} [Key Exercise] `printPrice` method</small></small>" expanded >
-<question>
 
 Implement the `printPrice` method in the code below to produce the given output. Its behavior:
 * The parameter `item` is a string in the format `name--$price` i.e., a name and a price of an item separated using a `--` e.g., `banana--$3/50`
@@ -32,7 +31,7 @@ SODA: 10.00
 FRIES: 0.50
 ```
 
-<div slot="hint">
+<panel type="seamless" header="Hint">
 
 Partial solution:
 ```java
@@ -45,6 +44,5 @@ public static void printPrice(String item) {
 }
 ```
 
-</div>
-</question>
+</panel>
 </panel>

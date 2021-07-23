@@ -1,5 +1,4 @@
 <panel type="dark" header="###  <small><small>{{ icon_important }} [Key Exercise] find total expenditure</small></small>" expanded >
-<question>
 
 Write a program to ask the user for a description of overseas expenses (presumably, the user has just returned from an overseas trip) and calculate the total in local currency.
 * The conversion rate from overseas currency to local currency : overseas `$1.0` = local `$1.70`
@@ -53,7 +52,7 @@ System.out.println(Arrays.toString(words));
 ```
 {{ icon_output_right }} `[hello, my, dear]`
 
-<div slot="hint">
+<panel type="seamless" header="Hint">
 
 {{ icon_tip }} You can use `String.format("%.2f", doubleValue)` to format `doubleValue` to two decimal points.<br>
 e.g., `String.format("%.2f", 1.3334)` {{ icon_output_right }} `1.33`
@@ -100,6 +99,5 @@ public class Main {
 ```
 </panel>
 
-</div>
-</question>
+</panel>
 </panel>

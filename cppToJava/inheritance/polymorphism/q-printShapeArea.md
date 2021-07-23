@@ -1,5 +1,4 @@
 <panel type="dark" header="###  <small><small>{{ icon_important }} [Key Exercise] print shape area</small></small>" expanded >
-<question>
 
 The `Main` class below keeps a list of `Circle` and `Rectangle` objects and prints the area (as an `int` value) of each shape when requested.
 
@@ -81,5 +80,4 @@ public class Main {
 ```
 </panel>
 
-</question>
 </panel>

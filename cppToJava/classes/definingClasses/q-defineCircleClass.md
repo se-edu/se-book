@@ -1,5 +1,4 @@
 <panel type="dark" header="###  <small><small>{{ icon_important }} [Key Exercise] define a `Circle` class</small></small>" expanded >
-<question>
 
 Define a `Circle` class so that the code given below produces the given output. The nature of the class is as follows:
 * Attributes(all `private`):
@@ -33,7 +32,7 @@ public class Main {
 78
 ```
 
-<div slot="hint">
+<panel type="seamless" header="Hint">
 
 * Put the `Circle` class in a file called `Circle.java`
 
@@ -60,6 +59,5 @@ public class Circle {
 }
 ```
 
-</div>
-</question>
+</panel>
 </panel>

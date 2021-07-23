@@ -1,7 +1,5 @@
 <panel type="dark" header="###  <small><small>{{ icon_important }} [Key Exercise] inherit the `Task` class</small></small>" expanded >
 
-<question>
-
 Background: Suppose we are creating a software to manage various tasks a person has to do. Two types of such tasks are,
 * _Todos_: i.e., things that needs to be done some day %%e.g., 'Read the book Lord of the Rings'%%
 * _Deadlines_: i.e., things to be done by a specific date/time %%e.g., 'Read the text book by Nov 25th'%%
@@ -70,7 +68,7 @@ true
 Postponed to Nov 18th
 ```
 
-<div slot="hint">
+<panel type="seamless" header="Hint">
 
 `Todo` class is given below. You can follow a similar approach for the `Deadline` class.
 
@@ -85,6 +83,5 @@ public class Todo extends Task {
 }
 ```
 
-</div>
-</question>
+</panel>
 </panel>

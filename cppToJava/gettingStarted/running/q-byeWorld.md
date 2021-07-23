@@ -1,5 +1,4 @@
 <panel type="dark" header="###  <small><small>{{ icon_important }} [Key Exercise] ByeWorld</small></small>" expanded >
-<question>
 
 Modify the code below to print "Bye World!".
 
@@ -11,5 +10,4 @@ class Main {
 }
 ```
 
-</question>
 </panel>

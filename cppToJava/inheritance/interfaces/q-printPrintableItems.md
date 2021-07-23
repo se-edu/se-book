@@ -1,5 +1,4 @@
 <panel type="dark" header="###  <small><small>{{ icon_important }} [Key Exercise] print `Printable` items</small></small>" expanded >
-<question>
 
 The `Main` class below passes a list of `Printable` objects (i.e., objects that implement the `Printable` interface) for another method to be printed.
 
@@ -97,5 +96,4 @@ public interface Printable {
 ```
 </panel>
 
-</question>
 </panel>

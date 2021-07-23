@@ -1,5 +1,4 @@
 <panel type="dark" header="###  <small><small>{{ icon_important }} [Key Exercise] `getMultipleGradeCaps` Method</small></small>" expanded >
-<question>
 
 Add the following method to the class given below.
 
@@ -61,7 +60,7 @@ A:5.0
 A-:4.5
 ```
 
-<div slot="hint">
+<panel type="seamless" header="Hint">
 
 Partial solution:
 ```java
@@ -74,6 +73,5 @@ Partial solution:
     }
 ```
 
-</div>
-</question>
+</panel>
 </panel>
