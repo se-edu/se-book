@@ -24,10 +24,15 @@ Given below are some steps you can follow when reviewing a PR.
 **3. Click on the** <span class="tab">:octicon-diff: Files changed</span> tab to see the _diff_ view.
 
 **4. Add review comments:**
-1. Hover over the line you want to comment on and click on the <span style="color:#0066ff">:fas-plus-square:</span> icon that appears on the left margin. That should create a text box for you to enter your comment.<br>
-   {{ icon_tip }} To mark multiple lines, click-and-drag the <span style="color:#0066ff">:fas-plus-square:</span> icon.
+1. Hover over the line you want to comment on and click on the <span style="color:#0066ff">:fas-plus-square:</span> icon that appears on the left margin. That should create a text box for you to enter your comment.
+   * {{ icon_tip }} To give a comment related to multiple lines, click-and-drag the <span style="color:#0066ff">:fas-plus-square:</span> icon. The result will look like this:<br>
+     <pic src="images/addCommentForMultipleLines.png"/>
 1. Enter your comment.<br>
-   {{ icon_resource }} [This page @SE-EDU/guides](https://se-education.org/guides/guidelines/PRs-reviewing.html) has some best practices PR reviewers can follow.
+   * {{ icon_resource }} [This page @SE-EDU/guides](https://se-education.org/guides/guidelines/PRs-reviewing.html) has some best practices PR reviewers can follow.
+   * {{ icon_tip }} To suggest an in-line code change, click on this icon:<br>
+     <pic src="images/giveInlineSuggestion.png"/><br>
+     The comment will look like this to the viewers:<br>
+     <pic src="images/giveInlineSuggestionPreview.png"/><br>
 1. After typing in the comment, click on the {{ button_green("Start a review") }} button (not the {{ button_light("Add single comment") }} button. This way, your comment is saved but not visible to others yet. It will be visible to others only when you have finished the entire review.<br>
    <pic src="images/addComment.png" width="800" />
    <p/>
