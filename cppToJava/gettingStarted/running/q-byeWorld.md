@@ -1,4 +1,4 @@
-<panel type="dark" header="###  <small><small>{{ icon_important }} [Key Exercise] ByeWorld</small></small>" expanded >
+<panel type="secondary" header="###  <small><small>[Exercise] ByeWorld</small></small>" expanded >
 
 Modify the code below to print "Bye World!".
 
