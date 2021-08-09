@@ -145,8 +145,8 @@ There are two levels of access control:
 
 2. **At the member level**:
    * **`public`** : the member is visible to all other classes
+   * **`protected`**: same as `public`
    * **no modifier**: same as `public`
-   * **`protected`**: the member is visible to sub classes only
    * **`private`**: the member is not visible to other classes (but can be accessed in its own class)
 
 </div>
