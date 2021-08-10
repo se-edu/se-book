@@ -1,6 +1,8 @@
 <panel type="secondary" header="###  <small><small>{{ icon_important }} [Exercise] Run HelloWorld</small></small>" expanded >
 
-**A. Install Java** in your computer, if you haven't done so already. Ensure the installation is correct, as follows.
+**A. Install Java 11** in your computer, if you haven't done so already. Ensure the installation is correct, as follows.<br>
+{{ icon_tip }} If you are using a Mac, the first part of [this video](https://www.youtube.com/watch?v=09NLTY3izM8) explains how to install and verify Java on a Mac.
+
    1. Open a command prompt.
    1. Run the command `java -version`. Confirm that the output indicates that you have Java 11. Sample output:
       ```{highlight-lines="1[14:27]" .no-line-numbers}
