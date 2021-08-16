@@ -1,7 +1,7 @@
 <panel type="dark" header="###  <small><small>{{ icon_important }} [Key Exercise] `filterEmails` method</small></small>" expanded >
 
 Implement the following two methods in the code below to produce the given output.
-* **`filterEmailsfilterEmails(String[] items): String[]`**
+* **`filterEmails(String[] items): String[]`**
   * `items` is an array of strings each of which may be an email address or some other random string
   * Returns a `String[]` containing email addresses that were in `items`. Any string containing `@` is considered as an email.<br>
   `["aaa@bbb", "xyz"]` {{ icon_output_right }} `["aaa@bbb"]`
