@@ -1,5 +1,4 @@
 <panel header="{{ icon_Q }} Find basic coding standard violations">
-<question >
 
 Consider the code given below:
 ```java
@@ -31,7 +30,7 @@ public class Task {
 
 In what ways do the code violate the coding standard you are expected to follow?
 
-<div slot="hint">
+<panel header=":fas-lightbulb: Some hints ..." minimized>
 
 Here are three:
 * `descriptionPrefix` is a constant and should be named `DESCRIPTION_PREFIX`
@@ -42,5 +41,4 @@ There are many more.
 
 </div>
 
-</question>
 </panel>
