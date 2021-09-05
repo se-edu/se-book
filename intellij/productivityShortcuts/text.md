@@ -8,9 +8,7 @@
 
 <div v-closeable alt="video: Intellij shortcuts">
 
-@[youtube](KsVWdGOnHZU)
-
-@[youtube](EvXpgL2iho4)
+@[youtube](41CC-F6KRP8)
 
 
 </div>
