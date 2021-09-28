@@ -1,5 +1,5 @@
 <panel header="{{ icon_Q }} Draw an Object Diagram for the Class Diagram (Person-Guardian)">
-<question>
+<div>
 
 Suppose we wrote a program to follow the class structure given in this class diagram:
 
@@ -20,14 +20,16 @@ i.e. apply step 1 → [diagram 1] → apply step 2 on diagram 1 → [diagram 2] 
 
 5. `Alfred` has an office address at the `Wayne Industries` building which is different from his home address (i.e. `Bat Cave`).
 
-<div slot="hint">
+<panel header=":fas-lightbulb: hint" minimized>
 
 After step 2, the diagram should look like this:
 
-<img src="{{baseUrl}}/uml/classDiagrams/combine/basic/images/objectDiagramsForClassDiagramHint.png" width="600" />
+<pic src="{{baseUrl}}/uml/classDiagrams/combine/basic/images/objectDiagramsForClassDiagramHint.png" width="600" />
 
+%%Why both `Person` objects use the same `Address` object? Because the questions asks us to minimize the number of
+objects (which is an _artificial_ constraint added to ensure everyone arrives at the same diagram)%%
 </div>
 
-</question>
+</div>
 
 </panel>
