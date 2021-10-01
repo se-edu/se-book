@@ -14,9 +14,9 @@
 
 <div v-closeable alt="Test Coverage in Intellij" class="non-printable">
 
-{{ icon_video }} Measuring code coverage in Intellij IDEA
+{{ icon_video }} Measuring code coverage in Intellij IDEA (==watch from `4 minutes 50 seconds` mark==)
 
-@[youtube](yNYzZvyA2ik)
+@[youtube](QDFI19lj4OM)
 
 </div>
 
