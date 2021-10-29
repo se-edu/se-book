@@ -27,8 +27,6 @@ Often, state-dependent behavior displayed by an object in a system is simple eno
 
 Occasionally, objects may exhibit state-dependent behavior that is complex enough such that it needs to be captured in a separate model. Such state-dependent behavior can be modeled using UML _state machine diagrams_ (SMD for short, sometimes also called ‘state charts’, ‘state diagrams’ or ‘state machines’).
 
-Occasionally, objects may exhibit state-dependent behavior that is complex enough such that it needs to be captured into a separate model. Such state-dependent behavior can be modelled using UML _state machine diagrams_ (SMD for short, sometimes also called ‘state charts’, ‘state diagrams’ or ‘state machines’).
-
 An SMD views the life-cycle of an object as consisting of a finite number of states where each state displays a unique behavior pattern. SMDs capture information such as the states an object can be in during its lifetime, how the object responds to various events while in each state, and how the object transits from one state to another. In contrast to sequence diagrams that capture object behavior one scenario at a time, SMDs capture the object’s behavior over its full life-cycle.
 
 <box>
