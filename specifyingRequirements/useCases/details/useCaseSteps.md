@@ -49,7 +49,8 @@ A use case description can show loops too.
 
 Software System: SquareGame<br>
 Use case:  <popover content="Each use case can be given a unique identification for easier cross reference."> UC02 </popover>  - Play a Game<br>
-Actors: Player (multiple players)
+Actors: Player (multiple players)<br>
+MSS:
 
 1. A Player starts the game.
 2. SquareGame asks for player names.
