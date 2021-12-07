@@ -55,7 +55,7 @@ deadline return book /by Sunday
      Now you have 6 tasks in the list.
     ____________________________________________________________
 
-done 2
+mark 2
     ____________________________________________________________
      Nice! I've marked this task as done: 
        [D][X] return book (by: June 6th)
@@ -189,7 +189,7 @@ bye
 
 ### Level 3. Mark as Done
 
-Add the ability to mark tasks as _done_.<br><br>
+Add the ability to mark tasks as _done_. Optionally, add the ability to change the status back to _not done_.<br><br>
 
 ```{.no-line-numbers}
 list
@@ -200,10 +200,16 @@ list
      3.[ ] buy bread
     ____________________________________________________________
 
-done 2
+mark 2
     ____________________________________________________________
      Nice! I've marked this task as done: 
        [X] return book
+    ____________________________________________________________
+
+unmark 2
+    ____________________________________________________________
+     OK, I've marked this task as not done yet:
+       [ ] return book
     ____________________________________________________________
 ```
 
