@@ -6,7 +6,7 @@
 
 <div id="body">
 
-To reduce clutter, **activation bars and return arrows may be omitted** if they do not result in ambiguities or loss of <tooltip content="i.e., information relevant to the purpose of the diagram">_relevant_ information</tooltip>. Informal operation descriptions such as those given in the example below can be used, if more precise details are not required for the task at hand.
+To reduce clutter, **optional elements (e.g, activation bars, return arrows) may be omitted** if the omission does not result in ambiguities or loss of <tooltip content="i.e., information relevant to the purpose of the diagram">_relevant_ information</tooltip>. Informal operation descriptions such as those given in the example below can be used, if more precise details are not required for the task at hand.
 
 <box>
 
@@ -14,7 +14,7 @@ To reduce clutter, **activation bars and return arrows may be omitted** if they 
 
 <!-- TODO: add a more detailed version of the SD for comparison -->
 
-<img src="{{baseUrl}}/uml/sequenceDiagrams/minimalNotation/images/textLogic.png" height="150" />
+<img src="{{baseUrl}}/uml/sequenceDiagrams/minimalNotation/images/textLogic.png" width="350" />
 <p/>
 
 </box>
