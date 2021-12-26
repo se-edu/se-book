@@ -16,7 +16,7 @@
 **Project Duke is a educational software project designed to take you through the steps of building a small software _incrementally_**, while applying as many Java and SE techniques as possible along the way.
 </div>
 
-**The project aims to build a product named _Duke_, a Personal Assistant Chatbot that helps a person to keep track of various things.** %%The name _Duke_ was chosen as a placeholder name, in honor of [Duke, the Java Mascot](https://www.oracle.com/java/duke.html).%% **You may give it any other name and personality you wish.**
+**The project aims to build a product named _Duke_, a Personal Assistant Chatbot that helps a person to keep track of various things.** %%The name _Duke_ was chosen as a placeholder name, in honor of [Duke, the Java Mascot](https://www.oracle.com/java/duke.html).%%
 
 Here is a sample interaction with Duke:
 ```{.no-line-numbers}
@@ -72,6 +72,9 @@ bye
     ____________________________________________________________
 
 ```
+
+{{ icon_tip }} **You are ==encouraged to give your chatbot another name (and a different personality if you wish)==**, to differentiate yours from others'. In the case of the latter, please do not use slang/words that some others in the class might not know.
+
 <div id="increments_summary">
 
 The project consists of the following _increments_:
@@ -376,7 +379,7 @@ Teach Duke how to understand dates and times. For example, if the command is `de
 
 <panel header="Using dates/times in Java" minimized >
 
-A code snippet using the `LocalDate` class:
+A code snippet using the `LocalDate` class to deal with dates/times (you may use other approaches too):
 ```java
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
