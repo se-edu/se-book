@@ -452,7 +452,7 @@ Refer to the [_JavaFX tutorial_ @SE-EDU/guides](https://se-education.org/guides/
 
 **There are two non-trivial steps** to take here:
 
-1. earning JavaFX basics
+1. learning JavaFX basics
 1. creating a GUi for Duke
 
 You are <span class="text-danger">cautioned against trying to do both in one go</span>. Instead, complete the JavaFX tutorial as a separate project before adding a GUI to Duke.
