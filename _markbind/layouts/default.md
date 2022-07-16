@@ -10,7 +10,7 @@
   <li><a href="https://github.com/se-edu/se-book" class="nav-link"><md>:fab-github:</md></a></li>
   <li slot="right" class="nav-link">
     <form class="navbar-form">
-      <searchbar placeholder="Search" algolia menu-align-right></searchbar>
+      <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right ></searchbar>
     </form>
   </li>
 </navbar>
