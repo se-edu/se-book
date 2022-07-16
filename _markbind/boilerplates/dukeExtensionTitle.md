@@ -1,4 +1,4 @@
 {% set extStyle="primary" %}
 
-### <span class="badge badge-pill badge-{{ extStyle }}">{{ extId }}</span>
+### <span class="badge rounded-pill bg-{{ extStyle }}">{{ extId }}</span>
 {{ indented_arrow | safe }} **{{ extHeading }}**</span>

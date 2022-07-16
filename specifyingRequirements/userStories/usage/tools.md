@@ -1,4 +1,4 @@
-<tabs> 
+<tabs>
   <tab header="GitHub Project Boards">
 
 You can create issues for each of the user stories and use a GitHub _Project Board_ to sort them into categories.
@@ -26,7 +26,7 @@ title | `Add deadline`
 ------|---------------------------------
 Description | `As a user I can so that I can keep track of my deadlines`
 
-In both cases, apply the <span class="badge badge-pill badge-info">type.Story</span> label.
+In both cases, apply the <span class="badge rounded-pill bg-info">type.Story</span> label.
 
 </div>
 
@@ -41,7 +41,7 @@ A video on GitHub Project Boards:
 
 <img src="{{baseUrl}}/specifyingRequirements/userStories/usage/images/userStoriesInGoogleSheets.png" width="800" /><p/>
 
-  </tab>  
+  </tab>
   <tab header="Trello">
 
 {{ icon_example }} Example [Trello](https://trello.com) Board for recording user stories:
