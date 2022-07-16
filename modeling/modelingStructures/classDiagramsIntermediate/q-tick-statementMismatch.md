@@ -8,7 +8,7 @@ Which of these statements match the class diagram?
 
 - [ ] a. A `Snake` must belong to at least one `Board`.
 - [ ] b. A `SnakeHeadSquare` can contain only one `Snake` head.
-- [ ] c. A `Square` can contain a `Snake` head.
+- [ ] c. A `Snake` head can be in a `Square`
 - [ ] d. A `Snake` head can be in more than one `SnakeHeadSquare`.
 - [ ] e. The `Board` has exactly 5 `Snake`s.
 

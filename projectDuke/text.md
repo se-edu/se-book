@@ -16,13 +16,13 @@
 **Project Duke is a educational software project designed to take you through the steps of building a small software _incrementally_**, while applying as many Java and SE techniques as possible along the way.
 </div>
 
-**The project aims to build a product named _Duke_, a Personal Assistant Chatbot that helps a person to keep track of various things.** %%The name _Duke_ was chosen as a placeholder name, in honor of [Duke, the Java Mascot](https://www.oracle.com/java/duke.html).%% **You may give it any other name and personality you wish.**
+**The project aims to build a product named _Duke_, a Personal Assistant Chatbot that helps a person to keep track of various things.** %%The name _Duke_ was chosen as a placeholder name, in honor of [Duke, the Java Mascot](https://www.oracle.com/java/duke.html).%%
 
 Here is a sample interaction with Duke:
 ```{.no-line-numbers}
     ____________________________________________________________
-      ____        _        
-     |  _ \ _   _| | _____ 
+      ____        _
+     |  _ \ _   _| | _____
      | | | | | | | |/ / _ \
      | |_| | |_| |   <  __/
      |____/ \__,_|_|\_\___|
@@ -42,7 +42,7 @@ list
 
 todo borrow book
     ____________________________________________________________
-     Got it. I've added this task: 
+     Got it. I've added this task:
        [T][ ] borrow book
      Now you have 5 tasks in the list.
     ____________________________________________________________
@@ -50,14 +50,14 @@ todo borrow book
 
 deadline return book /by Sunday
     ____________________________________________________________
-     Got it. I've added this task: 
+     Got it. I've added this task:
        [D][ ] return book (by: Sunday)
      Now you have 6 tasks in the list.
     ____________________________________________________________
 
-done 2
+mark 2
     ____________________________________________________________
-     Nice! I've marked this task as done: 
+     Nice! I've marked this task as done:
        [D][X] return book (by: June 6th)
     ____________________________________________________________
 
@@ -72,15 +72,18 @@ bye
     ____________________________________________________________
 
 ```
+
+{{ icon_tip }} **You are ==encouraged to give your chatbot another name (and a different personality if you wish)==**, to differentiate yours from others'. In the case of the latter, please do not use slang/words that some others in the class might not know.
+
 <div id="increments_summary">
 
 The project consists of the following _increments_:
 * **Levels**: A series of features, meant to be added to Duke in the given order, although some can be skipped. These have been named `Level 1` to `Level 10` to indicate how each makes the product progressively "level up".
 * **Extensions:**
-  * <big><span class="badge badge-pill badge-primary">Category A</span></big> These are internal/feature enhancements meant to help you practice a specific Java or an SE technique.  
-  * <big><span class="badge badge-pill badge-info">Category B</span></big> These are enhancements related to task tracking.
-  * <big><span class="badge badge-pill badge-success">Category C</span></big> These are enhancements, not specifically related to task tracking.
-  * <big><span class="badge badge-pill badge-danger">Category D</span></big> Each of these adds the ability to track another type of entities.
+  * <big><span class="badge rounded-pill bg-primary">Category A</span></big> These are internal/feature enhancements meant to help you practice a specific Java or an SE technique.
+  * <big><span class="badge rounded-pill bg-info">Category B</span></big> These are enhancements related to task tracking.
+  * <big><span class="badge rounded-pill bg-success">Category C</span></big> These are enhancements, not specifically related to task tracking.
+  * <big><span class="badge rounded-pill bg-danger">Category D</span></big> Each of these adds the ability to track another type of entities.
 </div>
 </div>
 
@@ -189,7 +192,7 @@ bye
 
 ### Level 3. Mark as Done
 
-Add the ability to mark tasks as _done_.<br><br>
+Add the ability to mark tasks as _done_. Optionally, add the ability to change the status back to _not done_.<br><br>
 
 ```{.no-line-numbers}
 list
@@ -200,10 +203,16 @@ list
      3.[ ] buy bread
     ____________________________________________________________
 
-done 2
+mark 2
     ____________________________________________________________
-     Nice! I've marked this task as done: 
+     Nice! I've marked this task as done:
        [X] return book
+    ____________________________________________________________
+
+unmark 2
+    ____________________________________________________________
+     OK, I've marked this task as not done yet:
+       [ ] return book
     ____________________________________________________________
 ```
 
@@ -228,7 +237,7 @@ Example:
 ```{.no-line-numbers}
 todo borrow book
     ____________________________________________________________
-     Got it. I've added this task: 
+     Got it. I've added this task:
        [T][ ] borrow book
      Now you have 5 tasks in the list.
     ____________________________________________________________
@@ -245,14 +254,14 @@ list
 
 deadline return book /by Sunday
     ____________________________________________________________
-     Got it. I've added this task: 
+     Got it. I've added this task:
        [D][ ] return book (by: Sunday)
      Now you have 6 tasks in the list.
     ____________________________________________________________
 
 event project meeting /at Mon 2-4pm
     ____________________________________________________________
-     Got it. I've added this task: 
+     Got it. I've added this task:
        [E][ ] project meeting (at: Mon 2-4pm)
      Now you have 7 tasks in the list.
     ____________________________________________________________
@@ -265,7 +274,7 @@ Example:
 
 deadline do homework /by no idea :-p
     ____________________________________________________________
-     Got it. I've added this task: 
+     Got it. I've added this task:
        [D][ ] do homework (by: no idea :-p)
      Now you have 6 tasks in the list.
     ____________________________________________________________
@@ -299,7 +308,7 @@ blah
 <include boilerplate src="dukeNestedFragment.md" var-target="A-Exceptions" var-name="Extension: `A-Exceptions`" />
 
 * **Minimal**: handle at least the two types of errors shown in the example above.
-* **Stretch goal**: handle all possible errors in the current version. As you evolve Duke, continue to handle errors related to the new features added. 
+* **Stretch goal**: handle all possible errors in the current version. As you evolve Duke, continue to handle errors related to the new features added.
 
 </div><hr><!-- ================================================================================================ -->
 <div id="Level-6">
@@ -326,7 +335,7 @@ list
 
 delete 3
     ____________________________________________________________
-     Noted. I've removed this task: 
+     Noted. I've removed this task:
        [E][ ] project meeting (at: Aug 6th 2-4pm)
      Now you have 4 tasks in the list.
     ____________________________________________________________
@@ -366,11 +375,11 @@ T | 1 | join sports club
 Teach Duke how to understand dates and times. For example, if the command is `deadline return book /by 2/12/2019 1800`, Duke should understand `2/12/2019 1800` as _2nd of December 2019, 6pm_, instead of treating it as just a String.
 
 * **Minimal**: Store deadline dates as a `java.time.LocalDate` in your task objects. Accept dates in a format such as `yyyy-mm-dd` format (e.g., `2019-10-15`)  and print in a different format such as `MMM dd yyyy` e.g., (`Oct 15 2019`).
-* **Stretch goal**: Use dates and times in more meaningful ways. e.g., add a command to print deadlines/events occurring on a specific date. 
+* **Stretch goal**: Use dates and times in more meaningful ways. e.g., add a command to print deadlines/events occurring on a specific date.
 
 <panel header="Using dates/times in Java" minimized >
 
-A code snippet using the `LocalDate` class:
+A code snippet using the `LocalDate` class to deal with dates/times (you may use other approaches too):
 ```java
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -382,17 +391,17 @@ public class Main {
         LocalDate d1 = LocalDate.parse("2019-12-01");
         LocalDate d2 = LocalDate.parse("2019-12-02");
         LocalDate d3 = LocalDate.parse("2019-12-02");
-        
+
         //compare dates
         System.out.println(d1.isBefore(d2)); // -> true
         System.out.println(d1.isAfter(d2)); // -> false
         System.out.println(d2.equals(d3)); // -> true
-        
+
         //work with dates
         System.out.println(d1.getDayOfWeek()); // -> SUNDAY
         System.out.println(d1.getMonth()); // -> DECEMBER
         System.out.println(d1.plus(1, ChronoUnit.YEARS));  // -> 2020-12-01
-        
+
         // get today's date and print it in a specific format
         LocalDate d4 = LocalDate.now();
         System.out.println(d4); // -> 2019-10-15
@@ -443,7 +452,7 @@ Refer to the [_JavaFX tutorial_ @SE-EDU/guides](https://se-education.org/guides/
 
 **There are two non-trivial steps** to take here:
 
-1. earning JavaFX basics
+1. learning JavaFX basics
 1. creating a GUi for Duke
 
 You are <span class="text-danger">cautioned against trying to do both in one go</span>. Instead, complete the JavaFX tutorial as a separate project before adding a GUI to Duke.
@@ -454,7 +463,7 @@ You are <span class="text-danger">cautioned against trying to do both in one go<
 
 <p/>
 
-<include src="extensions.mbdf" />
+<include src="extensions-fragment.md" />
 
 
 </div>

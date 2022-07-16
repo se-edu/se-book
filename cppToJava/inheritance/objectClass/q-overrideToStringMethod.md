@@ -1,5 +1,4 @@
 <panel type="dark" header="###  <small><small>{{ icon_important }} [Key Exercise] override the `toString` method</small></small>" expanded >
-<question>
 
 Suppose you have the following classes `Task`, `Todo`, `Deadline`:
 
@@ -96,7 +95,7 @@ do by: Postponed to Nov 18th
 {{ icon_tip }} You can use the `super.toString` from the subclass to invoke the behavior of the method you are overriding. This is useful here because the overriding method is simply _adding onto_ the behavior of the overridden method.
 
 
-<div slot="hint">
+<panel type="seamless" header="Hint">
 
 `toString()` method of `Task` class and `Todo` class are given below. You can follow a similar approach for the `Deadline` class.
 ```java
@@ -126,6 +125,5 @@ public class Todo extends Task {
 }
 ```
 
-</div>
-</question>
+</panel>
 </panel>

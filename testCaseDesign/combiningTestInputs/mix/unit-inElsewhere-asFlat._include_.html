@@ -2,7 +2,7 @@
 <p><span class="dimmed"><strong><span>Quality Assurance → Test Case Design → Combining Test Inputs →
 </span></strong></span></p>
 <div id="title-and-body">
-<div><h4 id="mix"><span id="mix" class="anchor"></span><span>Mix</span></h4></div>
+<div><h4 id="mix"><span id="mix" class="anchor"></span><span>Mix</span><a class="fa fa-anchor" href="#mix" onclick="event.stopPropagation()"></a></h4></div>
 <div id="main">
 <div>
 <p>Consider the calculateGrade scenario given below:</p>
@@ -14,7 +14,7 @@
 <li>participation: 0, 1, 19, 20, <span class="underline">21</span>, <span class="underline">22</span></li>
 <li>projectGrade: A, B, C, D, F</li>
 <li>isAbsent: true, false</li>
-<li>examScore: 0, 1, 69, 70, <span class="large">71</span>, <span class="large">72</span></li></ul></li></ul></box>
+<li>examScore: 0, 1, 69, 70, <span class="underline">71</span>, <span class="underline">72</span></li></ul></li></ul></box>
 <p>To get the first cut of test cases, let’s apply the <em>at least once</em> strategy.</p>
 <box>
 <p><strong>Test cases for calculateGrade V1</strong></p>
@@ -289,7 +289,7 @@
 <td style="text-align:center"><mark>Err Msg</mark></td></tr></tbody></table></div></box></div>
 <div>
  <div><panel expanded><template #header><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
-  <div><div><panel class="algolia-no-index"><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Statements about test input combinations</p></template>
+  <div><div><panel><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Statements about test input combinations</p></template>
 <question>
 <p>Which one of these contradicts the heuristics recommended when creating test cases with multiple inputs?</p>
 <ul radio-group="63fa5" class="radio-list">
@@ -297,12 +297,12 @@
 <li class="radio-list-item"><label><input class="radio-list-input" name="63fa5" type="radio"> b. It is OK to combine valid values for different inputs.</label></li>
 <li class="radio-list-item"><label><input class="radio-list-input" name="63fa5" type="radio"> c. No more than one invalid test input should be in a given test case.</label></li>
 <li class="radio-list-item"><label><input class="radio-list-input" name="63fa5" type="radio"> d. Each valid test input should appear at least once in a test case that doesn’t have any invalid inputs.</label></li></ul>
-<template #answer><div class="algolia-no-index">
+<template #answer><div>
 <p>a</p>
 <p>Explanation: If you test all invalid test inputs together, you will not know if each of the invalid inputs is handled correctly by the SUT. This is because most SUTs return an error message upon encountering the first invalid input.</p></div></template></question></panel></div>
-<div><panel class="algolia-no-index"><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Combine test inputs for the <code class="hljs inline no-lang" v-pre>consume</code> method</p></template>
+<div><panel><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Combine test inputs for the <code class="hljs inline no-lang" v-pre>consume</code> method</p></template>
 <question>
-<p>Apply heuristics for combining multiple test inputs to improve the E&amp;E of the following test cases, assuming all 6 values in the table need to be tested. <span class="large">Underlines</span> indicate invalid values. Point out where the heuristics are contradicted and how to improve the test cases.</p>
+<p>Apply heuristics for combining multiple test inputs to improve the E&amp;E of the following test cases, assuming all 6 values in the table need to be tested. <span class="text-danger"><span class="underline">Underlines</span></span> indicate invalid values. Point out where the heuristics are contradicted and how to improve the test cases.</p>
    <box>
 <p>SUT: <code class="hljs inline no-lang" v-pre>consume(food, drink)</code></p>
 <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead>
@@ -311,15 +311,15 @@
 <th>food</th>
 <th>drink</th></tr></thead>
 <tbody>
-<tr>
-<td>TC1</td>
-<td>bread</td>
+<tr class="text-success">
+<td class="text-dark">TC1</td>
+<td class="text-success">bread</td>
 <td>water</td></tr>
 <tr>
-<td>TC2</td>
-<td>rice</td>
-<td><span class="large">lava</span></td></tr>
+<td class="text-dark">TC2</td>
+<td class="text-success">rice</td>
+<td><span class="underline text-danger">lava</span></td></tr>
 <tr>
-<td>TC3</td>
-<td><span class="large">rock</span></td>
-<td><span class="large">acid</span></td></tr></tbody></table></div></box></question></panel></div></div></panel></div></div></div></div>
+<td class="text-dark">TC3</td>
+<td><span class="underline text-danger">rock</span></td>
+<td><span class="underline text-danger">acid</span></td></tr></tbody></table></div></box></question></panel></div></div></panel></div></div></div></div>

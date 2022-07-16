@@ -28,7 +28,7 @@ Manually managing multiple versions of even a single file is an error-prone task
   </blockquote>
 
   </tab>
-  <tab header="{{ icon_video }}">
+  <tab header="{{ icon_video }}" class="d-print-none">
 
 @[youtube](M-O8ZNW9icQ)
 

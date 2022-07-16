@@ -1,5 +1,4 @@
 <panel type="dark" header="###  <small><small>{{ icon_important }} [Key Exercise] Numbers list</small></small>" expanded >
-<question>
 
 Add the missing methods to the class given below so that it produces the output given.
 
@@ -37,7 +36,7 @@ The total is: 35
 The total is: 27
 ```
 
-<div slot="hint">
+<panel type="seamless" header="Hint">
 
 Partial solution:
 ```java
@@ -56,6 +55,5 @@ public class Main {
 }
 ```
 
-</div>
-</question>
+</panel>
 </panel>

@@ -15,7 +15,7 @@ Consider the calculateGrade scenario given below:
   * participation: 0, 1, 19, 20, !!21!!, !!22!!
   * projectGrade: A, B, C, D, F
   * isAbsent: true, false
-  * examScore: 0, 1, 69, 70, ++71++, ++72++
+  * examScore: 0, 1, 69, 70, !!71!!, !!72!!
 
 </box>
 

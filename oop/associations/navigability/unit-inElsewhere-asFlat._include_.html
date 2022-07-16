@@ -2,12 +2,62 @@
 <p><span class="dimmed"><strong><span>Paradigms → OOP → Associations →
 </span></strong></span></p>
 <div id="title-and-body">
-<div><h4 id="navigability"><span id="navigability" class="anchor"></span><span>Navigability</span></h4></div>
+<div><h4 id="navigability"><span id="navigability" class="anchor"></span><span>Navigability</span><a class="fa fa-anchor" href="#navigability" onclick="event.stopPropagation()"></a></h4></div>
 <div id="main">
 <div>
 <p>When two classes are linked by an association, it does not necessarily mean the two objects taking part in an instance of the association <em>knows about</em> (i.e., has a reference to) each other. <strong>The concept of which object in the association knows about the other object is called <em>navigability</em>.</strong></p>
 <p><strong>Navigability can be <em>unidirectional</em> or <em>bidirectional</em></strong>. Suppose there is an association between the classes <code class="hljs inline no-lang" v-pre>Box</code> and <code class="hljs inline no-lang" v-pre>Rope</code>, and the <code class="hljs inline no-lang" v-pre>Box</code> object <code class="hljs inline no-lang" v-pre>b</code> and the <code class="hljs inline no-lang" v-pre>Rope</code> object <code class="hljs inline no-lang" v-pre>r</code> is taking part in one instance of that association.</p>
 <ul>
 <li><strong>Unidirectional</strong>: If the navigability is from <code class="hljs inline no-lang" v-pre>Box</code> to <code class="hljs inline no-lang" v-pre>Rope</code>, <code class="hljs inline no-lang" v-pre>b</code> will have a reference to <code class="hljs inline no-lang" v-pre>r</code> but <code class="hljs inline no-lang" v-pre>r</code> will not have a reference to <code class="hljs inline no-lang" v-pre>b</code>. Similarly, if the navigability is in the other direction, <code class="hljs inline no-lang" v-pre>r</code> will have a reference to <code class="hljs inline no-lang" v-pre>b</code> but <code class="hljs inline no-lang" v-pre>b</code> will not have a reference to <code class="hljs inline no-lang" v-pre>r</code>.</li>
-<li><strong>Bidirectional</strong>: <code class="hljs inline no-lang" v-pre>b</code> will have a reference to <code class="hljs inline no-lang" v-pre>r</code> and <code class="hljs inline no-lang" v-pre>r</code> will have a reference to <code class="hljs inline no-lang" v-pre>b</code> i.e., the two objects will be pointing to each other.</li></ul></div>
+<li><strong>Bidirectional</strong>: <code class="hljs inline no-lang" v-pre>b</code> will have a reference to <code class="hljs inline no-lang" v-pre>r</code> and <code class="hljs inline no-lang" v-pre>r</code> will have a reference to <code class="hljs inline no-lang" v-pre>b</code> i.e., the two objects will be pointing to each other for the same single instance of the association.</li></ul>
+<p>Note that two unidirectional associations in opposite directions do not add up to a single bidirectional association.</p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In the code below, there is a bidirectional association between the <code class="hljs inline no-lang" v-pre>Person</code> class and the <code class="hljs inline no-lang" v-pre>Cat</code> class i.e., if <code class="hljs inline no-lang" v-pre>Person</code> <code class="hljs inline no-lang" v-pre>p</code> is the owner of the <code class="hljs inline no-lang" v-pre>Cat</code> <code class="hljs inline no-lang" v-pre>c</code>, <code class="hljs inline no-lang" v-pre>p</code> it will result in <code class="hljs inline no-lang" v-pre>p</code> and <code class="hljs inline no-lang" v-pre>c</code> having references to each other.</p>
+<div class="alt-java">
+<pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span> </span>{
+</span><span>    Cat pet;
+</span><span>    <span class="hljs-comment">//...</span>
+</span><span>}
+</span><span>
+</span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Cat</span></span>{
+</span><span>    Person owner;
+</span><span>    <span class="hljs-comment">//...</span>
+</span><span>}
+</span></code></pre></div>
+<div class="alt-python">
+<pre><code class="hljs python" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span>:</span>
+</span><span>
+</span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span>(<span class="hljs-params">self</span>):</span>
+</span><span>    self.pet = <span class="hljs-literal">None</span>  <span class="hljs-comment"># a Cat object</span>
+</span><span>
+</span><span>
+</span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Cat</span>:</span>
+</span><span>
+</span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span>(<span class="hljs-params">self</span>):</span>
+</span><span>    self.owner = <span class="hljs-literal">None</span>  <span class="hljs-comment"># a Person object</span>
+</span></code></pre></div>
+<p>The code below has two unidirectional associations between the <code class="hljs inline no-lang" v-pre>Person</code> class and the <code class="hljs inline no-lang" v-pre>Cat</code> class (in opposite directions) because the breeder is not necessarily the same person keeping the cat as a pet i.e., there are two separate associations here, which rules out it being a bidirectional association.</p>
+<div class="alt-java">
+<pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span> </span>{
+</span><span>    Cat pet;
+</span><span>    <span class="hljs-comment">//...</span>
+</span><span>}
+</span><span>
+</span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Cat</span></span>{
+</span><span><span>    Person <span class="highlighted">breeder</span>;
+</span></span><span>    <span class="hljs-comment">//...</span>
+</span><span>}
+</span></code></pre></div>
+<div class="alt-python">
+<pre><code class="hljs python" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span>:</span>
+</span><span>
+</span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span>(<span class="hljs-params">self</span>):</span>
+</span><span>    self.pet = <span class="hljs-literal">None</span>  <span class="hljs-comment"># a Cat object</span>
+</span><span>
+</span><span>
+</span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Cat</span>:</span>
+</span><span>
+</span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span>(<span class="hljs-params">self</span>):</span>
+</span><span>    self.breeder = <span class="hljs-literal">None</span>  <span class="hljs-comment"># a Person object</span>
+</span></code></pre></div></box></div>
 <div></div></div></div>

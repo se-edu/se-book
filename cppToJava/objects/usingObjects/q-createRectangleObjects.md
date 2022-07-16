@@ -1,5 +1,4 @@
 <panel type="dark" header="###  <small><small>{{ icon_important }} [Key Exercise] create `Rectangle` objects</small></small>" expanded >
-<question>
 
 Update the code below to create a new `Rectangle` object as described in the code comments, to produce the given output.
 * The `Rectangle` class is found in the `java.awt` package.
@@ -22,11 +21,10 @@ public class Main {
 java.awt.Rectangle[x=0,y=0,width=5,height=10]
 ```
 
-<div slot="hint">
+<panel type="seamless" header="Hint">
 
 * Import the `java.awt.Rectangle` class
 * This is how you create the required object `new Rectangle(0, 0, 5, 10)`
 
-</div>
-</question>
+</panel>
 </panel>

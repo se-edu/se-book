@@ -143,7 +143,7 @@ public class Duke {
 ```
 </div>
 
-* **Stretch Goal**: Consider extracting more classes. e.g., `*Command` classes (i.e., `AddCommand`, `DeleteCommand`, `ExitCommand` etc.) that inherits from an abstract `Command` class, so that you can write the main logic of the App as follows:
+* **Stretch Goal**: Consider extracting more classes. e.g., `*Command` classes (i.e., `AddCommand`, `DeleteCommand`, `ExitCommand` etc.) that inherit from an abstract `Command` class, so that you can write the main logic of the App as follows:
   ```java
   public void run() {
       ui.showWelcome();
@@ -245,7 +245,7 @@ You can assume **the user will run the jar file in the following way only**:
 
 {{ icon_tip }} Refer to the tutorial [_Working with JAR files_ @SE-EDU/guides](https://se-education.org/guides/tutorials/jar.html) to find how to create JAR files.
 
-{{ icon_important }} Do not commit the JAR file created. Instead, you can make the JAR file available in the following manner.
+{{ icon_important }} If your project is being revision controlled using Git/GitHub, do not commit the JAR file created. Instead, you can make the JAR file available in the following manner.
 * Go to your fork on GitHub and [create a new _release_](https://help.github.com/en/articles/creating-releases).
 * In the page where you fill the details of the release,
   * give an appropriate version number e.g., `v0.1`
@@ -258,9 +258,9 @@ You can assume **the user will run the jar file in the following way only**:
 
 Use Gradle to automate some of the build tasks of the project.
 
-Refer to the [_Gradle tutorial_ @SE-EDU](https://se-education.org/guides/tutorials/gradle.html) to learn how to use Gradle.
+Gradle support is provided as a separate branch (named `add-gradle-support`) in the Duke repo. Therefore, you can follow the _scenario 2_ in the guide below.
 
-Gradle support is provided as a separate branch (named `add-gradle-support`) in the Duke repo. Therefore, you can follow the _scenario 2_ in the above guide.
+Refer to the [_Gradle tutorial_ @SE-EDU](https://se-education.org/guides/tutorials/gradle.html) to learn how to use Gradle.
 
 * **Minimal**: Set up gradle so that you can build and run Duke using gradle.
 * **Recommended**: Set up gradle to run unit tests.
@@ -314,7 +314,11 @@ Use third-party libraries in your project. For example, you can use the Natty li
 
 Add a User Guide to the project in the following way:
 * Update the given `docs\README.md`. See [this guide](https://guides.github.com/features/mastering-markdown/) to GitHub flavored Markdown (GFMD).
-* Go to the <span class="border border-secondary border-bottom-0 pr-1 pl-1 mr-1 ml-1 rounded-top"><small>:fas-cog: settings</small></span> page of your Duke fork and enable GitHub pages to publish from the `docs` folder (you can select a theme too).
+* Enable the _GitHub Pages_ feature for your fork:
+  1. Go to your repo's <span class="border border-secondary border-bottom-0 pr-1 pl-1 mr-1 ml-1 rounded-top"><small>:fas-cog: settings</small></span> tab.
+  1. Click `Pages` on the menu on the left edge of page.
+  1. Set the `Source` as: [**%%:octicon-git-branch: Branch:%%** master :octicon-triangle-down:] branch and [:octicon-file-directory: /docs :octicon-triangle-down:] folder and click `Save`.<br>
+     You can select a theme too.
 * Go to `http://{your username}.github.io/{repo name}/` to view the user guide of your product. %%Note: it could take 5-10 minutes for GitHub to update the page.%%<br>
   {{ icon_important_big_red }} It is important that you carefully check the content of the UG available at the above URL to ensure the HTML version of the page (auto-converted from MarkDown by GitHub Pages) has the right content. In some rare cases, the page might look alright on GitHub file preview but will not render correctly on GitHub pages.
 
@@ -341,9 +345,11 @@ Improve the GUI to make it more _polished_. Some examples:
 * Tweak the GUI to match the asymmetric nature of the conversation: As the conversation is between the user and the app (not between two humans), it is asymmetric in nature. Accordingly, it makes sense not to display both sides of the conversion in the same visual format.
 * Highlight errors e.g., when the user types a wrong command, the error should be shown in a different format to catch ther user's attention.
 * Tweak padding, fonts, colors, alignments to make the GUI more pleasing to look at.<br>
-  Given the app is likely to take only a small portion of the screen, and the bot replies can contain lot of text, try to optimize for space (e.g., avoid wasting display space that simply shows the background graphics)
+  Given the app is likely to take only a small portion of the screen, and the bot replies can contain lot of text, try to optimize for space (e.g., avoid wasting display space that simply shows the background graphics).
+* Allow resizing of the Window, and ensure the content resize appropriately as the Window changes size.
 * Profile pictures: If your GUI shows profile pictures, you can tweak the way the picture is shown (e.g., crop as a circle or a square with rounded corners). In fact, an easy tweak is to use a picture with a transparent background so that it blends nicely with the background.<br>
   Given that the participants of the conversion are fixed (i.e., you and the chatbot), do you even need big profile pictures?
+* Focus more on tweaks that actually _improves_ the user experience (UX). Some changes %%(e.g., profile pictures, background graphics)%% can be eye catching but can even degrade the UX if not done right %%(e.g., it can make the text harder to read)%%
 
 {{ icon_tip }} You can take inspiration from [these past projects](https://nus-cs2103-ay2021s1.github.io/website/admin/ip-showcase.html). If you adopt any ideas from them, don't forget to give credit to the original author.
 

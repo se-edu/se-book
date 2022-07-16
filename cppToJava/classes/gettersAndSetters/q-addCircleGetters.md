@@ -1,5 +1,4 @@
 <panel type="dark" header="###  <small><small>{{ icon_important }} [Key Exercise] add getters/setters to the `Circle` class</small></small>" expanded >
-<question>
 
 Consider the `Circle` class below:
 ```java
@@ -60,7 +59,7 @@ radius : 0.0
 radius : 0.0
 ```
 
-<div slot="hint">
+<panel type="seamless" header="Hint">
 
 Partial solution:
 ```java
@@ -75,6 +74,5 @@ public void setRadius(double radius) {
 }
 ```
 
-</div>
-</question>
+</panel>
 </panel>

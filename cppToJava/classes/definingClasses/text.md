@@ -146,5 +146,5 @@ System.out.println(t.secondsSinceMidnight() + " seconds since midnight!");
 </div>
 
 <div id="extras">
-  <include src="exercisesPanel.md" boilerplate />
+  <include src="exercises.md" />
 </div>

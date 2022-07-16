@@ -18,7 +18,7 @@
 **You can have multiple repos in your computer**, each repo revision-controlling files of a different working directory, for examples, files of different projects.
 
   </tab>
-  <tab header="{{ icon_video }}">
+  <tab header="{{ icon_video }}" class="d-print-none">
 
 @[youtube](mLnxwlCEIb8)
 

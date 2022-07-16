@@ -20,7 +20,7 @@
 **When ready to commit, you first ==_stage_== the specific changes you want to commit.** This intermediate step allows you to commit only some changes while saving other changes for a later commit.
 
   </tab>
-  <tab header="{{ icon_video }}">
+  <tab header="{{ icon_video }}" class="d-print-none">
 
 @[youtube](7exFDGHgQcw)
 

@@ -2,7 +2,7 @@
 <p><span class="dimmed"><strong><span>Implementation → Refactoring →
 </span></strong></span></p>
 <div id="title-and-body">
-<div><h4 id="what"><span id="what" class="anchor"></span><span>What</span></h4></div>
+<div><h4 id="what"><span id="what" class="anchor"></span><span>What</span><a class="fa fa-anchor" href="#what" onclick="event.stopPropagation()"></a></h4></div>
 <div id="main">
 <div>
 <p>The first version of the code you write may not be of production quality. It is OK to first concentrate on making the code work, rather than worry over the quality of the code, as long as you improve the quality later. This process of <strong>improving a program's internal structure in small steps without modifying its external behavior is called <em>refactoring</em>.</strong></p>
@@ -10,16 +10,19 @@
 <li><strong>Refactoring is not rewriting</strong>: Discarding poorly-written code entirely and re-writing it from scratch is not refactoring because refactoring needs to be done in small steps.</li>
 <li><strong>Refactoring is not bug fixing</strong>: By definition, refactoring is different from bug fixing or any other modifications that alter the external behavior (e.g. adding a feature) of the component in concern.</li></ul>
 <box>
-<p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Improving code structure can have many secondary benefits: e.g.</p>
+<p><span class="badge rounded-pill bg-warning text-dark"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Improving code structure can have many secondary benefits: e.g.</p>
 <ul>
 <li>hidden bugs become easier to spot</li>
 <li>improve performance (sometimes, simpler code runs faster than complex code because simpler code is easier for the compiler to optimize).</li></ul></box>
 <p>Given below are two common refactorings (<trigger trigger="click" for="modal:refactoring-catalog-what">more</trigger>).</p>
-<b-modal id="modal:refactoring-catalog-what" hide-footer size modal-class="mb-zoom" ref="modal:refactoring-catalog-what" class="algolia-no-index"><template #modal-title><strong>Refactoring Catalogs</strong></template>
+<modal id="modal:refactoring-catalog-what"><template #header><strong>Refactoring Catalogs</strong></template>
   <div>
 <ul>
 <li>Java: <a href="http://refactoring.com/catalog/">http://refactoring.com/catalog/</a> -- This is a list of common refactorings maintained by Martin Fowler, a leading authority on refactoring. He is also the author of the ‘bestseller’ on refactoring: <a href="https://martinfowler.com/books/#refactoring">Refactoring: Improving the Design of Existing Code</a></li>
-<li>Python: <a href="https://refactoring.guru/refactoring/catalog">https://refactoring.guru/refactoring/catalog</a> -- A catalog of refactorings applicable to Python code.</li></ul></div></b-modal>
+<li>Python: some examples from
+<ul>
+<li><a href="https://www.python-engineer.com/posts/python-refactoring-tips/">https://www.python-engineer.com</a></li>
+<li><a href="https://medium.com/code-85/4-simple-ways-to-refactor-your-python-code-2f491b767381">https://medium.com</a></li></ul></li></ul></div></modal>
 <box>
 <p>Refactoring Name: <strong>Consolidate Duplicate Conditional Fragments</strong></p>
 <p>Situation:  The same fragment of code is in all branches of a conditional expression.</p>
@@ -107,11 +110,11 @@
 </span><span>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;name:	&quot;</span> + name)
 </span><span>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;amount	&quot;</span> + amount)
 </span></code></pre></div></div></box>
-<p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Some IDEs have builtin support for basic refactorings such as automatically renaming a variable/method/class in all places it has been used.</p>
+<p><span class="badge rounded-pill bg-warning text-dark"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Some IDEs have builtin support for basic refactorings such as automatically renaming a variable/method/class in all places it has been used.</p>
 <p><span style="color: red"><big><span><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></span></big></span> Refactoring, even if done with the aid of an IDE, may still result in regressions. Therefore, each small refactoring should be followed by regression testing.</p></div>
 <div>
-<div><panel expandable class="algolia-no-index"><template #header><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
-  <div><panel class="algolia-no-index"><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Results of Refactoring</p></template>
+<div><panel expandable><template #header><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
+  <div><panel><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Results of Refactoring</p></template>
 <question>
 <p>Choose the correct statements.</p>
 <ul class="contains-task-list">
@@ -119,23 +122,23 @@
 <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> b. Refactoring can uncover bugs</li>
 <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> c. Refactoring can result in better performance</li>
 <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. Refactoring can change the number of methods/classes</li></ul>
-<template #answer><div class="algolia-no-index">
+<template #answer><div>
 <p>a, b, c, d</p>
 <p>Explanation:</p>
 <ul>
 <li>(a, b, c) Although the primary aim of refactoring is to improve the internal code structure, there are other secondary benefits.</li>
 <li>(d) Some refactorings result in adding/removing methods/classes.</li></ul></div></template></question></panel></div>
-  <div><panel class="algolia-no-index"><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Do you agree with the following statement? Refactoring and regression testing</p></template>
+  <div><panel><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Do you agree with the following statement? Refactoring and regression testing</p></template>
 <question has-input="true">
 <p>Do you agree with the following statement? Justify your answer.</p>
 <p>Statement: <code class="hljs inline no-lang" v-pre>Whenever you refactor code to fix bugs, you need not do regression testing if the bug fix was minor.</code></p>
-<template #hint><div class="algolia-no-index">
+<template #hint><div>
 <p>There are two flaws in the given statement.</p></div></template>
-<template #answer><div class="algolia-no-index">
+<template #answer><div>
 <p>DISAGREE.</p>
 <ol>
 <li>Even a minor change can have major repercussions on the system. You MUST do regression testing after each change, no matter how minor it is.</li>
 <li>Fixing bugs is technically not refactoring.</li></ol></div></template></question></panel></div>
-  <div><panel class="algolia-no-index"><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Explain Refactoring</p></template>
+  <div><panel><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Explain Refactoring</p></template>
 <question has-input>
 <p>Explain what refactoring is and why it is not the same as rewriting, bug fixing, or adding features.</p></question></panel></div></panel></div></div></div></div>

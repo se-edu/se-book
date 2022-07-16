@@ -74,5 +74,5 @@ After clearing: []
 
 <div id="extras">
   <include src="resourcesPanel.md" boilerplate />
-  <include src="exercisesPanel.md" boilerplate />
+  <include src="exercises.md" />
 </div>

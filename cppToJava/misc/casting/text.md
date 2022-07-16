@@ -56,20 +56,27 @@ class DomesticCat extends Cat{
     void speak() {
         System.out.println("I'm a DomesticCat");
     }
+    void catchMice(){
+        // ...
+    }
 }
 ```
 
 The `foo` method below downcasts an `Animal` object to its subclasses.
 
-```java
+```java{highlight-lines="7"}
 public static void foo(Animal a){
     a.speak();
     Cat c = (Cat)a; // downcast a to a Cat
     c.speak();
     DomesticCat dc = (DomesticCat)a; // downcast a to a DomesticCat
     dc.speak();
+    dc.catchMice();
 }
 ```
+
+Note that the `dc.catchMice()` line will not compile if `a` is not downcast to a `DomesticCat` object first. Reason: the `catchMice` method is specific to the `DomesticCat` class not not present in the `Animal` or the `Cat` classes.<br>
+Furthermore, the `foo` method will fail at runtime if the argument `a` is not a `DomesticCat` object. Reason: an object cannot be cast to another class unless the object is of that class to begin with e.g., you cannot cast a `Dog` object into a `Cat` object.
 
 </box>
 

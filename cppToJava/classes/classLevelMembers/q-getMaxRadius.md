@@ -1,5 +1,4 @@
 <panel type="dark" header="###  <small><small>{{ icon_important }} [Key Exercise] add getMaxRadius to the `Circle` class</small></small>" expanded >
-<question>
 
 Consider the `Circle` class below:
 ```java
@@ -73,7 +72,7 @@ max radius used so far : 10.0
 max radius used so far : 12.0
 ```
 
-<div slot="hint">
+<panel type="seamless" header="Hint">
 
 You can use a `static` variable `maxRadius` to track the maximum value used for the `radius` attribute so far.
 
@@ -87,6 +86,5 @@ public void setRadius(double radius) {
 }
 ```
 
-</div>
-</question>
+</panel>
 </panel>

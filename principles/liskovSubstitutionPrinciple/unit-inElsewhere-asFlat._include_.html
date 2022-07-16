@@ -1,19 +1,19 @@
 <div></div><p></p>
 <p><span class="dimmed"><strong><span>Principles →</span></strong></span></p>
 <div id="title-and-body">
-<div><h4 id="liskov-substitution-principle"><span id="liskov-substitution-principle" class="anchor"></span><span>Liskov substitution principle</span></h4></div>
+<div><h4 id="liskov-substitution-principle"><span id="liskov-substitution-principle" class="anchor"></span><span>Liskov substitution principle</span><a class="fa fa-anchor" href="#liskov-substitution-principle" onclick="event.stopPropagation()"></a></h4></div>
 <div id="main">
 <div>
 <box type="definition" seamless>
   <div>
 <p><strong>Liskov substitution principle (LSP)</strong>: Derived classes must be substitutable for their base classes. <sub>-- proposed by <a href="https://en.wikipedia.org/wiki/Barbara_Liskov">Barbara Liskov</a></sub></p></div></box>
 <p>LSP sounds the same as <trigger large trigger="click" for="modal:lsp-substitutability">substitutability</trigger> but it goes beyond substitutability; <strong>LSP implies that a subclass should not be more restrictive than the behavior specified by the superclass.</strong> As you know, Java has language support for substitutability. However, if LSP is not followed, substituting a subclass object for a superclass object can break the functionality of the code.</p>
-<b-modal id="modal:lsp-substitutability" hide-footer size="lg" modal-class="mb-zoom" ref="modal:lsp-substitutability" class="algolia-no-index"><template #modal-title>Textbook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span></template>
-  <div><div><panel src="/se-book/oop/inheritance/what/unit-inElsewhere-asFlat._include_.html" popup-url="/se-book/oop/inheritance/what" class="algolia-no-index"><template #header><p><span class="dimmed"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> Paradigms → Object Oriented Programming → Inheritance → What</span></p></template></panel></div><p></p>
+<modal large id="modal:lsp-substitutability"><template #header>Textbook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span></template>
+  <div><div><panel src="/se-book/oop/inheritance/what/unit-inElsewhere-asFlat._include_.html" popup-url="/se-book/oop/inheritance/what"><template #header><p><span class="dimmed"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> Paradigms → Object Oriented Programming → Inheritance → What</span></p></template></panel></div><p></p>
 <p><span class="dimmed"><strong><span>Paradigms → OOP → Inheritance →
 </span></strong></span></p>
 <div id="title-and-body">
-<div><h4 id="-2"><span id="-2" class="anchor"></span><span>Substitutability</span><a class="fa fa-anchor" href="#-2" onclick="event.stopPropagation()"></a></h4></div>
+<div><h4 id="substitutability"><span id="substitutability" class="anchor"></span><span>Substitutability</span><a class="fa fa-anchor" href="#substitutability" onclick="event.stopPropagation()"></a></h4></div>
 <div id="main">
 <div>
 <p><strong>Every instance of a subclass is an instance of the superclass, but not vice-versa.</strong> As a result, inheritance allows <em>substitutability</em>: the ability to substitute a child class object where a parent class object is expected.</p>
@@ -27,7 +27,7 @@
 </span><span>...
 </span><span>AcademicStaff academicStaff = staff; <span class="hljs-comment">// Not OK</span>
 </span></code></pre></box></div>
-<div></div></div></div></div></b-modal> 
+<div></div></div></div></div></modal> 
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Suppose the <code class="hljs inline no-lang" v-pre>Payroll</code> class depends on the <code class="hljs inline no-lang" v-pre>adjustMySalary(int percent)</code> method of the <code class="hljs inline no-lang" v-pre>Staff</code> class. Furthermore, the <code class="hljs inline no-lang" v-pre>Staff</code> class states that the <code class="hljs inline no-lang" v-pre>adjustMySalary</code> method will work for all positive percent values. Both the <code class="hljs inline no-lang" v-pre>Admin</code> and <code class="hljs inline no-lang" v-pre>Academic</code> classes override the <code class="hljs inline no-lang" v-pre>adjustMySalary</code> method.</p>
 <img src="/se-book/principles/liskovSubstitutionPrinciple/images/payroll.png" height="200">
@@ -40,7 +40,7 @@
 <ul>
 <li>The <code class="hljs inline no-lang" v-pre>Admin</code> class follows LSP because it fulfills <code class="hljs inline no-lang" v-pre>Payroll</code>’s expectation of <code class="hljs inline no-lang" v-pre>Staff</code> objects (i.e. it works for all positive values). Substituting <code class="hljs inline no-lang" v-pre>Admin</code> objects for <code class="hljs inline no-lang" v-pre>Staff</code> objects will not break the <code class="hljs inline no-lang" v-pre>Payroll</code> class functionality.</li>
 <li>The <code class="hljs inline no-lang" v-pre>Academic</code> class violates LSP because it will not work for percent values over <code class="hljs inline no-lang" v-pre>100</code> as expected by the <code class="hljs inline no-lang" v-pre>Payroll</code> class. Substituting <code class="hljs inline no-lang" v-pre>Academic</code> objects for <code class="hljs inline no-lang" v-pre>Staff</code> objects can potentially break the <code class="hljs inline no-lang" v-pre>Payroll</code> class functionality.</li></ul>
-<panel type="seamless" class="algolia-no-index"><template #header><p><span class="dimmed">Another example</span></p></template>
+<panel type="seamless"><template #header><p><span class="dimmed">Another example</span></p></template>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The <code class="hljs inline no-lang" v-pre>Rectangle#resize()</code> method can take any integers for <code class="hljs inline no-lang" v-pre>height</code> and <code class="hljs inline no-lang" v-pre>width</code>. This contract is violated by the subclass <code class="hljs inline no-lang" v-pre>Square#resize()</code> because it does not accept a <code class="hljs inline no-lang" v-pre>height</code> that is different from the <code class="hljs inline no-lang" v-pre>width</code>.</p>
 <img src="/se-book/principles/liskovSubstitutionPrinciple/images/rectangleSquare.png" height="120">
 <p></p>
@@ -68,13 +68,13 @@
 </span><span>}
 </span></code></pre><p>This code will fail if it is called as <code class="hljs inline no-lang" v-pre>makeSameSize(new Rectangle(12, 8), new Square(4, 4))</code>. That is, the <code class="hljs inline no-lang" v-pre>Square</code> class is not substitutable for the <code class="hljs inline no-lang" v-pre>Rectangle</code> class.</p></panel></box></div>
 <div>
-  <div><panel expandable class="algolia-no-index"><template #header><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
-  <div><panel class="algolia-no-index"><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Is this LSP?</p></template>
+  <div><panel expandable><template #header><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
+  <div><panel><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Is this LSP?</p></template>
 <question>
 <p>If a subclass imposes more restrictive conditions than its parent class, it violates Liskov Substitution Principle.</p>
 <ul radio-group="55ada" class="radio-list">
 <li class="radio-list-item"><label><input class="radio-list-input" name="55ada" type="radio"> True</label></li>
 <li class="radio-list-item"><label><input class="radio-list-input" name="55ada" type="radio"> False</label></li></ul>
-<template #answer><div class="algolia-no-index">
+<template #answer><div>
 <p>True.</p>
 <p>Explanation: If the subclass is more restrictive than the parent class, code that worked with the parent class may not work with the child class. Hence, the substitutability does not exist and LSP is violated.</p></div></template></question></panel></div></panel></div></div></div></div>

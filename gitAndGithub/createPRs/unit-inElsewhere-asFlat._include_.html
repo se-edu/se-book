@@ -2,13 +2,13 @@
 <p><span class="dimmed"><strong><span>Tools → Git and GitHub →
 </span></strong></span></p>
 <div id="title-and-body">
-<div><h4 id="creating-prs"><span id="creating-prs" class="anchor"></span><span>Creating PRs</span></h4></div>
+<div><h4 id="creating-prs"><span id="creating-prs" class="anchor"></span><span>Creating PRs</span><a class="fa fa-anchor" href="#creating-prs" onclick="event.stopPropagation()"></a></h4></div>
 <div id="main">
 <div>
 <p>Suppose you want to propose some changes to a GitHub repo (e.g., <a href="https://github.com/se-edu/samplerepo-pr-practice">samplerepo-pr-practice</a>) as a <trigger trigger="click" for="modal:githubPullRequests-rcsPullRequests">pull request (PR)</trigger>. Here is a scenario you can try in order to learn how to create PRs:</p>
-<b-modal id="modal:githubPullRequests-rcsPullRequests" hide-footer size="lg" modal-class="mb-zoom" ref="modal:githubPullRequests-rcsPullRequests" class="algolia-no-index"><template #modal-title>Project Management → Revision Control → Remote Repositories →</template>
+<modal large id="modal:githubPullRequests-rcsPullRequests"><template #header>Project Management → Revision Control → Remote Repositories →</template>
   <div>
-<p><strong>A <mark><em>pull request</em></mark> (PR for short) is a mechanism for contributing code to a remote repo,</strong> i.e., &quot;I'm <em>requesting</em> you to <em>pull</em> my proposed changes to your repo&quot;. For this to work, the two repos must have a shared history. The most common case is sending PRs from a fork to its <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content" class="algolia-no-index"><em>upstream</em> repo is a repo you forked from</span>upstream</span> repo.</p></div></b-modal>
+<p><strong>A <mark><em>pull request</em></mark> (PR for short) is a mechanism for contributing code to a remote repo,</strong> i.e., &quot;I'm <em>requesting</em> you to <em>pull</em> my proposed changes to your repo&quot;. For this to work, the two repos must have a shared history. The most common case is sending PRs from a fork to its <tooltip><template #content><em>upstream</em> repo is a repo you forked from</template>upstream</tooltip> repo.</p></div></modal>
 <p><strong>1. Fork</strong> the repo onto your GitHub account.</p>
 <p><strong>2. Clone</strong> it onto your computer.</p>
 <p><strong>3. Commit</strong> your changes e.g., add a new file with some contents and commit it.</p>
@@ -16,7 +16,7 @@
 <li><strong>Option A - Commit changes to the <code class="hljs inline no-lang" v-pre>master</code> branch</strong></li>
 <li><strong>Option B - Commit to a new branch</strong> e.g., create a branch named <code class="hljs inline no-lang" v-pre>add-intro</code> (remember to switch to the <code class="hljs inline no-lang" v-pre>master</code> branch before creating a new branch) and add your commit to it.</li></ul>
 <p><strong>4. Push</strong> the branch you updated (i.e., <code class="hljs inline no-lang" v-pre>master</code> branch or the new branch) to your fork, as explained <trigger trigger="click" for="modal:createPr-pushBranch">here</trigger>.</p>
-<b-modal id="modal:createPr-pushBranch" hide-footer size="lg" modal-class="mb-zoom" ref="modal:createPr-pushBranch" class="algolia-no-index"><template #modal-title>Git &amp; GitHub → Branch →</template>
+<modal large id="modal:createPr-pushBranch"><template #header>Git &amp; GitHub → Branch →</template>
   <div>
 <h5 id="pushing-a-branch-to-a-remote-repo"><span id="pushing-a-branch-to-a-remote-repo" class="anchor"></span>Pushing a branch to a remote repo<a class="fa fa-anchor" href="#pushing-a-branch-to-a-remote-repo" onclick="event.stopPropagation()"></a></h5>
 <p>Here's how to push a branch to a remote repo:</p>
@@ -25,7 +25,7 @@
 <p>Here's how to push a branch named <code class="hljs inline no-lang" v-pre>add-intro</code> to your own fork of a repo named <code class="hljs inline no-lang" v-pre>samplerepo-pr-practice</code>:</p>
 <img src="/se-book/gitAndGithub/branch/images/pushBranchToFork.png" height="300">
 <p></p></tab>
-  <tab class="algolia-no-index"><template #header>CLI</template>
+  <tab><template #header>CLI</template>
 <p>Normally: <code class="hljs inline no-lang" v-pre>git push {remote repository} {branch}</code>. Examples:<br></p>
 <ul>
 <li><code class="hljs inline no-lang" v-pre>git push origin master</code> pushes the <code class="hljs inline no-lang" v-pre>master</code> branch to the repo named <code class="hljs inline no-lang" v-pre>origin</code> (i.e., the repo you cloned from)</li>
@@ -33,27 +33,27 @@
 <p><strong>If pushing a branch you created locally to the remote for the <em>first time</em></strong>, add the <code class="hljs inline no-lang" v-pre>-u</code> flag to get the local branch to track the new upstream branch:<br>
 e.g., <code class="hljs inline no-lang" v-pre>git push -u origin add-intro</code></p>
 <p><span><span aria-hidden="true" class="fas fa-paperclip"></span></span> See <a href="https://git-scm.com/docs/git-push">git-scm.com/docs/git-push</a> for details of the <code class="hljs inline no-lang" v-pre>push</code> command.</p></tab></tabs>
-<p></p></div></b-modal>
+<p></p></div></modal>
 <p><strong>5. Initiate the PR creation:</strong></p>
 <ol>
 <li>
 <p>Go to your fork.</p></li>
 <li>
-<p>Click on the <span class="tab"><span class="dimmed"><svg version="1.1" width="12" height="16" viewBox="0 0 12 16" class="octicon octicon-git-pull-request" aria-hidden="true"><path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0010 15a1.993 1.993 0 001-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 00-1 3.72v6.56A1.993 1.993 0 002 15a1.993 1.993 0 001-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg></span> Pull requests</span> tab followed by the <span class="btn btn-success pl-1 pr-1 pb-0 pt-0">New pull request</span> <strong>button</strong>. This will bring you to the 'Comparing changes' page.</p></li>
+<p>Click on the <span class="tab"><span class="dimmed"><svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-git-pull-request" aria-hidden="true"><path fill-rule="evenodd" d="M7.177 3.073L9.573.677A.25.25 0 0110 .854v4.792a.25.25 0 01-.427.177L7.177 3.427a.25.25 0 010-.354zM3.75 2.5a.75.75 0 100 1.5.75.75 0 000-1.5zm-2.25.75a2.25 2.25 0 113 2.122v5.256a2.251 2.251 0 11-1.5 0V5.372A2.25 2.25 0 011.5 3.25zM11 2.5h-1V4h1a1 1 0 011 1v5.628a2.251 2.251 0 101.5 0V5A2.5 2.5 0 0011 2.5zm1 10.25a.75.75 0 111.5 0 .75.75 0 01-1.5 0zM3.75 12a.75.75 0 100 1.5.75.75 0 000-1.5z"/></svg></span> Pull requests</span> tab followed by the <span class="btn btn-success pl-1 pr-1 pb-0 pt-0">New pull request</span> <strong>button</strong>. This will bring you to the 'Comparing changes' page.</p></li>
 <li>
 <p>Set the appropriate target repo and the branch that should receive your PR, using the <code class="hljs inline no-lang" v-pre>base repository</code> and <code class="hljs inline no-lang" v-pre>base</code> dropdowns. e.g.,<br>
-<span class="btn btn-light border">base repository: <strong>se-edu/samplerepo-pr-practice</strong> <svg version="1.1" width="12" height="16" viewBox="0 0 12 16" class="octicon octicon-triangle-down" aria-hidden="true"><path fill-rule="evenodd" d="M0 5l6 6 6-6H0z"/></svg></span> <span class="btn btn-light border">base: <strong>master</strong> <svg version="1.1" width="12" height="16" viewBox="0 0 12 16" class="octicon octicon-triangle-down" aria-hidden="true"><path fill-rule="evenodd" d="M0 5l6 6 6-6H0z"/></svg></span><br></p>
+<span class="btn btn-light border">base repository: <strong>se-edu/samplerepo-pr-practice</strong> <svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-triangle-down" aria-hidden="true"><path d="M4.427 7.427l3.396 3.396a.25.25 0 00.354 0l3.396-3.396A.25.25 0 0011.396 7H4.604a.25.25 0 00-.177.427z"/></svg></span> <span class="btn btn-light border">base: <strong>master</strong> <svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-triangle-down" aria-hidden="true"><path d="M4.427 7.427l3.396 3.396a.25.25 0 00.354 0l3.396-3.396A.25.25 0 0011.396 7H4.604a.25.25 0 00-.177.427z"/></svg></span><br></p>
 <box type="info" seamless>
-<p>Normally, the default value shown in the dropdown is what you want but in case your fork has <span data-mb-component-type="popover" v-b-popover.hover.top.html="popoverInnerGetters" class="trigger"><span data-mb-slot-name="content" class="algolia-no-index">e.g., the repo you forked from is also a fork of a another repo, which means both of those are considered upstream repos of your fork</span>multiple upstream repos</span>, the default may not be what you want.</p></box></li>
+<p>Normally, the default value shown in the dropdown is what you want but in case your fork has <popover><template #content>e.g., the repo you forked from is also a fork of a another repo, which means both of those are considered upstream repos of your fork</template>multiple upstream repos</popover>, the default may not be what you want.</p></box></li>
 <li>
 <p>Indicate which repo:branch contains your proposed code, using the <code class="hljs inline no-lang" v-pre>head repository</code> and <code class="hljs inline no-lang" v-pre>compare</code> dropdowns. e.g.,<br>
-<span class="btn btn-light border">head repository: <strong>myrepo/samplerepo-pr-practice</strong> <svg version="1.1" width="12" height="16" viewBox="0 0 12 16" class="octicon octicon-triangle-down" aria-hidden="true"><path fill-rule="evenodd" d="M0 5l6 6 6-6H0z"/></svg></span> <span class="btn btn-light border">compare: <strong>master</strong> <svg version="1.1" width="12" height="16" viewBox="0 0 12 16" class="octicon octicon-triangle-down" aria-hidden="true"><path fill-rule="evenodd" d="M0 5l6 6 6-6H0z"/></svg></span><br></p></li></ol>
-<p><strong>6. Verify the proposed code</strong>: Verify that the diff view in the page shows the exact change you intend to propose. If it doesn't, <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content" class="algolia-no-index">commit the new code and push to the branch</span>update the branch</span> as necessary.</p>
+<span class="btn btn-light border">head repository: <strong>myrepo/samplerepo-pr-practice</strong> <svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-triangle-down" aria-hidden="true"><path d="M4.427 7.427l3.396 3.396a.25.25 0 00.354 0l3.396-3.396A.25.25 0 0011.396 7H4.604a.25.25 0 00-.177.427z"/></svg></span> <span class="btn btn-light border">compare: <strong>master</strong> <svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-triangle-down" aria-hidden="true"><path d="M4.427 7.427l3.396 3.396a.25.25 0 00.354 0l3.396-3.396A.25.25 0 0011.396 7H4.604a.25.25 0 00-.177.427z"/></svg></span><br></p></li></ol>
+<p><strong>6. Verify the proposed code</strong>: Verify that the diff view in the page shows the exact change you intend to propose. If it doesn't, <tooltip><template #content>commit the new code and push to the branch</template>update the branch</tooltip> as necessary.</p>
 <p><strong>7. Submit the PR:</strong></p>
 <span id="submit-the-pr">
 <ol>
 <li>
-<p>Click the <span class="btn btn-success pl-1 pr-1 pb-0 pt-0"><span><svg version="1.1" width="12" height="16" viewBox="0 0 12 16" class="octicon octicon-git-pull-request" aria-hidden="true"><path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0010 15a1.993 1.993 0 001-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 00-1 3.72v6.56A1.993 1.993 0 002 15a1.993 1.993 0 001-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg></span> Create pull request</span> button.</p></li>
+<p>Click the <span class="btn btn-success pl-1 pr-1 pb-0 pt-0"><span><svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-git-pull-request" aria-hidden="true"><path fill-rule="evenodd" d="M7.177 3.073L9.573.677A.25.25 0 0110 .854v4.792a.25.25 0 01-.427.177L7.177 3.427a.25.25 0 010-.354zM3.75 2.5a.75.75 0 100 1.5.75.75 0 000-1.5zm-2.25.75a2.25 2.25 0 113 2.122v5.256a2.251 2.251 0 11-1.5 0V5.372A2.25 2.25 0 011.5 3.25zM11 2.5h-1V4h1a1 1 0 011 1v5.628a2.251 2.251 0 101.5 0V5A2.5 2.5 0 0011 2.5zm1 10.25a.75.75 0 111.5 0 .75.75 0 01-1.5 0zM3.75 12a.75.75 0 100 1.5.75.75 0 000-1.5z"/></svg></span> Create pull request</span> button.</p></li>
 <li>
 <p>Fill in the PR name and description e.g.,<br>
 Name: <code class="hljs inline no-lang" v-pre>Add an introduction to the README.md</code><br>
@@ -62,9 +62,9 @@ Description:</p>
 </span><span>Also add a heading ...
 </span></code></pre></li>
 <li>
-<p>If you want to indicate that the PR you are about to create is 'still work in progress, not yet ready', click on the dropdown arrow in the <span class="btn btn-success pl-1 pr-1 pb-0 pt-0"> Create pull request <svg version="1.1" width="12" height="16" viewBox="0 0 12 16" class="octicon octicon-triangle-down" aria-hidden="true"><path fill-rule="evenodd" d="M0 5l6 6 6-6H0z"/></svg></span> button and choose <code class="hljs inline no-lang" v-pre>Create draft pull request</code> option.</p></li>
+<p>If you want to indicate that the PR you are about to create is 'still work in progress, not yet ready', click on the dropdown arrow in the <span class="btn btn-success pl-1 pr-1 pb-0 pt-0"> Create pull request <svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-triangle-down" aria-hidden="true"><path d="M4.427 7.427l3.396 3.396a.25.25 0 00.354 0l3.396-3.396A.25.25 0 0011.396 7H4.604a.25.25 0 00-.177.427z"/></svg></span> button and choose <code class="hljs inline no-lang" v-pre>Create draft pull request</code> option.</p></li>
 <li>
-<p>Click the <span class="btn btn-success pl-1 pr-1 pb-0 pt-0"> Create pull request <svg version="1.1" width="12" height="16" viewBox="0 0 12 16" class="octicon octicon-triangle-down" aria-hidden="true"><path fill-rule="evenodd" d="M0 5l6 6 6-6H0z"/></svg></span> button to create the PR.<br></p></li>
+<p>Click the <span class="btn btn-success pl-1 pr-1 pb-0 pt-0"> Create pull request <svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-triangle-down" aria-hidden="true"><path d="M4.427 7.427l3.396 3.396a.25.25 0 00.354 0l3.396-3.396A.25.25 0 0011.396 7H4.604a.25.25 0 00-.177.427z"/></svg></span> button to create the PR.<br></p></li>
 <li>
 <p>Go to the receiving repo to verify that your PR appears there in the <code class="hljs inline no-lang" v-pre>Pull requests</code> tab.
 </p></li></ol></span><p></p>

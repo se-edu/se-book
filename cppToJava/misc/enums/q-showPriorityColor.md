@@ -1,5 +1,4 @@
 <panel type="dark" header="###  <small><small>{{ icon_important }} [Key Exercise] show priority color</small></small>" expanded >
-<question>
 
 Define an enumeration named `Priority`. Add the missing `describe` method to the code below so that it produces the output given.
 
@@ -24,7 +23,7 @@ Blue indicates medium priority
 Green indicates low priority
 ```
 
-<div slot="hint">
+<panel type="seamless" header="Hint">
 
 Use a `switch` statement to select between possible values for `Priority`.
 
@@ -47,6 +46,5 @@ public enum Priority {
 }
 ```
 
-</div>
-</question>
+</panel>
 </panel>

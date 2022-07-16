@@ -8,14 +8,14 @@
 
 Notation:
 
-<img src="{{baseUrl}}/uml/sequenceDiagrams/basic/images/notation.png" height="300" />
+<img src="{{baseUrl}}/uml/sequenceDiagrams/basic/images/notation.png" width="603"/>
 <p/>
 
 <box>
 
 {{ icon_example }} This sequence diagram shows some interactions between a human user and the Text UI of a <tooltip content="Command Line Interface">CLI</tooltip> Minesweeper game.
 
-<img src="{{baseUrl}}/uml/sequenceDiagrams/basic/images/playerText.png" height="300" />
+<img src="{{baseUrl}}/uml/sequenceDiagrams/basic/images/playerText.png" height="400" />
 <p/>
 
 The player runs the `newgame` action on the `TextUi` object which results in the `TextUi` showing the minefield to the player. Then, the player runs the `clear x y` command; in response, the `TextUi` object shows the updated minefield.

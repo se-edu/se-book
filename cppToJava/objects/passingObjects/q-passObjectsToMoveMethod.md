@@ -1,5 +1,4 @@
 <panel type="dark" header="###  <small><small>{{ icon_important }} [Key Exercise] pass objects to `move` method</small></small>" expanded >
-<question>
 
 Add a method `move(Point p, Rectangle r)` to the code below, to produce the given output. The behavior of the method is as follows:
 * Returns `null` and does nothing if either `p` or `r` is null
@@ -41,7 +40,7 @@ returned point: java.awt.Point[x=2,y=3]
 null
 ```
 
-<div slot="hint">
+<panel type="seamless" header="Hint">
 
 Partial solution:
 
@@ -57,6 +56,5 @@ public static Point move(Point p, Rectangle r){
 }
 ```
 
-</div>
-</question>
+</panel>
 </panel>

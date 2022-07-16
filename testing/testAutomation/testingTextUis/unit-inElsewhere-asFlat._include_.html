@@ -2,7 +2,7 @@
 <p><span class="dimmed"><strong><span>Quality Assurance → Testing → Test Automation →
 </span></strong></span></p>
 <div id="title-and-body">
-<div><h4 id="automated-testing-of-cli-applications"><span id="automated-testing-of-cli-applications" class="anchor"></span><span>Automated testing of CLI applications</span></h4></div>
+<div><h4 id="automated-testing-of-cli-applications"><span id="automated-testing-of-cli-applications" class="anchor"></span><span>Automated testing of CLI applications</span><a class="fa fa-anchor" href="#automated-testing-of-cli-applications" onclick="event.stopPropagation()"></a></h4></div>
 <div id="main">
 <div>
 <p><strong>A simple way to semi-automate testing of a CLI (Command Line Interface) app is by using input/output re-direction.</strong></p>
@@ -13,13 +13,13 @@
 <ol>
 <li>
 <p>Store the test input in the text file <code class="hljs inline no-lang" v-pre>input.txt</code>.</p>
-<panel type="seamless" class="algolia-no-index"><template #header><p><span class="dimmed"><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example <code class="hljs inline no-lang" v-pre>input.txt</code></span></p></template>
+<panel type="seamless"><template #header><p><span class="dimmed"><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example <code class="hljs inline no-lang" v-pre>input.txt</code></span></p></template>
 <pre><code class="hljs" v-pre><span>add Valid Name p/12345 valid@email.butNoPrefix
 </span><span>add Valid Name 12345 e/valid@email.butPhonePrefixMissing
 </span></code></pre></panel></li>
 <li>
 <p>Store the output you expect from the SUT in another text file <code class="hljs inline no-lang" v-pre>expected.txt</code>.</p>
-<panel type="seamless" class="algolia-no-index"><template #header><p><span class="dimmed"><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example <code class="hljs inline no-lang" v-pre>expected.txt</code></span></p></template>
+<panel type="seamless"><template #header><p><span class="dimmed"><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example <code class="hljs inline no-lang" v-pre>expected.txt</code></span></p></template>
 <pre><code class="hljs" v-pre><span>Command: || [add Valid Name p/12345 valid@email.butNoPrefix]
 </span><span>Invalid command format: add 
 </span><span>
@@ -31,13 +31,13 @@
 <pre><code class="no-line-numbers hljs sh" v-pre><span>java AddressBook &lt; input.txt &gt; output.txt
 </span></code></pre><ul>
 <li>
-<p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> The way to run a CLI program differs based on the language.<br>
+<p><span class="badge rounded-pill bg-warning text-dark"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> The way to run a CLI program differs based on the language.<br>
 e.g., In Python, assuming the code is in <code class="hljs inline no-lang" v-pre>AddressBook.py</code> file, use the command<br>
 <code class="hljs inline no-lang" v-pre>python AddressBook.py &lt; input.txt &gt; output.txt</code></p></li>
 <li>
-<p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> If you are using Windows, use a normal command window to run the app, not a PowerShell window.</p></li></ul>
-<panel minimized class="algolia-no-index">
-<template #header><span class="card-title"><span>More on the <code class="hljs inline no-lang" v-pre>&gt;</code> operator and the <code class="hljs inline no-lang" v-pre>&lt;</code> operator <span class="badge badge-pill badge-secondary"><span><span aria-hidden="true" class="fas fa-plus"></span> extra</span></span></span></span></template>
+<p><span class="badge rounded-pill bg-warning text-dark"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> If you are using Windows, use a normal command window to run the app, not a PowerShell window.</p></li></ul>
+<panel minimized>
+<template #header><span class="card-title"><span>More on the <code class="hljs inline no-lang" v-pre>&gt;</code> operator and the <code class="hljs inline no-lang" v-pre>&lt;</code> operator <span class="badge rounded-pill bg-secondary"><span><span aria-hidden="true" class="fas fa-plus"></span> extra</span></span></span></span></template>
 <p>A CLI program takes input from the keyboard and outputs to the console. That is because those two are the default input and output streams, respectively. But you can change that behavior using <code class="hljs inline no-lang" v-pre>&lt;</code> and <code class="hljs inline no-lang" v-pre>&gt;</code> operators. For example, if you run <code class="hljs inline no-lang" v-pre>AddressBook</code> in a command window, the output will be shown in the console, but if you run it like this,</p>
 <pre><code class="no-line-numbers hljs sh" v-pre><span>java AddressBook &gt; output.txt 
 </span></code></pre><p>the Operating System then creates a file <code class="hljs inline no-lang" v-pre>output.txt</code> and stores the output in that file instead of displaying it in the console. No file I/O coding is required. Similarly, adding <code class="hljs inline no-lang" v-pre>&lt; input.txt</code> (or any other filename) makes the OS redirect the contents of the file as input to the program, as if the user typed the content of the file one line at a time.</p>
@@ -51,8 +51,8 @@ e.g., In Python, assuming the code is in <code class="hljs inline no-lang" v-pre
 </span></code></pre></li></ol>
 <p>Note that the above technique is only suitable when testing CLI apps, and only if the exact output can be predetermined. <span class="dimmed">If the output varies from one run to the other (e.g. it contains a time stamp), this technique will not work. In those cases, you need more sophisticated ways of automating tests.</span></p>
 <div>
-<span id="pop:cli" placement="top" data-mb-component-type="popover" v-b-popover.hover.top.html="popoverInnerGetters" class="trigger">
-  <span data-mb-slot-name="content" class="algolia-no-index"><div>
+<popover id="pop:cli" placement="top">
+  <template #content><div>
     <div>
-<p><strong>CLI application</strong>: An application that has a <em>Command Line Interface</em>. i.e. user interacts with the app by typing in commands.</p></div></div></span></span></div></div>
+<p><strong>CLI application</strong>: An application that has a <em>Command Line Interface</em>. i.e. user interacts with the app by typing in commands.</p></div></div></template></popover></div></div>
 <div></div></div></div>

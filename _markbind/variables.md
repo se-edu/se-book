@@ -2,7 +2,7 @@
 
 
 <span id="outcomes">
-<span class="badge badge-light"><md>%%<include src="text.md#outcomes" inline />%%</md></span><p/>
+<span class="badge bg-light text-dark"><md>%%<include src="text.md#outcomes" inline />%%</md></span><p/>
 </span>
 
 <span id="icon_deadline">:alarm_clock:</span>
@@ -10,7 +10,7 @@
 <span id="icon_example"><md>:fas-cube:</md></span>
 <span id="icon_embedding"><md>:glyphicon-log-in:</md></span>
 <span id="icon_exercise"><md>:fas-dumbbell:</md></span>
-<span id="icon_extra"><span class='badge badge-pill badge-secondary'><md>:fas-plus: extra</md></span></span>
+<span id="icon_extra"><span class='badge rounded-pill bg-secondary'><md>:fas-plus: extra</md></span></span>
 <span id="icon_evidence"><md>:fas-briefcase:</md></span>
 <span id="icon_info"><md>:fas-info-circle:</md></span>
 <span id="icon_individual"><md>:fas-user:</md></span>
@@ -33,11 +33,11 @@
 <span id="icon_Q_A">{{ icon_Q | safe }}<md>:glyphicon-ok-sign:</md></span>
 <span id="icon_resource"><md>:fas-paperclip:</md></span>
 <span id="icon_team"><md>:fas-users:</md></span>
-<span id="icon_terminal"><small><span class="badge badge-secondary">&gt;_</span></small></span>
+<span id="icon_terminal"><small><span class="badge bg-secondary">&gt;_</span></small></span>
 <span id="icon_text"><md>:far-file-alt:</md></span>
 <span id="icon_tick"><md>:fas-check:</md></span>
 <span id="icon_tick_green"><span style="color:green">{{ icon_tick | safe }}</span></span>
-<span id="icon_tip"><span class="badge badge-pill badge-warning">:fas-lightbulb:</span></span>
+<span id="icon_tip"><span class="badge rounded-pill bg-warning text-dark">:fas-lightbulb:</span></span>
 <span id="icon_todo"><md>:glyphicon-check:</md></span>
 <span id="icon_tutorial"><md>:fas-chalkboard-teacher:</md></span>
 <span id="icon_slides"><md>:far-images:</md></span>
@@ -49,9 +49,9 @@
 <span id="bad"><span style="color: red"><md>**:fas-thumbs-down: Bad**</md></span></span>
 <span id="good"><span style="color: green"><md>**:fas-thumbs-up: Good**</md></span></span>
 
-<span id="different"><span style="opacity: 0.5"> <span class="badge badge-pill badge-danger"><md>:fas-not-equal:</md></span></span></span>
-<span id="oracle"><small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small></span>
-<span id="similar"><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><md>:fas-equals:</md></span></span></span>
+<span id="different"><span style="opacity: 0.5"> <span class="badge rounded-pill bg-danger"><md>:fas-not-equal:</md></span></span></span>
+<span id="oracle"><small><span style="opacity: 0.5"><span class="badge bg-secondary">-- Java Tutorial</span></span></small></span>
+<span id="similar"><span style="opacity: 0.5"> <span class="badge rounded-pill bg-success"><md>:fas-equals:</md></span></span></span>
 
 <span id="java_version">9</span>
 <span id="java_api">https://docs.oracle.com/javase/{{ java_version }}/docs/api</span>

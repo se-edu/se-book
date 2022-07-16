@@ -2,12 +2,12 @@
 <p><span class="dimmed"><strong><span>Quality Assurance → Test Case Design → Introduction →
 </span></strong></span></p>
 <div id="title-and-body">
-<div><h4 id="what"><span id="what" class="anchor"></span><span>What</span></h4></div>
+<div><h4 id="what"><span id="what" class="anchor"></span><span>What</span><a class="fa fa-anchor" href="#what" onclick="event.stopPropagation()"></a></h4></div>
 <div id="main">
 <div>
-<p><strong>Except for trivial <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content" class="algolia-no-index">Software Under Test</span>SUTs</span>, <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content" class="algolia-no-index">testing all possible cases</span>exhaustive testing</span> is not practical</strong> because such testing often requires a massive/infinite number of test cases.</p>
+<p><strong>Except for trivial <tooltip><template #content>Software Under Test</template>SUTs</tooltip>, <tooltip><template #content>testing all possible cases</template>exhaustive testing</tooltip> is not practical</strong> because such testing often requires a massive/infinite number of test cases.</p>
 <box>
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider the test cases for adding a string object to a <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content" class="algolia-no-index">Java: <code class="hljs inline no-lang" v-pre>ArrayList</code>,<br>Python: <code class="hljs inline no-lang" v-pre>list</code></span>collection</span>:</p>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider the test cases for adding a string object to a <tooltip><template #content>Java: <code class="hljs inline no-lang" v-pre>ArrayList</code>,<br>Python: <code class="hljs inline no-lang" v-pre>list</code></template>collection</tooltip>:</p>
 <ul>
 <li>Add an item to an empty collection.</li>
 <li>Add an item when there is one item in the collection.</li>
@@ -28,10 +28,10 @@
 <p><strong>Testing should be <em>effective</em></strong> i.e., it finds a high percentage of existing bugs <span class="dimmed">e.g., a set of test cases that finds 60 defects is more effective than a set that finds only 30 defects in the same system</span>.</p></li>
 <li>
 <p><strong>Testing should be <em>efficient</em></strong> i.e., it has a high rate of success (bugs found/test cases) <span class="dimmed">a set of 20 test cases that finds 8 defects is more efficient than another set of 40 test cases that finds the same 8 defects</span>.</p></li></ul>
-<p><strong>For testing to be <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content" class="algolia-no-index">Efficient and Effective</span>E&amp;E</span>, each new test you add should be targeting a potential fault that is not already targeted by existing test cases.</strong> There are test case design techniques that can help us improve the E&amp;E of testing.</p></div></div>
+<p><strong>For testing to be <tooltip><template #content>Efficient and Effective</template>E&amp;E</tooltip>, each new test you add should be targeting a potential fault that is not already targeted by existing test cases.</strong> There are test case design techniques that can help us improve the E&amp;E of testing.</p></div></div>
 <div>
-  <div><panel expandable class="algolia-no-index"><template #header><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
-  <div><panel class="algolia-no-index"><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Test cases for <code class="hljs inline no-lang" v-pre>TriangleDetector</code></p></template>
+  <div><panel expandable><template #header><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
+  <div><panel><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Test cases for <code class="hljs inline no-lang" v-pre>TriangleDetector</code></p></template>
 <question has-input="true">
 <p>Given below is the sample output from a text-based program <code class="hljs inline no-lang" v-pre>TriangleDetector</code> that determines whether the three input numbers make up the three sides of a valid triangle. List test cases you would use to test this software. Two sample test cases are given below.</p>
 <pre><code class="hljs" v-pre><span>C:\&gt; java TriangleDetector
@@ -43,7 +43,7 @@
 </span></code></pre><p>Sample test cases,</p>
 <pre><code class="hljs" v-pre><span>34, 34, 34: Yes
 </span><span>0, any valid, any valid: No
-</span></code></pre><template #answer><div class="algolia-no-index">
+</span></code></pre><template #answer><div>
 <p>In addition to obvious test cases such as</p>
 <ul>
 <li>sum of two sides == third,</li>
@@ -57,10 +57,10 @@
 <li>Introduce a long delay between entering data (will the program be affected by, say the screensaver?), minimize and restore window during the operation, hibernate the system in the middle of a calculation, start with invalid inputs (the system may perform error handling differently for the very first test case), …</li>
 <li>Test on different locales.</li></ul>
 <p>The main point to note is how difficult it is to test exhaustively, even on a trivial system.</p></div></template></question></panel></div>
-  <div><panel class="algolia-no-index"><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Exhaustive testing in Minesweeper</p></template>
+  <div><panel><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Exhaustive testing in Minesweeper</p></template>
 <question has-input="true">
 <p>Explain why exhaustive testing is not practical using the example of testing the <code class="hljs inline no-lang" v-pre>newGame()</code> operation in the <code class="hljs inline no-lang" v-pre>Logic</code> class of a Minesweeper game.</p>
-<template #answer><div class="algolia-no-index">
+<template #answer><div>
 <p>Consider this sequence of test cases:</p>
 <ul>
 <li>Test case 1. Start Minesweeper. Activate <code class="hljs inline no-lang" v-pre>newGame()</code> and see if it works.</li>
@@ -69,7 +69,7 @@
 <li>…</li>
 <li>Test case 267. Start Minesweeper. Activate <code class="hljs inline no-lang" v-pre>newGame()</code> 267 times consecutively and see if it works.</li></ul>
 <p>Well, you get the idea. Exhaustive testing of <code class="hljs inline no-lang" v-pre>newGame()</code> is not practical.</p></div></template></question></panel></div>
-  <div><panel class="algolia-no-index"><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Statements about the E&amp;E of testing</p></template>
+  <div><panel><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Statements about the E&amp;E of testing</p></template>
 <question>
 <p>Improving the efficiency and effectiveness of test case design can,</p>
 <ul class="contains-task-list">
@@ -79,5 +79,5 @@
 <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. save effort on writing and maintaining tests.</li>
 <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> e. minimize redundant test cases.</li>
 <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> f. force us to understand the SUT better.</li></ul>
-<template #answer><div class="algolia-no-index">
+<template #answer><div>
 <p>(a)(b)(c)(d)(e)(f)</p></div></template></question></panel></div></panel></div></div></div></div>

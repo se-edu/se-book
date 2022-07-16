@@ -6,7 +6,7 @@
 
 <div id="body">
 
-In UML class diagrams, **underlines denote class-level attributes and variables.**
+In UML class diagrams, **underlines denote class-level attributes and methods.**
 
 <box>
 

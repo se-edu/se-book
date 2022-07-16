@@ -65,5 +65,5 @@ System.out.println(spot.x + ", " + spot.y);
 </div>
 
 <div id="extras">
-  <include src="exercisesPanel.md" boilerplate />
+  <include src="exercises.md" />
 </div>

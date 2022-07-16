@@ -1,8 +1,7 @@
 <panel type="dark" header="###  <small><small>{{ icon_important }} [Key Exercise] `filterEmails` method</small></small>" expanded >
-<question>
 
 Implement the following two methods in the code below to produce the given output.
-* **`filterEmailsfilterEmails(String[] items): String[]`**
+* **`filterEmails(String[] items): String[]`**
   * `items` is an array of strings each of which may be an email address or some other random string
   * Returns a `String[]` containing email addresses that were in `items`. Any string containing `@` is considered as an email.<br>
   `["aaa@bbb", "xyz"]` {{ icon_output_right }} `["aaa@bbb"]`
@@ -39,7 +38,7 @@ public class Main {
 
 ```
 
-<div slot="hint">
+<panel type="seamless" header="Hint">
 
 * **`filterEmails(String[] items): String[]`**
   1. create a new array (say `emails`) of the same size as `items`
@@ -68,6 +67,5 @@ public static void printItems(String[] items){
 ```
 </panel>
 
-</div>
-</question>
+</panel>
 </panel>

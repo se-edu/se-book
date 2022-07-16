@@ -5,7 +5,7 @@
 
 <div class="indented text-monospace">
 
-A course has a name and a code. A course is read by 10 or more students, and taught by a team of instructors one of whom is the coordinator. A course can have a number of tasks which can be assignments or tests. Some assignments are compulsory. When a student attempts a task, a grade and an optional feedback is given.
+A course has a name and a code. A course is read by 10 or more students, and taught by one or more instructors one of whom is the coordinator. A course can have a number of tasks which can be assignments or tests. Some assignments are compulsory. When a student attempts a task, a grade and an optional feedback is given.
 
 </div>
 You can use the following layout for the diagram. Add more classes if needed.

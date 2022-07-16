@@ -1,5 +1,4 @@
 <panel type="dark" header="###  <small><small>{{ icon_important }} [Key Exercise] weekly roster</small></small>" expanded >
-<question>
 
 The class given below keeps track of how many people signup to attend an event on each day of the week. Add the missing methods so that it produces the output given.
 
@@ -29,7 +28,7 @@ Friday => 1
 Wednesday => 2
 ```
 
-<div slot="hint">
+<panel type="seamless" header="Hint">
 
 Partial solution:
 ```java
@@ -52,6 +51,5 @@ public class Main {
 }
 ```
 
-</div>
-</question>
+</panel>
 </panel>

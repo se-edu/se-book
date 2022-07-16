@@ -1,5 +1,4 @@
 <panel type="dark" header="###  <small><small>{{ icon_important }} [Key Exercise] use `Rectangle` objects</small></small>" expanded >
-<question>
 
 Update the code below as described in code comments, to produce the given output.
 
@@ -35,11 +34,10 @@ Area: 24
 java.awt.Rectangle[x=0,y=0,width=8,height=10]
 ```
 
-<div slot="hint">
+<panel type="seamless" header="Hint">
 
 * Area can be calculated as `r.width * r.height`
 * Setting the size can be done as `r.setSize(8, 10)`
 
-</div>
-</question>
+</panel>
 </panel>

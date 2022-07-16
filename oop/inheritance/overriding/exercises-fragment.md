@@ -1,3 +1,3 @@
 <panel header="{{ icon_exercise }} Exercises" expandable>
-  <include src="q-tick-overriding.mbdf" />
+  <include src="q-tick-overriding-fragment.md" />
 </panel>
