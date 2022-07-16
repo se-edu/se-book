@@ -3,6 +3,6 @@
 <div class="indented">
 
 <panel header="**{{ name }}**">
-<include src="extensions.mbdf#{{ target }}" />
+<include src="extensions-fragment.md#{{ target }}" />
 </panel>
 </div>
