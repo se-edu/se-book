@@ -2,7 +2,7 @@
   <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 </head-bottom>
 
-<header fixed>
+<header sticky>
 <navbar placement="top" type="dark">
 <a slot="brand" href="https://se-education.org" title="SE-EDU" class="navbar-brand"><md>:fas-chevron-circle-left: ****SE-EDU****</md></a>
   <li><a href="{{baseUrl}}/index.html" class="nav-link"><md>**Home**</md></a></li>
