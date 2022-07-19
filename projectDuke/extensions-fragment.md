@@ -354,6 +354,33 @@ Improve the GUI to make it more _polished_. Some examples:
 {{ icon_tip }} You can take inspiration from [these past projects](https://nus-cs2103-ay2021s1.github.io/website/admin/ip-showcase.html). If you adopt any ideas from them, don't forget to give credit to the original author.
 
 </div>
+<div id="A-Personality">
+<include boilerplate src="dukeExtensionTitle.md" var-extId="A-Personality"
+         var-extHeading="Give a unique personality"/>
+
+Choose a unique personality for Duke, and tweak the following aspects to go with that personality:
+
+* Name
+* Phrases used by Duke (e.g., when responding to a command)
+* GUI (colors, icons, font, etc.)
+
+</div>
+<div id="A-MoreTesting">
+<include boilerplate src="dukeExtensionTitle.md" var-extId="A-MoreTesting"
+         var-extHeading="More automated tests"/>
+
+Write more JUnit tests, to test nearly all code that _can_ be tested automatically.
+
+You may omit code that are hard to test automatically e.g., GUI functionality (test those manually instead).
+
+</div>
+<div id="A-MoreErrorHandling">
+<include boilerplate src="dukeExtensionTitle.md" var-extId="A-MoreErrorHandling"
+         var-extHeading="More error handling"/>
+
+Improve the code to handle all errors you anticipate the product will encounter during usage.
+
+</div>
 
 <!-- ======================================================================================================= -->
 
@@ -494,7 +521,7 @@ Provide a way to perform tasks on multiple items %%e.g., delete some specific it
 <include boilerplate src="dukeExtensionTitle.md" var-extId="C-Statistics" var-extStyle="success"
          var-extHeading="Statistics and insights"/>
 
-Provide a way to leverage statistics about the items managed by the App %%e.g., show the number of tasks that have been completed in the past week%%. 
+Provide a way to leverage statistics about the items managed by the App %%e.g., show the number of tasks that have been completed in the past week%%.
 </div>
 <div id="C-UndoRedo">
 <include boilerplate src="dukeExtensionTitle.md" var-extId="C-Undo" var-extStyle="success"
@@ -508,7 +535,7 @@ Minimal: the ability to undo the most recent command.
 <include boilerplate src="dukeExtensionTitle.md" var-extId="C-Help" var-extStyle="success"
          var-extHeading="Give help to users"/>
 
-Provide in-App guidance to users. 
+Provide in-App guidance to users.
 
 Minimal: add a command to access a help page.
 
