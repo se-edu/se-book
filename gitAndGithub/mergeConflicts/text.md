@@ -5,8 +5,8 @@
 <span id="outcomes">{{ icon_outcome }} Can use Git to resolve merge conflicts</span>
 
 {% macro dropdown(text) %}<span class="btn btn-light border">{{ text }} :octicon-triangle-down:</span>{% endmacro %}
-{% macro button_green(text) %}<span class="btn btn-success pl-1 pr-1 pb-0 pt-0">{{ text }}</span>{% endmacro %}
-{% macro button_light(text) %}<span class="btn btn-light pl-1 pr-1 pb-0 pt-0 border">{{ text }}</span>{% endmacro %}
+{% macro button_green(text) %}<span class="btn btn-success ps-1 pe-1 pb-0 pt-0">{{ text }}</span>{% endmacro %}
+{% macro button_light(text) %}<span class="btn btn-light ps-1 pe-1 pb-0 pt-0 border">{{ text }}</span>{% endmacro %}
 
 <div id="body">
 
