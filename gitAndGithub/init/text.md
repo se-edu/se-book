@@ -34,7 +34,17 @@ Create a directory for the repo (e.g., a directory named `things`).
   </tab>
 </tabs>
 
-</div>
 
+<box type="tip" seamless>
+
+As you see above, this textbook explains how to use Git via SourceTree (a GUI client) as well as via the Git CLI. If you are new to Git, **we recommend you learn !!both!! the GUI method and the CLI method** -- The GUI method will help you visualize the result better while the CLI method is more universal (i.e., you will not be tied to any GUI) and more flexible/powerful.
+</box>
+
+<box type="warning" seamless>
+
+If you are new to Git, **we caution you against using Git or GitHub features that come with the IDE** as it is better to learn Git independent of any other tool. Similarly, using clients provided by GitHub (e.g., _GitHub Desktop_ GUI client) will make it harder for you to separate Git features from GitHub features.
+</box>
+
+</div>
 <div id="extras">
 </div>
