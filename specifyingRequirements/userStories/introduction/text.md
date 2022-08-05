@@ -7,13 +7,13 @@
 <div id="body">
 
 <box type="definition" seamless>
-<include src="../../../common/definitions.md#def-user-story" />
+<include src="../../../common/definitions.md#def-user-story" inline />
 </box>
 
 **A common format** for writing user stories is:
 
 <box type="definition" seamless>
-<include src="../../../common/definitions.md#def-user-story-format" />
+<include src="../../../common/definitions.md#def-user-story-format" inline />
 </box>
 
 <box>

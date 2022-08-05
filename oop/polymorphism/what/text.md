@@ -7,9 +7,7 @@
 <div id="body">
 
 <box type="definition" seamless>
-
-<include src="../../../common/definitions.md#def-polymorphism" />
-
+<include src="../../../common/definitions.md#def-polymorphism" inline />
 </box>
 
 **_Polymorphism_ allows you to write code targeting superclass objects, use that code on subclass objects, and achieve possibly different results based on the actual class of the object.**

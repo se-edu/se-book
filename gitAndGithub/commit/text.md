@@ -9,10 +9,10 @@
 **After initializing a repository, Git can help you with revision controlling files inside the _working directory_. However, it is not automatic.** It is up to you to tell Git which of your changes (aka _revisions_) should be _committed_ to its memory for later use. Saving changes into Git's memory in that way is often called _committing_ and a change saved to the revision history is called a _commit_.
 
 <box type="definition" seamless>
-  <include src="../../common/definitions.md#def-working-directory" />
+<include src="../../common/definitions.md#def-working-directory" inline />
 </box>
 <box type="definition" seamless>
-  <include src="../../common/definitions.md#def-commit" />
+<include src="../../common/definitions.md#def-commit" inline />
 </box>
 
 Here are the steps you can follow to learn how to work with Git commits:
@@ -34,7 +34,7 @@ Here are the steps you can follow to learn how to work with Git commits:
 
 
 <box type="definition" seamless>
-  <include src="../../common/definitions.md#def-stage" />
+<include src="../../common/definitions.md#def-stage" inline />
 </box>
 
 <tabs>

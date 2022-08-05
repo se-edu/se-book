@@ -7,9 +7,7 @@
 <div id="body">
 
 <box type="definition" seamless>
-
-<include src="../../common/definitions.md#def-interface-segregation-principle" />
-
+<include src="../../common/definitions.md#def-interface-segregation-principle" inline />
 </box>
 
 <box>

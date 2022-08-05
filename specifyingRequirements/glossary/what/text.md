@@ -7,7 +7,7 @@
 <div id="body">
 
 <box type="definition" seamless>
-<include src="../../../common/definitions.md#def-glossary" />
+<include src="../../../common/definitions.md#def-glossary" inline />
 </box>
 
 <box>

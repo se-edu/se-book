@@ -9,9 +9,7 @@
 **Exceptions are used to deal with _'unusual' but not entirely unexpected_ situations** that the program might encounter at runtime.
 
 <box type="definition" seamless>
-
-<include src="../../../common/definitions.md#def-exception" />
-
+<include src="../../../common/definitions.md#def-exception" inline />
 </box>
 
 <box>

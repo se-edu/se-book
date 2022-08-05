@@ -17,7 +17,7 @@ In either case, requirements need to be gathered, analyzed, specified, and manag
 **Requirements come from _stakeholders_.**
 
 <box type="definition" seamless>
-  <include src="../../common/definitions.md#def-stakeholder"/>  
+<include src="../../common/definitions.md#def-stakeholder" inline />
 </box>
 
 **Identifying requirements is often not easy.** For example, stakeholders may not be aware of their precise needs, may not know how to communicate their requirements correctly, may not be willing to spend effort in identifying requirements, etc.

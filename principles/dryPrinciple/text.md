@@ -7,12 +7,10 @@
 <div id="body">
 
 <box type="definition" seamless>
-
-<include src="../../common/definitions.md#def-dry-principle" />
-
+<include src="../../common/definitions.md#def-dry-principle" inline />
 </box>
 
-This principle guards against the duplication of information. 
+This principle guards against the duplication of information.
 
 <box>
 

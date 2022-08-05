@@ -7,9 +7,7 @@
 <div id="body">
 
 <box type="definition" seamless>
-
-<include src="../../../common/definitions.md#def-abstractClass" /> 
-  
+<include src="../../../common/definitions.md#def-abstractClass" inline />
 </box>
 
 **You can declare a class as _abstract_ when a class is merely a representation of commonalities among its subclasses** in which case it does not make sense to instantiate objects of that class.
@@ -21,9 +19,7 @@
 </box>
 
 <box type="definition" seamless>
-
-<include src="../../../common/definitions.md#def-abstractMethod" />
- 
+<include src="../../../common/definitions.md#def-abstractMethod" inline />
 </box>
 
 <box>

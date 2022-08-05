@@ -22,7 +22,7 @@ In general, **most SUTs do not treat each input in a unique way. Instead, they p
 **_Equivalence partitioning (EP)_ is a test case design technique that uses the above observation to improve the E&E of testing.**
 
 <box type="definition" seamless>
-  <include src="../../../common/definitions.md#def-equivalence-partition" />
+<include src="../../../common/definitions.md#def-equivalence-partition" inline />
 </box>
 
 **By dividing possible inputs into equivalence partitions you can,**

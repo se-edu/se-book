@@ -7,7 +7,7 @@
 <div id="body">
 
 <box type="definition" seamless>
-  <include src="../../common/definitions.md#def-brooks-law" />
+<include src="../../common/definitions.md#def-brooks-law" inline />
 </box>
 
 Explanation: The additional communication overhead will outweigh the benefit of adding extra manpower, especially if done near a deadline.

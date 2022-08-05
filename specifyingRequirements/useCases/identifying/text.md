@@ -11,7 +11,7 @@ A use case is an interaction between a system and its _actors_.
 **Actors in Use Cases**
 
 <box type="definition" seamless>
-<include src="../../../common/definitions.md#def-actor" />
+<include src="../../../common/definitions.md#def-actor" inline />
 </box>
 
 <box>

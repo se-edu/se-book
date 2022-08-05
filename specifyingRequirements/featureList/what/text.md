@@ -7,7 +7,7 @@
 <div id="body">
 
 <box type="definition" seamless>
-<include src="../../../common/definitions.md#def-feature-list" />
+<include src="../../../common/definitions.md#def-feature-list" inline />
 </box>
 
 <box>
