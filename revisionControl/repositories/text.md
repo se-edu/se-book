@@ -7,7 +7,7 @@
 <div id="body">
 
 <box type="definition" seamless>
-<include src="../../common/definitions.md#def-repo" inline />
+<include src="../../common/definitions.md#def-repo" trim />
 </box>
 
 <tabs>

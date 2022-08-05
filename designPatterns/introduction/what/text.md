@@ -8,7 +8,7 @@
 
 
 <box type="definition" seamless>
-<include src="../../../common/definitions.md#def-design-pattern" inline />
+<include src="../../../common/definitions.md#def-design-pattern" trim />
 </box>
 
 In software development, there are certain problems that recur in a certain context.

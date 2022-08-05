@@ -7,7 +7,7 @@
 <div id="body">
 
 <box type="definition" seamless>
-<include src="../../common/definitions.md#def-separation-concerns-principle" inline />
+<include src="../../common/definitions.md#def-separation-concerns-principle" trim />
 </box>
 
 A _concern_ in this context is a set of information that affects the code of a computer program.

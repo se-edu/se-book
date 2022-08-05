@@ -7,7 +7,7 @@
 <div id="body">
 
 <box type="definition" seamless>
-<include src="../../../common/definitions.md#def-use-case" inline />
+<include src="../../../common/definitions.md#def-use-case" trim />
 </box>
 
 **A use case describes an _interaction between the user and the system_ for a _specific functionality_ of the system.**

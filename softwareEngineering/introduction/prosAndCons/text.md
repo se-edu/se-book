@@ -7,7 +7,7 @@
 <div id="body">
 
 <box type="definition" seamless>
-<include src="../../../common/definitions.md#def-se" inline inline />
+<include src="../../../common/definitions.md#def-se" inline trim />
 </box>
 
 The following description of the _Joys of the Programming Craft_ was taken from Chapter 1 of the famous book <trigger for="modal:mmm" trigger="click">_The Mythical Man-Month_, by Frederick P. Brooks</trigger>.

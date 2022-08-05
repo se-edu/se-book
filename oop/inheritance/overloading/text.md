@@ -9,7 +9,7 @@
 **Method overloading is when there are multiple methods with the same name but different type signatures.** Overloading is used to indicate that multiple operations do similar things but take different parameters.
 
 <box type="definition" seamless>
-<include src="../../../common/definitions.md#def-type-signature" inline />
+<include src="../../../common/definitions.md#def-type-signature" trim />
 </box>
 
 <box>

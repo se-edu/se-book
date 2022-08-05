@@ -7,7 +7,7 @@
 <div id="body">
 
 <box type="definition" seamless>
-<include src="../../../common/definitions.md#def-dynamic-binding" inline />
+<include src="../../../common/definitions.md#def-dynamic-binding" trim />
 </box>
 
 **<trigger trigger="click" for="modal:dynamicAndStatic-overriding">Overridden methods</trigger> are resolved using dynamic binding, and therefore resolves to the implementation in the actual type of the object.**
@@ -32,7 +32,7 @@ However, at runtime `s` can receive an object of any subclass of `Staff`. That m
 </box>
 
 <box type="definition" seamless>
-<include src="../../../common/definitions.md#def-static-binding" inline />
+<include src="../../../common/definitions.md#def-static-binding" trim />
 </box>
 
 **In contrast, <trigger trigger="click" for="modal:dynamicAndStatic-overloading">overloaded</trigger> methods are resolved using static binding.**

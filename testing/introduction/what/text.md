@@ -7,7 +7,7 @@
 <div id="body">
 
 <box type="definition" seamless>
-<include src="../../../common/definitions.md#def-testing" inline />
+<include src="../../../common/definitions.md#def-testing" trim />
 </box>
 
 <img src="{{baseUrl}}/testing/introduction/what/images/diagram.png" height="220" />

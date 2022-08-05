@@ -7,7 +7,7 @@
 <div id="body">
 
 <box type="definition" seamless>
-<include src="../../common/definitions.md#def-dry-principle" inline />
+<include src="../../common/definitions.md#def-dry-principle" trim />
 </box>
 
 This principle guards against the duplication of information.

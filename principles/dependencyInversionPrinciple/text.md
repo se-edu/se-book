@@ -7,7 +7,7 @@
 <div id="body">
 
 <box type="definition" seamless>
-<include src="../../common/definitions.md#def-dependency-inversion-principle" inline />
+<include src="../../common/definitions.md#def-dependency-inversion-principle" trim />
 </box>
 
 <box>

@@ -7,7 +7,7 @@
 <div id="body">
 
 <box type="definition" seamless>
-<include src="../../common/definitions.md#def-law-of-demeter" inline />
+<include src="../../common/definitions.md#def-law-of-demeter" trim />
 </box>
 
 More concretely, a method `m` of an object `O` should invoke only the methods of the following kinds of objects:
