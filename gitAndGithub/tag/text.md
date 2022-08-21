@@ -21,6 +21,10 @@ Here's how you can tag a commit in a local repo (e.g. in the `samplerepo-things`
 
 After adding a tag to a commit, you can use the tag to refer to that commit, as an alternative to using the hash.
 
+<box type="warning" seamless>
+
+**Tags are different from commit messages**, in purpose and in form. A commit message is a description of the commit that is _part of_ the commit itself. A tags is a short name for a commit, which exists as a separate entity that _points to_ a commit.
+</box>
 </div>
 
 <div id="extras">
