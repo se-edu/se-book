@@ -1,7 +1,7 @@
 <panel header="{{ icon_Q }} Find basic coding standard violations">
 
 Consider the code given below:
-```java
+```java{.line-numbers}
 import java.util.*;
 
 public class Task {
