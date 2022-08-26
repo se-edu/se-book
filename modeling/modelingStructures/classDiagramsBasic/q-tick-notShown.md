@@ -9,11 +9,10 @@ Which association notations are shown in this diagram?
 - [ ] a. association labels
 - [ ] b. association roles
 - [ ] c. association multiplicity
-- [ ] d. class names
 
 <div slot="answer">
 
-(a) (b) (c) (d)
+(a) (b) (c)
 
 Explanation: '1’ is a _multiplicity_, ‘mentored by’ is a _label_, and ‘mentor’ is a _role_.
 
