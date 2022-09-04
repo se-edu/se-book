@@ -1,4 +1,5 @@
-<table> 
+<table>
+<tbody>
 <tr>
   <td valign="top">
 
@@ -26,4 +27,5 @@ send();
 ```
   </td>
 </tr>
+</tbody>
 </table>

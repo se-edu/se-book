@@ -1,6 +1,7 @@
 Note: Python does not have a way to make a variable a constant. However, you can use a normal variable with an `ALL_CAPS` name to simulate a constant.
 
-<table> 
+<table>
+<tbody>
 <tr>
   <td valign="top">
 
@@ -25,4 +26,5 @@ return MAX_SIZE - 1
 ```
   </td>
 </tr>
-</table> 
+</tbody>
+</table>

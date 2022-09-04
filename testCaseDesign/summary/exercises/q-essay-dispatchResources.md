@@ -38,6 +38,7 @@ Imagine you are designing test cases to test the method `dispatch(Resource, Task
       </ul>
     </td>
   </tr>
+</tbody>
 </table>
 
 </div>

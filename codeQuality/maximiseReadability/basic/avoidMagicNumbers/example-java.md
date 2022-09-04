@@ -1,4 +1,5 @@
-<table> 
+<table>
+<tbody>
 <tr>
   <td valign="top">
 
@@ -23,7 +24,8 @@ return MAX_SIZE - 1;
 ```
   </td>
 </tr>
-</table> 
+</tbody>
+</table>
 
 
 

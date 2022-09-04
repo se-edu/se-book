@@ -6,7 +6,7 @@
 
 <div id="body">
 
-**Equivalence partitions (EPs) are usually derived from the specifications of the SUT.**  
+**Equivalence partitions (EPs) are usually derived from the specifications of the SUT.**
 
 <box>
 
@@ -24,7 +24,7 @@
   </div>
 </popover>
 
-When the SUT has multiple inputs, you should identify EPs for each input. 
+When the SUT has multiple inputs, you should identify EPs for each input.
 
 <box>
 
@@ -50,7 +50,7 @@ An EP may not have adjacent values.
 
 EPs for `i`:
 * prime numbers
-* non-prime numbers 
+* non-prime numbers
 
 </box>
 
@@ -83,31 +83,32 @@ Note that the EP technique is merely a heuristic and not an exact science, espec
   </tr>
   <tr>
   <td>
-      
+
 `isValidFlag(String s): boolean`<br>
 Returns `true` if `s` is one of [`"F"`, `"T"`, `"D"`]. The comparison is case-sensitive.
-      
+
   </td>
   <td>
-      
+
 [`"F"`] [`"T"`] [`"D"`] [`"f"`, `"t"`, `"d"`] [any other string][null]
-      
+
   </td>
   </tr>
   <tr>
   <td>
-      
+
 `squareRoot(String s): int`<br>
 Pre-conditions: `s` represents a positive integer.<br>
 Returns the square root of `s` if the square root is an integer; returns `0` otherwise.
-      
+
   </td>
   <td>
-      
+
 [`s` is not a valid number] [`s` is a negative integer] [`s` has an integer square root] [`s` does not have an integer square root]
-      
+
   </td>
   </tr>
+</tbody>
 </table>
 
 </box>

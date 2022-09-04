@@ -81,6 +81,7 @@ The unified process consists of four phases: _inception, elaboration, constructi
       </ul>
     </td>
   </tr>
+</tbody>
 </table>
 
 <img src="{{baseUrl}}/processModels/exampleProcessModels/unifiedProcess/images/diagram.png" height="280" />

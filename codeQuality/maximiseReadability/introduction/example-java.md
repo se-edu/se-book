@@ -1,5 +1,6 @@
 
 <table>
+<tbody>
 <tr><td valign="top">
 
 {{bad}}&nbsp;
@@ -46,4 +47,5 @@ int calculateSubsidy() {
 }
 ```
 </td></tr>
+</tbody>
 </table>

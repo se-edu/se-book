@@ -1,4 +1,5 @@
-<table> 
+<table>
+<tbody>
 <tr>
   <td>
 
@@ -35,4 +36,5 @@ def calculate_subsidy():
 ```
   </td>
 </tr>
+</tbody>
 </table>

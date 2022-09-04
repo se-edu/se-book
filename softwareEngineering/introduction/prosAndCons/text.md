@@ -82,6 +82,7 @@ The following description of the _Joys of the Programming Craft_ was taken from 
 <modal header="**:book: The Mythical Man-Month: Essays on Software Engineering**" id="modal:mmm">
 
 <table>
+<tbody>
 <tr>
 <td>
 <img src="https://upload.wikimedia.org/wikipedia/en/f/fd/Mythical_man-month_%28book_cover%29.jpg" height="250" />
@@ -101,6 +102,7 @@ The following description of the _Joys of the Programming Craft_ was taken from 
 
 </td>
 </tr>
+</tbody>
 </table>
 
 _The Mythical Man-Month: Essays on Software Engineering_ is a book on software engineering and project management by Fred Brooks, whose central theme is that "adding manpower to a late software project makes it later". This idea is known as Brooks's law, and is presented along with the second-system effect and advocacy of prototyping.

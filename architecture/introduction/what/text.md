@@ -16,11 +16,13 @@
 {{ icon_example }} A possible architecture for a _Minesweeper_ game:
 
 <table>
+<tbody>
 <tr>
 <td><img src="{{baseUrl}}/architecture/introduction/what/images/minesweeper.png" height="220" /></td>
 <td width="10px"></td>
 <td><img src="{{baseUrl}}/architecture/introduction/what/images/minesweeperArchitecture.png" height="160" /></td>
 </tr>
+</tbody>
 </table>
 <p/>
 
@@ -36,7 +38,7 @@ Main components:
 **The architecture is typically designed by the _software architect_**, who provides the technical vision of the system and makes high-level (i.e. architecture-level) technical decisions about the project.
 
 
-<!-- TODO: 
+<!-- TODO:
 The logical view (satisfying the functional requirements) vs. the process view (concurrency issues) vs. the physical view (distribution issues) vs. the development view (how the design is broken down into implementation units with explicit representation of the dependencies among the units). -->
 
 </div>
