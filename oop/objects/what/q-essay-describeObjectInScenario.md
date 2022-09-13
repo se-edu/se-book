@@ -6,7 +6,7 @@ Consider the following real-world scenario.
 <box>
 
 Tom read a Software Engineering textbook (he has been assigned to read the book) and highlighted some of the text in it.
-  
+
 </box>
 
 Explain the following statements about OOP using the above scenario as an example.
@@ -24,7 +24,7 @@ Explain the following statements about OOP using the above scenario as an exampl
 >[1] Object Oriented Programming (OOP) views the world as a network of interacting objects.
 
 Interacting objects in the scenario: `Tom`, `SE Textbook` (`Book` for short), `Text`, (possibly) `Highlighter`
- 
+
 {{ icon_tip }} objects usually match nouns in the description
 
 >[2] Every object has both state (data) and behavior (operations on data).
@@ -37,13 +37,13 @@ Object | Examples of state | Examples of behavior
 
 >[3] Every object has an interface and an implementation.
 
-* Interface of an object consists of how other objects interact with it i.e., what other objects can do to that object.
-* Implementation consist of internals of the object that facilitate the interactions but not visible to other objects.
+* The _interface_ of an object specifies how other objects interact with it.
+* The _implementation_ of an object is the internals of the object that facilitate those interactions.
 
 Object | Examples of interface | Examples of implementation
 ------ | ----------------- | --------------------
 `Tom` | receive reading assignment | understand/memorize the text, read, remember the reading assignment
-`Book` | show text, turn page | how pages are bound to the spine
+`Book` | turn page | how pages are bound to the spine
 `Text` | read | how characters/words are connected together or fixed to the book
 
 >[4] Objects interact by sending messages.
