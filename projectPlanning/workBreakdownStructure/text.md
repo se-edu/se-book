@@ -31,6 +31,7 @@
 {{ icon_example }} An example WBS for a game development project.
  <div class="text-monospace">
  <table class="table">
+ <tbody>
    <tr>
      <th>Task ID</th>
      <th>Task</th>
@@ -101,12 +102,13 @@
      <td>1 man day</td>
      <td>D</td>
    </tr>
+   </tbody>
  </table>
  </div>
 </box>
 
 
-**All tasks should be well-defined.** In particular, it should be clear as to when the task will be considered _done_. 
+**All tasks should be well-defined.** In particular, it should be clear as to when the task will be considered _done_.
 
 <box>
 

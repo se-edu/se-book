@@ -11,6 +11,7 @@ Imagine you are designing test cases to test the method `dispatch(Resource, Task
 <div slot="answer">
 
 <table class="table">
+<tbody>
   <tr>
     <th>Test input for r</th>
     <th>Test input for t</th>

@@ -11,6 +11,7 @@ The _unified process_ is developed by the Three Amigos - Ivar Jacobson, Grady Bo
 The unified process consists of four phases: _inception, elaboration, construction and transition_. The main purpose of each phase can be summarized as follows:
 
 <table class="table">
+<tbody>
   <tr>
     <th>Phase</th>
     <th>Activities</th>

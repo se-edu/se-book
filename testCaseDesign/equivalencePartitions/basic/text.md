@@ -77,6 +77,7 @@ Note that the EP technique is merely a heuristic and not an exact science, espec
 {{ icon_example }} Some more examples:
 
 <table class="table">
+<tbody>
   <tr>
     <th>Specification</th>
     <th>Equivalence partitions</th>

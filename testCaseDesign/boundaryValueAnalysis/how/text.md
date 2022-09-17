@@ -14,6 +14,7 @@
 {{ icon_example }} Some examples:
 
 <table class="table">
+<tbody>
   <tr>
     <th>Equivalence partition</th>
     <th>Some possible test values (boundaries are in bold)</th>
