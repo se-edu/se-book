@@ -5,7 +5,7 @@ Consider the code below:
 <div class="row">
   <div class="col-sm-7">
 
-```java
+```java{.no-line-numbers}
 class Person {
     Tag tag;
     String name;
@@ -19,7 +19,7 @@ class Person {
   </div>
   <div class="col-sm-5">
 
-```java
+```java{.no-line-numbers}
 class Tag {
     Tag(String value) {
         // ...
@@ -36,7 +36,7 @@ class PersonList {
 </div>
 
 Draw a sequence diagram to illustrate the object interactions that happen in the code snippet below:
-```java
+```java{.no-line-numbers}
 PersonList personList = new PersonList();
 while (hasRoom) {
     Person p = new Person("Adam", "friend");
