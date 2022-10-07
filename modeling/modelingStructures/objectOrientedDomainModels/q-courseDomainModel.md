@@ -14,11 +14,11 @@ You can use the following layout for the diagram. Add more classes if needed.
 
 <p/>
 <panel type="seamless" header="Example OODM" minimized >
-  <img src="{{ baseUrl }}/modeling/modelingStructures/objectOrientedDomainModels/images/diagram.png" width="700" />
+  <pic src="{{ baseUrl }}/modeling/modelingStructures/objectOrientedDomainModels/images/diagram.png" width="700" />
 </panel>
 <p/>
 
-**(ii) Which type of a UML diagram** would you use to illustrate the following situation? 
+**(ii) Which type of a UML diagram** would you use to illustrate the following situation?
 
 <div class="indented text-monospace">
 
