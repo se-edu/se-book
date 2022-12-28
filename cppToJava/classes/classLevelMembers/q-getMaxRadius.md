@@ -41,14 +41,14 @@ public class Circle {
         this.radius = Math.max(radius, 0);
     }
 
-    public int getArea(){
-        double area = Math.PI * Math.pow(radius, 2);
-        return (int)area;
-    }
+    //TODO: Add your getMaxRadius() method here
 }
 ```
 Update it as follows so that code given below produces the given output.
-* Add a class-level `getMaxRadius` method that returns the maximum radius that has been used in all `Circle` objects created thus far.
+* Add a class-level `maxRadius` variable to store the maximum radius value of the `Circle` objects in existence thus far.
+* Add a class-level `getMaxRadius()` method that uses the above-mentioned variable to return the maximum radius value of the `Circle` objects in existence thus far.
+* Remember to update the `setRadius` method to ensure `maxRadius` value is updated (if needed) when the radius of an existing `Circle` object is changed.
+
 
 ```java{.no-line-numbers}
 public class Main {
