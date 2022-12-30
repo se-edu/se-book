@@ -9,8 +9,8 @@
 **A _software requirement_ specifies a need to be fulfilled by the software product.**
 
 **A software project may be,**
-* **a _brown-field_ project** i.e., develop a product to replace/update an existing software product
-* **a _green-field_ project** i.e., develop a totally new system with no precedent
+* **a _brownfield_ project** i.e., develop a product to replace/update an existing software product
+* **a _greenfield_ project** i.e., develop a totally new system with no precedent
 
 In either case, requirements need to be gathered, analyzed, specified, and managed.
 
