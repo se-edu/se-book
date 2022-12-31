@@ -15,12 +15,12 @@ title: "Code Quality [Printable]"
 
 <include src="introduction/basic/unit-inParent-asFlat-print.md" boilerplate />
 
-## Guideline: Maximise Readability
+## Guideline: Maximize Readability
 
-<include src="maximiseReadability/introduction/unit-inParent-asFlat-print.md" boilerplate />
-<include src="maximiseReadability/basic/unit-inParent-asFlat-print.md" boilerplate />
-<include src="maximiseReadability/intermediate/unit-inParent-asFlat-print.md" boilerplate />
-<include src="maximiseReadability/advanced/unit-inParent-asFlat-print.md" boilerplate />
+<include src="maximizeReadability/introduction/unit-inParent-asFlat-print.md" boilerplate />
+<include src="maximizeReadability/basic/unit-inParent-asFlat-print.md" boilerplate />
+<include src="maximizeReadability/intermediate/unit-inParent-asFlat-print.md" boilerplate />
+<include src="maximizeReadability/advanced/unit-inParent-asFlat-print.md" boilerplate />
 
 ## Guideline: Follow a Standard
 

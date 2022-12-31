@@ -164,18 +164,18 @@ pageNav: 3
 ### Code quality
 
 <include src="../codeQuality/introduction/basic/unit-inParent-asOutcome.md" boilerplate />
-<include src="../codeQuality/maximiseReadability/introduction/unit-inParent-asOutcome.md" boilerplate />
-<include src="../codeQuality/maximiseReadability/basic/avoidComplicatedExpressions/unit-inParent-asOutcome.md" boilerplate />
-<include src="../codeQuality/maximiseReadability/basic/avoidDeepNesting/unit-inParent-asOutcome.md" boilerplate />
-<include src="../codeQuality/maximiseReadability/basic/avoidLongMethods/unit-inParent-asOutcome.md" boilerplate />
-<include src="../codeQuality/maximiseReadability/basic/avoidMagicNumbers/unit-inParent-asOutcome.md" boilerplate />
-<include src="../codeQuality/maximiseReadability/basic/makeCodeObvious/unit-inParent-asOutcome.md" boilerplate />
-<include src="../codeQuality/maximiseReadability/intermediate/avoidPrematureOptimizations/unit-inParent-asOutcome.md" boilerplate />
-<include src="../codeQuality/maximiseReadability/intermediate/dontTripReader/unit-inParent-asOutcome.md" boilerplate />
-<include src="../codeQuality/maximiseReadability/intermediate/practiceKISSing/unit-inParent-asOutcome.md" boilerplate />
-<include src="../codeQuality/maximiseReadability/intermediate/slapHard/unit-inParent-asOutcome.md" boilerplate />
-<include src="../codeQuality/maximiseReadability/intermediate/structureCodeLogically/unit-inParent-asOutcome.md" boilerplate />
-<include src="../codeQuality/maximiseReadability/advanced/makeHappyPathProminent/unit-inParent-asOutcome.md" boilerplate />
+<include src="../codeQuality/maximizeReadability/introduction/unit-inParent-asOutcome.md" boilerplate />
+<include src="../codeQuality/maximizeReadability/basic/avoidComplicatedExpressions/unit-inParent-asOutcome.md" boilerplate />
+<include src="../codeQuality/maximizeReadability/basic/avoidDeepNesting/unit-inParent-asOutcome.md" boilerplate />
+<include src="../codeQuality/maximizeReadability/basic/avoidLongMethods/unit-inParent-asOutcome.md" boilerplate />
+<include src="../codeQuality/maximizeReadability/basic/avoidMagicNumbers/unit-inParent-asOutcome.md" boilerplate />
+<include src="../codeQuality/maximizeReadability/basic/makeCodeObvious/unit-inParent-asOutcome.md" boilerplate />
+<include src="../codeQuality/maximizeReadability/intermediate/avoidPrematureOptimizations/unit-inParent-asOutcome.md" boilerplate />
+<include src="../codeQuality/maximizeReadability/intermediate/dontTripReader/unit-inParent-asOutcome.md" boilerplate />
+<include src="../codeQuality/maximizeReadability/intermediate/practiceKISSing/unit-inParent-asOutcome.md" boilerplate />
+<include src="../codeQuality/maximizeReadability/intermediate/slapHard/unit-inParent-asOutcome.md" boilerplate />
+<include src="../codeQuality/maximizeReadability/intermediate/structureCodeLogically/unit-inParent-asOutcome.md" boilerplate />
+<include src="../codeQuality/maximizeReadability/advanced/makeHappyPathProminent/unit-inParent-asOutcome.md" boilerplate />
 <include src="../codeQuality/followStandard/introduction/unit-inParent-asOutcome.md" boilerplate />
 <include src="../codeQuality/followStandard/basic/unit-inParent-asOutcome.md" boilerplate />
 <include src="../codeQuality/followStandard/intermediate/unit-inParent-asOutcome.md" boilerplate />

@@ -1,4 +1,4 @@
-<span id="title">Guideline: Maximise readability</span>
+<span id="title">Guideline: Maximize readability</span>
 
 <div id="body">
 
