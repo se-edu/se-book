@@ -10,7 +10,7 @@
 
 <box>
 
-Example: Consider these variables
+{{ icon_example }} Example: Consider these variables
 * `colorBlack`: hex value for color black
 * `colorWhite`: hex value for color white
 * `colorBlue`: number of times blue is used

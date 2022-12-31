@@ -18,7 +18,7 @@ You can use UML _sequence diagrams_ to analyze the required interactions between
 
 <box>
 
-Example:
+{{ icon_example }} Example:
 
 <img src="{{baseUrl}}/reuse/apis/designingAPIs/images/textLogic.png" height="500" />
 <p/>

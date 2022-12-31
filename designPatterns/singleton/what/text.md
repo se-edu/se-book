@@ -12,7 +12,7 @@ Certain classes should have no more than just one instance (e.g. the main contro
 
 **Problem**
 
-A normal class can be instantiated multiple times by invoking the constructor.  
+A normal class can be instantiated multiple times by invoking the constructor.
 
 **Solution**
 
@@ -20,7 +20,7 @@ Make the constructor of the singleton class `private`, %%because a `public` cons
 
 <box>
 
-Example:
+{{ icon_example }} Example:
 
 <puml src="images/singleton.puml" />
 <p/>

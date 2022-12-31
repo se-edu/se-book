@@ -12,7 +12,7 @@
 
 <box>
 
-Example:
+{{ icon_example }} Example:
 
 <img src="{{baseUrl}}/principles/dependencyInversionPrinciple/images/payrollEmployee.png" height="130" />
 <p/>
