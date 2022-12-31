@@ -1,22 +1,33 @@
-<panel header="{{ icon_Q_A }} Which activity diagrams are correct?">
+<panel header="{{ icon_Q_A }} Which sequence of actions are supported?">
 <question>
 
-Which of these activity diagrams use the correct UML notation?
+Which sequence of actions are supported by this activity diagram?
 
-- [ ] i 
-- [ ] ii
-- [ ] iii
-- [ ] iv
+<puml>
+@startuml
+start
+fork
+    :G1;
+    :G2;
+fork again
+    :H1;
+    :H2;
+end fork
+stop
+@enduml
+</puml>
 
-<img src="{{baseUrl}}/uml/activityDiagrams/basicNotations/parallelPaths/images/q-correctNotation.png" width="500" />
-<p/>
+- [ ] G1 G2 H1 H2
+- [ ] G1 H1 G2 H2
+- [ ] G1 H1 H2 G2
 
 <div slot="answer">
 
-* i: :+1: Correct. There can be more than two parallel paths. 
-* ii: Incorrect. All parallel paths that started from a fork should end in the same join node.
-* iii: Incorrect. Parallel paths must end with a join node.
-* iv: :+1: Correct. A parallel path can have multiple actions.
+All three are supported.<br>
+Reason: actions in parallel paths can interleave with each other, provided,
+
+1. all paths are completed eventually (e.g., G1 <span class="text-danger">H1</span> G2 is not compliant), and,
+1. actions in each path follow the given order (e.g., G1 <span class="text-danger">H2</span> G2 <span class="text-danger">H1</span> is not compliant).
 
 </div>
 </question>
