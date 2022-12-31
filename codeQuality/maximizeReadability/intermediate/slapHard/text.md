@@ -11,7 +11,7 @@ Note: The book _The Productive Programmer_ (by Neal Ford) calls this the **_Sing
 
 <box>
 
-Example:
+{{ icon_example }} Example:
 
 {{bad}} (`readData();` and `salary = basic * rise + 1000;` are at different levels of abstraction)
 ```java

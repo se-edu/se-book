@@ -12,12 +12,12 @@
 
 <box>
 
-Examples:
+{{ icon_example }} Examples:
 
 Name for a | {{bad}}        | {{good}}
 -----------|-----------------|----------------
-Class      |`CheckLimit`     | `LimitChecker`           
-Method     |`result()`       | `calculate()`  
+Class      |`CheckLimit`     | `LimitChecker`
+Method     |`result()`       | `calculate()`
 
 </box>
 

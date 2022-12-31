@@ -10,7 +10,7 @@ The happy path (i.e. the execution path taken when everything goes well) should 
 
 <box>
 
-Example:
+{{ icon_example }} Example:
 
 {{bad}}
 ```java

@@ -33,14 +33,14 @@ Similarly, you can have ‘magic’ values of other data types.
 
 <div class="alt-java">
 
-```java
+```java{.no-line-numbers}
 return "Error 1432"; // A magic string!
 ```
 
 </div>
 <div class="alt-python">
 
-```python
+```python{.no-line-numbers}
 return "Error 1432" # A magic string!
 ```
 
