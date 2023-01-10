@@ -7,7 +7,7 @@
 <div id="body">
 
 <box type="definition" seamless>
-<include src="../../../common/definitions.md#def-abstraction" />
+<include src="../../../common/definitions.md#def-abstraction" trim />
 </box>
 
 **The guiding principle of abstraction is that only details that are relevant to the current perspective or the task at hand need to be considered.** As most programs are written to solve complex problems involving large amounts of intricate details, it is impossible to deal with all these details at the same time. That is where abstraction can help.
@@ -21,7 +21,7 @@
 </box>
 
 **==_Control abstraction_==: abstracting away details of the actual control flow to focus on tasks at a higher level**
- 
+
 <box>
 
 {{ icon_example }} `print(“Hello”)` is an abstraction of the actual output mechanism within the computer.
@@ -32,7 +32,7 @@
 
 <box>
 
-{{ icon_example }} An example of different levels of data abstraction: a `File` is a data item that is at a higher level than an array and an array is at a higher level than a bit. 
+{{ icon_example }} An example of different levels of data abstraction: a `File` is a data item that is at a higher level than an array and an array is at a higher level than a bit.
 
 {{ icon_example }} An example of different levels of control abstraction: `execute(Game)` is at a higher level than `print(Char)` which is at a higher level than an Assembly language instruction `MOV`.
 

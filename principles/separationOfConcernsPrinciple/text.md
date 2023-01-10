@@ -7,7 +7,7 @@
 <div id="body">
 
 <box type="definition" seamless>
-<include src="../../common/definitions.md#def-separation-concerns-principle" />
+<include src="../../common/definitions.md#def-separation-concerns-principle" trim />
 </box>
 
 A _concern_ in this context is a set of information that affects the code of a computer program.
@@ -34,7 +34,7 @@ A _concern_ in this context is a set of information that affects the code of a c
 
 <box>
 
-{{ icon_example }} The <trigger trigger="click" for="modal:soc-nTier">n-tier architecture</trigger> utilizes this principle. Each layer in the architecture has a well-defined functionality that has no functional overlap with each other. 
+{{ icon_example }} The <trigger trigger="click" for="modal:soc-nTier">n-tier architecture</trigger> utilizes this principle. Each layer in the architecture has a well-defined functionality that has no functional overlap with each other.
 
 </box>
 

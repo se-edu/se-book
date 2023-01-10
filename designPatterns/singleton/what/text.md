@@ -12,7 +12,7 @@ Certain classes should have no more than just one instance (e.g. the main contro
 
 **Problem**
 
-A normal class can be instantiated multiple times by invoking the constructor.  
+A normal class can be instantiated multiple times by invoking the constructor.
 
 **Solution**
 
@@ -20,10 +20,12 @@ Make the constructor of the singleton class `private`, %%because a `public` cons
 
 <box>
 
-Example:
+{{ icon_example }} Example:
 
 <puml src="images/singleton.puml" />
 <p/>
+
+{{ icon_info }} The `<<Singleton>>` in the class above uses the UML _stereotype_ notation, which is used to (optionally) indicate the purpose or the role played by a UML element. In this example, the class `Logic` is playing the role of a Singleton class. The general format is `<<role/purpose>>`.
 
 </box>
 

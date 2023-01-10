@@ -7,9 +7,7 @@
 <div id="body">
 
 <box type="definition" seamless>
-
-<include src="../../common/definitions.md#def-prototyping" />
-
+<include src="../../common/definitions.md#def-prototyping" trim />
 </box>
 
 **Prototyping can uncover requirements, in particular, those related to _how users interact with the system_.** UI prototypes or _mock ups_ are often used in brainstorming sessions, or in meetings with the users to get quick feedback from them.

@@ -23,7 +23,7 @@ with(this){return _c('p',[_c('strong',[_v("A "),_c('em',[_v("software requiremen
 with(this){return _c('p',[_c('strong',[_v("A software project may be,")])])}
 },function anonymous(
 ) {
-with(this){return _c('ul',[_c('li',[_c('strong',[_v("a "),_c('em',[_v("brown-field")]),_v(" project")]),_v(" i.e., develop a product to replace/update an existing software product")]),_v(" "),_c('li',[_c('strong',[_v("a "),_c('em',[_v("green-field")]),_v(" project")]),_v(" i.e., develop a totally new system with no precedent")])])}
+with(this){return _c('ul',[_c('li',[_c('strong',[_v("a "),_c('em',[_v("brownfield")]),_v(" project")]),_v(" i.e., develop a product to replace/update an existing software product")]),_v(" "),_c('li',[_c('strong',[_v("a "),_c('em',[_v("greenfield")]),_v(" project")]),_v(" i.e., develop a totally new system with no precedent")])])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_c('strong',[_v("Requirements come from "),_c('em',[_v("stakeholders")]),_v(".")])])}
@@ -53,6 +53,6 @@ with(this){return _c('div',[_c('h4',{attrs:{"id":"quality-of-requirements"}},[_c
 with(this){return _c('ul',[_c('li',[_v("Consistent")]),_v(" "),_c('li',[_v("Non-redundant")]),_v(" "),_c('li',[_v("Complete")])])}
 },function anonymous(
 ) {
-with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.0.0")]),_v(", generated on Sun, 17 Jul 2022, 1:27:57 GMT+8]")])])])}
+with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.0.2")]),_v(", generated on Tue, 10 Jan 2023, 11:07:53 GMT+8]")])])])}
 }];
   

@@ -7,7 +7,7 @@
 <div id="body">
 
 <box type="definition" seamless>
-<include src="../../common/definitions.md#def-single-responsibility-principle" />
+<include src="../../common/definitions.md#def-single-responsibility-principle" trim />
 </box>
 
 If a class has only one responsibility, it needs to change only when there is a change to that responsibility.

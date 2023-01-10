@@ -13,7 +13,7 @@
 
 <box>
 
-Example:
+{{ icon_example }} Example:
 
 <img src="{{baseUrl}}/uml/classDiagrams/abstractClasses/what/images/staff.png" height="110" />
 <p/>

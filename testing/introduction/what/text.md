@@ -7,7 +7,7 @@
 <div id="body">
 
 <box type="definition" seamless>
-  <include src="../../../common/definitions.md#def-testing" />
+<include src="../../../common/definitions.md#def-testing" trim />
 </box>
 
 <img src="{{baseUrl}}/testing/introduction/what/images/diagram.png" height="220" />
@@ -28,7 +28,7 @@
 
 <panel type="seamless">
 <span slot="header" class="card-title"><md>%%Other details a test case can contain%% {{ icon_extra }}</md></span>
-A more elaborate test case can have other details such as those given below.  
+A more elaborate test case can have other details such as those given below.
 
 * A unique identifier : %%e.g. TC0034-a%%
 * A descriptive name: %%e.g. vertical scrollbar activation for long web pages%%

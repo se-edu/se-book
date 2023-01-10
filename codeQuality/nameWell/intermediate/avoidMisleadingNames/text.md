@@ -10,14 +10,14 @@
 
 <box>
 
-Example: Consider these variables 
+{{ icon_example }} Example: Consider these variables
 * `colorBlack`: hex value for color black
 * `colorWhite`: hex value for color white
 * `colorBlue`: number of times blue is used
 * `hexForRed`: hex value for color red
 
 This is misleading because `colorBlue` is named similar to `colorWhite` and `colorBlack` but has a different purpose while `hexForRed` is named differently but has a very similar purpose to the first two variables. The following is better:
-* `hexForBlack` `hexForWhite` `hexForRed` 
+* `hexForBlack` `hexForWhite` `hexForRed`
 * `blueColorCount`
 
 </box>
@@ -26,7 +26,7 @@ Avoid misleading or ambiguous names (e.g. those with multiple meanings), similar
 
 <box>
 
-Examples:
+{{ icon_example }} Examples:
 
 | {{bad}}        | {{good}}        |  Reason      |
 | --------------- | --------------- |  --------------- |

@@ -24,7 +24,7 @@ public static void main(String[] args) {
 ```
 {{ icon_output }}
 ```
-3, 4
+(3, 4)
 ```
 </box>
 

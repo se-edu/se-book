@@ -7,9 +7,7 @@
 <div id="body">
 
 <box type="definition" seamless>
-
-<include src="../../../common/definitions.md#def-static-analysis" />
-
+<include src="../../../common/definitions.md#def-static-analysis" trim />
 </box>
 
 **Static analysis of code can find useful information such as unused variables**, unhandled exceptions, style errors, and statistics. Most modern IDEs come with some inbuilt static analysis capabilities. For example, an IDE can highlight unused variables as you type the code into the editor.

@@ -10,7 +10,7 @@
 
 <box>
 
-Examples:
+{{ icon_example }} Examples:
 
 | {{bad}}          |  {{good}}                     |
 | ----------------- |  ----------------------------- |
@@ -24,7 +24,7 @@ Examples:
 
 <box>
 
-Examples:
+{{ icon_example }} Examples:
 
 | {{bad}}        |  {{good}}       |
 | --------------- |  --------------- |
@@ -36,7 +36,7 @@ Imagine going to the doctor's and saying "My eye1 is swollen"! Don’t use numbe
 
 <box>
 
-Examples:
+{{ icon_example }} Examples:
 
 | {{bad}}          | {{bad}}          | {{good}}                     |
 | ----------------- | ----------------- | ----------------------------- |

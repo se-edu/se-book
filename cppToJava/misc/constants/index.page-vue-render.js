@@ -20,6 +20,6 @@ with(this){return _c('div',[_c('h4',{attrs:{"id":"constants"}},[_c('span',{stati
 with(this){return _c('p',[_v("Java does not directly support constants. The convention is to use a "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("static")]),_v(" "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("final")]),_v(" variable where a constant is needed. The "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("static")]),_v(" modifier causes the variable to be available without instantiating an object. The "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("final")]),_v(" modifier causes the variable to be unchangeable. Java constants are normally declared in ALL CAPS separated by underscores.")])}
 },function anonymous(
 ) {
-with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.0.0")]),_v(", generated on Sun, 17 Jul 2022, 1:27:57 GMT+8]")])])])}
+with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.0.2")]),_v(", generated on Tue, 10 Jan 2023, 11:07:53 GMT+8]")])])])}
 }];
   

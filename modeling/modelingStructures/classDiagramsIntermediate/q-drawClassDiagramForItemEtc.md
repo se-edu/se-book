@@ -6,18 +6,18 @@ Consider the code below:
 <div class="row">
   <div class="col-sm-6">
 
-```java
+```java{.no-line-numbers}
 public interface Billable {
     void bill();
 }
 ```
-```java
+```java{.no-line-numbers}
 public abstract class Item
          implements Billable {
     public abstract void print();
 }
 ```
-```java
+```java{.no-line-numbers}
 public class StockItem extends Item {
     private Review review;
     private String name;
@@ -43,12 +43,12 @@ public class StockItem extends Item {
   </div>
   <div class="col-sm-6">
 
-```java
+```java{.no-line-numbers}
 public enum Rating {
     GOOD, OK, POOR
 }
 ```
-```java
+```java{.no-line-numbers}
 public class Review {
     private final Rating rating;
 
@@ -57,7 +57,7 @@ public class Review {
     }
 }
 ```
-```java
+```java{.no-line-numbers}
 import java.util.List;
 
 public class Inventory {

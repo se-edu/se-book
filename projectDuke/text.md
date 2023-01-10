@@ -8,7 +8,7 @@
 
 <div class="lead">
 
-<pic add-class="float-left border mr-2 mt-2 p1 bg-white" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Duke_%28Java_mascot%29_waving.svg/226px-Duke_%28Java_mascot%29_waving.svg.png" width="60">
+<pic add-class="float-start border me-2 mt-2 p1 bg-white" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Duke_%28Java_mascot%29_waving.svg/226px-Duke_%28Java_mascot%29_waving.svg.png" width="60">
 
 <small><small>**Duke**, the Java Mascot<br>[[credit: Wikipedia](https://en.wikipedia.org/wiki/File:Duke_(Java_mascot)_waving.svg)]</small></small>
 </pic>
@@ -36,7 +36,7 @@ list
      Here are the tasks in your list:
      1.[T][X] read book
      2.[D][ ] return book (by: June 6th)
-     3.[E][ ] project meeting (at: Aug 6th 2-4pm)
+     3.[E][ ] project meeting (from: Aug 6th 2pm to: 4pm)
      4.[T][X] join sports club
     ____________________________________________________________
 
@@ -231,7 +231,8 @@ Add support for tracking three types of tasks:
 
 1. **ToDos**: tasks without any date/time attached to it %%e.g., _visit new theme park_%%
 2. **Deadlines**: tasks that need to be done before a specific date/time %%e.g., _submit report by 11/10/2019 5pm_%%
-3. **Events**: tasks that start at a specific time and ends at a specific time %%e.g., _team project meeting on 2/10/2019 2-4pm_%%
+3. **Events**: tasks that start at a specific date/time and ends at a specific date/time<br>
+   %%e.g., (a) _team project meeting 2/10/2019 2-4pm_ (b) _orientation week  4/10/2019 to 11/10/2019_%%
 
 Example:
 ```{.no-line-numbers}
@@ -247,7 +248,7 @@ list
      Here are the tasks in your list:
      1.[T][X] read book
      2.[D][ ] return book (by: June 6th)
-     3.[E][ ] project meeting (at: Aug 6th 2-4pm)
+     3.[E][ ] project meeting (from: Aug 6th 2pm to: 4pm)
      4.[T][X] join sports club
      5.[T][ ] borrow book
     ____________________________________________________________
@@ -259,10 +260,10 @@ deadline return book /by Sunday
      Now you have 6 tasks in the list.
     ____________________________________________________________
 
-event project meeting /at Mon 2-4pm
+event project meeting /from Mon 2pm /to 4pm
     ____________________________________________________________
      Got it. I've added this task:
-       [E][ ] project meeting (at: Mon 2-4pm)
+       [E][ ] project meeting (from: Mon 2pm to: 4pm)
      Now you have 7 tasks in the list.
     ____________________________________________________________
 ```
@@ -328,7 +329,7 @@ list
      Here are the tasks in your list:
      1.[T][X] read book
      2.[D][X] return book (by: June 6th)
-     3.[E][ ] project meeting (at: Aug 6th 2-4pm)
+     3.[E][ ] project meeting (from: Aug 6th 2pm to: 4pm)
      4.[T][X] join sports club
      5.[T][ ] borrow book
     ____________________________________________________________
@@ -336,7 +337,7 @@ list
 delete 3
     ____________________________________________________________
      Noted. I've removed this task:
-       [E][ ] project meeting (at: Aug 6th 2-4pm)
+       [E][ ] project meeting (from: Aug 6th 2pm to: 4pm)
      Now you have 4 tasks in the list.
     ____________________________________________________________
 ```
@@ -374,7 +375,7 @@ T | 1 | join sports club
 
 Teach Duke how to understand dates and times. For example, if the command is `deadline return book /by 2/12/2019 1800`, Duke should understand `2/12/2019 1800` as _2nd of December 2019, 6pm_, instead of treating it as just a String.
 
-* **Minimal**: Store deadline dates as a `java.time.LocalDate` in your task objects. Accept dates in a format such as `yyyy-mm-dd` format (e.g., `2019-10-15`)  and print in a different format such as `MMM dd yyyy` e.g., (`Oct 15 2019`).
+* **Minimal**: Store deadline dates as a `java.time.LocalDate` (or `java.time.LocalDateTime`) in your task objects. Accept dates in a format such as `yyyy-mm-dd` format (e.g., `2019-10-15`)  and print in a different format such as `MMM dd yyyy` e.g., (`Oct 15 2019`).
 * **Stretch goal**: Use dates and times in more meaningful ways. e.g., add a command to print deadlines/events occurring on a specific date.
 
 <panel header="Using dates/times in Java" minimized >

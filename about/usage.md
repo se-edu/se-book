@@ -20,7 +20,7 @@ Most of this will work on most mainstream Browsers, but ==embedded slides are be
 
 ### Information layers
 
-This book tries to _layer_ information so that readers can decide to omit less important layers if they wish to. 
+This book tries to _layer_ information so that readers can decide to omit less important layers if they wish to.
 
 **More important information are in bold** or ==highlighted== while %%less important information are dimmed%% or in collapsed panels such as the below.
 
@@ -47,13 +47,13 @@ Less important info
 </box>
 
 
-**Tabs indicate alternative formats of the same content** (e.g. video vs text). You can choose the one you like and ignore the other tabs. 
+**Tabs indicate _alternative_ content** (e.g. video vs text). You can choose the one you like and ignore the other tabs.
 
 <box>
 
-<tabs> 
+<tabs>
   <tab header="{{ icon_text }}">
-  
+
 Some textual description of X
 
   </tab>
@@ -124,9 +124,7 @@ Meaning of some shortened headings:
 <span class="text-success">:fas-lightbulb:</span> or {{ icon_tip }} : tip <br>
 <span class="text-primary">:fas-book:</span> : definition or topic <br>
 {{ icon_extra }} : tangential info, can be ignored if not interested<br>
-{{ icon_new_window }} : <kbd>Ctrl</kbd>+`Click` to open the LO in new window/tab.<br>
 {{ icon_outcome }} : learning outcomes<br>
-{{ icon_prereq }} : prerequisite learning outcome<br>
 {{ icon_example }} : examples<br>
 {{ icon_resource }} : resources<br>
 {{ icon_exercise }} : exercises<br>
@@ -139,7 +137,6 @@ Meaning of some shortened headings:
 {{ icon_output }} : output produced by running code<br>
 {{ icon_Q }} question without answer<br>
 {{ icon_Q_A }} question with answer<br>
-
 </div>
 
 </div>
@@ -158,7 +155,7 @@ Follow [this guide @SE-EDU/guides](https://se-education.org/guides/tutorials/sav
 
 </div>
 <div id="printing">
-  
+
 ### Printing
 
 The {{icon_print}} icon indicates printer-friendly versions of each chapter. A printer-friendly version of the entire book can be found [here]({{baseUrl}}/common/print.html).

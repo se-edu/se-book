@@ -7,9 +7,9 @@
 <div id="body">
 
 <box type="definition" seamless>
-<include src="../../../../common/definitions.md#def-unit-testing" />
+<include src="../../../../common/definitions.md#def-unit-testing" trim />
 </box>
- 
+
 In OOP code, it is common to write one or more unit tests for each public method of a class.
 
 <box>

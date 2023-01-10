@@ -8,7 +8,7 @@
 
 
 <box type="definition" seamless>
-<include src="../../../common/definitions.md#def-design-pattern" />
+<include src="../../../common/definitions.md#def-design-pattern" trim />
 </box>
 
 In software development, there are certain problems that recur in a certain context.
@@ -20,7 +20,7 @@ In software development, there are certain problems that recur in a certain cont
 | Design Context  | Recurring Problem
 | --------------- | -----------------
 | Assembling a system that makes use of other existing systems implemented using different technologies | What is the best architecture?
-| UI needs to be updated when the data in the application backend changes | How to initiate an update to the UI when data changes without coupling the backend to the UI? 
+| UI needs to be updated when the data in the application backend changes | How to initiate an update to the UI when data changes without coupling the backend to the UI?
 
 </box>
 

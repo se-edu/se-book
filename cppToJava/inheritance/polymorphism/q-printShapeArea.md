@@ -28,9 +28,9 @@ public class Main {
 314
 16
 ```
-`Circle` class and `Rectangle` class is given below but you'll need to add a parent class `Shape`:
+`Circle` class and `Rectangle` class is given below but you'll need to add a parent class `Shape`.
 ```java
-public class Circle {
+public class Circle extends Shape {
 
     private int radius;
 
@@ -38,13 +38,14 @@ public class Circle {
         this.radius = radius;
     }
 
+    @Override
     public int area() {
         return (int)(Math.PI * radius * radius);
     }
 }
 ```
 ```java
-public class Rectangle {
+public class Rectangle extends Shape{
     private int height;
     private int width;
 
@@ -53,13 +54,14 @@ public class Rectangle {
         this.width = width;
     }
 
+    @Override
     public int area() {
         return height * width;
     }
 }
 ```
 
-{{ icon_tip }} You may use an array of size 100 to store the shapes.
+{{ icon_tip }} You may use an array of size 100 to store the shapes.<br>
 
 
 <panel type="seamless" header="Partial solution">
@@ -78,6 +80,11 @@ public class Main {
 
 }
 ```
+</panel>
+
+<panel type="seamless" header="Hint">
+
+**What should be in the `Shape` class?** Start with an empty class and add only what the child classes `Circle` and `Rectangle` need the parent class to have. In this case, it only needs an `area()` method for the child classes to override. The actual behavior of that method is not important (e.g., it can simply return `0`) as it will be overridden by the child classes.
 </panel>
 
 </panel>

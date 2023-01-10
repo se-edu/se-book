@@ -7,7 +7,7 @@
 <div id="body">
 
 <box type="definition" seamless>
-<include src="../../../common/definitions.md#def-use-case" />
+<include src="../../../common/definitions.md#def-use-case" trim />
 </box>
 
 **A use case describes an _interaction between the user and the system_ for a _specific functionality_ of the system.**
@@ -36,12 +36,12 @@ Extensions:
       3a2. User enters new data.
       Steps 3a1-3a2 are repeated until the data entered are correct.
       Use case resumes from step 4.
-  
+
   3b. User requests to effect the transfer in a future date.
       3b1. OBS requests for confirmation.
       3b2. User confirms future transfer.
       Use case ends.
-  
+
   *a. At any time, User chooses to cancel the transfer.
       *a1. OBS requests to confirm the cancellation.
       *a2. User confirms the cancellation.
@@ -67,7 +67,7 @@ Extensions:
 
 <box background-color="white" border-color="white">
 
-<img class="float-right ml-5" src="{{baseUrl}}/specifyingRequirements/useCases/introduction/images/ticketMachine.png" width="300" />
+<img class="float-end ms-5" src="{{baseUrl}}/specifyingRequirements/useCases/introduction/images/ticketMachine.png" width="300" />
 
 **<trigger for="modal:uml" trigger="click">UML</trigger> includes a diagram type called use case diagrams that can illustrate use cases of a system visually**, providing a visual ‘table of contents’ of the use cases of a system.
 

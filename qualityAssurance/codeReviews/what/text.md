@@ -22,7 +22,7 @@ Reviews can be done in various forms. Some examples below:
 <modal large header="Pair Programming" id="modal:codeReview-pairProgramming">
 
 <box type="definition" seamless>
-  <include src="../../../common/definitions.md#def-pair-programming" />
+<include src="../../../common/definitions.md#def-pair-programming" trim />
 </box>
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Pair_programming_1.jpg" width="400"/><br>

@@ -200,7 +200,7 @@ with(this){return _c('p',[_c('strong',[_v("Type signature")]),_v(": The "),_c('e
 with(this){return _c('h2',{attrs:{"id":"u"}},[_c('span',{staticClass:"anchor",attrs:{"id":"u"}}),_v("U"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#u","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
-with(this){return _c('div',{attrs:{"id":"def-uml"}},[_c('p',[_c('a',{attrs:{"href":"http://www.uml.org/#UML2.0"}},[_c('strong',[_v("Unified Modeling Language (UML)")])]),_v(" is a graphical notation to describe various aspects of a software system. UML is the brainchild of three software modeling specialists James Rumbaugh, Grady Booch and Ivar Jacobson (also known as the Three Amigos). Each of them had developed their own notation for modeling software systems before joining forces to create a unified modeling language (hence, the term ‘Unified’ in UML). UML is currently the "),_c('em',[_v("de facto")]),_v(" modeling notation used in the software industry.")])])}
+with(this){return _c('div',{attrs:{"id":"def-uml"}},[_c('p',[_c('a',{attrs:{"href":"http://www.uml.org/#UML2.0"}},[_c('strong',[_v("Unified Modeling Language (UML)")])]),_v(" is a graphical notation to describe various aspects of a software system. UML is the brainchild of three software modeling specialists James Rumbaugh, Grady Booch and Ivar Jacobson (also known as the Three Amigos). Each of them had developed their own notation for modeling software systems before joining forces to create a unified modeling language (hence, the term ‘Unified’ in UML). UML is currently the most commonly used modeling notation used in the software industry.")])])}
 },function anonymous(
 ) {
 with(this){return _c('div',{attrs:{"id":"def-unit-testing"}},[_c('p',[_c('strong',[_v("Unit testing")]),_v(": testing individual units (methods, classes, subsystems, ...) to ensure each piece works correctly.")])])}
@@ -224,6 +224,6 @@ with(this){return _c('h2',{attrs:{"id":"y"}},[_c('span',{staticClass:"anchor",at
 with(this){return _c('div',{attrs:{"id":"def-yagni-principle"}},[_c('p',[_c('strong',[_v("YAGNI (You Aren't Gonna Need It!) Principle")]),_v(": Do not add code simply because ‘you might need it in the future’.")])])}
 },function anonymous(
 ) {
-with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.0.0")]),_v(", generated on Sun, 17 Jul 2022, 1:27:57 GMT+8]")])])])}
+with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.0.2")]),_v(", generated on Tue, 10 Jan 2023, 11:07:53 GMT+8]")])])])}
 }];
   

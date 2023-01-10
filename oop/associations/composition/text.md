@@ -14,11 +14,11 @@
 
 </box>
 
-**Composition also implies that there cannot be cyclical links**. 
+**Composition also implies that there cannot be cyclical links**.
 
 <box>
 
-{{ icon_example }} The ‘sub-folder’ association between `Folder` objects is a composition type association. That means if the `Folder` object `foo` is a sub-folder of `Folder` object `bar`, `bar` cannot be a sub-folder of `foo`. 
+{{ icon_example }} The ‘sub-folder’ association between `Folder` objects is a composition type association. That means if the `Folder` object `foo` is a sub-folder of `Folder` object `bar`, `bar` cannot be a sub-folder of `foo`.
 
 </box>
 
@@ -46,7 +46,7 @@
 <box>
 
 
-<div class="alt-java float-right ml-5">
+<div class="alt-java float-end ms-5">
 
 ```java
 class Email {
@@ -56,7 +56,7 @@ class Email {
 ```
 
 </div>
-<div class="alt-python  float-right ml-5">
+<div class="alt-python  float-end ms-5">
 
 ```python
 class Email:

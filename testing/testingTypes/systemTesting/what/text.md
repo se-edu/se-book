@@ -7,7 +7,7 @@
 <div id="body">
 
 <box type="definition" seamless>
-<include src="../../../../common/definitions.md#def-system-testing" />
+<include src="../../../../common/definitions.md#def-system-testing" trim />
 </box>
 
 System testing is typically done by a testing team (also called a QA team).

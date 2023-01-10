@@ -221,7 +221,7 @@ Also known as
 
 <div id="def-pair-programming">
 
-**Pair programming**: 
+**Pair programming**:
 
 >Pair programming is an agile software development technique in which two programmers work together at one workstation. One, the driver, writes code while the other, the observer or navigator, reviews each line of code as it is typed in. The two programmers switch roles frequently. <sub>[[source: Wikipedia](https://en.wikipedia.org/wiki/Pair_programming)]</sub>
 
@@ -300,19 +300,19 @@ Also known as
 
 <div id="def-static-analysis">
 
-**Static analysis**: Static analysis is the analysis of code without actually executing the code.  
+**Static analysis**: Static analysis is the analysis of code without actually executing the code.
 
 </div>
 
 <div id="def-static-binding">
 
-**Static binding** (aka early binding): When a method call is resolved at compile time.  
+**Static binding** (aka early binding): When a method call is resolved at compile time.
 
 </div>
 
 <div id="def-stub">
 
-**Stub**: A stub has the same interface as the component it replaces, but its implementation is so simple that it is unlikely to have any bugs. It mimics the responses of the component, but only for a limited set of predetermined inputs. That is, it does not know how to respond to any other inputs. Typically, these mimicked responses are hard-coded in the stub rather than computed or retrieved from elsewhere, e.g. from a database. 
+**Stub**: A stub has the same interface as the component it replaces, but its implementation is so simple that it is unlikely to have any bugs. It mimics the responses of the component, but only for a limited set of predetermined inputs. That is, it does not know how to respond to any other inputs. Typically, these mimicked responses are hard-coded in the stub rather than computed or retrieved from elsewhere, e.g. from a database.
 
 </div>
 
@@ -338,7 +338,7 @@ Also known as
 
 <div id="def-type-signature">
 
-**Type signature**: The _type signature_ of an operation is the type sequence of the parameters. The return type and parameter names are not part of the type signature. However, the parameter order is significant. 
+**Type signature**: The _type signature_ of an operation is the type sequence of the parameters. The return type and parameter names are not part of the type signature. However, the parameter order is significant.
 
 <box>
 
@@ -357,7 +357,7 @@ Also known as
 
 <div id="def-uml">
 
-[**Unified Modeling Language (UML)**](http://www.uml.org/#UML2.0) is a graphical notation to describe various aspects of a software system. UML is the brainchild of three software modeling specialists James Rumbaugh, Grady Booch and Ivar Jacobson (also known as the Three Amigos). Each of them had developed their own notation for modeling software systems before joining forces to create a unified modeling language (hence, the term ‘Unified’ in UML). UML is currently the _de facto_ modeling notation used in the software industry.
+[**Unified Modeling Language (UML)**](http://www.uml.org/#UML2.0) is a graphical notation to describe various aspects of a software system. UML is the brainchild of three software modeling specialists James Rumbaugh, Grady Booch and Ivar Jacobson (also known as the Three Amigos). Each of them had developed their own notation for modeling software systems before joining forces to create a unified modeling language (hence, the term ‘Unified’ in UML). UML is currently the most commonly used modeling notation used in the software industry.
 
 </div>
 
@@ -370,7 +370,7 @@ Also known as
 <div id="def-use-case">
 
 **Use case**: A description of a set of sequences of actions, including variants, that a system performs to yield an observable result of value to an <trigger for="pop:actor">actor</trigger> [ :book: : <popover effect="fade" placement="top" >uml-user-guide<span slot="content"><include src="./references.md#uml-user-guide" inline/></span></popover>].
-  
+
 <popover id="pop:actor" header="{{icon_preview}}" placement="top">
   <div slot="content">
     <include src="definitions.md#def-actor" />

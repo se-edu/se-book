@@ -7,12 +7,12 @@
 <div id="body">
 
 <box type="definition" seamless>
-<include src="../../common/definitions.md#def-dependency-inversion-principle" />
+<include src="../../common/definitions.md#def-dependency-inversion-principle" trim />
 </box>
 
 <box>
 
-Example:
+{{ icon_example }} Example:
 
 <img src="{{baseUrl}}/principles/dependencyInversionPrinciple/images/payrollEmployee.png" height="130" />
 <p/>

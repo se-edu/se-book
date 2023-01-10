@@ -10,7 +10,7 @@ Consider two classes, `Account` and `Guarantor`, with an association as shown in
 
 <box>
 
-Example:
+{{ icon_example }} Example:
 
 <img src="{{baseUrl}}/errorHandling/defensiveProgramming/compulsoryAssociations/images/accountGuarantor.png" height="50" />
 <p/>

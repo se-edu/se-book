@@ -7,7 +7,7 @@
 <div id="body">
 
 <box type="definition" seamless>
-  <include src="../../../common/definitions.md#def-se" />
+<include src="../../../common/definitions.md#def-se" inline trim />
 </box>
 
 The following description of the _Joys of the Programming Craft_ was taken from Chapter 1 of the famous book <trigger for="modal:mmm" trigger="click">_The Mythical Man-Month_, by Frederick P. Brooks</trigger>.
@@ -39,7 +39,7 @@ The following description of the _Joys of the Programming Craft_ was taken from 
 > The magic of myth and legend has come true in our time. One types the correct incantation on a keyboard, and a display screen comes to life,
 > showing things that never were nor could be.
 >
-> Programming then is fun because it gratifies creative longings built deep within us and delights sensibilities you have in common with all men.  
+> Programming then is fun because it gratifies creative longings built deep within us and delights sensibilities you have in common with all men.
 
 
 > **Not all is delight, however, and knowing the inherent woes makes it easier to bear them when they appear.**
@@ -77,14 +77,15 @@ The following description of the _Joys of the Programming Craft_ was taken from 
 > The challenge and the mission are to find real solutions to real problems on actual schedules with available resources.
 >
 > This then is programming, both a tar pit in which many efforts have floundered and a creative activity with joys
->  and woes all its own. For many, the joys far outweigh the woes....  
+>  and woes all its own. For many, the joys far outweigh the woes....
 
 <modal header="**:book: The Mythical Man-Month: Essays on Software Engineering**" id="modal:mmm">
 
 <table>
+<tbody>
 <tr>
 <td>
-<img src="https://upload.wikimedia.org/wikipedia/en/f/fd/Mythical_man-month_%28book_cover%29.jpg" height="250" /> 
+<img src="https://upload.wikimedia.org/wikipedia/en/f/fd/Mythical_man-month_%28book_cover%29.jpg" height="250" />
 </td>
 <td>
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Fred_Brooks.jpg/800px-Fred_Brooks.jpg" height="250" />
@@ -92,8 +93,8 @@ The following description of the _Joys of the Programming Craft_ was taken from 
 <tr>
 <td>
 
-<sub>[[Text and book cover source: Wikipedia](https://en.wikipedia.org/wiki/The_Mythical_Man-Month)]</sub> 
- 
+<sub>[[Text and book cover source: Wikipedia](https://en.wikipedia.org/wiki/The_Mythical_Man-Month)]</sub>
+
 </td>
 <td>
 
@@ -101,9 +102,10 @@ The following description of the _Joys of the Programming Craft_ was taken from 
 
 </td>
 </tr>
+</tbody>
 </table>
 
-_The Mythical Man-Month: Essays on Software Engineering_ is a book on software engineering and project management by Fred Brooks, whose central theme is that "adding manpower to a late software project makes it later". This idea is known as Brooks's law, and is presented along with the second-system effect and advocacy of prototyping. 
+_The Mythical Man-Month: Essays on Software Engineering_ is a book on software engineering and project management by Fred Brooks, whose central theme is that "adding manpower to a late software project makes it later". This idea is known as Brooks's law, and is presented along with the second-system effect and advocacy of prototyping.
 
 </modal>
 
