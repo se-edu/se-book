@@ -66,7 +66,7 @@ Given below are the interactions between the player and the `TextUi` for the who
 <img src="{{baseUrl}}/modeling/modelingASolution/basic/images/playerTextLoop.png" height="300" />
 <p/>
 
-</box><p>
+</box><p/>
 
 <box>
 
