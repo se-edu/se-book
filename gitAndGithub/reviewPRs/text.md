@@ -50,8 +50,8 @@ Given below are some steps you can follow when reviewing a PR.
    too. Some of the classes are getting quite long. Consider splitting into
    smaller classes if that makes sense.
    ```
-   {{ icon_tip }} `LGTM` is often used in such overall comments, to indicate `Looks good to merge`.<br>
-   `nit` is another such term, used to indicate minor flaws e.g., `LGTM, almost. Just a few nits to fix.`.
+   {{ icon_tip }} `LGTM` is often used in such overall comments, to indicate `Looks good to me`.<br>
+   `nit` (as in _nit picking_) is another such term, used to indicate minor flaws e.g., `LGTM. Just a few nits to fix.`.
 1. Choose `Approve`, `Comment`, or `Request changes` option as appropriate and click on the {{ button_green("Submit review") }} button.
 
 </div>
