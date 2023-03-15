@@ -4,5 +4,5 @@
    command: `git remote add {remote_name} {remote_repo_url}`<br>
    e.g., `git remote add upstream1 https://github.com/johndoe/foobar.git`
 
-1. Now you can pull from the new remote.<br>
-   e.g., `git pull upstream1 master`
+1. Now you can fetch or pull (pulling will fetch the branch _and_ merge the new code to the current branch) from the new remote.<br>
+   e.g., `git fetch upstream1 master` or `git pull upstream1 master`
