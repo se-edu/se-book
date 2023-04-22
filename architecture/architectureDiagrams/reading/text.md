@@ -14,10 +14,10 @@
 
 {{ icon_example }} Some example architecture diagrams:
 
-<tabs> 
+<tabs>
   <tab header="TEAMMATES">
 
-<pic src="https://github.com/TEAMMATES/teammates/raw/master/docs/images/highlevelArchitecture.png" width="700"/><br>
+<pic src="https://teammates.github.io/teammates/diagrams/highlevelArchitecture.png" width="700"/><br>
 
   </tab>
   <tab header="se-edu/addressbook-level3" class="d-print-none">
