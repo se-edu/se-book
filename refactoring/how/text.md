@@ -21,7 +21,7 @@ Given below are some more commonly used refactorings. A more comprehensive list 
 7. [Replace Parameter with Explicit Methods](https://refactoring.com/catalog/replaceParameterWithExplicitMethods.html)
 8. [Reverse Conditional](https://refactoring.com/catalog/reverseConditional.html)
 9. [Split Loop](https://refactoring.com/catalog/splitLoop.html)
-10. [Split Temporary Variable](https://refactoring.com/catalog/splitTemporaryVariable.html)
+10. [Split Temporary Variable](https://refactoring.com/catalog/splitVariable.html)
 
 </div>
 
