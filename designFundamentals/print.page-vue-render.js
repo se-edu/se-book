@@ -71,6 +71,6 @@ with(this){return _c('p',[_c('strong',[_v("Cohesion can be present in many forms
 with(this){return _c('ul',[_c('li',[_v("Code related to a single concept is kept together, e.g. the "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("Student")]),_v(" component handles everything related to students.")]),_v(" "),_c('li',[_v("Code that is invoked close together in time is kept together, e.g. all code related to initializing the system is kept together.")]),_v(" "),_c('li',[_v("Code that manipulates the same data structure is kept together, e.g. the "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("GameArchive")]),_v(" component handles everything related to the storage and retrieval of game sessions.")])])}
 },function anonymous(
 ) {
-with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.0.2")]),_v(", generated on Tue, 10 Jan 2023, 11:07:53 GMT+8]")])])])}
+with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.1.0")]),_v(", generated on Mon, 1 May 2023, 21:21:57 GMT+8]")])])])}
 }];
   

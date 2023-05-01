@@ -71,7 +71,7 @@ Java has three **conditional operators** that are used to operate on boolean val
 Operator | Description | example %%{{ icon_output_right }}%% `true`| example %%{{ icon_output_right }}%% `false`
 ---------|-------------|-------------------------------------------|--------------------------------------------
 `&&` | and | `true && true` %%{{ icon_output_right }}%% `true` | `true && false` %%{{ icon_output_right }}%% `false`
-`||` | or | `true || false` %%{{ icon_output_right }}%% `true` | `false || false` %%{{ icon_output_right }}%% `false`
+<code>&vert;&vert;</code> | or | <code>true &vert;&vert; false</code> %%{{ icon_output_right }}%% `true` | <code>false &vert;&vert; false</code> %%{{ icon_output_right }}%% `false`
 `!` | not | `not false` | `not true`
 
 

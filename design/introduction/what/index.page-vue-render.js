@@ -23,6 +23,6 @@ with(this){return _c('p',[_c('strong',[_v("Software design has two main aspects:
 with(this){return _c('ul',[_c('li',[_c('strong',[_v("Product/external design: designing the external behavior of the product to meet the users' requirements.")]),_v(" This is usually done by product designers with input from business analysts, user experience experts, user representatives, etc.")]),_v(" "),_c('li',[_c('strong',[_v("Implementation/internal design: designing how the product will be implemented to meet the required external behavior.")]),_v(" This is usually done by software architects and software engineers.")])])}
 },function anonymous(
 ) {
-with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.0.2")]),_v(", generated on Tue, 10 Jan 2023, 11:07:53 GMT+8]")])])])}
+with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.1.0")]),_v(", generated on Mon, 1 May 2023, 21:21:57 GMT+8]")])])])}
 }];
   

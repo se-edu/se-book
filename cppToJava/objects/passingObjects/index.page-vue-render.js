@@ -38,6 +38,6 @@ with(this){return _c('p',[_c('strong',[_v("It is possible to have multiple varia
 with(this){return _c('p',[_c('span',{staticStyle:{"opacity":"0.5"}},[_c('span',{staticClass:"badge rounded-pill bg-danger"},[_c('span',[_c('span',{staticClass:"fas fa-not-equal",attrs:{"aria-hidden":"true"}})])])]),_v(" "),_c('strong',[_v("Java does not have explicit pointers")]),_v(" (and other related things such as pointer de-referencing and pointer arithmetic). "),_c('strong',[_v("When an object is passed into a method as an argument, the method gains access to the original object.")]),_v(" If the method changes the object it received, the changes are retained in the object even after the method has completed.")])}
 },function anonymous(
 ) {
-with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.0.2")]),_v(", generated on Tue, 10 Jan 2023, 11:07:53 GMT+8]")])])])}
+with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.1.0")]),_v(", generated on Mon, 1 May 2023, 21:21:57 GMT+8]")])])])}
 }];
   

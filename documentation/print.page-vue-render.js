@@ -95,6 +95,6 @@ with(this){return _c('h3',{attrs:{"id":"asciidoc"}},[_c('span',{staticClass:"anc
 with(this){return _c('div',[_c('div',[_c('h4',{attrs:{"id":"what-7"}},[_c('span',{staticClass:"anchor",attrs:{"id":"what-7"}}),_c('span',[_v("What")]),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#what-7","onclick":"event.stopPropagation()"}})])]),_v(" "),_c('div',[_c('p',[_v("AsciiDoc is similar to Markdown but has more powerful (and also more complex) syntax.")]),_v(" "),_c('ul',[_c('li',[_c('a',{attrs:{"href":"https://asciidoctor.org/docs/asciidoc-writers-guide/"}},[_v("AsciiDoc Writers Guide")]),_v(" "),_c('span',{staticClass:"dimmed"},[_v("-- from Asciidoctor.org")])])])])])}
 },function anonymous(
 ) {
-with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.0.2")]),_v(", generated on Tue, 10 Jan 2023, 11:07:53 GMT+8]")])])])}
+with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.1.0")]),_v(", generated on Mon, 1 May 2023, 21:21:57 GMT+8]")])])])}
 }];
   

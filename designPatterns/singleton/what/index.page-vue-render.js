@@ -32,6 +32,6 @@ with(this){return _c('p',[_c('strong',[_v("Solution")])])}
 with(this){return _c('p',[_v("Make the constructor of the singleton class "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("private")]),_v(", "),_c('span',{staticClass:"dimmed"},[_v("because a "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("public")]),_v(" constructor will allow others to instantiate the class at will")]),_v(". Provide a "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("public")]),_v(" class-level method to access the "),_c('em',[_v("single instance")]),_v(".")])}
 },function anonymous(
 ) {
-with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.0.2")]),_v(", generated on Tue, 10 Jan 2023, 11:07:53 GMT+8]")])])])}
+with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.1.0")]),_v(", generated on Mon, 1 May 2023, 21:21:57 GMT+8]")])])])}
 }];
   

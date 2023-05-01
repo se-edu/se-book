@@ -20,6 +20,6 @@ with(this){return _c('div',[_c('h4',{attrs:{"id":"single-responsibility-principl
 with(this){return _c('blockquote',[_c('p',[_c('span',{staticClass:"fas fa-quote-left",attrs:{"aria-hidden":"true"}}),_v(" Gather together the things that change for the same reasons. Separate those things that change for different reasons. "),_c('span',{staticClass:"fas fa-quote-right",attrs:{"aria-hidden":"true"}}),_v(" "),_c('sub',[_v("―- "),_c('em',[_v("Agile Software Development, Principles, Patterns, and Practices")]),_v(" by Robert C. Martin")])])])}
 },function anonymous(
 ) {
-with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.0.2")]),_v(", generated on Tue, 10 Jan 2023, 11:07:53 GMT+8]")])])])}
+with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.1.0")]),_v(", generated on Mon, 1 May 2023, 21:21:57 GMT+8]")])])])}
 }];
   
