@@ -1,6 +1,6 @@
 <panel type="dark" header="###  <small><small>{{ icon_important }} [Key Exercise] Grade Helper</small></small>" expanded >
 
-Write a Java program that takes a letter grade e.g., `A+` as a command line argument and prints the CAP value for that grade.
+Write a Java program that takes a letter grade e.g., `A+` as a command line argument and prints the CAP (aka GPA) value for that grade.
 
 {{ icon_tip }} Use a `switch` statement in your code.
 

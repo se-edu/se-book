@@ -2,7 +2,7 @@
 
 Add the following method to the class given below.
 
-* `public static double getGradeCap(String grade)`: Returns the CAP value of the given `grade`. The mapping from grades to CAP is given below.
+* `public static double getGradeCap(String grade)`: Returns the CAP (aka GPA) value of the given `grade`. The mapping from grades to CAP is given below.
 
 <div class="indented">
 
