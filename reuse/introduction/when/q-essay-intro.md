@@ -16,7 +16,7 @@ Cons
 * May not be stable (as it was recently released).
 * May not allow you to do exactly what you want. While frameworks allow customization, such customization can be limited.
 * Performance penalties.
-* Might interfere with the learning objectives of the module.
+* Might interfere with the learning objectives of the course.
 
 Note that having more cons does not mean you should not use this framework. Further investigation is required before you can make a final decision.
 
