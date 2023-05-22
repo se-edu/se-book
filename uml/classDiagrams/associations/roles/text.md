@@ -6,13 +6,13 @@
 
 <div id="body">
 
-**_Association Role_ labels are used to indicate the role played by the classes in the association.**
+**_Association Role_ are used to indicate the role played by the classes in the association.**
 
 <img src="{{baseUrl}}/uml/classDiagrams/associations/roles/images/notation.png" height="60" />
 
 <box>
 
-{{ icon_example }} This association represents a marriage between a `Man` object and a `Woman` object. The respective roles played by objects of these two classes are `husband` and `wife`. 
+{{ icon_example }} This association represents a marriage between a `Man` object and a `Woman` object. The respective roles played by objects of these two classes are `husband` and `wife`.
 
 <img src="{{baseUrl}}/uml/classDiagrams/associations/roles/images/husbandWife.png" width="300" />
 <p/>
