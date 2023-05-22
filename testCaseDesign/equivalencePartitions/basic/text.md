@@ -99,13 +99,13 @@ Returns `true` if `s` is one of [`"F"`, `"T"`, `"D"`]. The comparison is case-se
   <td>
 
 `squareRoot(String s): int`<br>
-Pre-conditions: `s` represents a positive integer.<br>
+Pre-conditions: `s` is a `String` that represents a positive integer e.g., `"23"`.<br>
 Returns the square root of `s` if the square root is an integer; returns `0` otherwise.
 
   </td>
   <td>
 
-[`s` is not a valid number] [`s` is a negative integer] [`s` has an integer square root] [`s` does not have an integer square root]
+[`s` does not represent a valid number] [`s` is a negative integer] [`s` has an integer square root] [`s` does not have an integer square root]
 
   </td>
   </tr>
