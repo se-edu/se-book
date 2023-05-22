@@ -71,6 +71,15 @@ class Admin:
 
 </box>
 
+Association roles are optional to show. They are particularly useful for differentiating among multiple associations between the same two classes.
+<box>
+
+{{ icon_example }} In each the three associations between the `Flight` class and the `Airport` class given below, the `Airport` class plays a different role.
+
+<pic src="{{baseUrl}}/uml/classDiagrams/associations/roles/images/flightAirport.png" height="100" />
+<p/>
+
+</box>
 
 </div>
 
