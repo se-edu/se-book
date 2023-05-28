@@ -322,7 +322,12 @@ Add a User Guide to the project in the following way:
 * Go to `http://{your username}.github.io/{repo name}/` to view the user guide of your product. %%Note: it could take 5-10 minutes for GitHub to update the page.%%<br>
   {{ icon_important_big_red }} It is important that you carefully check the content of the UG available at the above URL to ensure the HTML version of the page (auto-converted from MarkDown by GitHub Pages) has the right content. In some rare cases, the page might look alright on GitHub file preview but will not render correctly on GitHub pages.
 
-{{ icon_tip }} **How detailed should the user guide be?** It should be fit-for-purpose. i.e., think from the user's point of view and include as much information as necessary for the user (while trying to keep it as short as possible -- users don't have the patience to read lengthy user guides either), in a format as friendly to the user as possible.
+**Minimal**:
+* Ensure the chatbot name is stated clearly at the top of the User Guide.
+* Provide the reader with enough guidance to be able to use all important features of your chatbot.
+
+{{ icon_tip }} **How detailed should the user guide be?** It should be fit-for-purpose. i.e., think from the user's point of view and include as much information as necessary for the user (while trying to keep it as short as possible -- users don't have the patience to read lengthy user guides either), in a format as friendly to the user as possible.<br>
+ You can use the 'Features' section of [this user guide](https://se-education.org/addressbook-level3/UserGuide.html#features) as a benchmark.
 
 </div><hr>
 <div id="A-DevGuide">
