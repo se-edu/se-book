@@ -171,10 +171,10 @@ public class Duke {
 
 Add JUnit tests to test the behavior of the code.
 
-
-**Requirements**:
-* Minimum: More than two test methods, preferably targeting more than one class (if you have multiple classes)
-* Stretch goal: test methods to target all public methods of all classes
+* **Minimal**: Use JUnit to test,
+  * at least two non-trivial methods, from two different classes (if you have multiple classes),
+  * testing them reasonably well (i.e., the test code should try to catch most potential bugs in the target methods).
+* **Stretch goal**: Test methods to target all non-trivial public methods of all classes.
 
 {{ icon_tip }} Refer to the [_JUnit tutorial_ @se-edu/guides](https://se-education.org/guides/tutorials/junit.html) to find how to use JUnit.
 
