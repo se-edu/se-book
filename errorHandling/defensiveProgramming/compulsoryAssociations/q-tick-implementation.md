@@ -1,13 +1,13 @@
 <panel header="{{ icon_Q_A }} Is this defensive?">
 <question>
 
-<img src="{{baseUrl}}/errorHandling/defensiveProgramming/compulsoryAssociations/images/countryCity.png" height="45" />
+<pic src="{{baseUrl}}/errorHandling/defensiveProgramming/compulsoryAssociations/images/countryCity.png" height="45" />
 <p/>
 
 ```java
 class City {
     Country country;
-    
+
     void setCountry(Country country) {
         this.country = country;
     }

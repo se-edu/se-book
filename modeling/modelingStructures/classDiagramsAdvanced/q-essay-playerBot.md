@@ -46,7 +46,7 @@ ii. A `Human` object can _train_ a `SmartBot` object. The `Lesson` class keeps t
 
 <panel header=":key: (a)">
 
-<img src="{{baseUrl}}/modeling/modelingStructures/classDiagramsAdvanced/images/playerBotA.png" height="250" />
+<pic src="{{baseUrl}}/modeling/modelingStructures/classDiagramsAdvanced/images/playerBotA.png" height="250" />
 <p/>
 
 <p/>
@@ -54,7 +54,7 @@ ii. A `Human` object can _train_ a `SmartBot` object. The `Lesson` class keeps t
 </panel>
 <panel header=":key: (b)">
 
-<img src="{{baseUrl}}/modeling/modelingStructures/classDiagramsAdvanced/images/playerBotB.png" height="310" />
+<pic src="{{baseUrl}}/modeling/modelingStructures/classDiagramsAdvanced/images/playerBotB.png" height="310" />
 <p/>
 
 <p/>
@@ -62,7 +62,7 @@ ii. A `Human` object can _train_ a `SmartBot` object. The `Lesson` class keeps t
 </panel>
 <panel header=":key: (c)">
 
-<img src="{{baseUrl}}/modeling/modelingStructures/classDiagramsAdvanced/images/playerBotC.png" height="290" />
+<pic src="{{baseUrl}}/modeling/modelingStructures/classDiagramsAdvanced/images/playerBotC.png" height="290" />
 <p/>
 
 <p/>

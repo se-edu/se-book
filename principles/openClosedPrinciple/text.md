@@ -18,7 +18,7 @@ In object-oriented programming, OCP can be achieved in various ways. This often 
 
 {{ icon_example }} In the design given below, the behavior of the `CommandQueue` class can be altered by adding more concrete `Command` subclasses. For example, by including a `Delete` class alongside `List`, `Sort`, and `Reset`, the `CommandQueue` can now perform delete commands without modifying its code at all. That is, its behavior was extended without having to modify its code. Hence, it is open to extensions, but closed to modification.
 
-<img src="{{baseUrl}}/principles/openClosedPrinciple/images/commandQueue.png" height="170" />
+<pic src="{{baseUrl}}/principles/openClosedPrinciple/images/commandQueue.png" height="170" />
 <p/>
 
 </box>

@@ -12,7 +12,7 @@ Description: A minefield is divided into mine regions. Each region is assigned t
 
 Given below is an extract from our class diagram.
 
-<img src="{{baseUrl}}/errorHandling/defensiveProgramming/referentialIntegrity/images/playerRegion.png" height="100" />
+<pic src="{{baseUrl}}/errorHandling/defensiveProgramming/referentialIntegrity/images/playerRegion.png" height="100" />
 <p/>
 
 Minimally, this can be implemented like this.
@@ -26,7 +26,7 @@ class Player {
     Region getRegion() {
         return region;
     }
-} 
+}
 
 // Region class is similar
 ```
@@ -108,7 +108,7 @@ public class Player {
             myRegion.removePlayer(this);
         }
         myRegion = newRegion;
-        
+
         // set the reverse link
         myRegion.setPlayer(this);
     }

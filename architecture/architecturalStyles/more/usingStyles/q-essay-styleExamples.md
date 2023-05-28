@@ -1,7 +1,7 @@
 <panel header="{{ icon_Q_A }} Comment on how to use architecture styles in Minesweeper.">
 <question has-input="true">
 
-Assume you are designing a multiplayer version of the Minesweeper game where any number of players can play the same Minefield. Players use their own PCs to play the game. A player scores by deducing a cell correctly before any of the other players do. Once a cell is correctly deduced, it appears as either marked or cleared for all players. 
+Assume you are designing a multiplayer version of the Minesweeper game where any number of players can play the same Minefield. Players use their own PCs to play the game. A player scores by deducing a cell correctly before any of the other players do. Once a cell is correctly deduced, it appears as either marked or cleared for all players.
 
 Comment on how each of the following architectural styles could be potentially useful when designing the architecture for this game.
 
@@ -17,7 +17,7 @@ Comment on how each of the following architectural styles could be potentially u
 3. SOA – The game can access a remote web service for things such as getting new puzzles, validating puzzles, charging players subscription fees, etc.
 4. Multi-layer – The server component can have two layers: the logic layer and the storage layer.
 
-<img src="{{baseUrl}}/architecture/architecturalStyles/more/usingStyles/images/minesweeperExample.png" height="300" />
+<pic src="{{baseUrl}}/architecture/architecturalStyles/more/usingStyles/images/minesweeperExample.png" height="300" />
 <p/>
 
 </div>

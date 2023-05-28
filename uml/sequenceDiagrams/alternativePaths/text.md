@@ -10,14 +10,14 @@
 
 Notation:
 
-<img src="{{baseUrl}}/uml/sequenceDiagrams/alternativePaths/images/notation.png" height="100" />
+<pic src="{{baseUrl}}/uml/sequenceDiagrams/alternativePaths/images/notation.png" height="100" />
 <p/>
 
 <box>
 
 {{ icon_example }} `Minefield` calls the `Cell#setMine` method if the cell is supposed to be a mined cell, and calls the `Cell:setMineCount(...)` method otherwise.
 
-<img src="{{baseUrl}}/uml/sequenceDiagrams/alternativePaths/images/minefieldCell.png" height="180" />
+<pic src="{{baseUrl}}/uml/sequenceDiagrams/alternativePaths/images/minefieldCell.png" height="180" />
 <p/>
 
 </box>

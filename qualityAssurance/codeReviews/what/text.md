@@ -25,7 +25,7 @@ Reviews can be done in various forms. Some examples below:
 <include src="../../../common/definitions.md#def-pair-programming" trim />
 </box>
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Pair_programming_1.jpg" width="400"/><br>
+<pic src="https://upload.wikimedia.org/wikipedia/commons/a/af/Pair_programming_1.jpg" width="400"/><br>
 <sub>[[image credit: Wikipedia](https://en.wikipedia.org/wiki/Pair_programming)]</sub>
 
 

@@ -3,7 +3,7 @@
 
 Implement the class structure given below:
 
-<img src="{{baseUrl}}/modeling/modelingStructures/classDiagramsBasic/images/typicalClasssStructure.png" width="400" />
+<pic src="{{baseUrl}}/modeling/modelingStructures/classDiagramsBasic/images/typicalClasssStructure.png" width="400" />
 <p/>
 
 </question>

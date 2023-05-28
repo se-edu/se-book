@@ -3,20 +3,20 @@
 
 Which of these activity diagrams use the correct UML notation?
 
-- [ ] i 
+- [ ] i
 - [ ] ii
 - [ ] iii
 - [ ] iv
 - [ ] v
 - [ ] vi
 
-<img src="{{baseUrl}}/uml/activityDiagrams/basicNotations/alternatePaths/images/q-correctNotation1.png" width="500" />
-<img src="{{baseUrl}}/uml/activityDiagrams/basicNotations/alternatePaths/images/q-correctNotation2.png" width="500" />
+<pic src="{{baseUrl}}/uml/activityDiagrams/basicNotations/alternatePaths/images/q-correctNotation1.png" width="500" />
+<pic src="{{baseUrl}}/uml/activityDiagrams/basicNotations/alternatePaths/images/q-correctNotation2.png" width="500" />
 <p/>
 
 <div slot="answer">
 
-* i: :+1: Correct. There can be more than two alternate paths. 
+* i: :+1: Correct. There can be more than two alternate paths.
 * ii: :+1: Correct. An alternate path can divide into more branches.
 * iii: :+1: Correct. A branch can join other branches.
 * iv: Incorrect. At `x = 5` both guard conditions become true.

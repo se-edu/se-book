@@ -34,7 +34,7 @@ class Unit {
 ```
 Here is the sequence diagram to model the interactions for the method call `producePrototype()` on a `Machine` object.
 
-<img src="{{baseUrl}}/uml/sequenceDiagrams/introduction/images/Machine.png" width="450" />
+<pic src="{{baseUrl}}/uml/sequenceDiagrams/introduction/images/Machine.png" width="450" />
 <p/>
 
 </box>

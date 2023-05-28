@@ -2,7 +2,7 @@ Open a Git Bash Terminal.
 
 If you installed SourceTree, you can click the `Terminal` button to open a GitBash terminal.
 
-<img src="{{baseUrl}}/gitAndGithub/init/images/cli_1.png" height="100" />
+<pic src="{{baseUrl}}/gitAndGithub/init/images/cli_1.png" height="100" />
 <p/>
 
 Navigate to the `things` directory.

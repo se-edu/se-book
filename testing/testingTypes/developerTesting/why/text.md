@@ -14,10 +14,10 @@
 * **The delivery may have to be delayed** if too many bugs are found during testing.
 
 **Therefore, it is better to do early testing**, as hinted by the popular rule of thumb given below, also illustrated by the graph below it.
- 
+
 > The earlier a bug is found, the easier and cheaper to have it fixed.
 
-<img src="{{baseUrl}}/testing/testingTypes/developerTesting/why/images/diagram.png" height="180" />
+<pic src="{{baseUrl}}/testing/testingTypes/developerTesting/why/images/diagram.png" height="180" />
 <p/>
 
 Such early testing of partially developed software is usually, and by necessity, done by the developers themselves i.e. developer testing.

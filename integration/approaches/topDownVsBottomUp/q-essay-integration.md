@@ -10,7 +10,7 @@ Also take into account the following facts in your test strategy:
 * `IO_Helper` is to be reused from an earlier project, with minor modifications.
 * Development of the `OutPatient` component has been outsourced, and its delivery is not expected until the 2nd half of the project.
 
-<img src="{{baseUrl}}/integration/approaches/topDownVsBottomUp/images/hospital.png" height="250" />
+<pic src="{{baseUrl}}/integration/approaches/topDownVsBottomUp/images/hospital.png" height="250" />
 <p/>
 
 <div slot="answer">
@@ -25,7 +25,7 @@ There can be many acceptable answers to this question. But any good strategy sho
 
 Given below is one possible integration test strategy. The relative positioning of items is used to indicate a rough timeline.
 
-<img src="{{baseUrl}}/integration/approaches/topDownVsBottomUp/images/hospitalIntegration.png" height="250" />
+<pic src="{{baseUrl}}/integration/approaches/topDownVsBottomUp/images/hospitalIntegration.png" height="250" />
 <p/>
 
 </div>

@@ -8,7 +8,7 @@
 
 The basic UML notations used to represent a _class_:<br>
 
-<img src="{{baseUrl}}/uml/classDiagrams/classes/what/images/basicNotation.png" height="130" />
+<pic src="{{baseUrl}}/uml/classDiagrams/classes/what/images/basicNotation.png" height="130" />
 <p/>
 
 <box>
@@ -16,7 +16,7 @@ The basic UML notations used to represent a _class_:<br>
 {{ icon_example }} A `Table` class shown in UML notation:
 
 <div class="alt-java">
-<img src="{{baseUrl}}/uml/classDiagrams/classes/what/images/operations.png" height="150" />
+<pic src="{{baseUrl}}/uml/classDiagrams/classes/what/images/operations.png" height="150" />
 </div>
 <div class="alt-python">
 <puml>
@@ -44,7 +44,7 @@ class Table {
 
     Integer number;
     Chair[] chairs = null;
-    
+
     Integer getNumber() {
         // ...
     }
@@ -106,7 +106,7 @@ Visibility | Java | Python
 
 {{ icon_example }} `Table` class with visibilities shown:
 <div class="alt-java">
-<img src="{{baseUrl}}/uml/classDiagrams/classes/what/images/operationsVisibility.png" height="150" />
+<pic src="{{baseUrl}}/uml/classDiagrams/classes/what/images/operationsVisibility.png" height="150" />
 </div>
 <div class="alt-python">
 <puml>

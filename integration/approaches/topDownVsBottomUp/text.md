@@ -6,7 +6,7 @@
 
 <div id="body">
 
-<img src="{{baseUrl}}/integration/approaches/topDownVsBottomUp/images/approaches.png" height="100" />
+<pic src="{{baseUrl}}/integration/approaches/topDownVsBottomUp/images/approaches.png" height="100" />
 <p/>
 
 **Based on the order in which components are integrated, incremental integration can be done in three ways.**
@@ -25,7 +25,7 @@
 
 <div v-closeable alt="slideshow: comparison">
 
-Here is an animation that compares the three approaches: 
+Here is an animation that compares the three approaches:
 
 @[powerpoint](https://onedrive.live.com/embed?cid=A5AF047C4CAD67AB&resid=A5AF047C4CAD67AB%212318&authkey=AD27jxfKqq3nqpQ&em=2)
 

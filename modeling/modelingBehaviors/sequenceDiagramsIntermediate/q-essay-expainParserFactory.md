@@ -3,7 +3,7 @@
 
 Explain the interactions depicted in this sequence diagram.
 
-<img src="{{baseUrl}}/modeling/modelingBehaviors/sequenceDiagramsIntermediate/images/parserFactory.png" height="300" />
+<pic src="{{baseUrl}}/modeling/modelingBehaviors/sequenceDiagramsIntermediate/images/parserFactory.png" height="300" />
 <p/>
 
 <div slot="hint">

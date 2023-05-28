@@ -8,7 +8,7 @@ This diagram is,
 - [ ] c. An OO domain model, also known as a conceptual class diagram.
 - [ ] d. Can be either a class diagram or an OO domain model.
 
-<img src="{{baseUrl}}/modeling/modelingStructures/objectOrientedDomainModels/images/playerTurn.png" height="50" />
+<pic src="{{baseUrl}}/modeling/modelingStructures/objectOrientedDomainModels/images/playerTurn.png" height="50" />
 <p/>
 
 <div slot="answer">

@@ -69,14 +69,14 @@ Note how the `master` label and the `HEAD` label moves to the new commit (The `H
 **4. Add a commit to the master branch.** Let’s imagine it’s a bug fix.<br>
 To keep things simple for the time being, this commit should ==not involve the same content that you changed in the `feature1` branch==. To be on the safe side, this commit can change an entirely different file.
 
-<img src="{{baseUrl}}/gitAndGithub/branch/images/sourcetree_4.png" height="100" />
+<pic src="{{baseUrl}}/gitAndGithub/branch/images/sourcetree_4.png" height="100" />
 <p/>
 
 **5. Switch back to the `feature1` branch** %%(similar to step 3)%%.
 
 **6. Merge the `master` branch to the `feature1` branch**, giving an end-result like the following. Also note how Git has created a _merge commit_.
 
-<img src="{{baseUrl}}/gitAndGithub/branch/images/sourcetree_5.png" height="120" />
+<pic src="{{baseUrl}}/gitAndGithub/branch/images/sourcetree_5.png" height="120" />
 <p/>
 
 <tabs>
@@ -101,27 +101,27 @@ Instead of merging `master` to `feature1`, an alternative is to [_rebase_](https
 
 **9. Merge `feature1` to the master branch**, giving and end-result like this:
 
-<img src="{{baseUrl}}/gitAndGithub/branch/images/sourcetree_6.png" height="150" />
+<pic src="{{baseUrl}}/gitAndGithub/branch/images/sourcetree_6.png" height="150" />
 <p/>
 
 <tabs>
   <tab header="SourceTree">
-  
-Right-click on the `feature1` branch and choose `Merge...`. 
-    
+
+Right-click on the `feature1` branch and choose `Merge...`.
+
   </tab>
   <tab header="CLI">
-  
+
 ```
 git merge feature1
 ```
-    
+
   </tab>
 </tabs>
 
 **10. Create a new branch called `add-countries`, switch to it, and add some commits to it** %%(similar to steps 1-2 above)%%. You should have something like this now:
 
-<img src="{{baseUrl}}/gitAndGithub/branch/images/addCountriesBranchBeforeMerging.png" height="80" />
+<pic src="{{baseUrl}}/gitAndGithub/branch/images/addCountriesBranchBeforeMerging.png" height="80" />
 <p/>
 
 <box type="wrong" seamless>
@@ -133,15 +133,15 @@ git merge feature1
 
 **11. Go back to the `master` branch and merge the `add-countries` branch onto the `master` branch** %%(similar to steps 8-9 above)%%. While you might expect to see something like the following,
 
-<img src="{{baseUrl}}/gitAndGithub/branch/images/addCountriesBranchNoFastForward.png" height="100" />
+<pic src="{{baseUrl}}/gitAndGithub/branch/images/addCountriesBranchNoFastForward.png" height="100" />
 <p/>
 
 ... you are likely to see something like this instead:
 
-<img src="{{baseUrl}}/gitAndGithub/branch/images/addCountriesBranchAfterMerging.png" height="80" />
+<pic src="{{baseUrl}}/gitAndGithub/branch/images/addCountriesBranchAfterMerging.png" height="80" />
 <p/>
 
-That is because **Git does a ==_fast forward_ merge== if possible**. Seeing that the `master` branch has not changed since you started the `add-countries` branch, Git has decided it is simpler to just put the commits of the `add-countries` branch in front of the `master` branch, without going into the trouble of creating an extra merge commit. 
+That is because **Git does a ==_fast forward_ merge== if possible**. Seeing that the `master` branch has not changed since you started the `add-countries` branch, Git has decided it is simpler to just put the commits of the `add-countries` branch in front of the `master` branch, without going into the trouble of creating an extra merge commit.
 
 **It is possible to force Git to create a merge commit even if fast forwarding is possible.**
 
@@ -167,7 +167,7 @@ Here's how to push a branch to a remote repo:
 
 Here's how to push a branch named `add-intro` to your own fork of a repo named `samplerepo-pr-practice`:
 
-<img src="images/pushBranchToFork.png" height="300" />
+<pic src="images/pushBranchToFork.png" height="300" />
 <p/>
 
   </tab>

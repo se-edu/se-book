@@ -13,7 +13,7 @@ CMMI (Capability Maturity Model Integration) is a process improvement approach d
 
 **CMMI defines five maturity levels for a process and provides criteria to determine if the process of an organization is at a certain maturity level.** The diagram below [taken from Wikipedia] gives an overview of the five levels.
 
-<img src="{{baseUrl}}/processModels/more/cmmi/images/diagram.png" height="250" />
+<pic src="{{baseUrl}}/processModels/more/cmmi/images/diagram.png" height="250" />
 <p/>
 
 </div>

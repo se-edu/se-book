@@ -6,7 +6,7 @@
 
 <div id="body">
 
-<img src="{{baseUrl}}/uml/classDiagrams/associations/multiplicity/images/notation.png" height="120" />
+<pic src="{{baseUrl}}/uml/classDiagrams/associations/multiplicity/images/notation.png" height="120" />
 <p/>
 
 Commonly used multiplicities:
@@ -19,7 +19,7 @@ Commonly used multiplicities:
 
 {{ icon_example }} In the diagram below, an `Admin` object administers (is in charge of) any number of students but a `Student` object must always be under the charge of exactly one `Admin` object.
 
-<img src="{{baseUrl}}/uml/classDiagrams/associations/multiplicity/images/adminStudent.png" width="300" />
+<pic src="{{baseUrl}}/uml/classDiagrams/associations/multiplicity/images/adminStudent.png" width="300" />
 
 </box>
 <box>
@@ -27,10 +27,10 @@ Commonly used multiplicities:
 {{ icon_example }} In the diagram below,
 * Each student must be supervised by exactly one professor. i.e. There cannot be a student who doesn't have a supervisor or has multiple supervisors.
 * A professor cannot supervise more than 5 students but can have no students to supervise.
-* An admin can handle any number of professors and any number of students, including none. 
+* An admin can handle any number of professors and any number of students, including none.
 * A professor/student can be handled by any number of admins, including none.
 
-<img src="{{baseUrl}}/uml/classDiagrams/associations/multiplicity/images/adminProfessorStudent.png" height="70" />
+<pic src="{{baseUrl}}/uml/classDiagrams/associations/multiplicity/images/adminProfessorStudent.png" height="70" />
 
 </box>
 

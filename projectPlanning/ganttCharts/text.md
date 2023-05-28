@@ -12,7 +12,7 @@
 
 {{ icon_example }} A sample Gantt chart:
 
-<img src="{{baseUrl}}/projectPlanning/ganttCharts/images/gantt.png" height="360" />
+<pic src="{{baseUrl}}/projectPlanning/ganttCharts/images/gantt.png" height="360" />
 <p/>
 
 </box>

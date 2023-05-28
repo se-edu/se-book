@@ -63,12 +63,12 @@ Here are the steps you can follow to learn how to work with Git commits:
 
 1. Make some changes to `fruits.txt` (e.g. add some text and delete some text). Stage the changes, and commit the changes using the same steps you followed before. You should end up with something like this.
 
-   <img src="{{baseUrl}}/gitAndGithub/commit/images/sourcetree_6.png" height="180" />
+   <pic src="{{baseUrl}}/gitAndGithub/commit/images/sourcetree_6.png" height="180" />
    <p/>
 
 1. Next, add two more files `colors.txt` and `shapes.txt` to the same working directory. Add a third commit to record the current state of the working directory.
 
-   <img src="{{baseUrl}}/gitAndGithub/commit/images/sourcetree_7.png" height="150" />
+   <pic src="{{baseUrl}}/gitAndGithub/commit/images/sourcetree_7.png" height="150" />
    <p/>
 
 **6. See the revision graph:**  Note how commits form a path-like structure aka the _revision tree/graph_. In the revision graph, each commit is shown as linked to its 'parent' commit (i.e., the commit before it).

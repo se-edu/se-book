@@ -3,7 +3,7 @@
 
 Is the design below likely to use the Facade pattern?
 
-<img src="{{baseUrl}}/designPatterns/facade/what/images/textStorage.png" height="150" />
+<pic src="{{baseUrl}}/designPatterns/facade/what/images/textStorage.png" height="150" />
 <p/>
 
 - ( ) True

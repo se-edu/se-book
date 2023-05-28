@@ -9,7 +9,7 @@
 A bidirectional association in the design (shown in (a)) is usually emulated at code level using two variables (as shown in (b)).
 
 
-<img src="{{baseUrl}}/errorHandling/defensiveProgramming/referentialIntegrity/images/manWoman.png" height="140" />
+<pic src="{{baseUrl}}/errorHandling/defensiveProgramming/referentialIntegrity/images/manWoman.png" height="140" />
 <p/>
 
 ```java
@@ -33,7 +33,7 @@ class Woman {
 }
 ```
 
-The two classes are meant to be used as follows: 
+The two classes are meant to be used as follows:
 
 ```java
 Woman jean;
@@ -48,13 +48,13 @@ Suppose the two classes were used like this instead:
 Woman jean;
 Man james, yong;
 // ...
-james.setGirlfriend(jean);  
-jean.setBoyfriend(yong);  
+james.setGirlfriend(jean);
+jean.setBoyfriend(yong);
 ```
 
 Now James' girlfriend is Jean, while Jean's boyfriend is not James. This situation is a result of the code not being defensive enough to stop this "love triangle". In such a situation, you could say that _the referential integrity has been violated_. This means that _there is an inconsistency in object references_.
 
-<img src="{{baseUrl}}/errorHandling/defensiveProgramming/referentialIntegrity/images/woman.png" height="50" />
+<pic src="{{baseUrl}}/errorHandling/defensiveProgramming/referentialIntegrity/images/woman.png" height="50" />
 <p/>
 
 One way to prevent this situation is to implement the two classes as shown below. Note how the referential integrity is maintained.
@@ -76,7 +76,7 @@ public class Woman {
 
     public void breakUp() {
         boyfriend = null;
-    }   
+    }
     // ...
 }
 ```
@@ -97,7 +97,7 @@ public class Man {
     }
     public void breakUp() {
         girlfriend = null;
-    }  
+    }
     // ...
 }
 ```

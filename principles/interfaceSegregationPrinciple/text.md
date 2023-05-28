@@ -33,7 +33,7 @@ public class Payroll {
 }
 ```
 
-<img src="{{baseUrl}}/principles/interfaceSegregationPrinciple/images/payroll.png" height="200" />
+<pic src="{{baseUrl}}/principles/interfaceSegregationPrinciple/images/payroll.png" height="200" />
 <p/>
 
 </box>

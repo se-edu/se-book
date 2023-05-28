@@ -6,7 +6,7 @@
 
 <div id="body">
 
-**The OOP concept _Inheritance_ allows you to define a new class based on an existing class.** 
+**The OOP concept _Inheritance_ allows you to define a new class based on an existing class.**
 
 <box>
 
@@ -19,7 +19,7 @@
 
 **A superclass is said to be _more general_ than the subclass.** Conversely, a subclass is said to be more _specialized_ than the superclass.
 
-**Applying inheritance on a group of similar classes can result in the common parts among classes being extracted into more general classes.** 
+**Applying inheritance on a group of similar classes can result in the common parts among classes being extracted into more general classes.**
 
 <box>
 
@@ -27,14 +27,14 @@
 
 </box>
 
-**Inheritance implies the derived class can be considered as a _sub-type_ of the base class (and the base class is a _super-type_ of the derived class), resulting in an _is a_ relationship.**  
+**Inheritance implies the derived class can be considered as a _sub-type_ of the base class (and the base class is a _super-type_ of the derived class), resulting in an _is a_ relationship.**
 
 %%{{ icon_info }} Inheritance does not necessarily mean a sub-type relationship exists. However, the two often go hand-in-hand. For simplicity, at this point let us assume inheritance implies a sub-type relationship.%%
 
 <box>
 
 {{ icon_example }} To continue the previous example,
-* `Woman` _is a_ `Person` 
+* `Woman` _is a_ `Person`
 * `Man` _is a_ `Person`
 
 </box>
@@ -46,7 +46,7 @@
 
 {{ icon_example }} Two inheritance hierarchies/trees are given below. %%Note that the triangle points to the parent class.%% Observe how the `Parrot` _is a_ `Bird` as well as it _is an_ `Animal`.
 
-<img src="{{baseUrl}}/oop/inheritance/what/images/inheritanceTreesExamples.png" width="500" />
+<pic src="{{baseUrl}}/oop/inheritance/what/images/inheritanceTreesExamples.png" width="500" />
 <p/>
 
 </box>
@@ -57,7 +57,7 @@
 
 {{ icon_example }} The `Honey` class inherits from the `Food` class _and_ the `Medicine` class %%because honey can be consumed as a food as well as a medicine (in some oriental medicine practices)%%. Similarly, a `Car` is a `Vehicle`, an `Asset` and a `Liability`.
 
-<img src="{{baseUrl}}/oop/inheritance/what/images/multipleInheritanceExamples.png" width="440" />
+<pic src="{{baseUrl}}/oop/inheritance/what/images/multipleInheritanceExamples.png" width="440" />
 
 </box>
 

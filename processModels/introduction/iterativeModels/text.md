@@ -8,7 +8,7 @@
 
 **The iterative model (sometimes called _iterative_ and _incremental_) advocates having several _iterations_ of SDLC.** Each of the iterations could potentially go through all the development stages, from requirements gathering to testing & deployment. Roughly, it appears to be similar to several cycles of the sequential model.
 
-<img src="{{baseUrl}}/processModels/introduction/iterativeModels/images/diagram.png" height="300" />
+<pic src="{{baseUrl}}/processModels/introduction/iterativeModels/images/diagram.png" height="300" />
 <p/>
 
 **In this model, each of the iterations produces a new version of the product.** Feedback on the new version can then be fed to the next iteration. Taking the Minesweeper game as an example, the iterative model will deliver a fully playable version from the early iterations. However, the first iteration will have primitive functionality, for example, a clumsy text based UI, fixed board size, limited randomization, etc. These functionalities will then be improved in later releases.

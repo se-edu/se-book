@@ -28,11 +28,11 @@ In a smaller system, the design of the entire system can be shown in one place.
 
 {{ icon_example }} This architecture diagram of [se-edu/addressbook-level3](https://se-education.org/addressbook-level3) depicts the high-level design of the software.
 
-<img src="https://se-education.org/addressbook-level3/images/ArchitectureDiagram.png" width="300" />
+<pic src="https://se-education.org/addressbook-level3/images/ArchitectureDiagram.png" width="300" />
 
 Here are examples of lower level designs of some components of the same software:
 
-<tabs> 
+<tabs>
   <tab header="UI">
 
 <pic src="https://se-edu.github.io/addressbook-level3/images/UiClassDiagram.png" width="700" />

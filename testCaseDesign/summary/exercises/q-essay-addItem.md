@@ -3,7 +3,7 @@
 
 Assume you are testing the `add(Item)` method specified below.
 
-<img src="{{baseUrl}}/testCaseDesign/summary/exercises/images/itemList.png" height="100" />
+<pic src="{{baseUrl}}/testCaseDesign/summary/exercises/images/itemList.png" height="100" />
 <p/>
 
 Assume `i` to be the Item being added.
@@ -44,7 +44,7 @@ Assume `i` to be the Item being added.
 
 (c)
 
-<img src="{{baseUrl}}/testCaseDesign/summary/exercises/images/count.png" height="250" />
+<pic src="{{baseUrl}}/testCaseDesign/summary/exercises/images/count.png" height="250" />
 <p/>
 
 </div>

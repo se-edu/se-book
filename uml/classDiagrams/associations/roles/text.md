@@ -8,13 +8,13 @@
 
 **_Association Role_ are used to indicate the role played by the classes in the association.**
 
-<img src="{{baseUrl}}/uml/classDiagrams/associations/roles/images/notation.png" height="60" />
+<pic src="{{baseUrl}}/uml/classDiagrams/associations/roles/images/notation.png" height="60" />
 
 <box>
 
 {{ icon_example }} This association represents a marriage between a `Man` object and a `Woman` object. The respective roles played by objects of these two classes are `husband` and `wife`.
 
-<img src="{{baseUrl}}/uml/classDiagrams/associations/roles/images/husbandWife.png" width="300" />
+<pic src="{{baseUrl}}/uml/classDiagrams/associations/roles/images/husbandWife.png" width="300" />
 <p/>
 
 Note how the variable names match closely with the association roles.
@@ -49,7 +49,7 @@ class Woman:
 
 {{ icon_example }} The role of `Student` objects in this association is `charges` %%(i.e. Admin is in charge of students)%%
 
-<img src="{{baseUrl}}/uml/classDiagrams/associations/roles/images/adminStudent.png" height="70" />
+<pic src="{{baseUrl}}/uml/classDiagrams/associations/roles/images/adminStudent.png" height="70" />
 <p/>
 
 <div class="alt-java">

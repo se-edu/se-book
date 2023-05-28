@@ -13,14 +13,14 @@ As mentioned in [<trigger trigger="click" for="modal:basicModelling-modelingIntr
   <include src="../introduction/unit-inElsewhere-asFlat.md" boilerplate/>
 </modal>
 
-<img src="{{baseUrl}}/modeling/modelingASolution/introduction/images/textLogicMinefieldCell.png" height="50" />
+<pic src="{{baseUrl}}/modeling/modelingASolution/introduction/images/textLogicMinefieldCell.png" height="50" />
 <p/>
 
 Let us start by modeling a sample interaction between the person playing the game and the `TextUi` object.
 
 <box>
 
-<img src="{{baseUrl}}/modeling/modelingASolution/basic/images/playerText.png" height="300" />
+<pic src="{{baseUrl}}/modeling/modelingASolution/basic/images/playerText.png" height="300" />
 <p/>
 
 `newgame` and `clear x y` represent commands typed by the `Player` on the `TextUi`.
@@ -31,7 +31,7 @@ How does the `TextUi` object carry out the requests it has received from the pla
 
 <box>
 
-<img src="{{baseUrl}}/modeling/modelingASolution/basic/images/playerTextLogic.png" height="280" />
+<pic src="{{baseUrl}}/modeling/modelingASolution/basic/images/playerTextLogic.png" height="280" />
 <p/>
 
 `W` = Width of the minefield; `H` =  Height of the minefield
@@ -44,7 +44,7 @@ The `Logic` methods you conceptualized in our modeling so far are:
 
 <box>
 
-<img src="{{baseUrl}}/modeling/modelingASolution/basic/images/textLogicMinefieldCell.png" height="115" />
+<pic src="{{baseUrl}}/modeling/modelingASolution/basic/images/textLogicMinefieldCell.png" height="115" />
 
 </box>
 
@@ -52,7 +52,7 @@ Now, let us look at what other objects and interactions are needed to support th
 
 <box>
 
-<img src="{{baseUrl}}/modeling/modelingASolution/basic/images/logicMinefield.png" height="150" />
+<pic src="{{baseUrl}}/modeling/modelingASolution/basic/images/logicMinefield.png" height="150" />
 
 </box>
 
@@ -63,7 +63,7 @@ Given below are the interactions between the player and the `TextUi` for the who
 
 <box>
 
-<img src="{{baseUrl}}/modeling/modelingASolution/basic/images/playerTextLoop.png" height="300" />
+<pic src="{{baseUrl}}/modeling/modelingASolution/basic/images/playerTextLoop.png" height="300" />
 <p/>
 
 </box><p/>

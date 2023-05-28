@@ -20,7 +20,7 @@ Here are the steps to simulate a merge conflict and use it to learn how to resol
 
 **2. Switch back to `master` branch. Create a commit with a conflicting change** i.e. it adds a line with some different text in the exact location the previous line was added.
 
-<img src="{{baseUrl}}/gitAndGithub/mergeConflicts/images/sourcetree_1.png" height="350" />
+<pic src="{{baseUrl}}/gitAndGithub/mergeConflicts/images/sourcetree_1.png" height="350" />
 <p/>
 
 **3. Try to merge the `fix1` branch onto the `master` branch.** Git will pause mid-way during the merge and report a merge conflict. If you open the conflicted file, you will see something like this:

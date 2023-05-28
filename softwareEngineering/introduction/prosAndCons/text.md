@@ -85,10 +85,10 @@ The following description of the _Joys of the Programming Craft_ was taken from 
 <tbody>
 <tr>
 <td>
-<img src="https://upload.wikimedia.org/wikipedia/en/f/fd/Mythical_man-month_%28book_cover%29.jpg" height="250" />
+<pic src="https://upload.wikimedia.org/wikipedia/en/f/fd/Mythical_man-month_%28book_cover%29.jpg" height="250" />
 </td>
 <td>
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Fred_Brooks.jpg/800px-Fred_Brooks.jpg" height="250" />
+<pic src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Fred_Brooks.jpg/800px-Fred_Brooks.jpg" height="250" />
 </td>
 <tr>
 <td>

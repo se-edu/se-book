@@ -3,7 +3,7 @@
 
 Which of these follow the correct UML notation?
 
-<img src="{{baseUrl}}/uml/classDiagrams/classes/what/images/chooseNotation.jpg" height="130" />
+<pic src="{{baseUrl}}/uml/classDiagrams/classes/what/images/chooseNotation.jpg" height="130" />
 <p/>
 
 - [ ] 1
