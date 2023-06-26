@@ -12,21 +12,23 @@
 
 {{ icon_example }} This is an automated test for a `Payroll` class, written using JUnit libraries.
 
-```java
-@Test
-public void testTotalSalary() {
-    Payroll p = new Payroll();
+```java{start-from=16}
+    // other test methods
 
-    // test case 1
-    p.setEmployees(new String[]{"E001", "E002"});
-    assertEquals(6400, p.totalSalary());
+    @Test
+    public void testTotalSalary() {
+        Payroll p = new Payroll();
 
-    // test case 2
-    p.setEmployees(new String[]{"E001"});
-    assertEquals(2300, p.totalSalary());
+        // test case 1
+        p.setEmployees(new String[]{"E001", "E002"});
+        assertEquals(6400, p.totalSalary());
 
-    // more tests...
-}
+        // test case 2
+        p.setEmployees(new String[]{"E001"});
+        assertEquals(2300, p.totalSalary());
+
+        // more tests...
+    }
 ```
 </box>
 

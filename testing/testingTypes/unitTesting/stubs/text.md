@@ -1,12 +1,10 @@
 <span id="title">Stubs</span>
 
-<span id="prereqs"><panel src="../what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Quality Assurance → Testing → Unit Testing → What →%%" popup-url="{{ baseUrl }}/testing/testingTypes/unitTesting/what" /></span>
-
 <span id="outcomes">{{ icon_outcome }} Can use stubs to isolate an SUT from its dependencies</span>
 
 <div id="body">
 
-**A proper unit test requires the _unit_ to be tested ==in isolation==** so that bugs in the <tooltip content="code the unit depends on">dependencies</tooltip> cannot influence the test %%i.e. bugs outside of the unit should not affect the unit tests%%.
+**A proper unit test requires the _unit_ to be tested ==in isolation==** so that bugs in the <tooltip content="other code the unit depends on">dependencies</tooltip> cannot influence the test %%i.e. bugs outside of the unit should not affect the unit tests%%.
 
 <box>
 
