@@ -46,6 +46,12 @@ Less important info
 
 </box>
 
+<span id="tip-about-popup-url">You can use the <span class="btn btn-light ps-1 pe-1 pb-0 pt-0 border"><small>:glyphicon-new-window:</small></span> button in a panel to open it as a new tab (it can be expanded in-place too). This feature is available only for panels containing another _full_ page of the website (i.e., not available if the panel contains an _extract_ of a page).</span> e.g.,
+
+<panel header="A panel that can be opened as another tab" popup-url="acknowledgements.html">
+<include src="acknowledgements.md" />
+</panel>
+<p/>
 
 **Tabs indicate _alternative_ content** (e.g. video vs text). You can choose the one you like and ignore the other tabs.
 
