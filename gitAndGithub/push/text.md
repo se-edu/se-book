@@ -1,5 +1,3 @@
-<span id="prereqs"><panel src="../pull/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Tools → Git & GitHub → Pull%%" popup-url="{{ baseUrl }}/gitAndGithub/pull" /></span>
-
 <span id="outcomes">{{ icon_outcome }} Can push to a remote repo</span>
 
 <span id="title">`push`: Uploading data to other repos</span>
@@ -24,17 +22,37 @@ Given below is a scenario you can try in order to learn how to <trigger trigger=
 
 <tabs>
   <tab header="SourceTree">
-    <include src="./sourcetree.md" />
+    <include src="./sourcetree_1.md" />
   </tab>
   <tab header="CLI">
-    <include src="./cli.md" />
+    <include src="./cli_1.md" />
+  </tab>
+</tabs>
+<p/>
+
+
+**5. Add a few more commits, and <trigger trigger="click" for="modal:push-tag">tag</trigger> some of them.**
+
+<modal large header="Tools → Git and GitHub → `tag`: Naming commits" id="modal:push-tag">
+  <include src="../tag/text.md"/>
+</modal>
+
+**6. Push the new commits ==_and_ the tags==.**
+
+<tabs>
+  <tab header="SourceTree">
+    <include src="./sourcetree_2.md" />
+  </tab>
+  <tab header="CLI">
+    <include src="./cli_2.md" />
   </tab>
 </tabs>
 
-<p/>
 </div>
 
-**You can push to repos other than the one you cloned from**, as long as the target repo and your repo have a shared history.
+<box>
+
+****You can push to repos other than the one you cloned from****, as long as the target repo and your repo have a shared history.
 1. <trigger trigger="click" for="modal:push-addRemoteForNormalPushing">Add the GitHub repo URL as a remote</trigger>, if you haven't done so already.
 1. Push to the target repo.
 
@@ -44,21 +62,17 @@ Given below is a scenario you can try in order to learn how to <trigger trigger=
 
 <tabs>
   <tab header="SourceTree">
-
-Push your repo to the new remote the usual way, but select the name of target remote instead of `origin` and remember to select the `Track` checkbox.<br>
-<pic src="{{baseUrl}}/gitAndGithub/push/images/pushToRemote.png" width="470" />
-
+    <include src="./sourcetree_3.md" />
   </tab>
   <tab header="CLI">
-
-Push to the new remote the usual way  e.g., `git push upstream1 master` (assuming you gave the name `upstream1` to the remote).
-
+    <include src="./cli_3.md" />
   </tab>
 </tabs>
+</box>
 
-<p/>
+<box>
 
-**You can even push an entire local repository** to GitHub, to form an entirely new remote repository. For example, you created a local repo and worked with it for a while but now you want to upload it onto GitHub (as a backup or to share it with others). The steps are given below.
+****You can even push an entire local repository to GitHub****, to form an entirely new remote repository. For example, you created a local repo and worked with it for a while but now you want to upload it onto GitHub (as a backup or to share it with others). The steps are given below.
 
 **1. Create an ==empty== remote repo on GitHub.**
 
@@ -93,7 +107,7 @@ Push each branch to the new remote the usual way ==but use the `-u` flag== to in
 
   </tab>
 </tabs>
-
+</box>
 </div>
 
 <div id="extras">

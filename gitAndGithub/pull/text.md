@@ -1,5 +1,3 @@
-<span id="prereqs"><panel src="../clone/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Tools → Git & GitHub → Clone%%" popup-url="{{ baseUrl }}/gitAndGithub/clone" /></span>
-
 <span id="outcomes">{{ icon_outcome }} Can pull changes from a repo</span>
 
 <span id="title">`pull`, `fetch`: Downloading data from other repos</span>

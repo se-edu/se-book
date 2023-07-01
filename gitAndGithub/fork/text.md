@@ -1,5 +1,3 @@
-<span id="prereqs"><panel src="../pull/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Tools → Git & GitHub → Pull%%" popup-url="{{ baseUrl }}/gitAndGithub/pull" /></span>
-
 <span id="outcomes">{{ icon_outcome }} Can fork a repo</span>
 
 <span id="title">Fork: Creating a remote copy</span>
@@ -18,7 +16,7 @@ Given below is a scenario you can try in order to learn how to <trigger trigger=
 
 **2. Click on the <pic src="images/fork.png" height="30" /> button** on the top-right corner. In the next step,
   * choose to fork to your own account or to another GitHub organization that you are an admin of.
-  * ==Un-tick the `[ ] Copy the master branch only` option==.
+  * ==Un-tick the `[ ] Copy the master branch only` option==, so that you get copies of other branches (if any) in the repo.
 
 {{ icon_info }} GitHub does not allow you to fork the same repo more than once to the same destination. If you want to re-fork, you need to delete the previous fork.
 

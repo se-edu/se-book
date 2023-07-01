@@ -1,5 +1,3 @@
-<span id="prereqs"><panel src="../../revisionControl/usingHistory/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Project Management → Revision Control → Using History%%" popup-url="{{ baseUrl }}/revisionControl/usingHistory" /></span>
-
 <span id="outcomes">{{ icon_outcome }} Can compare git revisions</span>
 
 <span id="title">`diff`: Comparing revisions</span>
