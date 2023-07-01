@@ -1,5 +1,3 @@
-<span id="prereqs"><panel src="../init/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Git & GitHub → Init%%" popup-url="{{ baseUrl }}/gitAndGithub/init" /></span>
-
 <span id="outcomes">{{ icon_outcome }} Can commit using Git</span>
 
 <span id="title">`commit`: Saving changes to history</span>
@@ -7,13 +5,6 @@
 <div id="body">
 
 **After initializing a repository, Git can help you with revision controlling files inside the _working directory_. However, it is not automatic.** It is up to you to tell Git which of your changes (aka _revisions_) should be _committed_ to its memory for later use. Saving changes into Git's memory in that way is often called _committing_ and a change saved to the revision history is called a _commit_.
-
-<box type="definition" seamless>
-<include src="../../common/definitions.md#def-working-directory" trim />
-</box>
-<box type="definition" seamless>
-<include src="../../common/definitions.md#def-commit" trim />
-</box>
 
 Here are the steps you can follow to learn how to work with Git commits:
 
@@ -31,11 +22,6 @@ Here are the steps you can follow to learn how to work with Git commits:
 </tabs>
 
 **3. Stage the changes to commit**: Although Git has detected the file in the working directory, it will not do anything with the file unless you tell it to. Suppose you want to commit the current changes to the file. First, you should _stage_ the file.
-
-
-<box type="definition" seamless>
-<include src="../../common/definitions.md#def-stage" trim />
-</box>
 
 <tabs>
   <tab header="SourceTree">
@@ -71,6 +57,11 @@ Here are the steps you can follow to learn how to work with Git commits:
    <pic src="{{baseUrl}}/gitAndGithub/commit/images/sourcetree_7.png" height="150" />
    <p/>
 
+   <box type="tip" seamless>
+
+    **You can decide what to stage and what to leave unstaged.** When staging changes to commit, you can leave some files unstaged, if you wish to not include them in the next commit. In fact, Git even allows some changes in a file to be staged, while others changes in the same file to be unstaged. This flexibility is particularly useful when you want to put all related changes into a commit while leaving out unrelated changes.
+   </box>
+
 **6. See the revision graph:**  Note how commits form a path-like structure aka the _revision tree/graph_. In the revision graph, each commit is shown as linked to its 'parent' commit (i.e., the commit before it).
 
 <tabs>
@@ -87,5 +78,4 @@ The `gitk` command opens a rudimentary graphical view of the revision graph.
 </div>
 
 <div id="extras">
-  <include src="resources.md"/>
 </div>

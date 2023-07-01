@@ -1,5 +1,3 @@
-<span id="prereqs"><panel src="../../revisionControl/repositories/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Project Management → Revision Control → Repositories%%" popup-url="{{ baseUrl }}/revisionControl/repositories" /></span>
-
 <span id="outcomes">{{ icon_outcome }} Can create a local Git repo</span>
 
 <span id="title">`init`: Getting started</span>
@@ -20,6 +18,14 @@ Let's take your first few steps in your Git (with GitHub) journey.
 </panel><p/>
 
 **1. The first step is to install** [SourceTree](https://www.sourcetreeapp.com/), which is Git + a GUI for Git. If you prefer to use Git via the command line (i.e., without a GUI), you can [install Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) instead.
+
+  <box type="info" seamless>
+
+  **Instructions for installing SourceTree** are [here](https://confluence.atlassian.com/get-started-with-sourcetree/install-sourcetree-847359094.html).
+
+  * When prompted, create a Atlassian account if you don't have one.
+  * When prompted, connect SourceTree to your GitHub account (as you'll need to use GitHub later). There is no need to connect to a BitBucket account.
+  </box>
 
 **2. Next, initialize a repository.** Let us assume you want to version control content in a specific directory. In that case, you need to initialize a Git repository in that directory. Here are the steps:
 

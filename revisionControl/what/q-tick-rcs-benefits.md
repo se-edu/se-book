@@ -1,4 +1,4 @@
-<panel header="{{ icon_Q_A }} Which of these is not considered a benefit of a typical RCS?">
+<panel header="{{ icon_Q_A }} Which of these are considered benefits of a typical RCS?">
 <question>
 
 - [ ] a. Help a single user manage revisions of a single file
@@ -6,12 +6,10 @@
 - [ ] c. Make it easier for a group of developers to collaborate on a project
 - [ ] d. Manage the drift between multiple versions of your project
 - [ ] e. Detect when multiple developers make incompatible changes to the same file
-- [ ] f. All of them are benefits of RCS
 
 <div slot="answer">
 
-f
-
+all of them
 </div>
 </question>
 </panel>

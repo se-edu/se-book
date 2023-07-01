@@ -40,19 +40,20 @@ Manually managing multiple versions of even a single file is an error-prone task
 </modal>
 
 <box type="definition" seamless>
-<include src="../../common/definitions.md#def-rcs" trim />
+<include src="../../common/definitions.md#def-revision" trim />
 </box>
 
 <box type="definition" seamless>
-<include src="../../common/definitions.md#def-revision" trim />
+<include src="../../common/definitions.md#def-rcs" trim />
 </box>
 
 Revision control software are also known as _Version Control Software (VCS)_, and by a few other names.
 
+**++[:fab-git-alt: Git](https://git-scm.com/)++ is the most widely used RCS today.** Other RCS tools include Mercurial, Subversion (SVN), Perforce, CVS (Concurrent Versions System), Bazaar, TFS (Team Foundation Server), and Clearcase.
+
+ **++[:fab-github: Github](https://github.com/)++ is a web-based project hosting platform for projects using Git for revision control.** Other similar services include GitLab, BitBucket, and SourceForge.
 </div>
 
 <div id="extras">
-
 <include src="exercises.md" />
-
 </div>
