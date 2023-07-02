@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_git_tabs with context %}
 <span id="outcomes">{{ icon_outcome }} Can create a local Git repo</span>
 
 <span id="title">`init`: Getting started</span>
@@ -31,14 +32,7 @@ Let's take your first few steps in your Git (with GitHub) journey.
 
 Create a directory for the repo (e.g., a directory named `things`).
 
-<tabs>
-  <tab header="SourceTree">
-    <include src="./sourcetree.md" />
-  </tab>
-  <tab header="CLI">
-    <include src="./cli.md" />
-  </tab>
-</tabs>
+{{ show_git_tabs() }}
 
 
 <box type="tip" seamless>

@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_git_tabs with context %}
 <span id="outcomes">{{ icon_outcome }} Can tag commits using Git</span>
 
 <span id="title">`tag`: Naming commits</span>
@@ -8,14 +9,7 @@
 
 Here's how you can tag a commit in a local repo:
 
-<tabs>
-  <tab header="SourceTree">
-    <include src="./sourcetree.md" />
-  </tab>
-  <tab header="CLI">
-    <include src="./cli.md" />
-  </tab>
-</tabs>
+{{ show_git_tabs() }}
 
 After adding a tag to a commit, you can use the tag to refer to that commit, as an alternative to using the hash.
 

@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_git_tabs with context %}
 <span id="outcomes">{{ icon_outcome }} Can set Git to ignore files</span>
 
 <span id="title">Omitting files from revision control</span>
@@ -11,14 +12,7 @@ Often, there are files inside the Git working folder that you don't want to revi
 
 **2. Configure Git to ignore that file:**
 
-<tabs>
-  <tab header="SourceTree">
-    <include src="./sourcetree.md" />
-  </tab>
-  <tab header="CLI">
-    <include src="./cli.md" />
-  </tab>
-</tabs>
+{{ show_git_tabs() }}
 
 <box type="info" seamless>
 

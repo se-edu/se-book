@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_git_tabs with context %}
 <span id="outcomes">{{ icon_outcome }} Can commit using Git</span>
 
 <span id="title">`commit`: Saving changes to history</span>
@@ -12,36 +13,15 @@ Here are the steps you can follow to learn how to work with Git commits:
 
 **2. Observe how the file is detected by Git.**
 
-<tabs>
-  <tab header="SourceTree">
-    <include src="./sourcetree_1.md" />
-  </tab>
-  <tab header="CLI">
-    <include src="./cli_1.md" />
-  </tab>
-</tabs>
+{{ show_git_tabs('_1') }}
 
 **3. Stage the changes to commit**: Although Git has detected the file in the working directory, it will not do anything with the file unless you tell it to. Suppose you want to commit the current changes to the file. First, you should _stage_ the file.
 
-<tabs>
-  <tab header="SourceTree">
-    <include src="./sourcetree_2.md" />
-  </tab>
-  <tab header="CLI">
-    <include src="./cli_2.md" />
-  </tab>
-</tabs>
+{{ show_git_tabs('_2') }}
 
 **4. Commit** the staged version of `fruits.txt`.
 
-<tabs>
-  <tab header="SourceTree">
-    <include src="./sourcetree_3.md" />
-  </tab>
-  <tab header="CLI">
-    <include src="./cli_3.md" />
-  </tab>
-</tabs>
+{{ show_git_tabs('_3') }}
 
 **Note the existence of something called the `master` branch.** Git allows you to have multiple branches (i.e. it is a way to evolve the content in parallel) and Git auto-creates a branch named `master` on which the commits go on by default.
 

@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_git_tabs with context %}
 <span id="outcomes">{{ icon_outcome }} Can load a specific version of a Git repo</span>
 
 <span id="title">`checkout`: Retrieving a specific revision</span>
@@ -10,14 +11,7 @@
   <include src="../stash/unit-inElsewhere-asPanelBody.md" boilerplate />
 </modal>
 
-<tabs>
-  <tab header="SourceTree">
-    <include src="./sourcetree_1.md" />
-  </tab>
-  <tab header="CLI">
-    <include src="./cli_1.md" />
-  </tab>
-</tabs>
+{{ show_git_tabs('_1') }}
 
 
 </div>

@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_git_tabs with context %}
 <span id="title">`branch`: Doing multiple parallel changes</span>
 
 <span id="outcomes">{{ icon_outcome }} Can use Git branching</span>
@@ -30,39 +31,18 @@ Follow the steps below to learn how to work with branches. You can use any repo 
 
 **0. Observe that you are normally in the branch called `master`.**
 
-<tabs>
-  <tab header="SourceTree">
-    <include src="./sourcetree_0.md" />
-  </tab>
-  <tab header="CLI">
-    <include src="./cli_0.md" />
-  </tab>
-</tabs>
+{{ show_git_tabs('_0') }}
 
 **1. Start a branch named `feature1` and switch to the new branch.**
 
-<tabs>
-  <tab header="SourceTree">
-    <include src="./sourcetree_1.md" />
-  </tab>
-  <tab header="CLI">
-    <include src="./cli_1.md" />
-  </tab>
-</tabs>
+{{ show_git_tabs('_1') }}
 
 **2. Create some commits in the new branch.** %%Just commit as per normal. Commits you add while on a certain branch will become part of that branch.%%<br>
 Note how the `master` label and the `HEAD` label moves to the new commit (The `HEAD` label of the local repo is represented as :fas-dot-circle: in SourceTree).
 
 **3. Switch to the `master` branch.** Note how the changes you did in the `feature1` branch are no longer in the working directory.
 
-<tabs>
-  <tab header="SourceTree">
-    <include src="./sourcetree_2.md" />
-  </tab>
-  <tab header="CLI">
-    <include src="./cli_2.md" />
-  </tab>
-</tabs>
+{{ show_git_tabs('_2') }}
 
 **4. Add a commit to the master branch.** Let’s imagine it’s a bug fix.<br>
 To keep things simple for the time being, this commit should ==not involve the same content that you changed in the `feature1` branch==. To be on the safe side, this commit can change an entirely different file.
@@ -77,14 +57,7 @@ To keep things simple for the time being, this commit should ==not involve the s
 <pic src="{{baseUrl}}/gitAndGithub/branch/images/sourcetree_5.png" height="120" />
 <p/>
 
-<tabs>
-  <tab header="SourceTree">
-    <include src="./sourcetree_3.md" />
-  </tab>
-  <tab header="CLI">
-    <include src="./cli_3.md" />
-  </tab>
-</tabs>
+{{ show_git_tabs('_3') }}
 
 The objective of that merge was to _sync_ the `feature1` branch with the `master` branch. Observe how the changes you did in the `master` branch (i.e. the imaginary bug fix) is now available even when you are in the `feature1` branch.
 
@@ -143,14 +116,7 @@ That is because **Git does a ==_fast forward_ merge== if possible**. Seeing that
 
 **It is possible to force Git to create a merge commit even if fast forwarding is possible.**
 
-<tabs>
-  <tab header="SourceTree">
-    <include src="./sourcetree_4.md" />
-  </tab>
-  <tab header="CLI">
-    <include src="./cli_4.md" />
-  </tab>
-</tabs>
+{{ show_git_tabs('_4') }}
 
 <box>
 

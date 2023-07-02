@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_git_tabs with context %}
 <span id="outcomes">{{ icon_outcome }} Can pull changes from a repo</span>
 
 <span id="title">`pull`, `fetch`: Downloading data from other repos</span>
@@ -18,27 +19,13 @@ Here's a scenario you can try in order to learn how to <trigger trigger="click" 
   <include src="../clone/embed.md" boilerplate />
 </modal>
 
-<tabs>
-  <tab header="SourceTree">
-    <include src="./sourcetree_1.md" />
-  </tab>
-  <tab header="CLI">
-    <include src="./cli_1.md" />
-  </tab>
-</tabs>
+{{ show_git_tabs('_1') }}
 
 Now, your local repo state is exactly how it would be if you had cloned the repo 2 commits ago, as if somebody has added two more commits to the remote repo since you cloned it.
 
 **3. Pull** from the other repo: To get those missing commits to your local repo (i.e. to sync your local repo with upstream repo) you can do a pull.
 
-<tabs>
-  <tab header="SourceTree">
-    <include src="./sourcetree_2.md" />
-  </tab>
-  <tab header="CLI">
-    <include src="./cli_2.md" />
-  </tab>
-</tabs>
+{{ show_git_tabs('_2') }}
 <p/>
 
 {{ icon_info }} **You can also do a `fetch` instead of a `pull`** in which case the new commits will be downloaded to your repo but the working directory will remain at the current commit. To move the current state to the latest commit that was downloaded, you need to do a `merge`. A `pull` is a shortcut that does both those steps in one go.
@@ -58,14 +45,7 @@ Now, your local repo state is exactly how it would be if you had cloned the repo
 
 **To communicate with another remote repo, you can first add it as a _remote_ of your repo**. Here is an example scenario you can follow to learn how to pull from another repo:
 
-<tabs>
-  <tab header="SourceTree">
-<include src="sourcetree_3.md" />
-  </tab>
-  <tab header="CLI">
-<include src="cli_3.md" />
-  </tab>
-</tabs>
+{{ show_git_tabs('_3') }}
 
 </div>
 

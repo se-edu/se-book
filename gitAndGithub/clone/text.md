@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_git_tabs with context %}
 <span id="outcomes">{{ icon_outcome }} Can clone a remote repo</span>
 
 <span id="title">`clone`: Copying a repo</span>
@@ -22,14 +23,7 @@ Git repo URL: `https://github.com/se-edu/samplerepo-things.git` (note the `.git`
 
 </box>
 
-<tabs>
-  <tab header="SourceTree">
-    <include src="./sourcetree.md" />
-  </tab>
-  <tab header="CLI">
-    <include src="./cli.md" />
-  </tab>
-</tabs>
+{{ show_git_tabs() }}
 
 </div>
 

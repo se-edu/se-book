@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_git_tabs with context %}
 <span id="outcomes">{{ icon_outcome }} Can push to a remote repo</span>
 
 <span id="title">`push`: Uploading data to other repos</span>
@@ -20,15 +21,7 @@ Given below is a scenario you can try in order to learn how to <trigger trigger=
 
 **4. Push** the new commits to your fork on GitHub
 
-<tabs>
-  <tab header="SourceTree">
-    <include src="./sourcetree_1.md" />
-  </tab>
-  <tab header="CLI">
-    <include src="./cli_1.md" />
-  </tab>
-</tabs>
-<p/>
+{{ show_git_tabs('_1') }}
 
 
 **5. Add a few more commits, and <trigger trigger="click" for="modal:push-tag">tag</trigger> some of them.**
@@ -39,14 +32,7 @@ Given below is a scenario you can try in order to learn how to <trigger trigger=
 
 **6. Push the new commits ==_and_ the tags==.**
 
-<tabs>
-  <tab header="SourceTree">
-    <include src="./sourcetree_2.md" />
-  </tab>
-  <tab header="CLI">
-    <include src="./cli_2.md" />
-  </tab>
-</tabs>
+{{ show_git_tabs('_2') }}
 
 </div>
 
@@ -60,14 +46,7 @@ Given below is a scenario you can try in order to learn how to <trigger trigger=
   <include src="../pull/text.md#section-working-with-multiple-remotes"/>
 </modal>
 
-<tabs>
-  <tab header="SourceTree">
-    <include src="./sourcetree_3.md" />
-  </tab>
-  <tab header="CLI">
-    <include src="./cli_3.md" />
-  </tab>
-</tabs>
+{{ show_git_tabs('_3') }}
 </box>
 
 <box>
