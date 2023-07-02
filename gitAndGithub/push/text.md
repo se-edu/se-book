@@ -73,19 +73,8 @@ Given below is a scenario you can try in order to learn how to <trigger trigger=
 
 **3. Push the repo** to the remote.
 
-<tabs>
-  <tab header="SourceTree">
+{{ show_git_tabs('_4') }}
 
-<pic src="{{baseUrl}}/gitAndGithub/push/images/pushToRemote.png" width="470" />
-
-  </tab>
-  <tab header="CLI">
-
-Push each branch to the new remote the usual way ==but use the `-u` flag== to inform Git that you wish to <tooltip content="i.e., remember which branch in the remote repo corresponds to which branch in the local repo">track</tooltip> the branch.<br>
-   e.g., `git push -u origin master`
-
-  </tab>
-</tabs>
 </box>
 </div>
 

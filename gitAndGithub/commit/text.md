@@ -25,6 +25,8 @@ Here are the steps you can follow to learn how to work with Git commits:
 
 **Note the existence of something called the `master` branch.** Git allows you to have multiple branches (i.e. it is a way to evolve the content in parallel) and Git auto-creates a branch named `master` on which the commits go on by default.
 
+{{ show_git_tabs('_4') }}
+
 **5. Do a few more commits**.
 
 1. Make some changes to `fruits.txt` (e.g. add some text and delete some text). Stage the changes, and commit the changes using the same steps you followed before. You should end up with something like this.
@@ -44,16 +46,7 @@ Here are the steps you can follow to learn how to work with Git commits:
 
 **6. See the revision graph:**  Note how commits form a path-like structure aka the _revision tree/graph_. In the revision graph, each commit is shown as linked to its 'parent' commit (i.e., the commit before it).
 
-<tabs>
-  <tab header="SourceTree">
-
-To see the revision graph, click on the `History` item on the menu on the right edge of SourceTree.
-  </tab>
-  <tab header="CLI">
-
-The `gitk` command opens a rudimentary graphical view of the revision graph.
-  </tab>
-</tabs>
+{{ show_git_tabs('_5') }}
 
 </div>
 

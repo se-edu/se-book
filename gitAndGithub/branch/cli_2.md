@@ -1,3 +1,3 @@
-```
-git checkout master
+```{.no-line-numbers}
+$ git checkout master
 ```

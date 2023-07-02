@@ -7,27 +7,40 @@
 
 **Git supports branching**, which allows you to do multiple parallel changes to the content of a repository.
 
+First, let us learn how the repo looks like as you perform branching operations.
+
 **A Git branch is simply a _named label_ pointing to a commit. The `HEAD` label indicates which branch you are on.** Git creates a branch named `master` by default. When you add a commit, it goes into the branch you are currently on, and the branch label (together with the `HEAD` label) moves to the new commit.
 
-Given below is an illustration of how branch labels move as branches evolve.
+Given below is an illustration of how branch labels move as branches evolve. Refer to the text below it for explanations of each stage.
 
-<pic src="images/branchesAsLabels1.png" width="650"/>
+<annotate src="{{ baseUrl }}/gitAndGithub/branch/images/branchesAsLabels1.png" height="500" alt="Sample Image">
+<a-point x="2%" y="27%" label="[1]" legend="1" opacity="0"/>
+<a-point x="2%" y="47%" label="[2]" legend="1" opacity="0"/>
+<a-point x="35%" y="25%" label="[3]" legend="1" opacity="0"/>
+<a-point x="65%" y="10%" label="[4]" legend="1" opacity="0"/>
+<a-point x="85%" y="10%" label="[5]" legend="1" opacity="0"/>
+</annotate>
+<p/>
 
-1. There is only one branch (i.e., `master`) and there is only one commit on it.
+1. There is only one branch (i.e., `master`) and there is only one commit on it. The `HEAD` label is pointing to the `master` branch (as we are currently on that branch).
+   <box type="info" seamless>
+
+   To learn a bit more about how labels such as `master` and `HEAD` work, you can refer to [this article](https://initialcommit.com/blog/what-is-git-head).
+   </box>
 1. A new commit has been added. The `master` and the `HEAD` labels have moved to the new commit.
 1. A new branch `fix1` has been added. The repo has switched to the new branch too (hence, the `HEAD` label is attached to the `fix1` branch).
 1. A new commit (`c`) has been added. The current branch label `fix1` moves to the new commit, together with the `HEAD` label.
-1. The repo has switched back to the `master` branch.
+1. The repo has switched back to the `master` branch. Hence, the `HEAD` has moved back to `master` branch's <tooltip content="latest commit of that branch">tip</tooltip>.<br>
+   At this point, the repo's working directory reflects the code at commit `b` (not `c`).
 
 <pic src="images/branchesAsLabels2.png" width="600"/>
 
-6. A new commit (`d`) has been added. The `master` label has moved to that commit.
+6. A new commit (`d`) has been added. The `master` and the `HEAD` labels have moved to that commit.
 1. The repo has switched back to the `fix1` branch and added a new commit (`e`) to it.
 1. The repo has switched to the `master` branch and the `fix1` branch has been merged into the `master` branch, creating a _merge commit_ `f`. The repo is currently on the `master` branch.
 
 
-
-Follow the steps below to learn how to work with branches. You can use any repo you have on your computer (e.g. a clone of the [samplerepo-things](https://github.com/se-edu/samplerepo-things)) for this.
+Now that you have some idea how the repo will look like when branches are being used, let's follow the steps below to learn how to perform branching operations using Git. You can use any repo you have on your computer (e.g. a clone of the [samplerepo-things](https://github.com/se-edu/samplerepo-things)) for this.
 
 **0. Observe that you are normally in the branch called `master`.**
 
@@ -45,7 +58,7 @@ Note how the `master` label and the `HEAD` label moves to the new commit (The `H
 {{ show_git_tabs('_2') }}
 
 **4. Add a commit to the master branch.** Let’s imagine it’s a bug fix.<br>
-To keep things simple for the time being, this commit should ==not involve the same content that you changed in the `feature1` branch==. To be on the safe side, this commit can change an entirely different file.
+To keep things simple for the time being, this commit should ==not involve the same content that you changed in the `feature1` branch==. To be on the safe side, you can change an entirely different file in this commit.
 
 <pic src="{{baseUrl}}/gitAndGithub/branch/images/sourcetree_4.png" height="100" />
 <p/>
@@ -75,20 +88,7 @@ Instead of merging `master` to `feature1`, an alternative is to [_rebase_](https
 <pic src="{{baseUrl}}/gitAndGithub/branch/images/sourcetree_6.png" height="150" />
 <p/>
 
-<tabs>
-  <tab header="SourceTree">
-
-Right-click on the `feature1` branch and choose `Merge...`.
-
-  </tab>
-  <tab header="CLI">
-
-```
-git merge feature1
-```
-
-  </tab>
-</tabs>
+{{ show_git_tabs('_3b') }}
 
 **10. Create a new branch called `add-countries`, switch to it, and add some commits to it** %%(similar to steps 1-2 above)%%. You should have something like this now:
 
@@ -126,29 +126,7 @@ That is because **Git does a ==_fast forward_ merge== if possible**. Seeing that
 
 Here's how to push a branch to a remote repo:
 
-<tabs>
-  <tab header="SourceTree">
-
-Here's how to push a branch named `add-intro` to your own fork of a repo named `samplerepo-pr-practice`:
-
-<pic src="images/pushBranchToFork.png" height="300" />
-<p/>
-
-  </tab>
-  <tab header="CLI">
-
-Normally: `git push {remote repository} {branch}`. Examples:<br>
-* `git push origin master` pushes the `master` branch to the repo named `origin` (i.e., the repo you cloned from)
-* `git push upstream-repo add-intro` pushes the `add-intro` branch to the repo named `upstream-repo`
-
-**If pushing a branch you created locally to the remote for the _first time_**, add the `-u` flag to get the local branch to track the new upstream branch:<br/>
-e.g., `git push -u origin add-intro`
-
-
-{{ icon_resource }} See [git-scm.com/docs/git-push](https://git-scm.com/docs/git-push) for details of the `push` command.
-
-  </tab>
-</tabs>
+{{ show_git_tabs('_4b') }}
 <p/>
 </div>
 

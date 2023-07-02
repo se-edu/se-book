@@ -1,3 +1,3 @@
 ```{.no-line-numbers}
-$ git merge master
+$ git merge feature1
 ```

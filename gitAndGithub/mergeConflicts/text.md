@@ -76,7 +76,7 @@ red
 white
 ```
 
-**6. Stage the changes, and commit.**
+**6. Stage the changes, and commit.** You have now successfully resolved the merge conflict.
 
 </div>
 
