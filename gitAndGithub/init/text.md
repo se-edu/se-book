@@ -5,7 +5,7 @@
 
 <div id="body">
 
-Let's take your first few steps in your Git (with GitHub) journey.
+Let's take your first few steps in your Git journey.
 
 <span class="non-printable">
 
@@ -18,7 +18,7 @@ Let's take your first few steps in your Git (with GitHub) journey.
 
 </panel><p/>
 
-**1. The first step is to install** [SourceTree](https://www.sourcetreeapp.com/), which is Git + a GUI for Git. If you prefer to use Git via the command line (i.e., without a GUI), you can [install Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) instead.
+**1. First, install** [SourceTree](https://www.sourcetreeapp.com/), which is Git + a GUI for Git. If you prefer to use Git via the command line (i.e., without a GUI), you can [install Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) instead.
 
   <box type="info" seamless>
 
@@ -26,18 +26,20 @@ Let's take your first few steps in your Git (with GitHub) journey.
 
   * When prompted, create a Atlassian account if you don't have one.
   * When prompted, connect SourceTree to your GitHub account (as you'll need to use GitHub later). There is no need to connect to a BitBucket account.
+  * Setting up an SSL key is not necessary, but you are free to do so if you are familiar with SSL key usage.
   </box>
 
-**2. Next, initialize a repository.** Let us assume you want to version control content in a specific directory. In that case, you need to initialize a Git repository in that directory. Here are the steps:
+**2. Next, create a directory for the repo** (e.g., a directory named `things`).
 
-Create a directory for the repo (e.g., a directory named `things`).
+**3. Then, initialize a repository** in that directory.
 
 {{ show_git_tabs() }}
-
 
 <box type="tip" seamless>
 
 As you see above, this textbook explains how to use Git via SourceTree (a GUI client) as well as via the Git CLI. If you are new to Git, **we recommend you learn !!both!! the GUI method and the CLI method** -- The GUI method will help you visualize the result better while the CLI method is more universal (i.e., you will not be tied to any GUI) and more flexible/powerful.
+
+**It is fine to learn the CLI way only** (using SourceTree is optional), especially if you normally prefer to work with CLI user GUI.
 </box>
 
 <box type="warning" seamless>

@@ -13,7 +13,7 @@ First, let us learn how the repo looks like as you perform branching operations.
 
 Given below is an illustration of how branch labels move as branches evolve. Refer to the text below it for explanations of each stage.
 
-<annotate src="{{ baseUrl }}/gitAndGithub/branch/images/branchesAsLabels1.png" height="500" alt="Sample Image">
+<annotate src="{{ baseUrl }}/gitAndGithub/branch/images/branchesAsLabels1.png" height="500">
 <a-point x="2%" y="27%" label="[1]" legend="1" opacity="0"/>
 <a-point x="2%" y="47%" label="[2]" legend="1" opacity="0"/>
 <a-point x="35%" y="25%" label="[3]" legend="1" opacity="0"/>
@@ -74,6 +74,32 @@ To keep things simple for the time being, this commit should ==not involve the s
 
 The objective of that merge was to _sync_ the `feature1` branch with the `master` branch. Observe how the changes you did in the `master` branch (i.e. the imaginary bug fix) is now available even when you are in the `feature1` branch.
 
+<box>
+
+****To undo a merge****,
+
+1. Ensure you are in the branch that received the merge.
+1. Do a hard reset (similar to <trigger trigger="click" for="modal:merge-reset">how you delete a commit</trigger>) of that branch to the commit that would be the tip of that branch had you not done the offending merge.
+
+<modal large id="modal:merge-reset">
+<include src="../commit/text.md#how-to-reset" />
+</modal>
+
+----{.dotted}
+
+{{ icon_example }} In the example below, you merged `master` to `feature1`.
+
+<annotate src="{{baseUrl}}/gitAndGithub/branch/images/sourcetree_5.png" height="120" >
+<a-point x="4%" y="42%" color="yellow" size="18" opacity="0.4" content="Do a hard reset to this commit"/>
+</annotate>
+
+If you want to undo that merge,
+
+1. Ensure you are in the `feature1` branch.
+1. Reset the `feature1` branch to the commit highlighted in the screenshot above (because that was the tip of the `feature1` branch before you merged the `master` branch to it.
+
+</box>
+
 <box type="info" seamless>
 
 Instead of merging `master` to `feature1`, an alternative is to [_rebase_](https://www.atlassian.com/git/tutorials/merging-vs-rebasing) the `feature1` branch. However, rebasing is an advanced feature that requires modifying past commits. If you modify past commits that have been pushed to a remote repository, you'll have to [_force-push_](https://www.datree.io/resources/git-push-force) the modified commit to the remote repo in order to update the commits in it.
@@ -122,7 +148,7 @@ That is because **Git does a ==_fast forward_ merge== if possible**. Seeing that
 
 <div id="pushing-a-branch">
 
-##### Pushing a branch to a remote repo
+****Pushing a branch to a remote repo****
 
 Here's how to push a branch to a remote repo:
 

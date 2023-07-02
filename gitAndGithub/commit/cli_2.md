@@ -1,8 +1,8 @@
 You can use the `stage` or the `add` command (they are synonyms, `add` is the more popular choice) to stage files.
 
 ```{.no-line-numbers}
-git add fruits.txt
-git status
+$ git add fruits.txt
+$ git status
 ```
 {{ icon_output }}
 ```{.no-line-numbers}

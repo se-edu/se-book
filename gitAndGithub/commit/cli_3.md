@@ -1,13 +1,13 @@
 Use the `commit` command to commit. The `-m` switch is used to specify the commit message.
 
 ```{.no-line-numbers}
-git commit -m "Add fruits.txt"
+$ git commit -m "Add fruits.txt"
 ```
 
 You can use the `log` command to see the commit history.
 
 ```{.no-line-numbers}
-git log
+$ git log
 ```
 {{ icon_output }}
 ```{.no-line-numbers}

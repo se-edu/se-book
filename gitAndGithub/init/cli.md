@@ -27,7 +27,7 @@ $ ls -a
 You can also use the `git status` command to check the status of the newly-created repo. It should respond with something like the following:
 
 ```{.no-line-numbers}
-git status
+$ git status
 ```
 {{ icon_output }}
 ```{.no-line-numbers}

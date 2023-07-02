@@ -55,5 +55,4 @@ Revision control software are also known as _Version Control Software (VCS)_, an
 </div>
 
 <div id="extras">
-<include src="exercises.md" />
 </div>

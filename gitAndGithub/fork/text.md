@@ -18,7 +18,16 @@ Given below is a scenario you can try in order to learn how to <trigger trigger=
   * choose to fork to your own account or to another GitHub organization that you are an admin of.
   * ==Un-tick the `[ ] Copy the master branch only` option==, so that you get copies of other branches (if any) in the repo.
 
-{{ icon_info }} GitHub does not allow you to fork the same repo more than once to the same destination. If you want to re-fork, you need to delete the previous fork.
+<box type="important" seamless>
+
+As you might have guessed from the above, **forking is not a Git feature**, but a feature provided by remote Git hosting services such as Github.
+</box>
+
+
+<box type="info" seamless>
+
+GitHub does not allow you to fork the same repo more than once to the same destination. If you want to re-fork, you need to delete the previous fork.
+</box>
 
 </div>
 
