@@ -1,9 +1,9 @@
 ```{.no-line-numbers}
-git show < part-of-commit-hash >
+$ git show < part-of-commit-hash >
 ```
 Example:
 ```{.no-line-numbers}
-git show 5bc0e306
+$ git show 5bc0e306
 ```
 {{ icon_output }}
 ```diff

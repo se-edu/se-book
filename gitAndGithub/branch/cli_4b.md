@@ -1,5 +1,5 @@
 
-Normally: `git push {remote repository} {branch}`. Examples:<br>
+**If the branch exists in the remote already, and the local branch is already set up to track the corresponding remote branch**, use the command: `git push {remote repository} {branch}`. Examples:<br>
 * `git push origin master` pushes the `master` branch to the repo named `origin` (i.e., the repo you cloned from)
 * `git push upstream-repo add-intro` pushes the `add-intro` branch to the repo named `upstream-repo`
 

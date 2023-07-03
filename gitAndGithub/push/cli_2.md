@@ -2,11 +2,11 @@ A normal push does not include tags. After pushing the commits (as before), push
 
 To push a specific tag:
 ```{.no-line-numbers}
-git push origin v1.0b
+$ git push origin v1.0b
 ```
 
 To push all tags:
 ```{.no-line-numbers}
-git push origin --tags
+$ git push origin --tags
 ```
 
