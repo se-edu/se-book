@@ -24,8 +24,8 @@ Suppose you want to propose some changes to a GitHub repo (e.g., [samplerepo-pr-
 
 **4. Push** the branch you updated (i.e., `master` branch or the new branch) to your fork, as explained <trigger trigger="click" for="modal:createPr-pushBranch">here</trigger>.
 
-<modal large header="Git & GitHub → Branch →" id="modal:createPr-pushBranch">
-  <include src="../branch/text.md#pushing-a-branch"/>
+<modal large header="Git & GitHub → Remote Branches →" id="modal:createPr-pushBranch">
+  <include src="../remoteBranches/text.md#body"/>
 </modal>
 
 **5. Initiate the PR creation:**

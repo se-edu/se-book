@@ -144,20 +144,6 @@ That is because **Git does a ==_fast forward_ merge== if possible**. Seeing that
 
 {{ show_git_tabs('_4') }}
 
-<box>
-
-<div id="pushing-a-branch">
-
-****Pushing a branch to a remote repo****
-
-Here's how to push a branch to a remote repo:
-
-{{ show_git_tabs('_4b') }}
-<p/>
-</div>
-
-</box>
-
 </div>
 
 <div id="extras">
