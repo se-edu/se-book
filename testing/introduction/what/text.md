@@ -27,7 +27,7 @@
 **Test cases can be determined based on the specification, reviewing similar existing systems, or comparing to the past behavior of the SUT.**
 
 <panel type="seamless">
-<span slot="header" class="card-title"><md>%%Other details a test case can contain%% {{ icon_extra }}</md></span>
+<span slot="header" class="card-title"><md>%%Other details a test case can contain ...%% {{ icon_extra }}</md></span>
 A more elaborate test case can have other details such as those given below.
 
 * A unique identifier : %%e.g. TC0034-a%%
@@ -71,5 +71,4 @@ Some things to note (indicated by keywords in the above definition):
 </div>
 
 <div id="extras">
-  <include src="exercises.md" />
 </div>
