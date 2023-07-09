@@ -32,6 +32,6 @@ with(this){return _c('p',[_c('strong',[_v("Polymorphic code is better")]),_v(" i
 with(this){return _c('ul',[_c('li',[_v("It is "),_c('strong',[_v("shorter")]),_v(".")]),_v(" "),_c('li',[_v("It is "),_c('strong',[_v("simpler")]),_v(".")]),_v(" "),_c('li',[_v("It is more "),_c('strong',[_v("flexible")]),_v(" (in the above example, the "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("main")]),_v(" method will work even if we add more animal types).")])])}
 },function anonymous(
 ) {
-with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.1.0")]),_v(", generated on Mon, 10 Jul 2023, 0:44:43 GMT+8]")])])])}
+with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.1.0")]),_v(", generated on Mon, 10 Jul 2023, 0:50:08 GMT+8]")])])])}
 }];
   

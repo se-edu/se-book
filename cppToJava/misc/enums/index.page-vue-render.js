@@ -23,6 +23,6 @@ with(this){return _c('p',[_c('strong',[_v("You can define an enum type by using 
 with(this){return _c('p',[_v("Note that while enumerations are usually a simple set of fixed values, "),_c('strong',[_v("Java enumerations can have behaviors too")]),_v(", as explained in "),_c('a',{attrs:{"href":"https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html"}},[_v("this tutorial from "),_c('small',[_c('span',{staticStyle:{"opacity":"0.5"}},[_c('span',{staticClass:"badge bg-secondary"},[_v("-- Java Tutorial")])])])])])}
 },function anonymous(
 ) {
-with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.1.0")]),_v(", generated on Mon, 10 Jul 2023, 0:44:43 GMT+8]")])])])}
+with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.1.0")]),_v(", generated on Mon, 10 Jul 2023, 0:50:08 GMT+8]")])])])}
 }];
   
