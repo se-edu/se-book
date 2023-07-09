@@ -3,7 +3,7 @@
 
 Suppose we wrote a program to follow the class structure given in this class diagram:
 
-<img src="{{baseUrl}}/modeling/modelingStructures/classDiagramsBasic/images/typicalClasssStructure.png" width="400" />
+<pic src="{{baseUrl}}/modeling/modelingStructures/classDiagramsBasic/images/typicalClasssStructure.png" width="400" />
 <p/>
 
 Draw object diagrams to represent the object structures after each of these steps below. Assume that we are trying to minimize the number of total objects.

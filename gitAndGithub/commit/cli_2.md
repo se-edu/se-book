@@ -1,14 +1,14 @@
 You can use the `stage` or the `add` command (they are synonyms, `add` is the more popular choice) to stage files.
 
-```sh
-git add fruits.txt
-git status
+```{.no-line-numbers}
+$ git add fruits.txt
+$ git status
 ```
 {{ icon_output }}
-```sh
+```{.no-line-numbers}
 # On branch master
 #
-# Initial commit
+# No commits yet
 #
 # Changes to be committed:
 #   (use "git rm --cached <file>..." to unstage)

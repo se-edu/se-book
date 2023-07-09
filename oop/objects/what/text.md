@@ -6,6 +6,8 @@
 
 <div id="body">
 
+**An _object_ in Object-Oriented Programming (OOP) has _state_ and _behavior_, similar to objects in the real world.**
+
 > Every object has both state (data) and behavior (operations on data). In that, they’re not much different
 > from ordinary physical objects. It’s easy to see how a mechanical device, such as a pocket watch or a piano,
 > embodies both state and behavior. But almost anything that’s designed to do a job does, too. Even simple things
@@ -18,16 +20,15 @@
 >
 > <sub>-- [Object-Oriented Programming with Objective-C](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/OOP_ObjC/), Apple </sub>
 
-**Object Oriented Programming (OOP) views the world as _a network of interacting objects_.**
+**OOP views the world as _a network of interacting objects_.**
 
 <box>
 
 {{ icon_example }} A real world scenario viewed as a network of interacting objects:
 
-You are asked to find out the average age of a group of people Adam, Beth, Charlie, and Daisy. You take a piece of paper and pen, go to each person, ask for their age, and note it down. After collecting the age of all four, you enter it into a calculator to find the total. And then, use the same calculator to divide the total by four, to get the average age. This can be viewed as the objects `You`, `Pen`, `Paper`, `Calculator`, `Adam`, `Beth`, `Charlie`, and `Daisy` interacting to accomplish the end result of calculating the average age of the four persons. These objects can be considered as connected in a certain network of certain structure.
+You are asked to find out the average age of a group of people Adam, Beth, Charlie, and Daisy. You take a piece of paper and pen, go to each person, ask for their age, and note it down. After collecting the age of all four, you enter it into a calculator to find the total. And then, use the same calculator to divide the total by four, to get the average age. This can be viewed as the objects `You`, `Pen`, `Paper`, `Calculator`, `Adam`, `Beth`, `Charlie`, and `Daisy` interacting to accomplish the end result of calculating the average age of the four persons. These objects can be considered as _connected_ in a certain _network_ of certain structure that dictates how these objects can interact. For example, `You` object is connected to the `Pen` object, and hence `You` can use the `Pen` object to write.
 
 <!-- TODO {visual: real world scenario, objects and network marked} -->
-
 </box>
 
 **OOP solutions try to create a similar object network inside the computer’s memory** – a sort of virtual simulation of the corresponding real world scenario – **so that a similar result can be achieved programmatically.**
@@ -51,6 +52,8 @@ You are asked to find out the average age of a group of people Adam, Beth, Charl
 
 <box>
 
+{{ icon_example }} The state and behavior of our running example are as follows:
+
 | Object      | Real World? | Virtual World? | Example of State (i.e. Data)       | Examples of Behavior (i.e. Operations)                |
 | :---------: |:-----------:|:--------------:|:----------------------------------:| :----------------------------------------------------:|
 | Adam        | {{ icon_tick }} | {{ icon_tick }} | Name, Date of Birth                | Calculate age based on birthday                       |
@@ -63,16 +66,18 @@ You are asked to find out the average age of a group of people Adam, Beth, Charl
 
 **Every object has an _interface_ and an _implementation_.**
 
-Every real world object has:
-* an interface through which other objects can interact with it
-* an implementation that supports the interface but may not be accessible to the other object
+Every real world object has,
+* an interface through which other objects can interact with it, and,
+* an implementation that supports the interface but may not be accessible to the other object.
 
 <box>
 
 {{ icon_example }} The interface and implementation of some real-world objects in our example:
 
 * Calculator: the buttons and the display are part of the interface; circuits are part of the implementation.
-* Adam: In the context of our 'calculate average age' example, the interface of Adam consists of requests that Adam will respond to, e.g.  "Give age to the nearest year, as at Jan 1st of this year" "State your name"; the implementation includes the mental calculation Adam uses to calculate the age which is not visible to other objects.
+* Adam: In the context of our 'calculate average age' example,
+  * the interface of Adam consists of requests that Adam will respond to, e.g.  "Give age to the nearest year, as at Jan 1st of this year" "State your name".
+  * the implementation includes the mental calculation Adam uses to calculate the age which is not visible to other objects.
 
 </box>
 
@@ -90,7 +95,7 @@ Similarly, every object in the virtual world has an interface and an implementat
 
 <box>
 
-Examples:
+{{ icon_example }} Same messages and responses from our running example:
 
 | World    | Sender | Receiver                         | Message                              | Response                   | State Change          |
 | :------: |:------:|:--------------------------------:|:------------------------------------:|:--------------------------:|:---------------------:|

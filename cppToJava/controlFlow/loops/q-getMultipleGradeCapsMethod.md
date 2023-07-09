@@ -2,7 +2,7 @@
 
 Add the following method to the class given below.
 
-* `public static double[] getMultipleGradeCaps(String[] grades)`: Returns the CAP values of the given `grades`. e.g., if the input was the array `["A+", "B"]`, the method returns `[5.0, 3.5]`. The mapping from grades to CAP is given below.
+* `public static double[] getMultipleGradeCaps(String[] grades)`: Returns the CAP (aka GPA) values of the given `grades`. e.g., if the input was the array `["A+", "B"]`, the method returns `[5.0, 3.5]`. The mapping from grades to CAP is given below.
 
 <div class="indented">
 

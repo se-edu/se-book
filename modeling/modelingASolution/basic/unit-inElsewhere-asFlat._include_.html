@@ -16,7 +16,7 @@
 <div>
 <p><strong>You can use models to analyze and design software before you start coding.</strong></p>
 <p>Suppose you are planning to implement a simple minesweeper game that has a text based UI and a GUI. Given below is a possible OOP design for the game.</p>
-<img src="/se-book/modeling/modelingASolution/introduction/images/textLogicMinefieldCell.png" height="50">
+<pic src="/se-book/modeling/modelingASolution/introduction/images/textLogicMinefieldCell.png" height="50"></pic>
 <p></p>
 <p>Before jumping into coding, you may want to find out things such as,</p>
 <ul>
@@ -25,32 +25,32 @@
 <li>Do you need more classes?</li></ul>
 <p>To answer these questions, you can analyze how the objects of these classes will interact with each other to produce the behavior you want.</p></div>
 <div></div></div></div></div></modal>
-<img src="/se-book/modeling/modelingASolution/introduction/images/textLogicMinefieldCell.png" height="50">
+<pic src="/se-book/modeling/modelingASolution/introduction/images/textLogicMinefieldCell.png" height="50"></pic>
 <p></p>
 <p>Let us start by modeling a sample interaction between the person playing the game and the <code class="hljs inline no-lang" v-pre>TextUi</code> object.</p>
 <box>
-<img src="/se-book/modeling/modelingASolution/basic/images/playerText.png" height="300">
+<pic src="/se-book/modeling/modelingASolution/basic/images/playerText.png" height="300"></pic>
 <p></p>
 <p><code class="hljs inline no-lang" v-pre>newgame</code> and <code class="hljs inline no-lang" v-pre>clear x y</code> represent commands typed by the <code class="hljs inline no-lang" v-pre>Player</code> on the <code class="hljs inline no-lang" v-pre>TextUi</code>.</p></box>
 <p>How does the <code class="hljs inline no-lang" v-pre>TextUi</code> object carry out the requests it has received from the player? It would need to interact with other objects of the system. Because the <code class="hljs inline no-lang" v-pre>Logic</code> class is the one that controls the game logic, the <code class="hljs inline no-lang" v-pre>TextUi</code> needs to collaborate with <code class="hljs inline no-lang" v-pre>Logic</code> to fulfill the <code class="hljs inline no-lang" v-pre>newgame</code> request. Let us extend the model to capture that interaction.</p>
 <box>
-<img src="/se-book/modeling/modelingASolution/basic/images/playerTextLogic.png" height="280">
+<pic src="/se-book/modeling/modelingASolution/basic/images/playerTextLogic.png" height="280"></pic>
 <p></p>
 <p><code class="hljs inline no-lang" v-pre>W</code> = Width of the minefield; <code class="hljs inline no-lang" v-pre>H</code> =  Height of the minefield</p></box>
 <p>The above diagram assumes that <code class="hljs inline no-lang" v-pre>W</code> and <code class="hljs inline no-lang" v-pre>H</code> are the only information <code class="hljs inline no-lang" v-pre>TextUi</code> requires to display the minefield to the <code class="hljs inline no-lang" v-pre>Player</code>. Note that there could be other ways of doing this.</p>
 <p>The <code class="hljs inline no-lang" v-pre>Logic</code> methods you conceptualized in our modeling so far are:</p>
 <box>
-<img src="/se-book/modeling/modelingASolution/basic/images/textLogicMinefieldCell.png" height="115"></box>
+<pic src="/se-book/modeling/modelingASolution/basic/images/textLogicMinefieldCell.png" height="115"></pic></box>
 <p>Now, let us look at what other objects and interactions are needed to support the <code class="hljs inline no-lang" v-pre>newGame()</code> operation.  It is likely that a new <code class="hljs inline no-lang" v-pre>Minefield</code> object is created when the <code class="hljs inline no-lang" v-pre>newGame()</code> method is called.</p>
 <box>
-<img src="/se-book/modeling/modelingASolution/basic/images/logicMinefield.png" height="150"></box>
+<pic src="/se-book/modeling/modelingASolution/basic/images/logicMinefield.png" height="150"></pic></box>
 <p>Note that the behavior of the <code class="hljs inline no-lang" v-pre>Minefield</code> constructor has been abstracted away. It can be designed at a later stage.</p>
 <p>Given below are the interactions between the player and the <code class="hljs inline no-lang" v-pre>TextUi</code> for the whole game.</p>
 <box>
-<img src="/se-book/modeling/modelingASolution/basic/images/playerTextLoop.png" height="300">
+<pic src="/se-book/modeling/modelingASolution/basic/images/playerTextLoop.png" height="300"></pic>
 <p></p></box><p></p>
 <box>
-<p><span class="badge rounded-pill bg-warning text-dark"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Note that <tooltip><template #content>using sequence diagrams</template>a similar technique</tooltip> can be used when discovering/defining the architecture-level APIs.</p>
+<p><span class="badge rounded-pill bg-success text-white"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Note that <tooltip><template #content>using sequence diagrams</template>a similar technique</tooltip> can be used when discovering/defining the architecture-level APIs.</p>
 <div v-closeable alt="Tic-Tac-Toe Video" class="non-printable">
 <p><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span> Defining the architecture-level APIs for a small Tic-Tac-Toe game:</p>
 <div class="block-embed block-embed-service-youtube" style="position: relative; padding-bottom: 60.9375%"><iframe type="text/html" src="//www.youtube.com/embed/Un80XoRT1ME" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div></box></div>

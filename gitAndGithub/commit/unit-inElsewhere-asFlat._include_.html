@@ -1,100 +1,121 @@
-<div><panel src="/se-book/gitAndGithub/init/unit-inElsewhere-asFlat._include_.html" popup-url="/se-book/gitAndGithub/init"><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> <span class="dimmed">Git &amp; GitHub → Init</span></p></template></panel></div><p></p>
+<div></div><p></p>
 <p><span class="dimmed"><strong><span>Tools → Git and GitHub →
 </span></strong></span></p>
 <div id="title-and-body">
 <div><h4 id="commit-saving-changes-to-history"><span id="commit-saving-changes-to-history" class="anchor"></span><span><code class="hljs inline no-lang" v-pre>commit</code>: Saving changes to history</span><a class="fa fa-anchor" href="#commit-saving-changes-to-history" onclick="event.stopPropagation()"></a></h4></div>
 <div id="main">
 <div>
-<p><strong>After initializing a repository, Git can help you with revision controlling files inside the <em>working directory</em>. However, it is not automatic.</strong> It is up to you to tell Git which of your changes (aka <em>revisions</em>) should be <em>committed</em> to its memory for later use. Saving changes into Git's memory in that way is often called <em>committing</em> and a change saved to the revision history is called a <em>commit</em>.</p>
-<box type="definition" seamless>
-<div><p><strong>Working directory</strong>: the root directory revision-controlled by Git (e.g., the directory in which the repo was initialized).</p></div></box>
-<box type="definition" seamless>
-<div><p><strong>Commit</strong> (noun): a change (aka a <em>revision</em>) saved in the Git revision history.<br>
-(verb): the act of creating a commit i.e., saving a change in the working directory into the Git revision history.</p></div></box>
-<p>Here are the steps you can follow to learn how to work with Git commits:</p>
+<p><strong>After initializing a repository, Git can help you with revision controlling files inside the <em>working directory</em>. However, it is not automatic.</strong> You need to tell Git which of your changes (aka <em>revisions</em>) should be <em>committed</em> to its memory for later use. Saving changes into Git's memory in that way is called <em>committing</em> and a change saved to the revision history is called a <em>commit</em>.</p>
+<p>Here are the steps you can follow to learn how to create Git commits:</p>
 <p><strong>1. Do some changes to the content inside the <em>working directory</em></strong> e.g., create a file named <code class="hljs inline no-lang" v-pre>fruits.txt</code> in the <code class="hljs inline no-lang" v-pre>things</code> directory and add some dummy text to it.</p>
 <p><strong>2. Observe how the file is detected by Git.</strong></p>
 <tabs>
-  <tab><template #header>SourceTree</template>
+  <tab><template #header>Sourcetree</template>
     <div><p>The file is shown as ‘unstaged’.</p>
-<img src="/se-book/gitAndGithub/commit/images/sourcetree_1.png" height="220">
+<pic src="/se-book/gitAndGithub/commit/images/sourcetree_1.png" height="220"></pic>
 <p></p></div></tab>
   <tab><template #header>CLI</template>
     <div><p>You can use the <code class="hljs inline no-lang" v-pre>git status</code> command to check the status of the working directory.</p>
-<pre><code class="hljs sh" v-pre><span>git status
+<pre><code class="no-line-numbers hljs" v-pre><span>$ git status
 </span></code></pre><p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
-<pre><code class="hljs sh" v-pre><span><span class="hljs-comment"># On branch master</span>
-</span><span><span class="hljs-comment">#</span>
-</span><span><span class="hljs-comment"># Initial commit</span>
-</span><span><span class="hljs-comment">#</span>
-</span><span><span class="hljs-comment"># Untracked files:</span>
-</span><span><span class="hljs-comment">#   (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)</span>
-</span><span><span class="hljs-comment">#</span>
-</span><span><span class="hljs-comment">#   a.txt</span>
-</span><span>nothing added to commit but untracked files present (use <span class="hljs-string">&quot;git add&quot;</span> to track)
+<pre><code class="no-line-numbers hljs" v-pre><span># On branch master
+</span><span>#
+</span><span># No commits yet
+</span><span>#
+</span><span># Untracked files:
+</span><span>#   (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
+</span><span>#
+</span><span>#   a.txt
+</span><span>nothing added to commit but untracked files present (use &quot;git add&quot; to track)
 </span></code></pre></div></tab></tabs>
-<p><strong>3. Stage the changes to commit</strong>: Although Git has detected the file in the working directory, it will not do anything with the file unless you tell it to. Suppose you want to commit the current changes to the file. First, you should <em>stage</em> the file.</p>
-<box type="definition" seamless>
-<div><p><strong>Stage</strong> (verb): Instructing Git to prepare a file for committing.</p></div></box>
+<p><strong>3. Stage the changes to commit</strong>: Although Git has detected the file in the working directory, it will not do anything with the file unless you tell it to. Suppose you want to commit the current changes to the file. First, you should <em>stage</em> the file, which is how you tell Git which changes you want to include in the next commit.</p>
 <tabs>
-  <tab><template #header>SourceTree</template>
+  <tab><template #header>Sourcetree</template>
     <div><p>Select the <code class="hljs inline no-lang" v-pre>fruits.txt</code> and click on the <code class="hljs inline no-lang" v-pre>Stage Selected</code> button.</p>
-<img src="/se-book/gitAndGithub/commit/images/sourcetree_2.png" height="100">
+<pic src="/se-book/gitAndGithub/commit/images/sourcetree_2.png" height="100"></pic>
 <p></p>
 <p><code class="hljs inline no-lang" v-pre>fruits.txt</code> should appear in the <code class="hljs inline no-lang" v-pre>Staged files</code> panel now.</p>
-<img src="/se-book/gitAndGithub/commit/images/sourcetree_3.png" height="180">
-<p></p></div></tab>
+<pic src="/se-book/gitAndGithub/commit/images/sourcetree_3.png" height="180"></pic>
+<p></p>
+<box type="info" seamless>
+<p><strong>If Sourcetree shows a <code class="hljs inline no-lang" v-pre>\ No newline at the end of the file</code> message</strong> below the staged lines (i.e., below the <code class="hljs inline no-lang" v-pre>cherries</code> line in the above screenshot), that is because you did not hit <kbd>enter</kbd> after entering the last line of the file (hence, Git is not sure if that line is complete). To rectify, go to that line and hit <kbd>enter</kbd> (like you are adding a blank line below it). This new change will now appear as an 'unstaged' change. Stage it as well.</p></box></div></tab>
   <tab><template #header>CLI</template>
     <div><p>You can use the <code class="hljs inline no-lang" v-pre>stage</code> or the <code class="hljs inline no-lang" v-pre>add</code> command (they are synonyms, <code class="hljs inline no-lang" v-pre>add</code> is the more popular choice) to stage files.</p>
-<pre><code class="hljs sh" v-pre><span>git add fruits.txt
-</span><span>git status
+<pre><code class="no-line-numbers hljs" v-pre><span>$ git add fruits.txt
+</span><span>$ git status
 </span></code></pre><p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
-<pre><code class="hljs sh" v-pre><span><span class="hljs-comment"># On branch master</span>
-</span><span><span class="hljs-comment">#</span>
-</span><span><span class="hljs-comment"># Initial commit</span>
-</span><span><span class="hljs-comment">#</span>
-</span><span><span class="hljs-comment"># Changes to be committed:</span>
-</span><span><span class="hljs-comment">#   (use &quot;git rm --cached &lt;file&gt;...&quot; to unstage)</span>
-</span><span><span class="hljs-comment">#</span>
-</span><span><span class="hljs-comment">#       new file:   fruits.txt</span>
-</span><span><span class="hljs-comment">#</span>
+<pre><code class="no-line-numbers hljs" v-pre><span># On branch master
+</span><span>#
+</span><span># No commits yet
+</span><span>#
+</span><span># Changes to be committed:
+</span><span>#   (use &quot;git rm --cached &lt;file&gt;...&quot; to unstage)
+</span><span>#
+</span><span>#       new file:   fruits.txt
+</span><span>#
 </span></code></pre></div></tab></tabs>
 <p><strong>4. Commit</strong> the staged version of <code class="hljs inline no-lang" v-pre>fruits.txt</code>.</p>
 <tabs>
-  <tab><template #header>SourceTree</template>
+  <tab><template #header>Sourcetree</template>
     <div><p>Click the <code class="hljs inline no-lang" v-pre>Commit</code> button, enter a commit message e.g. <code class="hljs inline no-lang" v-pre>add fruits.txt</code> into the text box, and click <code class="hljs inline no-lang" v-pre>Commit</code>.</p>
-<img src="/se-book/gitAndGithub/commit/images/sourcetree_4.png" height="300">
+<pic src="/se-book/gitAndGithub/commit/images/sourcetree_4.png" height="300"></pic>
 <p></p></div></tab>
   <tab><template #header>CLI</template>
     <div><p>Use the <code class="hljs inline no-lang" v-pre>commit</code> command to commit. The <code class="hljs inline no-lang" v-pre>-m</code> switch is used to specify the commit message.</p>
-<pre><code class="hljs sh" v-pre><span>git commit -m <span class="hljs-string">&quot;Add fruits.txt&quot;</span>
+<pre><code class="no-line-numbers hljs" v-pre><span>$ git commit -m &quot;Add fruits.txt&quot;
 </span></code></pre><p>You can use the <code class="hljs inline no-lang" v-pre>log</code> command to see the commit history.</p>
-<pre><code class="hljs sh" v-pre><span>git <span class="hljs-built_in">log</span>
+<pre><code class="no-line-numbers hljs" v-pre><span>$ git log
 </span></code></pre><p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
-<pre><code class="hljs" v-pre><span>commit 8fd30a6910efb28bb258cd01be93e481caeab846
+<pre><code class="no-line-numbers hljs" v-pre><span>commit 8fd30a6910efb28bb258cd01be93e481caeab846
 </span><span>Author: … &lt; … @... &gt;
 </span><span>Date:   Wed Jul 5 16:06:28 2017 +0800
 </span><span>
 </span><span>  Add fruits.txt
 </span></code></pre></div></tab></tabs>
-<p><strong>Note the existence of something called the <code class="hljs inline no-lang" v-pre>master</code> branch.</strong> Git allows you to have multiple branches (i.e. it is a way to evolve the content in parallel) and Git auto-creates a branch named <code class="hljs inline no-lang" v-pre>master</code> on which the commits go on by default.</p>
+<p><strong>Note the existence of something called the <code class="hljs inline no-lang" v-pre>master</code> branch.</strong> Git uses a mechanism called branches to facilitate evolving file content in parallel (we'll learn git branching in a later topic). Furthermore, Git auto-creates a branch named <code class="hljs inline no-lang" v-pre>master</code> on which the commits go on by default.</p>
+<tabs>
+  <tab><template #header>Sourcetree</template>
+    <div><p>Expand the <code class="hljs inline no-lang" v-pre>BRANCHES</code> menu and click on the <code class="hljs inline no-lang" v-pre>master</code> to view the history graph, which contains only one node at the moment, representing the commit you just added. Also note a label <code class="hljs inline no-lang" v-pre>master</code> attached to the commit.</p>
+<p>This label points to the latest commit on the <code class="hljs inline no-lang" v-pre>master</code> branch.</p>
+<pic src="/se-book/gitAndGithub/commit/images/sourcetree_5.png" height="180"></pic>
+<p></p></div></tab>
+  <tab><template #header>CLI</template>
+    <div><p>Run the <code class="hljs inline no-lang" v-pre>git status</code> command and note how the output contains the phrase <code class="hljs inline no-lang" v-pre>on branch master</code>.</p></div></tab></tabs>
 <p><strong>5. Do a few more commits</strong>.</p>
 <ol>
 <li>
 <p>Make some changes to <code class="hljs inline no-lang" v-pre>fruits.txt</code> (e.g. add some text and delete some text). Stage the changes, and commit the changes using the same steps you followed before. You should end up with something like this.</p>
-<img src="/se-book/gitAndGithub/commit/images/sourcetree_6.png" height="180">
+<pic src="/se-book/gitAndGithub/commit/images/sourcetree_6.png" height="180"></pic>
 <p></p></li>
 <li>
 <p>Next, add two more files <code class="hljs inline no-lang" v-pre>colors.txt</code> and <code class="hljs inline no-lang" v-pre>shapes.txt</code> to the same working directory. Add a third commit to record the current state of the working directory.</p>
-<img src="/se-book/gitAndGithub/commit/images/sourcetree_7.png" height="150">
-<p></p></li></ol>
+<pic src="/se-book/gitAndGithub/commit/images/sourcetree_7.png" height="150"></pic>
+<p></p>
+<box type="tip" seamless>
+<p><strong>You can decide what to stage and what to leave unstaged.</strong> When staging changes to commit, you can leave some files unstaged, if you wish to not include them in the next commit. In fact, Git even allows some changes in a file to be staged, while others changes in the same file to be unstaged. This flexibility is particularly useful when you want to put all related changes into a commit while leaving out unrelated changes.</p></box></li></ol>
 <p><strong>6. See the revision graph:</strong>  Note how commits form a path-like structure aka the <em>revision tree/graph</em>. In the revision graph, each commit is shown as linked to its 'parent' commit (i.e., the commit before it).</p>
 <tabs>
-  <tab><template #header>SourceTree</template>
-<p>To see the revision graph, click on the <code class="hljs inline no-lang" v-pre>History</code> item on the menu on the right edge of SourceTree.</p></tab>
+  <tab><template #header>Sourcetree</template>
+    <div><p>To see the revision graph, click on the <code class="hljs inline no-lang" v-pre>History</code> item (listed under the <code class="hljs inline no-lang" v-pre>WORKSPACE</code> section) on the menu on the right edge of Sourcetree.</p>
+<pic src="/se-book/gitAndGithub/commit/images/sourcetree_8.png"></pic></div></tab>
   <tab><template #header>CLI</template>
-<p>The <code class="hljs inline no-lang" v-pre>gitk</code> command opens a rudimentary graphical view of the revision graph.</p></tab></tabs></div>
-<div>
-  <div><panel expanded><template #header><p><span><span aria-hidden="true" class="fas fa-paperclip"></span></span> Resources</p></template>
-<ul>
-<li><a href="https://learngitbranching.js.org/"><strong>Try Git</strong></a> is an online simulation/tutorial of Git basics. You can try its first few steps to solidify what you have learned in this LO.</li></ul></panel></div></div></div></div>
+    <div><p>The <code class="hljs inline no-lang" v-pre>gitk</code> command opens a rudimentary graphical view of the revision graph.</p></div></tab></tabs>
+<box id="how-to-reset">
+<p><strong><strong>How do undo/delete a commit?</strong></strong></p>
+<tabs>
+  <tab><template #header>Sourcetree</template>
+    <div><p><strong>To undo the last commit</strong>, right-click on the commit just before it, and choose <code class="hljs inline no-lang" v-pre>Reset current branch to this commit</code>.</p>
+<p>In the next dialog, choose the mode <code class="hljs inline no-lang" v-pre>Mixed - keep working copy but reset index</code> option. This will make the offending commit disappear but will keep the changes that you included in that commit intact.</p>
+<pic src="/se-book/gitAndGithub/commit/images/sourcetree_9.png"></pic>
+<p>If you use the <code class="hljs inline no-lang" v-pre>Soft - ...</code> mode instead, the last commit will be undone as before, but the changes included in that commit will stay in the staging area.</p>
+<p><strong>To delete the last commit entirely</strong> (i.e., undo the commit and also discard the changes included in that commit), do as above but choose the <code class="hljs inline no-lang" v-pre>Hard - ...</code> mode instead.</p>
+<p><strong>To undo/delete last n commits</strong>, right-click on the commit just before the last n commits, and do as above.</p></div></tab>
+  <tab><template #header>CLI</template>
+    <div><p><strong>To undo the last commit</strong>, but keep the changes in the staging area, use the following command.</p>
+<pre><code class="no-line-numbers hljs" v-pre><span>$ git reset --soft HEAD~1
+</span></code></pre><p>To undo the last commit, and remove the changes from the staging area (but not discard the changes), used <code class="hljs inline no-lang" v-pre>--mixed</code> instead of <code class="hljs inline no-lang" v-pre>--soft</code>.</p>
+<pre><code class="no-line-numbers hljs" v-pre><span><span>$ git reset <span class="highlighted">--mixed</span> HEAD~1
+</span></span></code></pre><p><strong>To delete the last commit entirely</strong> (i.e., undo the commit and also discard the changes included in that commit), do as above but use the <code class="hljs inline no-lang" v-pre>--hard</code> flag instead (i.e., do a hard reset).</p>
+<pre><code class="no-line-numbers hljs" v-pre><span><span>$ git reset <span class="highlighted">--hard</span> HEAD~1
+</span></span></code></pre><p><strong>To undo/delete last n commits</strong>: <code class="hljs inline no-lang" v-pre>HEAD~1</code> is used to tell get you are targeting the commit one position before the latest commit -- in this case the target commit is the one we want to reset to, not the one we want to undo (as the command used is <code class="hljs inline no-lang" v-pre>reset</code>). To undo/delete two last commits, you can use <code class="hljs inline no-lang" v-pre>HEAD~2</code>, and so on.</p></div></tab></tabs></box></div>
+<div></div></div></div>

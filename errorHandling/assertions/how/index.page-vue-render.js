@@ -23,12 +23,12 @@ with(this){return _c('p',[_v("Use the "),_c('code',{pre:true,attrs:{"class":"hlj
 with(this){return _c('p',[_c('strong',[_v("Assertions can be disabled without modifying the code.")])])}
 },function anonymous(
 ) {
-with(this){return _c('p',[_c('span',{staticClass:"badge rounded-pill bg-warning text-dark"},[_c('span',{staticClass:"fas fa-lightbulb",attrs:{"aria-hidden":"true"}})]),_v(" Enable assertions in Intellij ("),_c('a',{attrs:{"href":"https://se-education.org/guides/tutorials/intellijUsefulSettings.html"}},[_v("how?")]),_v(") and get an assertion to fail temporarily (e.g. insert an "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("assert false")]),_v(" into the code temporarily) to confirm assertions are being verified.")])}
+with(this){return _c('p',[_c('span',{staticClass:"badge rounded-pill bg-success text-white"},[_c('span',{staticClass:"fas fa-lightbulb",attrs:{"aria-hidden":"true"}})]),_v(" Enable assertions in Intellij ("),_c('a',{attrs:{"href":"https://se-education.org/guides/tutorials/intellijUsefulSettings.html"}},[_v("how?")]),_v(") and get an assertion to fail temporarily (e.g. insert an "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("assert false")]),_v(" into the code temporarily) to confirm assertions are being verified.")])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_c('span',[_c('span',{staticClass:"fas fa-info-circle",attrs:{"aria-hidden":"true"}})]),_v(" "),_c('strong',[_v("Java "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("assert")]),_v(" vs JUnit assertions: They are similar in purpose but JUnit assertions are more powerful and customized for testing.")]),_v(" In addition, JUnit assertions are not disabled by default. We recommend you use JUnit assertions in test code and Java "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("assert")]),_v(" in functional code.")])}
 },function anonymous(
 ) {
-with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.1.0")]),_v(", generated on Mon, 1 May 2023, 21:21:57 GMT+8]")])])])}
+with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.1.0")]),_v(", generated on Sun, 9 Jul 2023, 23:43:23 GMT+8]")])])])}
 }];
   

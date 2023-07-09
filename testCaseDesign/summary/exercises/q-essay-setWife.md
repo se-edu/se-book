@@ -3,12 +3,12 @@
 
 Use equivalence partitions and boundary values to choose test inputs for testing the `setWife` operation in the `Man` class.
 
-<img src="{{baseUrl}}/testCaseDesign/summary/exercises/images/manWoman.png" height="90" />
+<pic src="{{baseUrl}}/testCaseDesign/summary/exercises/images/manWoman.png" height="90" />
 <p/>
 
 <div slot="answer">
 
-<img src="{{baseUrl}}/testCaseDesign/summary/exercises/images/manWomanPartitions.png" height="300" />
+<pic src="{{baseUrl}}/testCaseDesign/summary/exercises/images/manWomanPartitions.png" height="300" />
 <p/>
 
 Partitioning ‘married’ as ‘to the same woman’ and ‘to a different woman’ seems redundant at first. Arguments for having it:

@@ -37,7 +37,7 @@
 <span id="icon_text"><md>:far-file-alt:</md></span>
 <span id="icon_tick"><md>:fas-check:</md></span>
 <span id="icon_tick_green"><span style="color:green">{{ icon_tick | safe }}</span></span>
-<span id="icon_tip"><span class="badge rounded-pill bg-warning text-dark">:fas-lightbulb:</span></span>
+<span id="icon_tip"><span class="badge rounded-pill bg-success text-white">:fas-lightbulb:</span></span>
 <span id="icon_todo"><md>:glyphicon-check:</md></span>
 <span id="icon_tutorial"><md>:fas-chalkboard-teacher:</md></span>
 <span id="icon_slides"><md>:far-images:</md></span>

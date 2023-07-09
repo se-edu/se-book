@@ -12,7 +12,7 @@ In UML class diagrams, **underlines denote class-level attributes and methods.**
 
 {{ icon_example }} In the class diagram below, the `totalStudents` attribute and the `getTotalStudents` method are class-level.
 
-<img src="{{baseUrl}}/uml/classDiagrams/classLevelMembers/what/images/student.png" height="120" />
+<pic src="{{baseUrl}}/uml/classDiagrams/classLevelMembers/what/images/student.png" height="120" />
 <p/>
 
 </box>

@@ -1,3 +1,3 @@
-```
-git merge master
+```{.no-line-numbers}
+$ git merge master
 ```

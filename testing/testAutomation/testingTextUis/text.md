@@ -6,7 +6,7 @@
 
 <div id="body">
 
-**A simple way to semi-automate testing of a CLI (Command Line Interface) app is by using input/output re-direction.**
+**A simple way to semi-automate testing of a CLI (Command Line Interface) app is by using input/output re-direction.** Here are the high-level steps:
 
 * First, you feed the app with a sequence of test inputs that is stored in a file while redirecting the output to another file.
 * Next, you compare the actual output file with another file containing the expected output.
@@ -37,7 +37,7 @@ Let's assume you are testing a CLI app called `AddressBook`. Here are the detail
    ```
    </panel>
 
-1. Run the program as given below, which will redirect the text in `input.txt` as the input to `AddressBook` and similarly, will redirect the output of AddressBook to a text file `output.txt`. %%Note that this does not require any code changes to `AddressBook`.%%
+1. Run the program as given below, which will redirect the text in `input.txt` as the input to `AddressBook` and similarly, will redirect the output of `AddressBook` to a text file `output.txt`. %%Note that this does not require any changes in `AddressBook` code.%%
 
    ```sh{.no-line-numbers}
    java AddressBook < input.txt > output.txt
@@ -47,7 +47,7 @@ Let's assume you are testing a CLI app called `AddressBook`. Here are the detail
      e.g., In Python, assuming the code is in `AddressBook.py` file, use the command<br>
       `python AddressBook.py < input.txt > output.txt`
 
-   * {{ icon_tip }} If you are using Windows, use a normal command window to run the app, not a PowerShell window.
+   * {{ icon_tip }} If you are using Windows, use a normal MS-DOS terminal (i.e., `cmd.exe`) to run the app, not a PowerShell window.
 
    <panel minimized >
    <span slot="header" class="card-title"><md>More on the `>` operator and the `<` operator {{ icon_extra }}</md></span>

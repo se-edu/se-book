@@ -12,7 +12,7 @@
 
 {{ icon_example }} A simple use case diagram:
 
-<img src="{{baseUrl}}/specifyingRequirements/useCases/introduction/images/ticketMachine.png" height="250" />
+<pic src="{{baseUrl}}/specifyingRequirements/useCases/introduction/images/ticketMachine.png" height="250" />
 
 </box>
 

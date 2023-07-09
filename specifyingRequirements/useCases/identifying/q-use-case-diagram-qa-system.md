@@ -9,7 +9,7 @@ The system is to be used by Testers, Programmers and System Administrators. Only
 
 <div slot="answer">
 
-<img src="{{baseUrl}}/specifyingRequirements/useCases/identifying/images/qaSystem.jpg" width="400" />
+<pic src="{{baseUrl}}/specifyingRequirements/useCases/identifying/images/qaSystem.jpg" width="400" />
 
 <p/>
 

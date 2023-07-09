@@ -8,7 +8,7 @@
 <p>Consider two classes, <code class="hljs inline no-lang" v-pre>Account</code> and <code class="hljs inline no-lang" v-pre>Guarantor</code>, with an association as shown in the following diagram:</p>
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example:</p>
-<img src="/se-book/errorHandling/defensiveProgramming/compulsoryAssociations/images/accountGuarantor.png" height="50">
+<pic src="/se-book/errorHandling/defensiveProgramming/compulsoryAssociations/images/accountGuarantor.png" height="50"></pic>
 <p></p>
 <p>Here, the association is compulsory i.e. an <code class="hljs inline no-lang" v-pre>Account</code> object should always be linked to a <code class="hljs inline no-lang" v-pre>Guarantor</code>. One way to implement this is to simply use a reference variable, like this:</p>
 <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{
@@ -50,7 +50,7 @@
 <ul>
 <li>restricts the maximum number of Accounts to 8</li>
 <li>avoids adding duplicate Accounts</li></ul>
-<img src="/se-book/errorHandling/defensiveProgramming/compulsoryAssociations/images/managerAccount.jpg" height="55">
+<pic src="/se-book/errorHandling/defensiveProgramming/compulsoryAssociations/images/managerAccount.jpg" height="55"></pic>
 <p></p>
 <template #answer><div>
 <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">import</span> java.util.*;
@@ -62,7 +62,7 @@
 </span><span>        <span class="hljs-keyword">if</span> (theAccounts.size() == <span class="hljs-number">8</span>) {
 </span><span>            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Exception(<span class="hljs-string">&quot;adding more than 8 accounts&quot;</span>);
 </span><span>        }
-</span><span>        
+</span><span>
 </span><span>        <span class="hljs-keyword">if</span> (!theAccounts.contains(acc)) {
 </span><span>            theAccounts.add(acc);
 </span><span>        }
@@ -76,7 +76,7 @@
   <div><panel><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Implement <code class="hljs inline no-lang" v-pre>Marriage</code></p></template>
 <question has-input="true">
 <p>Implement the classes defensively with appropriate references and operations to establish the associations among the classes. Follow the defensive coding approach. Let the <code class="hljs inline no-lang" v-pre>Marriage</code> class handle the setting/removal of references.</p>
-<img src="/se-book/errorHandling/defensiveProgramming/compulsoryAssociations/images/manMarriageWoman.jpg" height="55">
+<pic src="/se-book/errorHandling/defensiveProgramming/compulsoryAssociations/images/manMarriageWoman.jpg" height="55"></pic>
 <p></p>
 <template #answer><div>
 <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Marriage</span> </span>{
@@ -124,12 +124,12 @@
 </span><span>        wife.removeFromMarriage(<span class="hljs-keyword">this</span>);
 </span><span>        wife = <span class="hljs-keyword">null</span>;
 </span><span>    }
-</span><span>} 
+</span><span>}
 </span></code></pre></div></template></question></panel></div>
   <div><panel><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Immutable <code class="hljs inline no-lang" v-pre>Account</code> class</p></template>
 <question has-input="true">
 <p>Give a suitable defensive implementation to the <code class="hljs inline no-lang" v-pre>Account</code> class in the following class diagram. Note that “{immutable}” means once the association is formed, it cannot be changed.</p>
-<img src="/se-book/errorHandling/defensiveProgramming/compulsoryAssociations/images/accountGuarantorImmutable.png" height="80">
+<pic src="/se-book/errorHandling/defensiveProgramming/compulsoryAssociations/images/accountGuarantorImmutable.png" height="80"></pic>
 <p></p>
 <template #answer><div>
 <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{
@@ -146,11 +146,11 @@
 </span></code></pre></div></template></question></panel></div>
   <div><panel><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Is this defensive?</p></template>
 <question>
-<img src="/se-book/errorHandling/defensiveProgramming/compulsoryAssociations/images/countryCity.png" height="45">
+<pic src="/se-book/errorHandling/defensiveProgramming/compulsoryAssociations/images/countryCity.png" height="45"></pic>
 <p></p>
 <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">City</span> </span>{
 </span><span>    Country country;
-</span><span>    
+</span><span>
 </span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setCountry</span><span class="hljs-params">(Country country)</span> </span>{
 </span><span>        <span class="hljs-keyword">this</span>.country = country;
 </span><span>    }

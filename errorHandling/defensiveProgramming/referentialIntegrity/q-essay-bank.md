@@ -3,7 +3,7 @@
 
 Implement this bidirectional association.  Note that the `Bank` uses the `accNumber` attribute to uniquely identify an `Account` object. Assume the `Bank` class is responsible for maintaining the links between objects.
 
-<img src="{{baseUrl}}/errorHandling/defensiveProgramming/referentialIntegrity/images/bankAccount.jpg" height="60" />
+<pic src="{{baseUrl}}/errorHandling/defensiveProgramming/referentialIntegrity/images/bankAccount.jpg" height="60" />
 <p/>
 
 <div slot="answer">
@@ -39,7 +39,7 @@ public class Bank {
     public void createAccount(int n) {
         addAccount(new Account(n, this));
     }
-    public void addAccount(Account a) {          
+    public void addAccount(Account a) {
         theAccounts.put(a.getNumber(), a);
     }
     public void removeAccount(int accNumber) {

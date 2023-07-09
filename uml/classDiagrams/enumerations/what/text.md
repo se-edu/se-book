@@ -8,7 +8,7 @@
 
 Notation:
 
-<img src="{{baseUrl}}/uml/classDiagrams/enumerations/what/images/notation.png" width="150" />
+<pic src="{{baseUrl}}/uml/classDiagrams/enumerations/what/images/notation.png" width="150" />
 
 <box>
 

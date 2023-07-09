@@ -6,7 +6,7 @@
 
 <div id="body">
 
-**A _model_ is a representation of something else.** 
+**A _model_ is a representation of something else.**
 
 <box>
 
@@ -20,8 +20,8 @@
 
 A _class diagram_ is a diagram drawn using the UML modelling notation.<br>
 {{ icon_example }} An example class diagram:<br>
-  
-<img src="{{baseUrl}}/uml/classDiagrams/introduction/what/images/classDiagramExample1.png" width="600" />
+
+<pic src="{{baseUrl}}/uml/classDiagrams/introduction/what/images/classDiagramExample1.png" width="600" />
 
 </modal>
 
@@ -37,7 +37,7 @@ A _class diagram_ is a diagram drawn using the UML modelling notation.<br>
 
 </box>
 
-**Multiple models of the same entity may be needed to capture it fully.** 
+**Multiple models of the same entity may be needed to capture it fully.**
 
 <box>
 

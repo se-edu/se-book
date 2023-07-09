@@ -6,7 +6,7 @@ For the `Manager` class shown below, write an `addAccount()` method that
 * restricts the maximum number of Accounts to 8
 * avoids adding duplicate Accounts
 
-<img src="{{baseUrl}}/errorHandling/defensiveProgramming/compulsoryAssociations/images/managerAccount.jpg" height="55" />
+<pic src="{{baseUrl}}/errorHandling/defensiveProgramming/compulsoryAssociations/images/managerAccount.jpg" height="55" />
 <p/>
 
 <div slot="answer">
@@ -21,7 +21,7 @@ public class Manager {
         if (theAccounts.size() == 8) {
             throw new Exception("adding more than 8 accounts");
         }
-        
+
         if (!theAccounts.contains(acc)) {
             theAccounts.add(acc);
         }

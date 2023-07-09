@@ -12,7 +12,7 @@
 
 {{ icon_example }} Example:
 
-<img src="{{baseUrl}}/uml/notes/notes/images/adminProfessor.png" height="120" />
+<pic src="{{baseUrl}}/uml/notes/notes/images/adminProfessor.png" height="120" />
 <p/>
 
 </box>

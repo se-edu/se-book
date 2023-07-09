@@ -6,7 +6,7 @@
 
 <div id="body">
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/Cloud_computing.svg" height="500" /><br>
+<pic src="https://upload.wikimedia.org/wikipedia/commons/b/b5/Cloud_computing.svg" height="500" /><br>
 
 <sub>source: [https://commons.wikimedia.org](https://en.wikipedia.org/wiki/Cloud_computing)</sub>
 

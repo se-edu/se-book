@@ -1,7 +1,7 @@
 <panel header="{{ icon_Q_A }} What does the navigability given by this diagram mean?">
 <question>
 
-<img src="{{baseUrl}}/uml/classDiagrams/associations/navigability/images/unitItem.png" height="100" />
+<pic src="{{baseUrl}}/uml/classDiagrams/associations/navigability/images/unitItem.png" height="100" />
 <p/>
 
 - ( ) a. A `Unit` object knows about the `Item` object it is linked to

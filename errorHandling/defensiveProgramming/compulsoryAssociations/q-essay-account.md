@@ -3,7 +3,7 @@
 
 Give a suitable defensive implementation to the `Account` class in the following class diagram. Note that “{immutable}” means once the association is formed, it cannot be changed.
 
-<img src="{{baseUrl}}/errorHandling/defensiveProgramming/compulsoryAssociations/images/accountGuarantorImmutable.png" height="80" />
+<pic src="{{baseUrl}}/errorHandling/defensiveProgramming/compulsoryAssociations/images/accountGuarantorImmutable.png" height="80" />
 <p/>
 
 <div slot="answer">

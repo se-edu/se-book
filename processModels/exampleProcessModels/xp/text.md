@@ -20,7 +20,7 @@ The following description was adapted from the [XP home page](http://www.extreme
 
 **XP has a set of simple rules.** XP is a lot like a jig saw puzzle with many small pieces. Individually the pieces make no sense, but when combined together a complete picture can be seen. This flow chart shows how Extreme Programming's rules work together.
 
-<img src="{{baseUrl}}/processModels/exampleProcessModels/xp/images/diagram.png" height="200" />
+<pic src="{{baseUrl}}/processModels/exampleProcessModels/xp/images/diagram.png" height="200" />
 <p/>
 
 </box type="tip">

@@ -18,7 +18,7 @@ B) Choose the correct statements
 
 <div slot="answer">
 
-A) (a)(b)(c)(e)
+A) (a)(b)(c)~~(d)~~(e)
 
 Explanation: While many languages support the OO paradigm, OO is not a language itself.
 

@@ -23,19 +23,19 @@ class Student {
 }
 ```
 
-<img src="{{baseUrl}}/errorHandling/defensiveProgramming/referentialIntegrity/images/teacherStudent.png" height="80" />
+<pic src="{{baseUrl}}/errorHandling/defensiveProgramming/referentialIntegrity/images/teacherStudent.png" height="80" />
 <p/>
 
-(b) In terms of maintaining referential integrity in the implementation, what is the difference between the following two diagrams?  
+(b) In terms of maintaining referential integrity in the implementation, what is the difference between the following two diagrams?
 
-<img src="{{baseUrl}}/errorHandling/defensiveProgramming/referentialIntegrity/images/teacherStudent.png" height="80" />
+<pic src="{{baseUrl}}/errorHandling/defensiveProgramming/referentialIntegrity/images/teacherStudent.png" height="80" />
 <p/>
-<img src="{{baseUrl}}/errorHandling/defensiveProgramming/referentialIntegrity/images/manWomanAssoc.png" height="60" />
+<pic src="{{baseUrl}}/errorHandling/defensiveProgramming/referentialIntegrity/images/manWomanAssoc.png" height="60" />
 <p/>
 
 (c) Show a defensive implementation of the `remove(Member m)` method of the `Club` class given below.
 
-<img src="{{baseUrl}}/errorHandling/defensiveProgramming/referentialIntegrity/images/clubMember.png" height="60" />
+<pic src="{{baseUrl}}/errorHandling/defensiveProgramming/referentialIntegrity/images/clubMember.png" height="60" />
 <p/>
 
 <div slot="answer">

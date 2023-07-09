@@ -3,7 +3,7 @@
 
 What’s going on here?
 
-<img src="{{baseUrl}}/modeling/modelingBehaviors/sequenceDiagramsIntermediate/images/exerciseDiagram.png" height="170" />
+<pic src="{{baseUrl}}/modeling/modelingBehaviors/sequenceDiagramsIntermediate/images/exerciseDiagram.png" height="170" />
 <p/>
 
 - [ ] a. `Logic` object is executing a parallel thread.

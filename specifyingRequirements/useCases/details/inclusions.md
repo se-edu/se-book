@@ -25,4 +25,4 @@ Inclusions are useful,
 
 You use a dotted arrow and an `<<include>>` annotation to show use case inclusions in a use case diagram. Note how the arrow direction is different from the `<<extend>>` arrows.
 
-<img src="{{baseUrl}}/specifyingRequirements/useCases/details/images/inclusion.png" height="250" /><p/>
+<pic src="{{baseUrl}}/specifyingRequirements/useCases/details/images/inclusion.png" height="250" /><p/>

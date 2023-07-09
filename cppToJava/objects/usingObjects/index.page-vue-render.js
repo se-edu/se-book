@@ -32,7 +32,7 @@ with(this){return _c('div',{staticClass:"table-responsive"},[_c('table',{staticC
 with(this){return _c('p',[_c('strong',[_v("Before using a class in your code, you need to "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("import")]),_v(" the class.")]),_v(" "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("import")]),_v(" statements appear at the top of the code.")])}
 },function anonymous(
 ) {
-with(this){return _c('p',[_c('span',{staticClass:"badge rounded-pill bg-warning text-dark"},[_c('span',{staticClass:"fas fa-lightbulb",attrs:{"aria-hidden":"true"}})]),_v(" You might wonder why we can use the "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("System")]),_v(" class without importing it. "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("System")]),_v(" belongs to "),_c('strong',[_v("the "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("java.lang")]),_v(" package, which is imported automatically")]),_v(".")])}
+with(this){return _c('p',[_c('span',{staticClass:"badge rounded-pill bg-success text-white"},[_c('span',{staticClass:"fas fa-lightbulb",attrs:{"aria-hidden":"true"}})]),_v(" You might wonder why we can use the "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("System")]),_v(" class without importing it. "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("System")]),_v(" belongs to "),_c('strong',[_v("the "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("java.lang")]),_v(" package, which is imported automatically")]),_v(".")])}
 },function anonymous(
 ) {
 with(this){return _c('h5',{attrs:{"id":"new-operator"}},[_c('span',{staticClass:"anchor",attrs:{"id":"new-operator"}}),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("new")]),_v(" operator"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#new-operator","onclick":"event.stopPropagation()"}})])}
@@ -41,6 +41,6 @@ with(this){return _c('h5',{attrs:{"id":"new-operator"}},[_c('span',{staticClass:
 with(this){return _c('p',[_c('strong',[_v("To create a new object, you have to use the "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("new")]),_v(" operator")])])}
 },function anonymous(
 ) {
-with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.1.0")]),_v(", generated on Mon, 1 May 2023, 21:21:57 GMT+8]")])])])}
+with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.1.0")]),_v(", generated on Sun, 9 Jul 2023, 23:43:23 GMT+8]")])])])}
 }];
   

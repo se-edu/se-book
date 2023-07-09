@@ -6,7 +6,7 @@
 <div id="main">
 <div>
 <p>A bidirectional association in the design (shown in (a)) is usually emulated at code level using two variables (as shown in (b)).</p>
-<img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/manWoman.png" height="140">
+<pic src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/manWoman.png" height="140"></pic>
 <p></p>
 <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Man</span> </span>{
 </span><span>    Woman girlfriend;
@@ -33,10 +33,10 @@
 <pre><code class="hljs java" v-pre><span>Woman jean;
 </span><span>Man james, yong;
 </span><span><span class="hljs-comment">// ...</span>
-</span><span>james.setGirlfriend(jean);  
-</span><span>jean.setBoyfriend(yong);  
+</span><span>james.setGirlfriend(jean);
+</span><span>jean.setBoyfriend(yong);
 </span></code></pre><p>Now James' girlfriend is Jean, while Jean's boyfriend is not James. This situation is a result of the code not being defensive enough to stop this &quot;love triangle&quot;. In such a situation, you could say that <em>the referential integrity has been violated</em>. This means that <em>there is an inconsistency in object references</em>.</p>
-<img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/woman.png" height="50">
+<pic src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/woman.png" height="50"></pic>
 <p></p>
 <p>One way to prevent this situation is to implement the two classes as shown below. Note how the referential integrity is maintained.</p>
 <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Woman</span> </span>{
@@ -55,7 +55,7 @@
 </span><span>
 </span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">breakUp</span><span class="hljs-params">()</span> </span>{
 </span><span>        boyfriend = <span class="hljs-keyword">null</span>;
-</span><span>    }   
+</span><span>    }
 </span><span>    <span class="hljs-comment">// ...</span>
 </span><span>}
 </span></code></pre><pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Man</span> </span>{
@@ -73,7 +73,7 @@
 </span><span>    }
 </span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">breakUp</span><span class="hljs-params">()</span> </span>{
 </span><span>        girlfriend = <span class="hljs-keyword">null</span>;
-</span><span>    }  
+</span><span>    }
 </span><span>    <span class="hljs-comment">// ...</span>
 </span><span>}
 </span></code></pre><p>When <code class="hljs inline no-lang" v-pre>james.setGirlfriend(jean)</code> is executed, the code ensures that <code class="hljs inline no-lang" v-pre>james</code> breaks up with any current girlfriend before he accepts <code class="hljs inline no-lang" v-pre>jean</code> as his girlfriend. Furthermore, the code ensures that <code class="hljs inline no-lang" v-pre>jean</code> breaks up with any existing boyfriends before accepting <code class="hljs inline no-lang" v-pre>james</code> as her boyfriend.</p></div>
@@ -86,7 +86,7 @@
 <p>Feature ID: Multiplayer<br>
 Description: A minefield is divided into mine regions. Each region is assigned to a single player. Players can swap regions. To win the game, all regions must be cleared.</p></box>
 <p>Given below is an extract from our class diagram.</p>
-<img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/playerRegion.png" height="100">
+<pic src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/playerRegion.png" height="100"></pic>
 <p></p>
 <p>Minimally, this can be implemented like this.</p>
 <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Player</span> </span>{
@@ -97,7 +97,7 @@ Description: A minefield is divided into mine regions. Each region is assigned t
 </span><span>    <span class="hljs-function">Region <span class="hljs-title">getRegion</span><span class="hljs-params">()</span> </span>{
 </span><span>        <span class="hljs-keyword">return</span> region;
 </span><span>    }
-</span><span>} 
+</span><span>}
 </span><span>
 </span><span><span class="hljs-comment">// Region class is similar</span>
 </span></code></pre><p>However, this is not very defensive. For example, a user of this class can pass a <code class="hljs inline no-lang" v-pre>null</code> to either of the methods, thus violating the multiplicity of the relationship.</p>
@@ -165,7 +165,7 @@ Description: A minefield is divided into mine regions. Each region is assigned t
 </span><span>            myRegion.removePlayer(<span class="hljs-keyword">this</span>);
 </span><span>        }
 </span><span>        myRegion = newRegion;
-</span><span>        
+</span><span>
 </span><span>        <span class="hljs-comment">// set the reverse link</span>
 </span><span>        myRegion.setPlayer(<span class="hljs-keyword">this</span>);
 </span><span>    }
@@ -184,7 +184,7 @@ Description: A minefield is divided into mine regions. Each region is assigned t
   <div><panel><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Bidirectional association between <code class="hljs inline no-lang" v-pre>Bank</code> and <code class="hljs inline no-lang" v-pre>Account</code></p></template>
 <question has-input="true">
 <p>Implement this bidirectional association.  Note that the <code class="hljs inline no-lang" v-pre>Bank</code> uses the <code class="hljs inline no-lang" v-pre>accNumber</code> attribute to uniquely identify an <code class="hljs inline no-lang" v-pre>Account</code> object. Assume the <code class="hljs inline no-lang" v-pre>Bank</code> class is responsible for maintaining the links between objects.</p>
-<img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/bankAccount.jpg" height="60">
+<pic src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/bankAccount.jpg" height="60"></pic>
 <p></p>
 <template #answer><div>
 <p>The code below contains a method in the <code class="hljs inline no-lang" v-pre>Bank</code> class to create an account; the bank field in the new account is thereby filled by the bank creating it.</p>
@@ -212,7 +212,7 @@ Description: A minefield is divided into mine regions. Each region is assigned t
 </span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">createAccount</span><span class="hljs-params">(<span class="hljs-keyword">int</span> n)</span> </span>{
 </span><span>        addAccount(<span class="hljs-keyword">new</span> Account(n, <span class="hljs-keyword">this</span>));
 </span><span>    }
-</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addAccount</span><span class="hljs-params">(Account a)</span> </span>{          
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addAccount</span><span class="hljs-params">(Account a)</span> </span>{
 </span><span>        theAccounts.put(a.getNumber(), a);
 </span><span>    }
 </span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">removeAccount</span><span class="hljs-params">(<span class="hljs-keyword">int</span> accNumber)</span> </span>{
@@ -240,15 +240,15 @@ Description: A minefield is divided into mine regions. Each region is assigned t
 </span><span>        favoriteTeacher = t;
 </span><span>    }
 </span><span>}
-</span></code></pre><img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/teacherStudent.png" height="80">
+</span></code></pre><pic src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/teacherStudent.png" height="80"></pic>
 <p></p>
 <p>(b) In terms of maintaining referential integrity in the implementation, what is the difference between the following two diagrams?</p>
-<img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/teacherStudent.png" height="80">
+<pic src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/teacherStudent.png" height="80"></pic>
 <p></p>
-<img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/manWomanAssoc.png" height="60">
+<pic src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/manWomanAssoc.png" height="60"></pic>
 <p></p>
 <p>(c) Show a defensive implementation of the <code class="hljs inline no-lang" v-pre>remove(Member m)</code> method of the <code class="hljs inline no-lang" v-pre>Club</code> class given below.</p>
-<img src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/clubMember.png" height="60">
+<pic src="/se-book/errorHandling/defensiveProgramming/referentialIntegrity/images/clubMember.png" height="60"></pic>
 <p></p>
 <template #answer><div>
 <p>(a) Yes. Each link is mutable and unidirectional. A simple reference variable is suitable to hold the link.</p>

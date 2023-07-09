@@ -6,7 +6,7 @@
 
 <div id="body">
 
-**_Developer testing_ is the testing done by the developers themselves** as opposed to professional testers or end-users.
+**_Developer testing_ is the testing done by the developers themselves** as opposed to dedicated testers or end-users.
 
 </div>
 

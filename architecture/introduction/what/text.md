@@ -18,9 +18,9 @@
 <table>
 <tbody>
 <tr>
-<td><img src="{{baseUrl}}/architecture/introduction/what/images/minesweeper.png" height="220" /></td>
+<td><pic src="{{baseUrl}}/architecture/introduction/what/images/minesweeper.png" height="220" /></td>
 <td width="10px"></td>
-<td><img src="{{baseUrl}}/architecture/introduction/what/images/minesweeperArchitecture.png" height="160" /></td>
+<td><pic src="{{baseUrl}}/architecture/introduction/what/images/minesweeperArchitecture.png" height="160" /></td>
 </tr>
 </tbody>
 </table>

@@ -16,7 +16,7 @@
 
 <modal large header="Building Architecture Styles" id="modal:archiStyles-buildingArchitectures">
 
-<img src="https://inspectapedia.com/exterior/ArchitectureStyles.jpg" width="600"/><br>
+<pic src="https://inspectapedia.com/exterior/ArchitectureStyles.jpg" width="600"/><br>
 <sub>source: https://inspectapedia.com</sub>
 
 </modal>

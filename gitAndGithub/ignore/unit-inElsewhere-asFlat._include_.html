@@ -1,4 +1,4 @@
-<div><panel src="/se-book/revisionControl/savingHistory/unit-inElsewhere-asFlat._include_.html" popup-url="/se-book/revisionControl/savingHistory"><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> Revision Control: Saving History</p></template></panel></div><p></p>
+<div></div><p></p>
 <p><span class="dimmed"><strong><span>Tools → Git and GitHub →
 </span></strong></span></p>
 <div id="title-and-body">
@@ -7,19 +7,19 @@
 <div>
 <p>Often, there are files inside the Git working folder that you don't want to revision-control e.g., temporary log files. Follow the steps below to learn how to configure Git to ignore such files.</p>
 <p><strong>1. Add a file into your repo's working folder that you supposedly don't want to revision-control</strong> e.g., a file named <code class="hljs inline no-lang" v-pre>temp.txt</code>. Observe how Git has detected the new file.</p>
-<p><strong>2. Tell Git to ignore that file:</strong></p>
+<p><strong>2. Configure Git to ignore that file:</strong></p>
 <tabs>
-  <tab><template #header>SourceTree</template>
+  <tab><template #header>Sourcetree</template>
     <div><p>The file should be currently listed under <code class="hljs inline no-lang" v-pre>Unstaged files</code>. Right-click it and choose <code class="hljs inline no-lang" v-pre>Ignore…</code>. Choose <code class="hljs inline no-lang" v-pre>Ignore exact filename(s)</code> and click <code class="hljs inline no-lang" v-pre>OK</code>.</p>
 <p>Observe that a file named <code class="hljs inline no-lang" v-pre>.gitignore</code> has been created in the working directory root and has the following line in it.</p>
-<pre><code class="hljs" v-pre><span>temp.txt
-</span></code></pre></div></tab>
+<div class="code-block"><div class="code-block-heading"><span>.gitignore</span></div><div class="code-block-content"><pre><code heading=".gitignore" class="hljs" v-pre><span>temp.txt
+</span></code></pre></div></div></div></tab>
   <tab><template #header>CLI</template>
     <div><p>Create a file named <code class="hljs inline no-lang" v-pre>.gitignore</code> in the working directory root and add the following line in it.</p>
-<pre><code class="hljs" v-pre><span>temp.txt
-</span></code></pre></div></tab></tabs>
-<box>
-<h5 id="the-gitignore-file"><span id="the-gitignore-file" class="anchor"></span>The <code class="hljs inline no-lang" v-pre>.gitignore</code> file<a class="fa fa-anchor" href="#the-gitignore-file" onclick="event.stopPropagation()"></a></h5>
+<div class="code-block"><div class="code-block-heading"><span>.gitignore</span></div><div class="code-block-content"><pre><code class="no-line-numbers hljs" heading=".gitignore" v-pre><span>temp.txt
+</span></code></pre></div></div></div></tab></tabs>
+<box type="info" seamless>
+<p><strong>The <code class="hljs inline no-lang" v-pre>.gitignore</code> file</strong></p>
 <p>The <code class="hljs inline no-lang" v-pre>.gitignore</code> file tells Git which files to ignore when tracking revision history. That file itself can be either revision controlled or ignored.</p>
 <ul>
 <li>
@@ -29,11 +29,10 @@
 <li>
 <p>It supports file patterns e.g., adding <code class="hljs inline no-lang" v-pre>temp/*.tmp</code> to the <code class="hljs inline no-lang" v-pre>.gitignore</code> file prevents Git from tracking any <code class="hljs inline no-lang" v-pre>.tmp</code> files in the <code class="hljs inline no-lang" v-pre>temp</code> directory.</p></li></ul>
 <p><span><span aria-hidden="true" class="fas fa-paperclip"></span></span> More information about the <code class="hljs inline no-lang" v-pre>.gitignore</code> file: <a href="https://git-scm.com/docs/gitignore">git-scm.com/docs/gitignore</a></p></box>
-<box type="important" seamless>
 <p><strong>Files recommended to be omitted from version control</strong></p>
 <ul>
 <li><strong>Binary files</strong> <em>generated</em> when building your project <span class="dimmed">e.g., <code class="hljs inline no-lang" v-pre>*.class</code>, <code class="hljs inline no-lang" v-pre>*.jar</code>, <code class="hljs inline no-lang" v-pre>*.exe</code></span> (reasons: 1. no need to version control these files as they can be generated again from the source code 2. Revision control systems are optimized for tracking text-based files, not binary files.</li>
 <li><strong>Temporary files</strong> <span class="dimmed">e.g., log files generated while testing the product</span></li>
 <li><strong>Local files</strong> i.e., files specific to your own computer <span class="dimmed">e.g., local settings of your IDE</span></li>
-<li><strong>Sensitive content</strong> i.e., files containing sensitive/personal information <span class="dimmed">e.g., credential files, personal identification data</span> (especially, if there is a possibility of those files getting leaked via the revision control system).</li></ul></box></div>
+<li><strong>Sensitive content</strong> i.e., files containing sensitive/personal information <span class="dimmed">e.g., credential files, personal identification data</span> (especially, if there is a possibility of those files getting leaked via the revision control system).</li></ul></div>
 <div></div></div></div>

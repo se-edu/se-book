@@ -19,7 +19,7 @@
 
 <div id="section-pulling">
 
-**You can ==_pull_== from one repo to another, to receive new commits in the second repo**, if the repos have a shared history. Let's say some new commits were added to the <tooltip content="_upstream_ repo is a term used to refer to the repo you cloned from">upstream repo</tooltip> after you cloned it and you would like to copy over those new commits to your own clone i.e., ==sync== your clone with the upstream repo. In that case, you pull from the upstream repo to your clone.
+**You can ==_pull_== from one repo to another, to receive new commits in the second repo**, but only if the repos have a shared history. Let's say some new commits were added to the <tooltip content="_upstream_ repo is a term used to refer to the repo you cloned from">upstream repo</tooltip> after you cloned it and you would like to copy over those new commits to your own clone i.e., ==sync== your clone with the upstream repo. In that case, you pull from the upstream repo to your clone.
 </div>
 <div id="section-pushing">
 

@@ -10,7 +10,7 @@ Draw an activity diagram to represent the following workflow a burger shop uses 
 
 <panel type="seamless" header="Example Activity Diagram" minimized>
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Activity_conducting.svg"><br>
+<pic src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Activity_conducting.svg"><br>
 <sub>[[source:wikipeida](https://en.wikipedia.org/wiki/Activity_diagram)]</sub>
 </panel>
 

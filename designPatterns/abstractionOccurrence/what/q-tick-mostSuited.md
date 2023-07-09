@@ -5,7 +5,7 @@ Which one of these is most suited for an application of the Abstraction Occurren
 
 - ( ) a. Stagings of a stage drama at various theatres
 - ( ) b. Teachers and their students
-- ( ) c. Modules and exams/assignments given by those modules
+- ( ) c. Courses and exams/assignments given by those courses
 
 <div slot="answer">
 
@@ -17,7 +17,7 @@ Explanation:
 
 (b) Students are not occurrences of a Teacher or vice versa.
 
-(c) Module, Exam, and Assignment are distinct entities with associations among them, but none of them can be considered an occurrence of another.
+(c) Course, Exam, and Assignment are distinct entities with associations among them, but none of them can be considered an occurrence of another.
 
 </div>
 </question>

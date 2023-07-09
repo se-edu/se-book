@@ -20,10 +20,10 @@ Furthermore, **multiple object diagrams can correspond to a single class diagram
 
 {{ icon_example }} Both object diagrams are derived from the same class diagram shown earlier. In other words, each of these object diagrams shows ‘an instance of’ the same class diagram.
 
-<img src="{{baseUrl}}/uml/miscellaneous/objectVsClassDiagrams/images/professorStudentAdmin.png" height="85" />
+<pic src="{{baseUrl}}/uml/miscellaneous/objectVsClassDiagrams/images/professorStudentAdmin.png" height="85" />
 <p/>
 
-<img src="{{baseUrl}}/uml/miscellaneous/objectVsClassDiagrams/images/professorStudent.png" height="150" />
+<pic src="{{baseUrl}}/uml/miscellaneous/objectVsClassDiagrams/images/professorStudent.png" height="150" />
 <p/>
 
 </box>

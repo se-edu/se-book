@@ -20,7 +20,7 @@ with(this){return _c('div',[_c('h4',{attrs:{"id":"details"}},[_c('span',{staticC
 with(this){return _c('p',[_c('strong',[_v("The "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("{benefit}")]),_v(" can be omitted")]),_v(" if it is obvious.")])}
 },function anonymous(
 ) {
-with(this){return _c('p',[_c('span',{staticClass:"badge rounded-pill bg-warning text-dark"},[_c('span',{staticClass:"fas fa-lightbulb",attrs:{"aria-hidden":"true"}})]),_v(" It is recommended to confirm there is a concrete benefit even if you omit it from the user story. If not, you could end up adding features that have no real benefit.")])}
+with(this){return _c('p',[_c('span',{staticClass:"badge rounded-pill bg-success text-white"},[_c('span',{staticClass:"fas fa-lightbulb",attrs:{"aria-hidden":"true"}})]),_v(" It is recommended to confirm there is a concrete benefit even if you omit it from the user story. If not, you could end up adding features that have no real benefit.")])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_v("You can add more characteristics to the "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("{user role}")]),_v(" to provide more context to the user story.")])}
@@ -38,6 +38,6 @@ with(this){return _c('p',[_c('strong',[_v("Other useful info that can be added t
 with(this){return _c('ul',[_c('li',[_v("Priority: how important the user story is")]),_v(" "),_c('li',[_v("Size: the estimated effort to implement the user story")]),_v(" "),_c('li',[_v("Urgency: how soon the feature is needed")])])}
 },function anonymous(
 ) {
-with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.1.0")]),_v(", generated on Mon, 1 May 2023, 21:21:57 GMT+8]")])])])}
+with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.1.0")]),_v(", generated on Sun, 9 Jul 2023, 23:43:23 GMT+8]")])])])}
 }];
   

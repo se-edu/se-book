@@ -39,7 +39,7 @@ by Patkos Csaba</li>
 <p>In object-oriented programming, OCP can be achieved in various ways. This often requires separating the <em>specification (i.e. interface)</em> of a module from its <em>implementation</em>.</p>
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In the design given below, the behavior of the <code class="hljs inline no-lang" v-pre>CommandQueue</code> class can be altered by adding more concrete <code class="hljs inline no-lang" v-pre>Command</code> subclasses. For example, by including a <code class="hljs inline no-lang" v-pre>Delete</code> class alongside <code class="hljs inline no-lang" v-pre>List</code>, <code class="hljs inline no-lang" v-pre>Sort</code>, and <code class="hljs inline no-lang" v-pre>Reset</code>, the <code class="hljs inline no-lang" v-pre>CommandQueue</code> can now perform delete commands without modifying its code at all. That is, its behavior was extended without having to modify its code. Hence, it is open to extensions, but closed to modification.</p>
-<img src="/se-book/principles/openClosedPrinciple/images/commandQueue.png" height="170">
+<pic src="/se-book/principles/openClosedPrinciple/images/commandQueue.png" height="170"></pic>
 <p></p></box>
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The behavior of a Java generic class can be altered by passing it a different class as a parameter. In the code below, the <code class="hljs inline no-lang" v-pre>ArrayList</code> class behaves as a container of <code class="hljs inline no-lang" v-pre>Students</code> in one instance and as a container of <code class="hljs inline no-lang" v-pre>Admin</code> objects in the other instance, without having to change its code. That is, the behavior of the <code class="hljs inline no-lang" v-pre>ArrayList</code> class is extended without modifying its code.</p>
@@ -91,7 +91,7 @@ by Patkos Csaba</li>
 <div></div></div></div></div></modal>
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Suppose the <code class="hljs inline no-lang" v-pre>Payroll</code> class depends on the <code class="hljs inline no-lang" v-pre>adjustMySalary(int percent)</code> method of the <code class="hljs inline no-lang" v-pre>Staff</code> class. Furthermore, the <code class="hljs inline no-lang" v-pre>Staff</code> class states that the <code class="hljs inline no-lang" v-pre>adjustMySalary</code> method will work for all positive percent values. Both the <code class="hljs inline no-lang" v-pre>Admin</code> and <code class="hljs inline no-lang" v-pre>Academic</code> classes override the <code class="hljs inline no-lang" v-pre>adjustMySalary</code> method.</p>
-<img src="/se-book/principles/liskovSubstitutionPrinciple/images/payroll.png" height="200">
+<pic src="/se-book/principles/liskovSubstitutionPrinciple/images/payroll.png" height="200"></pic>
 <p></p>
 <p>Now consider the following:</p>
 <ul>
@@ -103,7 +103,7 @@ by Patkos Csaba</li>
 <li>The <code class="hljs inline no-lang" v-pre>Academic</code> class violates LSP because it will not work for percent values over <code class="hljs inline no-lang" v-pre>100</code> as expected by the <code class="hljs inline no-lang" v-pre>Payroll</code> class. Substituting <code class="hljs inline no-lang" v-pre>Academic</code> objects for <code class="hljs inline no-lang" v-pre>Staff</code> objects can potentially break the <code class="hljs inline no-lang" v-pre>Payroll</code> class functionality.</li></ul>
 <panel type="seamless"><template #header><p><span class="dimmed">Another example</span></p></template>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The <code class="hljs inline no-lang" v-pre>Rectangle#resize()</code> method can take any integers for <code class="hljs inline no-lang" v-pre>height</code> and <code class="hljs inline no-lang" v-pre>width</code>. This contract is violated by the subclass <code class="hljs inline no-lang" v-pre>Square#resize()</code> because it does not accept a <code class="hljs inline no-lang" v-pre>height</code> that is different from the <code class="hljs inline no-lang" v-pre>width</code>.</p>
-<img src="/se-book/principles/liskovSubstitutionPrinciple/images/rectangleSquare.png" height="120">
+<pic src="/se-book/principles/liskovSubstitutionPrinciple/images/rectangleSquare.png" height="120"></pic>
 <p></p>
 <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Rectangle</span> </span>{
 </span><span>    ...
@@ -163,7 +163,7 @@ by Patkos Csaba</li>
 </span><span>        <span class="hljs-comment">// ...</span>
 </span><span>    }
 </span><span>}
-</span></code></pre><img src="/se-book/principles/interfaceSegregationPrinciple/images/payroll.png" height="200">
+</span></code></pre><pic src="/se-book/principles/interfaceSegregationPrinciple/images/payroll.png" height="200"></pic>
 <p></p></box></div>
 <div></div></div></div></div></panel>
 <panel type="seamless"><template #header><p><strong>D</strong>ependency Inversion Principle (DIP)</p></template>
@@ -180,7 +180,7 @@ by Patkos Csaba</li>
 <li>Abstractions should not depend on details. Details should depend on abstractions.</li></ol></div></box>
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example:</p>
-<img src="/se-book/principles/dependencyInversionPrinciple/images/payrollEmployee.png" height="130">
+<pic src="/se-book/principles/dependencyInversionPrinciple/images/payrollEmployee.png" height="130"></pic>
 <p></p>
 <p>In design (a), the higher level class <code class="hljs inline no-lang" v-pre>Payroll</code> depends on the lower level class <code class="hljs inline no-lang" v-pre>Employee</code>, which is a violation of DIP. In design (b), both <code class="hljs inline no-lang" v-pre>Payroll</code> and <code class="hljs inline no-lang" v-pre>Employee</code> depend on the <code class="hljs inline no-lang" v-pre>Payee</code> interface (note that inheritance is a dependency).</p>
 <p>Design (b) is more flexible (and less coupled) because now the <code class="hljs inline no-lang" v-pre>Payroll</code> class need not change when the <code class="hljs inline no-lang" v-pre>Employee</code> class changes.</p></box></div>

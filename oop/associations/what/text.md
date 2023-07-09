@@ -18,7 +18,7 @@ Objects in an OO solution need to be connected to each other to form a network s
 
 <box>
 
-{{ icon_example }} To continue the previous example, the associations between a `Course` object and `Student` objects can change as students enroll in the module or drop the module over time.
+{{ icon_example }} To continue the previous example, the associations between a `Course` object and `Student` objects can change as students enroll in the course or drop the course over time.
 
 </box>
 

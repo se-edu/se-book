@@ -8,7 +8,7 @@ Which of these sequences of actions is not allowed by the given activity diagram
 - [ ] iii. start a b c d e  g f c d end
 - [ ] iv. start a b c d g c d end
 
-<img src="{{baseUrl}}/modeling/modelingBehaviors/activityDiagrams/images/sequence.png" height="190" />
+<pic src="{{baseUrl}}/modeling/modelingBehaviors/activityDiagrams/images/sequence.png" height="190" />
 <p/>
 
 <div slot="answer">

@@ -14,6 +14,7 @@
 <include src="push/unit-inParent-asPanel.md" boilerplate />
 <include src="branch/unit-inParent-asPanel.md" boilerplate />
 <include src="mergeConflicts/unit-inParent-asPanel.md" boilerplate />
+<include src="remoteBranches/unit-inParent-asPanel.md" boilerplate />
 <include src="createPRs/unit-inParent-asPanel.md" boilerplate />
 <include src="reviewPRs/unit-inParent-asPanel.md" boilerplate />
 <include src="managePRs/unit-inParent-asPanel.md" boilerplate />

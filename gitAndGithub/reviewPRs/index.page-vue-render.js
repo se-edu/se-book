@@ -32,7 +32,7 @@ with(this){return _c('p',[_c('strong',[_v("4. Add review comments:")])])}
 with(this){return _c('span',{staticStyle:{"color":"#0066ff"}},[_c('span',{staticClass:"fas fa-plus-square",attrs:{"aria-hidden":"true"}})])}
 },function anonymous(
 ) {
-with(this){return _c('span',{staticClass:"badge rounded-pill bg-warning text-dark"},[_c('span',{staticClass:"fas fa-lightbulb",attrs:{"aria-hidden":"true"}})])}
+with(this){return _c('span',{staticClass:"badge rounded-pill bg-success text-white"},[_c('span',{staticClass:"fas fa-lightbulb",attrs:{"aria-hidden":"true"}})])}
 },function anonymous(
 ) {
 with(this){return _c('span',{staticStyle:{"color":"#0066ff"}},[_c('span',{staticClass:"fas fa-plus-square",attrs:{"aria-hidden":"true"}})])}
@@ -41,15 +41,15 @@ with(this){return _c('span',{staticStyle:{"color":"#0066ff"}},[_c('span',{static
 with(this){return _c('li',[_c('span',[_c('span',{staticClass:"fas fa-paperclip",attrs:{"aria-hidden":"true"}})]),_v(" "),_c('a',{attrs:{"href":"https://se-education.org/guides/guidelines/PRs-reviewing.html"}},[_v("This page @SE-EDU/guides")]),_v(" has some best practices PR reviewers can follow.")])}
 },function anonymous(
 ) {
-with(this){return _c('span',{staticClass:"badge rounded-pill bg-warning text-dark"},[_c('span',{staticClass:"fas fa-lightbulb",attrs:{"aria-hidden":"true"}})])}
+with(this){return _c('span',{staticClass:"badge rounded-pill bg-success text-white"},[_c('span',{staticClass:"fas fa-lightbulb",attrs:{"aria-hidden":"true"}})])}
 },function anonymous(
 ) {
-with(this){return _c('li',[_v("Type in an overall comment about the PR, if any. e.g.,"),_c('pre',[_c('code',{pre:true,attrs:{"class":"no-line-numbers hljs"}},[_c('span',[_v("Overall, I found your code easy to read for the most part except a few places\n")]),_c('span',[_v("where the nesting was too deep. I noted a few minor coding standard violations\n")]),_c('span',[_v("too. Some of the classes are getting quite long. Consider splitting into\n")]),_c('span',[_v("smaller classes if that makes sense.\n")])])]),_c('span',{staticClass:"badge rounded-pill bg-warning text-dark"},[_c('span',{staticClass:"fas fa-lightbulb",attrs:{"aria-hidden":"true"}})]),_v(" "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("LGTM")]),_v(" is often used in such overall comments, to indicate "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("Looks good to me")]),_v("."),_c('br'),_v(" "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("nit")]),_v(" (as in "),_c('em',[_v("nit picking")]),_v(") is another such term, used to indicate minor flaws e.g., "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("LGTM. Just a few nits to fix.")]),_v(".")])}
+with(this){return _c('li',[_v("Type in an overall comment about the PR, if any. e.g.,"),_c('pre',[_c('code',{pre:true,attrs:{"class":"no-line-numbers hljs"}},[_c('span',[_v("Overall, I found your code easy to read for the most part except a few places\n")]),_c('span',[_v("where the nesting was too deep. I noted a few minor coding standard violations\n")]),_c('span',[_v("too. Some of the classes are getting quite long. Consider splitting into\n")]),_c('span',[_v("smaller classes if that makes sense.\n")])])]),_c('span',{staticClass:"badge rounded-pill bg-success text-white"},[_c('span',{staticClass:"fas fa-lightbulb",attrs:{"aria-hidden":"true"}})]),_v(" "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("LGTM")]),_v(" is often used in such overall comments, to indicate "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("Looks good to me")]),_v("."),_c('br'),_v(" "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("nit")]),_v(" (as in "),_c('em',[_v("nit picking")]),_v(") is another such term, used to indicate minor flaws e.g., "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("LGTM. Just a few nits to fix.")]),_v(".")])}
 },function anonymous(
 ) {
 with(this){return _c('li',[_v("Choose "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("Approve")]),_v(", "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("Comment")]),_v(", or "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("Request changes")]),_v(" option as appropriate and click on the "),_c('span',{staticClass:"btn btn-success ps-1 pe-1 pb-0 pt-0"},[_v("Submit review")]),_v(" button.")])}
 },function anonymous(
 ) {
-with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.1.0")]),_v(", generated on Mon, 1 May 2023, 21:21:57 GMT+8]")])])])}
+with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.1.0")]),_v(", generated on Sun, 9 Jul 2023, 23:43:23 GMT+8]")])])])}
 }];
   

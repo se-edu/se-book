@@ -152,7 +152,7 @@ with(this){return _c('div',{attrs:{"id":"def-rcs"}},[_c('p',[_c('strong',[_v("RC
 with(this){return _c('div',{attrs:{"id":"def-repo"}},[_c('p',[_c('strong',[_v("Repository")]),_v(" ("),_c('em',[_v("repo")]),_v(" for short):  The database of the history of a directory being tracked by an RCS software (e.g. Git).")])])}
 },function anonymous(
 ) {
-with(this){return _c('div',{attrs:{"id":"def-revision"}},[_c('p',[_c('strong',[_v("Revision")]),_v(": A "),_c('em',[_v("revision")]),_v(" (some seem to use it interchangeably with "),_c('em',[_v("version")]),_v(" while others seem to distinguish the two -- here, let us treat them as the same, for simplicity) is a state of a piece of information at a specific time that is a result of some changes to it "),_c('span',{staticClass:"dimmed"},[_v("e.g., if you modify the code and save the file, you have a new revision (or a version) of that file")]),_v(".")])])}
+with(this){return _c('div',{attrs:{"id":"def-revision"}},[_c('p',[_c('strong',[_v("Revision")]),_v(": A "),_c('em',[_v("revision")]),_v(" (some seem to use it interchangeably with "),_c('em',[_v("version")]),_v(" while others seem to distinguish the two -- here, let us treat them as the same, for simplicity) is a state of a piece of information at a specific time that is a result of some changes to it "),_c('span',{staticClass:"dimmed"},[_v("e.g., if you modify the code and save the file, you have a new "),_c('em',[_v("revision")]),_v(" (or a new "),_c('em',[_v("version")]),_v(") of that file")]),_v(".")])])}
 },function anonymous(
 ) {
 with(this){return _c('h2',{attrs:{"id":"s"}},[_c('span',{staticClass:"anchor",attrs:{"id":"s"}}),_v("S"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#s","onclick":"event.stopPropagation()"}})])}
@@ -224,6 +224,6 @@ with(this){return _c('h2',{attrs:{"id":"y"}},[_c('span',{staticClass:"anchor",at
 with(this){return _c('div',{attrs:{"id":"def-yagni-principle"}},[_c('p',[_c('strong',[_v("YAGNI (You Aren't Gonna Need It!) Principle")]),_v(": Do not add code simply because ‘you might need it in the future’.")])])}
 },function anonymous(
 ) {
-with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.1.0")]),_v(", generated on Mon, 1 May 2023, 21:21:57 GMT+8]")])])])}
+with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.1.0")]),_v(", generated on Sun, 9 Jul 2023, 23:43:23 GMT+8]")])])])}
 }];
   

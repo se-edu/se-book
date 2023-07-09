@@ -9,7 +9,7 @@
 As you know,
 * Defining a class introduces a new object type.
 * Every object belongs to some object type; that is, it is an instance of some class.
-* A class definition is like a template for objects: it specifies what attributes the objects have and what methods can operate on them.
+* A class definition is like a template for objects: it specifies what attributes the objects have and what methods they have.
 * The `new` operator instantiates objects, that is, it creates new instances of a class.
 * The methods that operate on an object type are defined in the class for that object.
 
@@ -103,7 +103,7 @@ public Time(int hour, int minute, int second) {
 
 <box>
 
-{{ icon_example }} In this example the constructor `Time()` uses the `this` keyword to call its own overloaded constructor `Time(int, int, int)`
+{{ icon_example }} In this example the constructor `Time()` uses the `this` keyword to call its own <tooltip content="an overloaded method is a method with the same name but different parameters">overloaded</tooltip> constructor `Time(int, int, int)`
 
 ```java{highlight-lines="2, 5-7"}
 public Time() {

@@ -11,7 +11,7 @@ Arguments to support this statement:
 * If coding is a manufacturing activity, we wouldn’t be changing it so much after we code software. But if the code is in fact a ‘design’, yes, we would fiddle with it until we get it right.
 * Manufacturing is the process of building a finished product based on the design. Code is the design. Manufacturing is what is done by the compiler (fully automated).
 
-However, the type of ‘design’ that occurs during coding is at a much lower level than the ‘design’ that occurs before coding.
+However, it is possible for some design work to occur before coding begins. Furthermore, the type of ‘design’ that occurs _during_ coding is at a much lower level than the design that occurs before coding.
 
 </div>
 </question>

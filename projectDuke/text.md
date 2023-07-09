@@ -92,33 +92,36 @@ The project consists of the following _increments_:
 
 <include boilerplate src="level_thumb.md" var-text=":fas-grin-hearts:" inline />
 
-### Level 0. Greet
+### Level 0. Rename, Greet, Exit
 
-Implement an initial _skeletal_ version of the Duke that simply greets the user and exits.
+**(a) Give your chatbot a new name**, to differentiate it from the placeholder name `Duke`.
+
+**(b) Implement an initial _skeletal_ version** of the it that simply greets the user and exits.
 <br>
 Example:
 ```{.no-line-numbers}
 ____________________________________________________________
- Hello! I'm Duke
+ Hello! I'm [YOUR CHATBOT NAME]
  What can I do for you?
 ____________________________________________________________
  Bye. Hope to see you again soon!
 ____________________________________________________________
 ```
-* The indentation and horizontal lines are optional.
+* Horizontal lines are optional.
+
 </div><hr><!-- ================================================================================================ -->
 <div id="Level-1">
 
 <include boilerplate src="level_thumb.md" var-text=":fas-comments:" inline />
 
-### Level 1. Greet, Echo, Exit
+### Level 1. Echo
 
-Implement a _skeletal_ version of Duke that starts by greeting the user, simply echos commands entered by the user, and exits when the user types `bye`.
+Improve the _skeletal_ version of Duke so that it echos commands entered by the user, and exits when the user types the command `bye`.
 <br>
 Example:
 ```{.no-line-numbers}
     ____________________________________________________________
-     Hello! I'm Duke
+     Hello! I'm [YOUR CHATBOT NAME]
      What can I do for you?
     ____________________________________________________________
 
@@ -138,11 +141,11 @@ bye
     ____________________________________________________________
 
 ```
-* The indentation and horizontal lines are optional.
+* The indentations are optional.
 
-<box type="tip">
+<box type="tip" seamless>
 
-**You are strongly encouraged to customize the chatbot** name, command/display formats, and even the personality of the chatbot to make your chatbot unique.
+**You are strongly encouraged to customize the chatbot**: In addition to the command/display formats, you can even customize the personality of the chatbot to make your chatbot unique.
 </box>
 
 </div><hr><!-- ================================================================================================ -->
@@ -157,7 +160,7 @@ Add the ability to store whatever text entered by the user and display them back
 Example:
 ```{.no-line-numbers}
     ____________________________________________________________
-     Hello! I'm Duke
+     Hello! I'm [YOUR CHATBOT NAME]
      What can I do for you?
     ____________________________________________________________
 
@@ -289,7 +292,7 @@ deadline do homework /by no idea :-p
 
 ### Level 5. Handle Errors
 
-Teach Duke to deal with errors such as incorrect inputs entered by the user.
+Teach the chatbot to deal with errors such as incorrect inputs entered by the user.
 <br>
 <br>
 
@@ -309,7 +312,11 @@ blah
 <include boilerplate src="dukeNestedFragment.md" var-target="A-Exceptions" var-name="Extension: `A-Exceptions`" />
 
 * **Minimal**: handle at least the two types of errors shown in the example above.
-* **Stretch goal**: handle all possible errors in the current version. As you evolve Duke, continue to handle errors related to the new features added.
+* **Typical**:
+  * Handle all possible errors in the current version.
+  * As you evolve the chatbot, continue to handle errors related to the new features added.
+* **Stretch goals**:
+  * Make the error handling more error-specific e.g., give the user a clear/specific explanation of the error and how to correct it.
 
 </div><hr><!-- ================================================================================================ -->
 <div id="Level-6">
@@ -350,7 +357,7 @@ delete 3
 
 ### Level 7. Save
 
-Save the tasks in the hard disk automatically whenever the task list changes. Load the data from the hard disk when Duke starts up. You may hard-code the file name and location %%e.g., `[project_root]/data/duke.txt`%%
+Save the tasks in the hard disk automatically whenever the task list changes. Load the data from the hard disk when the chatbot starts up. You may hard-code the file name and relative path from the project root %%e.g., `./data/duke.txt`%%
 
 The format of the file is up to you. Example:
 ```{.no-line-numbers}
@@ -360,11 +367,19 @@ E | 0 | project meeting | Aug 6th 2-4pm
 T | 1 | join sports club
 ```
 
-**{{ icon_tip }} If you use file paths in your code,**
+<box type="tip" seamless>
+
+**If you use file paths in your code,**
 * remember to use relative paths rather than absolute paths such as `C:\data`. If not, your app can cause unpredictable results when used in another computer.
 * remember to [specify file paths in an OS-independent way](https://www.sghill.net/how-do-i-make-cross-platform-file-paths-in-java.html). If not, your app might not work when used on a different OS.
+</box>
 
-{{ icon_important_big_red }} Your code must <tooltip content="i.e., if the file is missing, your code must creat it">handle</tooltip> the case where the data file doesn't exist at the start. Reason: when someone else takes your Duke and runs it for the first time, the required file might not exist in their computer. Similarly, if you expect the data file to be in as specific folder (e.g., `./data/`), you must also handle the folder-does-not-exist-yet case.
+<box type="important" seamless>
+
+**Your code must <tooltip content="i.e., if the file is missing, your code must creat it">handle</tooltip> the case where the data file doesn't exist at the start.** Reason: when someone else takes your chatbot and runs it for the first time, the required file will not exist in their computer. Similarly, if you expect the data file to be in as specific folder (e.g., `./data/`), you must also handle the folder-does-not-exist-yet case.
+</box>
+
+**Stretch goal**: Handle the situation of the data file being corrupted (i.e., content not in the expected format).
 
 </div><hr><!-- ================================================================================================ -->
 <div id="Level-8">
@@ -373,7 +388,7 @@ T | 1 | join sports club
 
 ### Level 8. Dates and Times
 
-Teach Duke how to understand dates and times. For example, if the command is `deadline return book /by 2/12/2019 1800`, Duke should understand `2/12/2019 1800` as _2nd of December 2019, 6pm_, instead of treating it as just a String.
+Teach the chatbot how to understand dates and times. For example, if the command is `deadline return book /by 2/12/2019 1800`, the chatbot should understand `2/12/2019 1800` as _2nd of December 2019, 6pm_, instead of treating it as just a String.
 
 * **Minimal**: Store deadline dates as a `java.time.LocalDate` (or `java.time.LocalDateTime`) in your task objects. Accept dates in a format such as `yyyy-mm-dd` format (e.g., `2019-10-15`)  and print in a different format such as `MMM dd yyyy` e.g., (`Oct 15 2019`).
 * **Stretch goal**: Use dates and times in more meaningful ways. e.g., add a command to print deadlines/events occurring on a specific date.
@@ -442,7 +457,7 @@ find book
 
 ### Level 10. GUI
 
-Add a GUI to Duke. Use the JavaFX technology to implement the GUI.
+Add a GUI to the chatbot. Use the JavaFX technology to implement the GUI.
 
 <br>
 <br>
@@ -454,9 +469,9 @@ Refer to the [_JavaFX tutorial_ @SE-EDU/guides](https://se-education.org/guides/
 **There are two non-trivial steps** to take here:
 
 1. learning JavaFX basics
-1. creating a GUi for Duke
+1. creating a GUi for your chatbot
 
-You are <span class="text-danger">cautioned against trying to do both in one go</span>. Instead, complete the JavaFX tutorial as a separate project before adding a GUI to Duke.
+You are <span class="text-danger">cautioned against trying to do both in one go</span>. Instead, complete the JavaFX tutorial as a separate project before adding a GUI to the chatbot.
 
 </box>
 

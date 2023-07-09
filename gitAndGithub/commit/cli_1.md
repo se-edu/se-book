@@ -1,13 +1,13 @@
 You can use the `git status` command to check the status of the working directory.
 
-```sh
-git status
+```{.no-line-numbers}
+$ git status
 ```
 {{ icon_output }}
-```sh
+```{.no-line-numbers}
 # On branch master
 #
-# Initial commit
+# No commits yet
 #
 # Untracked files:
 #   (use "git add <file>..." to include in what will be committed)

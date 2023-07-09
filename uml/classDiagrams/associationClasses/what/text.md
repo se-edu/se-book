@@ -6,15 +6,15 @@
 
 <div id="body">
 
-Association classes are denoted as a connection to an association link using a dashed line as shown below.  
+Association classes are denoted as a connection to an association link using a dashed line as shown below.
 
-<img src="{{baseUrl}}/uml/classDiagrams/associationClasses/what/images/notation.png" height="100" />
+<pic src="{{baseUrl}}/uml/classDiagrams/associationClasses/what/images/notation.png" height="100" />
 
 <box>
 
 {{ icon_example }} In this example `Loan` is an association class because it stores information about the `borrows` association between the `User` and the `Book`.
 
-<img src="{{baseUrl}}/uml/classDiagrams/associationClasses/what/images/bookLoan.png" height="150" />
+<pic src="{{baseUrl}}/uml/classDiagrams/associationClasses/what/images/bookLoan.png" height="150" />
 <p/>
 
 </box>

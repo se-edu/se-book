@@ -11,18 +11,18 @@
 **_Logging_ can be useful for troubleshooting problems**. A good logging system records some system information regularly. When bad things happen to a system %%e.g. an unanticipated failure%%, their associated log files may provide indications of what went wrong and actions can then be taken to prevent it from happening again.
 
 <div v-closeable alt="blackbox photo">
-                      
+
 <box>
 
 {{ icon_tip }} **A log file is like the <tooltip content="flight data recorder">black box</tooltip> of an airplane**; they don't prevent problems but they can be helpful in understanding what went wrong after the fact.
 
 <div class="non-printable">
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Flight_data_recorder_displayed_at_HAL_Museum_7893.JPG" width="250"><br>
+<pic src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Flight_data_recorder_displayed_at_HAL_Museum_7893.JPG" width="250"><br>
 <sub>source: [https://commons.wikimedia.org](https://upload.wikimedia.org/wikipedia/commons/5/5b/Flight_data_recorder_displayed_at_HAL_Museum_7893.JPG)</sub>
 </div>
 </box>
-                      
+
 </div>
 
 </div>

@@ -262,7 +262,7 @@ Also known as
 
 <div id="def-revision">
 
-**Revision**: A _revision_ (some seem to use it interchangeably with _version_ while others seem to distinguish the two -- here, let us treat them as the same, for simplicity) is a state of a piece of information at a specific time that is a result of some changes to it %%e.g., if you modify the code and save the file, you have a new revision (or a version) of that file%%.
+**Revision**: A _revision_ (some seem to use it interchangeably with _version_ while others seem to distinguish the two -- here, let us treat them as the same, for simplicity) is a state of a piece of information at a specific time that is a result of some changes to it %%e.g., if you modify the code and save the file, you have a new _revision_ (or a new _version_) of that file%%.
 
 </div>
 

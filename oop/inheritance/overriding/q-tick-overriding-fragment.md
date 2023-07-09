@@ -3,7 +3,7 @@
 
 Which of these methods override another method? %%`A` is the parent class. `B` inherits `A`.%%
 
-<img src="{{baseUrl}}/oop/inheritance/overriding/images/overriding.png" height="220" />
+<pic src="{{baseUrl}}/oop/inheritance/overriding/images/overriding.png" height="220" />
 <p/>
 
 - [ ] a

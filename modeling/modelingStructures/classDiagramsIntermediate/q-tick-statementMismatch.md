@@ -3,7 +3,7 @@
 
 Which of these statements match the class diagram?
 
-<img src="{{baseUrl}}/modeling/modelingStructures/classDiagramsIntermediate/images/mismatch.png" height="290" />
+<pic src="{{baseUrl}}/modeling/modelingStructures/classDiagramsIntermediate/images/mismatch.png" height="290" />
 <p/>
 
 - [ ] a. A `Snake` must belong to at least one `Board`.
