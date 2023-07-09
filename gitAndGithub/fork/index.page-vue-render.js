@@ -26,6 +26,6 @@ with(this){return _c('p',[_c('strong',[_v("1. Go to the GitHub repo you want to 
 with(this){return _c('ul',[_c('li',[_v("choose to fork to your own account or to another GitHub organization that you are an admin of.")]),_v(" "),_c('li',[_c('mark',[_v("Un-tick the "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("[ ] Copy the master branch only")]),_v(" option")]),_v(", so that you get copies of other branches (if any) in the repo.")])])}
 },function anonymous(
 ) {
-with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.1.0")]),_v(", generated on Mon, 10 Jul 2023, 0:38:17 GMT+8]")])])])}
+with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.1.0")]),_v(", generated on Mon, 10 Jul 2023, 0:44:43 GMT+8]")])])])}
 }];
   

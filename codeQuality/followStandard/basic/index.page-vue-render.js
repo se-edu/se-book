@@ -20,6 +20,6 @@ with(this){return _c('div',[_c('h4',{attrs:{"id":"what"}},[_c('span',{staticClas
 with(this){return _c('div',[_c('div',{staticClass:"alt-java"},[_c('p',[_v("Go through the "),_c('a',{attrs:{"href":"https://se-education.org/guides/conventions/java/basic.html"}},[_v("Java coding standard at @SE-EDU")]),_v(" and learn the "),_c('em',[_v("basic")]),_v(" style rules.")])]),_v(" "),_c('div',{staticClass:"alt-python"},[_c('p',[_v("Sample coding standard: "),_c('a',{attrs:{"href":"https://www.python.org/dev/peps/pep-0008/"}},[_v("PEP 8 "),_c('strong',[_v("Python")]),_v(" Style Guide -- by Python.org")])])])])}
 },function anonymous(
 ) {
-with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.1.0")]),_v(", generated on Mon, 10 Jul 2023, 0:38:17 GMT+8]")])])])}
+with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.1.0")]),_v(", generated on Mon, 10 Jul 2023, 0:44:43 GMT+8]")])])])}
 }];
   

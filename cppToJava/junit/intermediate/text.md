@@ -6,7 +6,7 @@
 
 <div id="body">
 
-{% set junit_ug = "https://junit.org/junit5/docs/current/user-guide/" %}
+{% set junit_ug="primary" %}
 
 Given below are some noteworthy JUnit concepts, as per the [JUnit 5 User Guide](https://junit.org/junit5/docs/current/user-guide/).
 
