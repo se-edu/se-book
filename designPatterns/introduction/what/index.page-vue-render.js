@@ -20,6 +20,6 @@ with(this){return _c('div',[_c('h4',{attrs:{"id":"what"}},[_c('span',{staticClas
 with(this){return _c('p',[_v("After repeated attempts at solving such problems, better solutions are discovered and refined over time. These solutions are known as design patterns, "),_c('strong',[_v("a term popularized by the seminal book")]),_v(" "),_c('a',{attrs:{"href":"https://en.wikipedia.org/wiki/Design_Patterns"}},[_c('strong',[_c('em',[_v("Design Patterns: Elements of Reusable Object-Oriented Software")]),_v(" by the so-called \"Gang of Four\" (GoF)")])]),_v(" written by Eric Gamma, Richard Helm, Ralph Johnson, and John Vlissides.")])}
 },function anonymous(
 ) {
-with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.1.0")]),_v(", generated on Sun, 9 Jul 2023, 23:43:23 GMT+8]")])])])}
+with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.1.0")]),_v(", generated on Mon, 10 Jul 2023, 0:04:59 GMT+8]")])])])}
 }];
   

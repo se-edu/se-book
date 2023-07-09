@@ -23,6 +23,6 @@ with(this){return _c('p',[_c('small',[_c('span',{staticClass:"badge bg-secondary
 with(this){return _c('ul',[_c('li',[_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("javac")]),_v(" is the java compiler that you get when you install the JDK.")]),_v(" "),_c('li',[_v("For the above command to work, your console program should be able to find the javac executable (e.g., In Windows, the location of the "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("javac.exe")]),_v(" should be in the "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("PATH")]),_v(" system variable)."),_c('br'),_v(" "),_c('a',{attrs:{"href":"https://www.java.com/en/download/help/path.xml"}},[_v("This page")]),_v(" shows how to set PATH in different OS'es.")])])}
 },function anonymous(
 ) {
-with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.1.0")]),_v(", generated on Sun, 9 Jul 2023, 23:43:23 GMT+8]")])])])}
+with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.1.0")]),_v(", generated on Mon, 10 Jul 2023, 0:04:59 GMT+8]")])])])}
 }];
   
