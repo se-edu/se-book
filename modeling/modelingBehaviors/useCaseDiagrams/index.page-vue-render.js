@@ -20,6 +20,6 @@ with(this){return _c('div',[_c('h4',{attrs:{"id":"use-case-diagrams"}},[_c('span
 with(this){return _c('p',[_c('strong',[_v("Use case diagrams model the mapping between "),_c('em',[_v("features")]),_v(" of a system and its user "),_c('em',[_v("roles")])]),_v(" i.e., which user roles can perform which tasks using the software.")])}
 },function anonymous(
 ) {
-with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.1.0")]),_v(", generated on Mon, 10 Jul 2023, 0:24:53 GMT+8]")])])])}
+with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.1.0")]),_v(", generated on Mon, 10 Jul 2023, 0:38:17 GMT+8]")])])])}
 }];
   
