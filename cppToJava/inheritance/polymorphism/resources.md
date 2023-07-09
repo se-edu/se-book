@@ -1,2 +1,0 @@
-* [Oracle’s Java Tutorials: Polymorphism]({{ java_tutorial }}/java/IandI/polymorphism.html)
-* [Java - Polymorphism](https://www.tutorialspoint.com/java/java_polymorphism.htm) -- a tutorial from tutorialspoint.com

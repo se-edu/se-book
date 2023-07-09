@@ -1,1 +1,0 @@
-Design → Design Patterns →

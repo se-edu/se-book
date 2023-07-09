@@ -1,1 +1,0 @@
-Design → Architecture → Architecture Diagrams →

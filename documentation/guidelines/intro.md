@@ -1,1 +1,0 @@
-Given below are some guidelines to write developer documentation.

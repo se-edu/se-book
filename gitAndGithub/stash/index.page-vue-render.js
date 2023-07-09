@@ -20,6 +20,6 @@ with(this){return _c('div',[_c('h4',{attrs:{"id":"stash-shelving-changes-tempora
 with(this){return _c('p',[_c('strong',[_v("You can use Git's "),_c('mark',[_c('em',[_v("stash")])]),_v(" feature to temporarily shelve (or stash) changes you've made to your working copy")]),_v(" so that you can work on something else, and then come back and re-apply the stashed changes later on. "),_c('sub',[_v("-- adapted from "),_c('a',{attrs:{"href":"https://www.atlassian.com/git/tutorials/git-stash"}},[_v("Atlassian")])])])}
 },function anonymous(
 ) {
-with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.1.0")]),_v(", generated on Mon, 10 Jul 2023, 0:50:08 GMT+8]")])])])}
+with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.1.0")]),_v(", generated on Mon, 10 Jul 2023, 1:00:35 GMT+8]")])])])}
 }];
   

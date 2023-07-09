@@ -20,6 +20,6 @@ with(this){return _c('div',[_c('h4',{attrs:{"id":"communication-diagrams"}},[_c(
 with(this){return _c('p',[_c('strong',[_c('em',[_v("Communication diagrams")]),_v(" are like sequence diagrams but emphasize the data links between the various participants in the interaction rather than the sequence of interactions.")])])}
 },function anonymous(
 ) {
-with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.1.0")]),_v(", generated on Mon, 10 Jul 2023, 0:50:08 GMT+8]")])])])}
+with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.1.0")]),_v(", generated on Mon, 10 Jul 2023, 1:00:35 GMT+8]")])])])}
 }];
   

@@ -1,1 +1,0 @@
-Tools → IntelliJ IDEA →

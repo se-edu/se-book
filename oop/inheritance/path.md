@@ -1,1 +1,0 @@
-Paradigms → OOP → Inheritance →

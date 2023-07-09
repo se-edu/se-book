@@ -1,2 +1,0 @@
-* Oracle's tutorials on [[methods]({{ java_tutorial }}/java/javaOO/methods.html)][[parameters]({{ java_tutorial }}/java/javaOO/arguments.html)]
-* [Method Overloading in Java](https://www.javatpoint.com/method-overloading-in-java) a tutorial from javapoint.com. Also mentions the topic of a related topic ==_type promotion_==.

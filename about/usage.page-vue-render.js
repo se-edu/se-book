@@ -119,6 +119,6 @@ with(this){return _c('div',{attrs:{"id":"saving"}},[_c('h3',{attrs:{"id":"saving
 with(this){return _c('div',{attrs:{"id":"printing"}},[_c('h3',{attrs:{"id":"printing"}},[_c('span',{staticClass:"anchor",attrs:{"id":"printing"}}),_v("Printing"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#printing","onclick":"event.stopPropagation()"}})]),_v(" "),_c('p',[_v("The "),_c('span',[_c('span',{staticClass:"glyphicon glyphicon-print",attrs:{"aria-hidden":"true"}})]),_v(" icon indicates printer-friendly versions of each chapter. A printer-friendly version of the entire book can be found "),_c('a',{attrs:{"href":"/se-book/common/print.html"}},[_v("here")]),_v(".")])])}
 },function anonymous(
 ) {
-with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.1.0")]),_v(", generated on Mon, 10 Jul 2023, 0:50:08 GMT+8]")])])])}
+with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.1.0")]),_v(", generated on Mon, 10 Jul 2023, 1:00:35 GMT+8]")])])])}
 }];
   

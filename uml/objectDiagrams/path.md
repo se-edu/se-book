@@ -1,1 +1,0 @@
-Tools → UML → Object Diagrams → 

@@ -1,1 +1,0 @@
-Follow [this article from Sourcetree creators](https://confluence.atlassian.com/sourcetreekb/stash-a-file-with-sourcetree-785332122.html). %%Note that the GUI shown in the article is slightly outdated but you should be able to map it to the current GUI.%%

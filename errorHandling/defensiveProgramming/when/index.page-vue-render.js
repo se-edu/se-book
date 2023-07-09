@@ -20,6 +20,6 @@ with(this){return _c('div',[_c('h4',{attrs:{"id":"when"}},[_c('span',{staticClas
 with(this){return _c('div',[_c('p',[_c('strong',[_v("It is not necessary to be 100% defensive all the time.")]),_v(" While defensive code may be less prone to be misused or abused, such code can also be more complicated and slower to run.")]),_v(" "),_c('p',[_v("The suitable degree of defensiveness depends on many factors such as:")]),_v(" "),_c('ul',[_c('li',[_v("How critical is the system?")]),_v(" "),_c('li',[_v("Will the code be used by programmers other than the author?")]),_v(" "),_c('li',[_v("The level of programming language support for defensive programming")]),_v(" "),_c('li',[_v("The overhead of being defensive")])])])}
 },function anonymous(
 ) {
-with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.1.0")]),_v(", generated on Mon, 10 Jul 2023, 0:50:08 GMT+8]")])])])}
+with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.1.0")]),_v(", generated on Mon, 10 Jul 2023, 1:00:35 GMT+8]")])])])}
 }];
   

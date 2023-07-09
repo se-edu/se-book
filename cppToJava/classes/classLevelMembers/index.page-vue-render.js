@@ -35,6 +35,6 @@ with(this){return _c('p',[_v("The Java programming language supports static meth
 with(this){return _c('p',[_c('strong',[_v("The "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("static")]),_v(" modifier, in combination with the "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("final")]),_v(" modifier, is also used to define constants.")]),_v(" The final modifier indicates that the value of this field cannot change. For example, the following variable declaration defines a constant named "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("PI")]),_v(", whose value is an approximation of pi (the ratio of the circumference of a circle to its diameter):\n"),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("static final double PI = 3.141592653589793;")])])}
 },function anonymous(
 ) {
-with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.1.0")]),_v(", generated on Mon, 10 Jul 2023, 0:50:08 GMT+8]")])])])}
+with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.1.0")]),_v(", generated on Mon, 10 Jul 2023, 1:00:35 GMT+8]")])])])}
 }];
   
