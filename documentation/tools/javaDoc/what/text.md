@@ -10,7 +10,7 @@
 
 <box>
 
-{{ icon_example }} An example method header comment in JavaDoc format (adapted from [Oracle's Java documentation](http://www.oracle.com/technetwork/articles/java/index-137868.html))
+{{ icon_example }} An example method header comment in JavaDoc format:
 
 ```java
 /**

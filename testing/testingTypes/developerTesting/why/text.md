@@ -8,7 +8,7 @@
 
 **Delaying testing until the full product is complete has a number of disadvantages:**
 
-* **Locating the cause of a test case failure is difficult due to a large search space;** in a large system, the search space could be millions of lines of code, written by hundreds of developers! The failure may also be due to multiple inter-related bugs.
+* **Locating the cause of a test case failure is difficult due to the larger search space;** in a large system, the search space could be millions of lines of code, written by hundreds of developers! The failure may also be due to multiple inter-related bugs.
 * **Fixing a bug found during such testing could result in major rework**, especially if the bug originated from the design or during requirements specification %%i.e. a faulty design or faulty requirements%%.
 * **One bug might 'hide' other bugs**, which could emerge only after the first bug is fixed.
 * **The delivery may have to be delayed** if too many bugs are found during testing.
@@ -20,14 +20,12 @@
 <pic src="{{baseUrl}}/testing/testingTypes/developerTesting/why/images/diagram.png" height="180" />
 <p/>
 
-Such early testing of partially developed software is usually, and by necessity, done by the developers themselves i.e. developer testing.
+Such early testing software is usually, and often by necessity, done by the developers themselves i.e., developer testing.
 
 </div>
 
 <div id="extras">
-
 <include src="exercises.md" />
-
 </div>
 
 

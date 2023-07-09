@@ -14,11 +14,11 @@ First, let us learn how the repo looks like as you perform branching operations.
 Given below is an illustration of how branch labels move as branches evolve. Refer to the text below it for explanations of each stage.
 
 <annotate src="{{ baseUrl }}/gitAndGithub/branch/images/branchesAsLabels1.png" height="500">
-<a-point x="2%" y="27%" label="[1]" legend="1" opacity="0"/>
-<a-point x="2%" y="47%" label="[2]" legend="1" opacity="0"/>
-<a-point x="35%" y="25%" label="[3]" legend="1" opacity="0"/>
-<a-point x="65%" y="10%" label="[4]" legend="1" opacity="0"/>
-<a-point x="85%" y="10%" label="[5]" legend="1" opacity="0"/>
+<a-point x="2%" y="27%" label="[1]" opacity="0"/>
+<a-point x="2%" y="47%" label="[2]" opacity="0"/>
+<a-point x="35%" y="25%" label="[3]" opacity="0"/>
+<a-point x="65%" y="10%" label="[4]" opacity="0"/>
+<a-point x="85%" y="10%" label="[5]" opacity="0"/>
 </annotate>
 <p/>
 
@@ -33,7 +33,11 @@ Given below is an illustration of how branch labels move as branches evolve. Ref
 1. The repo has switched back to the `master` branch. Hence, the `HEAD` has moved back to `master` branch's <tooltip content="latest commit of that branch">tip</tooltip>.<br>
    At this point, the repo's working directory reflects the code at commit `b` (not `c`).
 
-<pic src="images/branchesAsLabels2.png" width="600"/>
+<annotate src="{{ baseUrl }}/gitAndGithub/branch/images/branchesAsLabels2.png" width="600">
+<a-point x="15%" y="10%" label="[6]" opacity="0"/>
+<a-point x="50%" y="5%" label="[7]" opacity="0"/>
+<a-point x="90%" y="40%" label="[8]" opacity="0"/>
+</annotate>
 
 6. A new commit (`d`) has been added. The `master` and the `HEAD` labels have moved to that commit.
 1. The repo has switched back to the `fix1` branch and added a new commit (`e`) to it.
@@ -51,7 +55,9 @@ Now that you have some idea how the repo will look like when branches are being 
 {{ show_git_tabs('_1') }}
 
 **2. Create some commits in the new branch.** %%Just commit as per normal. Commits you add while on a certain branch will become part of that branch.%%<br>
-Note how the `master` label and the `HEAD` label moves to the new commit (The `HEAD` label of the local repo is represented as :fas-dot-circle: in SourceTree).
+Note how the `master` label and the `HEAD` label moves to the new commit (The `HEAD` label of the local repo is represented as :fas-dot-circle: in Sourcetree).
+
+<pic src="images/sourcetree_HEAD_dot.png" />
 
 **3. Switch to the `master` branch.** Note how the changes you did in the `feature1` branch are no longer in the working directory.
 

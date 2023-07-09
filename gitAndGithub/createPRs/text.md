@@ -8,7 +8,14 @@
 
 <div id="body">
 
-Suppose you want to propose some changes to a GitHub repo (e.g., [samplerepo-pr-practice](https://github.com/se-edu/samplerepo-pr-practice)) as a <trigger trigger="click" for="modal:githubPullRequests-rcsPullRequests">pull request (PR)</trigger>. Here is a scenario you can try in order to learn how to create PRs:
+Suppose you want to propose some changes to a GitHub repo (e.g., [samplerepo-pr-practice](https://github.com/se-edu/samplerepo-pr-practice)) as a <trigger trigger="click" for="modal:githubPullRequests-rcsPullRequests">pull request (PR)</trigger>.
+
+<box type="tip" seamless>
+
+[samplerepo-pr-practice](https://github.com/se-edu/samplerepo-pr-practice) is an unmonitored repo you can use to practice working with PRs. Feel free to send PRs to it.
+</box>
+
+Given below is a scenario you can try in order to learn how to create PRs:
 
 <modal large header="Project Management → Revision Control → Remote Repositories →" id="modal:githubPullRequests-rcsPullRequests">
   <include src="..\..\revisionControl\remoteRepositories\text.md#section-pull-request"/>
@@ -31,7 +38,7 @@ Suppose you want to propose some changes to a GitHub repo (e.g., [samplerepo-pr-
 **5. Initiate the PR creation:**
 
 1. Go to your fork.
-1. Click on the <span class="tab">%%:octicon-git-pull-request:%% Pull requests</span> tab followed by the {{ button_green("New pull request") }} **button**. This will bring you to the 'Comparing changes' page.
+1. Click on the <span class="tab">%%:octicon-git-pull-request:%% Pull requests</span> tab followed by the {{ button_green("New pull request") }} **button**. This will bring you to the `Compare changes` page.
 1. Set the appropriate target repo and the branch that should receive your PR, using the `base repository` and `base` dropdowns. e.g.,<br>
    {{ dropdown("base repository: **se-edu/samplerepo-pr-practice**") }} {{ dropdown("base: **master**") }}<br>
 
@@ -49,7 +56,7 @@ Suppose you want to propose some changes to a GitHub repo (e.g., [samplerepo-pr-
 
 <span id="submit-the-pr">
 
-1. Click the {{ button_green(icon_pr + " Create pull request") }} button.
+1. Click the {{ button_green("Create pull request") }} button.
 
 1. Fill in the PR name and description e.g.,<br>
    Name: `Add an introduction to the README.md`<br>
@@ -69,7 +76,7 @@ Suppose you want to propose some changes to a GitHub repo (e.g., [samplerepo-pr-
 * If they don't like it at all, they can simply close the PR too i.e., they reject your proposed change.
 * In most cases, they will add comments to the PR to suggest further changes. When that happens, GitHub will notify you.
 
-**You can update the PR along the way too.** Suppose PR reviewers suggested a certain improvement to your proposed code. To update your PR as per the suggestion, you can simply modify the code in your local repo, commit the updated code to the same `master` branch, and push to your fork as you did earlier. The PR will auto-update accordingly.
+**You can update the PR along the way too.** Suppose PR reviewers suggested a certain improvement to your proposed code. To update your PR as per the suggestion, you can simply modify the code in your local repo, commit the updated code to the same branch as before, and push to your fork as you did earlier. The PR will auto-update accordingly.
 
 **Sending PRs using the `master` branch is less common** than sending PRs using separate branches. For example, suppose you wanted to propose two bug fixes that are not related to each other. In that case, it is more appropriate to send two separate PRs so that each fix can be reviewed, refined, and merged independently. But if you send PRs using the `master` branch only, both fixes (and any other change you do in the `master` branch) will appear in the PRs you create from it.
 

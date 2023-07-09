@@ -312,7 +312,11 @@ blah
 <include boilerplate src="dukeNestedFragment.md" var-target="A-Exceptions" var-name="Extension: `A-Exceptions`" />
 
 * **Minimal**: handle at least the two types of errors shown in the example above.
-* **Stretch goal**: handle all possible errors in the current version. As you evolve the chatbot, continue to handle errors related to the new features added.
+* **Typical**:
+  * Handle all possible errors in the current version.
+  * As you evolve the chatbot, continue to handle errors related to the new features added.
+* **Stretch goals**:
+  * Make the error handling more error-specific e.g., give the user a clear/specific explanation of the error and how to correct it.
 
 </div><hr><!-- ================================================================================================ -->
 <div id="Level-6">
@@ -353,7 +357,7 @@ delete 3
 
 ### Level 7. Save
 
-Save the tasks in the hard disk automatically whenever the task list changes. Load the data from the hard disk when the chatbot starts up. You may hard-code the file name and location %%e.g., `[project_root]/data/duke.txt`%%
+Save the tasks in the hard disk automatically whenever the task list changes. Load the data from the hard disk when the chatbot starts up. You may hard-code the file name and relative path from the project root %%e.g., `./data/duke.txt`%%
 
 The format of the file is up to you. Example:
 ```{.no-line-numbers}
@@ -363,11 +367,19 @@ E | 0 | project meeting | Aug 6th 2-4pm
 T | 1 | join sports club
 ```
 
-**{{ icon_tip }} If you use file paths in your code,**
+<box type="tip" seamless>
+
+**If you use file paths in your code,**
 * remember to use relative paths rather than absolute paths such as `C:\data`. If not, your app can cause unpredictable results when used in another computer.
 * remember to [specify file paths in an OS-independent way](https://www.sghill.net/how-do-i-make-cross-platform-file-paths-in-java.html). If not, your app might not work when used on a different OS.
+</box>
 
-{{ icon_important_big_red }} Your code must <tooltip content="i.e., if the file is missing, your code must creat it">handle</tooltip> the case where the data file doesn't exist at the start. Reason: when someone else takes your chatbot and runs it for the first time, the required file might not exist in their computer. Similarly, if you expect the data file to be in as specific folder (e.g., `./data/`), you must also handle the folder-does-not-exist-yet case.
+<box type="important" seamless>
+
+**Your code must <tooltip content="i.e., if the file is missing, your code must creat it">handle</tooltip> the case where the data file doesn't exist at the start.** Reason: when someone else takes your chatbot and runs it for the first time, the required file will not exist in their computer. Similarly, if you expect the data file to be in as specific folder (e.g., `./data/`), you must also handle the folder-does-not-exist-yet case.
+</box>
+
+**Stretch goal**: Handle the situation of the data file being corrupted (i.e., content not in the expected format).
 
 </div><hr><!-- ================================================================================================ -->
 <div id="Level-8">

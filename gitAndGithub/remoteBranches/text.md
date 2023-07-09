@@ -28,10 +28,10 @@ We assume that your local repo already has the remote added to it with the name 
 
 ****[B] Pulling a remote branch for the first time****
 
-Here, let's see how to pull a new branch (i.e., it does not exist in your local repo yet) from a remote repo.
+Here, let's see how to fetch a new branch (i.e., it does not exist in your local repo yet) from a remote repo.
 
 {{ show_git_tabs('_2') }}
-<div>
+</div>
 <div id="syncing-branches">
 
 ****[C] Syncing branches****

@@ -99,7 +99,7 @@ Notes:
 <include boilerplate src="dukeExtensionTitle.md" var-extId="A-Collections"
          var-extHeading="Use Java Collections classes"/>
 
-Use Java Collections classes for storing data. For example, you can use an `ArrayList<Task>` to store the tasks.
+Use Java Collections classes for storing data. For example, you can use an [`ArrayList<Task>`](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/ArrayList.html) to store the tasks. They offer many advantages (e.g., dynamic sizing, easy to find/add/delete items),  over using a primitive data structure such as a normal array.
 </div><hr>
 <div id="A-MoreOOP">
 <include boilerplate src="dukeExtensionTitle.md" var-extId="A-MoreOOP"
@@ -163,7 +163,11 @@ public class Duke {
       }
   }
   ```
-  {{ icon_tip }} You can get some inspiration from how the code of the [addressbook-level2](https://github.com/se-edu/addressbook-level2) is organized.
+
+<box type="tip" seamless>
+
+You can get some inspiration from how the code of the [addressbook-level2](https://github.com/se-edu/addressbook-level2) is organized.
+</box>
 </div><hr>
 <div id="A-JUnit">
 <include boilerplate src="dukeExtensionTitle.md" var-extId="A-JUnit"
@@ -171,13 +175,11 @@ public class Duke {
 
 Add JUnit tests to test the behavior of the code.
 
-* **Minimal**: Use JUnit to test,
-  * at least two non-trivial methods, from two different classes (if you have multiple classes),
-  * testing them reasonably well (i.e., the test code should try to catch most potential bugs in the target methods).
-* **Stretch goal**: Test methods to target all non-trivial public methods of all classes.
+* **Minimal**: Use JUnit to ==at least two non-trivial methods==, from two different classes (if you have multiple classes),<br>
+  and, ensure they are ==tested reasonably well== (i.e., the test code should try to catch most potential bugs in the target methods).
+* **Stretch goal**: Use JUnit to test all non-trivial public methods of all classes.
 
-{{ icon_tip }} Refer to the [_JUnit tutorial_ @se-edu/guides](https://se-education.org/guides/tutorials/junit.html) to find how to use JUnit.
-
+Refer to the [_JUnit tutorial_ @se-edu/guides](https://se-education.org/guides/tutorials/junit.html) to find how to use JUnit (in the context of this project).
 
 </tab>
 </tabs>
@@ -239,17 +241,25 @@ Use `assert` feature (not JUnit assertions) to document important assumptions th
 Package the app as an executable JAR file so that it can be distributed easily.
 
 You can assume **the user will run the jar file in the following way only**:
-* Copy the jar file into an empty folder
-* Open a command window in that folder
-* Run the command `java -jar {filename}.jar` e.g., `java -jar Duke.jar` (i.e., run the command in the same folder as the jar file)
+1. Copy the jar file into an empty folder.
+1. Open a command window in that folder.
+1. Run the command `java -jar {filename}.jar` e.g., `java -jar Duke.jar` (i.e., run the command in the same folder as the jar file).
 
-{{ icon_tip }} Refer to the tutorial [_Working with JAR files_ @SE-EDU/guides](https://se-education.org/guides/tutorials/jar.html) to find how to create JAR files.
+Refer to the tutorial [_Working with JAR files_ @SE-EDU/guides](https://se-education.org/guides/tutorials/jar.html) to find how to create JAR files (in the context of this project).
 
-{{ icon_important }} If your project is being revision controlled using Git/GitHub, do not commit the JAR file created. Instead, you can make the JAR file available in the following manner.
-* Go to your fork on GitHub and [create a new _release_](https://help.github.com/en/articles/creating-releases).
-* In the page where you fill the details of the release,
-  * give an appropriate version number e.g., `v0.1`
-  * attach the JAR file where it says `Attach binaries by dropping them ...`.
+<box type="info" seamless>
+
+**If your project is being revision controlled using Git/GitHub**,<br>
+
+* <span class="text-danger">do not commit the JAR file created</span>. Reason: We don't normally commit generated binary files into the repository.
+
+* Instead, you can make the JAR file available (via the GitHub release mechanism) in the following manner.
+
+  1. Go to your fork on GitHub and [create a new _release_](https://help.github.com/en/articles/creating-releases).
+  1. In the page where you supply the details of the release,
+     1. give an appropriate version number e.g., `v0.1`
+     1. attach the JAR file where it says `Attach binaries by dropping them ...`.
+</box>
 
 </div><hr>
 <div id="A-Gradle">
@@ -260,7 +270,7 @@ Use Gradle to automate some of the build tasks of the project.
 
 Gradle support is provided as a separate branch (named `add-gradle-support`) in the Duke repo. Therefore, you can follow the _scenario 2_ in the guide below.
 
-Refer to the [_Gradle tutorial_ @SE-EDU](https://se-education.org/guides/tutorials/gradle.html) to learn how to use Gradle.
+Refer to the [_Gradle tutorial_ @SE-EDU](https://se-education.org/guides/tutorials/gradle.html) to learn how to use Gradle (in the context of this project).
 
 * **Minimal**: Set up gradle so that you can build and run Duke using gradle.
 * **Recommended**: Set up gradle to run unit tests.

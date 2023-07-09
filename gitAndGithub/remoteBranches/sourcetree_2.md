@@ -1,5 +1,5 @@
 
-**1. Check the list of remote branches** by expanding the `REMOTES` menu on the left edge of SourceTree. If the branch you expected to find is missing, you can click the `Fetch` button (in the top toolbar) to refresh the information shown under remotes.
+**1. Check the list of remote branches** by expanding the `REMOTES` menu on the left edge of Sourcetree. If the branch you expected to find is missing, you can click the `Fetch` button (in the top toolbar) to refresh the information shown under remotes.
 
 <pic src="images/listRemoteBranches.png" />
 <p/>

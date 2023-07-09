@@ -1,4 +1,4 @@
-Select the two points you want to compare using <kbd>Ctrl</kbd>+`Click`. The differences between the two selected versions will show up in the bottom half of SourceTree, as shown in the screenshot below.
+Select the two points you want to compare using <kbd>Ctrl</kbd>+`Click`. The differences between the two selected versions will show up in the bottom half of Sourcetree, as shown in the screenshot below.
 
 <pic src="images/sourcetree_2.png" height="200" />
 <p/>

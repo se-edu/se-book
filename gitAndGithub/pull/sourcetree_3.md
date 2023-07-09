@@ -1,4 +1,4 @@
-1. Open the local repo in SourceTree. Suggested: Use your local clone of the `samplerepo-things` repo.
+1. Open the local repo in Sourcetree. Suggested: Use your local clone of the `samplerepo-things` repo.
 
 1. Choose `Repository` → `Repository Settings` menu option.
 
