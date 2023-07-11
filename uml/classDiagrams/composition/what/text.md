@@ -15,7 +15,7 @@ Notation:
 
 <box>
 
-{{ icon_example }} A `Book` consists of `Chapter` objects. When the `Book` object is destroyed, its `Chapter` objects are destroyed too.
+{{ icon_example }} A `Book` is _composed_ of `Chapter` objects. As a result, when the `Book` object is destroyed, its `Chapter` objects are destroyed too.
 
 <pic src="{{baseUrl}}/uml/classDiagrams/composition/what/images/bookChapter.png" width="220" />
 <p/>

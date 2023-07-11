@@ -6,7 +6,7 @@
 
 <div id="body">
 
-**A composition is an association that represents a strong _whole-part_ relationship.** When the _whole_ is destroyed, _parts_ are destroyed too i.e., the _part_ should not exist without being attached to a _whole_.
+**A composition is an association that represents a strong _whole-part_ relationship.**
 
 <box>
 
@@ -14,11 +14,17 @@
 
 </box>
 
-**Composition also implies that there cannot be cyclical links**.
+**Composition implies**,
+
+1. **when the _whole_ is destroyed, _parts_ are destroyed too** i.e., the _part_ cannot exist without being attached to a _whole_.
+1. **there cannot be cyclical links**.
 
 <box>
 
-{{ icon_example }} The ‘sub-folder’ association between `Folder` objects is a composition type association. That means if the `Folder` object `foo` is a sub-folder of `Folder` object `bar`, `bar` cannot be a sub-folder of `foo`.
+{{ icon_example }} The ‘sub-folder’ association between `Folder` objects is a composition type association. Consider the case of `Folder` object `subF` is a sub-folder of `Folder` object `F`. In this case,
+
+1. if `F` is deleted, `subF` will be deleted with it.
+1. `F` cannot be a sub-folder of `subF` (i.e., no cyclical 'sub-folder' association between the two objects).
 
 </box>
 
@@ -34,7 +40,7 @@
 
 **A common use of composition is when parts of a big class are carved out as smaller classes** for the ease of managing the internal design. In such cases, the classes extracted out still act as _parts_ of the bigger class and the outside world has no business knowing about them.
 
-**Cascading deletion alone is not sufficient for composition.** Suppose there is a design in which `Person` objects are attached to `Task` objects and the former get deleted whenever the latter is deleted. This fact alone does not mean there is a composition relationship between the two classes. For it to be composition, a `Person` must be an integral _part_ of a `Task` in the context of that association, at the concept level (not simply at implementation level).
+**_Cascading deletion_ alone is not sufficient for composition.** Suppose there is a design in which `Person` objects are attached to `Task` objects and the former get deleted whenever the latter is deleted. This fact alone does not mean there is a composition relationship between the two classes. For it to be composition, a `Person` must be an integral _part_ of a `Task` in the context of that association, at the concept level (not simply at implementation level).
 
 **Identifying and keeping track of composition relationships in the design has benefits** such as helping to maintain the data integrity of the system. For example, when you know that a certain relationship is a composition, you can take extra care in your implementation to ensure that when the _whole_ object is deleted, all its _parts_ are deleted too.
 
@@ -48,7 +54,7 @@
 
 <div class="alt-java float-end ms-5">
 
-```java
+```java{.no-line-numbers}
 class Email {
     private Subject subject;
   ...
@@ -58,7 +64,7 @@ class Email {
 </div>
 <div class="alt-python  float-end ms-5">
 
-```python
+```python{.no-line-numbers}
 class Email:
 
   def __init__(self):

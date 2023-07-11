@@ -1,5 +1,3 @@
-<include src="text.md#prereqs" optional /><p/>
-
 %%**<include src="../path.md" inline />**%%
 <div id="title-and-body">
 <markdown>#### <include src="text.md#title" inline /></markdown>

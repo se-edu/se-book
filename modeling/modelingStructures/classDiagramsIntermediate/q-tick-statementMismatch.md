@@ -1,4 +1,4 @@
-<panel header="{{ icon_Q_A }} Statements about class diagram">
+<panel header="{{ icon_Q_A }} Statements about class diagrams">
 <question>
 
 Which of these statements match the class diagram?

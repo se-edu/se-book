@@ -6,7 +6,7 @@
 
 <div id="body">
 
-In the context of OOP associations, **a _dependency_ is a need for one class to depend on another without having a direct association in the same direction.** Reason for the exclusion: If there is an association from class `Foo` to class `Bar` (i.e., navigable from `Foo` to `Bar`), that means `Foo` is _obviously_ dependent on `Bar` and hence there is no point in mentioning _dependency_ specifically. In other words, we are only concerned about _non-obvious_ dependencies here. One cause of such dependencies is interactions between objects that do not have a long-term link between them.
+In the context of OOP associations, **a _dependency_ is a need for one class to depend on another without having a direct association in the same direction.** Reason for the exclusion: If there is an association from class `Foo` to class `Bar` (i.e., navigable from `Foo` to `Bar`), that means `Foo` is _obviously_ dependent on `Bar` and hence there is no point in mentioning _dependency_ specifically. In other words, we are specifically focusing on _non-obvious_ dependencies here. One cause of such dependencies is interactions between objects that do not have a long-term link between them.
 
 <box>
 
@@ -22,7 +22,7 @@ In the context of OOP associations, **a _dependency_ is a need for one class to 
 
 ```java
 class Foo {
-    
+
     int calculate(Bar bar) {
         return bar.getValue();
     }
@@ -30,7 +30,7 @@ class Foo {
 
 class Bar {
     int value;
-    
+
     int getValue() {
         return value;
     }
@@ -41,12 +41,12 @@ class Bar {
 
 ```python
 class Foo:
-    
+
     def calculate(self, bar):
         return bar.value;
 
 class Bar:
-    
+
     def __init__(self, value):
       self.value = value
 ```

@@ -22,6 +22,8 @@ Notation:
 
 </box>
 
+Note: It does not matter whether the triangle is filled or empty.
+
 </div>
 
 <div id="extras">
