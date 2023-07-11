@@ -6,11 +6,11 @@
 
 <div id="body">
 
-The following diagram uses the class diagram notation to show the different types of <trigger trigger="click" for="modal:umlModels-uml">UML</trigger> diagrams.
+<box type="definition" seamless>
+<include src="../../../common/definitions.md#def-uml" trim />
+</box>
 
-<modal large header="UML (Unified Modeling Language)" id="modal:umlModels-uml">
-    <include src="../../../common/definitions.md#def-uml" />
-</modal>
+The following diagram uses the class diagram notation to show the different types of UML diagrams.
 
 <box>
 

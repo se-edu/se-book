@@ -6,7 +6,7 @@
 
 <div id="body">
 
-**_Multiplicity_ is the aspect of an OOP solution that dictates how many objects take part in each association.** 
+**_Multiplicity_ is the aspect of an OOP solution that dictates how many objects take part in each association.**
 
 <box>
 
@@ -31,10 +31,9 @@
 
 <box>
 
-{{ icon_example }} In the code below, the `Logic` class will always have a `ConfigGenerator` object, provided the variable is not set to `null` at some point.
-
-
 <div class="alt-java">
+
+{{ icon_example }} In the code below, the `Logic` class will always have a `ConfigGenerator` object, provided the variable is not set to `null` at some point.
 
 ```java
 class Logic {
@@ -43,55 +42,11 @@ class Logic {
 }
 ```
 </div>
+
 <div class="alt-python">
 
-```python
-class Logic:
+{{ icon_example }} In the `Logic` class, ensure there is a variable that refers to a `ConfigGenerator` object.
 
-  def __init__(self):
-    self.config_gen = ConfigGenerator()
-```
-</div>
-
-
-</box>
-
-**Bidirectional associations require matching variables in both classes.**
-
-<box>
-
-{{ icon_example }} In the code below, the `Foo` class has a variable to hold a `Bar` object and vice versa %%i.e., each object can have an association with an object of the other type%%.
-
-<div class="alt-java">
-
-```java
-class Foo {
-    Bar bar;
-    //...
-}
-
-class Bar {
-    Foo foo;
-    //...
-}
-
-```
-</div>
-<div class="alt-python">
-
-```python
-class Foo:
-  
-  def __init__(self, bar):
-    self.bar = bar;
-
-
-class Bar:
-  
-  def __init__(self, foo):
-    self.foo = foo;
-    
-```
 </div>
 
 
@@ -106,7 +61,7 @@ class Bar:
 ```java
 class Minefield {
     Cell[][] cell;
-    ...
+    //...
 }
 ```
 </div>
@@ -114,7 +69,7 @@ class Minefield {
 
 ```python
 class Minefield:
-  
+
   def __init__(self):
     self.cells = {1:[], 2:[], 3:[]}
 ```

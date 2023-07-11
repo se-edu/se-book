@@ -1,7 +1,5 @@
 <span id="title">OO structures</span>
 
-<span id="prereqs"><panel src="../../../oop/classes/what/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} %%Design → OOP → Classes → Basic%%" popup-url="{{ baseUrl }}/oop/classes/what" /></span>
-
 <span id="outcomes">{{ icon_outcome }} Can explain structure modeling of OO solutions</span>
 
 <div id="body">
@@ -26,7 +24,7 @@ Note that these **object structures within the same software can change over tim
 
 </box>
 
-However, object structures do not change at random; they change based on a set of rules, as was decided by the designer of that software. Those **rules that object structures need to follow can be illustrated as a _class structure_** %%i.e. a structure that exists among the relevant classes%%.
+However, object structures do not change at random; they change based on a set of rules set by the designer of that software. Those **rules that object structures need to follow can be illustrated as a _class structure_** %%i.e. a structure that exists among the relevant classes%%.
 
 <box>
 
@@ -36,7 +34,7 @@ However, object structures do not change at random; they change based on a set o
 
 </box>
 
-UML _Object Diagrams_ are used to model object structures and UML _Class Diagrams_ are used to model class structures of an OO solution.
+**UML _Object Diagrams_ model object structures. UML _Class Diagrams_ model class structures.**
 
 <box>
 

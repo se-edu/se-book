@@ -11,7 +11,6 @@ Objects in an OO solution need to be connected to each other to form a network s
 <box>
 
 {{ icon_example }} Suppose an OOP program for managing a learning management system creates an object structure to represent the related objects. In that object structure you can expect to have associations between a `Course` object that represents a specific course and `Student` objects that represent students taking that course.
-
 </box>
 
 **Associations in an object structure can change over time**.
@@ -19,7 +18,6 @@ Objects in an OO solution need to be connected to each other to form a network s
 <box>
 
 {{ icon_example }} To continue the previous example, the associations between a `Course` object and `Student` objects can change as students enroll in the course or drop the course over time.
-
 </box>
 
 **Associations among objects can be generalized as associations between the corresponding classes too.**
@@ -27,12 +25,16 @@ Objects in an OO solution need to be connected to each other to form a network s
 <box>
 
 {{ icon_example }} In our example, as some `Course` objects can have associations with some `Student` objects, you can view it as an association between the `Course` class and the `Student` class.
-
 </box>
 
 ##### Implementing associations
 
 **You use instance level variables to implement associations.**
+
+<box>
+
+{{ icon_example }} In our example, the `Course` class can have a `students` variable to keeps track of students associated with a particular course.
+</box>
 
 </div>
 

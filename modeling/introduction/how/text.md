@@ -8,7 +8,7 @@
 
 **In software development, models are useful in several ways:**
 
-a) **To analyze a complex entity related to software development.**
+**a) To analyze a complex entity related to software development.**
 
 <box>
 
@@ -26,7 +26,7 @@ An _architecture diagram_ depicts the high-level design of a software.
   <include src="../../../architecture/architectureDiagrams/reading/text.md#architecture-diagram-examples"/>
 </modal>
 
-b) **To communicate information among stakeholders.**  Models can be used as a visual aid in discussions and documentation.
+**b) To communicate information among stakeholders.**  Models can be used as a visual aid in discussions and documentation.
 
 <box>
 
@@ -39,7 +39,7 @@ b) **To communicate information among stakeholders.**  Models can be used as a v
 </box>
 
 
-c) **As a blueprint for creating software.** Models can be used as instructions for building software.
+**c) As a blueprint for creating software.** Models can be used as instructions for building software.
 
 <box>
 

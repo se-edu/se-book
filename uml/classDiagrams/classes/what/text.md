@@ -76,7 +76,7 @@ class Table:
 
 </box>
 
-**The 'Operations' compartment and/or the 'Attributes' compartment may be omitted** if such details are not important for the task at hand. Similarly, _some_ attributes/operations can be omitted if not relevant. 'Attributes' always appear above the 'Operations' compartment. All operations should be in one compartment rather than each operation in a separate compartment. Same goes for attributes.
+**The 'Operations' compartment and/or the 'Attributes' compartment may be omitted** if such details are not important for the task at hand. Similarly, _some_ attributes/operations can be omitted if not relevant to the purpose of the diagram. 'Attributes' always appear above the 'Operations' compartment. All operations should be in one compartment rather than each operation in a separate compartment. Same goes for attributes.
 
 <box>
 
