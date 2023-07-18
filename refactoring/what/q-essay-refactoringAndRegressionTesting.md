@@ -1,5 +1,5 @@
 <panel header="{{ icon_Q_A }} Do you agree with the following statement? Refactoring and regression testing">
-<question has-input="true">
+<question type="text">
 
 Do you agree with the following statement? Justify your answer.
 

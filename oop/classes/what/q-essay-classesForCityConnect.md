@@ -1,5 +1,5 @@
 <panel header="{{ icon_Q }} Classes for CityConnect app">
-<question has-input="true">
+<question type="text">
 
 Assume you are writing a CLI program called **`CityConnect`** for storing and querying distances between cities. The behavior is as follows:
 

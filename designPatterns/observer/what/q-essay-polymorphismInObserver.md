@@ -1,5 +1,5 @@
 <panel header="{{ icon_Q_A }} Polymorphism and the Observer pattern">
-<question has-input="true">
+<question type="text">
 
 Explain how polymorphism is used in the Observer pattern.
 

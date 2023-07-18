@@ -1,5 +1,5 @@
 <panel header="{{ icon_Q_A }} Is the code defensive? `Teacher` and `Student`">
-<question has-input="true">
+<question type="text">
 
 (a) Is the code given below a defensive translation of the associations shown in the class diagram? Explain your answer.
 

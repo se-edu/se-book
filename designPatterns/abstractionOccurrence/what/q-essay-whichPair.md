@@ -1,5 +1,5 @@
 <panel header="{{ icon_Q_A }} Which situations match the pattern?">
-<question has-input="true">
+<question type="text">
 
 Which pairs of classes are likely to be the `<<Abstraction>>` and the `<<Occurrence>>` of the abstraction occurrence pattern?
 

@@ -1,5 +1,5 @@
 <panel header="{{ icon_Q_A }} Using a cool UI framework">
-<question has-input="true">
+<question type="text">
 
 One of your teammates is proposing to use a recently-released “cool” UI framework for your class project. List the pros and cons of this idea.
 

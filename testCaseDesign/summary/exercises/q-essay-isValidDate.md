@@ -1,5 +1,5 @@
 <panel header="{{ icon_Q_A }} isValidDate">
-<question has-input="true">
+<question type="text">
 
 Identify a set of equivalence partitions for testing the `isValidDate(String date)` method. The method checks if the parameter `date` is a day that falls in the period 1880/01/01 to 2030/12/31 (both inclusive). The date is given in the format yyyy/mm/dd.
 

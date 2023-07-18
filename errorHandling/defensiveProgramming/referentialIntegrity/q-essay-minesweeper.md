@@ -1,5 +1,5 @@
 <panel header="{{ icon_Q_A }} Implement `Player` and `Region`">
-<question has-input="true">
+<question type="text">
 
 Imagine that you now support the following feature in our Minesweeper game.
 

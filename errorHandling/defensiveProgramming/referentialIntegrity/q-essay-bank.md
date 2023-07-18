@@ -1,5 +1,5 @@
 <panel header="{{ icon_Q_A }} Bidirectional association between `Bank` and `Account`">
-<question has-input="true">
+<question type="text">
 
 Implement this bidirectional association.  Note that the `Bank` uses the `accNumber` attribute to uniquely identify an `Account` object. Assume the `Bank` class is responsible for maintaining the links between objects.
 

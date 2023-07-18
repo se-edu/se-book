@@ -1,5 +1,5 @@
 <panel header="{{ icon_Q }} Apply the suitable pattern">
-<question has-input="true">
+<question type="text">
 
 Suppose the `Processor` component of a software application is designed as follows:
 

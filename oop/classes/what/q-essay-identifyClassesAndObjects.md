@@ -1,15 +1,14 @@
 <panel header="{{ icon_Q_A }} Identify Classes and Objects">
-<question>
 
 Consider the following scenario. If you were to simulate this in an OOP program, what are the classes and the objects you would use?
 
 <box>
-  
+
 A customer (name: John) gave a cheque to the cashier (name: Peter) to pay for the LoTR and GoT books he bought.
 
 </box>
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 Class      | Objects
 ---------- | -------
@@ -18,7 +17,6 @@ Class      | Objects
 `Cheque`   | `chequeJohnGave`
 `Cashier`  | `peter`
 
-</div>
+</panel>
 
-</question>
 </panel>

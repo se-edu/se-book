@@ -7,7 +7,7 @@ See the chapter on _Code Quality_.
 <p/>
 
 
-<question has-input="true">
+<question type="text">
 
 Suggest ways to improve the quality of the code below.
 

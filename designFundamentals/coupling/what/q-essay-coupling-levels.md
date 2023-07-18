@@ -1,5 +1,5 @@
 <panel header="{{ icon_Q_A }} Coupling levels of alternative designs">
-<question has-input="true">
+<question type="text">
 
 Discuss the coupling levels of alternative designs _x_ and _y_.
 

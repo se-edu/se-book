@@ -1,5 +1,5 @@
 <panel header="{{ icon_Q_A }} transferTable">
-<question has-input="true">
+<question type="text">
 
 Given below is an operation description taken from a restaurant booking system. Use equivalence partitions and the boundary value analysis technique to design a set of test cases for it.
 

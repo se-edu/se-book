@@ -1,5 +1,5 @@
 <panel header="{{ icon_Q_A }} Regressions and coupling">
-<question has-input="true">
+<question type="text">
 
 Explain the link (if any) between regressions and coupling.
 

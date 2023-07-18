@@ -1,7 +1,7 @@
 <panel header="{{ icon_Q_A }} What's wrong with this user story?">
-<question has-input="true">
+<question type="text">
 
-Critique the following user story taken from a software project to build an e-commerce website. 
+Critique the following user story taken from a software project to build an e-commerce website.
 
 `As a developer, I want to use Python to implement the software, so that we can reuse existing Python modules.`
 

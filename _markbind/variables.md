@@ -30,7 +30,8 @@
 <variable id="icon_quote_end"><md>:fas-quote-right:</md></variable>
 <variable id="icon_quote_start"><md>:fas-quote-left:</md></variable>
 <variable id="icon_Q"><md>:glyphicon-question-sign:</md></variable>
-<variable id="icon_Q_A">{{ icon_Q | safe }}<md>:glyphicon-ok-sign:</md></variable>
+<variable id="icon_A"><md>:glyphicon-ok-sign:</md></variable>
+<variable id="icon_Q_A">{{ icon_Q | safe }}{{ icon_A | safe }}</variable>
 <variable id="icon_resource"><md>:fas-paperclip:</md></variable>
 <variable id="icon_team"><md>:fas-users:</md></variable>
 <variable id="icon_terminal"><small><span class="badge bg-secondary">&gt;_</span></small></variable>

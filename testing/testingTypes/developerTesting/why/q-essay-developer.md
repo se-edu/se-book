@@ -1,5 +1,5 @@
 <panel header="{{ icon_Q_A }} Implications of developers testing their own code">
-<question has-input="true">
+<question type="text">
 
 Discuss the pros and cons of developers testing their own code.
 

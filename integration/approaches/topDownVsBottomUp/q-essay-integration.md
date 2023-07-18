@@ -1,5 +1,5 @@
 <panel header="{{ icon_Q_A }} Suggest an integration strategy">
-<question has-input="true">
+<question type="text">
 
 Suggest an integration strategy for the system represented by the following diagram. You need not follow a strict top-down, bottom-up, sandwich, or big bang approach. Dashed arrows represent dependencies between classes.
 

@@ -1,5 +1,5 @@
 <panel header="{{ icon_Q_A }} Agile processes, Pair programming, Test-driven development">
-<question has-input="true">
+<question type="text">
 
 Find out more about the following three topics and give at least three arguments for and three arguments against each.
 

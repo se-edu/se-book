@@ -1,5 +1,5 @@
 <panel header="{{ icon_Q_A }} add(Item)">
-<question has-input="true">
+<question type="text">
 
 Assume you are testing the `add(Item)` method specified below.
 

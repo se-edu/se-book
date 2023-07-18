@@ -1,5 +1,5 @@
 <panel header="{{ icon_Q_A }} Describe objects in the given scenario">
-<question has-input="true">
+<question type="text">
 
 Consider the following real-world scenario.
 

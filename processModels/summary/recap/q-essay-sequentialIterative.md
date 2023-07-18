@@ -1,5 +1,5 @@
 <panel header="{{ icon_Q_A }} Sequential vs iterative approach">
-<question has-input="true">
+<question type="text">
 
 Discuss how a sequential approach and an iterative approach can affect the following aspects of a project.
 

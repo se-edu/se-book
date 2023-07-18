@@ -1,5 +1,5 @@
 <panel header="{{ icon_Q_A }} Comment on how to use architecture styles in Minesweeper.">
-<question has-input="true">
+<question type="text">
 
 Assume you are designing a multiplayer version of the Minesweeper game where any number of players can play the same Minefield. Players use their own PCs to play the game. A player scores by deducing a cell correctly before any of the other players do. Once a cell is correctly deduced, it appears as either marked or cleared for all players.
 

@@ -1,5 +1,5 @@
 <panel header="{{ icon_Q_A }} Software vs Bridges">
-<question has-input="true">
+<question type="text">
 
 Comment on this statement: Building software is cheaper and easier than building bridges (all we need is a PC!).
 

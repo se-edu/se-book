@@ -1,5 +1,5 @@
 <panel header="{{ icon_Q_A }} Coding as a manufacturing activity">
-<question has-input="true">
+<question type="text">
 
 Justify this statement: Coding is still a ‘design’ activity, not a ‘manufacturing’ activity. You may use a comparison (or an analogy) of Software Engineering versus Civil Engineering to argue this point.
 

@@ -1,5 +1,5 @@
 <panel header="{{ icon_Q_A }} Matric numbers">
-<question has-input="true">
+<question type="text">
 
 Assume that students are given a matriculation number according to the following format:
 

@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="{{baseUrl}}/css/common.css">
 
 <panel header="{{ icon_Q_A }} LearnSys – reply to post use case">
-<question has-input="true">
+<question type="text">
 
 Complete the following use case (MSS, extensions, etc.).
 

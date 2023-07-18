@@ -1,5 +1,5 @@
 <panel header="{{ icon_Q_A }} Write a `Manager#addAccount()`">
-<question has-input="true">
+<question type="text">
 
 For the `Manager` class shown below, write an `addAccount()` method that
 

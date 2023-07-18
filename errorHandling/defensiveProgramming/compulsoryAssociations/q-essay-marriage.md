@@ -1,5 +1,5 @@
 <panel header="{{ icon_Q_A }} Implement `Marriage`">
-<question has-input="true">
+<question type="text">
 
 Implement the classes defensively with appropriate references and operations to establish the associations among the classes. Follow the defensive coding approach. Let the `Marriage` class handle the setting/removal of references.
 

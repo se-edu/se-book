@@ -1,5 +1,5 @@
 <panel header="{{ icon_Q_A }} Coupling and testability">
-<question has-input="true">
+<question type="text">
 
 Discuss the relationship between coupling and <tooltip content="a measure of how easily a given component can be tested">testability</tooltip>.
 
