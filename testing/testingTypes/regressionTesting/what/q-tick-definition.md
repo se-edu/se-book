@@ -1,5 +1,4 @@
 <panel header="{{ icon_Q_A }} Regression Testing definition: T/F?">
-<question>
 
 Regression testing is the automated re-testing of a software after it has been modified.
 
@@ -7,12 +6,11 @@ Regression testing is the automated re-testing of a software after it has been m
 - ( ) b. False
 - ( ) c. Partially true
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
-c. 
+c.
 
 Explanation: Regression testing ==need not be automated== but automation is highly recommended.
 
-</div>
-</question>
+</panel>
 </panel>

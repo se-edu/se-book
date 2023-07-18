@@ -1,9 +1,8 @@
 <panel header="{{ icon_Q_A }} isValidDate">
-<question type="text">
 
 Identify a set of equivalence partitions for testing the `isValidDate(String date)` method. The method checks if the parameter `date` is a day that falls in the period 1880/01/01 to 2030/12/31 (both inclusive). The date is given in the format yyyy/mm/dd.
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 **Initial partitions**: [null] [10 characters long] [shorter than 10 characters] [longer than 10 characters]
 
@@ -17,6 +16,5 @@ For 10-character strings:
 
 In practice, we often use ‘trusted’ library functions (e.g. those that come with the Java JDK or .NET framework) to convert strings into dates. In such cases, our testing need not be as thorough as those suggested by the above analysis. However, this kind of thorough testing is required if you are the person implementing such a trusted component.
 
-</div>
-</question>
+</panel>
 </panel>

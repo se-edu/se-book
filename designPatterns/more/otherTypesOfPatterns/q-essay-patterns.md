@@ -1,5 +1,4 @@
 <panel header="{{ icon_Q }} Give a pattern from another domain">
-<question type="text">
 
 Here are some common elements of a design pattern: Name, Context, Problem, Solution, Anti-patterns (optional), Consequences (optional), other useful information (optional).
 
@@ -11,5 +10,4 @@ Some examples:
 * A pattern for testing textual UIs.
 * A pattern for striking a good bargain at a mall such as Sim-Lim Square.
 
-</question>
 </panel>

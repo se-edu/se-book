@@ -1,5 +1,4 @@
 <panel header="{{ icon_Q_A }} Which sequences are not allowed?">
-<question>
 
 Which of these sequences of actions is not allowed by the given activity diagram?
 
@@ -11,12 +10,11 @@ Which of these sequences of actions is not allowed by the given activity diagram
 <pic src="{{baseUrl}}/modeling/modelingBehaviors/activityDiagrams/images/sequence.png" height="190" />
 <p/>
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 (iv)
 
 Explanation: `-e-f-` and `-g-` are parallel paths. Both paths should complete before the execution reaches `c` again.
 
-</div>
-</question>
+</panel>
 </panel>

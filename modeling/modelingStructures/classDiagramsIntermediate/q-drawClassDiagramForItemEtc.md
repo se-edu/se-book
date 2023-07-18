@@ -1,5 +1,4 @@
 <panel header="{{ icon_Q }} Draw a Class Diagram for the code (`StockItem`, `Inventory`, `Review`, etc.)">
-<question>
 
 Consider the code below:
 
@@ -83,5 +82,4 @@ public class Inventory {
 (b) Draw an object diagram to represent the situation where the inventory has one item named `spanner` and a review of `POOR` rating<br>
   i.e., `new Inventory().add(new StockItem("spanner", Rating.POOR))`{.java}.
 
-</question>
 </panel>

@@ -1,5 +1,4 @@
 <panel header="{{ icon_Q_A }} Logging vs blackbox">
-<question>
 
 Why is logging like having the 'black box' in an airplane?
 
@@ -8,10 +7,9 @@ Why is logging like having the 'black box' in an airplane?
 - ( ) c. Because they can both be in hardcopy form or digital form.
 - ( ) d. Because they are hard to open by normal users.
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 (a)
 
-</div>
-</question>
+</panel>
 </panel>

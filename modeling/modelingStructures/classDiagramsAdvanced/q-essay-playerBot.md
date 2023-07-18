@@ -69,10 +69,10 @@ ii. A `Human` object can _train_ a `SmartBot` object. The `Lesson` class keeps t
 
 </panel>
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 
 
-</div>
+</panel>
 </question>
 </panel>

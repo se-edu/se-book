@@ -8,7 +8,6 @@
 
 <p/>
 
-<question>
 Which is the recommended integration approach in general?
 
 - ( ) a. Early, big bang, and frequent
@@ -16,10 +15,9 @@ Which is the recommended integration approach in general?
 - ( ) c. Late, top down, one time
 
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 b
 
-</div>
-</question>
+</panel>
 </panel>

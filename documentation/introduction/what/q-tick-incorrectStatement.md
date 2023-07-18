@@ -1,5 +1,4 @@
 <panel header="{{ icon_Q_A }} Statements about API documentation">
-<question>
 
 Choose correct statements about API documentation.
 
@@ -7,10 +6,9 @@ Choose correct statements about API documentation.
 - [ ] b. There are tools that can generate API documents from code comments.
 - [ ] c. API documentation may contain code examples.
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 All
 
-</div>
-</question>
+</panel>
 </panel>

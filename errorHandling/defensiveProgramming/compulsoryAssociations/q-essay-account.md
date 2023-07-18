@@ -1,12 +1,11 @@
 <panel header="{{ icon_Q_A }} Immutable `Account` class">
-<question type="text">
 
 Give a suitable defensive implementation to the `Account` class in the following class diagram. Note that “{immutable}” means once the association is formed, it cannot be changed.
 
 <pic src="{{baseUrl}}/errorHandling/defensiveProgramming/compulsoryAssociations/images/accountGuarantorImmutable.png" height="80" />
 <p/>
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 ```java
 class Account {
@@ -22,6 +21,5 @@ class Account {
 }
 ```
 
-</div>
-</question>
+</panel>
 </panel>

@@ -1,5 +1,4 @@
 <panel header="{{ icon_Q_A }} Which statements are correct?">
-<question>
 
 Which of these are correct?
 
@@ -9,12 +8,11 @@ Which of these are correct?
 - [ ] d. Code reuse can be one benefit of inheritance.
 - [ ] e. A change to the superclass will not affect its subclasses.
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
-(a) (b) (c) (d) 
+(a) (b) (c) (d)
 
 Explanation: (e) is incorrect. Because subclasses inherit behavior from the superclass, any changes to the superclass could affect subclasses.
 
-</div>
-</question>
+</panel>
 </panel>

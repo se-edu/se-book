@@ -6,7 +6,6 @@
 
 <p/>
 
-<question>
 Choose the least correct statement
 
 - ( ) a. Principles are typically more general than patterns.
@@ -15,12 +14,11 @@ Choose the least correct statement
 - ( ) d. Most design patterns and design principles try to reduce coupling and increase cohesion.
 - ( ) e. The more patterns we apply, the better the design becomes.
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 e
 
 Explanation: Patterns have costs and sometimes they may be an overkill. Therefore, we should apply them judiciously.
 
-</div>
-</question>
+</panel>
 </panel>

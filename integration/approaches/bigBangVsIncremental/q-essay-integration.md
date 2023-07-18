@@ -1,11 +1,10 @@
 <panel header="{{ icon_Q_A }} Big-bang integration in school projects">
-<question type="text">
 
 Give two arguments in support and two arguments against the following statement.
 
 _Because there is no external client, it is OK to use big bang integration for a school project._
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 Arguments for:
 
@@ -19,6 +18,5 @@ Arguments against:
 *	Too many problems may be discovered too late. Submission deadline (fixed) can be missed.
 *	Team members have not worked together before; increases the probability of integration problems.
 
-</div>
-</question>
+</panel>
 </panel>

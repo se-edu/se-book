@@ -1,5 +1,4 @@
 <panel header="{{ icon_Q }} Draw a Sequence Diagram for the code (`PersonList`, `Person`, `Tag`)">
-<question>
 
 Consider the code below:
 <div class="row">
@@ -44,5 +43,4 @@ while (hasRoom) {
 }
 ```
 
-</question>
 </panel>

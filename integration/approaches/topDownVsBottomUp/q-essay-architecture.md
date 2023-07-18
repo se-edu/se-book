@@ -12,7 +12,7 @@ Note that dashed arrows show dependencies (e.g. A depends on B, C and D, and is 
 <pic src="{{baseUrl}}/integration/approaches/topDownVsBottomUp/images/abc.png" height="190" />
 <p/>
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 a) Diagram:
 
@@ -29,6 +29,6 @@ c) Diagram:
 <pic src="{{baseUrl}}/integration/approaches/topDownVsBottomUp/images/cAnswer.png" height="230" />
 <p/>
 
-</div>
+</panel>
 </question>
 </panel>

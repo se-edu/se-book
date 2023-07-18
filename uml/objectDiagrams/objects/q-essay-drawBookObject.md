@@ -1,5 +1,4 @@
 <panel header="{{ icon_Q }} Draw Book object">
-<question>
 
 Draw a UML diagram to represent the `Book` object created by the following code.
 
@@ -36,5 +35,4 @@ my_book = Book(13.5, 200)
 ```
 </div>
 
-</question>
 </panel>

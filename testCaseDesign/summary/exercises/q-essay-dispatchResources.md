@@ -1,5 +1,4 @@
 <panel header="{{ icon_Q_A }} Dispatch resources">
-<question type="text">
 
 Given below is the overview of the method `dispatch(Resource, Task)`, from an emergency management system (e.g. a system used by those who handle emergency calls from the public about incidents such as fires, possible burglaries, domestic disturbances, etc.). A task might need multiple resources of multiple types. For example, the task ‘fire at Clementi MRT’ might need two fire engines and one ambulance.
 
@@ -8,7 +7,7 @@ Given below is the overview of the method `dispatch(Resource, Task)`, from an em
 
 Imagine you are designing test cases to test the method `dispatch(Resource, Task)`. Taking into account equivalence partitions and boundary values, which different inputs will you combine to test the method?
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 <table class="table">
 <tbody>
@@ -42,6 +41,5 @@ Imagine you are designing test cases to test the method `dispatch(Resource, Task
 </tbody>
 </table>
 
-</div>
-</question>
+</panel>
 </panel>

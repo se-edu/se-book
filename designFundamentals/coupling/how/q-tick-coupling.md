@@ -1,5 +1,4 @@
 <panel header="{{ icon_Q_A }} Which indicate coupling?">
-<question>
 
 Which of these indicate coupling between components A and B?
 
@@ -10,12 +9,11 @@ Which of these indicate coupling between components A and B?
 - [ ] e. component A inherits from component B.
 - [ ] f. components A and B have to follow the same data format or communication protocol.
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 (a)~~(b)~~(c)(d)(e)(f)
 
 Explanation: Being written by the same developer does not imply coupling.
 
-</div>
-</question>
+</panel>
 </panel>

@@ -1,14 +1,5 @@
 <panel header="{{ icon_Q }} Review `CliApp` code for quality">
 
-<panel header="%%{{ icon_prereq }}%% Prerequisites" minimized>
-
-See the chapter on _Code Quality_.
-</panel>
-<p/>
-
-
-<question type="text">
-
 Suggest ways to improve the quality of the code below.
 
 ```java
@@ -84,5 +75,4 @@ public class CliApp {
 }
 ```
 
-</question>
 </panel>

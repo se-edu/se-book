@@ -1,5 +1,4 @@
 <panel header="{{ icon_Q_A }} What is the recommended approach regarding coding standards?">
-<question>
 
 What is the recommended approach regarding coding standards?
 
@@ -9,10 +8,9 @@ What is the recommended approach regarding coding standards?
 - ( ) d. Coding standards are lame. Real programmers develop their own individual styles.
 
 
-<div slot="answer">
-    
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
+
 c
 
-</div>
-</question>
+</panel>
 </panel>

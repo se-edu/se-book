@@ -1,5 +1,4 @@
 <panel header="{{ icon_Q_A }} Characteristic of brainstorming">
-<question>
 
 What is the key characteristic about brainstorming?
 
@@ -9,10 +8,9 @@ What is the key characteristic about brainstorming?
 - ( ) d. It is a good way to eliminate _bad_ ideas.
 
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 (b)
 
-</div>
-</question>
+</panel>
 </panel>

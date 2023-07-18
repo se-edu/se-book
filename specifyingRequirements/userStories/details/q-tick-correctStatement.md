@@ -1,5 +1,4 @@
 <panel header="{{ icon_Q_A }} Correct statements about user stories">
-<question>
 
 Choose the correct statements
 
@@ -9,12 +8,11 @@ Choose the correct statements
 - [ ] d. User stories are not detailed enough to tell us exact details of the product.
 
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
-d 
+d
 
 Explanation: User stories are short and written in natural language, NOT in a formal language. They are used for estimation and scheduling purposes but do not contain enough details to form a complete system specification.
 
-</div>
-</question>
+</panel>
 </panel>

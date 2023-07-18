@@ -1,5 +1,4 @@
 <panel header="{{ icon_Q_A }} Drawbacks of prepature optimizations">
-<question>
 
 What are the drawbacks of trying to optimize code too soon?
 
@@ -8,10 +7,9 @@ What are the drawbacks of trying to optimize code too soon?
 - [ ] c. Optimizing can complicate code
 - [ ] d. Optimizing can lead to more error-prone code
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 a, b, c, d
 
-</div>
-</question>
+</panel>
 </panel>

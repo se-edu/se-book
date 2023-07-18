@@ -1,5 +1,4 @@
 <panel header="{{ icon_Q_A }} Class Diagram for code">
-<question>
 
 <div class="alt-java">
 
@@ -94,11 +93,10 @@ item2.add_previous_box(box2);
 ```
 </div>
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 <pic src="{{baseUrl}}/uml/classDiagrams/combine/basic/images/classDiagramForCodeAnswer.png" width="600" />
 
-</div>
+</panel>
 
-</question>
 </panel>

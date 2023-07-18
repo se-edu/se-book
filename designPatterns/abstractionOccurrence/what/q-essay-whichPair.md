@@ -1,5 +1,4 @@
 <panel header="{{ icon_Q_A }} Which situations match the pattern?">
-<question type="text">
 
 Which pairs of classes are likely to be the `<<Abstraction>>` and the `<<Occurrence>>` of the abstraction occurrence pattern?
 
@@ -9,7 +8,7 @@ Which pairs of classes are likely to be the `<<Abstraction>>` and the `<<Occurre
 4. TeamLeader, TeamMember
 5. Magazine (E.g. ReadersDigest, PCWorld), MagazineIssue
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 One of the key things to keep in mind is that the `<<Abstraction>>` does not represent a real entity. Rather, it represents some information common to a set of objects. A single real entity is represented by an object of `<<Abstraction>>` type and `<<Occurrence>>` type.
 
@@ -23,6 +22,5 @@ After applying the pattern, the `Abstraction` and the `Occurrence` classes toget
 4.	TeamLeader, TeamMember: **No. A TeamMember is not an occurrence of a TeamLeader or vice versa.**
 5.	Magazine, MagazineIssue: **Yes.**
 
-</div>
-</question>
+</panel>
 </panel>

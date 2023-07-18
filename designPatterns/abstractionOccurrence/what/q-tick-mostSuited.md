@@ -1,5 +1,4 @@
 <panel header="{{ icon_Q_A }} Apply pattern?">
-<question>
 
 Which one of these is most suited for an application of the Abstraction Occurrence pattern?
 
@@ -7,7 +6,7 @@ Which one of these is most suited for an application of the Abstraction Occurren
 - ( ) b. Teachers and their students
 - ( ) c. Courses and exams/assignments given by those courses
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 (a)
 
@@ -19,6 +18,5 @@ Explanation:
 
 (c) Course, Exam, and Assignment are distinct entities with associations among them, but none of them can be considered an occurrence of another.
 
-</div>
-</question>
+</panel>
 </panel>

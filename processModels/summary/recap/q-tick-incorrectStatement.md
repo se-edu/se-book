@@ -1,5 +1,4 @@
 <panel header="{{ icon_Q_A }} Statements about sequential and iterative process models">
-<question>
 
 Choose the correct statements about the sequential and iterative process models.
 
@@ -9,12 +8,11 @@ Choose the correct statements about the sequential and iterative process models.
 - [ ] d. The iterative model is always better than the sequential model.
 - [ ] e. Compared to the sequential model, the iterative model is better at adapting to changing requirements.
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 (a)(b)(c)~~(d)~~(e)
 
 Explanation: Both models have pros and cons. There is no definitive ‘better’ choice between the two. However, the iterative model works better in typical software projects than a purely sequential approach.
 
-</div>
-</question>
+</panel>
 </panel>

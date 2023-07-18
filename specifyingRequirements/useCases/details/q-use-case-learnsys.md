@@ -1,7 +1,6 @@
 <link rel="stylesheet" href="{{baseUrl}}/css/common.css">
 
 <panel header="{{ icon_Q_A }} LearnSys – reply to post use case">
-<question type="text">
 
 Complete the following use case (MSS, extensions, etc.).
 
@@ -13,7 +12,7 @@ Complete the following use case (MSS, extensions, etc.).
 
 </box>
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 <box>
   <div>
@@ -83,6 +82,5 @@ Complete the following use case (MSS, extensions, etc.).
   </div>
 </box>
 
-</div>
-</question>
+</panel>
 </panel>

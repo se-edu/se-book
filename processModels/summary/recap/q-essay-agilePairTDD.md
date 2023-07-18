@@ -1,5 +1,4 @@
 <panel header="{{ icon_Q_A }} Agile processes, Pair programming, Test-driven development">
-<question type="text">
 
 Find out more about the following three topics and give at least three arguments for and three arguments against each.
 
@@ -9,7 +8,7 @@ Find out more about the following three topics and give at least three arguments
 
 (c) Test-driven development
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 (a) Arguments in favor of agile processes:
 
@@ -55,6 +54,5 @@ Arguments against TDD (not necessarily true):
 
 Not intuitive. Some programmers might resist adopting TDD.
 
-</div>
-</question>
+</panel>
 </panel>

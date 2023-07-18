@@ -1,5 +1,4 @@
 <panel header="{{ icon_Q_A }} Which one is not a well-defined task?">
-<question>
 
 Which one these project tasks is not well-defined?
 
@@ -9,12 +8,11 @@ Which one these project tasks is not well-defined?
 - ( ) d. Choose a tool to draw UML diagrams.
 - ( ) e. Clarify submission requirements with the customer.
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 (c)
 
 Explanation: ‘More testing’ is not well-defined. How much is ‘more’? ‘Test the delete functionality’ is a better-defined task.
 
-</div>
-</question>
+</panel>
 </panel>

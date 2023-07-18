@@ -1,5 +1,4 @@
 <panel header="{{ icon_Q_A }} Suggest an integration strategy">
-<question type="text">
 
 Suggest an integration strategy for the system represented by the following diagram. You need not follow a strict top-down, bottom-up, sandwich, or big bang approach. Dashed arrows represent dependencies between classes.
 
@@ -13,7 +12,7 @@ Also take into account the following facts in your test strategy:
 <pic src="{{baseUrl}}/integration/approaches/topDownVsBottomUp/images/hospital.png" height="250" />
 <p/>
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 There can be many acceptable answers to this question. But any good strategy should consider at least some of the following:
 
@@ -28,6 +27,5 @@ Given below is one possible integration test strategy. The relative positioning 
 <pic src="{{baseUrl}}/integration/approaches/topDownVsBottomUp/images/hospitalIntegration.png" height="250" />
 <p/>
 
-</div>
-</question>
+</panel>
 </panel>

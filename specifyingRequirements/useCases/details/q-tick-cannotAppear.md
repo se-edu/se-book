@@ -1,5 +1,4 @@
 <panel header="{{ icon_Q_A }} Parts of a use case description">
-<question>
 
 Which of these cannot appear as part of a use case description?
 
@@ -12,12 +11,11 @@ Which of these cannot appear as part of a use case description?
 - [ ] g. Extensions
 - [ ] h. Inclusions
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 (f)
 
 Explanation: Performance requirements are non-functional requirements. They are not captured in use cases.
 
-</div>
-</question>
+</panel>
 </panel>

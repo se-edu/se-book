@@ -1,5 +1,4 @@
 <panel header="{{ icon_Q_A }} Matric numbers">
-<question type="text">
 
 Assume that students are given a matriculation number according to the following format:
 
@@ -31,7 +30,7 @@ The valid value(s) for each part of the matriculation number is given below:
 
 Assume you are testing the operation `isValidMatric(String matric): boolean`. Identify equivalence partitions and boundary values for the matriculation number.
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 String length: (less than 7 characters), (7 characters), (more than 7 characters)
 
@@ -42,6 +41,5 @@ For those with 7 characters,
 * [Serial Number]: (1000-9999), (0000-0999), (any other 4-characters string)
 * [Check Alphabet]: ('K', 'H', 'S', ‘X’, 'Z'), ('k', 'h', ’s’, ‘x’, 'z'), (any other character)
 
-</div>
-</question>
+</panel>
 </panel>

@@ -10,7 +10,6 @@
 
 <p/>
 
-<question>
 Which one of these is the most useful to model a workflow?
 
 - ( ) a. class diagram
@@ -19,10 +18,9 @@ Which one of these is the most useful to model a workflow?
 - ( ) d. state machine diagram
 - ( ) e. use case diagram
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 c
 
-</div>
-</question>
+</panel>
 </panel>

@@ -1,5 +1,4 @@
 <panel header="{{ icon_Q_A }} Statements about architecture">
-<question>
 
 Choose the correct statement.
 
@@ -8,16 +7,15 @@ Choose the correct statement.
 - [ ] c. The architecture is usually decided by the project manager.
 - [ ] d. The architecture can contain details private to a component.
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 (a)(b)
 
 ~~(c)~~ Reason: Architecture is usually designed by the Architect.
 
-~~(d)~~ Reason: 
+~~(d)~~ Reason:
 >... private details of elements—details having to do solely with internal implementation—are not architectural.
 
 
-</div>
-</question>
+</panel>
 </panel>

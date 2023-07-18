@@ -1,13 +1,11 @@
 <panel header="{{ icon_Q }} Explain usage of models in a class project">
-<question type="text">
 
 Explain how models (e.g. UML diagrams) can be used in a class project.
 
-<div slot="hint">
+<panel type="seamless" header="Hint" minimized>
 
 Can models be useful in evaluating the design quality of a software written by students?
 
-</div>
+</panel>
 
-</question>
 </panel>

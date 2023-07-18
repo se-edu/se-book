@@ -1,17 +1,15 @@
 <panel header="{{ icon_Q_A }} The two basic process models">
-<question>
 
 The sequential model and the waterfall model are the two most basic process models.
 
 - ( ) True
 - ( ) False
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 False
 
 Explanation: The sequential model and the waterfall model are the same thing. The second basic model is the iterative model.
 
-</div>
-</question>
+</panel>
 </panel>

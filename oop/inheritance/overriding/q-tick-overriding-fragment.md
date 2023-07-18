@@ -1,5 +1,4 @@
 <panel header="{{ icon_Q_A }} Which methods override?">
-<question>
 
 Which of these methods override another method? %%`A` is the parent class. `B` inherits `A`.%%
 
@@ -12,12 +11,11 @@ Which of these methods override another method? %%`A` is the parent class. `B` i
 - [ ] d
 - [ ] e
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 d
 
 Explanation: Method overriding requires a method in a _child class_ to use the same method name and same parameter sequence used by one of its ancestors.
 
-</div>
-</question>
+</panel>
 </panel>

@@ -1,5 +1,4 @@
 <panel header="{{ icon_Q_A }} This diagram is,...">
-<question>
 
 This diagram is,
 
@@ -11,12 +10,11 @@ This diagram is,
 <pic src="{{baseUrl}}/modeling/modelingStructures/objectOrientedDomainModels/images/playerTurn.png" height="50" />
 <p/>
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 (a)
 
 Explanation: The diagram shows navigability which is not shown in an OO domain model. Hence, it has to be a class diagram.
 
-</div>
-</question>
+</panel>
 </panel>

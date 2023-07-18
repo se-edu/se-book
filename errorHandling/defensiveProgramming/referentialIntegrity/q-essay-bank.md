@@ -1,12 +1,11 @@
 <panel header="{{ icon_Q_A }} Bidirectional association between `Bank` and `Account`">
-<question type="text">
 
 Implement this bidirectional association.  Note that the `Bank` uses the `accNumber` attribute to uniquely identify an `Account` object. Assume the `Bank` class is responsible for maintaining the links between objects.
 
 <pic src="{{baseUrl}}/errorHandling/defensiveProgramming/referentialIntegrity/images/bankAccount.jpg" height="60" />
 <p/>
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 The code below contains a method in the `Bank` class to create an account; the bank field in the new account is thereby filled by the bank creating it.
 
@@ -51,6 +50,5 @@ public class Bank {
 }
 ```
 
-</div>
-</question>
+</panel>
 </panel>

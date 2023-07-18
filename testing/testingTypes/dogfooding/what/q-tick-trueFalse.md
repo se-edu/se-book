@@ -1,15 +1,13 @@
 <panel header="{{ icon_Q_A }} Can Dogfooding improve product design?">
-<question>
 
-‘Dogfooding’ can help us improve product designs. 
+‘Dogfooding’ can help us improve product designs.
 
 - ( ) True
 - ( ) False
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 True
 
-</div>
-</question>
+</panel>
 </panel>

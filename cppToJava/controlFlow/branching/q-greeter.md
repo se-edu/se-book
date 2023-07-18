@@ -1,5 +1,4 @@
 <panel header="{{ icon_Q }} Greeter">
-<question>
 
 Write a Java program that takes several command line arguments that describe a person or a family | and prints out a greeting. The parameters can be one of two formats.
 
@@ -18,7 +17,7 @@ Follow the sample output given below.
 
 You can assume that the input is always in the correct format %%i.e., no need to handle invalid input cases%%.
 
-<div slot="hint">
+<panel type="seamless" header="Hint" minimized>
 
 Partial solution:
 ```java
@@ -38,6 +37,5 @@ public class Greeter {
 ```
 
 
-</div>
-</question>
+</panel>
 </panel>

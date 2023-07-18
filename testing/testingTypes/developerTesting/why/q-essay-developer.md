@@ -1,9 +1,8 @@
 <panel header="{{ icon_Q_A }} Implications of developers testing their own code">
-<question type="text">
 
 Discuss the pros and cons of developers testing their own code.
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 Pros:
 
@@ -19,6 +18,5 @@ Cons:
 * A developer may have misunderstood what the SUT is supposed to do in the first place.
 * A developer may lack the testing expertise.
 
-</div>
-</question>
+</panel>
 </panel>

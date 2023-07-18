@@ -1,5 +1,4 @@
 <panel header="{{ icon_Q_A }} Is the code defensive? `Teacher` and `Student`">
-<question type="text">
 
 (a) Is the code given below a defensive translation of the associations shown in the class diagram? Explain your answer.
 
@@ -38,7 +37,7 @@ class Student {
 <pic src="{{baseUrl}}/errorHandling/defensiveProgramming/referentialIntegrity/images/clubMember.png" height="60" />
 <p/>
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 (a) Yes. Each link is mutable and unidirectional. A simple reference variable is suitable to hold the link.
 
@@ -61,6 +60,5 @@ void removeMember(Member m) {
 }
 ```
 
-</div>
-</question>
+</panel>
 </panel>

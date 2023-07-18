@@ -1,5 +1,4 @@
 <panel header="{{ icon_Q_A }} Statements about the Singleton pattern">
-<question>
 
 You use the Singleton pattern when
 
@@ -8,10 +7,9 @@ You use the Singleton pattern when
 - ( ) c. You want a class with no more than one instance.
 - ( ) d. You want to hide the internal structure of a component from its clients.
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 (c)
 
-</div>
-</question>
+</panel>
 </panel>

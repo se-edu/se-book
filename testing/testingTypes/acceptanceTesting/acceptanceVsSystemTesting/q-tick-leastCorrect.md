@@ -1,5 +1,4 @@
 <panel header="{{ icon_Q_A }} Statements about system testing and acceptance testing">
-<question>
 
 Choose the correct statements about system testing and acceptance testing.
 
@@ -11,7 +10,7 @@ Choose the correct statements about system testing and acceptance testing.
 - [ ] f. If system testing is adequately done, we need not do acceptance testing.
 
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 (a)(b)(c)(d)(e)~~(f)~~
 
@@ -21,6 +20,5 @@ Explanation:
 
 (f) is incorrect because it is possible for a system to pass system tests but fail acceptance tests.
 
-</div>
-</question>
+</panel>
 </panel>

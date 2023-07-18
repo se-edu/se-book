@@ -1,5 +1,4 @@
 <panel header="{{ icon_Q_A }} Implement `Player` and `Region`">
-<question type="text">
 
 Imagine that you now support the following feature in our Minesweeper game.
 
@@ -35,7 +34,7 @@ However, this is not very defensive. For example, a user of this class can pass 
 
 Implement the two classes using a more defensive approach. Take note of the bidirectional link which requires us to preserve referential integrity at all times.
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 In this solution, assume `Regions` can be created without `Players` (note that you cannot be 100% defensive all the time). The usage will be something like this:
 
@@ -127,6 +126,5 @@ public class Player {
 
 Note that the above code stops the system when the multiplicity is violated. Alternatively, you can throw an exception and let the caller handle the situation.
 
-</div>
-</question>
+</panel>
 </panel>

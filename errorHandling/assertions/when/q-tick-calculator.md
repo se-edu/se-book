@@ -1,5 +1,4 @@
 <panel header="{{ icon_Q_A }} Assertion failure in Calculator">
-<question>
 
 A Calculator program crashes with an ‘assertion failure’ message when you try to find the square root of a negative number.
 
@@ -8,12 +7,11 @@ A Calculator program crashes with an ‘assertion failure’ message when you tr
 - ( ) c. The program has a bug.
 - ( ) d. All statements above are incorrect.
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 (c)
 
 Explanation: An assertion failure indicates a bug in the code. (b) is not acceptable because of the word "terminated". The application should not fail at all for this input. But it could have used an exception to handle the situation internally.
 
-</div>
-</question>
+</panel>
 </panel>

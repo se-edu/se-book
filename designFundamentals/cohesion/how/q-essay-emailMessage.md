@@ -1,5 +1,4 @@
 <panel header="{{ icon_Q_A }} Which class is more cohesive?">
-<question type="text">
 
 Compare the cohesion of the following two versions of the `EmailMessage` class. Which one is more cohesive and why?
 
@@ -45,12 +44,11 @@ class EmailMessage {
 }
 ```
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 Version 2 is less cohesive.
 
 Explanation: Version 2 is handling functionality related to login, which is not directly related to the concept of ‘email message’ that the class is supposed to represent. On a related note, you can improve the cohesion of both versions by removing the sendMessage functionality. Although sending messages is related to emails, this class is supposed to represent an email message, not an email server.
 
-</div>
-</question>
+</panel>
 </panel>

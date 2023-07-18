@@ -1,5 +1,4 @@
 <panel header="{{ icon_Q_A }} Sequential vs iterative approach">
-<question type="text">
 
 Discuss how a sequential approach and an iterative approach can affect the following aspects of a project.
 
@@ -15,7 +14,7 @@ e) Monitoring the project progress.
 
 f) Suitability for a school project.
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 a) Quality of the final product:
 
@@ -56,6 +55,5 @@ Sequential:
 
 * Can save time because we minimize rework.
 
-</div>
-</question>
+</panel>
 </panel>

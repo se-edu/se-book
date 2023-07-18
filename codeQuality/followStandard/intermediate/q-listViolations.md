@@ -5,14 +5,14 @@ Repeat the exercise in the panel below but also find violations of _intermediate
 
 <include src="../basic/q-listViolations.md" />
 
-<div slot="hint">
+<panel type="seamless" header="Hint" minimized>
 
 Here's one you are more likely to miss:
 * `* Print the description as a string.` → `* Prints the description as a string.`
 
 There are more.
 
-</div>
+</panel>
 
 </question>
 </panel>

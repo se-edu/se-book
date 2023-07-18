@@ -1,12 +1,11 @@
 <panel header="{{ icon_Q_A }} Statements about documentation">
-<question>
 
 It is recommended for developer documents,
 
 - [ ] a. to have separate sections for each type of diagrams such as class diagrams, sequence diagrams, use case diagrams etc.
 - [ ] b. to give a high priority to comprehension too, not stop at comprehensiveness only.
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 ~~(a)~~(b)
 
@@ -16,6 +15,5 @@ Explanation:
 
 (b) Both are important, but lengthy, complete, accurate yet hard to understand documents are not that useful.
 
-</div>
-</question>
+</panel>
 </panel>

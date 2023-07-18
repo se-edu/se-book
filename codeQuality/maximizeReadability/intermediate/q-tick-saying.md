@@ -1,5 +1,4 @@
 <panel header="{{ icon_Q_A }} Common saying: Make it fast,...">
-<question>
 
 This is a common saying among programmers
 
@@ -8,10 +7,9 @@ This is a common saying among programmers
 - ( ) c. Make it fast, make it right, now make it faster
 
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 b
 
-</div>
-</question>
+</panel>
 </panel>

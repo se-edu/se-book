@@ -1,5 +1,4 @@
 <panel header="{{ icon_Q_A }} Which one of these is not included in Brook’s list of ‘Woes of the Craft’?">
-<question>
 
 - [ ] a. Need for perfection when developing software
 - [ ] b. Requiring some amount of tedious, painstaking labor
@@ -8,10 +7,9 @@
 - [ ] e. Seemingly never ending effort required for testing and debugging software
 - [ ] f. Fast moving industry making our work obsolete quickly
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 (c)
 
-</div>
-</question>
+</panel>
 </panel>

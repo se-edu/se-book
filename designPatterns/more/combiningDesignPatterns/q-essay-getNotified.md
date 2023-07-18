@@ -1,5 +1,4 @@
 <panel header="{{ icon_Q }} Apply the suitable pattern">
-<question type="text">
 
 Suppose the `Processor` component of a software application is designed as follows:
 
@@ -9,5 +8,4 @@ If you want to provide the ability for <tooltip content="'other components' refe
 1. which design pattern would you use?
 1. modify the above design accordingly.
 
-</question>
 </panel>

@@ -1,15 +1,13 @@
 <panel header="{{ icon_Q_A }} Purpose of stubs">
-<question>
 
 Stubs help us to test a component in isolation from its dependencies.
 
 - ( ) True
 - ( ) False
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 True
 
-</div>
-</question>
+</panel>
 </panel>

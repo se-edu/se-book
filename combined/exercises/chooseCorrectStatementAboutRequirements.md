@@ -7,7 +7,6 @@
 </panel>
 <p/>
 
-<question>
 Choose the correct statement
 
 - ( ) a. A non-functional requirement is a requirement that hasn’t been fully implemented yet.
@@ -17,7 +16,7 @@ Choose the correct statement
 - ( ) e. Users know how the product should be. They just don’t know how to communicate it to us.
 
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 d
 
@@ -27,6 +26,5 @@ Explanation:
 * Greenfield projects do not have existing products.
 * Users can inform us about the present. They may not be able to envision the future. (It’s not the consumers’ job to know what they want --Steve Jobs).
 
-</div>
-</question>
+</panel>
 </panel>

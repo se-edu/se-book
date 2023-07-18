@@ -1,7 +1,6 @@
 <link rel="stylesheet" href="{{baseUrl}}/css/common.css">
 
 <panel header="{{ icon_Q_A }} What’s wrong with this use case?">
-<question>
 
 Identify problems with this use case description.
 
@@ -46,12 +45,11 @@ Identify problems with this use case description.
 - [ ] d. No post conditions are given.
 - [ ] e. ‘Use case ends’ is duplicated.
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 None.
 
 Explanation: Catastrophic failures such as ‘system crash’ need not be included in a use case. A use case is not supposed to contain UI details. Post conditions are optional. It is not a problem to have multiple exit points for a use case.
 
-</div>
-</question>
+</panel>
 </panel>

@@ -1,5 +1,4 @@
 <panel header="{{ icon_Q_A }} Statements about APIs">
-<question>
 
 Choose the correct statements.
 
@@ -9,12 +8,11 @@ Choose the correct statements.
 - [ ] d. The API forms the contract between the component developer and the component user.
 - [ ] e. Sequence diagrams can be used to show how components interact with each other via APIs.
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 (a) (c) (d) (e)
 
 Explanation: (b) is incorrect because private methods cannot be a part of the API.
 
-</div>
-</question>
+</panel>
 </panel>

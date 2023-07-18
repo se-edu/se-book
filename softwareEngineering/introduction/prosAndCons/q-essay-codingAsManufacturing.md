@@ -1,9 +1,8 @@
 <panel header="{{ icon_Q_A }} Coding as a manufacturing activity">
-<question type="text">
 
 Justify this statement: Coding is still a ‘design’ activity, not a ‘manufacturing’ activity. You may use a comparison (or an analogy) of Software Engineering versus Civil Engineering to argue this point.
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 Arguments to support this statement:
 
@@ -13,6 +12,5 @@ Arguments to support this statement:
 
 However, it is possible for some design work to occur before coding begins. Furthermore, the type of ‘design’ that occurs _during_ coding is at a much lower level than the design that occurs before coding.
 
-</div>
-</question>
+</panel>
 </panel>

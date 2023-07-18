@@ -1,5 +1,4 @@
 <panel header="{{ icon_Q_A }} Statements about validation and verification">
-<question>
 
 Choose the correct statements about validation and verification.
 
@@ -10,7 +9,7 @@ Choose the correct statements about validation and verification.
 - [ ] e. QA covers both validation and verification.
 - [ ] f. A system crash is more likely to be a verification failure than a validation failure.
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 (a)~~(b)~~(c)(d)(e)(f)
 
@@ -24,6 +23,5 @@ In QA, system testing is more about verification (does the system follow the spe
 
 A system crash is more likely to be a bug in the code, not in the requirements.
 
-</div>
-</question>
+</panel>
 </panel>

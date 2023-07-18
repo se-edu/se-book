@@ -1,5 +1,4 @@
 <panel header="{{ icon_Q_A }} Correct statements about SoC">
-<question>
 
 “Only the GUI class should interact with the user. The GUI class should only concern itself with user interactions”. This statement follows from,
 
@@ -7,12 +6,11 @@
 - [ ] b. A software design should increase cohesion of its components.
 - [ ] c. A software design should follow single responsibility principle.
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 (a)(b)(c)
 
 Explanation: By making ‘user interaction’ the GUI class’s sole responsibility, we increase its cohesion. This is also in line with the separation of concerns (i.e., we separated the concern of user interaction) and the single responsibility principle (the GUI class has only one responsibility).
 
-</div>
-</question>
+</panel>
 </panel>

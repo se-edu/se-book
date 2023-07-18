@@ -1,5 +1,4 @@
 <panel header="{{ icon_Q_A }} Test cases for `TriangleDetector`">
-<question type="text">
 
 Given below is the sample output from a text-based program `TriangleDetector` that determines whether the three input numbers make up the three sides of a valid triangle. List test cases you would use to test this software. Two sample test cases are given below.
 
@@ -19,7 +18,7 @@ Sample test cases,
 0, any valid, any valid: No
 ```
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 In addition to obvious test cases such as
 
@@ -38,6 +37,5 @@ Note that their applicability depends on the context in which the software is op
 
 The main point to note is how difficult it is to test exhaustively, even on a trivial system.
 
-</div>
-</question>
+</panel>
 </panel>

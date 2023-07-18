@@ -1,5 +1,4 @@
 <panel header="{{ icon_Q_A }} Statements about the E&E of testing">
-<question>
 
 Improving the efficiency and effectiveness of test case design can,
 
@@ -10,10 +9,9 @@ Improving the efficiency and effectiveness of test case design can,
 - [ ] e. minimize redundant test cases.
 - [ ] f. force us to understand the SUT better.
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 (a)(b)(c)(d)(e)(f)
 
-</div>
-</question>
+</panel>
 </panel>

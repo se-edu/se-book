@@ -1,9 +1,8 @@
 <panel header="{{ icon_Q_A }} SE vs Civil Engineering">
-<question type="text">
 
 Compare Software Engineering with Civil Engineering in terms of how work products in CE (i.e. buildings) differ from those of SE (i.e. software).
 
-<div slot="hint">
+<panel type="seamless" header="Hint" minimized>
 
 | Buildings                                                                                                             | Software                                                                                       |
 | :-------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------: |
@@ -20,6 +19,5 @@ Compare Software Engineering with Civil Engineering in terms of how work product
 | A lot of manual and menial labor involved.                                                                            | Most work involves highly-skilled labor.                                                       |
 | Generally robust. E.g. removing a single brick is unlikely to destroy a building.                                     | More fragile than buildings. A single misplaced semicolon can render the whole system useless. |
 
-</div>
-</question>
+</panel>
 </panel>

@@ -8,7 +8,6 @@
 
 <p/>
 
-<question>
 Choose the incorrect statement.
 
 - ( ) a. An object diagrams models the structure of an OO system at a given time.
@@ -17,12 +16,11 @@ Choose the incorrect statement.
 - ( ) d. A sequence diagram represents how objects are connected to each other.
 - ( ) e. Sequence diagrams can be used to find APIs for classes.
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 d
 
 Explanation: A sequence diagram is a behavior diagram, not a structure diagram. An SD can represent how objects interact with each other (i.e., behavior), not how they are connected to each other (i.e. structure).
 
-</div>
-</question>
+</panel>
 </panel>

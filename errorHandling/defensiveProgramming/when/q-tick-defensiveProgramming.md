@@ -1,5 +1,4 @@
 <panel header="{{ icon_Q_A }} Defensive programming">
-<question>
 
 Defensive programming,
 
@@ -9,12 +8,11 @@ Defensive programming,
 - [ ] d. can make the code less susceptible to misuse.
 - [ ] e. can require extra effort.
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 (a)(b)(c)(d)(e)
 
 Explanation: Defensive programming requires a lot more checks, possibly making the code longer, more complex, and slower. Use it only when benefits outweigh costs, which is often.
 
-</div>
-</question>
+</panel>
 </panel>

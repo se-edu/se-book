@@ -1,5 +1,4 @@
 <panel header="{{ icon_Q_A }} Statements about the unified process">
-<question>
 
 Choose the correct statements about the unified process.
 
@@ -8,12 +7,11 @@ Choose the correct statements about the unified process.
 - [ ] c. The Unified process is actually a process framework rather than a fixed process.
 - [ ] d. The Unified process can be iterative and incremental.
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 (a)~~(b)~~(c)(d)
 
 Explanation: Although UP was created by the same three amigos who created UML, the UP does not require UML.
 
-</div>
-</question>
+</panel>
 </panel>

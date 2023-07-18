@@ -1,5 +1,4 @@
 <panel header="{{ icon_Q_A }} LoD violation?">
-<question>
 
 This violates the Law of Demeter.
 
@@ -13,12 +12,11 @@ void foo(Bar b) {
 - ( ) True
 - ( ) False
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 False
 
-Explanation: The line `g.doSomething()` does not violate LoD because it is OK to invoke methods of objects created within a method. 
+Explanation: The line `g.doSomething()` does not violate LoD because it is OK to invoke methods of objects created within a method.
 
-</div>
-</question>
+</panel>
 </panel>

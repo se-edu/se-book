@@ -1,5 +1,4 @@
 <panel header="{{ icon_Q_A }} Statements about OOP">
-<question>
 
 A) Choose the correct statements
 
@@ -16,7 +15,7 @@ B) Choose the correct statements
 - [ ] c. Java can be used to write procedural code
 - [ ] d. Prolog follows the Logic Programming paradigm
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 A) (a)(b)(c)~~(d)~~(e)
 
@@ -28,6 +27,5 @@ B) Choose the correct statement
 
 Explanation: C follows the procedural paradigm. Yes, we can write procedural code using OO languages e.g., AddressBook-level1.
 
-</div>
-</question>
+</panel>
 </panel>

@@ -1,5 +1,4 @@
 <panel header="{{ icon_Q_A }} Describe objects in the given scenario">
-<question type="text">
 
 Consider the following real-world scenario.
 
@@ -19,7 +18,7 @@ Explain the following statements about OOP using the above scenario as an exampl
 
 
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 >[1] Object Oriented Programming (OOP) views the world as a network of interacting objects.
 
@@ -60,7 +59,6 @@ Examples:
 
 * A virtual world simulation of the above scenario can omit the `Highlighter` object. Instead, we can teach `Text` to highlight themselves when requested.
 
-</div>
+</panel>
 
-</question>
 </panel>

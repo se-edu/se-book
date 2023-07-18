@@ -7,7 +7,6 @@
 
 <p/>
 
-<question>
 Pick the odd one out.
 
 - ( ) a. Separation of Concerns Principle.
@@ -16,12 +15,11 @@ Pick the odd one out.
 - ( ) d. Interface Segregation Principle.
 - ( ) e. Dependency Inversion Principle.
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 a
 
 Explanation: These five principles make up the SOLID principles, but only if SCP is replaced by SRP.
 
-</div>
-</question>
+</panel>
 </panel>

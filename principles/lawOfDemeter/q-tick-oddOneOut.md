@@ -1,5 +1,4 @@
 <panel header="{{ icon_Q_A }} Odd one out">
-<question>
 
 Pick the odd one out.
 
@@ -9,12 +8,11 @@ Pick the odd one out.
 - [ ] d. Principle of least knowledge.
 - [ ] e. Coupling.
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 (b)
 
 Explanation: Law of Demeter, which aims to reduce coupling, is also known as ‘Don’t talk to strangers’ and ‘Principle of least knowledge’.
 
-</div>
-</question>
+</panel>
 </panel>

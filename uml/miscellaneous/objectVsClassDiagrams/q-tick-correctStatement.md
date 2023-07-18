@@ -1,5 +1,4 @@
 <panel header="{{ icon_Q_A }} Which class diagrams match the object diagram?">
-<question>
 
 Which of these class diagrams match the given object diagram?
 
@@ -9,12 +8,11 @@ Which of these class diagrams match the given object diagram?
 - [ ] 1
 - [ ] 2
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 (1) (2)
 
 Explanation: Both class diagrams allow one `Unit` object to be linked to one `Item` object.
 
-</div>
-</question>
+</panel>
 </panel>

@@ -1,5 +1,4 @@
 <panel header="{{ icon_Q_A }} transferTable">
-<question type="text">
 
 Given below is an operation description taken from a restaurant booking system. Use equivalence partitions and the boundary value analysis technique to design a set of test cases for it.
 
@@ -8,7 +7,7 @@ Given below is an operation description taken from a restaurant booking system. 
 * Preconditions: `t` has room for `b`, `b.getTable() != t`
 * Postconditions: `b.getTable() == t`
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 **Equivalence partitions**
 
@@ -48,6 +47,5 @@ Given below is an operation description taken from a restaurant booking system. 
 
 Note: We can use Bookings of different sizes for different test cases so that we increase the chance of finding bugs. If there is a minimum and maximum booking size, we should include them in those test cases.
 
-</div>
-</question>
+</panel>
 </panel>

@@ -1,5 +1,4 @@
 <panel header="{{ icon_Q }} Model workflow of a Burger shop">
-<question>
 
 Draw an activity diagram to represent the following workflow a burger shop uses when processing an order by a customer.
 
@@ -14,5 +13,4 @@ Draw an activity diagram to represent the following workflow a burger shop uses 
 <sub>[[source:wikipeida](https://en.wikipedia.org/wiki/Activity_diagram)]</sub>
 </panel>
 
-</question>
 </panel>

@@ -1,5 +1,4 @@
 <panel header="{{ icon_Q }} Model the algorithms of calculating grades">
-<question>
 
 (a) Draw an activity diagram to represent the following algorithm used for calculating the grade of a student.
 
@@ -27,5 +26,4 @@
 <sub>[[source:wikipeida](https://en.wikipedia.org/wiki/Activity_diagram)]</sub>
 </panel>
 
-</question>
 </panel>

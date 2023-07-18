@@ -1,5 +1,4 @@
 <panel header="{{ icon_Q_A }} Which are frameworks?">
-<question>
 
 Which of these are frameworks?
 
@@ -8,12 +7,11 @@ Which of these are frameworks?
 - [ ] c. Drupal
 - [ ] d. Ruby on Rails
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 (a)(b)(c)(d)
 
 Explanation: These are all frameworks.
 
-</div>
-</question>
+</panel>
 </panel>

@@ -1,9 +1,8 @@
 <panel header="{{ icon_Q_A }} Using a cool UI framework">
-<question type="text">
 
 One of your teammates is proposing to use a recently-released “cool” UI framework for your class project. List the pros and cons of this idea.
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 Pros
 
@@ -20,6 +19,5 @@ Cons
 
 Note that having more cons does not mean you should not use this framework. Further investigation is required before you can make a final decision.
 
-</div>
-</question>
+</panel>
 </panel>

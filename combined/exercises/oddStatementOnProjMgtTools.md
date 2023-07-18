@@ -10,7 +10,6 @@
 
 <p/>
 
-<question>
 Pick the odd one out.
 
 - ( ) a. RCS (Revision Control Software)
@@ -19,12 +18,11 @@ Pick the odd one out.
 - ( ) d. PERT charts
 - ( ) e. Work Breakdown Structure (WBS)
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 a
 
 Explanation: RCS is for managing code changes. The others are tools and techniques for managing project schedules. It’s OK if you don’t agree with the answer. What matters is that you know what each one is for.
 
-</div>
-</question>
+</panel>
 </panel>

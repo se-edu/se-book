@@ -1,5 +1,4 @@
 <panel header="{{ icon_Q_A }} Meaning of OCP">
-<question>
 
 Which of these is closest to the meaning of the open-closed principle?
 
@@ -8,12 +7,11 @@ Which of these is closest to the meaning of the open-closed principle?
 - ( ) c. A software module should be open to modification and closed to extension.
 - ( ) d. Open source software rocks. Closed source software sucks.
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 (a)
 
 Explanation: Please refer the handout for the definition of OCP.
 
-</div>
-</question>
+</panel>
 </panel>

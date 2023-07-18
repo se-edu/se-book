@@ -1,5 +1,4 @@
 <panel header="{{ icon_Q_A }} Advantages of use cases">
-<question>
 
 What are the advantages of using use cases (the textual form) for requirements modelling?
 
@@ -8,10 +7,9 @@ What are the advantages of using use cases (the textual form) for requirements m
 - [ ] c. Extensions encourage us to consider all situations a software product might face during its operations.
 - [ ] d. They encourage us to identify and optimize the typical scenario of usage over exceptional usage scenarios.
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 (a) (b) (c) (d)
 
-</div>
-</question>
+</panel>
 </panel>

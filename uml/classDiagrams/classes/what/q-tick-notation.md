@@ -1,5 +1,4 @@
 <panel header="{{ icon_Q_A }} Which classes are correct?">
-<question>
 
 Which of these follow the correct UML notation?
 
@@ -12,7 +11,7 @@ Which of these follow the correct UML notation?
 - [ ] 4
 - [ ] 5
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 1. Incorrect: _Attributes_ compartment should be above the _Methods_ compartment.
 2. Incorrect: All attributes should be inside the same compartment.
@@ -20,6 +19,5 @@ Which of these follow the correct UML notation?
 4. Correct: Both _Attributes_ and _Methods_ compartments can be omitted.
 5. Correct: The _Attributes_ and _Methods_ compartments can be empty.
 
-</div>
-</question>
+</panel>
 </panel>

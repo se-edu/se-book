@@ -1,5 +1,4 @@
 <panel header="{{ icon_Q }} Classes for CityConnect app">
-<question type="text">
 
 Assume you are writing a CLI program called **`CityConnect`** for storing and querying distances between cities. The behavior is as follows:
 
@@ -26,12 +25,10 @@ Enter command: exit
 ```
 What classes would you have in your code if you write your program based on the OOP paradigm?
 
-<div slot="hint">
+<panel type="seamless" header="Hint" minimized>
 
 One class you can have is `Route`
 
-</div>
-
-</question>
+</panel>
 
 </panel>

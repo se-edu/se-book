@@ -1,5 +1,4 @@
 <panel header="{{ icon_Q_A }} Is this Facade?">
-<question>
 
 Is the design below likely to use the Facade pattern?
 
@@ -9,12 +8,11 @@ Is the design below likely to use the Facade pattern?
 - ( ) True
 - ( ) False
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 True.
 
 Facade is clearly visible (Storage is the `<<Facade>>` class).
 
-</div>
-</question>
+</panel>
 </panel>

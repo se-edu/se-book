@@ -1,17 +1,15 @@
 <panel header="{{ icon_Q_A }} True or False?">
-<question>
 
 Bidirectional associations, if not implemented properly, can result in referential integrity violations.
 
 - ( ) True
 - ( ) False
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 True
 
 Explanation: Bidirectional associations require two objects to link to each other. When one of these links is not consistent with the other, you have a referential integrity violation.
 
-</div>
-</question>
+</panel>
 </panel>

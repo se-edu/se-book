@@ -1,5 +1,4 @@
 <panel header="{{ icon_Q_A }} EPs for `isValidName` method">
-<question>
 
 Consider this SUT:
 
@@ -25,7 +24,7 @@ B. If you had to choose 3 test cases from the 4 given below, which one will you 
 - ( ) c. A string that is 40 characters long
 - ( ) d. null
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 A. (d)
 
@@ -35,6 +34,5 @@ B. (a) or (c)
 
 Explanation: both belong to the same EP.
 
-</div>
-</question>
+</panel>
 </panel>

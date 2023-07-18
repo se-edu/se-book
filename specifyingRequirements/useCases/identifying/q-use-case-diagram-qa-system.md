@@ -7,7 +7,7 @@ The system is to be used by Testers, Programmers and System Administrators. Only
 
 **Develop a use case diagram to capture their requirements given below.**
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 <pic src="{{baseUrl}}/specifyingRequirements/useCases/identifying/images/qaSystem.jpg" width="400" />
 
@@ -21,6 +21,6 @@ The system is to be used by Testers, Programmers and System Administrators. Only
 *	Which actors can perform the ‘generate report’ use case? Are reports generated automatically by the system at a specific time or generated ‘on demand’ when users request to view them? Do we have to treat different types of reports as different use cases (in case some types of reports are restricted to some types of users)? The above diagram assumes (just for illustration) that the report is generated on demand and only the system admin can generate any report.
 
 
-</div>
+</panel>
 </question>
 </panel>

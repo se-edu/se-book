@@ -1,9 +1,8 @@
 <panel header="{{ icon_Q_A }} Exhaustive testing in Minesweeper">
-<question type="text">
 
 Explain why exhaustive testing is not practical using the example of testing the `newGame()` operation in the `Logic` class of a Minesweeper game.
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 Consider this sequence of test cases:
 
@@ -15,6 +14,5 @@ Consider this sequence of test cases:
 
 Well, you get the idea. Exhaustive testing of `newGame()` is not practical.
 
-</div>
-</question>
+</panel>
 </panel>

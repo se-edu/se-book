@@ -1,5 +1,4 @@
 <panel header="{{ icon_Q_A }} Statements about class diagrams">
-<question>
 
 Which of these statements match the class diagram?
 
@@ -13,7 +12,7 @@ Which of these statements match the class diagram?
 - [ ] e. The `Board` has exactly 5 `Snake`s.
 
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 ~~(a)~~(b)(c)(d)(e)
 
@@ -25,6 +24,5 @@ Explanation:
 (d) matches the diagram because the multiplicity given is `*`<br>
 (e) matches the diagram because the multiplicity given is `5`<br>
 
-</div>
-</question>
+</panel>
 </panel>

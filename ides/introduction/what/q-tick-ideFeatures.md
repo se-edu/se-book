@@ -1,5 +1,4 @@
 <panel header="{{ icon_Q_A }} Which of these are features available in IDEs?">
-<question>
 
 - [ ] a. Compiling
 - [ ] b. Syntax error highlighting
@@ -14,12 +13,11 @@
 - [ ] k. Extension %%i.e., ability to add more functionality to the IDE using plugins%%
 
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 All.
 
 Explanation: While all of these features may not be present in some IDEs, most do have these features in some form or other.
 
-</div>
-</question>
+</panel>
 </panel>

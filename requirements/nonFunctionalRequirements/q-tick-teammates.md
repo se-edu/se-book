@@ -1,5 +1,4 @@
 <panel header="{{ icon_Q_A }} TEAMMATES NFRs">
-<question>
 
 Given below are some requirements of TEAMMATES (an online peer evaluation system for education). Which one of these are non-functional requirements?
 
@@ -11,12 +10,11 @@ Given below are some requirements of TEAMMATES (an online peer evaluation system
 - [ ] f. The user interface should be intuitive enough for users who are not IT-savvy.
 - [ ] g. The product is offered as a free online service.
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 (a)(c)(d)(f)(g)
 
 Explanation: (b) are (e) are functions available for a specific user types. Therefore, they are functional requirements. (a), (c), (d), (f) and (g) are either constraints on functionality or constraints on how the project is done, both of which are considered non-functional requirements.
 
-</div>
-</question>
+</panel>
 </panel>

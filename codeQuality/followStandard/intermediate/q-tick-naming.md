@@ -1,5 +1,4 @@
 <panel header="{{ icon_Q_A }} Unsuitable variable name">
-<question>
 
 According to the given Java coding standard, which one of these is not a good name?
 
@@ -9,12 +8,11 @@ According to the given Java coding standard, which one of these is not a good na
 - ( ) d. method name (returns boolean): `isValidAddress`
 - ( ) e. String variable name: `description`
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 b
 
 Explanation: `checkWeight` is an action. Naming variables as actions makes the code harder to follow. `isWeightValid` may be a better name.
 
-</div>
-</question>
+</panel>
 </panel>

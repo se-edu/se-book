@@ -1,5 +1,4 @@
 <panel header="{{ icon_Q_A }} add(Item)">
-<question type="text">
 
 Assume you are testing the `add(Item)` method specified below.
 
@@ -29,7 +28,7 @@ Assume `i` to be the Item being added.
 
 (c) Design a set of test cases to test the `add(Item)` method by considering the equivalence partitions and boundary values from your answers to (a) and (b) above.
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 (a)
 
@@ -47,6 +46,5 @@ Assume `i` to be the Item being added.
 <pic src="{{baseUrl}}/testCaseDesign/summary/exercises/images/count.png" height="250" />
 <p/>
 
-</div>
-</question>
+</panel>
 </panel>

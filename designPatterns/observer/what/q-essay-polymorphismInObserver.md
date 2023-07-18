@@ -1,9 +1,8 @@
 <panel header="{{ icon_Q_A }} Polymorphism and the Observer pattern">
-<question type="text">
 
 Explain how polymorphism is used in the Observer pattern.
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 <pic src="{{baseUrl}}/designPatterns/observer/what/images/observableInterfaceNotation.png" height="90" />
 <p/>
@@ -15,6 +14,5 @@ In the example given below, the `notifyUIs` operation can result in `StudentList
 <pic src="{{baseUrl}}/designPatterns/observer/what/images/studentListStudentListObserver.png" height="190" />
 <p/>
 
-</div>
-</question>
+</panel>
 </panel>

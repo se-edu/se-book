@@ -5,7 +5,7 @@ Consider a simple movie ticket vending machine application. Every week, the thea
 
 **Draw a use case diagram for the above requirements.**
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 <pic src="{{baseUrl}}/specifyingRequirements/useCases/identifying/images/ticketMachine.png" width="300" />
 
@@ -13,6 +13,6 @@ Consider a simple movie ticket vending machine application. Every week, the thea
 
 Note that most of the details in the description are better given as part of the use case description rather than as low-level use cases in the diagram.
 
-</div>
+</panel>
 </question>
 </panel>

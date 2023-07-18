@@ -1,5 +1,4 @@
 <panel header="{{ icon_Q }} Draw Sequence Diagram for printing a quote">
-<question>
 
 Draw a sequence diagram to represent this code snippet.
 
@@ -30,11 +29,10 @@ class Quote {
 }
 ```
 
-<div slot="hint">
+<panel type="seamless" header="Hint" minimized>
 
 * Show `new Quote().print();` as two method calls.
 * As the created Quote object is not assigned to a variable, it can be considered as 'deleted' soon after its `print()` method is called.
 
-</div>
-</question>
+</panel>
 </panel>

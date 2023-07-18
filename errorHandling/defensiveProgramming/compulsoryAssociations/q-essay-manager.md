@@ -1,5 +1,4 @@
 <panel header="{{ icon_Q_A }} Write a `Manager#addAccount()`">
-<question type="text">
 
 For the `Manager` class shown below, write an `addAccount()` method that
 
@@ -9,7 +8,7 @@ For the `Manager` class shown below, write an `addAccount()` method that
 <pic src="{{baseUrl}}/errorHandling/defensiveProgramming/compulsoryAssociations/images/managerAccount.jpg" height="55" />
 <p/>
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 ```java
 import java.util.*;
@@ -33,6 +32,5 @@ public class Manager {
 }
 ```
 
-</div>
-</question>
+</panel>
 </panel>

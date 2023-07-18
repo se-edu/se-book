@@ -1,5 +1,4 @@
 <panel header="{{ icon_Q_A }} Statements about agile processes">
-<question>
 
 Choose the correct statements about agile processes.
 
@@ -8,10 +7,9 @@ Choose the correct statements about agile processes.
 - [ ] c. They may not be suitable for some type of projects.
 - [ ] d. XP and Scrum are agile processes.
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 (a)(b)(c)(d)
 
-</div>
-</question>
+</panel>
 </panel>

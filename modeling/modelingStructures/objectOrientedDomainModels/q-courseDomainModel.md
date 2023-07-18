@@ -1,5 +1,4 @@
 <panel header="{{ icon_Q }} OODM for the Course domain">
-<question>
 
 **(i) Draw an OODM** for the description below, about how <tooltip content="in some universities, these are called _modules_">_courses_</tooltip> work in a certain university:
 
@@ -26,5 +25,4 @@ The course _CS101 Intro to CS_ is taught by Prof Lee. It has two optional assign
 
 </div>
 
-</question>
 </panel>

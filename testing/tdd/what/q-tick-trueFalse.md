@@ -1,5 +1,4 @@
 <panel header="{{ icon_Q_A }} When do we write tests in TDD?">
-<question>
 
 A) In TDD, we write all the test cases before we start writing functional code.
 
@@ -11,7 +10,7 @@ B) Testing tools such as JUnit require us to follow TDD.
 - ( ) True
 - ( ) False
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 A) False
 
@@ -21,6 +20,5 @@ B) False
 
 Explanation: They can be used for TDD, but they can be used without TDD too.
 
-</div>
-</question>
+</panel>
 </panel>

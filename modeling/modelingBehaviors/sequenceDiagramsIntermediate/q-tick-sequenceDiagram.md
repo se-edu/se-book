@@ -1,5 +1,4 @@
 <panel header="{{ icon_Q_A }} What’s going on here?">
-<question>
 
 What’s going on here?
 
@@ -12,10 +11,9 @@ What’s going on here?
 - [ ] d. One of `Logic` object’s methods is calling another of its methods.
 - [ ] e. `Minefield` object is calling a method of `Logic`.
 
-<div slot="answer">
+<panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 (d)
 
-</div>
-</question>
+</panel>
 </panel>
