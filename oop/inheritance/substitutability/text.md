@@ -13,6 +13,7 @@
 <puml>
 @startuml
 skinparam classAttributeIconSize 0
+skinparam roundCorner 0
 skinparam backgroundcolor transparent
 skinparam shadowing false
 hide circle
