@@ -1,4 +1,4 @@
-<panel header="{{ icon_exercise }} Exercises" expandable>
+##### {{ icon_Q_A }} Exercises:
+
   <include src="q-tick-statementAboutModels.md" />
   <include src="q-essay-explainModelsInClassProject.md" />
-</panel>

@@ -1,2 +1,2 @@
-<panel header="{{ icon_exercise }} Exercises" expandable>
-</panel>
+##### {{ icon_Q_A }} Exercises:
+
