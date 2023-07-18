@@ -1,4 +1,5 @@
-<panel header="{{ icon_resource }} Resources" expanded> 
+##### {{ icon_resource }} Resources:
+
 
 * [**Pipes and Filters pattern**](https://docs.microsoft.com/en-us/azure/architecture/patterns/pipes-and-filters) -- an article from Microsoft about the pipes and filters architectural style
 
@@ -7,5 +8,3 @@
 * [**Peer-to-peer pattern**](https://en.wikipedia.org/wiki/Peer-to-peer) -- Wikipedia article on the P2P architectural style
 
 * [**Message-driven processing**](http://searchmicroservices.techtarget.com/definition/message-driven-processing) -- a post by _Margaret Rouse_
-
-</panel>

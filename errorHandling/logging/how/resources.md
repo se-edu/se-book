@@ -1,4 +1,5 @@
-<panel header="{{ icon_resource }} Resources" expanded> 
+##### {{ icon_resource }} Resources:
+
 
 **Tutorials**:
 
@@ -10,12 +11,10 @@
 * A video tutorial by _SimplyCoded_:<br>
 
 @[youtube](W0_Man88Z3Q)
-        
+
 </div>
 
 **Best Practices**:
 
 * [**10 Tips for Proper Application Logging**](https://www.javacodegeeks.com/2011/01/10-tips-proper-application-logging.html) -- by _Tomasz Nurkiewicz_
 * [**What each logging level means**](http://commons.apache.org/proper/commons-logging/guide.html#Message_PrioritiesLevels) -- conventions recommended by _Apache Project_
-
-</panel>

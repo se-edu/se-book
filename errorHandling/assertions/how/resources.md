@@ -1,4 +1,5 @@
-<panel header="{{ icon_resource }} Resources" expanded> 
+##### {{ icon_resource }} Resources:
+
 
 **Tutorials**:
 
@@ -8,5 +9,3 @@
 **Best practices**:
 
 * [**Programming with Assertions** (second half)](http://docs.oracle.com/javase/8/docs/technotes/guides/language/assert.html#usage) -- _from Oracle_ (also listed above as a tutorial) contains some best practices towards the end of the article.
-
-</panel>

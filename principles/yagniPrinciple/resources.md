@@ -1,5 +1,4 @@
-<panel header="{{ icon_resource }} Resources" expanded> 
+##### {{ icon_resource }} Resources:
+
 
 * [**Yagni**](https://martinfowler.com/bliki/Yagni.html) -- A detailed article explaining YAGNI, written by Martin Fowler.
-
-</panel>

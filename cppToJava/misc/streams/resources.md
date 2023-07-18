@@ -1,11 +1,12 @@
-<panel header="{{ icon_resource }} Resources" expanded> 
+##### {{ icon_resource }} Resources:
+
 
 **Tutorials**:
 
-<tabs> 
+<tabs>
   <tab header="{{ icon_text }}">
 
-* [**Java 8 Tutorial**](https://www.tutorialspoint.com/java8/) -- from tutorialspoint.com. {{ icon_tip }} Also provides a way to try out code online 
+* [**Java 8 Tutorial**](https://www.tutorialspoint.com/java8/) -- from tutorialspoint.com. {{ icon_tip }} Also provides a way to try out code online
 * **Tutorials from Oracle**: [[Lambdas](http://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html)][[Streams](http://www.oracle.com/technetwork/articles/java/ma14-java-se-8-streams-2177646.html)]
 
   </tab>
@@ -23,5 +24,3 @@ A video tutorial by well-known Java coach Venkat Subramaniam
   </tab>
 </tabs>
 
-
-</panel>
