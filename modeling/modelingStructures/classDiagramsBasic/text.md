@@ -16,6 +16,7 @@
 
 <panel type="seamless" src="../../../oop/associations/what/unit-inElsewhere-asFlat.md#main" boilerplate header="{{ icon_prereq }} OOP {{ icon_embedding }} Associations → What" alt="{{ icon_prereq }} OOP/Associations"/>
 <panel type="seamless" src="../../../uml/classDiagrams/associations/what/unit-inElsewhere-asFlat.md#main" boilerplate header="{{ icon_prereq }} UML {{ icon_embedding }} Class Diagrams → Associations → What" alt="{{ icon_prereq }} UML/Associations"/>
+<panel type="seamless" src="../../../uml/classDiagrams/associationsAsAttributes/what/unit-inElsewhere-asFlat.md#main" boilerplate header="{{ icon_prereq }} UML {{ icon_embedding }} Class Diagrams → Associations as Attributes" alt="{{ icon_prereq }} UML/Associations"/>
 
 The most basic class diagram is a bunch of classes with some solid lines among them to represent associations, such as this one.
 
