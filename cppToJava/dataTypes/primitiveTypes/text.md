@@ -27,5 +27,5 @@ You’ll learn more about strings in a later section.
 </div>
 
 <div id="extras">
-  <include src="resourcesPanel.md" boilerplate />
+<include src="resourcesPanel.md" boilerplate/>
 </div>

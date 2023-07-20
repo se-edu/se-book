@@ -259,6 +259,6 @@ public static String timeString(int hour, int minute) {
 </div>
 
 <div id="extras">
-  <include src="resourcesPanel.md" boilerplate />
+<include src="resourcesPanel.md" boilerplate/>
 <include src="exercisesPanel.md" boilerplate/>
 </div>

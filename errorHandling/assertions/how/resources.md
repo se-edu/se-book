@@ -1,6 +1,3 @@
-##### {{ icon_resource }} Resources:
-
-
 **Tutorials**:
 
 * [**Java Assertions**](https://www.javatpoint.com/assertion-in-java) -- a simple tutorial from _javatpoint.com_

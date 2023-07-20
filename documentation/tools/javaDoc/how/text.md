@@ -44,5 +44,5 @@ public class Point {
 </div>
 
 <div id="extras">
-  <include src="resourcesPanel.md" boilerplate />
+<include src="resourcesPanel.md" boilerplate/>
 </div>

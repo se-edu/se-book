@@ -1,6 +1,3 @@
-##### {{ icon_resource }} Resources:
-
-
 * **Recommended:** [JUnit tutorial @se-edu/guides](https://se-education.org/guides/tutorials/junit.html) explains how to use JUnit in your Java project.
 * [JUnit Official User Guide](https://junit.org/junit5/docs/current/user-guide/)
 * [JUnit 5 Tutorial – Common Annotations With Examples](https://devqa.io/junit-5-annotations/) - a short tutorial

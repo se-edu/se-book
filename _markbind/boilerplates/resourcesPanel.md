@@ -1,5 +1,5 @@
-<panel header="{{ icon_resource }} Resources" expanded>
+<br>
+
+##### {{ icon_resource }} Resources:
 
 <include src="resources.md" />
-
-</panel>

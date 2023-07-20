@@ -29,5 +29,5 @@ The main drawback of this workflow is the extra overhead of sending everything t
 </div>
 
 <div id="extras">
-  <include src="resources.md" />
+<include src="resourcesPanel.md" boilerplate/>
 </div>

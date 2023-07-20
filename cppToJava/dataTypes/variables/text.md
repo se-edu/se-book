@@ -48,5 +48,5 @@ final double CM_PER_INCH = 2.54;
 </div>
 
 <div id="extras">
-  <include src="resourcesPanel.md" boilerplate />
+<include src="resourcesPanel.md" boilerplate/>
 </div>

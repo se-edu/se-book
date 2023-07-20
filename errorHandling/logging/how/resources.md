@@ -1,6 +1,3 @@
-##### {{ icon_resource }} Resources:
-
-
 **Tutorials**:
 
 * [**Java Logging API - Tutorial**](http://www.vogella.com/tutorials/Logging/article.html) -- A tutorial by _Lars Vogella_

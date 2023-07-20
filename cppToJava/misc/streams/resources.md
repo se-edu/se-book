@@ -1,6 +1,3 @@
-##### {{ icon_resource }} Resources:
-
-
 **Tutorials**:
 
 <tabs>

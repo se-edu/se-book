@@ -24,6 +24,6 @@ If a class has only one responsibility, it needs to change only when there is a 
 
 <div id="extras">
 
-<include src="resources.md" />
+<include src="resourcesPanel.md" boilerplate/>
 
 </div>

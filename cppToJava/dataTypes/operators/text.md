@@ -78,5 +78,5 @@ Operator | Description | example %%{{ icon_output_right }}%% `true`| example %%{
 </div>
 
 <div id="extras">
-  <include src="resourcesPanel.md" boilerplate />
+<include src="resourcesPanel.md" boilerplate/>
 </div>

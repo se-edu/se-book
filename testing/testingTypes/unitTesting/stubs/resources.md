@@ -1,4 +1,1 @@
-##### {{ icon_resource }} Resources:
-
-
 * [**Mocks Aren't Stubs**](https://martinfowler.com/articles/mocksArentStubs.html) by Martin Fowler -- An in-depth article about how Stubs differ from other types of test helpers.

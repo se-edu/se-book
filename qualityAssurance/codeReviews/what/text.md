@@ -57,5 +57,5 @@ Disadvantages:
 </div>
 
 <div id="extras">
-<include src="resources.md" />
+<include src="resourcesPanel.md" boilerplate/>
 </div>

@@ -30,5 +30,5 @@ While it is important to refactor frequently so as to avoid the accumulation of 
 
 <div id="extras">
 
-<include src="resources.md" /><include src="exercisesPanel.md" boilerplate/>
+<include src="resourcesPanel.md" boilerplate/><include src="exercisesPanel.md" boilerplate/>
 </div>

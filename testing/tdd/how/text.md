@@ -27,6 +27,6 @@ Some TDD proponents cite the following as the three rules of TDD, that once agai
 
 <div id="extras">
 
-<include src="resources.md" />
+<include src="resourcesPanel.md" boilerplate/>
 
 </div>

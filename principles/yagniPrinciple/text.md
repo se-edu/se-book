@@ -16,6 +16,6 @@ The principle says that some capability you presume your software needs in the f
 
 <div id="extras">
 
-<include src="resources.md" />
+<include src="resourcesPanel.md" boilerplate/>
 
 </div>

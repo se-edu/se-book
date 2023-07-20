@@ -29,5 +29,5 @@ In OOP code, it is common to write one or more unit tests for each public method
 </div>
 
 <div id="extras">
-  <include src="resources.md" />
+<include src="resourcesPanel.md" boilerplate/>
 </div>

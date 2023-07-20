@@ -93,6 +93,6 @@ You can run this program (after compiling it first) from the command line by typ
 </div>
 
 <div id="extras">
-  <include src="resourcesPanel.md" boilerplate />
+<include src="resourcesPanel.md" boilerplate/>
 <include src="exercisesPanel.md" boilerplate/>
 </div>

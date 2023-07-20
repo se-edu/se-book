@@ -76,5 +76,5 @@ Number of keys after clearing: 0
 
 <div id="extras">
 <include src="exercisesPanel.md" boilerplate/>
-  <include src="resourcesPanel.md" boilerplate />
+<include src="resourcesPanel.md" boilerplate/>
 </div>

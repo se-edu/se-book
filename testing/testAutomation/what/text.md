@@ -6,7 +6,7 @@
 
 <div id="body">
 
-<tabs> 
+<tabs>
   <tab header="{{ icon_text }}">
 
 **An automated test case can be run programmatically and the result of the test case (pass or fail) is determined programmatically.** Compared to manual testing, automated testing reduces the effort required to run tests repeatedly and increases precision of testing (because manual testing is susceptible to human errors).
@@ -22,5 +22,5 @@
 </div>
 
 <div id="extras">
-<include src="resources.md" />
+<include src="resourcesPanel.md" boilerplate/>
 </div>

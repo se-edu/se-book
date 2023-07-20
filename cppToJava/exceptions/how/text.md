@@ -120,5 +120,6 @@ No exceptions {{ icon_output }} | `IOException` {{ icon_output }} | `IndexOutOfB
 </div>
 
 <div id="extras">
+<include src="resourcesPanel.md" boilerplate/>
 <include src="exercisesPanel.md" boilerplate/>
 </div>

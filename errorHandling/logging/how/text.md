@@ -10,7 +10,7 @@
 
 <box>
 
-{{ icon_example }} This sample Java code uses Java’s default logging mechanism. 
+{{ icon_example }} This sample Java code uses Java’s default logging mechanism.
 
 First, import the relevant Java package:
 ```java
@@ -41,5 +41,5 @@ logger.log(Level.INFO, "end of processing");
 </div>
 
 <div id="extras">
-  <include src="resources.md" />
+<include src="resourcesPanel.md" boilerplate/>
 </div>
