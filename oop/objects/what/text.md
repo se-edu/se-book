@@ -109,7 +109,5 @@ Similarly, every object in the virtual world has an interface and an implementat
 </div>
 
 <div id="extras">
-
-<include src="exercises.md" />
-
+<include src="exercisesPanel.md" boilerplate/>
 </div>

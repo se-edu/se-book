@@ -39,7 +39,5 @@ Include a <tooltip content="a French word that means 'front of a building'">Faç
 </div>
 
 <div id="extras">
-
-<include src="exercises.md" />
-
+<include src="exercisesPanel.md" boilerplate/>
 </div>

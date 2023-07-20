@@ -48,7 +48,5 @@ Use cases should be easy to read. Note that there is no strict rule about writin
 </div>
 
 <div id="extras">
-
-<include src="exercises.md" />
-
+<include src="exercisesPanel.md" boilerplate/>
 </div>

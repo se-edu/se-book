@@ -48,7 +48,7 @@ You can add more characteristics to the `{user role}` to provide more context to
 <div class="text-monospace">
 
 _As a_ lecturer, _I can_ view the forum post count of each student _so that_ I can identify the activity level of students in the forum.
-  
+
 Conditions:
 
 :far-check-square: Separate post count for each forum should be shown<br>
@@ -92,7 +92,5 @@ User stories for a travel website (credit: Mike Cohen)
 </div>
 
 <div id="extras">
-
-<include src="exercises.md" />
-
+<include src="exercisesPanel.md" boilerplate/>
 </div>

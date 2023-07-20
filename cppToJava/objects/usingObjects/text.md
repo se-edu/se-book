@@ -68,5 +68,5 @@ Point spot = new Point(3, 4);
 </div>
 
 <div id="extras">
-  <include src="exercises.md" />
+<include src="exercisesPanel.md" boilerplate/>
 </div>

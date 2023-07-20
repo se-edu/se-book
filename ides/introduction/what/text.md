@@ -15,7 +15,7 @@ An IDE generally consists of:
 * A debugger that allows the developer to execute the program one step at a time to observe the run-time behavior in order to locate bugs.
 * Other tools that aid various aspects of coding e.g. support for automated testing, drag-and-drop construction of UI components, version management support, simulation of the target runtime platform, and modeling support.
 
-Examples of popular IDEs: 
+Examples of popular IDEs:
 * Java: Eclipse, Intellij IDEA, NetBeans
 * C#, C++: Visual Studio
 * Swift: XCode
@@ -28,7 +28,5 @@ Some experienced developers, in particular those with a UNIX background, prefer 
 </div>
 
 <div id="extras">
-
-<include src="exercises.md" />
-
+<include src="exercisesPanel.md" boilerplate/>
 </div>

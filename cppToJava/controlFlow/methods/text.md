@@ -126,5 +126,5 @@ public static void nLines(int n) {
 
 <div id="extras">
   <include src="resourcesPanel.md" boilerplate />
-  <include src="exercises.md" />
+<include src="exercisesPanel.md" boilerplate/>
 </div>

@@ -79,7 +79,5 @@ The `<<Abstraction>>` class should hold all common information, and the unique i
 </div>
 
 <div id="extras">
-
-<include src="exercises.md" />
-
+<include src="exercisesPanel.md" boilerplate/>
 </div>

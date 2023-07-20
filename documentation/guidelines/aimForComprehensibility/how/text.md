@@ -17,7 +17,5 @@ Here are some tips on writing effective documentation.
 </div>
 
 <div id="extras">
-
-<include src="exercises.md" />
-
+<include src="exercisesPanel.md" boilerplate/>
 </div>

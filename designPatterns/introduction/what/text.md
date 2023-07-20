@@ -30,7 +30,5 @@ After repeated attempts at solving such problems, better solutions are discovere
 </div>
 
 <div id="extras">
-
-<include src="exercises.md" />
-
+<include src="exercisesPanel.md" boilerplate/>
 </div>

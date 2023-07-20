@@ -43,7 +43,5 @@ However, **in many cases one document serves as both a requirement specification
 </div>
 
 <div id="extras">
-
-<include src="exercises.md" />
-
+<include src="exercisesPanel.md" boilerplate/>
 </div>

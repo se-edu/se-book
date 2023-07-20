@@ -13,7 +13,7 @@
 {{ icon_example }} The `markCellAt(int x, int y)` operation could contain code such as `if (x > 0 && x <= (W-1))` which involves the boundaries of x’s equivalence partitions.
 
 </box>
- 
+
 
 **BVA suggests that when picking test inputs from an equivalence partition, values near boundaries (i.e. boundary values) are more likely to find bugs.**
 
@@ -22,5 +22,5 @@ Boundary values are sometimes called _corner cases_.
 </div>
 
 <div id="extras">
-  <include src="exercises.md" />
+<include src="exercisesPanel.md" boilerplate/>
 </div>

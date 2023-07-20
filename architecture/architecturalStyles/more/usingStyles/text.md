@@ -6,7 +6,7 @@
 
 <div id="body">
 
-**Most applications use a mix of these architectural styles.**  
+**Most applications use a mix of these architectural styles.**
 
 <box>
 
@@ -19,9 +19,7 @@
 </div>
 
 <div id="extras">
-
-<include src="exercises.md" />
-
+<include src="exercisesPanel.md" boilerplate/>
 </div>
 
 

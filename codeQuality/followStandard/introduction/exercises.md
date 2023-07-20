@@ -1,3 +1,1 @@
-##### {{ icon_Q_A }} Exercises:
-
-  <include src="q-tick-approach.md" />
+<include src="q-tick-approach.md" />

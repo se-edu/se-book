@@ -1,3 +1,1 @@
-##### {{ icon_Q_A }} Exercises:
-
-  <include src="q-essay-drawBookObject.md" />
+<include src="q-essay-drawBookObject.md" />

@@ -26,5 +26,5 @@ Note the slight difference between the _start node_ and the _end node_ which rep
 </div>
 
 <div id="extras">
-  <include src="exercises.md" />
+<include src="exercisesPanel.md" boilerplate/>
 </div>

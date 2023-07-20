@@ -25,7 +25,7 @@ Such early testing software is usually, and often by necessity, done by the deve
 </div>
 
 <div id="extras">
-<include src="exercises.md" />
+<include src="exercisesPanel.md" boilerplate/>
 </div>
 
 

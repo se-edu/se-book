@@ -95,5 +95,5 @@ Given above is a visualization of a project done using the Unified process (sour
 </div>
 
 <div id="extras">
-  <include src="exercises.md" />
+<include src="exercisesPanel.md" boilerplate/>
 </div>

@@ -42,7 +42,5 @@ Note 1: A case where both conditions are `true` is needed because most execution
 </div>
 
 <div id="extras">
-
-<include src="exercises.md" />
-
+<include src="exercisesPanel.md" boilerplate/>
 </div>

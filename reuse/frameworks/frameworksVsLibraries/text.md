@@ -17,7 +17,5 @@ Although both frameworks and libraries are reuse mechanisms, there are notable d
 </div>
 
 <div id="extras">
-
-<include src="exercises.md" />
-
+<include src="exercisesPanel.md" boilerplate/>
 </div>

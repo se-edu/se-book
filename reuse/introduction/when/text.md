@@ -18,7 +18,5 @@ While you may be tempted to use many libraries/frameworks/platforms that seem to
 </div>
 
 <div id="extras">
-
-<include src="exercises.md" />
-
+<include src="exercisesPanel.md" boilerplate/>
 </div>

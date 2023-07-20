@@ -18,7 +18,7 @@ However, some attributes are not suitable to be maintained by individual objects
 
 <box>
 
-{{ icon_example }} The attribute `totalPersons` should be maintained centrally and shared by all `Person` objects rather than copied at each `Person` object.  
+{{ icon_example }} The attribute `totalPersons` should be maintained centrally and shared by all `Person` objects rather than copied at each `Person` object.
 
 </box>
 
@@ -44,5 +44,5 @@ However, there can be methods related to a specific class but not suitable for s
 </div>
 
 <div id="extras">
-  <include src="exercises.md" />
+<include src="exercisesPanel.md" boilerplate/>
 </div>

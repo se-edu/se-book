@@ -9,9 +9,9 @@
 **Developer-to-developer documentation can be in one of two forms:**
 
 1. **Documentation for _developer-as-user_**: Software components are written by developers and reused by other developers, which means there is a need to document how such components are to be used. Such documentation can take several forms:
-   * API documentation: APIs expose functionality in small-sized, independent and easy-to-use chunks, each of which can be documented systematically. 
+   * API documentation: APIs expose functionality in small-sized, independent and easy-to-use chunks, each of which can be documented systematically.
    * Tutorial-style instructional documentation: In addition to explaining functions/methods independently, some higher-level explanations of how to use an API can be useful.
-  
+
 <box>
 
 <div class="alt-java">
@@ -102,7 +102,5 @@ Analogy: a reference encyclopedia article
 </div>
 
 <div id="extras">
-
-<include src="exercises.md" />
-
+<include src="exercisesPanel.md" boilerplate/>
 </div>

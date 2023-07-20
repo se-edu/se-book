@@ -6,7 +6,7 @@
 
 <div id="body">
 
-In 2001, a group of prominent software engineering practitioners met and brainstormed for an alternative to documentation-driven, heavyweight software development processes that were used in most large projects at the time. This resulted in something called the _agile manifesto_ (a vision statement of what they were looking to do). 
+In 2001, a group of prominent software engineering practitioners met and brainstormed for an alternative to documentation-driven, heavyweight software development processes that were used in most large projects at the time. This resulted in something called the _agile manifesto_ (a vision statement of what they were looking to do).
 
 >You are uncovering better ways of developing software by doing it and helping others do it.
 >
@@ -24,12 +24,12 @@ Subsequently, some of the signatories of the manifesto went on to create process
 
 * Requirements are prioritized based on the needs of the user, are clarified regularly (at times almost on a daily basis) with the entire project team, and are factored into the development schedule as appropriate.
 * Instead of doing a very elaborate and detailed design and a project plan for the whole project, the team works based on a rough project plan and a high level design that evolves as the project goes on.
-* There is a strong emphasis on complete transparency and responsibility sharing among the team members. The team is responsible together for the delivery of the product. Team members are accountable, and regularly and openly share progress with each other and with the user.  
+* There is a strong emphasis on complete transparency and responsibility sharing among the team members. The team is responsible together for the delivery of the product. Team members are accountable, and regularly and openly share progress with each other and with the user.
 
-**There are a number of agile processes in the development world today. _eXtreme Programming (XP)_ and _Scrum_ are two of the well-known ones.** 
+**There are a number of agile processes in the development world today. _eXtreme Programming (XP)_ and _Scrum_ are two of the well-known ones.**
 
 </div>
 
 <div id="extras">
-  <include src="exercises.md" />
+<include src="exercisesPanel.md" boilerplate/>
 </div>

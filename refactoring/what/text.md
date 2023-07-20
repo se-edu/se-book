@@ -77,7 +77,5 @@ Method: Turn the fragment into a method whose name explains the purpose of the m
 </div>
 
 <div id="extras">
-
-<include src="exercises.md" />
-
+<include src="exercisesPanel.md" boilerplate/>
 </div>

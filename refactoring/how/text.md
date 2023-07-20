@@ -26,5 +26,5 @@ Given below are some more commonly used refactorings. A more comprehensive list 
 </div>
 
 <div id="extras">
-  <include src="exercises.md" />
+<include src="exercisesPanel.md" boilerplate/>
 </div>

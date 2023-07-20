@@ -24,7 +24,5 @@ New patterns can be created too. If a common problem that needs to be solved fre
 </div>
 
 <div id="extras">
-
-<include src="exercises.md" />
-
+<include src="exercisesPanel.md" boilerplate/>
 </div>

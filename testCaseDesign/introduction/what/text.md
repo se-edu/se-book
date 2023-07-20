@@ -6,7 +6,7 @@
 
 <div id="body">
 
-**Except for trivial <tooltip content="Software Under Test">SUTs</tooltip>, <tooltip content="testing all possible cases">exhaustive testing</tooltip> is not practical** because such testing often requires a massive/infinite number of test cases.  
+**Except for trivial <tooltip content="Software Under Test">SUTs</tooltip>, <tooltip content="testing all possible cases">exhaustive testing</tooltip> is not practical** because such testing often requires a massive/infinite number of test cases.
 
 <box>
 
@@ -25,7 +25,7 @@ Exhaustive testing of this operation can take many more test cases.
 
 </box>
 
-> Program testing can be used to show the presence of bugs, but never to show their absence!  
+> Program testing can be used to show the presence of bugs, but never to show their absence!
 > <sub>--Edsger Dijkstra</sub>
 
 <div id="e-and-e">
@@ -42,5 +42,5 @@ Exhaustive testing of this operation can take many more test cases.
 </div>
 
 <div id="extras">
-  <include src="exercises.md" />
+<include src="exercisesPanel.md" boilerplate/>
 </div>

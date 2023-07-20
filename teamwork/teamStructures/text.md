@@ -32,7 +32,5 @@ In a large, resource-intensive, complex project, this could be a good team struc
 </div>
 
 <div id="extras">
-
-<include src="exercises.md" />
-
+<include src="exercisesPanel.md" boilerplate/>
 </div>

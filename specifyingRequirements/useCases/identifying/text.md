@@ -93,7 +93,5 @@ A use case is an interaction between a system and its _actors_.
 </div>
 
 <div id="extras">
-
-<include src="exercises.md" />
-
+<include src="exercisesPanel.md" boilerplate/>
 </div>

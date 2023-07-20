@@ -18,5 +18,5 @@ IDEs can help to enforce some parts of a coding standard e.g. indentation rules.
 </div>
 
 <div id="extras">
-<include src="exercises.md" />
+<include src="exercisesPanel.md" boilerplate/>
 </div>

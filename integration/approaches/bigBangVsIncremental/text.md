@@ -6,7 +6,7 @@
 
 <div id="body">
 
-**_Big-bang integration_: integrate all components at the same time.** 
+**_Big-bang integration_: integrate all components at the same time.**
 
 <box type="wrong">
 
@@ -18,7 +18,7 @@ Big-bang is not recommended because it will uncover too many problems at the sam
 
 <div v-closeable alt="slideshow: comparison" class="non-printable">
 
-Here is an animation that compares the two approaches: 
+Here is an animation that compares the two approaches:
 
 @[powerpoint](https://onedrive.live.com/embed?cid=A5AF047C4CAD67AB&resid=A5AF047C4CAD67AB%212315&authkey=AG4cur5IrM7vr7M&em=2)
 
@@ -27,7 +27,5 @@ Here is an animation that compares the two approaches:
 </div>
 
 <div id="extras">
-
-<include src="exercises.md" />
-
+<include src="exercisesPanel.md" boilerplate/>
 </div>

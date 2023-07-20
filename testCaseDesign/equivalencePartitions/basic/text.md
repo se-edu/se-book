@@ -117,5 +117,5 @@ Returns the square root of `s` if the square root is an integer; returns `0` oth
 </div>
 
 <div id="extras">
-  <include src="exercises.md" />
+<include src="exercisesPanel.md" boilerplate/>
 </div>

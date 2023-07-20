@@ -34,7 +34,5 @@ Here is an animation that compares the three approaches:
 </div>
 
 <div id="extras">
-
-<include src="exercises.md" />
-
+<include src="exercisesPanel.md" boilerplate/>
 </div>

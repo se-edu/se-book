@@ -40,7 +40,5 @@ If a software product has a GUI (Graphical User Interface) component, all produc
 </div>
 
 <div id="extras">
-
-<include src="exercises.md" />
-
+<include src="exercisesPanel.md" boilerplate/>
 </div>

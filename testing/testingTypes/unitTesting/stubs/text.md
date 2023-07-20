@@ -103,5 +103,5 @@ In addition to Stubs, there are other type of replacements you can use during te
 
 <div id="extras">
   <include src="resources.md" />
-  <include src="exercises.md" />
+<include src="exercisesPanel.md" boilerplate/>
 </div>

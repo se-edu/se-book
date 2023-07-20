@@ -60,7 +60,5 @@ We can clearly see that both Adam and Eve lives in hall h1 (i.e., OK to omit the
 </div>
 
 <div id="extras">
-
-<include src="exercises.md" />
-
+<include src="exercisesPanel.md" boilerplate/>
 </div>

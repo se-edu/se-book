@@ -1,3 +1,5 @@
-<panel header="{{ icon_exercise }} Exercises" expanded>
-  <include src="exercises.md" />
-</panel>
+<br>
+
+##### {{ icon_Q_A }} Exercises:
+
+<include src="exercises.md" />

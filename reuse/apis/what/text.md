@@ -16,12 +16,10 @@
 
 </box>
 
-When developing large systems, if you define the API of each component early, the development team can develop the components in parallel %%because the future behavior of the other components are now more predictable%%. 
+When developing large systems, if you define the API of each component early, the development team can develop the components in parallel %%because the future behavior of the other components are now more predictable%%.
 
 </div>
 
 <div id="extras">
-
-<include src="exercises.md" />
-
+<include src="exercisesPanel.md" boilerplate/>
 </div>

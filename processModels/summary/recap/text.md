@@ -11,5 +11,5 @@ This section has some exercises that cover multiple topics related to SDLC proce
 </div>
 
 <div id="extras">
- <include src="exercises.md" />
+ <include src="exercisesPanel.md" boilerplate/>
 </div>

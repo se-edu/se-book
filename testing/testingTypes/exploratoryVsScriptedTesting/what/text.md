@@ -12,7 +12,7 @@
 
 2. **Exploratory testing:** Devise test cases on-the-fly, creating new test cases based on the results of the past test cases.
 
-Exploratory testing is ‘the simultaneous learning, test design, and test execution’ <trigger trigger="click" for="modal:exploratoryWhat-bach-et-explained">[source: bach-et-explained]</trigger> whereby the nature of the follow-up test case is decided based on the behavior of the previous test cases. In other words, running the system and trying out various operations. It is called _exploratory testing_ because testing is driven by observations during testing. Exploratory testing usually starts with areas identified as error-prone, based on the tester’s past experience with similar systems. One tends to conduct more tests for those operations where more faults are found. 
+Exploratory testing is ‘the simultaneous learning, test design, and test execution’ <trigger trigger="click" for="modal:exploratoryWhat-bach-et-explained">[source: bach-et-explained]</trigger> whereby the nature of the follow-up test case is decided based on the behavior of the previous test cases. In other words, running the system and trying out various operations. It is called _exploratory testing_ because testing is driven by observations during testing. Exploratory testing usually starts with areas identified as error-prone, based on the tester’s past experience with similar systems. One tends to conduct more tests for those operations where more faults are found.
 
 <box>
 
@@ -25,7 +25,7 @@ Exploratory testing is ‘the simultaneous learning, test design, and test execu
 
 <box>
 
-{{ icon_tip }} **Exploratory testing is also known as _reactive testing, error guessing technique, attack-based testing,_ and _bug hunting_.** 
+{{ icon_tip }} **Exploratory testing is also known as _reactive testing, error guessing technique, attack-based testing,_ and _bug hunting_.**
 
 </box>
 
@@ -36,5 +36,5 @@ Exploratory testing is ‘the simultaneous learning, test design, and test execu
 </div>
 
 <div id="extras">
-  <include src="exercises.md" />
+<include src="exercisesPanel.md" boilerplate/>
 </div>

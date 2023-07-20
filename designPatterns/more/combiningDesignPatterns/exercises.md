@@ -1,3 +1,1 @@
-##### {{ icon_Q_A }} Exercises:
-
-  <include src="q-essay-getNotified.md" />
+<include src="q-essay-getNotified.md" />
