@@ -1,5 +1,4 @@
 <panel header="{{ icon_Q_A }} Use case diagram for QA system">
-<question has-input="false">
 
 A software house wishes to automate its Quality Assurance division.
 
@@ -22,5 +21,4 @@ The system is to be used by Testers, Programmers and System Administrators. Only
 
 
 </panel>
-</question>
 </panel>
