@@ -1,1 +1,1 @@
-* Oracle's tutorials on [[`while`]({{ java_tutorial }}/java/nutsandbolts/while.html)][[`for`]({{ java_tutorial }}/java/nutsandbolts/for.html)][[`break`/`continue`]({{ java_tutorial }}/java/nutsandbolts/branch.html)]
+* Oracle's tutorials on [[while]({{ java_tutorial }}/java/nutsandbolts/while.html)][[for]({{ java_tutorial }}/java/nutsandbolts/for.html)][[break/continue]({{ java_tutorial }}/java/nutsandbolts/branch.html)]
