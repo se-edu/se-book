@@ -8,4 +8,4 @@ Enter the location of the directory (Windows version shown below) and click `Cre
 
 Go to the `things` folder and observe how a hidden folder `.git` has been created.
 
-:fab-windows: Windows: you might have to [configure Windows Explorer to show hidden files](https://www.howtogeek.com/howto/windows-vista/show-hidden-files-and-folders-in-windows-vista/).
+:fab-windows: Windows: you might have to [configure Windows Explorer to show hidden files](https://support.microsoft.com/en-us/windows/view-hidden-files-and-folders-in-windows-97fbc472-c603-9d90-91d0-1166d1d9f4b5).
