@@ -6,7 +6,7 @@
 
 <div id="body">
 
-Never write an empty `catch` statement. At least give a comment to explain why the `catch` block is left empty.
+**Avoid empty `catch` statements**, as they are a way to ignore errors silently (which is not a good thing). In cases when it is unavoidable, at least give a comment to explain why the `catch` block is left empty.
 
 </div>
 

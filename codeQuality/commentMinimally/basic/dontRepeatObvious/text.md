@@ -6,7 +6,9 @@
 
 <div id="body">
 
-If the code is self-explanatory, refrain from repeating the description in a comment just for the sake of 'good documentation'.
+**Do not repeat in comments information that is already obvious from the code.** If the code is self-explanatory, a comment may not be needed.
+
+<box>
 
 <div class="alt-java">
 
@@ -30,6 +32,7 @@ x = x + 1
 trim_input()
 ```
 </div>
+</box>
 
 </div>
 

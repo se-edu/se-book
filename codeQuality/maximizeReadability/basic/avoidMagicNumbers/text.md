@@ -6,11 +6,9 @@
 
 <div id="body">
 
-When the code has a number that does not explain the meaning of the number, it is called a "magic number" (as in "the number appears as if by magic"). Using a <tooltip content="e.g., `PI`">_named constant_</tooltip> makes the code easier to understand because the name tells us more about the meaning of the number.
+**Avoid _magic numbers_** in your code. When the code has a number that does not explain the meaning of the number, it is called a "magic number" (as in "the number appears as if by magic"). Using a <tooltip content="e.g., `PI`">_named constant_</tooltip> makes the code easier to understand because the name tells us more about the meaning of the number.
 
 <box>
-
-{{ icon_example }} Example:
 
 <div class="alt-java">
 
@@ -46,11 +44,9 @@ return "Error 1432" # A magic string!
 
 </div>
 
-
-
 </box>
 
-In general, try to avoid any magic literals.
+**Avoid any _magic literals_** in general, not just magic numbers.
 </div>
 
 <div id="extras">

@@ -1,7 +1,5 @@
 <box>
 
-{{ icon_example }} Example: 
-
 {{bad}}
 ```python
 return ((length < MAX_LENGTH) or (previous_size != length)) and (type_code == URGENT)

@@ -6,7 +6,7 @@
 
 <div id="body">
 
-Make the code as explicit as possible, even if the language syntax allows them to be implicit. Here are some examples:
+**Make the code as explicit as possible, even if the language syntax allows them to be implicit.** Here are some examples:
 
 * [`Java`] Use explicit type conversion instead of implicit type conversion.
 * [`Java`, `Python`] Use parentheses/braces to show groupings even when they can be skipped.

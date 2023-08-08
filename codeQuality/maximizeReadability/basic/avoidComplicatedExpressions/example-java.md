@@ -1,7 +1,5 @@
 <box>
 
-{{ icon_example }} Example: 
-
 {{bad}}
 ```java
 return ((length < MAX_LENGTH) || (previousSize != length))

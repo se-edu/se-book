@@ -10,7 +10,7 @@
 <include src="../../../common/definitions.md#def-user-story" trim />
 </box>
 
-**A common format** for writing user stories is:
+A common format for writing user stories is:
 
 <box type="definition" seamless>
 <include src="../../../common/definitions.md#def-user-story-format" trim />
@@ -29,7 +29,7 @@
 
 <p/>
 
-**You can write user stories on** index cards or sticky notes, and arrange them on walls or tables, to facilitate planning and discussion. Alternatively, you can use a software (e.g., [GitHub Project Boards](https://help.github.com/articles/about-project-boards/), Trello, Google Docs, ...) to manage user stories digitally.
+**You can write user stories using a physical medium or a digital tool**. For example, you can use index cards or sticky notes, and arrange them on walls or tables. Alternatively, you can use a software (e.g., [GitHub Project Boards](https://help.github.com/articles/about-project-boards/), Trello, Google Docs, ...) to manage user stories digitally.
 
 <panel header="%%User stories in use%%" class="non-printable" expanded>
 

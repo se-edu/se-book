@@ -6,9 +6,9 @@
 
 <div id="body">
 
-Comments should explain the _what_ and _why_ aspects of the code, rather than the _how_ aspect.
+**Comments should explain the _WHAT_ and _WHY_ aspects of the code, rather than the _HOW_ aspect.**
 
-{{ icon_tick_green }} **What**: The specification of what the code is _supposed_ to do. The reader can compare such comments to the implementation to verify if the implementation is correct.
+{{ icon_tick_green }} **WHAT: The specification of what the code is _supposed_ to do.** The reader can compare such comments to the implementation to verify if the implementation is correct.
 
 <box>
 
@@ -22,11 +22,11 @@ void compact(String input) {
 ```
 </box>
 
-{{ icon_tick_green }} **Why**: The rationale for the current implementation.
+{{ icon_tick_green }} **WHY: The rationale for the current implementation.**
 
 <box>
 
-{{ icon_example }} Example: Without this comment, the reader will not know the reason for calling this method. 
+{{ icon_example }} Example: Without this comment, the reader will not know the reason for calling this method.
 
 ```java
 // Remove spaces to comply with IE23.5 formatting rules
@@ -35,11 +35,11 @@ compact(input);
 
 </box>
 
-{{ icon_x_red }} **How**: The explanation for how the code works. This should already be apparent from the code, if the code is self-explanatory. Adding comments to explain the same thing is redundant.
+{{ icon_x_red }} **HOW: The explanation for how the code works.** This should already be apparent from the code, if the code is self-explanatory. Adding comments to explain the same thing is redundant.
 
 <box>
 
-{{ icon_example }} Example:  
+{{ icon_example }} Example:
 
 {{bad}} %%Reason: Comment explains how the code works.%%
 ```java
@@ -48,7 +48,7 @@ compact(input);
 return (left && right) || (input.size() == size);
 ```
 
-{{good}} %%Reason: Code refactored to be self-explanatory. Comment no longer needed.%%
+{{good}} %%Reason: The code is now self-explanatory -- the comment is no longer needed.%%
 ```java
 boolean isSameSize = (input.size() == size);
 return (isLeftEndCorrect && isRightEndCorrect) || isSameSize;

@@ -6,8 +6,8 @@
 
 <div id="body">
 
-*	Use one variable for one purpose. Do not reuse a variable for a different purpose other than its intended one, just because the data type is the same.
-*	Do not reuse formal parameters as local variables inside the method.
+* **Use one variable for one purpose.** Do not reuse a variable for a different purpose other than its intended one, just because the data type is the same.
+* **Do not _reuse_ formal parameters as local variables** inside the method.
 
 <box>
 
@@ -15,9 +15,9 @@
 
 <div class="alt-java">
 
-```java
+```java{highlight-lines="1['length'],2[:6]"}
 double computeRectangleArea(double length, double width) {
-    length = length * width;
+    length = length * width;  // parameter reused as a local variable
     return length;
 }
 ```

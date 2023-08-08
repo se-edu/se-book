@@ -294,7 +294,7 @@ Also known as
 
 <div id="def-stakeholder">
 
-**Stakeholder**: A party that is potentially affected by the software project. e.g. users, sponsors, developers, interest groups, government agencies, etc.
+**Stakeholder**: An individual or an organization that is involved or potentially affected by the software project. e.g. users, sponsors, developers, interest groups, government agencies, etc.
 
 </div>
 

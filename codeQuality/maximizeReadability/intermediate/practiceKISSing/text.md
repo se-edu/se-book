@@ -6,7 +6,7 @@
 
 <div id="body">
 
-As the old adage goes, **"keep it simple, stupid” (KISS). Do not try to write ‘clever’ code.** For example, do not dismiss the brute-force yet simple solution in favor of a complicated one because of some ‘supposed benefits’ such as 'better reusability' unless you have a strong justification.
+**Do not try to write ‘clever’ code. "Keep it simple, stupid” (KISS)**, as the old adage goes. For example, do not dismiss the brute-force yet simple solution in favor of a complicated one because of some ‘supposed benefits’ such as 'better reusability' unless you have a strong justification.
 
 > {{ icon_quote_start }} Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it. {{ icon_quote_end }} <sub>-- Brian W. Kernighan </sub>
 

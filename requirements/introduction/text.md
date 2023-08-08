@@ -10,7 +10,7 @@
 
 **A software project may be,**
 * **a _brownfield_ project** i.e., develop a product to replace/update an existing software product
-* **a _greenfield_ project** i.e., develop a totally new system with no precedent
+* **a _greenfield_ project** i.e., develop a totally new system from scratch
 
 In either case, requirements need to be gathered, analyzed, specified, and managed.
 
@@ -27,4 +27,5 @@ In either case, requirements need to be gathered, analyzed, specified, and manag
 </div>
 
 <div id="extras">
+<include src="exercisesPanel.md" boilerplate/>
 </div>

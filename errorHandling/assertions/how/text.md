@@ -37,7 +37,7 @@ assert x == 0 : "x should be 0";
 
 {{ icon_tip }} Enable assertions in Intellij ([how?](https://se-education.org/guides/tutorials/intellijUsefulSettings.html)) and get an assertion to fail temporarily (e.g. insert an `assert false` into the code temporarily) to confirm assertions are being verified.
 
-{{ icon_info }} **Java `assert` vs JUnit assertions: They are similar in purpose but JUnit assertions are more powerful and customized for testing.** In addition, JUnit assertions are not disabled by default. We recommend you use JUnit assertions in test code and Java `assert` in functional code.
+{{ icon_info }} **Java `assert` vs JUnit assertions: Both check for a given condition but JUnit assertions are more powerful and customized for testing.** In addition, JUnit assertions are not disabled by default. Use JUnit assertions in test code and Java `assert` in functional code.
 </div>
 
 <div id="extras">

@@ -4,7 +4,7 @@
   <td valign="top">
 
 {{bad}}
-```java
+```java{.no-line-numbers}
 return 3.14236;
 ...
 return 9;
@@ -14,7 +14,7 @@ return 9;
   <td valign="top">
 
 {{good}}
-```java
+```java{.no-line-numbers}
 static final double PI = 3.14236;
 static final int MAX_SIZE = 10;
 ...

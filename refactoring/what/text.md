@@ -6,18 +6,14 @@
 
 <div id="body">
 
-The first version of the code you write may not be of production quality. It is OK to first concentrate on making the code work, rather than worry over the quality of the code, as long as you improve the quality later. This process of **improving a program's internal structure in small steps without modifying its external behavior is called _refactoring_.**
+**The process of improving a program's internal structure in small steps without modifying its external behavior is called _refactoring_.** Refactoring is needed because the first version of the code you write may not be of production quality. It is OK to first concentrate on making the code work, rather than worry over the quality of the code, as long as you improve the quality later.
 
 * **Refactoring is not rewriting**: Discarding poorly-written code entirely and re-writing it from scratch is not refactoring because refactoring needs to be done in small steps.
 * **Refactoring is not bug fixing**: By definition, refactoring is different from bug fixing or any other modifications that alter the external behavior (e.g. adding a feature) of the component in concern.
 
-<box>
-
-{{ icon_tip }} Improving code structure can have many secondary benefits: e.g.
+**Refactoring code can have many secondary benefits** e.g.
  * hidden bugs become easier to spot
  * improve performance (sometimes, simpler code runs faster than complex code because simpler code is easier for the compiler to optimize).
-
-</box>
 
 Given below are two common refactorings (<trigger trigger="click" for="modal:refactoring-catalog-what">more</trigger>).
 

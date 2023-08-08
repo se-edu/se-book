@@ -6,14 +6,14 @@
 
 <div id="body">
 
-The happy path (i.e. the execution path taken when everything goes well) should be clear and prominent in your code. Restructure the code to make the happy path unindented as much as possible. It is the ‘unusual’ cases that should be indented. Someone reading the code should not get distracted by alternative paths taken when error conditions happen. One technique that could help in this regard is the use of [guard clauses](http://wiki.c2.com/?GuardClause).
+**The _happy path_ should be clear and prominent in your code.** Restructure the code to make the happy path (i.e. the execution path taken when everything goes well) less-nested as much as possible. It is the ‘unusual’ cases that should be nested. Someone reading the code should not get distracted by alternative paths taken when error conditions happen. One technique that could help in this regard is the use of [guard clauses](http://wiki.c2.com/?GuardClause).
 
 <box>
 
-{{ icon_example }} Example:
+{{ icon_example }} The following example shows how guard clauses can be used to reduce the nesting of the happy path.
 
 {{bad}}
-```java
+```java{highlight-lines="3['start();'],4-6"}
 if (!isUnusualCase) {  //detecting an unusual condition
     if (!isErrorCase) {
         start();    //main path
@@ -32,7 +32,7 @@ In the code above,
 * the main path is nested deeply.
 
 {{good}}
-```java
+```java{highlight-lines="1['//Guard Clause'],6['//Guard Clause'],11-14"}
 if (isUnusualCase) { //Guard Clause
     handleUnusualCase();
     return;
@@ -51,6 +51,48 @@ exit();
 In contrast, the above code
 * deals with unusual conditions as soon as they are detected so that the reader doesn't have to remember them for long.
 * keeps the main path un-indented.
+
+</box>
+
+<box>
+
+{{ icon_example }} The following pseudocode example shows how to reduce the nesting of the happy path inside a loop using a `continue` statement:
+
+
+<table>
+<tbody>
+<tr>
+  <td valign="top">
+
+{{bad}}
+```java
+for (condition1)
+    if (condition2)
+        statement A
+        statement B
+        statement C
+        statement D
+statement E
+```
+  </td>
+  <td>&nbsp;&nbsp;<br><br></td>
+  <td valign="top">
+
+{{good}}
+```java{highlight-lines="2['not'],3"}
+for (condition1)
+    if (not condition2)
+        continue
+    statement A
+    statement B
+    statement C
+    statement D
+statement E
+```
+  </td>
+</tr>
+</tbody>
+</table>
 
 </box>
 
