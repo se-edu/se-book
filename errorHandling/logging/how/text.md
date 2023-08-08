@@ -13,12 +13,12 @@
 {{ icon_example }} This sample Java code uses Java’s default logging mechanism.
 
 First, import the relevant Java package:
-```java
+```java{.no-line-numbers}
 import java.util.logging.*;
 ```
 
 Next, create a `Logger`:
-```java
+```java{.no-line-numbers}
 private static Logger logger = Logger.getLogger("Foo");
 ```
 

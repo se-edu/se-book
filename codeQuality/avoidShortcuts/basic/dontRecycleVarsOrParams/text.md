@@ -15,9 +15,9 @@
 
 <div class="alt-java">
 
-```java{highlight-lines="1['length'],2[:6]"}
+```java{.no-line-numbers highlight-lines="1['length'],2[:6]"}
 double computeRectangleArea(double length, double width) {
-    length = length * width;  // parameter reused as a local variable
+    length = length * width;  // parameter reused as a variable
     return length;
 }
 ```
@@ -36,7 +36,7 @@ def compute_rectangle_area(length, width):
 
 <div class="alt-java">
 
-```java
+```java{.no-line-numbers}
 double computeRectangleArea(double length, double width) {
     double area;
     area = length * width;

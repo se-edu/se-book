@@ -49,7 +49,7 @@ Let's assume you are testing a CLI app called `AddressBook`. Here are the detail
 
    * {{ icon_tip }} If you are using Windows, use a normal MS-DOS terminal (i.e., `cmd.exe`) to run the app, not a PowerShell window.
 
-   <panel minimized >
+   <panel minimized class="non-printable">
    <span slot="header" class="card-title"><md>More on the `>` operator and the `<` operator {{ icon_extra }}</md></span>
 
    A CLI program takes input from the keyboard and outputs to the console. That is because those two are the default input and output streams, respectively. But you can change that behavior using ` < ` and ` > ` operators. For example, if you run `AddressBook` in a command window, the output will be shown in the console, but if you run it like this,

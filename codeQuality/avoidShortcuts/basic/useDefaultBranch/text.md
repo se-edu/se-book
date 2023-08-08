@@ -12,21 +12,32 @@
 
 <box>
 
+<table>
+<tbody>
+<tr>
+  <td valign="top">
+
 {{bad}}
-```java
+```java{.no-line-numbers}
 if (red) print "red";
 else print "blue";
 ```
+  </td>
+  <td>&nbsp;&nbsp;<br><br></td>
+  <td valign="top">
+
 {{good}}
-```java
+```java{.no-line-numbers}
 if (red) print "red";
 else if (blue) print "blue";
 else error("incorrect input");
 ```
+  </td>
+</tr>
+</tbody>
+</table>
 
 </box>
-
-
 </div>
 
 <div id="extras">

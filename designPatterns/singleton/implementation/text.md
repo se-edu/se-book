@@ -32,12 +32,12 @@ Notes:
 * Access to this object is provided by a `public` class-level operation `getInstance()` which instantiates a single copy of the singleton class when it is executed for the first time. Subsequent calls to this operation return the single instance of the class.
 
 If `Logic` was not a Singleton class, an object is created like this:
-```java
+```java{.no-line-numbers}
 Logic m = new Logic();
 ```
 
 But now, the `Logic` object needs to be accessed like this:
-```java
+```java{.no-line-numbers}
 Logic m = Logic.getInstance();
 ```
 

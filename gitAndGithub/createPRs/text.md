@@ -103,13 +103,8 @@ Given below is a scenario you can try in order to learn how to create PRs:
 <include src="../mergeConflicts/text.md"/>
 </modal>
 
-<panel header="{{ icon_resource }} Resources" expanded>
-
-* [GitHub's own documentation on creating a PR](https://help.github.com/articles/creating-a-pull-request/)
-
-</panel>
-
 </div>
 
 <div id="extras">
+<include src="resourcesPanel.md" boilerplate/>
 </div>
