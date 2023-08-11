@@ -26,8 +26,6 @@ Avoid misleading or ambiguous names (e.g. those with multiple meanings), similar
 
 <box>
 
-{{ icon_example }} Examples:
-
 | {{bad}}        | {{good}}        |  Reason      |
 | --------------- | --------------- |  --------------- |
 |`phase0`  |`phaseZero`  |  Is that zero or letter O? |

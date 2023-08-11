@@ -10,8 +10,6 @@
 
 <box>
 
-{{ icon_example }} Examples:
-
 | {{bad}}          |  {{good}}                     |
 | ----------------- |  ----------------------------- |
 |`processInput()`  (what 'process'?) |  `removeWhiteSpaceFromInput()` |
@@ -24,8 +22,6 @@
 
 <box>
 
-{{ icon_example }} Examples:
-
 | {{bad}}        |  {{good}}       |
 | --------------- |  --------------- |
 |`bySizeOrder()`  |  `orderBySize()` |
@@ -35,8 +31,6 @@
 Imagine going to the doctor's and saying "My eye1 is swollen"! Don’t use numbers or case to distinguish names.
 
 <box>
-
-{{ icon_example }} Examples:
 
 | {{bad}}          | {{bad}}          | {{good}}                     |
 | ----------------- | ----------------- | ----------------------------- |

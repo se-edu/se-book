@@ -12,8 +12,6 @@
 
 <box>
 
-{{ icon_example }} Examples:
-
 Name for a | {{bad}}        | {{good}}
 -----------|-----------------|----------------
 Class      |`CheckLimit`     | `LimitChecker`
@@ -25,8 +23,6 @@ Method     |`result()`       | `calculate()`
 **Distinguish clearly between single-valued and multi-valued variables.**
 
 <box>
-
-{{ icon_example }} Examples:
 
 <div class="alt-java">
 
