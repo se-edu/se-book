@@ -15,7 +15,7 @@ Let's assume you are testing a CLI app called `AddressBook`. Here are the detail
 
 1. Store the test input in the text file `input.txt`.
 
-   <panel header="%%{{ icon_example }} Example `input.txt`%%" type="seamless">
+   <panel header="%%{{ icon_example }} Example `input.txt`%%" type="seamless" class="non-printable">
 
    ```
    add Valid Name p/12345 valid@email.butNoPrefix
@@ -26,7 +26,7 @@ Let's assume you are testing a CLI app called `AddressBook`. Here are the detail
 
 1. Store the output you expect from the SUT in another text file `expected.txt`.
 
-   <panel header="%%{{ icon_example }} Example `expected.txt`%%" type="seamless">
+   <panel header="%%{{ icon_example }} Example `expected.txt`%%" type="seamless" class="non-printable">
 
    ```
    Command: || [add Valid Name p/12345 valid@email.butNoPrefix]
