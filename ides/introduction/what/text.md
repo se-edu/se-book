@@ -16,7 +16,7 @@ An IDE generally consists of:
 * Other tools that aid various aspects of coding e.g. support for automated testing, drag-and-drop construction of UI components, version management support, simulation of the target runtime platform, and modeling support.
 
 Examples of popular IDEs:
-* Java: Eclipse, Intellij IDEA, NetBeans
+* Java: Eclipse, IntelliJ IDEA, NetBeans
 * C#, C++: Visual Studio
 * Swift: XCode
 * Python: PyCharm

@@ -9,7 +9,7 @@ title: "IntelliJ IDEA [Printable]"
 
 <div id="main">
 
-# Intellij IDEA
+# IntelliJ IDEA
 
 <include src="projectSetup/unit-inParent-asFlat-print.md" boilerplate />
 <include src="codeNavigation/unit-inParent-asFlat-print.md" boilerplate />

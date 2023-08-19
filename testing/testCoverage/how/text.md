@@ -12,9 +12,9 @@
 
 <!-- TODO: add screenshots -->
 
-<div v-closeable alt="Test Coverage in Intellij" class="non-printable">
+<div v-closeable alt="Test Coverage in IntelliJ" class="non-printable">
 
-{{ icon_video }} Measuring code coverage in Intellij IDEA (==watch from `4 minutes 50 seconds` mark==)
+{{ icon_video }} Measuring code coverage in IntelliJ IDEA (==watch from `4 minutes 50 seconds` mark==)
 
 @[youtube](QDFI19lj4OM)
 

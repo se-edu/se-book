@@ -404,7 +404,7 @@ pageNav: 3
 <include src="../uml/notes/constraints/unit-inParent-asOutcome.md" boilerplate />
 <include src="../uml/miscellaneous/objectVsClassDiagrams/unit-inParent-asOutcome.md" boilerplate />
 
-### Intellij IDEA
+### IntelliJ IDEA
 
 <include src="../intellij/projectSetup/unit-inParent-asOutcome.md" boilerplate />
 <include src="../intellij/codeNavigation/unit-inParent-asOutcome.md" boilerplate />

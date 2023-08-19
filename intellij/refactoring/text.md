@@ -12,7 +12,7 @@ This video explains how to automate the 'Extract variable' refactoring using Int
 
 @[youtube](W_IiuORF16E)
 
-Here's another video explaining how to do some more useful refactorings in Intellij IDEA.
+Here's another video explaining how to do some more useful refactorings in IntelliJ IDEA.
 
 @[youtube](rPq7fBo5JVs)
 

@@ -1,5 +1,5 @@
 <frontmatter>
-title: "Intellij IDEA: Productivity Shortcuts"
+title: "IntelliJ IDEA: Productivity Shortcuts"
 </frontmatter>
 
 <include src="unit-inPage-asFlat.md" boilerplate />

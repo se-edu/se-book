@@ -6,7 +6,7 @@
 
 <div id="body">
 
-<div v-closeable alt="video: Intellij shortcuts">
+<div v-closeable alt="video: IntelliJ shortcuts">
 
 @[youtube](41CC-F6KRP8)
 
