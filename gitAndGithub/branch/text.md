@@ -144,7 +144,7 @@ Instead of merging `master` to `feature1`, an alternative is to [_rebase_](https
 <pic src="{{baseUrl}}/gitAndGithub/branch/images/addCountriesBranchAfterMerging.png" height="80" />
 <p/>
 
-That is because **Git does a ==_fast forward_ merge== if possible**. Seeing that the `master` branch has not changed since you started the `add-countries` branch, Git has decided it is simpler to just put the commits of the `add-countries` branch in front of the `master` branch, without going into the trouble of creating an extra merge commit.
+That is because **Git does a _fast forward_ merge if possible**. Seeing that the `master` branch has not changed since you started the `add-countries` branch, Git has decided it is simpler to just put the commits of the `add-countries` branch in front of the `master` branch, without going into the trouble of creating an extra merge commit.
 
 **It is possible to force Git to create a merge commit even if fast forwarding is possible.**
 
