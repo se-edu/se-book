@@ -300,12 +300,12 @@ Example:
 ```{.no-line-numbers}
 todo
     ____________________________________________________________
-     ☹ OOPS!!! The description of a todo cannot be empty.
+     OOPS!!! The description of a todo cannot be empty.
     ____________________________________________________________
 
 blah
     ____________________________________________________________
-     ☹ OOPS!!! I'm sorry, but I don't know what that means :-(
+     OOPS!!! I'm sorry, but I don't know what that means :-(
     ____________________________________________________________
 ```
 
