@@ -268,7 +268,7 @@ Refer to the tutorial [_Working with JAR files_ @SE-EDU/guides](https://se-educa
 
 Use Gradle to automate some of the build tasks of the project.
 
-Gradle support is provided as a separate branch (named `add-gradle-support`) in the Duke repo. Therefore, you can follow the _scenario 2_ in the guide below.
+Gradle support is provided as a separate branch (named `add-gradle-support`) in the Duke repo. Therefore, ==merge that branch to your `master` branch, and follow the _scenario 2_ in the guide below==.
 
 Refer to the [_Gradle tutorial_ @SE-EDU](https://se-education.org/guides/tutorials/gradle.html) to learn how to use Gradle (in the context of this project).
 
