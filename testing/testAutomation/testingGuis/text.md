@@ -12,7 +12,7 @@ If a software product has a GUI (Graphical User Interface) component, all produc
 * GUI operations are more difficult to automate than API testing. Reliably automating GUI operations and automatically verifying whether the GUI behaves as expected is harder than calling an operation and comparing its return value with an expected value. Therefore, automated regression testing of GUIs is rather difficult.
 * The appearance of a GUI (and sometimes even behavior) can be different across platforms and even environments. For example, a GUI can behave differently based on whether it is minimized or maximized, in focus or out of focus, and in a high resolution display or a low resolution display.
 
-<pic src="{{baseUrl}}/testing/testAutomation/testingGuis/images/diagram.png" height="120" />
+<pic eager src="{{baseUrl}}/testing/testAutomation/testingGuis/images/diagram.png" height="120" />
 <p/>
 
 **Moving as much logic as possible out of the GUI can make GUI testing easier.** That way, you can bypass the GUI to test the rest of the system using automated API testing. While this still requires the GUI to be tested, the number of such test cases can be reduced as most of the system will have been tested using automated API testing.

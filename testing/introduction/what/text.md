@@ -10,7 +10,7 @@
 <include src="../../../common/definitions.md#def-testing" trim />
 </box>
 
-<pic src="{{baseUrl}}/testing/introduction/what/images/diagram.png" height="220" />
+<pic eager src="{{baseUrl}}/testing/introduction/what/images/diagram.png" height="220" />
 <p/>
 
 **When testing, you execute a set of _test cases_.** A test case specifies how to perform a test. At a minimum, it specifies the input to the _software under test (SUT)_ and the expected behavior.

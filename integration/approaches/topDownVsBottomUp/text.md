@@ -6,7 +6,7 @@
 
 <div id="body">
 
-<pic src="{{baseUrl}}/integration/approaches/topDownVsBottomUp/images/approaches.png" height="100" />
+<pic eager src="{{baseUrl}}/integration/approaches/topDownVsBottomUp/images/approaches.png" height="100" />
 <p/>
 
 **Based on the order in which components are integrated, incremental integration can be done in three ways.**

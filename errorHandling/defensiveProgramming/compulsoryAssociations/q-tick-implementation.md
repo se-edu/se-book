@@ -1,6 +1,6 @@
 <panel header="{{ icon_Q_A }} Is this defensive?">
 
-<pic src="{{baseUrl}}/errorHandling/defensiveProgramming/compulsoryAssociations/images/countryCity.png" height="45" />
+<pic eager src="{{baseUrl}}/errorHandling/defensiveProgramming/compulsoryAssociations/images/countryCity.png" height="45" />
 <p/>
 
 ```java

@@ -22,7 +22,7 @@
 
 <panel type="seamless" header="Example Activity Diagram" minimized>
 
-<pic src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Activity_conducting.svg"><br>
+<pic eager src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Activity_conducting.svg"><br>
 <sub>[[source:wikipeida](https://en.wikipedia.org/wiki/Activity_diagram)]</sub>
 </panel>
 

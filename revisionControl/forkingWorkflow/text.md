@@ -6,7 +6,7 @@
 
 <div id="body">
 
-<pic src="{{baseUrl}}/revisionControl/forkingWorkflow/images/diagram.png" height="330" />
+<pic eager src="{{baseUrl}}/revisionControl/forkingWorkflow/images/diagram.png" height="330" />
 <p/>
 
 **In the _forking workflow_, the 'official' version of the software is kept in a remote repo designated as the 'main repo'. All team members fork the main repo and create pull requests from their fork to the main repo.**

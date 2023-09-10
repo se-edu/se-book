@@ -8,7 +8,7 @@
 
 Notation:
 
-<pic src="{{baseUrl}}/uml/objectDiagrams/objects/images/notation.png" height="85" />
+<pic eager src="{{baseUrl}}/uml/objectDiagrams/objects/images/notation.png" height="85" />
 <p/>
 
 Notes:
@@ -22,7 +22,7 @@ Notes:
 
 {{ icon_example }} Some example objects:
 
-<pic src="{{baseUrl}}/uml/objectDiagrams/objects/images/professorStudent.png" height="65" />
+<pic eager src="{{baseUrl}}/uml/objectDiagrams/objects/images/professorStudent.png" height="65" />
 <p/>
 
 </box>

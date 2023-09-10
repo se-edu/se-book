@@ -10,7 +10,7 @@
 
 **A branch can be _merged_ into another branch.** Merging usually results in a new commit that represents the changes done in the branch being merged.
 
-<pic src="{{baseUrl}}/revisionControl/branching/images/diagram.png" height="180">
+<pic eager src="{{baseUrl}}/revisionControl/branching/images/diagram.png" height="180">
   <strong>Branching and merging</strong>
 </pic>
 

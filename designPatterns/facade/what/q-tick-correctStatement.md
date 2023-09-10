@@ -2,7 +2,7 @@
 
 Is the design below likely to use the Facade pattern?
 
-<pic src="{{baseUrl}}/designPatterns/facade/what/images/textStorage.png" height="150" />
+<pic eager src="{{baseUrl}}/designPatterns/facade/what/images/textStorage.png" height="150" />
 <p/>
 
 - ( ) True

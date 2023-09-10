@@ -56,14 +56,14 @@ Given below is a scenario you can try in order to learn how to <trigger trigger=
 **1. Create an ==empty== remote repo on GitHub.**
 
 1. Login to your GitHub account and choose to create a new Repo. <br>
-   <pic src="{{baseUrl}}/gitAndGithub/push/images/createNewRemoteRepo.png" width="150" />
+   <pic eager src="{{baseUrl}}/gitAndGithub/push/images/createNewRemoteRepo.png" width="150" />
 
 1. In the next screen, provide a name for your repo but keep the `Initialize this repo ...` tick box unchecked.<br>
-   <pic src="{{baseUrl}}/gitAndGithub/push/images/fillNewRepoInfo.png" width="600" />
+   <pic eager src="{{baseUrl}}/gitAndGithub/push/images/fillNewRepoInfo.png" width="600" />
 
 1. Note the URL of the repo. It will be of the form `https://github.com/{your_user_name}/{repo_name}.git`.<br>
    e.g., `https://github.com/johndoe/foobar.git` (note the `.git` at the end)<br>
-   <pic src="{{baseUrl}}/gitAndGithub/push/images/newRepoUrl.png" width="450" />
+   <pic eager src="{{baseUrl}}/gitAndGithub/push/images/newRepoUrl.png" width="450" />
 
 **2. <trigger trigger="click" for="modal:push-addRemote">Add the GitHub repo URL as a remote</trigger>** of the local repo. You can give it the name `origin` (or any other name).
 

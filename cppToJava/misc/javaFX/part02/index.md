@@ -4,7 +4,7 @@
 
 In this tutorial, we will create the other parts of the application (mainly the model and the controller). We will also use `ObservableList` and `*Property` to bind our list of new model's `Person`s, and their individual details, to the view, with the controller as the "middleman".
 
-<pic src="images/address-app-final-screenshot.png" height="350" />
+<pic eager src="images/address-app-final-screenshot.png" height="350" />
 <p/>
 
 ## Create the Model class
@@ -340,19 +340,19 @@ We're almost there! But one thing is missing: We haven't told our `PersonOvervie
 1. Open `PersonOverview.fxml` with the SceneBuilder.
 2. Open the Controller group on the left side (just below Hierarchy), and select the `seedu.address.view.PersonOverviewController` as the controller class.
 
-<pic src="images/hook-view-controller.png" height="350" />
+<pic eager src="images/hook-view-controller.png" height="350" />
 <p/>
 
 3. Select the `TableView` in the Hierarchy group.
 4. In the Inspector view, under the Code group, set 'fx:id' to `personTable`.
 
-<pic src="images/hook-view-person-table.png" height="250" />
+<pic eager src="images/hook-view-person-table.png" height="250" />
 <p/>
 
 5. Do the same for the table columns. Select `firstNameColumn` and `lastNameColumn` for the 'fx:id' respectively.
 6. For each label in the second column of the grid pane, choose the corresponding 'fx:id'.
 
-<pic src="images/hook-view-labels.png" width="650" />
+<pic eager src="images/hook-view-labels.png" width="650" />
 <p/>
 
 7. Save the `.fxml` file.
@@ -400,7 +400,7 @@ module AddressApp {
 
 When you start your application now, you should see something like this:
 
-<pic src="images/address-app-final-screenshot.png" height="350" />
+<pic eager src="images/address-app-final-screenshot.png" height="350" />
 <p/>
 
 Congratulations! The application now shows the list of `Person`s in the view!

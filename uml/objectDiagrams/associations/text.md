@@ -8,12 +8,12 @@
 
 A solid line indicates an association between two objects.
 
-<pic src="{{baseUrl}}/uml/objectDiagrams/associations/images/notation.png" width="300" />
+<pic eager src="{{baseUrl}}/uml/objectDiagrams/associations/images/notation.png" width="300" />
 
 <box>
 
 {{ icon_example }} An example object diagram showing two associations:<br>
-<pic src="{{baseUrl}}/uml/objectDiagrams/associations/images/example.png" width="300" />
+<pic eager src="{{baseUrl}}/uml/objectDiagrams/associations/images/example.png" width="300" />
 
 </box>
 

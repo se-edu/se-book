@@ -2,7 +2,7 @@
 
 Implement the class structure given below:
 
-<pic src="{{baseUrl}}/modeling/modelingStructures/classDiagramsBasic/images/typicalClasssStructure.png" width="400" />
+<pic eager src="{{baseUrl}}/modeling/modelingStructures/classDiagramsBasic/images/typicalClasssStructure.png" width="400" />
 <p/>
 
 </panel>

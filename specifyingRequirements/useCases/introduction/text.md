@@ -67,7 +67,7 @@ Extensions:
 
 <box background-color="white" border-color="white">
 
-<pic class="float-end ms-5" src="{{baseUrl}}/specifyingRequirements/useCases/introduction/images/ticketMachine.png" width="300" />
+<pic eager class="float-end ms-5" src="{{baseUrl}}/specifyingRequirements/useCases/introduction/images/ticketMachine.png" width="300" />
 
 **<trigger for="modal:uml" trigger="click">UML</trigger> includes a diagram type called use case diagrams that can illustrate use cases of a system visually**, providing a visual ‘table of contents’ of the use cases of a system.
 

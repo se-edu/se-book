@@ -8,24 +8,24 @@ c)	sandwich
 
 Note that dashed arrows show dependencies (e.g. A depends on B, C and D, and is therefore higher-level than B, C and D).
 
-<pic src="{{baseUrl}}/integration/approaches/topDownVsBottomUp/images/abc.png" height="190" />
+<pic eager src="{{baseUrl}}/integration/approaches/topDownVsBottomUp/images/abc.png" height="190" />
 <p/>
 
 <panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 a) Diagram:
 
-<pic src="{{baseUrl}}/integration/approaches/topDownVsBottomUp/images/aAnswer.png" height="230" />
+<pic eager src="{{baseUrl}}/integration/approaches/topDownVsBottomUp/images/aAnswer.png" height="230" />
 <p/>
 
 b) Diagram:
 
-<pic src="{{baseUrl}}/integration/approaches/topDownVsBottomUp/images/bAnswer.png" height="230" />
+<pic eager src="{{baseUrl}}/integration/approaches/topDownVsBottomUp/images/bAnswer.png" height="230" />
 <p/>
 
 c) Diagram:
 
-<pic src="{{baseUrl}}/integration/approaches/topDownVsBottomUp/images/cAnswer.png" height="230" />
+<pic eager src="{{baseUrl}}/integration/approaches/topDownVsBottomUp/images/cAnswer.png" height="230" />
 <p/>
 
 </panel>

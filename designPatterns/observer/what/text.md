@@ -15,7 +15,7 @@ An object (possibly more than one) is interested in being notified when a change
 
 {{ icon_example }} Consider this scenario from a student management system where the user is adding a new student to the system.
 
-<pic src="{{baseUrl}}/designPatterns/observer/what/images/sequenceDiagram.png" height="330" />
+<pic eager src="{{baseUrl}}/designPatterns/observer/what/images/sequenceDiagram.png" height="330" />
 <p/>
 
 Now, assume the system has two additional views used in parallel by different users:
@@ -25,7 +25,7 @@ Now, assume the system has two additional views used in parallel by different us
 
 When a student is added to the database using `NewStudentUi` shown above, both `StudentListUi` and `StudentStatsUi` should get updated automatically, as shown below.
 
-<pic src="{{baseUrl}}/designPatterns/observer/what/images/studentListUI.png" height="180" />
+<pic eager src="{{baseUrl}}/designPatterns/observer/what/images/studentListUI.png" height="180" />
 <p/>
 
 However, the `StudentList` object has no knowledge about `StudentListUi` and `StudentStatsUi` (note the direction of the navigability) and has no way to inform those objects. This is an example of the type of problem addressed by the Observer pattern.
@@ -40,7 +40,7 @@ The ‘observed’ object does not want to be coupled to objects that are ‘obs
 
 Force the communication through an interface known to both parties.
 
-<pic src="{{baseUrl}}/designPatterns/observer/what/images/studentListObserver.png" height="160" />
+<pic eager src="{{baseUrl}}/designPatterns/observer/what/images/studentListObserver.png" height="160" />
 <p/>
 
 <box>
@@ -99,7 +99,7 @@ Force the communication through an interface known to both parties.
 
 Here is the generic description of the observer pattern:
 
-<pic src="{{baseUrl}}/designPatterns/observer/what/images/observableInterfaceDiagram.png" height="100" />
+<pic eager src="{{baseUrl}}/designPatterns/observer/what/images/observableInterfaceDiagram.png" height="100" />
 <p/>
 
 * `<<Observer>>` is an interface: any class that implements it can observe an `<<Observable>>`. Any number of `<<Observer>>` objects can observe (i.e. listen to changes of) the `<<Observable>>` object.

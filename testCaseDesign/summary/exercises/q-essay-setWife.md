@@ -2,12 +2,12 @@
 
 Use equivalence partitions and boundary values to choose test inputs for testing the `setWife` operation in the `Man` class.
 
-<pic src="{{baseUrl}}/testCaseDesign/summary/exercises/images/manWoman.png" height="90" />
+<pic eager src="{{baseUrl}}/testCaseDesign/summary/exercises/images/manWoman.png" height="90" />
 <p/>
 
 <panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
-<pic src="{{baseUrl}}/testCaseDesign/summary/exercises/images/manWomanPartitions.png" height="300" />
+<pic eager src="{{baseUrl}}/testCaseDesign/summary/exercises/images/manWomanPartitions.png" height="300" />
 <p/>
 
 Partitioning ‘married’ as ‘to the same woman’ and ‘to a different woman’ seems redundant at first. Arguments for having it:

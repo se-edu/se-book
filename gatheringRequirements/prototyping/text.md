@@ -16,7 +16,7 @@
 
 {{ icon_example }} A mock up (also called a _wireframe_ diagram) of a dialog box:
 
-<pic class="border" src="images/wireframeExample.png" /><br>
+<pic eager class="border" src="images/wireframeExample.png" /><br>
 <sub>%%[source: plantuml.com]%%</sub>
 </box>
 <p/>

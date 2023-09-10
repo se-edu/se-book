@@ -12,7 +12,7 @@
 
 {{ icon_example }} Here is an example package diagram:
 
-<pic src="{{baseUrl}}/modeling/modelingStructures/packageDiagrams/images/diagram.png" height="450" /><br>
+<pic eager src="{{baseUrl}}/modeling/modelingStructures/packageDiagrams/images/diagram.png" height="450" /><br>
 <sub>source:[https://commons.wikimedia.org](https://en.wikipedia.org/wiki/Package_diagram)</sub>
 
 </box>

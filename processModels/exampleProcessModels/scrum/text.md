@@ -25,7 +25,7 @@ This description of Scrum was adapted from Wikipedia [retrieved on 18/10/2011], 
 
 **A key principle of Scrum is its recognition that during a project the customers can change their minds about what they want and need** (often called requirements churn), and that unpredicted challenges cannot be easily addressed in a traditional predictive or planned manner. As such, Scrum adopts an empirical approach—accepting that the problem cannot be fully understood or defined, focusing instead on maximizing the team’s ability to deliver quickly and respond to emerging requirements.
 
-<pic src="{{baseUrl}}/processModels/exampleProcessModels/scrum/images/diagram.png" height="250" />
+<pic eager src="{{baseUrl}}/processModels/exampleProcessModels/scrum/images/diagram.png" height="250" />
 <p/>
 
 </box>

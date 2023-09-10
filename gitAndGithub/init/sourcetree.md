@@ -3,7 +3,7 @@
 
 Enter the location of the directory (Windows version shown below) and click `Create`.
 
-<pic src="{{baseUrl}}/gitAndGithub/init/images/sourcetree_1.png" height="220" />
+<pic eager src="{{baseUrl}}/gitAndGithub/init/images/sourcetree_1.png" height="220" />
 <p/>
 
 Go to the `things` folder and observe how a hidden folder `.git` has been created.

@@ -15,10 +15,10 @@ Continuing with the example in [<trigger trigger="click" for="modal:conceptualin
 
 <box>
 
-<pic src="{{baseUrl}}/modeling/modelingASolution/intermediate/images/playerTextLogicRef.png" height="250" />
+<pic eager src="{{baseUrl}}/modeling/modelingASolution/intermediate/images/playerTextLogicRef.png" height="250" />
 <p/>
 
-<pic src="{{baseUrl}}/modeling/modelingASolution/intermediate/images/textLogicSd.png" height="210" />
+<pic eager src="{{baseUrl}}/modeling/modelingASolution/intermediate/images/textLogicSd.png" height="210" />
 
 </box>
 
@@ -38,7 +38,7 @@ Here is the updated class diagram:
 
 <box>
 
-<pic src="{{baseUrl}}/modeling/modelingASolution/intermediate/images/textLogicMinefieldCell.png" height="200" />
+<pic eager src="{{baseUrl}}/modeling/modelingASolution/intermediate/images/textLogicMinefieldCell.png" height="200" />
 
 </box>
 
@@ -48,7 +48,7 @@ Suppose `Logic` supports a `reset()` operation. You can model it like this:
 
 <box>
 
-<pic src="{{baseUrl}}/modeling/modelingASolution/intermediate/images/logicMinefieldReset.png" height="100" />
+<pic eager src="{{baseUrl}}/modeling/modelingASolution/intermediate/images/logicMinefieldReset.png" height="100" />
 
 </box>
 
@@ -56,7 +56,7 @@ Our current model assumes that the `Minefield` object has enough information (i.
 
 <box>
 
-<pic src="{{baseUrl}}/modeling/modelingASolution/intermediate/images/logicMinefieldNewGame.png" height="85" />
+<pic eager src="{{baseUrl}}/modeling/modelingASolution/intermediate/images/logicMinefieldNewGame.png" height="85" />
 <p/>
 
 </box>
@@ -65,7 +65,7 @@ An alternative is to have a `ConfigGenerator` object that generates a string con
 
 <box>
 
-<pic src="{{baseUrl}}/modeling/modelingASolution/intermediate/images/logicConfigGenerator.png" height="170" />
+<pic eager src="{{baseUrl}}/modeling/modelingASolution/intermediate/images/logicConfigGenerator.png" height="170" />
 <p/>
 
 </box>
@@ -74,7 +74,7 @@ In addition, `getWidth()`, `getHeight()`, `markCellAt(x,y)` and `clearCellAt(x,y
 
 <box>
 
-<pic src="{{baseUrl}}/modeling/modelingASolution/intermediate/images/logicMinefieldFunctions.png" height="180" />
+<pic eager src="{{baseUrl}}/modeling/modelingASolution/intermediate/images/logicMinefieldFunctions.png" height="180" />
 
 </box>
 
@@ -82,7 +82,7 @@ The updated class diagram:
 
 <box>
 
-<pic src="{{baseUrl}}/modeling/modelingASolution/intermediate/images/textLogicMinefieldCellConfigGenerator.png" height="250" />
+<pic eager src="{{baseUrl}}/modeling/modelingASolution/intermediate/images/textLogicMinefieldCellConfigGenerator.png" height="250" />
 
 </box>
 
@@ -95,7 +95,7 @@ Here’s the SD for option 1.
 
 <box>
 
-<pic src="{{baseUrl}}/modeling/modelingASolution/intermediate/images/logicMinefieldGetGameState.png" height="180" />
+<pic eager src="{{baseUrl}}/modeling/modelingASolution/intermediate/images/logicMinefieldGetGameState.png" height="180" />
 
 </box>
 
@@ -103,7 +103,7 @@ Here’s the SD for option 2. Assume that the game state is updated after every 
 
 <box>
 
-<pic src="{{baseUrl}}/modeling/modelingASolution/intermediate/images/logicMinefieldUpdateState.png" height="250" />
+<pic eager src="{{baseUrl}}/modeling/modelingASolution/intermediate/images/logicMinefieldUpdateState.png" height="250" />
 
 </box>
 
@@ -111,7 +111,7 @@ It is now time to explore what happens inside the `Minefield` constructor. One w
 
 <box>
 
-<pic src="{{baseUrl}}/modeling/modelingASolution/intermediate/images/minefieldCellAlt.png" height="200" />
+<pic eager src="{{baseUrl}}/modeling/modelingASolution/intermediate/images/minefieldCellAlt.png" height="200" />
 
 </box>
 
@@ -120,7 +120,7 @@ Now let us assume that `Minesweeper` supports a ‘timing’ feature.
 
 <box>
 
-<pic src="{{baseUrl}}/modeling/modelingASolution/intermediate/images/logicTimerOpt.png" height="130" />
+<pic eager src="{{baseUrl}}/modeling/modelingASolution/intermediate/images/logicTimerOpt.png" height="130" />
 
 </box>
 
@@ -128,7 +128,7 @@ Updated class diagram:
 
 <box>
 
-<pic src="{{baseUrl}}/modeling/modelingASolution/intermediate/images/fullClassDiagram.png" height="250" />
+<pic eager src="{{baseUrl}}/modeling/modelingASolution/intermediate/images/fullClassDiagram.png" height="250" />
 
 </box>
 

@@ -12,7 +12,7 @@
 
 {{ icon_example }} The `AcademicStaff` and the `AdminStaff` classes _implement_ the `SalariedStaff` interface.
 
-<pic src="{{baseUrl}}/uml/classDiagrams/interfaces/what/images/staff.png" height="250" />
+<pic eager src="{{baseUrl}}/uml/classDiagrams/interfaces/what/images/staff.png" height="250" />
 <p/>
 
 </box>

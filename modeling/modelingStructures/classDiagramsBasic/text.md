@@ -23,7 +23,7 @@ The most basic class diagram is a bunch of classes with some solid lines among t
 <box>
 
 {{ icon_example }} An example class diagram showing associations between classes.
-<p/><pic src="{{baseUrl}}/modeling/modelingStructures/classDiagramsBasic/images/ageListCalculatorPersonMinimal.png" width="450" />
+<p/><pic eager src="{{baseUrl}}/modeling/modelingStructures/classDiagramsBasic/images/ageListCalculatorPersonMinimal.png" width="450" />
 <p/>
 
 </box>
@@ -40,7 +40,7 @@ In addition, **associations can show additional decorations such as _association
 <box>
 
 {{ icon_example }} Here is the same class diagram shown earlier but with some additional information included:
-<p/><pic src="{{baseUrl}}/modeling/modelingStructures/classDiagramsBasic/images/ageListCalculatorPerson.png" width="450" />
+<p/><pic eager src="{{baseUrl}}/modeling/modelingStructures/classDiagramsBasic/images/ageListCalculatorPerson.png" width="450" />
 <p/>
 
 </box>

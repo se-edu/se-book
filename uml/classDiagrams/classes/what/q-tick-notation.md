@@ -2,7 +2,7 @@
 
 Which of these follow the correct UML notation?
 
-<pic src="{{baseUrl}}/uml/classDiagrams/classes/what/images/chooseNotation.jpg" height="130" />
+<pic eager src="{{baseUrl}}/uml/classDiagrams/classes/what/images/chooseNotation.jpg" height="130" />
 <p/>
 
 - [ ] 1

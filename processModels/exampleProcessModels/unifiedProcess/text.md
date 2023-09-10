@@ -85,7 +85,7 @@ The unified process consists of four phases: _inception, elaboration, constructi
 </tbody>
 </table>
 
-<pic src="{{baseUrl}}/processModels/exampleProcessModels/unifiedProcess/images/diagram.png" height="280" />
+<pic eager src="{{baseUrl}}/processModels/exampleProcessModels/unifiedProcess/images/diagram.png" height="280" />
 <p/>
 
 Given above is a visualization of a project done using the Unified process (source: Wikipedia). As the diagram shows, a phase can consist of several iterations. Each vertical column (labeled “I1” “E1”, “E2”, “C1”, etc.) represents a single iteration. Each of the iterations consists of a set of ‘workflows’ such as ‘Business modeling’, ‘Requirements’, ‘Analysis & Design’, etc. The shaded region indicates the amount of resources and effort spent on a particular workflow in a particular iteration.

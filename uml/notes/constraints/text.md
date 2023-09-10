@@ -10,7 +10,7 @@
 
 {{ icon_example }} Example:
 
-<pic src="{{baseUrl}}/uml/notes/constraints/images/playerTurn.png" height="120" />
+<pic eager src="{{baseUrl}}/uml/notes/constraints/images/playerTurn.png" height="120" />
 <p/>
 
 </box>

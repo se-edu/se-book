@@ -3,7 +3,7 @@
 
 Suppose we wrote a program to follow the class structure given in this class diagram:
 
-<pic src="{{baseUrl}}/modeling/modelingStructures/classDiagramsBasic/images/typicalClasssStructure.png" width="400" />
+<pic eager src="{{baseUrl}}/modeling/modelingStructures/classDiagramsBasic/images/typicalClasssStructure.png" width="400" />
 <p/>
 
 Draw object diagrams to represent the object structures after each of these steps below. Assume that we are trying to minimize the number of total objects.
@@ -24,7 +24,7 @@ i.e. apply step 1 → [diagram 1] → apply step 2 on diagram 1 → [diagram 2] 
 
 After step 2, the diagram should look like this:
 
-<pic src="{{baseUrl}}/uml/classDiagrams/combine/basic/images/objectDiagramsForClassDiagramHint.png" width="600" />
+<pic eager src="{{baseUrl}}/uml/classDiagrams/combine/basic/images/objectDiagramsForClassDiagramHint.png" width="600" />
 
 %%Why both `Person` objects use the same `Address` object? Because the questions asks us to minimize the number of
 objects (which is an _artificial_ constraint added to ensure everyone arrives at the same diagram)%%

@@ -20,7 +20,7 @@ You can use UML _sequence diagrams_ to analyze the required interactions between
 
 {{ icon_example }} Example:
 
-<pic src="{{baseUrl}}/reuse/apis/designingAPIs/images/textLogic.png" height="500" />
+<pic eager src="{{baseUrl}}/reuse/apis/designingAPIs/images/textLogic.png" height="500" />
 <p/>
 
 As you analyze the interactions between components using sequence diagrams, you discover the API of those components. For example, the diagram above tells us that the MSLogic component API should have the methods:

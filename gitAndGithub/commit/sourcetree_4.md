@@ -2,5 +2,5 @@ Expand the `BRANCHES` menu and click on the `master` to view the history graph, 
 
 This label points to the latest commit on the `master` branch.
 
-<pic src="{{baseUrl}}/gitAndGithub/commit/images/sourcetree_5.png" height="180" />
+<pic eager src="{{baseUrl}}/gitAndGithub/commit/images/sourcetree_5.png" height="180" />
 <p/>

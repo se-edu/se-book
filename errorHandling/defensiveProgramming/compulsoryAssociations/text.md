@@ -12,7 +12,7 @@ Consider two classes, `Account` and `Guarantor`, with an association as shown in
 
 {{ icon_example }} Example:
 
-<pic src="{{baseUrl}}/errorHandling/defensiveProgramming/compulsoryAssociations/images/accountGuarantor.png" height="50" />
+<pic eager src="{{baseUrl}}/errorHandling/defensiveProgramming/compulsoryAssociations/images/accountGuarantor.png" height="50" />
 <p/>
 
 Here, the association is compulsory i.e. an `Account` object should always be linked to a `Guarantor`. One way to implement this is to simply use a reference variable, like this:

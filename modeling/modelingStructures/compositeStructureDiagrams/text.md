@@ -12,7 +12,7 @@
 
 {{ icon_example }} Here is an example composite structure diagram:
 
-<pic src="{{baseUrl}}/modeling/modelingStructures/compositeStructureDiagrams/images/diagram.png" height="150" />
+<pic eager src="{{baseUrl}}/modeling/modelingStructures/compositeStructureDiagrams/images/diagram.png" height="150" />
 <br>
 
 <sub>source:[https://commons.wikimedia.org](https://en.wikipedia.org/wiki/Composite_structure_diagram)</sub>

@@ -1,6 +1,6 @@
 <panel header="{{ icon_Q_A }} Which statement agrees with the  multiplicity shown in this diagram?">
 
-<pic src="{{baseUrl}}/uml/classDiagrams/associations/multiplicity/images/unitItem.png" height="100" />
+<pic eager src="{{baseUrl}}/uml/classDiagrams/associations/multiplicity/images/unitItem.png" height="100" />
 <p/>
 
 - [ ] a. A `Unit` object can be linked to any number of `Item` objects.

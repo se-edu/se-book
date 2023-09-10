@@ -16,7 +16,7 @@
 
 {{ icon_example }} In the example below, design `A` appears to have more coupling between the components than design `B`.
 
-<pic src="{{baseUrl}}/designFundamentals/coupling/what/images/playerPuzzleManager.png" height="220" />
+<pic eager src="{{baseUrl}}/designFundamentals/coupling/what/images/playerPuzzleManager.png" height="220" />
 <p/>
 
 </box>

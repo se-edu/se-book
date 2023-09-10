@@ -2,7 +2,7 @@
 
 What’s going on here?
 
-<pic src="{{baseUrl}}/modeling/modelingBehaviors/sequenceDiagramsIntermediate/images/exerciseDiagram.png" height="170" />
+<pic eager src="{{baseUrl}}/modeling/modelingBehaviors/sequenceDiagramsIntermediate/images/exerciseDiagram.png" height="170" />
 <p/>
 
 - [ ] a. `Logic` object is executing a parallel thread.

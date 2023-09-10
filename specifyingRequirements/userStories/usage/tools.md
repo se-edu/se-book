@@ -5,7 +5,7 @@ You can create issues for each of the user stories and use a GitHub _Project Boa
 
 {{ icon_example }} Example Project Board:
 
-<pic src="{{baseUrl}}/specifyingRequirements/userStories/usage/images/userStoriesInGitHubProjectBoards.png" width="800" /><p/>
+<pic eager src="{{baseUrl}}/specifyingRequirements/userStories/usage/images/userStoriesInGitHubProjectBoards.png" width="800" /><p/>
 
 {{ icon_example }} Example Issue to represent a user story:
 
@@ -18,7 +18,7 @@ title | `As a user I can add a deadline`
 ------|---------------------------------
 Description | `... so that I can keep track of my deadlines`
 
-<pic src="{{baseUrl}}/specifyingRequirements/userStories/usage/images/userStoryAsGitHubIssue.png" width="800" /><p/>
+<pic eager src="{{baseUrl}}/specifyingRequirements/userStories/usage/images/userStoryAsGitHubIssue.png" width="800" /><p/>
 
 Alternatively, you can put the entire user story in the description.
 
@@ -39,14 +39,14 @@ A video on GitHub Project Boards:
 
 {{ icon_example }} Example Google Sheet for recording user stories:
 
-<pic src="{{baseUrl}}/specifyingRequirements/userStories/usage/images/userStoriesInGoogleSheets.png" width="800" /><p/>
+<pic eager src="{{baseUrl}}/specifyingRequirements/userStories/usage/images/userStoriesInGoogleSheets.png" width="800" /><p/>
 
   </tab>
   <tab header="Trello">
 
 {{ icon_example }} Example [Trello](https://trello.com) Board for recording user stories:
 
-<pic src="{{baseUrl}}/specifyingRequirements/userStories/usage/images/userStoriesInTrello.png" width="800" /><p/>
+<pic eager src="{{baseUrl}}/specifyingRequirements/userStories/usage/images/userStoriesInTrello.png" width="800" /><p/>
 
   </tab>
 

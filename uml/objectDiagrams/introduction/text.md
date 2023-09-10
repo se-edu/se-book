@@ -12,7 +12,7 @@
 
 {{ icon_example }} An example object diagram:
 
-<pic src="{{baseUrl}}/modeling/modelingStructures/ooStructures/images/objectDiagram.png" height="120" />
+<pic eager src="{{baseUrl}}/modeling/modelingStructures/ooStructures/images/objectDiagram.png" height="120" />
 
 </box>
 

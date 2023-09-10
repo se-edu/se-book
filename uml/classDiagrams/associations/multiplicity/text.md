@@ -6,7 +6,7 @@
 
 <div id="body">
 
-<pic src="{{baseUrl}}/uml/classDiagrams/associations/multiplicity/images/notation.png" height="120" />
+<pic eager src="{{baseUrl}}/uml/classDiagrams/associations/multiplicity/images/notation.png" height="120" />
 <p/>
 
 Commonly used multiplicities:
@@ -19,7 +19,7 @@ Commonly used multiplicities:
 
 {{ icon_example }} In the diagram below, an `Admin` object administers (is in charge of) any number of students but a `Student` object must always be under the charge of exactly one `Admin` object.
 
-<pic src="{{baseUrl}}/uml/classDiagrams/associations/multiplicity/images/adminStudent.png" width="300" />
+<pic eager src="{{baseUrl}}/uml/classDiagrams/associations/multiplicity/images/adminStudent.png" width="300" />
 
 </box>
 <box>
@@ -30,7 +30,7 @@ Commonly used multiplicities:
 * An admin can handle any number of professors and any number of students, including none.
 * A professor/student can be handled by any number of admins, including none.
 
-<pic src="{{baseUrl}}/uml/classDiagrams/associations/multiplicity/images/adminProfessorStudent.png" height="70" />
+<pic eager src="{{baseUrl}}/uml/classDiagrams/associations/multiplicity/images/adminProfessorStudent.png" height="70" />
 
 </box>
 

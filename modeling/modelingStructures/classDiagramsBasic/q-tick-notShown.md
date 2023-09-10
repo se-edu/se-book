@@ -2,7 +2,7 @@
 
 Which association notations are shown in this diagram?
 
-<pic src="{{baseUrl}}/modeling/modelingStructures/classDiagramsIntermediate/images/professorStudent.png" height="100" />
+<pic eager src="{{baseUrl}}/modeling/modelingStructures/classDiagramsIntermediate/images/professorStudent.png" height="100" />
 <p/>
 
 - [ ] a. association labels

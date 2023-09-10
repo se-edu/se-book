@@ -12,7 +12,7 @@
 
 {{ icon_example }} An example deployment diagram:
 
-<pic src="{{baseUrl}}/modeling/modelingStructures/deploymentDiagrams/images/diagram.png" height="500" />
+<pic eager src="{{baseUrl}}/modeling/modelingStructures/deploymentDiagrams/images/diagram.png" height="500" />
 <p/>
 
 <sub>source:[https://commons.wikimedia.org](https://en.wikipedia.org/wiki/Deployment_diagram)</sub>

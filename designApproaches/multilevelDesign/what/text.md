@@ -14,7 +14,7 @@ In a smaller system, the design of the entire system can be shown in one place.
 
 {{ icon_example }} This class diagram of [se-edu/addressbook-level2](https://se-education.org/addressbook-level2) depicts the design of the entire software.
 
-<pic src="https://se-education.org/addressbook-level2/images/mainClassDiagram.png" width="600" />
+<pic eager src="https://se-education.org/addressbook-level2/images/mainClassDiagram.png" width="600" />
 
 </box>
 
@@ -28,24 +28,24 @@ In a smaller system, the design of the entire system can be shown in one place.
 
 {{ icon_example }} This architecture diagram of [se-edu/addressbook-level3](https://se-education.org/addressbook-level3) depicts the high-level design of the software.
 
-<pic src="https://se-education.org/addressbook-level3/images/ArchitectureDiagram.png" width="300" />
+<pic eager src="https://se-education.org/addressbook-level3/images/ArchitectureDiagram.png" width="300" />
 
 Here are examples of lower level designs of some components of the same software:
 
 <tabs>
   <tab header="UI">
 
-<pic src="https://se-edu.github.io/addressbook-level3/images/UiClassDiagram.png" width="700" />
+<pic eager src="https://se-edu.github.io/addressbook-level3/images/UiClassDiagram.png" width="700" />
 
   </tab>
   <tab header="Logic" class="d-print-none">
 
-<pic src="https://se-edu.github.io/addressbook-level3/images/LogicClassDiagram.png" width="800" />
+<pic eager src="https://se-edu.github.io/addressbook-level3/images/LogicClassDiagram.png" width="800" />
 
   </tab>
   <tab header="Storage" class="d-print-none">
 
-<pic src="https://se-edu.github.io/addressbook-level3/images/StorageClassDiagram.png" width="700" />
+<pic eager src="https://se-edu.github.io/addressbook-level3/images/StorageClassDiagram.png" width="700" />
 
   </tab>
 </tabs>

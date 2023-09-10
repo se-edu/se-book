@@ -14,7 +14,7 @@ To reduce clutter, **optional elements (e.g, activation bars, return arrows) may
 
 <!-- TODO: add a more detailed version of the SD for comparison -->
 
-<pic src="{{baseUrl}}/uml/sequenceDiagrams/minimalNotation/images/textLogic.png" width="350" />
+<pic eager src="{{baseUrl}}/uml/sequenceDiagrams/minimalNotation/images/textLogic.png" width="350" />
 <p/>
 
 </box>

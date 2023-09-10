@@ -16,7 +16,7 @@ Class diagrams can also be used to model objects in the <tooltip content="the re
 
 Description: The snakes and ladders game is played by two or more players using a board and a die. The board has 100 squares marked 1 to 100. Each player owns one piece. Players take turns to throw the die and advance their piece by the number of squares they earned from the die throw. The board has a number of snakes. If a player’s piece lands on a square with a snake head, the piece is automatically moved to the square containing the snake’s tail. Similarly, a piece can automatically move from a ladder foot to the ladder top. The player whose piece is the first to reach the 100th square wins.
 
-<pic src="{{baseUrl}}/modeling/modelingStructures/objectOrientedDomainModels/images/diagram.png" height="420" />
+<pic eager src="{{baseUrl}}/modeling/modelingStructures/objectOrientedDomainModels/images/diagram.png" height="420" />
 <p/>
 
 </box>

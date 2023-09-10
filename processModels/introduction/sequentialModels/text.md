@@ -8,7 +8,7 @@
 
 **The _sequential model_, also called the _waterfall_ model, views software development as a linear process**, in which the project is seen as progressing through the development stages. The name _waterfall_ stems from how the model is drawn to look like a waterfall (see below).
 
-<pic src="{{baseUrl}}/processModels/introduction/sequentialModels/images/diagram.png" width="550" />
+<pic eager src="{{baseUrl}}/processModels/introduction/sequentialModels/images/diagram.png" width="550" />
 <p/>
 
 **When one stage of the process is completed, it produces some artifacts to be used in the next stage**. For example, the requirements stage produces a comprehensive list of requirements, to be used in the design phase.

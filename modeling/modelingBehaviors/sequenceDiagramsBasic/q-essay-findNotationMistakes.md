@@ -2,6 +2,6 @@
 
 Find notation mistakes in the sequence diagram below:
 
-<pic src="{{baseUrl}}/modeling/modelingBehaviors/sequenceDiagramsBasic/images/notationMistakes.png" width="500"/>
+<pic eager src="{{baseUrl}}/modeling/modelingBehaviors/sequenceDiagramsBasic/images/notationMistakes.png" width="500"/>
 
 </panel>

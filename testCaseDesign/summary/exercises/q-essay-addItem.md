@@ -2,7 +2,7 @@
 
 Assume you are testing the `add(Item)` method specified below.
 
-<pic src="{{baseUrl}}/testCaseDesign/summary/exercises/images/itemList.png" height="100" />
+<pic eager src="{{baseUrl}}/testCaseDesign/summary/exercises/images/itemList.png" height="100" />
 <p/>
 
 Assume `i` to be the Item being added.
@@ -43,7 +43,7 @@ Assume `i` to be the Item being added.
 
 (c)
 
-<pic src="{{baseUrl}}/testCaseDesign/summary/exercises/images/count.png" height="250" />
+<pic eager src="{{baseUrl}}/testCaseDesign/summary/exercises/images/count.png" height="250" />
 <p/>
 
 </panel>

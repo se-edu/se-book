@@ -2,7 +2,7 @@
 
 Implement this bidirectional association.  Note that the `Bank` uses the `accNumber` attribute to uniquely identify an `Account` object. Assume the `Bank` class is responsible for maintaining the links between objects.
 
-<pic src="{{baseUrl}}/errorHandling/defensiveProgramming/referentialIntegrity/images/bankAccount.jpg" height="60" />
+<pic eager src="{{baseUrl}}/errorHandling/defensiveProgramming/referentialIntegrity/images/bankAccount.jpg" height="60" />
 <p/>
 
 <panel type="seamless" header="{{ icon_A }} Answer" minimized>

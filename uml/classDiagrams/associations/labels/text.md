@@ -8,13 +8,13 @@
 
 **_Association labels_ describe the meaning of the association.** The arrow head indicates the direction in which the label is to be read.
 
-<pic src="{{baseUrl}}/uml/classDiagrams/associations/labels/images/notation.png" width="400" />
+<pic eager src="{{baseUrl}}/uml/classDiagrams/associations/labels/images/notation.png" width="400" />
 
 <box>
 
 {{ icon_example }} In this example, the same association is described using two different labels.
 
-<pic src="{{baseUrl}}/uml/classDiagrams/associations/labels/images/adminStudent.png" width="600" />
+<pic eager src="{{baseUrl}}/uml/classDiagrams/associations/labels/images/adminStudent.png" width="600" />
 <p/>
 
 * Diagram on the left:  `Admin` class is associated with `Student` class because an `Admin` object _uses_ a `Student` object.

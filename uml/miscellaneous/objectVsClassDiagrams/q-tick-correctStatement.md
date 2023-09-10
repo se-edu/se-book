@@ -2,7 +2,7 @@
 
 Which of these class diagrams match the given object diagram?
 
-<pic src="{{baseUrl}}/uml/miscellaneous/objectVsClassDiagrams/images/exerciseDiagram.png" height="330" />
+<pic eager src="{{baseUrl}}/uml/miscellaneous/objectVsClassDiagrams/images/exerciseDiagram.png" height="330" />
 <p/>
 
 - [ ] 1

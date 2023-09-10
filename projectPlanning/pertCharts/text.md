@@ -15,7 +15,7 @@
 
 {{ icon_example }} An example PERT chart for a simple software project
 
-<pic src="{{baseUrl}}/projectPlanning/pertCharts/images/pert.jpg" height="320" /><br>
+<pic eager src="{{baseUrl}}/projectPlanning/pertCharts/images/pert.jpg" height="320" /><br>
 `md` = man days
 
 </box>

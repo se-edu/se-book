@@ -5,7 +5,7 @@ For the `Manager` class shown below, write an `addAccount()` method that
 * restricts the maximum number of Accounts to 8
 * avoids adding duplicate Accounts
 
-<pic src="{{baseUrl}}/errorHandling/defensiveProgramming/compulsoryAssociations/images/managerAccount.jpg" height="55" />
+<pic eager src="{{baseUrl}}/errorHandling/defensiveProgramming/compulsoryAssociations/images/managerAccount.jpg" height="55" />
 <p/>
 
 <panel type="seamless" header="{{ icon_A }} Answer" minimized>

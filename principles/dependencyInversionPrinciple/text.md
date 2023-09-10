@@ -14,7 +14,7 @@
 
 {{ icon_example }} Example:
 
-<pic src="{{baseUrl}}/principles/dependencyInversionPrinciple/images/payrollEmployee.png" height="130" />
+<pic eager src="{{baseUrl}}/principles/dependencyInversionPrinciple/images/payrollEmployee.png" height="130" />
 <p/>
 
 In design (a), the higher level class `Payroll` depends on the lower level class `Employee`, which is a violation of DIP. In design (b), both `Payroll` and `Employee` depend on the `Payee` interface (note that inheritance is a dependency).

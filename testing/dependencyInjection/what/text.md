@@ -16,7 +16,7 @@
 
 {{ icon_example }} A `Foo` object normally depends on a `Bar` object, but you can inject a `BarStub` object so that the `Foo` object no longer depends on a `Bar` object. Now you can test the `Foo` object in isolation from the `Bar` object.
 
-<pic src="{{baseUrl}}/testing/dependencyInjection/what/images/diagram.png" height="150" />
+<pic eager src="{{baseUrl}}/testing/dependencyInjection/what/images/diagram.png" height="150" />
 
 </box>
 

@@ -2,7 +2,7 @@
 
 Which of these are suitable as an Association Class? Note: the orange color class in the middle is the one being proposed as an association class.
 
-<pic src="{{baseUrl}}/oop/associations/associationClasses/images/exerciseDiagram.png" width="500" />
+<pic eager src="{{baseUrl}}/oop/associations/associationClasses/images/exerciseDiagram.png" width="500" />
 <p/>
 
 - [ ] a

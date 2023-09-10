@@ -17,29 +17,29 @@
 <tabs>
   <tab header="TEAMMATES">
 
-<pic src="https://teammates.github.io/teammates/diagrams/highlevelArchitecture.png" width="700"/><br>
+<pic eager src="https://teammates.github.io/teammates/diagrams/highlevelArchitecture.png" width="700"/><br>
 
   </tab>
   <tab header="se-edu/addressbook-level3" class="d-print-none">
 
-<pic src="https://se-education.org/addressbook-level3/images/ArchitectureDiagram.png" width="300"/><br>
+<pic eager src="https://se-education.org/addressbook-level3/images/ArchitectureDiagram.png" width="300"/><br>
 
   </tab>
   <tab header="Example 1" class="d-print-none">
 
-<pic src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Accelerator_Architecture.png" width="700"/><br>
+<pic eager src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Accelerator_Architecture.png" width="700"/><br>
 <sub>[source: https://commons.wikimedia.org](https://commons.wikimedia.org/wiki/File:Accelerator_Architecture.png)</sub>
 
   </tab>
   <tab header="Example 2" class="d-print-none">
 
-<pic src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Firefox_OS_Architecture_diagram.png" width="700"/><br>
+<pic eager src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Firefox_OS_Architecture_diagram.png" width="700"/><br>
 <sub>[source: https://commons.wikimedia.org](https://upload.wikimedia.org/wikipedia/commons/b/b8/Firefox_OS_Architecture_diagram.png)</sub>
 
   </tab>
   <tab header="Example 3" class="d-print-none">
 
-<pic src="https://upload.wikimedia.org/wikipedia/commons/0/06/SOA_Metamodel.svg" width="700"/><br>
+<pic eager src="https://upload.wikimedia.org/wikipedia/commons/0/06/SOA_Metamodel.svg" width="700"/><br>
 <sub>[source: https://commons.wikimedia.org](https://upload.wikimedia.org/wikipedia/commons/0/06/SOA_Metamodel.svg)</sub>
 
   </tab>

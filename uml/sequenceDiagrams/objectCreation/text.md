@@ -8,7 +8,7 @@
 
 Notation:
 
-<pic src="{{baseUrl}}/uml/sequenceDiagrams/objectCreation/images/notation.png" height="180" />
+<pic eager src="{{baseUrl}}/uml/sequenceDiagrams/objectCreation/images/notation.png" height="180" />
 <p/>
 
 * The arrow that represents the constructor arrives at the side of the box representing the instance.
@@ -18,7 +18,7 @@ Notation:
 
 {{ icon_example }} The `Logic` object creates a `Minefield` object.
 
-<pic src="{{baseUrl}}/uml/sequenceDiagrams/objectCreation/images/logicMinefield.png" height="150" />
+<pic eager src="{{baseUrl}}/uml/sequenceDiagrams/objectCreation/images/logicMinefield.png" height="150" />
 <p/>
 
 </box>

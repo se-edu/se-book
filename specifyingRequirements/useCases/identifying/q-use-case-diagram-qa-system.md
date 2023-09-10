@@ -8,7 +8,7 @@ The system is to be used by Testers, Programmers and System Administrators. Only
 
 <panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
-<pic src="{{baseUrl}}/specifyingRequirements/useCases/identifying/images/qaSystem.jpg" width="400" />
+<pic eager src="{{baseUrl}}/specifyingRequirements/useCases/identifying/images/qaSystem.jpg" width="400" />
 
 <p/>
 

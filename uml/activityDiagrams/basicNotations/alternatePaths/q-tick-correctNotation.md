@@ -9,8 +9,8 @@ Which of these activity diagrams use the correct UML notation?
 - [ ] v
 - [ ] vi
 
-<pic src="{{baseUrl}}/uml/activityDiagrams/basicNotations/alternatePaths/images/q-correctNotation1.png" width="500" />
-<pic src="{{baseUrl}}/uml/activityDiagrams/basicNotations/alternatePaths/images/q-correctNotation2.png" width="500" />
+<pic eager src="{{baseUrl}}/uml/activityDiagrams/basicNotations/alternatePaths/images/q-correctNotation1.png" width="500" />
+<pic eager src="{{baseUrl}}/uml/activityDiagrams/basicNotations/alternatePaths/images/q-correctNotation2.png" width="500" />
 <p/>
 
 <panel type="seamless" header="{{ icon_A }} Answer" minimized>

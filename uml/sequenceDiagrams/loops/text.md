@@ -8,14 +8,14 @@
 
 Notation:
 
-<pic src="{{baseUrl}}/uml/sequenceDiagrams/loops/images/notation.png" height="80" />
+<pic eager src="{{baseUrl}}/uml/sequenceDiagrams/loops/images/notation.png" height="80" />
 <p/>
 
 <box>
 
 {{ icon_example }} The `Player` calls the `mark x,y` command or `clear x y` command repeatedly until the game is won or lost.
 
-<pic src="{{baseUrl}}/uml/sequenceDiagrams/loops/images/playerText.png" height="300" />
+<pic eager src="{{baseUrl}}/uml/sequenceDiagrams/loops/images/playerText.png" height="300" />
 <p/>
 
 </box>

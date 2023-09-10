@@ -4,5 +4,5 @@ Specify the tag name e.g. `v1.0` and click `Add Tag`.
 
 The added tag will appear in the revision graph view.
 
-<pic src="images/sourcetree_1.png" height="70" />
+<pic eager src="images/sourcetree_1.png" height="70" />
 <p/>

@@ -9,11 +9,11 @@ A course has a name and a code. A course is read by 10 or more students, and tau
 </div>
 You can use the following layout for the diagram. Add more classes if needed.
 <p/>
-<pic src="images/CourseDomainLayout.png" width="50%"/>
+<pic eager src="images/CourseDomainLayout.png" width="50%"/>
 
 <p/>
 <panel type="seamless" header="Example OODM" minimized >
-  <pic src="{{ baseUrl }}/modeling/modelingStructures/objectOrientedDomainModels/images/diagram.png" width="700" />
+  <pic eager src="{{ baseUrl }}/modeling/modelingStructures/objectOrientedDomainModels/images/diagram.png" width="700" />
 </panel>
 <p/>
 

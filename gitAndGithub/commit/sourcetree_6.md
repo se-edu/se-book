@@ -2,7 +2,7 @@
 
 In the next dialog, choose the mode `Mixed - keep working copy but reset index` option. This will make the offending commit disappear but will keep the changes that you included in that commit intact.
 
-<pic src="{{baseUrl}}/gitAndGithub/commit/images/sourcetree_9.png" />
+<pic eager src="{{baseUrl}}/gitAndGithub/commit/images/sourcetree_9.png" />
 
 If you use the `Soft - ...` mode instead, the last commit will be undone as before, but the changes included in that commit will stay in the staging area.
 

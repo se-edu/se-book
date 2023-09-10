@@ -4,7 +4,7 @@ Discuss the coupling levels of alternative designs _x_ and _y_.
 
 <box>
 
-<pic src="{{baseUrl}}/designFundamentals/coupling/what/images/alternativeDesigns.png" height="180" />
+<pic eager src="{{baseUrl}}/designFundamentals/coupling/what/images/alternativeDesigns.png" height="180" />
 <p/>
 
 </box>

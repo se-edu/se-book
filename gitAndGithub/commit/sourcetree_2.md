@@ -1,11 +1,11 @@
 Select the `fruits.txt` and click on the `Stage Selected` button.
 
-<pic src="{{baseUrl}}/gitAndGithub/commit/images/sourcetree_2.png" height="100" />
+<pic eager src="{{baseUrl}}/gitAndGithub/commit/images/sourcetree_2.png" height="100" />
 <p/>
 
 `fruits.txt` should appear in the `Staged files` panel now.
 
-<pic src="{{baseUrl}}/gitAndGithub/commit/images/sourcetree_3.png" height="180" />
+<pic eager src="{{baseUrl}}/gitAndGithub/commit/images/sourcetree_3.png" height="180" />
 <p/>
 
 <box type="info" seamless>

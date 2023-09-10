@@ -5,7 +5,7 @@
    Ensure the `Track?` checkbox is ticked for the selected branch(es).
 1. Click `Push`.
 
-<pic src="images/pushBranchToFork.png" height="300" />
+<pic eager src="images/pushBranchToFork.png" height="300" />
 <p/>
 
 

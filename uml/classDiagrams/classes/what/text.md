@@ -8,7 +8,7 @@
 
 The basic UML notations used to represent a _class_:<br>
 
-<pic src="{{baseUrl}}/uml/classDiagrams/classes/what/images/basicNotation.png" height="130" />
+<pic eager src="{{baseUrl}}/uml/classDiagrams/classes/what/images/basicNotation.png" height="130" />
 <p/>
 
 <box>
@@ -16,7 +16,7 @@ The basic UML notations used to represent a _class_:<br>
 {{ icon_example }} A `Table` class shown in UML notation:
 
 <div class="alt-java">
-<pic src="{{baseUrl}}/uml/classDiagrams/classes/what/images/operations.png" height="150" />
+<pic eager src="{{baseUrl}}/uml/classDiagrams/classes/what/images/operations.png" height="150" />
 </div>
 <div class="alt-python">
 <puml>
@@ -81,7 +81,7 @@ class Table:
 
 <box>
 
-<pic src="{{baseUrl}}/uml/classDiagrams/classes/what/images/classes.png" height="100" />
+<pic eager src="{{baseUrl}}/uml/classDiagrams/classes/what/images/classes.png" height="100" />
 
 </box>
 
@@ -107,7 +107,7 @@ Visibility | Java | Python
 
 {{ icon_example }} `Table` class with visibilities shown:
 <div class="alt-java">
-<pic src="{{baseUrl}}/uml/classDiagrams/classes/what/images/operationsVisibility.png" height="150" />
+<pic eager src="{{baseUrl}}/uml/classDiagrams/classes/what/images/operationsVisibility.png" height="150" />
 </div>
 <div class="alt-python">
 <puml>
@@ -174,7 +174,7 @@ class Table:
 
 **Generic classes can be shown as given below**. The notation format is shown on the left, followed by two examples.
 
-<pic src="images/generic.png" width="618"/>
+<pic eager src="images/generic.png" width="618"/>
 <p/>
 </div>
 

@@ -6,7 +6,7 @@ Consider a simple movie ticket vending machine application. Every week, the thea
 
 <panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
-<pic src="{{baseUrl}}/specifyingRequirements/useCases/identifying/images/ticketMachine.png" width="300" />
+<pic eager src="{{baseUrl}}/specifyingRequirements/useCases/identifying/images/ticketMachine.png" width="300" />
 
 <p/>
 

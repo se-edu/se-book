@@ -9,14 +9,14 @@
 
 **The _client-server_ style has at least one component playing the role of a server and at least one client component accessing the services of the server.** This is an architectural style used often in distributed applications.
 
-<pic src="{{baseUrl}}/architecture/architecturalStyles/clientServer/what/images/clientServer.png" height="120" />
+<pic eager src="{{baseUrl}}/architecture/architecturalStyles/clientServer/what/images/clientServer.png" height="120" />
 <p/>
 
 <box>
 
 {{ icon_example }} The online game and the web application below use the client-server style.
 
-<pic src="{{baseUrl}}/architecture/architecturalStyles/clientServer/what/images/clientServerExamples.png" height="200" />
+<pic eager src="{{baseUrl}}/architecture/architecturalStyles/clientServer/what/images/clientServerExamples.png" height="200" />
 
 
 </box>

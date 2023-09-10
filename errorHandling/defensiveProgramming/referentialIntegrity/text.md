@@ -9,7 +9,7 @@
 A bidirectional association in the design (shown in (a)) is usually emulated at code level using two variables (as shown in (b)).
 
 
-<pic src="{{baseUrl}}/errorHandling/defensiveProgramming/referentialIntegrity/images/manWoman.png" height="140" />
+<pic eager src="{{baseUrl}}/errorHandling/defensiveProgramming/referentialIntegrity/images/manWoman.png" height="140" />
 <p/>
 
 ```java
@@ -54,7 +54,7 @@ jean.setBoyfriend(yong);
 
 Now James' girlfriend is Jean, while Jean's boyfriend is not James. This situation is a result of the code not being defensive enough to stop this "love triangle". In such a situation, you could say that _the referential integrity has been violated_. This means that _there is an inconsistency in object references_.
 
-<pic src="{{baseUrl}}/errorHandling/defensiveProgramming/referentialIntegrity/images/woman.png" height="50" />
+<pic eager src="{{baseUrl}}/errorHandling/defensiveProgramming/referentialIntegrity/images/woman.png" height="50" />
 <p/>
 
 One way to prevent this situation is to implement the two classes as shown below. Note how the referential integrity is maintained.

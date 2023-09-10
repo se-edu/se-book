@@ -2,7 +2,7 @@
 
 Explain the interactions depicted in this sequence diagram.
 
-<pic src="{{baseUrl}}/modeling/modelingBehaviors/sequenceDiagramsIntermediate/images/parserFactory.png" height="300" />
+<pic eager src="{{baseUrl}}/modeling/modelingBehaviors/sequenceDiagramsIntermediate/images/parserFactory.png" height="300" />
 <p/>
 
 <panel type="seamless" header="Hint" minimized>

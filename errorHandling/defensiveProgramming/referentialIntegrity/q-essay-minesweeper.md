@@ -11,7 +11,7 @@ Description: A minefield is divided into mine regions. Each region is assigned t
 
 Given below is an extract from our class diagram.
 
-<pic src="{{baseUrl}}/errorHandling/defensiveProgramming/referentialIntegrity/images/playerRegion.png" height="100" />
+<pic eager src="{{baseUrl}}/errorHandling/defensiveProgramming/referentialIntegrity/images/playerRegion.png" height="100" />
 <p/>
 
 Minimally, this can be implemented like this.

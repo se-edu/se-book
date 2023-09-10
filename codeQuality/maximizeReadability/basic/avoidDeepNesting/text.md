@@ -12,7 +12,7 @@
 
 **In particular, avoid [_arrowhead_ style code](https://blog.codinghorror.com/flattening-arrow-code/).**
 
-<pic src="{{baseUrl}}/codeQuality/maximizeReadability/basic/avoidDeepNesting/images/arrowheadStyle.png" width="500" />
+<pic eager src="{{baseUrl}}/codeQuality/maximizeReadability/basic/avoidDeepNesting/images/arrowheadStyle.png" width="500" />
 <p/>
 
 <box>

@@ -51,7 +51,7 @@ When separating extensions from the MSS, keep in mind that the **MSS should be s
 
 Also note that it is not useful to mention events such as power failures or system crashes as extensions because the system cannot function beyond such catastrophic failures.
 
-<pic src="{{baseUrl}}/specifyingRequirements/useCases/details/images/extension.png" height="250" />
+<pic eager src="{{baseUrl}}/specifyingRequirements/useCases/details/images/extension.png" height="250" />
 
 <p/>
 

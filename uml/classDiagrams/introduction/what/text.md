@@ -12,7 +12,7 @@
 
 {{ icon_example }} An example class diagram:
 
-<pic src="{{baseUrl}}/uml/classDiagrams/introduction/what/images/classDiagramExample1.png" width="600" />
+<pic eager src="{{baseUrl}}/uml/classDiagrams/introduction/what/images/classDiagramExample1.png" width="600" />
 
 </box>
 

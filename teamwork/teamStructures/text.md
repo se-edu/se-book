@@ -8,7 +8,7 @@
 
 Given below are three commonly used team structures in software development. Irrespective of the team structure, it is a good practice to assign roles and responsibilities to different team members so that someone is clearly in charge of each aspect of the project. In comparison, the ‘everybody is responsible for everything’ approach can result in more chaos and hence slower progress.
 
-<pic src="{{baseUrl}}/teamwork/teamStructures/images/diagram.png" height="150" />
+<pic eager src="{{baseUrl}}/teamwork/teamStructures/images/diagram.png" height="150" />
 <p/>
 
 **Egoless team**

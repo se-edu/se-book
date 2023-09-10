@@ -14,7 +14,7 @@ Given below is a scenario you can try in order to learn how to <trigger trigger=
 
 **1. Go to the GitHub repo you want to fork** e.g., [samplerepo-things](https://github.com/se-edu/samplerepo-things)
 
-**2. Click on the <pic src="images/fork.png" height="30" /> button** on the top-right corner. In the next step,
+**2. Click on the <pic eager src="images/fork.png" height="30" /> button** on the top-right corner. In the next step,
   * choose to fork to your own account or to another GitHub organization that you are an admin of.
   * ==Un-tick the `[ ] Copy the master branch only` option==, so that you get copies of other branches (if any) in the repo.
 

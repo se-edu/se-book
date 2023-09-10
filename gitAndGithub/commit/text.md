@@ -31,12 +31,12 @@ Here are the steps you can follow to learn how to create Git commits:
 
 1. Make some changes to `fruits.txt` (e.g. add some text and delete some text). Stage the changes, and commit the changes using the same steps you followed before. You should end up with something like this.
 
-   <pic src="{{baseUrl}}/gitAndGithub/commit/images/sourcetree_6.png" height="180" />
+   <pic eager src="{{baseUrl}}/gitAndGithub/commit/images/sourcetree_6.png" height="180" />
    <p/>
 
 1. Next, add two more files `colors.txt` and `shapes.txt` to the same working directory. Add a third commit to record the current state of the working directory.
 
-   <pic src="{{baseUrl}}/gitAndGithub/commit/images/sourcetree_7.png" height="150" />
+   <pic eager src="{{baseUrl}}/gitAndGithub/commit/images/sourcetree_7.png" height="150" />
    <p/>
 
    <box type="tip" seamless>

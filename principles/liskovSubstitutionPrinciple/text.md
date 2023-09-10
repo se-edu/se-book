@@ -20,7 +20,7 @@ LSP sounds the same as <trigger large trigger="click" for="modal:lsp-substitutab
 
 {{ icon_example }} Suppose the `Payroll` class depends on the `adjustMySalary(int percent)` method of the `Staff` class. Furthermore, the `Staff` class states that the `adjustMySalary` method will work for all positive percent values. Both the `Admin` and `Academic` classes override the `adjustMySalary` method.
 
-<pic src="{{baseUrl}}/principles/liskovSubstitutionPrinciple/images/payroll.png" height="200" />
+<pic eager src="{{baseUrl}}/principles/liskovSubstitutionPrinciple/images/payroll.png" height="200" />
 <p/>
 
 Now consider the following:
@@ -37,7 +37,7 @@ In the above scenario,
 
 {{ icon_example }} The `Rectangle#resize()` method can take any integers for `height` and `width`. This contract is violated by the subclass `Square#resize()` because it does not accept a `height` that is different from the `width`.
 
-<pic src="{{baseUrl}}/principles/liskovSubstitutionPrinciple/images/rectangleSquare.png" height="120" />
+<pic eager src="{{baseUrl}}/principles/liskovSubstitutionPrinciple/images/rectangleSquare.png" height="120" />
 <p/>
 
 ```java

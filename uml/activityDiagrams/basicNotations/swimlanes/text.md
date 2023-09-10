@@ -12,7 +12,7 @@
 
 {{ icon_example }} A simple example of a swimlane diagram:
 
-<pic src="{{baseUrl}}/uml/activityDiagrams/basicNotations/swimlanes/images/diagram.png" height="220" />
+<pic eager src="{{baseUrl}}/uml/activityDiagrams/basicNotations/swimlanes/images/diagram.png" height="220" />
 <p/>
 
 </box>

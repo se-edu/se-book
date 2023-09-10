@@ -16,7 +16,7 @@ Comment on how each of the following architectural styles could be potentially u
 3. SOA – The game can access a remote web service for things such as getting new puzzles, validating puzzles, charging players subscription fees, etc.
 4. Multi-layer – The server component can have two layers: the logic layer and the storage layer.
 
-<pic src="{{baseUrl}}/architecture/architecturalStyles/more/usingStyles/images/minesweeperExample.png" height="300" />
+<pic eager src="{{baseUrl}}/architecture/architecturalStyles/more/usingStyles/images/minesweeperExample.png" height="300" />
 <p/>
 
 </panel>

@@ -2,7 +2,7 @@
 
 Explain the associations, navigabilities, and multiplicities in the class diagram below:
 
-<pic src="{{baseUrl}}/modeling/modelingStructures/classDiagramsBasic/images/typicalClasssStructure.png" width="400" />
+<pic eager src="{{baseUrl}}/modeling/modelingStructures/classDiagramsBasic/images/typicalClasssStructure.png" width="400" />
 <p/>
 
 </panel>

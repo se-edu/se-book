@@ -8,7 +8,7 @@ Which of these activity diagrams use the correct UML notation?
 - [ ] iv
 - [ ] v
 
-<pic src="{{baseUrl}}/uml/activityDiagrams/basicNotations/linearPaths/images/q-correctNotation.png" width="500" />
+<pic eager src="{{baseUrl}}/uml/activityDiagrams/basicNotations/linearPaths/images/q-correctNotation.png" width="500" />
 <p/>
 
 <panel type="seamless" header="{{ icon_A }} Answer" minimized>

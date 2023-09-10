@@ -16,14 +16,14 @@
 
 Notation:
 
-<pic src="{{baseUrl}}/uml/sequenceDiagrams/objectDeletion/images/notation.png" height="100" />
+<pic eager src="{{baseUrl}}/uml/sequenceDiagrams/objectDeletion/images/notation.png" height="100" />
 <p/>
 
 <box>
 
 {{ icon_example }} Note how the below diagram shows the deletion of the `Minefield` object.
 
-<pic src="{{baseUrl}}/uml/sequenceDiagrams/objectDeletion/images/logicMinefield.png" height="120" />
+<pic eager src="{{baseUrl}}/uml/sequenceDiagrams/objectDeletion/images/logicMinefield.png" height="120" />
 <p/>
 
 </box>

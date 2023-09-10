@@ -4,7 +4,7 @@
 
 This tutorial will teach you how to create a new JavaFX application in IntelliJ, and to use the SceneBuilder to create a layouts for your application.
 
-<pic src="images/address-app-final-screenshot.png" alt="Final Screenshot" height="350" />
+<pic eager src="images/address-app-final-screenshot.png" alt="Final Screenshot" height="350" />
 <p/>
 
 ## Prerequisites
@@ -27,7 +27,7 @@ If this is the first time using IntelliJ, you need to tell IntelliJ where to fin
 
 1. On the Welcome screen, press `Configure` → `Project Default` → `Project Structure`.
 
-  <pic src="images/config-jdk-welcome-screen.png" alt="Welcome Screen" height="380" />
+  <pic eager src="images/config-jdk-welcome-screen.png" alt="Welcome Screen" height="380" />
   <p/>
 
   * If you already have a project open, go to the Welcome screen by going to `File` → `Close Project`.
@@ -36,7 +36,7 @@ If this is the first time using IntelliJ, you need to tell IntelliJ where to fin
 3. Select the directory that you install JDK on, and press `OK`.
 4. Under `Project language level:`, select `9 - Modules, private methods in interfaces etc.`.
 
-  <pic src="images/config-jdk-project-structure.png" alt="JDK 9 under Project Structure" height="350" />
+  <pic eager src="images/config-jdk-project-structure.png" alt="JDK 9 under Project Structure" height="350" />
   <p/>
 
 4. Press `OK` again.
@@ -47,7 +47,7 @@ If this is the first time using IntelliJ, you need to tell IntelliJ where to fin
 2. On the left hand side, select `Languages & Frameworks` → `JavaFX`
 3. Under `Path to SceneBuilder:`, select the path to where SceneBuilder is installed (e.g. `C:\Users\Admin\AppData\Local\SceneBuilder\SceneBuilder.exe` on Windows)
 
-  <pic src="images/config-scene-builder-settings.png" alt="Scene Builder settings" height="350" />
+  <pic eager src="images/config-scene-builder-settings.png" alt="Scene Builder settings" height="350" />
   <p/>
 
 <box type="info" header="Helpful Links">
@@ -68,7 +68,7 @@ Additionally, [Oracle also has a tutorial on JavaFX](http://docs.oracle.com/java
   * If you already have a project, you can create a new project by going `File` → `New` → `Project...`.
 2. On the left side, select `JavaFX`. Make sure that the Project SDK is set to `9` and `JavaFX Application` is selected.
 
-  <pic src="images/new-project.png" alt="New Project" height="350" />
+  <pic eager src="images/new-project.png" alt="New Project" height="350" />
   <p/>
 
 3. Press `Next`.
@@ -90,7 +90,7 @@ In We will create a package for each of the component. Ensure that your Project 
 * `seedu.address.model` - contains the _model_ classes (i.e. the part that deals with data)
 * `seedu.address.view` - contains the _views_ (i.e. the part that deals with presenting the data to the user)
 
-<pic src="images/new-packages.png" alt="New Packages" height="200" />
+<pic eager src="images/new-packages.png" alt="New Packages" height="200" />
 <p/>
 
 <box type="info">
@@ -122,34 +122,34 @@ If IntelliJ prompts for a location of the SceneBuilder executable, make sure to 
 
 1. Select the `Anchor Pane` in your Hierarchy, and adjust the size under Layout (right side). (Pref Width: 600, Pref Height: 300)
 
-<pic src="images/design-scene-builder-main-anchor.png" height="350" />
+<pic eager src="images/design-scene-builder-main-anchor.png" height="350" />
 <p/>
 
 2. Add a `Split Pane (horizontal)` (under `Containers`) by dragging it from the Library into the main area. Right-click the `Split Pane` in the Hierarchy view and select `Fit to Parent`.
 
-<pic src="images/design-scene-builder-fit-to-parent.png" height="250" />
+<pic eager src="images/design-scene-builder-fit-to-parent.png" height="250" />
 <p/>
 
 3. Drag a `TableView` (under `Controls` in Library view) into the left side of the `SplitPane`. Select the `TableView` (not a Column) and set the following layout constraints in the Inspector to the `TableView`. Inside an `AnchorPane` you can always set anchors to the four borders (see [this page](http://docs.oracle.com/javase/8/javafx/layout-tutorial/builtin_layouts.htm) for more information on Layouts).
 
-<pic src="images/design-scene-builder-table-anchors.png" height="250" />
+<pic eager src="images/design-scene-builder-table-anchors.png" height="250" />
 <p/>
 
 4. Go to the menu `Preview` → `Show Preview in Window` to see whether the layout configuration is done correctly. Try resizing the window. The `TableView` should resize together with the window as it is anchored to the borders.
 
 5. Change the column text (under Properties) to "First Name" and "Last Name".
 
-<pic src="images/design-scene-builder-table-columns.png" height="250" />
+<pic eager src="images/design-scene-builder-table-columns.png" height="250" />
 <p/>
 
 6. Select the `TableView` and choose `constrainted-resize` for the 'Column Resize Policy'. This ensures that the columns will always fill up the entire available space.
 
-<pic src="images/design-scene-builder-table-columns-resize.png" height="200" />
+<pic eager src="images/design-scene-builder-table-columns-resize.png" height="200" />
 <p/>
 
 7. Add a `Label` on the right side with the text "Person Details:". Adjust the layout using anchors (Top: 5, Left: 5. Right: Blank, Bottom: Blank).
 
-<pic src="images/design-scene-builder-title-label.png" width="800" />
+<pic eager src="images/design-scene-builder-title-label.png" width="800" />
 <p/>
 
 <box type="tip">
@@ -160,7 +160,7 @@ You can use the Search Bar at the top of Library/Inspector to find the respectiv
 
 8. Add a `GridPane` on the right side. Select it, and adjust its layout using anchors (Top: 30, Left: 5, Right: 5, Bottom: Blank).
 
-<pic src="images/design-scene-builder-grid-pane-1.png" width="600" />
+<pic eager src="images/design-scene-builder-grid-pane-1.png" width="600" />
 <p/>
 
 9. Add the following labels to the cells, such that the grid is of this form:
@@ -179,20 +179,20 @@ To add a row to the GridPane, select an existing row number, right click the row
 
 </box>
 
-<pic src="images/design-scene-builder-grid-pane-2.png" height="250" />
+<pic eager src="images/design-scene-builder-grid-pane-2.png" height="250" />
 <p/>
 
-<pic src="images/design-scene-builder-grid-pane-3.png" height="280" />
+<pic eager src="images/design-scene-builder-grid-pane-3.png" height="280" />
 <p/>
 
 10. Add a `ButtonBar` at the bottom. Add three buttons to the bar ("New...", "Edit...","Delete"). Adjust the anchors so that it stays at the bottom right (Top: Blank, Left: Blank, Right: 10, Bottom: 5).
 
-<pic src="images/design-scene-builder-button-bar.png" height="50" />
+<pic eager src="images/design-scene-builder-button-bar.png" height="50" />
 <p/>
 
 11. Now you should see something like the following. Use the `Preview` menu to test its resizing behaviour.
 
-<pic src="images/design-scene-builder-final.png" height="300" />
+<pic eager src="images/design-scene-builder-final.png" height="300" />
 <p/>
 
 12. Save the `.fxml` file.
@@ -205,22 +205,22 @@ The `PersonOverview.fxml` that we just created only contains the content of our 
 2. Right-click on `RootLayout.fxml` and choose `Open with Scene Builder`.
 3. Delete the `AnchorPane`. We will use another pane for our root layout.
 
-<pic src="images/create-main-app-delete-anchor-pane.png" height="230" />
+<pic eager src="images/create-main-app-delete-anchor-pane.png" height="230" />
 <p/>
 
 4. Add `BorderPane` by dragging it from the Library view into the main area.
 
-<pic src="images/create-main-app-add-border-pane.png" height="380" />
+<pic eager src="images/create-main-app-add-border-pane.png" height="380" />
 <p/>
 
 5. Resize the `BorderPane` (Pref Width: 600, Pref Height: 400)
 
-<pic src="images/create-main-app-resize.png" height="280" />
+<pic eager src="images/create-main-app-resize.png" height="280" />
 <p/>
 
 6. Add a `MenuBar` into the `insert TOP` slot. We will not implement menu functionality for now.
 
-<pic src="images/create-main-app-menu-bar.png" height="100" />
+<pic eager src="images/create-main-app-menu-bar.png" height="100" />
 <p/>
 
 ## The JavaFX Main Class
@@ -233,7 +233,7 @@ The generated `MainApp.java` class extends from `Application` and contains two m
 
 As you see, the `start(...)` method receives a `Stage` as parameter. The following graphic illustrates the structure of every JavaFX application:
 
-<pic src="images/javafx-hierarchy.png" height="350" />
+<pic eager src="images/javafx-hierarchy.png" height="350" />
 <p/>
 
 Image Source: http://www.oracle.com
@@ -330,7 +330,7 @@ JavaFx 9 is a separate module from Java 9. We must ensure that the modules are i
 
 Notice that IntellJ will complain about the imported modules "not being in the module graph":
 
-<pic src="images/javafx-import-error.png" height="100" />
+<pic eager src="images/javafx-import-error.png" height="100" />
 <p/>
 
 To fix this:
@@ -352,7 +352,7 @@ module AddressApp {
 
 If you run the application now (right click `MainApp.java` and select `Run MainApp.main()`), you should see something like this:
 
-<pic src="images/address-app-final-screenshot.png" height="350" />
+<pic eager src="images/address-app-final-screenshot.png" height="350" />
 <p/>
 
 ## Possible Issues
