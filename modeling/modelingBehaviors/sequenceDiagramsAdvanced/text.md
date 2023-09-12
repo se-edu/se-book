@@ -6,7 +6,7 @@
 
 <div id="body">
 
-<panel src="../../../uml/sequenceDiagrams/parallelPaths/embed.md" boilerplate  header="UML: Sequence Diagrams: Parallel Paths" is-open />
+<panel src="../../../uml/sequenceDiagrams/parallelPaths/embed.md" boilerplate  header="UML: Sequence Diagrams: Parallel Paths" expanded />
 
 </div>
 

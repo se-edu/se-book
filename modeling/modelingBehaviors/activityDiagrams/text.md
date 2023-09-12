@@ -19,14 +19,14 @@ Some examples in which a certain workflow is relevant to software project:
 
 </box>
 
-<panel type="seamless" src="../../../uml/activityDiagrams/introduction/what/unit-inElsewhere-asFlat.md#main" boilerplate header="{{ icon_prereq }} UML {{ icon_embedding }} Activity Diagrams → Introduction → What" alt="{{ icon_prereq }} UML/AD/Intro" /><p/>
+<panel type="seamless" src="../../../uml/activityDiagrams/introduction/what/unit-inElsewhere-asFlat.md#main" boilerplate header="{{ icon_prereq }} UML {{ icon_embedding }} Activity Diagrams → Introduction → What" alt="{{ icon_prereq }} UML/AD/Intro" expanded /><p/>
 
 
-<panel type="seamless" src="../../../uml/activityDiagrams/basicNotations/linearPaths/unit-inElsewhere-asFlat.md#main" boilerplate header="{{ icon_prereq }} UML {{ icon_embedding }} Activity Diagrams → Basic Notation → Linear Paths" alt="{{ icon_prereq }} UML/AD/LinearPaths" />
+<panel type="seamless" src="../../../uml/activityDiagrams/basicNotations/linearPaths/unit-inElsewhere-asFlat.md#main" boilerplate header="{{ icon_prereq }} UML {{ icon_embedding }} Activity Diagrams → Basic Notation → Linear Paths" alt="{{ icon_prereq }} UML/AD/LinearPaths" expanded />
 
-<panel type="seamless" src="../../../uml/activityDiagrams/basicNotations/alternatePaths/unit-inElsewhere-asFlat.md#main" boilerplate header="{{ icon_prereq }} UML {{ icon_embedding }} Activity Diagrams → Basic Notation → Alternate Paths" alt="{{ icon_prereq }} UML/AD/AlternatePaths" />
+<panel type="seamless" src="../../../uml/activityDiagrams/basicNotations/alternatePaths/unit-inElsewhere-asFlat.md#main" boilerplate header="{{ icon_prereq }} UML {{ icon_embedding }} Activity Diagrams → Basic Notation → Alternate Paths" alt="{{ icon_prereq }} UML/AD/AlternatePaths" expanded />
 
-<panel type="seamless" src="../../../uml/activityDiagrams/basicNotations/parallelPaths/unit-inElsewhere-asFlat.md#main" boilerplate header="{{ icon_prereq }} UML {{ icon_embedding }} Activity Diagrams → Basic Notation → Parallel Paths" alt="{{ icon_prereq }} UML/AD/ParallelPaths" />
+<panel type="seamless" src="../../../uml/activityDiagrams/basicNotations/parallelPaths/unit-inElsewhere-asFlat.md#main" boilerplate header="{{ icon_prereq }} UML {{ icon_embedding }} Activity Diagrams → Basic Notation → Parallel Paths" alt="{{ icon_prereq }} UML/AD/ParallelPaths" expanded />
 
 </div>
 

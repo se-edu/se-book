@@ -51,10 +51,10 @@
 
 <box>
 
+{{ icon_example }} Here is one way to implement the composition between `Email` and `Subject`:
+<div class="alt-java">
 
-<div class="alt-java float-end ms-5">
-
-```java{.no-line-numbers}
+```java
 class Email {
     private Subject subject;
   ...
@@ -62,9 +62,9 @@ class Email {
 ```
 
 </div>
-<div class="alt-python  float-end ms-5">
+<div class="alt-python">
 
-```python{.no-line-numbers}
+```python
 class Email:
 
   def __init__(self):
