@@ -388,12 +388,19 @@ Write more JUnit tests, to test nearly all code that _can_ be tested automatical
 
 You may omit code that are hard to test automatically e.g., GUI functionality (test those manually instead).
 
+This can include more manual testing as well e.g., testing on different OSes, different screen resolution, different OS language settings (English vs Chinese)
+
 </div>
 <div id="A-MoreErrorHandling">
 <include boilerplate src="dukeExtensionTitle.md" var-extId="A-MoreErrorHandling"
          var-extHeading="More error handling"/>
 
 Improve the code to handle all errors you anticipate the product will encounter during usage.
+
+Some examples of errors:
+* command format errors: multiple spaces where only one is expected, trailing/leading spaces in the command, an essential parameter missing, a parameter is specified multiple times, special characters used where they are not expected, ...
+* environment issues: an expected file is missing, access to a file is denied, a file content is not as expected, ...
+* data is not as expected: start date/time is later (or same as) than end/time, a value that should be unique is duplicated (e.g., two tasks with the same exact details), non-existent dates (e.g., Feb 30)
 
 </div>
 
