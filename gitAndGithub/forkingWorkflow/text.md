@@ -11,7 +11,7 @@ You can follow the steps in the simulation of a forking workflow given below to 
 {{ icon_info }} This activity is best done as a team.
 
 **Step 1. One member: set up the team org and the team repo.**
-1. [**Create a GitHub organization**](https://help.github.com/articles/creating-a-new-organization-from-scratch/) for your team.  The org name is up to you. We'll refer to this organization as _team org_ from now on.
+1. [**Create a GitHub organization**](https://help.github.com/articles/creating-a-new-organization-from-scratch/) for your team, if you don't have one already.  The org name is up to you. We'll refer to this organization as _team org_ from now on.
 
 1. [**Add a team**](https://help.github.com/enterprise/2.10/admin/guides/user-management/creating-teams/) called `developers` to your team org.
 
