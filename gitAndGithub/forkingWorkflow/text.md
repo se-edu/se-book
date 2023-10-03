@@ -46,6 +46,7 @@ You can follow the steps in the simulation of a forking workflow given below to 
 1. **[All members]** [**Sync your local repo (and your fork)** with upstream repo](https://help.github.com/articles/syncing-a-fork/). In this case, your _upstream repo_ is the repo in your team org.
    * The basic mechanism for this has two steps (which you can do using Git CLI or any Git GUI):<br>
      (1) First, pull from the upstream repo -- this will update your clone with the latest code from the upstream repo.<br>
+     If there are any unmerged branches in your local repo, you can update them too e.g., you can merge the new master branch to each of them.<br>
      (2) Then, push the updated branches to your fork. This will also update any PRs from your fork to the upstream repo.
    * Some alternatives mechanisms to achieve the same can be found in [this GitHub help page](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork).<br>
      If you are new to Git, we recommend that you use the above two-step mechanism instead, so that you get a better view of what's actually happening behind the scene.
