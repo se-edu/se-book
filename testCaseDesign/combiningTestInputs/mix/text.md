@@ -25,7 +25,7 @@ To get the first cut of test cases, let’s apply the _at least once_ strategy.
 
 **Test cases for calculateGrade V1**
 
-| Case No. | partici- pation  | projectGrade | isAbsent    | examScore | Expected    |
+| Case No. | participation  | projectGrade | isAbsent    | examScore | Expected    |
 | :------: | :------------: | :----------: | :---------: | :-------: | :---------: |
 | 1        | 0              | A            | true        | 0         | ...         |
 | 2        | 1              | B            | false       | 1         | ...         |
@@ -44,7 +44,7 @@ Next, let’s apply the _each valid input at least once in a positive test case_
 
 **Test cases for calculateGrade V2**
 
-| Case No. | partici- pation  | projectGrade | isAbsent    | examScore | Expected    |
+| Case No. | participation  | projectGrade | isAbsent    | examScore | Expected    |
 | :------: | :------------: | :----------: | :---------: | :-------: | :---------: |
 | 1        | 0              | A            | true        | 0         | ...         |
 | 2        | 1              | B            | false       | 1         | ...         |
@@ -64,7 +64,7 @@ Next, you have to apply the _no more than one invalid input in a test case_ heur
 
 **Test cases for calculateGrade V3**
 
-| Case No. | partici- pation  | projectGrade | isAbsent    | examScore | Expected    |
+| Case No. | participation  | projectGrade | isAbsent    | examScore | Expected    |
 | :------: | :------------: | :----------: | :---------: | :-------: | :---------: |
 | 1        | 0              | A            | true        | 0         | ...         |
 | 2        | 1              | B            | false       | 1         | ...         |
@@ -84,7 +84,7 @@ Next, you can assume that there is a dependency between the inputs `examScore` a
 
 **Test cases for calculateGrade V4**
 
-| Case No. | partici- pation  | projectGrade | isAbsent    | examScore | Expected    |
+| Case No. | participation  | projectGrade | isAbsent    | examScore | Expected    |
 | :------: | :------------: | :----------: | :---------: | :-------: | :---------: |
 | 1        | 0              | A            | true        | 0         | ...         |
 | 2        | 1              | B            | false       | 1         | ...         |
