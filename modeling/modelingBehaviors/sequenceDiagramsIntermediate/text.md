@@ -10,11 +10,7 @@
 <panel type="seamless" src="../../../uml/sequenceDiagrams/selfInvocation/unit-inElsewhere-asFlat.md#main" boilerplate header="{{ icon_prereq }} UML {{ icon_embedding }} Sequence Diagrams → Self-Invocation" alt="{{ icon_prereq }} UML/SD/Self-Invocation" expanded />
 <panel type="seamless" src="../../../uml/sequenceDiagrams/alternativePaths/unit-inElsewhere-asFlat.md#main" boilerplate header="{{ icon_prereq }} UML {{ icon_embedding }} Sequence Diagrams → Alternative Paths" alt="{{ icon_prereq }} UML/SD/Alternative" expanded />
 <panel type="seamless" src="../../../uml/sequenceDiagrams/optionalPaths/unit-inElsewhere-asFlat.md#main" boilerplate header="{{ icon_prereq }} UML {{ icon_embedding }} Sequence Diagrams → Optional Paths" alt="{{ icon_prereq }} UML/SD/Optional" expanded />
-
-<panel type="seamless"  header="{{ icon_prereq }} UML {{ icon_embedding }} Sequence Diagrams → Calls to Static Methods" alt="{{ icon_prereq }} UML/SD/StaticMethods">
-
-<include src="../../../uml/sequenceDiagrams/staticMethods/unit-inElsewhere-asFlat.md#main"  boilerplate />
-</panel>
+<panel type="seamless" src="../../../uml/sequenceDiagrams/staticMethods/unit-inElsewhere-asFlat.md#main" boilerplate header="{{ icon_prereq }} UML {{ icon_embedding }} Sequence Diagrams → Calls to Static Methods" alt="{{ icon_prereq }} UML/SD/Optional" expanded />
 
 </div>
 
