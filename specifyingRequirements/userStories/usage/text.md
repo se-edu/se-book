@@ -24,7 +24,7 @@
 
 As a | I want to | so that
 -----|-----------|--------
-impatient user | to be able experience reasonable response time from the website while up to 1000 concurrent users are using it | I can use the app even when the traffic is at the maximum expected level
+impatient user | to be able to experience reasonable response time from the website while up to 1000 concurrent users are using it | I can use the app even when the traffic is at the maximum expected level
 
 </box>
 
