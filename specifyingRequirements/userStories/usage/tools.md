@@ -30,10 +30,6 @@ In both cases, apply the <span class="badge rounded-pill bg-info">type.Story</sp
 
 </div>
 
-A video on GitHub Project Boards:
-
-@[youtube](C6MGKHkNtxU)
-
   </tab>
   <tab header="Google Sheets">
 
