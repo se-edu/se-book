@@ -1,6 +1,6 @@
 <panel header="{{ icon_Q }} OODM for the Course domain">
 
-**(i) Draw an OODM** for the description below, about how <tooltip content="in some universities, these are called _modules_">_courses_</tooltip> work in a certain university:
+**(i) Draw a CCD** for the description below, about how <tooltip content="in some universities, these are called _modules_">_courses_</tooltip> work in a certain university:
 
 <div class="indented text-monospace">
 
@@ -12,12 +12,12 @@ You can use the following layout for the diagram. Add more classes if needed.
 <pic eager src="images/CourseDomainLayout.png" width="50%"/>
 
 <p/>
-<panel type="seamless" header="Example OODM" minimized >
+<panel type="seamless" header="Example CCD" minimized >
   <pic eager src="{{ baseUrl }}/modeling/modelingStructures/objectOrientedDomainModels/images/diagram.png" width="700" />
 </panel>
 <p/>
 
-**(ii) Which type of a UML diagram** would you use to illustrate the following situation?
+**(ii) Which type of UML diagram** would you use to illustrate the following situation?
 
 <div class="indented text-monospace">
 
