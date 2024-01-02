@@ -7,7 +7,7 @@
 
 <panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
-True
+True. Observations made while being a user of the product can help to improve user experience of the product.
 
 </panel>
 </panel>
