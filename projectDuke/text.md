@@ -94,7 +94,8 @@ The project consists of the following _increments_:
 
 ### Level 0. Rename, Greet, Exit
 
-**(a) Give your chatbot a new name**, to differentiate it from the placeholder name `Duke`.
+**(a) Give your chatbot a new name**, to differentiate it from the placeholder name `Duke`.<br>
+**Avoid these common choices** as well: `Chatty`, `Jarvis`, `ChatBot`, `Chad`
 
 **(b) Implement an initial _skeletal_ version** of the it that simply greets the user and exits.
 <br>
