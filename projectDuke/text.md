@@ -310,6 +310,11 @@ blah
     ____________________________________________________________
 ```
 
+<box type="important" seamless>
+
+You are strongly encouraged to use your own wording for the error messages, rather than use the error message given in the example above.
+</box>
+
 <include boilerplate src="dukeNestedFragment.md" var-target="A-Exceptions" var-name="Extension: `A-Exceptions`" />
 
 * **Minimal**: handle at least the two types of errors shown in the example above.
