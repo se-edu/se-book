@@ -35,6 +35,56 @@ Note 1: A case where both conditions are `true` is needed because most execution
 
 
 * **Path coverage** measures coverage in terms of possible paths through a given part of the code executed. 100% path coverage means all possible paths have been executed. A commonly used notation for path analysis is called the _Control Flow Graph (CFG)_.
+
+<box>
+
+{{ icon_example }} Consider the following Java method.
+
+```java
+void findRate(int input) {
+    if (input == 0) {
+        return 0;
+    }
+    cap = 100/input;
+    if (cap < 0) {
+        return -1;
+    } else {
+        return cap;
+    }
+}
+```
+
+It has 3 paths, as follows:
+
+1. enter -> `2` -> `3` -> exit (can be triggered by input `0`)
+1. enter -> `2` -> `5` -> `6`  -> `7` -> exit (can be triggered by input `-5`)
+1. enter -> `2` -> `5` -> `6`  -> `9` -> exit (can be triggered by input `8`)
+
+So, to achieve 100% path coverage, we need at least 3 test cases (e.g., `0`, `-5`, `8`).
+</box>
+
+<box>
+
+{{ icon_example }} A loop can increase the path count greatly.
+
+```java
+void sayHello(List<String> names) {
+    for (String n : names) {
+        System.out.println(n);
+    }
+}
+```
+
+The number of paths through this method is very large, as each possible length of `names` produces a unique path.
+
+1. enter -> `2` -> exit (if `names` is empty)
+1. enter -> `2` -> `3` -> exit (if `names` has one entry)
+1. enter -> `2` -> `3` ->  `2` -> `3` -> exit (if `names` has two entries)
+1 ...
+
+So, achieving 100% path coverage of this method will be extremely difficult.
+</box>
+
 * **Entry/exit coverage** measures coverage in terms of possible _calls to_ and _exits_ from the operations in the SUT.<br>
   _Entry points_ refer to all places from which the method is called from the rest of the code i.e., all places where the control is handed over to the method in concern.<br>
   _Exit points_ refer to points at which the control is returned to the caller e.g., return statements, throwing of exceptions.
