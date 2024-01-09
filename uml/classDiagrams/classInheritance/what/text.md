@@ -22,7 +22,26 @@ Notation:
 
 </box>
 
-Note: It does not matter whether the triangle is filled or empty.
+**It does not matter whether the triangle is filled or empty.**
+
+<box>
+
+{{ icon_example }} Here's an example that combines inheritance with generics:
+
+```java
+class Foo<T> {
+}
+
+class Bar<T> extends Foo<T> {
+}
+
+class Goo extends Foo<String> {
+}
+```
+
+<puml src="images/cd-inheritance-and-generics.puml" />
+
+</box>
 
 </div>
 

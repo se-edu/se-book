@@ -1,0 +1,17 @@
+@startuml
+skinparam classAttributeIconSize 0
+skinparam shadowing false
+hide circle
+hide empty members
+skinparam class {
+  BorderColor Grey
+}
+
+class "Foo<T>" as FooT
+class "Bar<T>" as BarT
+class "Foo<String>" as FooString
+class Goo
+FooT<|-down- BarT
+FooString<|-down- Goo
+FooT <.. FooString
+@enduml
