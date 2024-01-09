@@ -19,6 +19,8 @@ To reduce clutter, **optional elements (e.g, activation bars, return arrows) may
 
 </box>
 
+{{ icon_tip }} If method parameters don't matter to the purpose of the sequence diagram, you can omit them using `...` e.g., use `foo(...)` instead of `foo(int size, double weight)`.
+
 </div>
 
 <div id="extras">

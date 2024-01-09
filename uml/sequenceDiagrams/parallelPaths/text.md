@@ -20,13 +20,12 @@ Notation:
 <pic eager src="{{baseUrl}}/uml/sequenceDiagrams/parallelPaths/images/logicServerData.png" height="150" />
 <p/>
 
-<box>
+
+</box>
+
 
 {{ icon_tip }} If you show parallel paths in a sequence diagram, the corresponding Java implementation is likely to be _multi-threaded_ %%because a normal Java program cannot do multiple things at the same time%%.
 
-</box>
-
-</box>
 
 </div>
 

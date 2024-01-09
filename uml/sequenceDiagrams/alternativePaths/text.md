@@ -10,14 +10,14 @@
 
 Notation:
 
-<pic eager src="{{baseUrl}}/uml/sequenceDiagrams/alternativePaths/images/notation.png" height="100" />
+<pic eager src="{{baseUrl}}/uml/sequenceDiagrams/alternativePaths/images/notation.png" width="200" />
 <p/>
 
 <box>
 
 {{ icon_example }} `Minefield` calls the `Cell#setMine` method if the cell is supposed to be a mined cell, and calls the `Cell:setMineCount(...)` method otherwise.
 
-<pic eager src="{{baseUrl}}/uml/sequenceDiagrams/alternativePaths/images/minefieldCell.png" height="180" />
+<pic eager src="{{baseUrl}}/uml/sequenceDiagrams/alternativePaths/images/minefieldCell.png" width="250" />
 <p/>
 
 </box>

@@ -17,11 +17,11 @@ Notation:
 
 {{ icon_example }} The details of the `get minefield appearance` interactions have been omitted from the diagram.
 
-<pic eager src="{{baseUrl}}/uml/sequenceDiagrams/referenceFrames/images/playerTextLogic.png" height="250" />
+<pic eager src="{{baseUrl}}/uml/sequenceDiagrams/referenceFrames/images/playerTextLogic.png" width="350" />
 <p/>
 
 Those details are shown in a separate sequence diagram given below.<br>
-<pic eager src="{{baseUrl}}/uml/sequenceDiagrams/referenceFrames/images/textLogic.png" height="170" />
+<pic eager src="{{baseUrl}}/uml/sequenceDiagrams/referenceFrames/images/textLogic.png" width="350" />
 <p/>
 
 </box>
