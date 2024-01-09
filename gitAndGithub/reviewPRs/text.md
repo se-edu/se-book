@@ -23,6 +23,13 @@ Given below are some steps you can follow when reviewing a PR.
 
 **3. Click on the** <span class="tab">:octicon-diff: Files changed</span> tab to see the _diff_ view.
 
+<div class="indented-level1">
+
+{{ icon_tip }} You can use the following setting to try the two different views available and pick the one you like.<br>
+<pic src="images/splitVsUnifiedDiffView.png"/>
+</div>
+
+
 **4. Add review comments:**
 1. Hover over the line you want to comment on and click on the <span style="color:#0066ff">:fas-plus-square:</span> icon that appears on the left margin. That should create a text box for you to enter your comment.
    * {{ icon_tip }} To give a comment related to multiple lines, click-and-drag the <span style="color:#0066ff">:fas-plus-square:</span> icon. The result will look like this:<br>
