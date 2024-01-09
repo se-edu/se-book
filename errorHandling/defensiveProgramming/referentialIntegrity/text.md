@@ -71,7 +71,9 @@ public class Woman {
             boyfriend.breakUp();
         }
         boyfriend = m;
-        m.setGirlfriend(this);
+        if (m != null) {
+            m.setGirlfriend(this);
+        }
     }
 
     public void breakUp() {
@@ -93,7 +95,9 @@ public class Man {
             girlfriend.breakUp();
         }
         girlfriend = w;
-        w.setBoyfriend(this);
+        if (w != null) {
+            w.setBoyfriend(this);
+        }
     }
     public void breakUp() {
         girlfriend = null;
