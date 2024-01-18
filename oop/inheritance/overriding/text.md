@@ -6,7 +6,7 @@
 
 <div id="body">
 
-**Method _overriding_ is when a sub-class changes the behavior inherited from the parent class** by re-implementing the method. Overridden methods have the same name, same type signature, and same return type.
+**Method _overriding_ is when a subclass changes the behavior inherited from the parent class** by re-implementing the method. Overridden methods have the same name, the same type signature, and the same (or a subtype of the) return type.
 
 <box>
 
