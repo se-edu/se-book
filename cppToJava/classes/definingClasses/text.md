@@ -120,11 +120,11 @@ public Time(int hour, int minute, int second) {
 
 ##### Instance methods
 
-**You can add methods to a class which can then be used from the objects of that class.** These _instance_ methods do not have the `static` keyword in the method signature. Instance methods can access attributes of the class.
+**You can add methods to a class which can then be used from the objects of that class.** These _instance_ methods do not have the `static` keyword in their method signature. Instance methods can access attributes of the class.
 
 <box>
 
-{{ icon_example }} Here's how you can add a method to the `Time` class to get the number of seconds passed till midnight.
+{{ icon_example }} Here's how you can add a method to the `Time` class to get the number of seconds passed since midnight.
 
 ```java
 public int secondsSinceMidnight() {
