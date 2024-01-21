@@ -16,4 +16,4 @@ $ git reset --mixed HEAD~1
 $ git reset --hard HEAD~1
 ```
 
-**To undo/delete last n commits**: `HEAD~1` is used to tell get you are targeting the commit one position before the latest commit -- in this case the target commit is the one we want to reset to, not the one we want to undo (as the command used is `reset`). To undo/delete two last commits, you can use `HEAD~2`, and so on.
+**To undo/delete last n commits**: `HEAD~1` is used to tell Git you are targeting the commit one position before the latest commit -- in this case the target commit is the one we want to reset to, not the one we want to undo (as the command used is `reset`). To undo/delete two last commits, you can use `HEAD~2`, and so on.
