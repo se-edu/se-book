@@ -30,7 +30,7 @@ Let's take your first few steps in your Git journey.
 
 As you see above, this textbook explains how to use Git via Sourcetree (a GUI client) as well as via the Git CLI. If you are new to Git, **we recommend you learn !!both!! the GUI method and the CLI method** -- The GUI method will help you visualize the result better while the CLI method is more universal (i.e., you will not be tied to any GUI) and more flexible/powerful.
 
-**It is fine to learn the CLI way only** (using Sourcetree is optional), especially if you normally prefer to work with CLI user GUI.
+**It is fine to learn the CLI way only** (using Sourcetree is optional), especially if you normally prefer to work with CLI over GUI.
 </box>
 
 <box type="warning" seamless>
