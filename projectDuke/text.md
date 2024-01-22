@@ -97,7 +97,7 @@ The project consists of the following _increments_:
 **(a) Give your chatbot a new name**, to differentiate it from the placeholder name `Duke`.<br>
 **Avoid these common choices** as well: `Chatty`, `Jarvis`, `ChatBot`, `Chad`
 
-**(b) Implement an initial _skeletal_ version** of the it that simply greets the user and exits.
+**(b) Implement an initial _skeletal_ version** of it that simply greets the user and exits.
 <br>
 Example:
 ```{.no-line-numbers}
