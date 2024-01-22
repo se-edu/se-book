@@ -29,7 +29,7 @@ public class HashMapDemo {
 
         // check if a key or a value exists
         print("Key x1 exists? " + points.containsKey("x1"));
-        print("Key x1 exists? " + points.containsKey("y1"));
+        print("Key y1 exists? " + points.containsKey("y1"));
         print("Value (0,0) exists? " + points.containsValue(new Point(0, 0)));
         print("Value (1,2) exists? " + points.containsValue(new Point(1, 2)));
 
@@ -60,7 +60,7 @@ public class HashMapDemo {
 ```
 Coordinates of x1: [0,0]
 Key x1 exists? true
-Key x1 exists? false
+Key y1 exists? false
 Value (0,0) exists? true
 Value (1,2) exists? false
 x1 = [-1,-1]
