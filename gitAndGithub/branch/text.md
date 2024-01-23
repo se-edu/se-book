@@ -55,7 +55,7 @@ Now that you have some idea how the repo will look like when branches are being 
 {{ show_git_tabs('_1') }}
 
 **2. Create some commits in the new branch.** %%Just commit as per normal. Commits you add while on a certain branch will become part of that branch.%%<br>
-Note how the `master` label and the `HEAD` label moves to the new commit (The `HEAD` label of the local repo is represented as :fas-dot-circle: in Sourcetree).
+Note how the `master` label and the `HEAD` label moves to the new commit (The `HEAD` label of the local repo is represented as :fas-dot-circle: in Sourcetree, as illustrated in the screenshot below).
 
 <pic eager src="images/sourcetree_HEAD_dot.png" />
 
