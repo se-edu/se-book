@@ -13,6 +13,10 @@ Here's how you can tag a commit in a local repo:
 
 After adding a tag to a commit, you can use the tag to refer to that commit, as an alternative to using the hash.
 
+<box type="info" seamless>
+
+**Annotated vs Lightweight Tags**: The Git tags explained above are known as _lightweight_ tags. There is another type of Git tags called _annotated_ tags. See [git-scm.com/book](https://git-scm.com/book/en/v2/Git-Basics-Tagging) for more info.
+</box>
 <box type="warning" seamless>
 
 **Tags are different from commit messages**, in purpose and in form. A commit message is a description of the commit that is _part of_ the commit itself. A tags is a short name for a commit, which exists as a separate entity that _points to_ a commit.

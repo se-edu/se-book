@@ -1,7 +1,7 @@
 To add a tag to the current commit as `v1.0`:
 
 ```{.no-line-numbers}
-$ git tag –a v1.0
+$ git tag v1.0
 ```
 
 To view tags:
