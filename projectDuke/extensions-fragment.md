@@ -62,7 +62,7 @@ public class Deadline extends Task {
 
 ```java
 Task[] tasks = new Task[100];
-task[0] = new Deadline("return book", "Monday");
+tasks[0] = new Deadline("return book", "Monday");
 ```
 
 </panel>
