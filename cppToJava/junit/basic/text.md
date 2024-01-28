@@ -56,7 +56,7 @@ public class IntPairTest {
         // normal division results in a decimal answer 1.9
         assertEquals(1, new IntPair(19, 10).intDivision());
 
-        // dividend is zero but devisor is not
+        // dividend is zero but divisor is not
         assertEquals(0, new IntPair(0, 5).intDivision());
     }
 
