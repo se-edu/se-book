@@ -90,7 +90,7 @@ Given below is a scenario you can try in order to learn how to create PRs:
    git checkout master
    git pull upstream master
    ```
-1. In the local repo, and attempt to merge the `master` branch (that you updated in the previous step) onto the PR branch, in order to bring over the new code in the `master` branch to your PR branch.
+1. In the local repo, attempt to merge the `master` branch (that you updated in the previous step) onto the PR branch, in order to bring over the new code in the `master` branch to your PR branch.
    ```{.no-line-numbers}
    git checkout pr-branch  # assuming pr-branch is the name of branch in the PR
    git merge master
