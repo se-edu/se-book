@@ -79,7 +79,7 @@ public class FileReadingDemo {
 
 <box>
 
-{{ icon_example }} The `writeToFile` method below uses a `FileWrite` object to write to a file. The method is being used to write two lines to the file `temp/lines.txt`.
+{{ icon_example }} The `writeToFile` method below uses a `FileWriter` object to write to a file. The method is being used to write two lines to the file `temp/lines.txt`.
 
 ```java
 import java.io.FileWriter;
