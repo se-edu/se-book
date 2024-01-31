@@ -273,8 +273,8 @@ Gradle support is provided as a separate branch (named `add-gradle-support`) in 
 Refer to the [_Gradle tutorial_ @SE-EDU](https://se-education.org/guides/tutorials/gradle.html) to learn how to use Gradle (in the context of this project).
 
 * **Minimal**: Set up gradle so that you can build and run Duke using gradle.
-* **Recommended**: Set up gradle to run unit tests.
-* **Stretch Goal**: Use gradle to automate more things in your project.
+* **Recommended**: Be able to run JUnit tests using Gradle (this can only be done after you've reached the `A-JUnit` increment).
+* **Stretch Goal**: Use gradle to automate more things in your project, as you progress through the project.
 
 </div><hr>
 <div id="A-CI">
