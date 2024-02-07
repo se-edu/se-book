@@ -10,7 +10,7 @@ In the context of OOP associations, **a _dependency_ is a need for one class to 
 
 <box>
 
-{{ icon_example }} A `Course` class can have a dependency on a `Registrar` class because the `Course` class needs to refer to the `Registrar` class to obtain the the maximum number of students it can support (e.g., `Registrar.MAX_COURSE_CAPACITY`).
+{{ icon_example }} A `Course` class can have a dependency on a `Registrar` class because the `Course` class needs to refer to the `Registrar` class to obtain the maximum number of students it can support (e.g., `Registrar.MAX_COURSE_CAPACITY`).
 
 </box>
 
