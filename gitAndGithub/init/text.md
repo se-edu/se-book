@@ -33,11 +33,6 @@ As you see above, this textbook explains how to use Git via Sourcetree (a GUI cl
 **It is fine to learn the CLI way only** (using Sourcetree is optional), especially if you normally prefer to work with CLI over GUI.
 </box>
 
-<box type="warning" seamless>
-
-If you are new to Git, **we caution you against using Git or GitHub features that come with the IDE** as it is better to learn Git independent of any other tool. Similarly, using clients provided by GitHub (e.g., _GitHub Desktop_ GUI client) will make it harder for you to separate Git features from GitHub features.
-</box>
-
 </div>
 <div id="extras">
 </div>
