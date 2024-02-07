@@ -109,6 +109,7 @@ ____________________________________________________________
 ____________________________________________________________
 ```
 * Horizontal lines are optional.
+* Recommended to rename `Duke.java` to match the chatbot name you selected, and remove all traces of `Duke` from the source code.
 
 </div><hr><!-- ================================================================================================ -->
 <div id="Level-1">
