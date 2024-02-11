@@ -7,9 +7,9 @@
 
 <panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
-- [ ] a. Reason: Despite the name, user stories are not related to 'stories' about the software.
-- [x] b.
-- [ ] c. Reason: It is possible to use software to record user stories. When the team members are not co-located this may be the only option.
+* a. Reason: Despite the name, user stories are not related to 'stories' about the software.{{ bullet_checkbox_red }}
+* b.{{ bullet_checkbox_selected_green }}
+* c. Reason: It is possible to use software to record user stories. When the team members are not co-located this may be the only option.{{ bullet_checkbox_red }}
 
 </panel>
 </panel>
