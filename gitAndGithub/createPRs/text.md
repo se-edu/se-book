@@ -71,7 +71,7 @@ Given below is a scenario you can try in order to learn how to create PRs:
 </span>
 
 
-**The next step of the PR life cycle is the PR _review_.** The members of the repo that received your PR can now review your proposed changes.
+**The next step of the PR lifecycle is the PR _review_.** The members of the repo that received your PR can now review your proposed changes.
 * If they like the changes, they can _merge_ the changes to their repo, which also closes the PR automatically.
 * If they don't like it at all, they can simply close the PR too i.e., they reject your proposed change.
 * In most cases, they will add comments to the PR to suggest further changes. When that happens, GitHub will notify you.

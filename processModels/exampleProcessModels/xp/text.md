@@ -12,7 +12,7 @@ The following description was adapted from the [XP home page](http://www.extreme
 
 **Extreme Programming (XP) stresses customer satisfaction.** Instead of delivering everything you could possibly want on some date far in the future, this process delivers the software you need as you need it.
 
-**XP aims to empower developers to confidently respond to changing customer requirements**, even late in the life cycle.
+**XP aims to empower developers to confidently respond to changing customer requirements**, even late in the lifecycle.
 
 **XP emphasizes teamwork.** Managers, customers, and developers are all equal partners in a collaborative team. XP implements a simple, yet effective environment enabling teams to become highly productive. The team self-organizes around the problem to solve it as efficiently as possible.
 
