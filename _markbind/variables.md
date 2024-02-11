@@ -5,6 +5,10 @@
 <span class="badge bg-light text-dark"><md>%%<include src="text.md#outcomes" inline />%%</md></span><p/>
 </variable>
 
+<variable id="bullet_checkbox">{ icon="far-square" }</variable>
+<variable id="bullet_checkbox_red">{ icon="far-square" i-class="text-danger" }</variable>
+<variable id="bullet_checkbox_selected">{ icon="fas-square-check" }</variable>
+<variable id="bullet_checkbox_selected_green">{ icon="fas-square-check" i-class="text-success" }</variable>
 <variable id="icon_deadline">:alarm_clock:</variable>
 <variable id="icon_dislike"><md>:fas-thumbs-down:</md></variable>
 <variable id="icon_example"><md>:fas-cube:</md></variable>
