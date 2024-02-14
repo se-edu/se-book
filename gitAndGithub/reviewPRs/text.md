@@ -23,7 +23,7 @@ Given below are some steps you can follow when reviewing a PR.
 
 **3. Click on the** <span class="tab">:octicon-diff: Files changed</span> tab to see the _diff_ view.
 
-<div class="indented-level1">
+<div class="indented-level1" id="tip-pr-split-view">
 
 {{ icon_tip }} You can use the following setting to try the two different views available and pick the one you like.<br>
 <pic src="images/splitVsUnifiedDiffView.png"/>
