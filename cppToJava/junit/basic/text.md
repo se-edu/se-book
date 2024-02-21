@@ -23,8 +23,8 @@ public class IntPair {
     }
 
     /**
-     * Returns the result of applying integer division first/second.
-     * @throws Exception if second is 0
+     * Returns The result of applying integer division first/second.
+     * @throws Exception if second is 0.
      */
     public int intDivision() throws Exception {
         if (second == 0){

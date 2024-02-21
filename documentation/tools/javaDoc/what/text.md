@@ -23,9 +23,9 @@
  * the screen, the data will be loaded. The graphics primitives
  * that draw the image will incrementally paint on the screen.
  *
- * @param url an absolute URL giving the base location of the image
- * @param name the location of the image, relative to the url argument
- * @return the image at the specified URL
+ * @param url An absolute URL giving the base location of the image.
+ * @param name The location of the image, relative to the url argument.
+ * @return The Image at the specified URL.
  * @see Image
  */
 public Image getImage(URL url, String name) {
