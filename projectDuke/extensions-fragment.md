@@ -403,6 +403,17 @@ Some examples of errors:
 * data is not as expected: start date/time is later (or same as) than end/time, a value that should be unique is duplicated (e.g., two tasks with the same exact details), non-existent dates (e.g., Feb 30)
 
 </div>
+<div id="A-AiAssisted">
+<include boilerplate src="dukeExtensionTitle.md" var-extId="A-AiAssisted"
+         var-extHeading="Enhance the code using AI tools"/>
+
+Use AI tools (e.g., GitHub Copilot, ChatGPT) to enhance your chatbot code. For example, you can get AI tools to help you,
+
+* improve the quality of the current code.
+* tweak an existing feature to make it more useful to the user.
+* add or improve documentation, tests.
+
+</div>
 
 <!-- ======================================================================================================= -->
 
