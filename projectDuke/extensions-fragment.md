@@ -329,7 +329,7 @@ Add a User Guide to the project in the following way:
   1. Click `Pages` on the menu on the left edge of page.
   1. Set the `Source` as: [**%%:octicon-git-branch: Branch:%%** master :octicon-triangle-down:] branch and [:octicon-file-directory: /docs :octicon-triangle-down:] folder and click `Save`.<br>
      You can select a theme too.
-* Go to `http://{your username}.github.io/{repo name}/` to view the user guide of your product. %%Note: it could take 5-10 minutes for GitHub to update the page.%%<br>
+* Go to `https://{your username}.github.io/{repo name}/` to view the user guide of your product. %%Note: it could take 5-10 minutes for GitHub to update the page.%%<br>
   {{ icon_important_big_red }} It is important that you carefully check the content of the UG available at the above URL to ensure the HTML version of the page (auto-converted from MarkDown by GitHub Pages) has the right content. In some rare cases, the page might look alright on GitHub file preview but will not render correctly on GitHub pages.
 
 **Minimal**:
