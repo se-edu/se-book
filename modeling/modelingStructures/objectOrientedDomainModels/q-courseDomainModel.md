@@ -1,4 +1,4 @@
-<panel header="{{ icon_Q }} OODM for the Course domain">
+<panel header="{{ icon_Q }} CCD for the Course domain">
 
 **(i) Draw a CCD** for the description below, about how <tooltip content="in some universities, these are called _modules_">_courses_</tooltip> work in a certain university:
 
