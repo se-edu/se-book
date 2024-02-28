@@ -84,7 +84,7 @@ The objective of that merge was to _sync_ the `feature1` branch with the `master
 
 ****To undo a merge****,
 
-1. Ensure you are in the branch that received the merge.
+1. Ensure you are in the <popover content="If you merged branch `foo` onto branch `bar`, branch `bar` is the _receiving branch_">branch that received the merge</popover>.
 1. Do a hard reset (similar to <trigger trigger="click" for="modal:merge-reset">how you delete a commit</trigger>) of that branch to the commit that would be the tip of that branch had you not done the offending merge.
 
 <modal large id="modal:merge-reset">
@@ -129,7 +129,7 @@ Instead of merging `master` to `feature1`, an alternative is to [_rebase_](https
 
 <box type="wrong" seamless>
 
-**Avoid this common rookie mistake!**{.text-danger}
+**Avoid this rookie mistake!**{.text-danger}
 
 ==Always remember to switch back to the `master` branch before creating a new branch.== If not, your new branch will be created on top of the current branch.
 </box>
