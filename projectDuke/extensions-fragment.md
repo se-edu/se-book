@@ -627,7 +627,7 @@ Support recording info about places %%e.g., info about restaurants visited, for 
 <include boilerplate src="dukeExtensionTitle.md" var-extId="D-Trivia" var-extStyle="danger"
          var-extHeading="Support managing trivia"/>
 
-Provide the ability to learn/memorize things%%e.g., learn vocabulary, answers to questions%%
+Provide the ability to learn/memorize things %%e.g., learn vocabulary, answers to questions%%
 </div>
 <div id="D-Clients">
 <include boilerplate src="dukeExtensionTitle.md" var-extId="D-Clients" var-extStyle="danger"
