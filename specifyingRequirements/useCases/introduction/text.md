@@ -55,10 +55,10 @@ Extensions:
 * System: A Learning Management System (LMS)
 * Actor: Student
 * Use Case: Upload file
-  1. Student requests to upload file
-  2. LMS requests for the file location
-  3. Student specifies the file location
-  4. LMS uploads the file
+  1. Student requests to upload file.
+  2. LMS requests for the file location.
+  3. Student specifies the file location.
+  4. LMS uploads the file.
 
 </div>
 </panel>

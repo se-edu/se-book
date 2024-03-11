@@ -38,7 +38,7 @@ Complete the following use case (MSS, extensions, etc.).
               <li>...</li>
             </ol>
           </li>
-          <li>*b. LearnSys times out
+          <li>*b. LearnSys times out.
             <ol class="custom-bullet-list">
               <li>...</li>
             </ol>
@@ -50,7 +50,7 @@ Complete the following use case (MSS, extensions, etc.).
               <li>Use case resumes at step 3.</li>
             </ol>
           </li>
-          <li>3b. Student chooses to attach picture/file
+          <li>3b. Student chooses to attach picture/file.
             <ol class="custom-bullet-list">
               <li>...</li>
             </ol>
