@@ -38,7 +38,7 @@
 
   title | `Add deadline`
   ------|---------------------------------
-  Description | `As a user I can so that I can keep track of my deadlines`
+  Description | `As a user I can add a deadline so that I can keep track of my deadlines`
 
   In both cases, apply the <span class="badge rounded-pill bg-info">type.Story</span> label.
 
