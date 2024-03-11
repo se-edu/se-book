@@ -28,7 +28,7 @@ You can follow the steps in the simulation of a forking workflow given below to 
 
 1. **Create a branch** named `add-{your name}-info` (e.g. `add-johnTan-info`) in the local repo.
 
-1. **Add a file** `yourName.md` into the `members` directory (e.g., `members/jonhTan.md`) containing some info about you into that branch.
+1. **Add a file** `yourName.md` into the `members` directory (e.g., `members/johnTan.md`) containing some info about you into that branch.
 
 1. **Push that branch to your fork**.
 
