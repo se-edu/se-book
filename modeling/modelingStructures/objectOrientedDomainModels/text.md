@@ -40,7 +40,7 @@ Description: The snakes and ladders game is played by two or more players using 
 
 **CCDs represents the class _structure_ of the problem domain** and not their behavior, just like class diagrams. To show behavior, use other diagrams such as sequence diagrams.
 
-**CCD notation is a subset of the class diagram notation (omitsmethods and navigability).**
+**CCD notation is a subset of the class diagram notation (omits methods and navigability).**
 
 </div>
 
