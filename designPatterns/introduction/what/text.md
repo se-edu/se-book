@@ -24,7 +24,7 @@ In software development, there are certain problems that recur in a certain cont
 
 </box>
 
-After repeated attempts at solving such problems, better solutions are discovered and refined over time. These solutions are known as design patterns, **a term popularized by the seminal book** [**_Design Patterns: Elements of Reusable Object-Oriented Software_ by the so-called "Gang of Four" (GoF)**](https://en.wikipedia.org/wiki/Design_Patterns) written by Eric Gamma, Richard Helm, Ralph Johnson, and John Vlissides.
+After repeated attempts at solving such problems, better solutions are discovered and refined over time. These solutions are known as design patterns, **a term popularized by the seminal book** [**_Design Patterns: Elements of Reusable Object-Oriented Software_ by the so-called "Gang of Four" (GoF)**](https://en.wikipedia.org/wiki/Design_Patterns) written by Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides.
 
 
 </div>
