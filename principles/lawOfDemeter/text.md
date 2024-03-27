@@ -15,7 +15,7 @@ More concretely, a method `m` of an object `O` should invoke only the methods of
 * The object `O` itself
 * Objects passed as parameters of `m`
 * Objects created/instantiated in `m` (directly or indirectly)
-* Objects from the <tooltip content="objects that are held by instance variables of">direct association of</tooltip> `O`
+* Objects from the <tooltip content="i.e., objects that are held by instance variables of `O`">direct association of `O`</tooltip>
 
 <box>
 
