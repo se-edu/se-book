@@ -2,7 +2,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes"></span>
+<span id="outcomes"><!-- --></span>
 
 <div id="body">
 
