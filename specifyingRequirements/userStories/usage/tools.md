@@ -26,7 +26,7 @@
 
   <div id="user-stories-in-issue-tracker">
 
-  You can break the user story into issue subject and description in this way:
+  You can break the user story into issue subject and description as follows:
 
   title | `As a user I can add a deadline`
   ------|---------------------------------
