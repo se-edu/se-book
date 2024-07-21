@@ -63,7 +63,7 @@ mark 2
 
 blah
     ____________________________________________________________
-     ☹ OOPS!!! I'm sorry, but I don't know what that means :-(
+     OOPS!!! I'm sorry, but I don't know what that means :-(
     ____________________________________________________________
 
 bye
