@@ -1,15 +1,21 @@
 <panel type="secondary" header="###  <small><small>{{ icon_important }} [Exercise] Run HelloWorld</small></small>" expanded >
 
-**A. Install Java 11** in your computer, if you haven't done so already. Ensure the installation is correct, as follows.<br>
-{{ icon_tip }} If you are using a Mac, the first part of [this video](https://www.youtube.com/watch?v=09NLTY3izM8) explains how to install and verify Java on a Mac.
+**A. Install Java** in your computer, if you haven't done so already. Java 17 is recommended.
+
+<box type="secondary" icon=":fab-apple:" seamless>
+
+Mac users can follow [this se-edu/guide](https://se-education.org/guides/tutorials/javaInstallationMac.html) to install Java.
+</box>
+
+Ensure the installation is correct, as follows.
 
    1. Open a command prompt.
-   1. Run the command `java -version`. Confirm that the output indicates that you have Java 11. Sample output:
-      ```{highlight-lines="1[14:27]" .no-line-numbers}
+   1. Run the command `java -version`. Confirm that the output indicates that you have Java 17. Sample output:
+      ```{highlight-lines="1[14:27],2[14:16]" .no-line-numbers}
       C:\Users\john>java -version
-      java version "11.0.11" 2021-04-20 LTS
-      Java(TM) SE Runtime Environment 18.9 (build ...
-      Java HotSpot(TM) 64-Bit Server VM 18.9 (build ...
+      java version "17._._" ...
+      ...
+      ...
       ```
    1. Run the command `javac` and ensure it results in a help message.
       If it outputs an error message such as `javac is not recognized as internal or external command`, you need to configure the `PATH` variable of your OS so that the OS know where your `javac` executable is.
