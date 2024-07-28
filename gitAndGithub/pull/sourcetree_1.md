@@ -15,5 +15,5 @@ This is what you will see.
 
 Note the following (cross-refer the screenshot above):
 
-Arrow marked as `a`: The local repo is now at this commit, marked by the `master` label.<br>
-Arrow marked as `b`: The `origin/master` label shows what is the latest commit in the `master` branch in the remote repo. `origin` is the default name given to the upstream repo you cloned from.
+* Arrow marked as `a`: The local repo is now at this commit, marked by the `master` label.<br>
+* Arrow marked as `b`: The `origin/master` label shows what is the latest commit in the `master` branch in the remote repo. `origin` is the default name given to the upstream repo you cloned from. You can ignore the `origin/HEAD` label for now.
