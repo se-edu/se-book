@@ -168,9 +168,12 @@ class Table:
 
 </box>
 
+<box type="warning" seamless>
+
+**There is no _default_ visibility** in UML. If a class diagram does not show the visibility of a <tooltip content="i.e., an attribute or an operation">member</tooltip>, it simply means the _visibility is not shown_ (for reasons such as the visibility not being decided yet or it being not important to the purpose of the diagram).
+</box>
 
 <div class="alt-java">
-
 
 **Generic classes can be shown as given below**. The notation format is shown on the left, followed by two examples.
 
