@@ -23,6 +23,16 @@
 
 </box>
 
+<box type="info" seamless>
+
+**The arrow<u>head</u> (not the entire arrow) denotes the navigability.** The line denotes the association, as before. So, the navigability (i.e., the arrowhead) is an extra annotation added to an association line.
+
+For example, both diagrams below show an association between `Foo` and `Bar`. But the one on the right shows the navigability as well.
+
+<pic eager src="{{baseUrl}}/uml/classDiagrams/associations/navigability/images/withAndWithoutNavigability.png" height="40" />
+
+</box>
+
 **Navigability can be shown in class diagrams as well as object diagrams**.
 
 <box>
