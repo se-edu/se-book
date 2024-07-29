@@ -19,7 +19,7 @@ An example (from the same source as above) is the code smell _data class_ i.e., 
 * [Temporary Field](https://refactoring.guru/smells/temporary-field)
 * [Shotgun Surgery](https://refactoring.guru/smells/shotgun-surgery)
 
-**Periodic refactoring is a good way to pay off the _technical debt_** a code base has accumulated.
+**Periodic refactoring is a good way to pay off the _technical debt_** a codebase has accumulated.
 
 > Software systems are prone to the build up of **cruft** - deficiencies in internal quality that make it harder than it would ideally be to modify and extend the system further.Technical Debt is a metaphor, coined by Ward Cunningham, that frames how to think about dealing with this cruft, thinking of it like a financial debt. The extra effort that it takes to add new features is the interest paid on the debt.<br>
 > --[https://martinfowler.com/bliki/TechnicalDebt.html](https://martinfowler.com/bliki/TechnicalDebt.html)

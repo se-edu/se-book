@@ -9,10 +9,10 @@
 **Pros:**
 * easy to apply 
 * effective in achieving its goal with minimal extra work
-* provides an easy way to access the singleton object from anywhere in the code base
+* provides an easy way to access the singleton object from anywhere in the codebase
 
 **Cons:**
-* The singleton object acts like a global variable that increases coupling across the code base.
+* The singleton object acts like a global variable that increases coupling across the codebase.
 * In testing, it is difficult to replace Singleton objects with stubs (static methods cannot be overridden).
 * In testing, singleton objects carry data from one test to another even when you want each test to be independent of the others.
 
