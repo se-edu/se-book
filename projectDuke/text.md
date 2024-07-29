@@ -469,7 +469,8 @@ Add a GUI to the chatbot. Use the JavaFX technology to implement the GUI.
 <br>
 <br>
 
-Refer to the [_JavaFX tutorial_ @SE-EDU/guides](https://se-education.org/guides/tutorials/javaFx.html) to learn how to get started with JavaFX.
+Refer to the [_JavaFX tutorial_ @SE-EDU/guides](https://se-education.org/guides/tutorials/javaFx.html) to learn how to get started with JavaFX.<br>
+Go through ==at least up to part 4 of the tutorial==. Part 5 covers cosmetic UI tweaks, and is optional to learn.
 
 <box type="warning" seamless>
 
