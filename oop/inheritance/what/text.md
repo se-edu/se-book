@@ -27,9 +27,9 @@
 
 </box>
 
-**Inheritance implies the derived class can be considered as a _sub-type_ of the base class (and the base class is a _super-type_ of the derived class), resulting in an _is a_ relationship.**
+**Inheritance implies the derived class can be considered as a _subtype_ of the base class (and the base class is a _super-type_ of the derived class), resulting in an _is a_ relationship.**
 
-%%{{ icon_info }} Inheritance does not necessarily mean a sub-type relationship exists. However, the two often go hand-in-hand. For simplicity, at this point let us assume inheritance implies a sub-type relationship.%%
+%%{{ icon_info }} Inheritance does not necessarily mean a subtype relationship exists. However, the two often go hand-in-hand. For simplicity, at this point let us assume inheritance implies a subtype relationship.%%
 
 <box>
 
