@@ -2,7 +2,6 @@
 title: "About: Usage"
 pageNav: 3
 </frontmatter>
-
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
 
 <div class="website-content">
@@ -11,19 +10,20 @@ pageNav: 3
 
 <div id="browsers">
 
-### Browser compatibility
+### Browser compatibility{.text-white .bg-dark .p-2}
 
-Most of this will work on most mainstream Browsers, but ==embedded slides are best viewed using Chrome==.
+Most of this will work on most mainstream Browsers, although some pages might not work well in small-screen devices.
 
 </div>
 <div id="layers">
+{% set icon_layers = ":fas-layer-group:" %}
+### Information layers{.text-white .bg-dark .p-2}
 
-### Information layers
+We try to _layer_ information so that readers can decide to omit less important layers if they wish to. Some 'layering' techniques used are explained below:
 
-This book tries to _layer_ information so that readers can decide to omit less important layers if they wish to.
+**{{ icon_layers }} More important information are in bold** or ==highlighted== while %%less important information are dimmed%% or in collapsed panels such as the below.
 
-**More important information are in bold** or ==highlighted== while %%less important information are dimmed%% or in collapsed panels such as the below.
-
+<div class="indented-level2">
 <box>
 
 <panel header="Some less important info in a minimized panel" minimized>
@@ -52,9 +52,11 @@ Less important info
 <include src="acknowledgements.md" />
 </panel>
 <p/>
+</div>
 
-**Tabs indicate _alternative_ content** (e.g. video vs text). You can choose the one you like and ignore the other tabs.
+**{{ icon_layers }} Tabs indicate _alternative_ content** (e.g. video vs text). You can choose the one you like and ignore the other tabs.
 
+<div class="indented-level2">
 <box>
 
 <tabs>
@@ -71,8 +73,9 @@ Video describing X
 </tabs>
 
 </box>
+</div>
 
-**Dotted underlines indicate <popover content="some additional info">tool tips</popover>** (activated by hovering over it) and **dashed underlines indicate <trigger for="modal:modal-example" trigger="click">modal windows</trigger>** (activated by clicking) containing additional information.
+**{{ icon_layers }} Dotted underlines indicate <popover content="some additional info">tool tips</popover>** (activated by hovering over it) and **dashed underlines indicate <trigger for="modal:modal-example" trigger="click">modal windows</trigger>** (activated by clicking) containing additional information.
 
 <popover id="pop:tooltip-example" header="Tooltip Example" placement="top">
   <div slot="content">
@@ -87,7 +90,7 @@ Video describing X
 </div>
 <div id="conventions">
 
-### Conventions used
+### Conventions used{.text-white .bg-dark .p-2}
 
 #### Shorthand headings
 
@@ -148,21 +151,21 @@ Meaning of some shortened headings:
 </div>
 <div id="searching">
 
-### Searching
+### Searching{.text-white .bg-dark .p-2}
 
 The book currently does not have a _search_ feature. The workaround is to load [the printable version of the book]({{baseUrl}}/common/print.html) (which loads the entire book into one page, minus the exercises) and use the Browser's search function.
 
 </div>
 <div id="saving">
 
-### Saving as PDF files
+### Saving as PDF files{.text-white .bg-dark .p-2}
 
 Follow [this guide @SE-EDU/guides](https://se-education.org/guides/tutorials/savingPdf.html).
 
 </div>
 <div id="printing">
 
-### Printing
+### Printing{.text-white .bg-dark .p-2}
 
 The {{icon_print}} icon indicates printer-friendly versions of each chapter. A printer-friendly version of the entire book can be found [here]({{baseUrl}}/common/print.html).
 
