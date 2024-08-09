@@ -10,14 +10,14 @@ pageNav: 3
 
 <div id="browsers">
 
-### Browser compatibility{.text-white .bg-dark .p-2}
+### Browser compatibility{.text-white .bg-secondary .p-2}
 
 Most of this will work on most mainstream Browsers, although some pages might not work well in small-screen devices.
 
 </div>
 <div id="layers">
 {% set icon_layers = ":fas-layer-group:" %}
-### Information layers{.text-white .bg-dark .p-2}
+### Information layers{.text-white .bg-secondary .p-2}
 
 We try to _layer_ information so that readers can decide to omit less important layers if they wish to. Some 'layering' techniques used are explained below:
 
@@ -90,7 +90,7 @@ Video describing X
 </div>
 <div id="conventions">
 
-### Conventions used{.text-white .bg-dark .p-2}
+### Conventions used{.text-white .bg-secondary .p-2}
 
 #### Shorthand headings
 
@@ -151,21 +151,21 @@ Meaning of some shortened headings:
 </div>
 <div id="searching">
 
-### Searching{.text-white .bg-dark .p-2}
+### Searching{.text-white .bg-secondary .p-2}
 
 The book currently does not have a _search_ feature. The workaround is to load [the printable version of the book]({{baseUrl}}/common/print.html) (which loads the entire book into one page, minus the exercises) and use the Browser's search function.
 
 </div>
 <div id="saving">
 
-### Saving as PDF files{.text-white .bg-dark .p-2}
+### Saving as PDF files{.text-white .bg-secondary .p-2}
 
 Follow [this guide @SE-EDU/guides](https://se-education.org/guides/tutorials/savingPdf.html).
 
 </div>
 <div id="printing">
 
-### Printing{.text-white .bg-dark .p-2}
+### Printing{.text-white .bg-secondary .p-2}
 
 The {{icon_print}} icon indicates printer-friendly versions of each chapter. A printer-friendly version of the entire book can be found [here]({{baseUrl}}/common/print.html).
 
