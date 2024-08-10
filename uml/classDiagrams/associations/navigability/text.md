@@ -29,7 +29,7 @@
 
 For example, both diagrams below show an association between `Foo` and `Bar`. But the one on the right shows the navigability as well.
 
-<pic eager src="{{baseUrl}}/uml/classDiagrams/associations/navigability/images/withAndWithoutNavigability.png" height="40" />
+<pic eager src="{{baseUrl}}/uml/classDiagrams/associations/navigability/images/withAndwithoutNavigability.png" height="40" />
 
 </box>
 
