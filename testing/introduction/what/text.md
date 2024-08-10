@@ -24,8 +24,6 @@
 
 </box>
 
-**Test cases can be determined based on the specification, reviewing similar existing systems, or comparing to the past behavior of the SUT.**
-
 <panel type="seamless" class="non-printable">
 <span slot="header" class="card-title"><md>%%Other details a test case can contain ...%% {{ icon_extra }}</md></span>
 A more elaborate test case can have other details such as those given below.
@@ -38,13 +36,15 @@ A more elaborate test case can have other details such as those given below.
 
 </panel><p/>
 
+**Test cases can be determined based on the specification, reviewing similar existing systems, or comparing to the past behavior of the SUT.**
+
 For each test case you should do the following:
 
 1. Feed the input to the SUT
 2. Observe the actual output
 3. Compare actual output with the expected output
 
-**A test case _failure_ is a mismatch between the expected behavior and the actual behavior. A failure indicates a potential _defect_ (or a bug)**, unless the error is in the test case itself.
+**A test case _failure_ is a mismatch between the expected behavior and the actual behavior. A failure indicates a potential _defect_ (or a bug)** -- we say 'potential' because the error could be in the test case itself.
 
 <box>
 
