@@ -24,6 +24,7 @@ Notation:
 
 **It does not matter whether the triangle is filled or empty.**
 
+<div class="alt-java">
 <box>
 
 {{ icon_example }} Here's an example that combines inheritance with generics:
@@ -42,6 +43,7 @@ class Goo extends Foo<String> {
 <puml src="images/cd-inheritance-and-generics.puml" />
 
 </box>
+</div>
 
 </div>
 
