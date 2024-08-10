@@ -10,7 +10,10 @@ The specified version is now loaded to the working folder, as indicated by the `
 <pic eager src="images/sourcetree_4.png" height="100" />
 <p/>
 
-If you checkout a commit that comes before the commit in which you added the `.gitignore` file, Git will now show ignored files as ‘unstaged modifications’ because at that stage Git hasn’t been told to ignore those files.
+<div id="checkout-before-ignore">
+
+If you checkout a commit that comes before the commit in which you added the `.gitignore` file, Git will now show ignored files as ‘unstaged modifications’ because at <tooltip content="the point of time at which the currently checked out commit was created">that point</tooltip> Git hasn’t been told to ignore those files.
+</div>
 
 <pic eager src="images/sourcetree_5.png" height="260" />
 <p/>

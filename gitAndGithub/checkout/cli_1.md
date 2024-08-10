@@ -5,3 +5,5 @@ Use the `checkout <commit-identifier>` command to change the working directory t
 * `git checkout HEAD~2`: loads the state that is 2 commits behind the most recent commit
 
 For now, you can ignore the warning about ‘detached HEAD’.
+
+<include src="sourcetree_1.md#checkout-before-ignore" />

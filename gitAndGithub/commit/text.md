@@ -19,7 +19,7 @@ Here are the steps you can follow to learn how to create Git commits:
 
 <box type="info" seamless>
 
-When you stage a change, the change is moved to the _staging area_, which is a file Git uses to store information about what will go into your next commit. **The staging area is also called the “index”** by the Git practitioners.
+When you stage a change, the change is moved to the _staging area_, which is a file Git uses to store information about what will go into your next commit. **The staging area is also called the 'index'** by the Git practitioners.
 </box>
 
 {{ show_git_tabs('_2') }}
@@ -28,7 +28,7 @@ When you stage a change, the change is moved to the _staging area_, which is a f
 
 {{ show_git_tabs('_3') }}
 
-**Note the existence of something called the `master` branch.** Git uses a mechanism called branches to facilitate evolving file content in parallel (we'll learn git branching in a later topic). Furthermore, Git auto-creates a branch named `master` on which the commits go on by default.
+**Note the existence of something called the `master` branch.** Git uses a mechanism called 'branches' to facilitate evolving file content in parallel (we'll learn git branching in a later topic). Furthermore, Git auto-creates a branch named `master` (or `main`) on which the commits go on by default.
 
 {{ show_git_tabs('_4') }}
 

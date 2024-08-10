@@ -8,7 +8,7 @@
 
 ##### Tracking and ignoring
 
-**In a repo, you can specify which files to track and which files to ==ignore==.** Some files such as temporary log files created during the build/test process should not be revision-controlled.
+**In a repo, you can specify which files to track and which files to ==ignore==.** For example, we can configure Git to ignore temporary files created during the build/test process, as it does not make sense to track their version history.
 
 ##### Staging and committing
 

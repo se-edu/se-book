@@ -8,7 +8,7 @@
 
 **_Branching_ is the process of evolving multiple versions of the software in parallel.** For example, one team member can create a new branch and add an experimental feature to it while the rest of the team keeps working on another branch. Branches can be given names e.g. `master`, `release`, `dev`.
 
-**A branch can be _merged_ into another branch.** Merging usually results in a new commit that represents the changes done in the branch being merged.
+**A branch can be _merged_ into another branch.** Merging sometimes results in a new commit (called the _merge commit_) being created, to represent the cumulative changes done in the receiving branch as a result of the merge.
 
 <pic eager src="{{baseUrl}}/revisionControl/branching/images/diagram.png" height="180">
   <strong>Branching and merging</strong>

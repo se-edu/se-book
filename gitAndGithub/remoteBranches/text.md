@@ -38,7 +38,7 @@ Here, let's see how to fetch a new branch (i.e., it does not exist in your local
 
 In this section we assume that you have a local branch that is already tracking a remote branch (e.g., as a result of doing [A] or [B] above).
 
-**To push new changes in the local branch to the corresponding remote branch:**
+**[C1] To push new changes in the local branch to the corresponding remote branch:**
 
 {{ show_git_tabs('_3') }}
 
@@ -47,7 +47,7 @@ In this section we assume that you have a local branch that is already tracking 
 **If you push but the remote branch has new commits that you don't have locally**, Git will abort the push and will ask you to pull first.
 </box>
 
-**To pull new changes from a remote branch to the corresponding local branch:**
+**[C2] To pull new changes from a remote branch to the corresponding local branch:**
 
 {{ show_git_tabs('_4') }}
 

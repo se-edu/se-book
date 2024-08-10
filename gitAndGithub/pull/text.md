@@ -23,7 +23,7 @@ Here's a scenario you can try in order to learn how to <trigger trigger="click" 
 
 Now, your local repo state is exactly how it would be if you had cloned the repo 2 commits ago, as if somebody has added two more commits to the remote repo since you cloned it.
 
-**3. Pull** from the other repo: To get those missing commits to your local repo (i.e. to sync your local repo with upstream repo) you can do a pull.
+**3. Pull** from the remote repo: To get those missing commits to your local repo (i.e. to sync your local repo with upstream repo) you can do a pull.
 
 {{ show_git_tabs('_2') }}
 <p/>
@@ -36,7 +36,7 @@ Now, your local repo state is exactly how it would be if you had cloned the repo
 
 ##### Working with multiple remotes
 
-**When you clone a repo, Git automatically adds a _remote_ repo named `origin`** to your repo configuration. As you know, you can pull commits from that repo. As you know, <trigger trigger="click" for="modal:gitPull-rcsMultipleRepos">a Git repo can work with remote repos other than the one it was cloned from</trigger>.
+**When you clone a repo, Git automatically adds a _remote_ repo named `origin`** to your repo configuration. As you know, you can pull commits from that repo. Furthermore, <trigger trigger="click" for="modal:gitPull-rcsMultipleRepos">a Git repo can work with remote repos other than the one it was cloned from</trigger>.
 
 <modal large header="Project Management → Revision Control → Remote Repositories →" id="modal:gitPull-rcsMultipleRepos">
   <include src="..\..\revisionControl\remoteRepositories\text.md#section-working-with-multiple-repos"/>

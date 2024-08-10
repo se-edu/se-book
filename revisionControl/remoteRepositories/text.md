@@ -19,14 +19,14 @@
 
 <div id="section-pulling">
 
-**You can ==_pull_== from one repo to another, to receive new commits in the second repo**, but only if the repos have a shared history. Let's say some new commits were added to the <tooltip content="_upstream_ repo is a term used to refer to the repo you cloned from">upstream repo</tooltip> after you cloned it and you would like to copy over those new commits to your own clone i.e., ==sync== your clone with the upstream repo. In that case, you pull from the upstream repo to your clone.
+**You can ==_pull_== (or ==fetch==) from one repo to another, to receive new commits in the second repo**, but only if the repos have a shared history. Let's say some new commits were added to the <tooltip content="_upstream_ repo is a term used to refer to the repo you cloned from">upstream repo</tooltip> after you cloned it, and you would like to copy over those new commits to your own clone i.e., ==sync== your clone with the upstream repo. In that case, you can pull from the upstream repo to your clone.
 </div>
 <div id="section-pushing">
 
 **You can ==_push_== new commits in one repo to another repo** which will copy the new commits onto the destination repo. Note that pushing to a repo requires you to have write-access to it. Furthermore, you can push between repos only if those repos have a shared history among them (i.e., one was created by copying the other at some point in the past).
 </div>
 
-Cloning, pushing, and pulling can be done between two local repos too, although it is more common for them to involve a remote repo.
+Cloning, pushing, and pulling/fetching can be done between two local repos too, although it is more common for them to involve a remote repo.
 
 <div id="section-working-with-multiple-repos">
 
@@ -35,12 +35,12 @@ Cloning, pushing, and pulling can be done between two local repos too, although 
 
 <div id="section-forking">
 
-**A ==_fork_== is a remote copy of a remote repo**. As you know, cloning creates a local copy of a repo. In contrast, forking creates a remote copy of a Git repo hosted on GitHub. This is particularly useful if you want to play around with a GitHub repo but you don't have write permissions to it; you can simply fork the repo and do whatever you want with the fork as you are the owner of the fork.
+**A ==_fork_== is a remote copy of a remote repo**. As you know, cloning creates a local copy of a repo. In contrast, forking creates a remote copy of a repo hosted on remote service such as GitHub. This is particularly useful if you want to play around with a GitHub repo, but you don't have write permissions to it; you can simply fork the repo and do whatever you want with the fork as you are the owner of the fork.
 </div>
 
 <div id="section-pull-request">
 
-**A ==_pull request_== (PR for short) is a mechanism for contributing code to a remote repo,** i.e., "I'm _requesting_ you to _pull_ my proposed changes to your repo". For this to work, the two repos must have a shared history. The most common case is sending PRs from a fork to its <tooltip content="_upstream_ repo is a repo you forked from">upstream</tooltip> repo.
+**A ==_pull request_== (PR for short) is a mechanism for contributing code to a remote repo** i.e., "I'm _requesting_ you to _pull_ my proposed changes to your repo". It's feature provided by RCS platforms such as GitHub. For this to work, the two repos must have a shared history. The most common case is sending PRs from a fork to its <tooltip content="_upstream_ repo is a repo you forked from">upstream</tooltip> repo.
 </div>
 
 

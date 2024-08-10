@@ -9,7 +9,9 @@
 
 First, let us learn how the repo looks like as you perform branching operations.
 
-**A Git branch is simply a _named label_ pointing to a commit. The `HEAD` label indicates which branch you are on.** Git creates a branch named `master` by default. When you add a commit, it goes into the branch you are currently on, and the branch label (together with the `HEAD` label) moves to the new commit.
+**A Git branch is simply a _named label_ pointing to a commit** which moves forward automatically as you add more commits to that branch. **The `HEAD` label indicates which branch you are on.**
+
+Git creates a branch named `master` (or `main`) by default. When you add a commit, it goes into the branch you are currently on, and the branch label (together with the `HEAD` label) moves to the new commit.
 
 Given below is an illustration of how branch labels move as branches evolve. Refer to the text below it for explanations of each stage.
 
@@ -45,6 +47,11 @@ Given below is an illustration of how branch labels move as branches evolve. Ref
 
 
 Now that you have some idea how the repo will look like when branches are being used, let's follow the steps below to learn how to perform branching operations using Git. You can use any repo you have on your computer (e.g. a clone of the [samplerepo-things](https://github.com/se-edu/samplerepo-things)) for this.
+
+<box type="warning" seamless>
+
+Note that how the revision graph appears (colors, positioning, orientation etc.) in your Git GUI varies based on the GUI you use, and might not match the exact diagrams given above.
+</box>
 
 **0. Observe that you are normally in the branch called `master`.**
 
@@ -96,13 +103,13 @@ The objective of that merge was to _sync_ the `feature1` branch with the `master
 {{ icon_example }} In the example below, you merged `master` to `feature1`.
 
 <annotate src="{{baseUrl}}/gitAndGithub/branch/images/sourcetree_5.png" height="120" >
-<a-point x="4%" y="42%" color="yellow" size="18" opacity="0.4" content="Do a hard reset to this commit"/>
+<a-point x="4%" y="47%" color="yellow" size="18" opacity="0.4" content="Do a hard reset to this commit"/>
 </annotate>
 
 If you want to undo that merge,
 
-1. Ensure you are in the `feature1` branch.
-1. Reset the `feature1` branch to the commit highlighted in the screenshot above (because that was the tip of the `feature1` branch before you merged the `master` branch to it.
+1. Ensure you are in the `feature1` branch (because that's the branch that _received_ the merge).
+1. Reset the `feature1` branch to the commit highlighted (in yellow) in the screenshot above (because that was the tip of the `feature1` branch before you merged the `master` branch to it.
 
 </box>
 
