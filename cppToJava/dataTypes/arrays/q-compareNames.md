@@ -32,6 +32,7 @@ isSame = x.equals("foo") // true
 * The two command line arguments can be accessed inside the `main` method using `args[0]` and `args[1]`.
 * When using multiple operators in the same expression, you might need to use parentheses to specify operator precedence. e.g., `"foo" + x == y` vs  `"foo" + (x == y)`
 
+</panel>
 <panel type="seamless" header="partial solution">
 
 ```java
@@ -45,7 +46,5 @@ class Main {
 }
 
 ```
-</panel>
-
 </panel>
 </panel>
