@@ -55,7 +55,7 @@ When you stage a change, the change is moved to the _staging area_, which is a f
 
 <box id="how-to-reset">
 
-****How do undo/delete a commit?****
+****How to undo/delete a commit?****
 
 {{ show_git_tabs('_6') }}
 </box>
