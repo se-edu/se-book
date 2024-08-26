@@ -243,7 +243,12 @@ Package the app as an executable JAR file so that it can be distributed easily.
 You can assume **the user will run the jar file in the following way only**:
 1. Copy the jar file into an empty folder.
 1. Open a command window in that folder.
-1. Run the command `java -jar {filename}.jar` e.g., `java -jar Duke.jar` (i.e., run the command in the same folder as the jar file).
+1. Run the command `java -jar "{filename}.jar"` e.g., `java -jar "Duke.jar"` (i.e., run the command in the same folder as the jar file).
+
+<box type="info" seamless>
+
+The double quotes around the filename in the `java -jar "{filename}.jar"` is not normally needed, but it is needed if the filename contains special characters such as spaces or `[`.
+</box>
 
 Refer to the tutorial [_Working with JAR files_ @SE-EDU/guides](https://se-education.org/guides/tutorials/jar.html) to find how to create JAR files (in the context of this project).
 
