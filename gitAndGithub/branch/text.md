@@ -27,7 +27,7 @@ Given below is an illustration of how branch labels move as branches evolve. Ref
 1. There is only one branch (i.e., `master`) and there is only one commit on it. The `HEAD` label is pointing to the `master` branch (as we are currently on that branch).
    <box type="info" seamless>
 
-   To learn a bit more about how labels such as `master` and `HEAD` work, you can refer to [this article](https://initialcommit.com/blog/what-is-git-head).
+   To learn a bit more about how labels such as `master` and `HEAD` work, you can refer to [this article](https://blog.git-init.com/what-is-head-in-git/).
    </box>
 1. A new commit has been added. The `master` and the `HEAD` labels have moved to the new commit.
 1. A new branch `fix1` has been added. The repo has switched to the new branch too (hence, the `HEAD` label is attached to the `fix1` branch).
