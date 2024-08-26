@@ -166,7 +166,7 @@ public class Duke {
 
 <box type="tip" seamless>
 
-You can get some inspiration from how the code of the [addressbook-level2](https://github.com/se-edu/addressbook-level2) is organized.
+You can get some inspiration from how the class structure of the [addressbook-level2](https://github.com/se-edu/addressbook-level2) is organized.
 </box>
 </div><hr>
 <div id="A-JUnit">
