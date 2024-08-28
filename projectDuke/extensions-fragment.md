@@ -271,11 +271,32 @@ Refer to the tutorial [_Working with JAR files_ @SE-EDU/guides](https://se-educa
 <include boilerplate src="dukeExtensionTitle.md" var-extId="A-Gradle"
          var-extHeading="Automate project builds using Gradle"/>
 
-Use Gradle to automate some of the build tasks of the project.
+Use Gradle to automate some of the build tasks of the project, as follows:
 
-Gradle support is provided as a separate branch (named `add-gradle-support`) in the Duke repo. Therefore, ==merge that branch to your `master` branch, and follow the _scenario 2_ in the guide below==.
+* Gradle support is provided as a separate branch named `add-gradle-support` in the Duke repo. ==Merge that branch to your `master` branch==.{text="Step 1."}
 
-Refer to the [_Gradle tutorial_ @SE-EDU](https://se-education.org/guides/tutorials/gradle.html) to learn how to use Gradle (in the context of this project).
+<mermaid>
+{{ "%%{init: { 'theme': 'default', 'gitGraph': {'mainBranchName': 'master'}} }%%" }}
+gitGraph
+commit id: "m1"
+branch add-gradle-support
+checkout add-gradle-support
+commit id: "b1"
+commit id: "b2"
+checkout master
+commit id: "m2"
+commit id: "m3"
+merge add-gradle-support id: "Merge branch ..."
+</mermaid>
+
+* Go to the [_Gradle tutorial_ @SE-EDU](https://se-education.org/guides/tutorials/gradle.html).{text="Step 2."}
+  * If you are new to Gradle, read the _Basics_ section to get an overview of Gradle.{texts="['2a.','2b.', '2c.']"}
+  * Next, follow the [==_scenario 2_== of the _Adding Gradle to the project_ section](https://se-education.org/guides/tutorials/gradle.html#:~:text=click%20it.-,Scenario%202,-%3A%20You%20are), to add Gradle to your project.
+  * Read the rest of the tutorial to find how to use Gradle to build, run, test etc.
+
+<p/>
+
+Requirements for this increment:
 
 * **Minimal**: Set up gradle so that you can build and run Duke using gradle.
 * **Recommended**: Be able to run JUnit tests using Gradle (this can only be done after you've reached the `A-JUnit` increment).
