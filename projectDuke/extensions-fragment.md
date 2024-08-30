@@ -164,6 +164,11 @@ public class Duke {
   }
   ```
 
+<box type="info" seamless>
+
+Your class names may differ from the ones given above. The design can differ too, if you can justify your design is a good OOP design (there is no one _correct_ design solution for most design problems, after all).
+</box>
+
 <box type="tip" seamless>
 
 You can get some inspiration from how the class structure of the [addressbook-level2](https://github.com/se-edu/addressbook-level2) is organized.
@@ -175,7 +180,7 @@ You can get some inspiration from how the class structure of the [addressbook-le
 
 Add JUnit tests to test the behavior of the code.
 
-* **Minimal**: Use JUnit to ==at least two non-trivial methods==, from two different classes (if you have multiple classes),<br>
+* **Minimal**: Use JUnit to test ==at least two non-trivial methods==, from two different classes (if you have multiple classes),<br>
   and, ensure they are ==tested reasonably well== (i.e., the test code should try to catch most potential bugs in the target methods).
 * **Stretch goal**: Use JUnit to test all non-trivial public methods of all classes.
 
@@ -191,6 +196,43 @@ Refer to the [_JUnit tutorial_ @se-edu/guides](https://se-education.org/guides/t
          var-extHeading="Divide classes into packages"/>
 
 Organize the classes into suitable java packages.
+
+<box type="warning" seamless>
+
+Note that `src/main/java` should be kept as the <tooltip content="root folder for Java source code">source root</tooltip> folder, as some tools we'll be using later will look for the Java source code in that folder by default.
+
+For example, suppose you have the following structure now, and you wish to move `Duke.java` into a package `duke.ui`.
+
+<tree>
+:far-folder: [project root] %%e.g., C:\courses\project\\%%
+  :far-folder: #g#src##\
+    :far-folder: #g#main##\
+      #g#:fas-folder: java##\ #g#[source root]##
+        :far-file: Duke.java (not in a package)
+</tree>
+
+The correct way to do so is:
+
+<tree>
+:far-folder: [project root] %%e.g., C:\courses\project\\%%
+  :far-folder: #g#src##\
+    :far-folder: #g#main##\
+       #g#:fas-folder: java##\ #g#[source root]##
+        :far-folder: ==duke==\
+          :far-folder: ==ui==\
+            :far-file: Duke.java (in package `duke.ui`)
+</tree>
+
+Do not convert `src`, `main`, `java` into packages. For example, the following is #r#incorrect##:
+<tree>
+:far-folder: [project root] #r#[source root]##
+  :far-folder: #g#src##\
+    :far-folder: #g#main##\
+      :far-folder: #g#java##\
+        :far-file: Duke.java (in package `src.main.java`)
+</tree>
+</box>
+
 * **Minimal**: put all classes in one package e.g., `duke`
 * **Stretch goal**: divide into multiple packages as the number of classes increase e.g., `duke.task`, `duke.command`
 </div><hr>

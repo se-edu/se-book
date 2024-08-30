@@ -443,7 +443,7 @@ public class Main {
 
 ### Level 9. Find
 
-Give users a way to find a task by searching for a keyword.
+Give users a way to find a task by searching for a keyword in the task description.
 <br>
 <br>
 
