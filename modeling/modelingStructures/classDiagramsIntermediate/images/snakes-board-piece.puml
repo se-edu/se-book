@@ -1,0 +1,24 @@
+@startuml
+skinparam classAttributeIconSize 0
+skinparam backgroundcolor transparent
+skinparam shadowing false
+hide circle
+class Board
+class Square {
+number
+}
+class SnakeHeadSquare
+class SnakeTailSquare
+class Snake
+class Piece
+
+Square <|-- SnakeHeadSquare
+Square <|-- SnakeTailSquare
+Board *-right- "100" Square
+Snake "1" -up- "1" SnakeHeadSquare : has head in >
+Snake "1" -up- "1" SnakeTailSquare : has tail in >
+Board "1" -- "3..5" Snake
+Board "0..1" -left- "0..2" Piece :       is on <
+
+
+@enduml

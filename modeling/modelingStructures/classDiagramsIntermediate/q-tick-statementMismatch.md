@@ -2,27 +2,32 @@
 
 Which of these statements match the class diagram?
 
-<pic eager src="{{baseUrl}}/modeling/modelingStructures/classDiagramsIntermediate/images/mismatch.png" height="290" />
+<puml eager src="{{baseUrl}}/modeling/modelingStructures/classDiagramsIntermediate/images/snakes-board-piece.puml" height="290" />
 <p/>
 
-- [ ] a. A `Snake` must belong to at least one `Board`.
-- [ ] b. A `SnakeHeadSquare` can contain only one `Snake` head.
-- [ ] c. A `Snake` head can be in a `Square`
-- [ ] d. A `Snake` head can be in more than one `SnakeHeadSquare`.
-- [ ] e. The `Board` has exactly 5 `Snake`s.
+- [ ] a. A `Snake` must belong to exactly one `Board`.
+- [ ] b. A `Piece` can be not on a `Board`.
+- [ ] c. A `Board` can have up to two `Piece`s.
+- [ ] d. A `SnakeHeadSquare` contains exactly one `Snake`'s head.
+- [ ] e. A `Board` can have 100 or fewer `Square`s.
+- [ ] f. A `SnakeTailSquare` may or may not contain a tail of a `Snake`
+- [ ] g. The `Board` can have two `Snake`s.
 
 
 <panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
-~~(a)~~(b)(c)(d)(e)
+(a)(b)(c)(d)~~(e)(f)(g)~~
 
 Explanation:
 
-(a) does not match because a `Snake` may or may not belong to a `Board` (multiplicity is `0..1`)<br>
-(b) matches the diagram because the multiplicity given is `1`<br>
-(c) matches the diagram because `SnakeHeadSquare` is a `Square` (due to inheritance)<br>
-(d) matches the diagram because the multiplicity given is `*`<br>
-(e) matches the diagram because the multiplicity given is `5`<br>
+(a) matches (multiplicity is `1`)<br>
+(b) matches (multiplicity is `0..1` which means a `Piece` can be on `0` `Board`s)<br>
+(c) matches (multiplicity is `0..2`)<br>
+(d) matches (multiplicity is `1`)<br>
+(e) doesn't match (a `Board` must have exactly 100 `Square`s)<br>
+(f) doesn't match (multiplicity is `1`, not `0..1`)<br>
+(g) doesn't match (multiplicity is `3..5`, which doesn't include `2`)<br>
+
 
 </panel>
 </panel>
