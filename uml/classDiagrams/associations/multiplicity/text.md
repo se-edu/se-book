@@ -13,7 +13,7 @@ Commonly used multiplicities:
 * `0..1` : _optional_, can be linked to 0 or 1 objects.
 * `1` : _compulsory_, must be linked to one object at all times.
 * `*` : can be linked to 0 or more objects.
-* `n..m` : the number of linked objects must be within `n` to `m` inclusive.
+* `n..m` : the number of linked objects must be within `n` to `m` inclusive e.g., `2..5`, `1..*` (one or more), `*..5` (up to five)
 
 <box>
 
