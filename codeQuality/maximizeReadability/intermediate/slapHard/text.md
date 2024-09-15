@@ -32,12 +32,37 @@ displayResult();
   <include src="../../../../designFundamentals/abstraction/what/unit-inElsewhere-asFlat.md" boilerplate/>
 </modal>
 
+**Also ensure that the code is written at the highest level of abstraction possible**.
+<box>
+
+{{bad}} (all statements are at a low levels of abstraction)
+```java
+low-level statement A1
+low-level statement A2
+low-level statement A3
+low-level statement B1
+low-level statement B2
+if condition X :
+    low-level statement C1
+    low-level statement C2
+```
+
+{{good}} (all statements are at the same high level of abstraction)
+```java
+high-level step A
+high-level step B
+if condition X:
+  high-level step C
+```
+
+</box>
+
 **That said, it is sometimes possible to pack _two_ levels of abstraction into the code** without affecting readability that much, provided each step in the higher-level logic is clearly marked using comments and separated (e.g., using a blank line) from adjacent steps.
 
 <box>
 
 {{ icon_example }} Example: The following pseudocode has two levels of abstraction.
-```{.java highlight-lines="1,6,10"}
+```{.java highlight-lines="1,6,11"}
 //high-level step A
 low-level statement A1
 low-level statement A2
@@ -47,9 +72,10 @@ low-level statement A3
 low-level statement B1
 low-level statement B2
 
-//high-level step C
-low-level statement C1
-low-level statement C2
+if condition X :
+    //high-level step C
+    low-level statement C1
+    low-level statement C2
 ```
 </box>
 </div>
