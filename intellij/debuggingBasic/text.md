@@ -4,6 +4,7 @@
 
 <span id="title">Debugging: Basic</span>
 
+<div id="main">
 <div id="body">
 
 <div v-closeable alt="video: debugging in IntelliJ">
@@ -14,9 +15,9 @@ This video (from LaunchCode) gives a pretty good explanation of how to use the I
 
 </div>
 
-* [IntelliJ IDEA Documentation: Debugging Basics](https://www.jetbrains.com/help/idea/debugger-basics.html) - Can be used as a reference document when you want to recall how to use a debugging feature.
-
 </div>
 
 <div id="extras">
+<include src="resourcesPanel.md" boilerplate/>
+</div>
 </div>
