@@ -292,6 +292,12 @@ You can assume **the user will run the jar file in the following way only**:
 The double quotes around the filename in the `java -jar "{filename}.jar"` is not normally needed, but it is needed if the filename contains special characters such as spaces or `[`.
 </box>
 
+<box type="info" icon=":fas-question:" seamless>
+
+FAQ: Can we double-click the jar file to run it?<br>
+A: Yes, that usually works too, being able to do so is not a requirement here. Instead, the `java -jar` command is the recommended way to run the jar file.
+</box>
+
 Refer to the tutorial [_Working with JAR files_ @SE-EDU/guides](https://se-education.org/guides/tutorials/jar.html) to find how to create JAR files (in the context of this project).
 
 <box type="info" seamless>
