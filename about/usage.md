@@ -19,7 +19,7 @@ Most of this will work on most mainstream Browsers, although some pages might no
 {% set icon_layers = ":fas-layer-group:" %}
 ### Information layers{.text-white .bg-secondary .p-2}
 
-We try to _layer_ information so that readers can decide to omit less important layers if they wish to. Some 'layering' techniques used are explained below:
+We try to _layer_ information so that readers have the freedom to omit less important layers if they wish to. Some 'layering' techniques used are explained below:
 
 **{{ icon_layers }} More important information are in bold** or ==highlighted== while %%less important information are dimmed%% or in collapsed panels such as the below.
 
