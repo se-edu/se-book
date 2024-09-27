@@ -34,7 +34,10 @@ Commonly used multiplicities:
 
 </box>
 
+<box type="warning" seamless>
 
+**There is no _default_ multiplicity** in UML. If a class diagram does not show the multiplicity of an association, it simply means the _multiplicity is unspecified_.
+</box>
 </div>
 
 <div id="extras">
