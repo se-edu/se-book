@@ -6,7 +6,7 @@
 
 <div id="body">
 
-When two classes are linked by an association, it does not necessarily mean the two objects taking part in an instance of the association _knows about_ (i.e., has a reference to) each other. **The concept of which object in the association knows about the other object is called _navigability_.**
+When two classes are linked by an association, it does not necessarily mean both objects taking part in an instance of the association _knows about_ (i.e., has a reference to) each other. **The concept of _navigability_ tells us if an object taking part in association knows about the other.** In other words, it tells us if we can 'navigate' from the one object to the other in a given direction -- because if the object 'knows' about the other, it has a reference to the other object, and we can use that reference to 'navigate to' (i.e., access) that other object.
 
 **Navigability can be _unidirectional_ or _bidirectional_**. Suppose there is an association between the classes `Box` and `Rope`, and the `Box` object `b` and the `Rope` object `r` is taking part in one instance of that association.
 * **Unidirectional**: If the navigability is from `Box` to `Rope`, `b` will have a reference to `r` but `r` will not have a reference to `b`. That is, one can _navigate_ from `b` to `r` using the `b`'s object reference of `r` (but not in the other direction).<br>
@@ -49,7 +49,7 @@ class Cat:
 ```
 </div>
 
-The code below has two unidirectional associations between the `Person` class and the `Cat` class (in opposite directions) because the breeder is not necessarily the same person keeping the cat as a pet i.e., there are two separate associations here, which rules out it being a bidirectional association.
+The code below has two unidirectional associations between the `Person` class and the `Cat` class (in opposite directions). Because the breeder is not necessarily the same person keeping the cat as a pet, they are two separate associations, not a bidirectional association.
 
 <div class="alt-java">
 
