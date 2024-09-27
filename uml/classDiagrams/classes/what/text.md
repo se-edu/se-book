@@ -170,7 +170,7 @@ class Table:
 
 <box type="warning" seamless>
 
-**There is no _default_ visibility** in UML. If a class diagram does not show the visibility of a <tooltip content="i.e., an attribute or an operation">member</tooltip>, it simply means the _visibility is not shown_ (for reasons such as the visibility not being decided yet or it being not important to the purpose of the diagram).
+**There is no _default_ visibility** in UML. If a class diagram does not show the visibility of a <tooltip content="i.e., an attribute or an operation">member</tooltip>, it simply means the _visibility is unspecified_ (for reasons such as the visibility not being decided yet or it being not important to the purpose of the diagram).
 </box>
 
 <div class="alt-java">
