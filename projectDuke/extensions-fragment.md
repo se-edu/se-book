@@ -361,6 +361,8 @@ The workflow specified by [this `.yml` file](https://github.com/se-edu/duke/blob
 
 Refer to the [_Using GitHub Actions_ @SE-EDU/guides](https://se-education.org/guides/tutorials/githubActions.html) to learn how to use that `.yml` file to set up GitHub actions.
 
+Also note that pushing a GitHub Actions related file to GitHub requires you to authenticate using a <tooltip content="Personal Access Token">PAT</tooltip> that has `workflow` permissions (because you are modifying a workflow of your repo). If you are using Sourcetree, you can refer to [_Sourcetree Guide_ @SE-EDU/guides](https://se-education.org/guides/tutorials/sourcetree.html) to learn how to connect Sourcetree with GitHub using a PAT.
+
 </div><hr>
 <div id="A-Enums">
 <include boilerplate src="dukeExtensionTitle.md" var-extId="A-Enums"
