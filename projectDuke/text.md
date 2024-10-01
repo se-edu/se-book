@@ -483,6 +483,11 @@ You are <span class="text-danger">cautioned against trying to do both in one go<
 
 </box>
 
+<box type="important" seamless>
+
+#r#**Common mistake**:## Forgetting to add a separate `Launcher` class (as explained in the [JavaFX tutorial Part 1](https://se-education.org/guides/tutorials/javaFxPart1.html))  when adding the GUI to your project.
+</box>
+
 </div>
 
 <p/>
