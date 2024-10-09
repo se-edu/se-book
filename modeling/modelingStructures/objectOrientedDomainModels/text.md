@@ -17,7 +17,7 @@
 **Domain modeling can be done using**,
 
 * **a _domain-specific_ modeling notation** if such a notation exists (e.g., a modeling notation specific to the banking domain might have elements to represent loans, accounts, transactions etc.),
-* **or a general purpose modeling notation**, such as UML** (e.g., you can use an activity diagram to model the workflow of processing a loan application),
+* **or a general purpose modeling notation**, such as UML (e.g., you can use an activity diagram to model the workflow of processing a loan application),
 * **or even other general purpose notations** (e.g., you can use an organization chart to model the employee hierarchy of a company).
 </box>
 
