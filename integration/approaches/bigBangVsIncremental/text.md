@@ -6,7 +6,7 @@
 
 <div id="body">
 
-**_Big-bang integration_: integrate all components at the same time.**
+**_Big-bang integration_: integrate all (or too many) components at the same time.** More generally, integrating too many changes at the same time.
 
 <box type="wrong">
 
@@ -14,7 +14,7 @@ Big-bang is not recommended because it will uncover too many problems at the sam
 
 </box>
 
-**_Incremental integration_: integrate a few components at a time.** This approach is better than big-bang integration because it surfaces integration problems in a more manageable way.
+**_Incremental integration_: integrate a few components at a time.** More generally, integrating changes gradually. This approach is better than big-bang integration because it surfaces integration problems in a more manageable way.
 
 <div v-closeable alt="slideshow: comparison" class="non-printable">
 
