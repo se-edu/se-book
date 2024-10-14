@@ -25,7 +25,7 @@ Both branch nodes and merge nodes are ==diamond shapes==. Guard conditions must 
 
 Some acceptable simplifications (by convention):
 * Omitting the merge node if it doesn't cause any ambiguities.
-* Multiple arrows can starting from the same corner of a branch node.
+* Multiple arrows can start from the same corner of a branch node.
 * Omitting the `[Else]` condition.
 
 <box>
