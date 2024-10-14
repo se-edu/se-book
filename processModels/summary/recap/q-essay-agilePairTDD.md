@@ -34,7 +34,7 @@ Arguments against agile processes (not necessarily true):
 
 Arguments against pair programming:
 
-* Increase in total man hours required.
+* Increases the total man-hours required.
 * Personality clashes between pair-members.
 * Workspaces need to be adapted to suit two developers working at one computer.
 * If pairs are rotated, one needs to know more parts of the system than in solo programming.
@@ -42,17 +42,16 @@ Arguments against pair programming:
 (c) Arguments in favor of TDD:
 
 * Testing will not be neglected due to time pressure (because it is done first).
-* Forces the developer to think about what the component should be before jumping into implementing it.
-* Optimizes programmer effort (i.e. if all tests pass, there is no need to add any more functionality).
-* Forces us to automate all tests.
+* Forces the developer to think about how exactly the component should behave, before jumping into implementing it.
+* Avoids wasting programmer effort (i.e. the code ends up doing exactly what's needed; no less, no more).
+* Forces the programmer to automate all tests.
 
 Arguments against TDD (not necessarily true):
 
 * Since tests can be seen as ‘executable specifications’, programmers tend to neglect other forms of documentation.
 * Promotes ‘trial-and-error’ coding instead of making programmers think through their algorithms (i.e. ‘just keep hacking until all tests pass’).
 * Gives a false sense of security. (What if you forgot to test certain scenarios?)
-
-Not intuitive. Some programmers might resist adopting TDD.
+* Not intuitive. Some programmers might resist adopting TDD.
 
 </panel>
 </panel>
