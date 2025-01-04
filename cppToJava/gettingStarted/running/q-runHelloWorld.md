@@ -2,9 +2,9 @@
 
 **A. Install Java** in your computer, if you haven't done so already. Java 17 is recommended.
 
-<box type="secondary" icon=":fab-apple:" seamless>
+<box type="tip" seamless>
 
-Mac users can follow [this se-edu/guide](https://se-education.org/guides/tutorials/javaInstallationMac.html) to install Java.
+Java installation guides for Windows/Mac/Linux can be found in [this se-edu/guide](https://se-education.org/guides/tutorials/javaInstallation.html).
 </box>
 
 Ensure the installation is correct, as follows.
