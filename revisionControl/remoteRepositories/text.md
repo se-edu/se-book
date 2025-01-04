@@ -43,15 +43,6 @@ Cloning, pushing, and pulling/fetching can be done between two local repos too, 
 **A ==_pull request_== (PR for short) is a mechanism for contributing code to a remote repo** i.e., "I'm _requesting_ you to _pull_ my proposed changes to your repo". It's feature provided by RCS platforms such as GitHub. For this to work, the two repos must have a shared history. The most common case is sending PRs from a fork to its <tooltip content="_upstream_ repo is a repo you forked from">upstream</tooltip> repo.
 </div>
 
-
-<div v-closeable alt="slideshow: remote repo scenario" class="non-printable">
-
-Here is a scenario that includes all the concepts introduced above (click _inside_ the slide to advance the animation):
-
-@[powerpoint](https://onedrive.live.com/embed?cid=A5AF047C4CAD67AB&resid=A5AF047C4CAD67AB%212290&authkey=&em=2)
-
-</div>
-
 </div>
 
 <div id="extras">

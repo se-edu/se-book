@@ -24,14 +24,6 @@
 
 </box>
 
-<div v-closeable alt="slideshow: comparison" class="non-printable">
-
-Here is an animation that compares the two approaches: 
-
-@[powerpoint](https://onedrive.live.com/embed?cid=A5AF047C4CAD67AB&resid=A5AF047C4CAD67AB%212312&authkey=AHtrsZMwQmNcyAE&em=2)
-
-</div>
-
 </div>
 
 <div id="extras">

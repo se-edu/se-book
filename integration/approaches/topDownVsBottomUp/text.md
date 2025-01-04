@@ -23,14 +23,6 @@
 
 **_Sandwich_ integration: a mix of the top-down and bottom-up approaches.** The idea is to do both top-down and bottom-up so as to 'meet' in the middle.
 
-<div v-closeable alt="slideshow: comparison">
-
-Here is an animation that compares the three approaches:
-
-@[powerpoint](https://onedrive.live.com/embed?cid=A5AF047C4CAD67AB&resid=A5AF047C4CAD67AB%212318&authkey=AD27jxfKqq3nqpQ&em=2)
-
-</div>
-
 </div>
 
 <div id="extras">
