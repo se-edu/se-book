@@ -22,7 +22,7 @@ Ensure the installation is correct, as follows.
 
 **B. Write, compile and run a small Java program** %%(e.g., a HelloWorld program)%% in your computer. You can use any code editor to write the program but use the command prompt to compile and run the program. Here are suggested steps:
    1. Open notepad (or any other text editor)
-   1. Copy paste this code into the editor.
+   1. Copy-paste this code into the editor.
       ```java
       public class HelloWorld {
 
