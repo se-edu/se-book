@@ -25,7 +25,7 @@ The following description was adapted from the [XP home page](http://www.extreme
 
 </box type="tip">
 
-**_Pair programming, CRC cards, project velocity_, and _standup meetings_ are some interesting topics related to XP.** Refer to [http://www.extremeprogramming.org](extremeprogramming.org) to find out more about XP.
+**_Pair programming, CRC cards, project velocity_, and _standup meetings_ are some interesting topics related to XP.** Refer to [www.extremeprogramming.org](http://www.extremeprogramming.org) to find out more about XP.
 
 </div>
 
