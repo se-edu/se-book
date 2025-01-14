@@ -31,7 +31,7 @@ class Quote {
 
 <panel type="seamless" header="Hint" minimized>
 
-* Show `new Quote().print();` as two method calls.
+* To draw `new Quote().print();`, first 'unroll' it into two method calls (refer to the tip given in [here](../../../uml/sequenceDiagrams/selfInvocation)).
 * As the created Quote object is not assigned to a variable, it can be considered as 'deleted' soon after its `print()` method is called.
 
 </panel>
