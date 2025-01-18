@@ -30,10 +30,10 @@ Use a `switch` statement to select between possible values for `Priority`.
 ```java
     public static void describe(String color, Priority p) {
         switch (p) {
-            case LOW:
-                System.out.println(color + " indicates low priority");
-                break;
-            // ...
+        case LOW:
+            System.out.println(color + " indicates low priority");
+            break;
+        // ...
         }
     }
 ```
