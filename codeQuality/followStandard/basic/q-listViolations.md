@@ -1,4 +1,4 @@
-<panel header="{{ icon_Q }} Find basic coding standard violations">
+<panel header="{{ icon_Q }} Find coding standard violations">
 
 Consider the code given below:
 ```java{.line-numbers}
@@ -28,16 +28,14 @@ public class Task {
 }
 ```
 
-In what ways do the code violate the coding standard you are expected to follow?
+What are the coding standard violations in the above code (as per the Java coding standard used in the course)?<br>
+For each violation, note down the line number, violation, and a possible correction.
 
 <panel header=":fas-lightbulb: Some hints ..." minimized>
 
-Here are three:
-* `descriptionPrefix` is a constant and should be named `DESCRIPTION_PREFIX`
-* method name `printingDescription()` should be named as `printDescription()`
-* boolean variable `important` should be named to sound boolean e.g., `isImportant`
+[line 4] `descriptionPrefix` is a constant, which should be named using the screaming camel case (e.g., `DESCRIPTION_PREFIX`)
 
-There are many more.
+There are more than 10 coding standard violations in this code.
 
 </div>
 
