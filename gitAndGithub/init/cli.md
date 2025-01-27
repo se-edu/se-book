@@ -31,9 +31,9 @@ $ git status
 ```
 {{ icon_output }}
 ```{.no-line-numbers}
-# On branch master
-#
-# No commits yet
-#
+On branch master
+
+No commits yet
+
 nothing to commit (create/copy files and use "git add" to track)
 ```
