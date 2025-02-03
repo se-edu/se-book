@@ -12,7 +12,7 @@ Variable Arguments (Varargs) is a _syntactic sugar_ type feature that allows wri
 
 {{ icon_example }} The `search` method below can be called as `search()`, `search("book")`, `search("book", "paper")`, etc.
 ```java
-public static void search(String ... keywords){
+public static void search(String ... keywords) {
    // method body
 }
 ```
