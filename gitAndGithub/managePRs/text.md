@@ -12,7 +12,7 @@
 
 Let's look at the steps involved in merging a PR, assuming the PR has been reviewed, refined, and approved for merging already.
 
-Preparation: If you would like to try merging a PR yourself, you can create a dummy PR in the following manner.
+**Preparation:** If you would like to try merging a PR yourself, you can create a dummy PR in the following manner.
 1. Fork any repo (e.g., [samplerepo-pr-practice](https://github.com/se-edu/samplerepo-pr-practice)).
 1. Clone in to your computer.
 1. Create a new branch e.g., (`feature1`) and add some commits to it.
@@ -37,7 +37,7 @@ Preparation: If you would like to try merging a PR yourself, you can create a du
   <include src="../mergeConflicts/unit-inElsewhere-asFlat.md" boilerplate/>
 </modal>
 
-**3. Merge the PR** by clicking on the {{ button_green("Merge pull request :octicon-triangle-down:") }} button, followed by the `Confirm merge` button. You should see a `Pull request successfully merged and closed` message after the PR is merged.<br>
+**4. Merge the PR** by clicking on the {{ button_green("Merge pull request :octicon-triangle-down:") }} button, followed by the `Confirm merge` button. You should see a `Pull request successfully merged and closed` message after the PR is merged.<br>
 
 * You can choose between three merging options by clicking on the down-arrow in the {{ button_green("Merge pull request :octicon-triangle-down:") }} button. If you are new to Git and GitHub, the `Create merge commit` option is recommended.
 
