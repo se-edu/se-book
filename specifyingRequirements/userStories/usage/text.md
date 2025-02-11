@@ -22,8 +22,8 @@
 
 {{ icon_example }} An example of an NFR captured as a user story:
 
-As a | I want to | so that
------|-----------|--------
+As a/an ___, | I want to ___, | so that ___.
+-------------|----------------|-------------
 impatient user | to be able to experience reasonable response time from the website while up to 1000 concurrent users are using it | I can use the app even when the traffic is at the maximum expected level
 
 </box>
