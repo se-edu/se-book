@@ -489,6 +489,8 @@ You are <span class="text-danger">cautioned against trying to do both in one go<
 #r#**Common mistake**:## Forgetting to add a separate `Launcher` class (as explained in the [JavaFX tutorial Part 1](https://se-education.org/guides/tutorials/javaFxPart1.html))  when adding the GUI to your project.
 </box>
 
+**Minimal requirement:** The GUI should be fit-for-purpose i.e., users should be able to use the chatbot via the GUI.
+
 </div>
 
 <p/>
