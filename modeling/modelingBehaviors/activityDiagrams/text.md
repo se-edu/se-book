@@ -18,7 +18,7 @@ Some examples in which a certain workflow is relevant to software project:
 {{ icon_example }} The algorithm of a piece of code represents the workflow (i.e. the execution flow) of the code.
 </box>
 
-%%<small>{{ icon_info }} Contents related to UML diagrams in the panels given below belong to a different chapter (i.e., the chapter dedicated to UML); they have been embedded here for convenience.</small>%%
+%%<small>{{ icon_info }} Contents related to UML diagrams in the panels given below belong to a different chapter (i.e., the chapter dedicated to UML); they have been embedded here in the Web version of the textbook (for convenience), but ==omitted in the printable version== (to avoid repetition).</small>%%
 
 {% macro print_sensitive_panels(panel_state="") %}
 <panel type="seamless" src="../../../uml/activityDiagrams/introduction/what/unit-inElsewhere-asFlat.md#main" boilerplate header="{{ icon_prereq }} UML {{ icon_embedding }} Activity Diagrams → Introduction → What" alt="{{ icon_prereq }} UML/AD/Intro" {{ panel_state }} /><p/>
