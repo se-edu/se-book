@@ -21,7 +21,7 @@
 <variable id="icon_lecture"><md>:glyphicon-blackboard:</md></variable>
 <variable id="icon_like"><md>:fas-thumbs-up:</md></variable>
 <variable id="icon_linux"><md>:fab-linux:</md></variable>
-<variable id="icon_important_big_red"><span style="color: red"><big><md>:glyphicon-exclamation-sign:</md></big></span></variable>
+<variable id="icon_important_big_red"><span style="color: red">++<md>:glyphicon-exclamation-sign:</md>++</span></variable>
 <variable id="icon_important"><md>:glyphicon-exclamation-sign:</md></variable>
 <variable id="icon_new_window"><md>:glyphicon-new-window:</md></variable>
 <variable id="icon_outcome"><md>:fas-trophy:</md></variable>
@@ -50,7 +50,7 @@
 <variable id="icon_windows"><md>:fab-windows:</md></variable>
 <variable id="icon_x"><md>:fas-times:</md></variable>
 <variable id="icon_x_red"><span style="color:red">{{ icon_x | safe }}</span></variable>
-<variable id="indented_arrow">&nbsp;&nbsp;&nbsp;&nbsp; <big>↳</big></variable>
+<variable id="indented_arrow">&nbsp;&nbsp;&nbsp;&nbsp; ++↳++</variable>
 <variable id="bad"><span style="color: red"><md>**:fas-thumbs-down: Bad**</md></span></variable>
 <variable id="good"><span style="color: green"><md>**:fas-thumbs-up: Good**</md></span></variable>
 

@@ -96,25 +96,25 @@ Video describing X
 
 Meaning of some shortened headings:
 
-* <big>**What**</big> : the **meaning** of the concept in concern (<trigger trigger="click" for="modal:conventions-what">example</trigger>)
+* ++**What**++ : the **meaning** of the concept in concern (<trigger trigger="click" for="modal:conventions-what">example</trigger>)
 
 <modal large header="Example of a 'What' topic" id="modal:conventions-what">
   <include src="../refactoring/what/unit-inElsewhere-asFlat.md" boilerplate />
 </modal>
 
-* <big>**Why**</big> : the **motivation** behind the concept in concern (<trigger trigger="click" for="modal:conventions-why">example</trigger>)
+* ++**Why**++ : the **motivation** behind the concept in concern (<trigger trigger="click" for="modal:conventions-why">example</trigger>)
 
 <modal large header="Example of a 'Why' topic" id="modal:conventions-why">
   <include src="../documentation/guidelines/goTopDown/why/unit-inElsewhere-asFlat.md" boilerplate />
 </modal>
 
-* <big>**How**</big> : the **usage** of the concept in concern (<trigger trigger="click" for="modal:conventions-how">example</trigger>)
+* ++**How**++ : the **usage** of the concept in concern (<trigger trigger="click" for="modal:conventions-how">example</trigger>)
 
 <modal large header="Example of a 'How' topic" id="modal:conventions-how">
   <include src="../refactoring/how/unit-inElsewhere-asFlat.md" boilerplate />
 </modal>
 
-* <big>**When**</big> : the **pros and cons** of the concept in concern, **when to use** the concept (<trigger trigger="click" for="modal:conventions-when">example</trigger>)
+* ++**When**++ : the **pros and cons** of the concept in concern, **when to use** the concept (<trigger trigger="click" for="modal:conventions-when">example</trigger>)
 
 <modal large header="Example of a 'When' topic" id="modal:conventions-when">
   <include src="../refactoring/when/unit-inElsewhere-asFlat.md" boilerplate />
