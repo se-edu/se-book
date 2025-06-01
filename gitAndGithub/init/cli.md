@@ -1,39 +1,13 @@
-Open a Git Bash Terminal.
+Use the command `git init` which should initialise the repo.
 
-If you installed Sourcetree, you can click the `Terminal` button to open a GitBash terminal (on a Linux/Mac environment, even a regular terminal should do).
-
-<pic eager src="{{baseUrl}}/gitAndGithub/init/images/cli_1.png" height="100" />
-<p/>
-
-Navigate to the `things` directory.<br>
-Use the command `git init` which should initialize the repo.
-
-```{.no-line-numbers}
-$ cd /c/repos/things
+```bash {.no-line-numbers}
 $ git init
 ```
 {{ icon_output }}
-```{.no-line-numbers}
-Initialized empty Git repository in c:/repos/things/.git/
+```{.no-line-numbers highlight-lines="1['.git']"}
+Initialized empty Git repository in things/.git/
 ```
+{{ icon_info }} The output might also contain a hint about a name for an initial branch (e.g., `hint: Using 'master' as the name for the initial branch ...`). You can ignore that for now.
 
-You can use the _list all_ command `ls -a` to view all files, which should show the `.git` directory that was created by the previous command.
+{{ icon_info }} Note how the output mentions the repo being created in `things/.git/` (not `things/`). More on that later.
 
-```{.no-line-numbers}
-$ ls -a
-.  ..  .git
-```
-
-You can also use the `git status` command to check the status of the newly-created repo. It should respond with something like the following:
-
-```{.no-line-numbers}
-$ git status
-```
-{{ icon_output }}
-```{.no-line-numbers}
-On branch master
-
-No commits yet
-
-nothing to commit (create/copy files and use "git add" to track)
-```

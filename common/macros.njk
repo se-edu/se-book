@@ -1,10 +1,25 @@
 {% macro show_git_tabs(filename_suffix='') -%}
 <tabs>
-  <tab header="Sourcetree">
-    <include src="./sourcetree{{ filename_suffix }}.md" />
-  </tab>
   <tab header="CLI">
     <include src="./cli{{ filename_suffix }}.md" />
   </tab>
+  <tab header="Sourcetree">
+    <include src="./sourcetree{{ filename_suffix }}.md" />
+  </tab>
 </tabs>
 {%- endmacro %}
+
+{% macro show_hands_on_practical(title) %}
+<box header=":fas-laptop-code: HANDS-ON: **{{ title }}**" style="secondary" seamless>
+
+{{ caller() }}
+</box>
+{% endmacro %}
+
+{% macro show_lesson_overview() %}
+<div class="p lead" id="overview" >
+
+{{ caller() }}
+</div>
+{% endmacro %}
+
