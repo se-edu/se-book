@@ -1,18 +1,19 @@
-You can use the `stage` or the `add` command (they are synonyms, `add` is the more popular choice) to stage files.
+You can use the `git log` command to see the commit history.
 
-```{.no-line-numbers}
-$ git add fruits.txt
-$ git status
+```bash{.no-line-numbers}
+$ git log
 ```
 {{ icon_output }}
-```{.no-line-numbers}
-# On branch master
-#
-# No commits yet
-#
-# Changes to be committed:
-#   (use "git rm --cached <file>..." to unstage)
-#
-#       new file:   fruits.txt
-#
+```bash{.no-line-numbers}
+commit d5f91de... (HEAD -> master)
+Author: ... <...@...>
+Date:   ...
+
+Add fruits.txt
 ```
+<box type="tip" seamless>
+
+Use the <kbd>Q</kbd> key to exit the output screen of the `git log` command.
+</box>
+
+{{ icon_info }} Note how the output has some details about the commit you just created. You can ignore most of it for now, but notice it also shows the commit message you provided.

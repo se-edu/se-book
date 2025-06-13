@@ -2,11 +2,11 @@
 
 <span id="outcomes">{{ icon_outcome }} Can create a local Git repo</span>
 
-<span id="title">`init`: Getting started</span>
+<span id="title">Putting a Folder Under Git's Control</span>
 
 <div id="body">
 {% call show_lesson_intro() %}
-To be able to save snapshots of a folder using Git, we must first initialise a Git _repository_ (short name: _repo_) in that folder.
+To be able to save snapshots of a folder using Git, **you must first put the folder under Git's control by initialising a Git _repository_** in that folder.
 {% endcall %}
 
 **Normally, we use Git to manage a version history of a specific folder**, which gives us the ability to version-control any file in that folder and its subfolders.
@@ -15,7 +15,7 @@ To be able to save snapshots of a folder using Git, we must first initialise a G
 
 You can follow the hands-on practical below to learn how to initialise a repo in a folder.
 
-{% call show_hands_on_practical("Initialise a Git repo in a folder") %}
+{% call show_hands_on_practical("Initialise a git repo in a folder") %}
 
 **1. First, choose a folder.** The folder may or may not have any files in it already. For this practical, let us create a folder named `things` for this purpose.
 

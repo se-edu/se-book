@@ -1,3 +1,5 @@
+{% from "common/macros.njk" import show_git_tabs, show_hands_on_practical, show_lesson_intro with context %}
+
 <span id="prereqs"></span>
 
 <span id="outcomes">{{ icon_outcome }} Can prepare the computer to use Git locally</span>
@@ -5,15 +7,13 @@
 <span id="title">Preparing to use Git</span>
 
 <div id="body">
+{% call show_lesson_intro() %}
+Before you start learning Git, **you need to install some tools** in your computer.
+{% endcall %}
 
-<div id="overview">
+First, ensure you have a suitable terminal app.
 
-Before you start learning Git, there are some tools that you need to install in your computer.
-</div>
-
-Have a suitable terminal app.
-
-Install Git.
+Then, install Git.
 
 Optionally, install a Git client.
 e.g., Sourcetree ([installation instructions](https://se-education.org/guides/tutorials/sourcetree.html)), which is Git + a GUI for Git.

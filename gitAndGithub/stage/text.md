@@ -1,13 +1,13 @@
 {% from "common/macros.njk" import show_git_tabs, show_hands_on_practical, show_lesson_intro with context %}
 
-<span id="outcomes">{{ icon_outcome }} Can commit using Git</span>
-<span id="title">Staging files for a commit</span>
+<span id="outcomes">{{ icon_outcome }} Can stage files</span>
+<span id="title">Specifying What to include in a Snapshot</span>
 
 <div id="body">
 
 {% call show_lesson_intro() %}
 
-Git does not save snapshots of a folder automatically. It needs to be told when to take a snapshot and what to include in the snapshot. **The first step to saving a snapshot is to specify what to include in it, also called _staging_.**
+To save a snapshot, **you must first specify what to include in it**, also called _staging_.
 {% endcall %}
 
 **Git considers new files that you add to the working folder as 'untracked'** i.e., Git is aware of them, but they are not yet under Git's control. The same applies to files that existed in the working folder at the time you initialised the repo.
@@ -43,7 +43,11 @@ cherries
 
 1. **The file is puts under Git's control** i.e., the file is now 'tracked', no longer 'untracked'.
 2. **The current version of the file will be included in the next snapshot** of the folder.<br>
-   Consequently, **a copy of the current version of the file is put in the _staging area_, also called the _index_.** (a space that exists inside the `.git` folder).
+   Consequently, **a copy of the current version of the file is put in the _staging area_** (a space that exists inside the `.git` folder).
+   <box type="tip" seamless>
+
+   The _staging area_ is also called the _index_.
+   </box>
 
 **If you modify a staged file, it goes into the 'modified' state** i.e., the file contains modifications that are not present in the copy that is waiting (in the staging area) to be included in the next snapshot. If you wish to include these new changes in the next snapshot, you need to add/stage the file again, which will overwrite the copy of the file that was previously in the staging area.
 

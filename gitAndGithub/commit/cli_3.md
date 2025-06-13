@@ -1,19 +1,35 @@
-Use the `commit` command to commit. The `-m` switch is used to specify the commit message.
+Here is a example list of bash commands to add two commits while observing the list of commits
 
-```{.no-line-numbers}
-$ git commit -m "Add fruits.txt"
+```bash{.no-line-numbers}
+$ echo "figs" >> fruits.txt  # add another line to fruits.txt
+$ git add fruits.txt  # stage the updated file
+$ git commit -m "Insert figs into fruits.txt"  # commit the changes
+$ git log  # check commits list
+
+$ echo "a file for colours" >> colours.txt  # add a colours.txt file
+$ echo "a file for shapes" >> shapes.txt  # add a shapes.txt file
+$ git add colours.txt shapes.txt  # stage both files in one go
+$ git commit -m "Add colours.txt, shapes.txt"  # commit the changes
+$ git log  # check commits list
 ```
 
-You can use the `log` command to see the commit history.
+The output of the final `git log` should be something like this:
+```bash{.no-line-numbers highlight-lines="5,11,17"}
+commit 18300... (HEAD -> master)
+Author: ... <...@...>
+Date:   ...
 
-```{.no-line-numbers}
-$ git log
-```
-{{ icon_output }}
-```{.no-line-numbers}
-commit 8fd30a6910efb28bb258cd01be93e481caeab846
-Author: … < … @... >
-Date:   Wed Jul 5 16:06:28 2017 +0800
+    Add colours.txt, shapes.txt
 
-  Add fruits.txt
+commit 2beda...
+Author: ... <...@...>
+Date:   ...
+
+    Insert figs into fruits.txt
+
+commit d5f91...
+Author: ... <...@...>
+Date:   ...
+
+    Add fruits.txt
 ```

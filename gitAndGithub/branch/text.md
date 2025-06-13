@@ -92,11 +92,8 @@ The objective of that merge was to _sync_ the `feature1` branch with the `master
 ****To undo a merge****,
 
 1. Ensure you are in the <popover content="If you merged branch `foo` onto branch `bar`, branch `bar` is the _receiving branch_">branch that received the merge</popover>.
-1. Do a hard reset (similar to <trigger trigger="click" for="modal:merge-reset">how you delete a commit</trigger>) of that branch to the commit that would be the tip of that branch had you not done the offending merge.
+1. Do a hard reset (similar to how you delete a commit) of that branch to the commit that would be the tip of that branch had you not done the offending merge.
 
-<modal large id="modal:merge-reset">
-<include src="../commit/text.md#how-to-reset" />
-</modal>
 
 ----{.dotted}
 
