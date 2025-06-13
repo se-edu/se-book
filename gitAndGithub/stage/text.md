@@ -1,11 +1,11 @@
-{% from "common/macros.njk" import show_git_tabs, show_hands_on_practical, show_lesson_overview with context %}
+{% from "common/macros.njk" import show_git_tabs, show_hands_on_practical, show_lesson_intro with context %}
 
 <span id="outcomes">{{ icon_outcome }} Can commit using Git</span>
 <span id="title">Staging files for a commit</span>
 
 <div id="body">
 
-{% call show_lesson_overview() %}
+{% call show_lesson_intro() %}
 
 Git does not save snapshots of a folder automatically. It needs to be told when to take a snapshot and what to include in the snapshot. **The first step to saving a snapshot is to specify what to include in it, also called _staging_.**
 {% endcall %}
@@ -45,38 +45,40 @@ cherries
 2. **The current version of the file will be included in the next snapshot** of the folder.<br>
    Consequently, **a copy of the current version of the file is put in the _staging area_, also called the _index_.** (a space that exists inside the `.git` folder).
 
-**If you modify a staged file, it goes into the 'modified' state** i.e., the file contains modifications that are not present in the version that is in the staging area, waiting to be included in the next snapshot. If you wish to include these new changes in the next snapshot, you need to add/stage the file again, which will overwrite the copy of the file that was previously in the staging area.
+**If you modify a staged file, it goes into the 'modified' state** i.e., the file contains modifications that are not present in the copy that is waiting (in the staging area) to be included in the next snapshot. If you wish to include these new changes in the next snapshot, you need to add/stage the file again, which will overwrite the copy of the file that was previously in the staging area.
 
 {% call show_hands_on_practical("Re-staging 'modified' files") %}
 
-First, let us add another line to `fruits.txt`.
+1. **First, add another line to `fruits.txt`**, to make it 'modified'.
 
-<box type="tip" seamless>
+   <box type="tip" seamless>
 
-Here is a way to do that with a single terminal command.
+   Here is a way to do that with a single terminal command.
 
-```bash {.no-line-numbers }
-$ echo "dragon fruit" >> fruits.txt
-```
-{{ icon_output }} %%(appends texts to the file as follows)%%
+   ```bash {.no-line-numbers }
+   $ echo "dragon fruits" >> fruits.txt
+   ```
+   {{ icon_output }} %%(appends texts to the file as follows)%%
 
-```txt {heading="things/fruits.txt" highlight-lines="4"}
-apples
-bananas
-cherries
-dragon fruits
-```
+   ```txt {heading="things/fruits.txt" highlight-lines="4"}
+   apples
+   bananas
+   cherries
+   dragon fruits
+   ```
+   </box>
 
-</box>
+2\. **Now, verify that Git sees that file as 'modified'.**
 
-{{ show_git_tabs('_2') }}
+{{ show_git_tabs('_2', indent_level=1) }}
+
+3. **Stage the file again**, the same way you added/staged it earlier.
+4. **Verify that Git no longer sees it as 'modified'**, similar to step 2.
 
 {% endcall %}
 
-To stage the latest version, 'add' again.
-Git doesn't track folders.
-git diff can show unstaged changes (use q to exit)
-and git diff --cached to see what you’ve staged so far
+
+**Git does not empty track folders**. You can test this by adding an empty subfolder inside the `things` folder (e.g., `things/more-things` and checking if it shows up as 'untracked' (it will not). If you add a file to that folder (e.g., `things/more-things/food.txt`) and then staged that file (e.g., `git add more-things/food.txt`), the folder will now be included in the next snapshot.
 
 </div>
 

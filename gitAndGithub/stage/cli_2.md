@@ -1,4 +1,4 @@
-1. Use the `git status` command to check the status of the working directory.
+Use the `git status` command to check the status of the working directory.
 
    ```{.no-line-numbers}
    $ git status

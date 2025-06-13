@@ -13,6 +13,14 @@
 
 {{ show_git_tabs('_2') }}
 
+
+<!--
+
+git diff can show unstaged changes (use q to exit)
+and git diff --cached to see what you’ve staged so far
+
+-->
+
 </div>
 
 <div id="extras">

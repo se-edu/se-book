@@ -1,13 +1,17 @@
-{% from "common/macros.njk" import show_git_tabs, show_hands_on_practical, show_lesson_overview with context %}
+{% from "common/macros.njk" import show_git_tabs, show_hands_on_practical, show_lesson_intro with context %}
 
 <span id="outcomes">{{ icon_outcome }} Can create a local Git repo</span>
 
 <span id="title">`init`: Getting started</span>
 
 <div id="body">
-{% call show_lesson_overview() %}
+{% call show_lesson_intro() %}
 To be able to save snapshots of a folder using Git, we must first initialise a Git _repository_ (short name: _repo_) in that folder.
 {% endcall %}
+
+**Normally, we use Git to manage a version history of a specific folder**, which gives us the ability to version-control any file in that folder and its subfolders.
+
+**To put a folder under the control of Git, we _initialise a repository_ (short name: repo)** in that folder. This way, we can initialise repos in different folders, to version-control different clusters of files independently of each other %%e.g., files belonging to different projects%%.
 
 You can follow the hands-on practical below to learn how to initialise a repo in a folder.
 
