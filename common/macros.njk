@@ -1,3 +1,20 @@
+{%- macro slugify(text) %}{{ text | lower | replace(r/[\'\s\/]/g, '-') | replace(r/[\(\)%:,&\`\[\]\+]/g, '') }}{% endmacro -%}
+<!-- ============================================================ -->
+
+{% set trail = {
+  tour_recording_snapshots: {
+    title: "Tour 1: Recording the History of a Folder",
+    lesson_git_prep: {path: "gitAndGithub/gitPrep", title: "Lesson: Preparing to Use Git"},
+    lesson_init: {path: "gitAndGithub/init", title: "Lesson: Putting a Folder Under Git's Control"},
+    lesson_stage: {path: "gitAndGithub/stage", title: "Lesson: Specifying What to Include in a Snapshot"},
+    lesson_commit: {path: "gitAndGithub/commit", title: "Lesson: Saving a Snapshot"}
+  }
+} %}
+<!-- ============================================================ -->
+
+{% macro divider(text) %}# <div class="text-white bg-success p-1"><span class="text-light">:fas-map-marker-alt:</span> {{ text }}</div>{% endmacro %}
+<!-- ============================================================ -->
+
 {% macro show_git_tabs(filename_suffix='', indent_level='') -%}
 {% if indent_level %}<div class="indented-level{{ indent_level }}">{% endif %}
 <tabs>
@@ -10,6 +27,7 @@
 </tabs>
 {% if indent_level %}</div>{% endif %}
 {%- endmacro %}
+<!-- ============================================================ -->
 
 {% macro show_hands_on_practical(title) %}
 <box header=":fas-laptop-code: HANDS-ON: **{{ title }}**" style="secondary" seamless>
@@ -17,6 +35,7 @@
 {{ caller() }}
 </box>
 {% endmacro %}
+<!-- ============================================================ -->
 
 {% macro show_lesson_intro() %}
 <div class="border border-success pt-0 ps-1 pb-1 pe-1 border-bottom-0 rounded-top" style="background-color: #e6fff2">
@@ -32,4 +51,33 @@
 </div>
 <br>
 {% endmacro %}
+<!-- ============================================================ -->
 
+{% macro show_lesson_overview(lesson_data) %}
+<div class="indented-level1">
+
+<div class="border border-success pt-2 ps-2 pb-1 pe-1 border-bottom-0 rounded-top" style="background-color: #e6fff2">
+<include src="{{ baseUrl }}/{{ lesson_data.path }}/text.md#overview" inline />
+</div>
+
+
+&nbsp;&nbsp;→ **[{{ lesson_data.title }}](#{{ slugify(lesson_data.title) }})** covers that part.
+</div>
+{% endmacro %}
+<!-- ============================================================ -->
+
+{% macro show_lesson(lesson_data) %}
+<panel type="seamless" expanded>
+<div slot="header" class="card-title">
+
+## <span class="text-success">{{ lesson_data.title }}</span>
+</div>
+
+<div class="indented-level1">
+
+<small>[<span class="font-weight-bold text-muted">Textbook location: <include src="{{ baseUrl }}/{{ lesson_data.path }}/../path.md" inline trim /> **<include src="{{ baseUrl }}/{{ lesson_data.path }}/text.md#title" inline />**]</span></small>
+</div>
+<include src="{{ baseUrl }}/{{ lesson_data.path }}/unit-inElsewhere-asPanelBody.md" boilerplate />
+</panel>
+{% endmacro %}
+<!-- ============================================================ -->
