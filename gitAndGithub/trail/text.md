@@ -1,4 +1,4 @@
-<span id="title">Git Learning Trail</span>
+<span id="title"></span>
 
 <body id="body">
 
@@ -9,7 +9,7 @@
 
 **Tours:**
 
-1. [Tour 1: Recording the History of a Folder](tours/tour-recording-folder-history.md)
+1. [Tour 1: Recording the History of a Folder](recordingFolderHistory/)
 </box>
 
 

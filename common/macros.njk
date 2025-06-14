@@ -4,15 +4,18 @@
 {% set trail = {
   tour_recording_snapshots: {
     title: "Tour 1: Recording the History of a Folder",
-    lesson_git_prep: {path: "gitAndGithub/gitPrep", title: "Lesson: Preparing to Use Git"},
-    lesson_init: {path: "gitAndGithub/init", title: "Lesson: Putting a Folder Under Git's Control"},
-    lesson_stage: {path: "gitAndGithub/stage", title: "Lesson: Specifying What to Include in a Snapshot"},
-    lesson_commit: {path: "gitAndGithub/commit", title: "Lesson: Saving a Snapshot"}
+    folder: "recordingFolderHistory",
+    lessons: {
+        git_prep: {path: "gitAndGithub/gitPrep", title: "Lesson: Preparing to Use Git"},
+        init: {path: "gitAndGithub/init", title: "Lesson: Putting a Folder Under Git's Control"},
+        stage: {path: "gitAndGithub/stage", title: "Lesson: Specifying What to Include in a Snapshot"},
+        commit: {path: "gitAndGithub/commit", title: "Lesson: Saving a Snapshot"}
+    }
   }
 } %}
 <!-- ============================================================ -->
 
-{% macro divider(text) %}# <div class="text-white bg-success p-1"><span class="text-light">:fas-map-marker-alt:</span> {{ text }}</div>{% endmacro %}
+{% macro show_tour_title(text) %}## <div class="text-white bg-success p-1"><span class="text-light">:fas-map-marker-alt:</span> {{ text }}</div>{% endmacro %}
 <!-- ============================================================ -->
 
 {% macro show_git_tabs(filename_suffix='', indent_level='') -%}
@@ -70,7 +73,7 @@
 <panel type="seamless" expanded>
 <div slot="header" class="card-title">
 
-## <span class="text-success">{{ lesson_data.title }}</span>
+### <span class="text-success">{{ lesson_data.title }}</span>
 </div>
 
 <div class="indented-level1">
@@ -79,5 +82,28 @@
 </div>
 <include src="{{ baseUrl }}/{{ lesson_data.path }}/unit-inElsewhere-asPanelBody.md" boilerplate />
 </panel>
+{% endmacro %}
+<!-- ============================================================ -->
+
+{% macro show_tour(tour) %}
+{% set tour_folder = baseUrl + "/gitAndGithub/trail/" + tour.folder %}
+
+{{ show_tour_title(tour.title) }}
+
+**Destination**: <include src="{{ tour_folder }}/text.md#destination" trim inline/>
+
+**Motivation**: <include src="{{ tour_folder }}/text.md#motivation" trim inline/>
+
+**Route**:
+{% for lesson_name, lesson_data in tour.lessons %}
+{{ show_lesson_overview(lesson_data) }}
+{% endfor %}
+
+<hr>
+
+{% for lesson_name, lesson_data in tour.lessons %}
+{{ show_lesson(lesson_data) }}
+{% endfor %}
+
 {% endmacro %}
 <!-- ============================================================ -->
