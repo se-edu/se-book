@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import show_git_tabs, show_hands_on_practical, show_lesson_intro with context %}
+{% from "common/macros.njk" import bold_number, hp_number, show_detour, show_exercise, show_git_tabs, show_hands_on_practical, show_lesson_intro, show_output, show_under_the_hood with context %}
 
 <span id="outcomes">{{ icon_outcome }} Can create a local Git repo</span>
 
@@ -17,31 +17,32 @@ You can follow the hands-on practical below to learn how to initialise a repo in
 
 {% call show_hands_on_practical("Initialise a git repo in a folder") %}
 
-**1. First, choose a folder.** The folder may or may not have any files in it already. For this practical, let us create a folder named `things` for this purpose.
+{{ hp_number(1) }} **First, choose a folder.** The folder may or may not have any files in it already. For this practical, let us create a folder named `things` for this purpose.
 
-```bash {.no-line-numbers}
-$ cd my-projects
-$ mkdir things
-```
+  ```bash {.no-line-numbers}
+  cd my-projects
+  mkdir things
+  ```
 
-**2. Then CD into it.**
+{{ hp_number(2) }} **Then CD into it.**
 
 ```bash {.no-line-numbers}
 cd things
 ```
 
-**3. Run the `git status` command** to check the status of the folder.
+{{ hp_number(3) }} **Run the `git status` command** to check the status of the folder.
 
 ```bash {.no-line-numbers}
-$ git status
+git status
 ```
-{{ icon_output }}
+{% call show_output() %}
 ```{.no-line-numbers}
 fatal: not a git repository (or any of the parent directories): .git
 ```
+{% endcall %}
 Don't panic. The error message is expected. It confirms that the folder currently does not have a Git repo.
 
-**4. Now, initialise a repository** in that folder.
+{{ hp_number(4) }} **Now, initialise a repository** in that folder.
 
 {{ show_git_tabs() }}
 
@@ -49,12 +50,14 @@ Don't panic. The error message is expected. It confirms that the folder currentl
 
 **The `init` command that you ran resulted in two things:**
 
-**a) First, Git now recognises this folder as a Git repository**, which means it can now help you track the version history of files inside this folder. To confirm, you can run the `git status` command. It should respond with something like the following:
+* **First, Git now recognises this folder as a Git repository**, which means it can now help you track the version history of files inside this folder. To confirm, you can run the `git status` command. It should respond with something like the following: {{ bold_number("a)") }}
+
+<div class="indented-level1">
 
 ```{.no-line-numbers}
-$ git status
+git status
 ```
-{{ icon_output }}
+{% call show_output() %}
 ```{.no-line-numbers}
 On branch master
 
@@ -62,35 +65,40 @@ No commits yet
 
 nothing to commit (create/copy files and use "git add" to track)
 ```
+{% endcall %}
+
 {{ icon_info }} Don't worry if you don't understand the output (we will learn about them in another lesson); all you need to notice is that it no longer gives an error message as it before.
+</div>
 
-**b) Second, Git created a hidden subfolder named `.git`** inside the `things` folder. This folder will be used by Git to store meta-data about this repository. Feel free to verify it exists, as given below.
-
-<tabs>
+* **Second, Git created a hidden subfolder named `.git`** inside the `things` folder. This folder will be used by Git to store meta-data about this repository.{{ bold_number("b)") }}
+{% call show_under_the_hood('How Git stores meta-data about the repository', indent_level=1) %}
+Feel free to verify `.git` folder exists, as given below.
+ <tabs>
   <tab header=":fas-terminal: Terminal">
 
 You can use the _list all_ command `ls -a` to view all files, which should show the `.git` folder that was created by the `init` command.
 
 ```{.no-line-numbers highlight-lines="1['-a']"}
-$ ls -a
+ls -a
 ```
 {{ icon_output }}
 ```{.no-line-numbers highlight-lines="1['.git']"}
 .  ..  .git
 ```
-
   </tab>
   <tab header=":fab-windows: Windows Explorer">
 
 To see the hidden folders, you might have to [configure Windows Explorer to show hidden files](https://support.microsoft.com/en-us/windows/view-hidden-files-and-folders-in-windows-97fbc472-c603-9d90-91d0-1166d1d9f4b5) first.
-
   </tab>
   <tab header=":fab-apple: MacOS Finder">
 
 Press <kbd>⌘</kbd>+<kbd>⇧</kbd>+<kbd>.</kbd> to get Finder to show hidden folders/files.
-
   </tab>
 </tabs>
+
+You can even dig around inside that folder -- it is just a bunch of subfolders and files.
+{% endcall %}
+<p/>
 
 **A Git-controlled folder is divided into two main parts:**
 
@@ -99,4 +107,19 @@ Press <kbd>⌘</kbd>+<kbd>⇧</kbd>+<kbd>.</kbd> to get Finder to show hidden fo
 
 </div>
 <div id="extras">
+
+{{ show_exercise('under-control') }}
+<p/>
+
+{% call show_detour('How to undo a repo initialisation') %}
+When Git initialises a repo in a folder, it does not touch any files in the folder, other than create the `.git` folder its contents. So, reversing the operation is as simple as deleting the newly-created `.git` folder.
+
+```
+git status # run this to confirm a repo exists
+
+rm -rf .git  # delete the .git folder
+
+git status # this should give an error, as no repo exists
+```
+{% endcall %}
 </div>

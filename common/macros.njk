@@ -1,15 +1,37 @@
 {%- macro slugify(text) %}{{ text | lower | replace(r/[\'\s\/]/g, '-') | replace(r/[\(\)%:,&\`\[\]\+]/g, '') }}{% endmacro -%}
 <!-- ============================================================ -->
 
+{%- macro bold_number(text) %}{{ "{" }} text="{{ text }}" t-class="fw-bold" {{ "}" }}{% endmacro -%}
+<!-- ============================================================ -->
+
+{%- macro hp_number(text) %}<span style="position: relative; right: 25px;" class="badge rounded-pill text-dark bg-secondary text-white">{{ text }}</span>{% endmacro -%}
+<!-- ============================================================ -->
+
+{% macro show_output(indent_level='') %}
+{% if indent_level %}<div class="indented-level{{ indent_level }}">{% endif %}
+<div class="d-flex">
+<div class="me-3">
+<span><md>**%%⤷%%**</md></span>
+</div>
+<div class="flex-grow-1">
+
+{{ caller() }}
+
+</div>
+</div>
+{% if indent_level %}</div>{% endif %}
+{% endmacro %}
+<!-- ============================================================ -->
+
 {% set trail = {
   tour_recording_snapshots: {
     title: "Tour 1: Recording the History of a Folder",
     folder: "recordingFolderHistory",
     lessons: {
-        git_prep: {path: "gitAndGithub/gitPrep", title: "Lesson: Preparing to Use Git"},
-        init: {path: "gitAndGithub/init", title: "Lesson: Putting a Folder Under Git's Control"},
-        stage: {path: "gitAndGithub/stage", title: "Lesson: Specifying What to Include in a Snapshot"},
-        commit: {path: "gitAndGithub/commit", title: "Lesson: Saving a Snapshot"}
+      git_prep: {path: "gitAndGithub/gitPrep", title: "Lesson: Preparing to Use Git"},
+      init: {path: "gitAndGithub/init", title: "Lesson: Putting a Folder Under Git's Control"},
+      stage: {path: "gitAndGithub/stage", title: "Lesson: Specifying What to Include in a Snapshot"},
+      commit: {path: "gitAndGithub/commit", title: "Lesson: Saving a Snapshot"}
     }
   }
 } %}
@@ -17,7 +39,6 @@
 
 {% macro show_tour_title(text) %}## <div class="text-white bg-success p-1"><span class="text-light">:fas-map-marker-alt:</span> {{ text }}</div>{% endmacro %}
 <!-- ============================================================ -->
-
 {% macro show_git_tabs(filename_suffix='', indent_level='') -%}
 {% if indent_level %}<div class="indented-level{{ indent_level }}">{% endif %}
 <tabs>
@@ -33,10 +54,44 @@
 <!-- ============================================================ -->
 
 {% macro show_hands_on_practical(title) %}
-<box header=":fas-laptop-code: HANDS-ON: **{{ title }}**" style="secondary" seamless>
+<span style="position: relative; top: 10px;" class="badge rounded-pill bg-secondary">++:fas-laptop-code: HANDS-ON: {{ title }}++</span>
+<div class="indented-level1">
+
+<box type="dark" seamless no-icon>
 
 {{ caller() }}
 </box>
+</div>
+{% endmacro %}
+<!-- ============================================================ -->
+
+{% macro show_detour(title) %}
+<panel header=":fas-diamond-turn-right: DETOUR: **{{ title }}**" type="warning" peek>
+
+{{ caller() }}
+</panel>
+{% endmacro %}
+<!-- ============================================================ -->
+
+{% macro show_under_the_hood(title, indent_level='') %}
+{% if indent_level %}<div class="indented-level{{ indent_level }}">{% endif %}
+
+<panel header=":fas-wrench: UNDER-THE-HOOD: **{{ title }}**" type="info" >
+
+{{ caller() }}
+</panel>
+{% if indent_level %}</div>{% endif %}
+{% endmacro %}
+<!-- ============================================================ -->
+
+{% macro show_exercise(identifier) %}
+<panel type="danger" header=":fas-dumbbell: EXERCISE: `{{ identifier }}`">
+
+**Description** is [here](https://github.com/git-mastery/exercises/tree/main/{{ identifier | replace("-", "_") }}).<br>
+**To download** the exercise, run `gitmastery download {{ identifer }}`.<br>
+**To verify** your solution, run `gitmastery verify`.
+
+</panel>
 {% endmacro %}
 <!-- ============================================================ -->
 
@@ -70,7 +125,7 @@
 <!-- ============================================================ -->
 
 {% macro show_lesson(lesson_data) %}
-<panel type="seamless" expanded>
+<panel type="seamless" popup-url="{{ baseUrl }}/{{ lesson_data.path }}/" expanded>
 <div slot="header" class="card-title">
 
 ### <span class="text-success">{{ lesson_data.title }}</span>
