@@ -37,7 +37,7 @@
 } %}
 <!-- ============================================================ -->
 
-{% macro show_tour_title(text) %}## <div class="text-white bg-success p-1"><span class="text-light">:fas-map-marker-alt:</span> {{ text }}</div>{% endmacro %}
+{% macro show_tour_title(text) %}<div class="text-white bg-success p-1" style="border-top-left-radius: 15px; border-top-right-radius: 15px;"><span class="h2"><span class="text-light"><md>:fas-map-marker-alt:</md></span> {{ text }}</span></div>{% endmacro %}
 <!-- ============================================================ -->
 {% macro show_git_tabs(filename_suffix='', indent_level='') -%}
 {% if indent_level %}<div class="indented-level{{ indent_level }}">{% endif %}
@@ -61,6 +61,14 @@
 
 {{ caller() }}
 </box>
+</div>
+{% endmacro %}
+<!-- ============================================================ -->
+
+{% macro callout(title) %}
+<div class="callout shadow">
+
+**What is this?**{.text-info} {{ caller() }}
 </div>
 {% endmacro %}
 <!-- ============================================================ -->
@@ -142,8 +150,10 @@
 
 {% macro show_tour(tour) %}
 {% set tour_folder = baseUrl + "/gitAndGithub/trail/" + tour.folder %}
+<div style=" background-color: #e6fff2; border-top-left-radius: 15px; border-top-right-radius: 15px;">
 
 {{ show_tour_title(tour.title) }}
+<div class="p-3">
 
 **Destination**: <include src="{{ tour_folder }}/text.md#destination" trim inline/>
 
@@ -154,11 +164,19 @@
 {{ show_lesson_overview(lesson_data) }}
 {% endfor %}
 
-<hr>
+</div>
+</div>
 
 {% for lesson_name, lesson_data in tour.lessons %}
 {{ show_lesson(lesson_data) }}
 {% endfor %}
 
+<div style="background-color: #e6fff2; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;" class="p-3 border-bottom border-5 border-success">
+
+**What you learned**: <include src="{{ tour_folder }}/text.md#achievements" trim inline/>
+
+**What's next**: <include src="{{ tour_folder }}/text.md#next" trim inline/>
+
+</div>
 {% endmacro %}
 <!-- ============================================================ -->

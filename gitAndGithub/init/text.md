@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import bold_number, hp_number, show_detour, show_exercise, show_git_tabs, show_hands_on_practical, show_lesson_intro, show_output, show_under_the_hood with context %}
+{% from "common/macros.njk" import bold_number, callout, hp_number, show_detour, show_exercise, show_git_tabs, show_hands_on_practical, show_lesson_intro, show_output, show_under_the_hood with context %}
 
 <span id="outcomes">{{ icon_outcome }} Can create a local Git repo</span>
 
@@ -71,6 +71,12 @@ nothing to commit (create/copy files and use "git add" to track)
 </div>
 
 * **Second, Git created a hidden subfolder named `.git`** inside the `things` folder. This folder will be used by Git to store meta-data about this repository.{{ bold_number("b)") }}
+
+{% call callout() %}
+  <span class="badge bg-info text-white">:fas-wrench: UNDER-THE-HOOD</span> panels explain how a certain Git feature works under the hood i.e., some implementation details.<br>
+  They can be skipped the first time you are taking a tour. But we recommend that you delve into some of them at some point. Reason: While Git _can_ be used without knowing much about its internal workings, knowing those details will allow you to be more confident when using Git, and harness more of its awesome power.
+{% endcall %}
+
 {% call show_under_the_hood('How Git stores meta-data about the repository', indent_level=1) %}
 Feel free to verify `.git` folder exists, as given below.
  <tabs>
@@ -78,11 +84,11 @@ Feel free to verify `.git` folder exists, as given below.
 
 You can use the _list all_ command `ls -a` to view all files, which should show the `.git` folder that was created by the `init` command.
 
-```{.no-line-numbers highlight-lines="1['-a']"}
+```bash{.no-line-numbers highlight-lines="1['-a']"}
 ls -a
 ```
 {{ icon_output }}
-```{.no-line-numbers highlight-lines="1['.git']"}
+```bash{.no-line-numbers highlight-lines="1['.git']"}
 .  ..  .git
 ```
   </tab>
@@ -111,15 +117,19 @@ You can even dig around inside that folder -- it is just a bunch of subfolders a
 {{ show_exercise('under-control') }}
 <p/>
 
+{% call callout() %}
+Detours are related directions you can optionally explore. We recommend that you ==only skim them the first time you are going through a tour== (i.e., just to know _what_ each detour covers); you can revisit them later, to deepen your knowledge further, or when you encounter a use case related to the concepts covered by the detour.
+{% endcall %}
+
 {% call show_detour('How to undo a repo initialisation') %}
 When Git initialises a repo in a folder, it does not touch any files in the folder, other than create the `.git` folder its contents. So, reversing the operation is as simple as deleting the newly-created `.git` folder.
 
-```
-git status # run this to confirm a repo exists
+```bash{.no-line-numbers}
+git status #run this to confirm a repo exists
 
-rm -rf .git  # delete the .git folder
+rm -rf .git  #delete the .git folder
 
-git status # this should give an error, as no repo exists
+git status #this should give an error, as the repo no longer exists
 ```
 {% endcall %}
 </div>
