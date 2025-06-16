@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import bold_number, callout, hp_number, show_detour, show_exercise, show_git_tabs, show_hands_on_practical, show_lesson_intro, show_output, show_under_the_hood with context %}
+{% from "common/macros.njk" import bold_number, callout, hp_number, label, show_detour, show_exercise, show_git_tabs, show_hands_on_practical, show_lesson_intro, show_output, show_under_the_hood with context %}
 
 <span id="outcomes">{{ icon_outcome }} Can create a local Git repo</span>
 
@@ -14,6 +14,10 @@ To be able to save snapshots of a folder using Git, **you must first put the fol
 **To put a folder under the control of Git, we _initialise a repository_ (short name: repo)** in that folder. This way, we can initialise repos in different folders, to version-control different clusters of files independently of each other %%e.g., files belonging to different projects%%.
 
 You can follow the hands-on practical below to learn how to initialise a repo in a folder.
+
+{% call callout() %}
+{{ label('secondary', icon_hands_on + ' HANDS-ON') }} panels contain hands-on activities you can do as you learn Git.
+{% endcall %}
 
 {% call show_hands_on_practical("Initialise a git repo in a folder") %}
 
@@ -73,7 +77,7 @@ nothing to commit (create/copy files and use "git add" to track)
 * **Second, Git created a hidden subfolder named `.git`** inside the `things` folder. This folder will be used by Git to store meta-data about this repository.{{ bold_number("b)") }}
 
 {% call callout() %}
-  <span class="badge bg-info text-white">:fas-wrench: UNDER-THE-HOOD</span> panels explain how a certain Git feature works under the hood i.e., some implementation details.<br>
+  {{ label('info', icon_under_the_hood + ' UNDER-THE-HOOD') }} panels explain how a certain Git feature works under the hood i.e., some implementation details.<br>
   They can be skipped the first time you are taking a tour. But we recommend that you delve into some of them at some point. Reason: While Git _can_ be used without knowing much about its internal workings, knowing those details will allow you to be more confident when using Git, and harness more of its awesome power.
 {% endcall %}
 
@@ -113,12 +117,15 @@ You can even dig around inside that folder -- it is just a bunch of subfolders a
 
 </div>
 <div id="extras">
+{% call callout() %}
+  {{ label('danger', icon_exercise + ' EXERCISE') }} panels contain a Git-Mastery exercise that you can download using the Git-Mastery app, and you can use the same app to verify that your solution is correct.
+{% endcall %}
 
 {{ show_exercise('under-control') }}
 <p/>
 
 {% call callout() %}
-Detours are related directions you can optionally explore. We recommend that you ==only skim them the first time you are going through a tour== (i.e., just to know _what_ each detour covers); you can revisit them later, to deepen your knowledge further, or when you encounter a use case related to the concepts covered by the detour.
+{{ label('warning', icon_detour + ' DETOUR') }} panels contain related directions you can optionally explore. We recommend that you ==only skim them the first time you are going through a tour== (i.e., just to know _what_ each detour covers); you can revisit them later, to deepen your knowledge further, or when you encounter a use case related to the concepts covered by the detour.
 {% endcall %}
 
 {% call show_detour('How to undo a repo initialisation') %}

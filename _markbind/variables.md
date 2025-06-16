@@ -9,13 +9,15 @@
 <variable id="bullet_checkbox_red">{ icon="far-square" i-class="text-danger" }</variable>
 <variable id="bullet_checkbox_selected">{ icon="fas-square-check" }</variable>
 <variable id="bullet_checkbox_selected_green">{ icon="fas-square-check" i-class="text-success" }</variable>
-<variable id="icon_deadline">:alarm_clock:</variable>
+<variable id="icon_deadline"><md>:alarm_clock:</md></variable>
+<variable id="icon_detour"><md>:fas-diamond-turn-right:</md></variable>
 <variable id="icon_dislike"><md>:fas-thumbs-down:</md></variable>
 <variable id="icon_example"><md>:fas-cube:</md></variable>
 <variable id="icon_embedding"><md>:glyphicon-log-in:</md></variable>
 <variable id="icon_exercise"><md>:fas-dumbbell:</md></variable>
 <variable id="icon_extra"><span class='badge rounded-pill bg-secondary'><md>:fas-plus: extra</md></span></variable>
 <variable id="icon_evidence"><md>:fas-briefcase:</md></variable>
+<variable id="icon_hands_on"><md>:fas-laptop-code:</md></variable>
 <variable id="icon_info"><md>:fas-info-circle:</md></variable>
 <variable id="icon_individual"><md>:fas-user:</md></variable>
 <variable id="icon_lecture"><md>:glyphicon-blackboard:</md></variable>
@@ -46,6 +48,7 @@
 <variable id="icon_todo"><md>:glyphicon-check:</md></variable>
 <variable id="icon_tutorial"><md>:fas-chalkboard-teacher:</md></variable>
 <variable id="icon_slides"><md>:far-images:</md></variable>
+<variable id="icon_under_the_hood"><md>:fas-wrench:</md></variable>
 <variable id="icon_video"><md>:glyphicon-facetime-video:</md></variable>
 <variable id="icon_windows"><md>:fab-windows:</md></variable>
 <variable id="icon_x"><md>:fas-times:</md></variable>

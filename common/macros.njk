@@ -7,6 +7,9 @@
 {%- macro hp_number(text) %}<span style="position: relative; right: 25px;" class="badge rounded-pill text-dark bg-secondary text-white">{{ text }}</span>{% endmacro -%}
 <!-- ============================================================ -->
 
+{%- macro label(style, text) %}<span class="badge bg-{{ style }} text-{{ 'dark' if style in ['warning', 'light'] else 'white' }}">{{ text }}</span>{% endmacro -%}
+<!-- ============================================================ -->
+
 {% macro show_output(indent_level='') %}
 {% if indent_level %}<div class="indented-level{{ indent_level }}">{% endif %}
 <div class="d-flex">
@@ -54,7 +57,7 @@
 <!-- ============================================================ -->
 
 {% macro show_hands_on_practical(title) %}
-<span style="position: relative; top: 10px;" class="badge rounded-pill bg-secondary">++:fas-laptop-code: HANDS-ON: {{ title }}++</span>
+<span style="position: relative; top: 10px;" class="badge rounded-pill bg-secondary fs-6">{{ icon_hands_on }} HANDS-ON: {{ title }}</span>
 <div class="indented-level1">
 
 <box type="dark" seamless no-icon>
@@ -65,16 +68,19 @@
 {% endmacro %}
 <!-- ============================================================ -->
 
-{% macro callout(title) %}
+{% macro callout() %}
+<div class="indented-level2 non-printable">
+
 <div class="callout shadow">
 
 **What is this?**{.text-info} {{ caller() }}
+</div>
 </div>
 {% endmacro %}
 <!-- ============================================================ -->
 
 {% macro show_detour(title) %}
-<panel header=":fas-diamond-turn-right: DETOUR: **{{ title }}**" type="warning" peek>
+<panel header="{{ icon_detour }} DETOUR: **{{ title }}**" type="warning" peek>
 
 {{ caller() }}
 </panel>
@@ -84,7 +90,7 @@
 {% macro show_under_the_hood(title, indent_level='') %}
 {% if indent_level %}<div class="indented-level{{ indent_level }}">{% endif %}
 
-<panel header=":fas-wrench: UNDER-THE-HOOD: **{{ title }}**" type="info" >
+<panel header="{{ icon_under_the_hood }} UNDER-THE-HOOD: **{{ title }}**" type="info" >
 
 {{ caller() }}
 </panel>
@@ -93,7 +99,7 @@
 <!-- ============================================================ -->
 
 {% macro show_exercise(identifier) %}
-<panel type="danger" header=":fas-dumbbell: EXERCISE: `{{ identifier }}`">
+<panel type="danger" header="{{ icon_exercise }} EXERCISE: `{{ identifier }}`">
 
 **Description** is [here](https://github.com/git-mastery/exercises/tree/main/{{ identifier | replace("-", "_") }}).<br>
 **To download** the exercise, run `gitmastery download {{ identifer }}`.<br>
