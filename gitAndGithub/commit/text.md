@@ -1,8 +1,8 @@
-{% from "common/macros.njk" import show_git_tabs, show_hands_on_practical, show_lesson_intro with context %}
+{% from "common/macros.njk" import trail, show_git_tabs, show_hands_on_practical, show_lesson_intro with context %}
 
 <span id="outcomes">{{ icon_outcome }} Can commit using Git</span>
 
-<span id="title">Saving a Snapshot</span>
+<span id="title">{{ trail.recordingFolderHistory.lessons.commit.title }}</span>
 
 <div id="body">
 {% call show_lesson_intro() %}

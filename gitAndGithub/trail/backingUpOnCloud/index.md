@@ -1,5 +1,6 @@
+{% from "common/macros.njk" import trail with context %}
 <frontmatter>
-title: "Tour 2: Backing Up a Repo on the Cloud"
+title: "{{ trail.backingUpOnCloud.title }}"
 pageNav: 4
 </frontmatter>
 

@@ -1,7 +1,7 @@
-{% from "common/macros.njk" import show_git_tabs, show_hands_on_practical, show_lesson_intro with context %}
+{% from "common/macros.njk" import trail, show_git_tabs, show_hands_on_practical, show_lesson_intro with context %}
 
 <span id="outcomes">{{ icon_outcome }} Can stage files</span>
-<span id="title">Specifying What to include in a Snapshot</span>
+<span id="title">{{ trail.recordingFolderHistory.lessons.stage.title }}</span>
 
 <div id="body">
 

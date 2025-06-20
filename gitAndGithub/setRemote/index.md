@@ -1,6 +1,6 @@
-{% set title %}<include src="text.md#title" inline trim />{% endset %}
+{% from "common/macros.njk" import trail with context %}
 <frontmatter>
-title: {{ title }}
+title: "{{ trail.backingUpOnCloud.lessons.setRemote.title }}"
 </frontmatter>
 
 

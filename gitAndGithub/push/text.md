@@ -1,9 +1,15 @@
-{% from "common/macros.njk" import show_git_tabs with context %}
+{% from "common/macros.njk" import trail, show_git_tabs, show_hands_on_practical, show_lesson_intro with context %}
+
+<span id="prereqs"></span>
+
 <span id="outcomes">{{ icon_outcome }} Can push to a remote repo</span>
 
-<span id="title">`push`: Uploading data to other repos</span>
+<span id="title">{{ trail.backingUpOnCloud.lessons.push.title }}</span>
 
 <div id="body">
+{% call show_lesson_intro() %}
+Now, you can **update the remote repo with the revision history of the local repo**.
+{% endcall %}
 
 <div id="simple-push">
 

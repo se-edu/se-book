@@ -27,21 +27,25 @@
 <!-- ============================================================ -->
 
 {% set trail = {
-  tour_recording_snapshots: {
+  recordingFolderHistory: {
     folder: "recordingFolderHistory",
+    title: "Tour 1: Recording the History of a Folder",
     lessons: {
-      gitPrep: {path: "gitAndGithub/gitPrep"},
-      init: {path: "gitAndGithub/init"},
-      stage: {path: "gitAndGithub/stage"},
-      commit: {path: "gitAndGithub/commit"}
+      gitPrep: {path: "gitAndGithub/gitPrep", title: "Preparing to Use Git"},
+      init: {path: "gitAndGithub/init", title: "Putting a Folder Under Git's Control"},
+      stage: {path: "gitAndGithub/stage", title: "Specifying What to include in a Snapshot"},
+      commit: {path: "gitAndGithub/commit", title: "Saving a Snapshot"}
     }
   },
-  tour_backing_up_on_cloud: {
+  backingUpOnCloud: {
     folder: "backingUpOnCloud",
+    title: "Tour 2: Backing up a Repo on the Cloud",
     lessons: {
-      githubPrep: {path: "gitAndGithub/githubPrep"},
-      createRemoteRepo: {path: "gitAndGithub/createRemoteRepo"},
-      setRemote: {path: "gitAndGithub/setRemote"}
+      githubPrep: {path: "gitAndGithub/githubPrep", title: "Preparing to use GitHub"},
+      createRemoteRepo: {path: "gitAndGithub/createRemoteRepo", title: "Creating a Repo on GitHub"},
+      setRemote: {path: "gitAndGithub/setRemote", title: "Linking a Local Repo With a Remote Repo"},
+      push: {path: "gitAndGithub/push", title: "Updating the Remote Repo"},
+      ignore: {path: "gitAndGithub/ignore", title: "Omitting files from revision control"}
     }
   }
 } %}
@@ -139,8 +143,8 @@
 <include src="{{ baseUrl }}/{{ lesson_data.path }}/text.md#overview" inline />
 </div>
 
-
-&nbsp;&nbsp;→ **[Lesson: <include src="{{ baseUrl }}/{{ lesson_data.path }}/text.md#title" inline trim />](#{{ slugify(lesson_data.title) }})** covers that part.
+{% set lesson_title = "Lesson: " + lesson_data.title %}
+&nbsp;&nbsp;→ **[{{ lesson_title }}](#{{ slugify(lesson_title) }})** covers that part.
 </div>
 {% endmacro %}
 <!-- ============================================================ -->
@@ -149,12 +153,12 @@
 <panel type="seamless" popup-url="{{ baseUrl }}/{{ lesson_data.path }}/" expanded>
 <div slot="header" class="card-title">
 
-### <span class="text-success">Lesson: <include src="{{ baseUrl }}/{{ lesson_data.path }}/text.md#title" inline trim /></span>
+### <span class="text-success">Lesson: {{ lesson_data.title }}</span>
 </div>
 
 <div class="indented-level1">
 
-<small>[<span class="font-weight-bold text-muted">Textbook location: <include src="{{ baseUrl }}/{{ lesson_data.path }}/../path.md" inline trim /> **<include src="{{ baseUrl }}/{{ lesson_data.path }}/text.md#title" inline />**]</span></small>
+<small>[<span class="font-weight-bold text-muted">Textbook location: <include src="{{ baseUrl }}/{{ lesson_data.path }}/../path.md" inline trim /> **{{ lesson_data.title }}**]</span></small>
 </div>
 <include src="{{ baseUrl }}/{{ lesson_data.path }}/unit-inElsewhere-asPanelBody.md" boilerplate />
 </panel>
@@ -163,10 +167,9 @@
 
 {% macro show_tour(tour) %}
 {% set tour_folder = baseUrl + "/gitAndGithub/trail/" + tour.folder %}
-{% set tour_title %}<include src="{{ tour_folder }}/text.md#title" trim inline/>{% endset %}
 <div style=" background-color: #e6fff2; border-top-left-radius: 15px; border-top-right-radius: 15px;">
 
-{{ show_tour_title(tour_title) }}
+{{ show_tour_title(tour.title) }}
 <div class="p-3">
 
 **Destination**: <include src="{{ tour_folder }}/text.md#destination" trim inline/>
@@ -205,7 +208,7 @@ Target use case: <include src="{{ tour.folder }}/text.md#destination" trim inlin
 <small>This use case is covered by,</small>
 </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;→ **[<md>++<include src="{{ tour.folder }}/text.md#title" trim inline/>++</md>]({{ baseUrl }}/gitAndGithub/trail/{{ tour.folder }}/)**
+&nbsp;&nbsp;&nbsp;&nbsp;→ **[<md>++{{ tour.title }}++</md>]({{ baseUrl }}/gitAndGithub/trail/{{ tour.folder }}/)**
 </div>
 {% endmacro %}
 <!-- ============================================================ -->

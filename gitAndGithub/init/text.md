@@ -1,8 +1,8 @@
-{% from "common/macros.njk" import bold_number, callout, hp_number, label, show_detour, show_exercise, show_git_tabs, show_hands_on_practical, show_lesson_intro, show_output, show_under_the_hood with context %}
+{% from "common/macros.njk" import trail, bold_number, callout, hp_number, label, show_detour, show_exercise, show_git_tabs, show_hands_on_practical, show_lesson_intro, show_output, show_under_the_hood with context %}
 
 <span id="outcomes">{{ icon_outcome }} Can create a local Git repo</span>
 
-<span id="title">Putting a Folder Under Git's Control</span>
+<span id="title">{{ trail.recordingFolderHistory.lessons.init.title }}</span>
 
 <div id="body">
 {% call show_lesson_intro() %}

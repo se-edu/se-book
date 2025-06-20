@@ -1,10 +1,15 @@
-{% from "common/macros.njk" import show_git_tabs with context %}
+{% from "common/macros.njk" import trail, show_git_tabs, show_hands_on_practical, show_lesson_intro with context %}
+
+<span id="prereqs"></span>
+
 <span id="outcomes">{{ icon_outcome }} Can set Git to ignore files</span>
 
-<span id="title">Omitting files from revision control</span>
+<span id="title">{{ trail.backingUpOnCloud.lessons.ignore.title }}</span>
 
 <div id="body">
-
+{% call show_lesson_intro() %}
+Git allows you to **specify which files should be omitted from version control**.
+{% endcall %}
 
 Often, there are files inside the Git working folder that you don't want to revision-control e.g., temporary log files. Follow the steps below to learn how to configure Git to ignore such files.
 

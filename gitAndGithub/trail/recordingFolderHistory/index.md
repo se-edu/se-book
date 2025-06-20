@@ -1,5 +1,6 @@
+{% from "common/macros.njk" import trail with context %}
 <frontmatter>
-title: "Tour 1: Recording the History of a Folder"
+title: "{{ trail.recordingFolderHistory.title }}"
 pageNav: 4
 </frontmatter>
 

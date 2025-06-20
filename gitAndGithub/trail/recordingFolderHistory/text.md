@@ -1,12 +1,12 @@
 {% from "common/macros.njk" import trail, show_tour_title, show_tour with context %}
-{% set tour = trail.tour_recording_snapshots %}
+{% set tour = trail.recordingFolderHistory %}
 <frontmatter>
 title: "{{ tour.title }}"
 pageNav: 4
 </frontmatter>
 
 <span id="outcomes">{{ icon_outcome }} Can use Git to take snapshots of a folder</span>
-<span id="title">Tour 1: Recording the History of a Folder</span>
+<span id="title"></span>
 
 <span class="d-none" id="destination">To be able to use Git to systematically record the history of a folder in your own computer. More specifically, to use Git to save a snapshot of the folder at specific points of time.</span>
 

@@ -1,5 +1,6 @@
+{% from "common/macros.njk" import trail with context %}
 <frontmatter>
-title: "Revision Control: Preparing to use Git"
+title: "{{ trail.recordingFolderHistory.lessons.gitPrep.title }}"
 </frontmatter>
 
 <include src="unit-inPage-asFlat.md" boilerplate />

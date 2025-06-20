@@ -1,12 +1,12 @@
 {% from "common/macros.njk" import trail, show_tour_title, show_tour with context %}
-{% set tour = trail.tour_backing_up_on_cloud %}
+{% set tour = trail.backingUpOnCloud %}
 <frontmatter>
 title: "{{ tour.title }}"
 pageNav: 4
 </frontmatter>
 
 <span id="outcomes">{{ icon_outcome }} Can back up a Git repository on a cloud-based Git service such as GitHub</span>
-<span id="title">Tour 2: Backing up a Repo on the Cloud</span>
+<span id="title"></span>
 
 <span class="d-none" id="destination">To be able to back up a Git repository on a cloud-based Git service such as GitHub.</span>
 
