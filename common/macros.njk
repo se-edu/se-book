@@ -28,13 +28,20 @@
 
 {% set trail = {
   tour_recording_snapshots: {
-    title: "Tour 1: Recording the History of a Folder",
     folder: "recordingFolderHistory",
     lessons: {
-      git_prep: {path: "gitAndGithub/gitPrep", title: "Lesson: Preparing to Use Git"},
-      init: {path: "gitAndGithub/init", title: "Lesson: Putting a Folder Under Git's Control"},
-      stage: {path: "gitAndGithub/stage", title: "Lesson: Specifying What to Include in a Snapshot"},
-      commit: {path: "gitAndGithub/commit", title: "Lesson: Saving a Snapshot"}
+      gitPrep: {path: "gitAndGithub/gitPrep"},
+      init: {path: "gitAndGithub/init"},
+      stage: {path: "gitAndGithub/stage"},
+      commit: {path: "gitAndGithub/commit"}
+    }
+  },
+  tour_backing_up_on_cloud: {
+    folder: "backingUpOnCloud",
+    lessons: {
+      githubPrep: {path: "gitAndGithub/githubPrep"},
+      createRemoteRepo: {path: "gitAndGithub/createRemoteRepo"},
+      setRemote: {path: "gitAndGithub/setRemote"}
     }
   }
 } %}
@@ -133,7 +140,7 @@
 </div>
 
 
-&nbsp;&nbsp;→ **[{{ lesson_data.title }}](#{{ slugify(lesson_data.title) }})** covers that part.
+&nbsp;&nbsp;→ **[Lesson: <include src="{{ baseUrl }}/{{ lesson_data.path }}/text.md#title" inline trim />](#{{ slugify(lesson_data.title) }})** covers that part.
 </div>
 {% endmacro %}
 <!-- ============================================================ -->
@@ -142,7 +149,7 @@
 <panel type="seamless" popup-url="{{ baseUrl }}/{{ lesson_data.path }}/" expanded>
 <div slot="header" class="card-title">
 
-### <span class="text-success">{{ lesson_data.title }}</span>
+### <span class="text-success">Lesson: <include src="{{ baseUrl }}/{{ lesson_data.path }}/text.md#title" inline trim /></span>
 </div>
 
 <div class="indented-level1">
@@ -156,9 +163,10 @@
 
 {% macro show_tour(tour) %}
 {% set tour_folder = baseUrl + "/gitAndGithub/trail/" + tour.folder %}
+{% set tour_title %}<include src="{{ tour_folder }}/text.md#title" trim inline/>{% endset %}
 <div style=" background-color: #e6fff2; border-top-left-radius: 15px; border-top-right-radius: 15px;">
 
-{{ show_tour_title(tour.title) }}
+{{ show_tour_title(tour_title) }}
 <div class="p-3">
 
 **Destination**: <include src="{{ tour_folder }}/text.md#destination" trim inline/>
@@ -197,7 +205,7 @@ Target use case: <include src="{{ tour.folder }}/text.md#destination" trim inlin
 <small>This use case is covered by,</small>
 </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;→ **[<md>++{{ tour.title  }}++</md>]({{ baseUrl }}/gitAndGithub/trail/{{ tour.folder }}/)**
+&nbsp;&nbsp;&nbsp;&nbsp;→ **[<md>++<include src="{{ tour.folder }}/text.md#title" trim inline/>++</md>]({{ baseUrl }}/gitAndGithub/trail/{{ tour.folder }}/)**
 </div>
 {% endmacro %}
 <!-- ============================================================ -->
