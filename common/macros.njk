@@ -102,8 +102,8 @@
 <panel type="danger" header="{{ icon_exercise }} EXERCISE: `{{ identifier }}`">
 
 **Description** is [here](https://github.com/git-mastery/exercises/tree/main/{{ identifier | replace("-", "_") }}).<br>
-**To download** the exercise, run `gitmastery download {{ identifer }}`.<br>
-**To verify** your solution, run `gitmastery verify`.
+**To download** the exercise, run `gitmastery download {{ identifer }}`<br>
+**To verify** your solution, run `gitmastery verify`
 
 </panel>
 {% endmacro %}
@@ -183,6 +183,21 @@
 
 **What's next**: <include src="{{ tour_folder }}/text.md#next" trim inline/>
 
+</div>
+{% endmacro %}
+<!-- ============================================================ -->
+
+{% macro show_tour_overview(tour) %}
+
+<div class="indented-level1">
+
+<div class="border border-success pt-2 ps-2 pb-1 pe-1 border-bottom-0 rounded-top" style="background-color: #e6fff2">
+Target use case: <include src="{{ tour.folder }}/text.md#destination" trim inline/>
+<p/>
+<small>This use case is covered by,</small>
+</div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;→ **[<md>++{{ tour.title  }}++</md>]({{ baseUrl }}/gitAndGithub/trail/{{ tour.folder }}/)**
 </div>
 {% endmacro %}
 <!-- ============================================================ -->

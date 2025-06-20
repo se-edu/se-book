@@ -7,7 +7,7 @@
 
 {% call show_lesson_intro() %}
 
-To save a snapshot, **you must first specify what to include in it**, also called _staging_.
+To save a snapshot, **you start by specifying what to include in it, also called _staging_**.
 {% endcall %}
 
 **Git considers new files that you add to the working folder as 'untracked'** i.e., Git is aware of them, but they are not yet under Git's control. The same applies to files that existed in the working folder at the time you initialised the repo.

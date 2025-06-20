@@ -71,7 +71,7 @@ nothing to commit (create/copy files and use "git add" to track)
 ```
 {% endcall %}
 
-{{ icon_info }} Don't worry if you don't understand the output (we will learn about them in another lesson); all you need to notice is that it no longer gives an error message as it before.
+{{ icon_info }} Don't worry if you don't understand the output (we will learn about them in another lesson); all you need to notice is that it no longer gives an error message as it did before.
 </div>
 
 * **Second, Git created a hidden subfolder named `.git`** inside the `things` folder. This folder will be used by Git to store meta-data about this repository.{{ bold_number("b)") }}
