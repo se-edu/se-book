@@ -1,4 +1,6 @@
-The file is shown as ‘unstaged’. The question mark icon indicates the file is untracked.
+{% from "common/macros.njk" import trail, bold_number, callout, hp_number, label, show_git_term, show_git_term_tip, show_detour, show_exercise, show_git_tabs, show_hands_on_practical, show_lesson_intro, show_output, show_under_the_hood with context %}
+
+{{ hp_number('2.1') }} **Note how the file is shown as ‘unstaged’.** The question mark icon indicates the file is untracked.
 
 <pic eager src="{{baseUrl}}/gitAndGithub/stage/images/sourcetree_1a.png" height="220" />
 <p/>
@@ -8,12 +10,12 @@ The file is shown as ‘unstaged’. The question mark icon indicates the file i
 If the newly-added file does not show up in Sourcetree UI, refresh the UI (:fab-windows:: <kbd>F5</kbd><br> | :fab-apple: <kbd>⌥</kbd>+<kbd>R</kbd>)
 </box>
 
-Select the `fruits.txt` and click on the `Stage Selected` button.
+{{ hp_number('2.2') }} **Stage the file** by selecting the `fruits.txt` and clicking on the `Stage Selected` button.
 
 <pic eager src="{{baseUrl}}/gitAndGithub/stage/images/sourcetree_1b.png" height="100" />
 <p/>
 
-`fruits.txt` should appear in the `Staged files` panel now.
+{{ hp_number('2.3') }} **Note how the file is staged now** i.e., `fruits.txt` appears in the `Staged files` panel now.
 
 <pic eager src="{{baseUrl}}/gitAndGithub/stage/images/sourcetree_1c.png" height="180" />
 <p/>
