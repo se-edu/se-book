@@ -13,7 +13,11 @@ Next, you need to **link the _local_ repo (i.e., the one on your computer) with 
 
 {% endcall %}
 
-...
+**To communicate with another remote repo, you can first add it as a _remote_ of your repo**. Here is an example scenario you can follow to learn how to pull from another repo:
+
+{{ show_git_tabs('_3') }}
+
+
 
 
 </div>

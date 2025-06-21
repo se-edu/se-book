@@ -43,9 +43,7 @@ Now, your local repo state is exactly how it would be if you had cloned the repo
 </modal>
 
 
-**To communicate with another remote repo, you can first add it as a _remote_ of your repo**. Here is an example scenario you can follow to learn how to pull from another repo:
 
-{{ show_git_tabs('_3') }}
 
 </div>
 
