@@ -6,7 +6,7 @@ pageNav: 4
 </frontmatter>
 
 <span id="outcomes">{{ icon_outcome }} Can back up a Git repository on a cloud-based Git service such as GitHub</span>
-<span id="title"></span>
+<span id="title">{{ trail.backingUpOnCloud.title }}</span>
 
 <span class="d-none" id="destination">To be able to back up a Git repository on a cloud-based Git service such as GitHub.</span>
 

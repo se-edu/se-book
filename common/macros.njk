@@ -85,7 +85,7 @@
   <tab header="CLI">
     <include src="./cli{{ filename_suffix }}.md" />
   </tab>
-  <tab header="Sourcetree">
+  <tab header="Sourcetree" class="d-print-none">
     <include src="./sourcetree{{ filename_suffix }}.md" />
   </tab>
 </tabs>
@@ -117,7 +117,7 @@
 <!-- ============================================================ -->
 
 {% macro show_detour(title) %}
-<panel header="{{ icon_detour }} DETOUR: **{{ title }}**" type="warning" peek>
+<panel class="non-printable" header="{{ icon_detour }} DETOUR: **{{ title }}**" type="warning" peek>
 
 {{ caller() }}
 </panel>
@@ -127,7 +127,7 @@
 {% macro show_under_the_hood(title, indent_level='') %}
 {% if indent_level %}<div class="indented-level{{ indent_level }}">{% endif %}
 
-<panel header="{{ icon_under_the_hood }} UNDER-THE-HOOD: **{{ title }}**" type="info" >
+<panel class="non-printable" header="{{ icon_under_the_hood }} UNDER-THE-HOOD: **{{ title }}**" type="info" >
 
 {{ caller() }}
 </panel>
@@ -136,7 +136,7 @@
 <!-- ============================================================ -->
 
 {% macro show_exercise(identifier) %}
-<panel type="danger" header="{{ icon_exercise }} EXERCISE: `{{ identifier }}`">
+<panel class="non-printable" type="danger" header="{{ icon_exercise }} EXERCISE: `{{ identifier }}`">
 
 **Description** is [here](https://git-mastery.github.io/exercises/{{ identifier | replace("-", "_") }}).<br>
 **To download** the exercise, run `gitmastery download {{ identifer }}`<br>
@@ -147,6 +147,7 @@
 <!-- ============================================================ -->
 
 {% macro show_lesson_intro() %}
+<div class="non-printable">
 <div class="border border-success pt-0 ps-1 pb-1 pe-1 border-bottom-0 rounded-top" style="background-color: #e6fff2">
 
 <div class="indented">
@@ -159,11 +160,12 @@
 </div>
 </div>
 <br>
+</div>
 {% endmacro %}
 <!-- ============================================================ -->
 
 {% macro show_lesson_overview(lesson_data) %}
-<div class="indented-level1">
+<div class="indented-level1 non-printable">
 
 <div class="border border-success pt-2 ps-2 pb-1 pe-1 border-bottom-0 rounded-top" style="background-color: #e6fff2">
 <include src="{{ baseUrl }}/{{ lesson_data.path }}/text.md#overview" inline />
@@ -179,7 +181,7 @@
 <panel type="seamless" popup-url="{{ baseUrl }}/{{ lesson_data.path }}/" expanded>
 <div slot="header" class="card-title">
 
-### <span class="text-success">Lesson: {{ lesson_data.title }}</span>
+#### <span class="text-success">Lesson: {{ lesson_data.title }}</span>
 </div>
 
 <include src="{{ baseUrl }}/{{ lesson_data.path }}/unit-inElsewhere-asPanelBody.md" boilerplate />
@@ -189,7 +191,7 @@
 
 {% macro show_tour(tour) %}
 {% set tour_folder = baseUrl + "/gitAndGithub/trail/" + tour.folder %}
-<div style=" background-color: #e6fff2; border-top-left-radius: 15px; border-top-right-radius: 15px;">
+<div class="non-printable" style="background-color: #e6fff2; border-top-left-radius: 15px; border-top-right-radius: 15px;">
 
 {{ show_tour_title(tour.title) }}
 <div class="p-3">
@@ -210,7 +212,7 @@
 {{ show_lesson(lesson_data) }}
 {% endfor %}
 
-<div style="background-color: #e6fff2; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;" class="p-3 border-bottom border-5 border-success">
+<div style="background-color: #e6fff2; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;" class="non-printable p-3 border-bottom border-5 border-success">
 
 **What you learned**: <include src="{{ tour_folder }}/text.md#achievements" trim inline/>
 

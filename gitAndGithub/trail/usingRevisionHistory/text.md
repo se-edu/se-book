@@ -6,7 +6,7 @@ pageNav: 4
 </frontmatter>
 
 <span id="outcomes">{{ icon_outcome }} Can navigate the history of a Git repo.</span>
-<span id="title"></span>
+<span id="title">{{ trail.usingRevisionHistory.title }}</span>
 
 <span class="d-none" id="destination">...</span>
 

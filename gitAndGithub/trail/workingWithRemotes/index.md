@@ -4,4 +4,4 @@ title: "{{ trail.workingWithRemotes.title }}"
 pageNav: 4
 </frontmatter>
 
-<include src="unit-inPage-asFlat.md" boilerplate />
+<include src="tour-inPage-asFlat.md" boilerplate />

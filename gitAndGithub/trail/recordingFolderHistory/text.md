@@ -6,7 +6,7 @@ pageNav: 4
 </frontmatter>
 
 <span id="outcomes">{{ icon_outcome }} Can use Git to take snapshots of a folder</span>
-<span id="title"></span>
+<span id="title">{{ trail.recordingFolderHistory.title }}</span>
 
 <span class="d-none" id="destination">To be able to use Git to systematically record the history of a folder in your own computer. More specifically, to use Git to save a snapshot of the folder at specific points of time.</span>
 
