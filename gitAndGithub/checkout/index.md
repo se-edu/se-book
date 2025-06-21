@@ -1,5 +1,6 @@
+{% from "common/macros.njk" import trail with context %}
 <frontmatter>
-title: "Git and GitHub: Checkout"
+title: "{{ trail.workingWithRemotes.lessons.checkout.title }}"
 </frontmatter>
 
 <include src="unit-inPage-asFlat.md" boilerplate />

@@ -1,9 +1,14 @@
-{% from "common/macros.njk" import show_git_tabs with context %}
-<span id="outcomes">{{ icon_outcome }} Can tag commits using Git</span>
+{% from "common/macros.njk" import trail, show_git_tabs, show_hands_on_practical, show_lesson_intro with context %}
 
-<span id="title">`tag`: Naming commits</span>
+<span id="prereqs"></span>
+<span id="outcomes">...</span>
+<span id="title">{{ trail.usingRevisionHistory.lessons.tag.title }}</span>
 
 <div id="body">
+{% call show_lesson_intro() %}
+...
+{% endcall %}
+
 
 **Each Git commit is uniquely identified by a hash** e.g., `d670460b4b4aece5915caf5c68d12f560a9fe3e4`. As you can imagine, using such an identifier is not very convenient for our day-to-day use. As a solution, Git allows adding a more human-readable _tag_ to a commit e.g., `v1.0-beta`.
 

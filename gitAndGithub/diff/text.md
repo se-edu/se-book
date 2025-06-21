@@ -1,9 +1,14 @@
-{% from "common/macros.njk" import show_git_tabs with context %}
-<span id="outcomes">{{ icon_outcome }} Can compare git revisions</span>
+{% from "common/macros.njk" import trail, show_git_tabs, show_hands_on_practical, show_lesson_intro with context %}
 
-<span id="title">`diff`: Comparing revisions</span>
+<span id="prereqs"></span>
+<span id="outcomes">...</span>
+<span id="title">{{ trail.usingRevisionHistory.lessons.diff.title }}</span>
 
 <div id="body">
+{% call show_lesson_intro() %}
+...
+{% endcall %}
+
 
 **Git can show you what changed in each commit.**
 

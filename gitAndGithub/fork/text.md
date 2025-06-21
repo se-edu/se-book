@@ -1,8 +1,15 @@
+{% from "common/macros.njk" import trail, show_git_tabs, show_hands_on_practical, show_lesson_intro with context %}
+
+<span id="prereqs"></span>
+
 <span id="outcomes">{{ icon_outcome }} Can fork a repo</span>
 
-<span id="title">Fork: Creating a remote copy</span>
+<span id="title">{{ trail.workingWithRemotes.lessons.push.title }}</span>
 
 <div id="body">
+{% call show_lesson_intro() %}
+...
+{% endcall %}
 
 Given below is a scenario you can try in order to learn how to <trigger trigger="click" for="modal:githubForking-rcsForking">fork</trigger> a repo:.
 

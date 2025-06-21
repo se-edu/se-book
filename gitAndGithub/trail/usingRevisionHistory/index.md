@@ -1,7 +1,7 @@
 {% from "common/macros.njk" import trail with context %}
 <frontmatter>
-title: "{{ trail.workingWithRemotes.lessons.push.title }}"
-
+title: "{{ trail.usingRevisionHistory.title }}"
+pageNav: 4
 </frontmatter>
 
 <include src="unit-inPage-asFlat.md" boilerplate />

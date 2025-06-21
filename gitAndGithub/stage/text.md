@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import trail, show_git_tabs, show_hands_on_practical, show_lesson_intro with context %}
+{% from "common/macros.njk" import trail, show_git_term, show_git_term_tip, show_git_tabs, show_hands_on_practical, show_lesson_intro with context %}
 
 <span id="outcomes">{{ icon_outcome }} Can stage files</span>
 <span id="title">{{ trail.recordingFolderHistory.lessons.stage.title }}</span>
@@ -12,7 +12,9 @@ To save a snapshot, **you start by specifying what to include in it, also called
 
 **Git considers new files that you add to the working folder as 'untracked'** i.e., Git is aware of them, but they are not yet under Git's control. The same applies to files that existed in the working folder at the time you initialised the repo.
 
-**We can 'add' (also called _staging_) untracked files to tell Git that we want them to be 'tracked' by Git** (i.e., to be under Git's control), as shown in the following hands-on practical.
+**We can 'add' (also called {{ show_git_term('staging', 'stage') }} _staging_) untracked files to tell Git that we want them to be 'tracked' by Git** (i.e., to be under Git's control), as shown in the following hands-on practical.
+
+{{ show_git_term_tip('staging', 'stage') }}
 
 {% call show_hands_on_practical("Adding untracked files") %}
 

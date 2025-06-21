@@ -47,12 +47,37 @@
       push: {path: "gitAndGithub/push", title: "Updating the Remote Repo"},
       ignore: {path: "gitAndGithub/ignore", title: "Omitting files from revision control"}
     }
+  },
+  usingRevisionHistory: {
+    folder: "usingRevisionHistory",
+    title: "Tour 3: Using the Revision History of a Repo",
+    lessons: {
+      log: {path: "gitAndGithub/log", title: "Examining the Revision History"},
+      checkout: {path: "gitAndGithub/checkout", title: "Traversing to a Specific Snapshot"},
+      tag: {path: "gitAndGithub/tag", title: "Tagging Commits"},
+      diff: {path: "gitAndGithub/diff", title: "Comparing Points of History"}
+    }
   }
 } %}
 <!-- ============================================================ -->
 
 {% macro show_tour_title(text) %}<div class="text-white bg-success p-1" style="border-top-left-radius: 15px; border-top-right-radius: 15px;"><span class="h2"><span class="text-light"><md>:fas-map-marker-alt:</md></span> {{ text }}</span></div>{% endmacro %}
 <!-- ============================================================ -->
+
+{% macro show_git_term(term, current_page="") -%}<span class="badge text-dark" style="background-color: rgba(13, 202, 240, 0.2);">{% if current_page %}<trigger for="pop:{{ current_page }}-{{ term }}">{% endif %}++{{ term }}++{% if current_page %}</trigger>{% endif %}</span>{%- endmacro %}
+<!-- ============================================================ -->
+
+{% macro show_git_term_tip(term, current_page) -%}
+<popover id="pop:{{ current_page }}-{{ term }}" header="{{ term }}" placement="top" >
+  <span slot="header" class="text-info"><md>Definition: **{{ term }}**</md></span>
+  <div slot="content">
+    <include src="{{ baseUrl }}/gitAndGithub/trail/terms-fragment.md#{{ slugify(term) }}" inline trim/>
+  </div>
+</popover>
+
+{%- endmacro %}
+<!-- ============================================================ -->
+
 {% macro show_git_tabs(filename_suffix='', indent_level='') -%}
 {% if indent_level %}<div class="indented-level{{ indent_level }}">{% endif %}
 <tabs>
