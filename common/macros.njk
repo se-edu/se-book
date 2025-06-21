@@ -31,6 +31,7 @@
     folder: "recordingFolderHistory",
     title: "Tour 1: Recording the History of a Folder",
     lessons: {
+      intro: {path: "gitAndGithub/intro", title: "Introduction to Revision Control"},
       gitPrep: {path: "gitAndGithub/gitPrep", title: "Preparing to Use Git"},
       init: {path: "gitAndGithub/init", title: "Putting a Folder Under Git's Control"},
       stage: {path: "gitAndGithub/stage", title: "Specifying What to include in a Snapshot"},
@@ -137,7 +138,7 @@
 {% macro show_exercise(identifier) %}
 <panel type="danger" header="{{ icon_exercise }} EXERCISE: `{{ identifier }}`">
 
-**Description** is [here](https://github.com/git-mastery/exercises/tree/main/{{ identifier | replace("-", "_") }}).<br>
+**Description** is [here](https://git-mastery.github.io/exercises/{{ identifier | replace("-", "_") }}).<br>
 **To download** the exercise, run `gitmastery download {{ identifer }}`<br>
 **To verify** your solution, run `gitmastery verify`
 
@@ -181,10 +182,6 @@
 ### <span class="text-success">Lesson: {{ lesson_data.title }}</span>
 </div>
 
-<div class="indented-level1">
-
-<small>[<span class="font-weight-bold text-muted">Textbook location: <include src="{{ baseUrl }}/{{ lesson_data.path }}/../path.md" inline trim /> **{{ lesson_data.title }}**]</span></small>
-</div>
 <include src="{{ baseUrl }}/{{ lesson_data.path }}/unit-inElsewhere-asPanelBody.md" boilerplate />
 </panel>
 {% endmacro %}

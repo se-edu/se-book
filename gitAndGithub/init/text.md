@@ -9,7 +9,7 @@
 To be able to save snapshots of a folder using Git, **you must first put the folder under Git's control by initialising a Git _repository_** in that folder.
 {% endcall %}
 
-**Normally, we use Git to manage a version history of a specific folder**, which gives us the ability to version-control any file in that folder and its subfolders.
+**Normally, we use Git to manage a revision history of a specific folder**, which gives us the ability to revision-control any file in that folder and its subfolders.
 
 **To put a folder under the control of Git, we _initialise_ a {{ show_git_term('repository', 'init')}} (short name: {{ show_git_term('repo') }})** in that folder. This way, we can initialise repos in different folders, to version-control different clusters of files independently of each other %%e.g., files belonging to different projects%%.
 
@@ -54,7 +54,7 @@ Don't panic. The error message is expected. It confirms that the folder currentl
 
 {% endcall %}
 
-**The `init` command that you ran resulted in two things:**
+**Initialising a repo results in two things:**
 
 * **First, Git now recognises this folder as a Git repository**, which means it can now help you track the version history of files inside this folder. To confirm, you can run the `git status` command. It should respond with something like the following: {{ bold_number("a)") }}
 
@@ -73,7 +73,7 @@ nothing to commit (create/copy files and use "git add" to track)
 ```
 {% endcall %}
 
-{{ icon_info }} Don't worry if you don't understand the output (we will learn about them in another lesson); all you need to notice is that it no longer gives an error message as it did before.
+{{ icon_info }} Don't worry if you don't understand the output (we will learn about them later); what matters is that it no longer gives an error message as it did before.
 </div>
 
 * **Second, Git created a hidden subfolder named `.git`** inside the `things` folder. This folder will be used by Git to store meta-data about this repository.{{ bold_number("b)") }}
@@ -115,7 +115,7 @@ You can even dig around inside that folder -- it is just a bunch of subfolders a
 **A Git-controlled folder is divided into two main parts:**
 
 1. **The repository** – stored in the hidden `.git` subfolder, which contains all the metadata and history.
-2. **The working folder** – everything else in that folder, where you create and edit files.
+2. **The {{ show_git_term('working directory') }}** – everything else in that folder, where you create and edit files.
 
 </div>
 <div id="extras">
