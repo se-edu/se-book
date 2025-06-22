@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import trail, bold_number, callout, hp_number, label, show_git_term, show_git_term_tip, show_detour, show_exercise, show_git_tabs, show_hands_on_practical, show_lesson_intro, show_output, show_under_the_hood with context %}
+{% from "common/macros.njk" import trail, bold_number, callout, hp_number, label, show_git_term, show_git_term_tip, show_detour, show_exercise,show_folder_columns, show_folder_contents, show_git_tabs, show_hands_on_practical, show_lesson_intro, show_output, show_under_the_hood with context %}
 
 <span id="outcomes">{{ icon_outcome }} Can stage files</span>
 <span id="title">{{ trail.recordingFolderHistory.lessons.stage.title }}</span>
@@ -10,11 +10,17 @@
 To save a snapshot, **you start by specifying what to include in it, also called _staging_**.
 {% endcall %}
 
-**Git considers new files that you add to the working folder as {{ show_git_term("'untracked'") }}** i.e., Git is aware of them, but they are not yet under Git's control. The same applies to files that existed in the working folder at the time you initialised the repo.
+**Git considers new files that you add to the working directory as {{ show_git_term("'untracked'") }}** i.e., Git is aware of them, but they are not yet under Git's control. The same applies to files that existed in the working folder at the time you initialised the repo.
 
-**We can 'add' (also called {{ show_git_term('staging', 'stage') }}) untracked files to tell Git that we want them to be {{ show_git_term("'tracked'") }} by Git** (i.e., to be under Git's control).
+**A Git repo has an internal space called the {{ show_git_term('staging area') }} which it uses to build the next snapshot**. Another name for the staging area is the {{ show_git_term('index') }}).
 
-{{ show_git_term_tip('staging', 'stage') }}
+**We can {{ show_git_term('stage', 'stage') }}) an untracked file** to tell Git that we want its current version to be included in the next snapshot. Once you stage an untracked file, it becomes {{ show_git_term("'tracked'") }} (i.e., under Git's control).
+
+{{ show_git_term_tip('stage', 'stage') }}
+
+In the example below, you can see how staging files change the status of the repo as you from (a) to (c).
+
+{{ show_folder_columns('folder-staging-after-init-fragment.md') }}
 
 {% call show_hands_on_practical("Adding untracked files") %}
 
@@ -42,17 +48,11 @@ cherries
 
 {% endcall %}
 
-**Adding/staging a new file results in two things:**
 
-1. **The file is puts under Git's control** i.e., the file is now 'tracked', no longer 'untracked'.
-2. **The current version of the file will be included in the next snapshot** of the folder.<br>
-   Consequently, **a !!copy!! of the current version of the file is put in the {{ show_git_term('staging area') }}** (think of it as a dedicated space that exists inside the `.git` folder).
-   <box type="tip" seamless>
+**If you modify a staged file, it goes into the {{ show_git_term("'modified'") }} state** i.e., the file contains modifications that are not present in the copy that is waiting (in the staging area) to be included in the next snapshot. If you wish to include these new changes in the next snapshot, you need to stage the file again, which will overwrite the copy of the file that was previously in the staging area.<br>
+The example below shows how the status of a file changes when it is modified after it was changed.
 
-   The _staging area_ is also called the {{ show_git_term('index') }}.
-   </box>
-
-**If you modify a staged file, it goes into the {{ show_git_term("'modified'") }} state** i.e., the file contains modifications that are not present in the copy that is waiting (in the staging area) to be included in the next snapshot. If you wish to include these new changes in the next snapshot, you need to add/stage the file again, which will overwrite the copy of the file that was previously in the staging area.
+{{ show_folder_columns('folder-change-after-staging-fragment.md') }}
 
 {% call show_hands_on_practical("Re-staging 'modified' files") %}
 

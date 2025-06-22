@@ -17,6 +17,8 @@
 <variable id="icon_exercise"><md>:fas-dumbbell:</md></variable>
 <variable id="icon_extra"><span class='badge rounded-pill bg-secondary'><md>:fas-plus: extra</md></span></variable>
 <variable id="icon_evidence"><md>:fas-briefcase:</md></variable>
+<variable id="icon_file">:fas-file:</variable>
+<variable id="icon_folder">:fas-folder:</variable>
 <variable id="icon_hands_on"><md>:fas-laptop-code:</md></variable>
 <variable id="icon_info"><md>:fas-info-circle:</md></variable>
 <variable id="icon_individual"><md>:fas-user:</md></variable>

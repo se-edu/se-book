@@ -58,6 +58,13 @@
       tag: {path: "gitAndGithub/tag", title: "Tagging Commits"},
       diff: {path: "gitAndGithub/diff", title: "Comparing Points of History"}
     }
+  },
+  workingWithRemotes: {
+    folder: "workingWithRemotes",
+    title: "Tour 4: Working Off a Remote Repo",
+    lessons: {
+
+    }
   }
 } %}
 <!-- ============================================================ -->
@@ -69,13 +76,59 @@
 <!-- ============================================================ -->
 
 {% macro show_git_term_tip(term, current_page) -%}
-<popover id="pop:{{ current_page }}-{{ term }}" header="{{ term }}" placement="top" >
+<popover id="pop:{{ current_page }}-{{ term }}" placement="top" >
   <span slot="header" class="text-info"><md>Definition: **{{ term }}**</md></span>
   <div slot="content">
     <include src="{{ baseUrl }}/gitAndGithub/trail/terms-fragment.md#{{ slugify(term) }}" inline trim/>
   </div>
 </popover>
 
+{%- endmacro %}
+<!-- ============================================================ -->
+
+{% macro show_folder_contents(filename, prefix='') -%}
+{% set prefix_str = (prefix + '-') if prefix else '' %}
+<div class="border border-info p-0 bg-white" style="width: 250px;">
+<div class="bg-info text-white p-1" style="font-weight: 600;"><md>{{ icon_folder }} Working Directory</md></div>
+<div class="p-2">
+
+  <div class="border border-warning bg-light pb-0" style="width: 210px;">
+  <div class="bg-warning text-dark p-1" style="font-weight: 600;"><md>{{ icon_folder }} .git Folder</md></div>
+  <div style="width: 210px; ">
+  <div class="pt-0 p-1">
+
+  <span class="badge bg-warning text-dark mt-2">staging area</span><br>
+  <div class="pt-0 pb-0 p-2">
+
+<include src="{{ filename }}#{{ prefix_str }}staging"/>
+  </div>
+
+  </div>
+  <div class="pb-0" style="border-top: 1px dotted #aaa;">
+
+<span class="badge bg-light text-secondary mt-2">other meta data ...</span><br>
+  </div>
+  </div>
+  </div>
+<br>
+
+<include src="{{ filename }}#{{ prefix_str }}working"/>
+</div>
+</div>
+{%- endmacro %}
+<!-- ============================================================ -->
+
+{% macro show_folder_columns(filename, prefixes = ['a', 'b', 'c']) -%}
+<div class="d-flex flex-wrap gap-3">
+{% for p in prefixes %}
+<div class="p-2 bg-light text-start"  style="max-width: 270px;">
+{{ show_folder_contents(filename, p) }}
+<br>
+
+<include src="{{ filename }}#{{ p }}-text" inline trim/>
+  </div>
+{% endfor %}
+</div>
 {%- endmacro %}
 <!-- ============================================================ -->
 
