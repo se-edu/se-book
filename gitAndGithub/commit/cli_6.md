@@ -1,3 +1,5 @@
+{% from "common/macros.njk" import hp_number, show_output with context %}
+
 **To undo the last commit**, but keep the changes in the staging area, use the following command.
 
 ```{.no-line-numbers}

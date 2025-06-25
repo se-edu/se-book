@@ -1,3 +1,5 @@
+{% from "common/macros.njk" import hp_number, show_output with context %}
+
 Here is a example list of bash commands to add two commits while observing the list of commits
 
 ```bash{.no-line-numbers}
@@ -31,5 +33,5 @@ commit d5f91...
 Author: ... <...@...>
 Date:   ...
 
-    Add fruits.txt
+    Add colours.txt, shapes.txt
 ```

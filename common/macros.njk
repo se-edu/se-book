@@ -42,6 +42,7 @@
     folder: "backingUpOnCloud",
     title: "Tour 2: Backing up a Repo on the Cloud",
     lessons: {
+      remoteRepos: {path: "gitAndGithub/remoteRepos", title: "Remote Repositories"},
       githubPrep: {path: "gitAndGithub/githubPrep", title: "Preparing to use GitHub"},
       createRemoteRepo: {path: "gitAndGithub/createRemoteRepo", title: "Creating a Repo on GitHub"},
       setRemote: {path: "gitAndGithub/setRemote", title: "Linking a Local Repo With a Remote Repo"},
@@ -70,6 +71,9 @@
 <!-- ============================================================ -->
 
 {% macro show_tour_title(text) %}<div class="text-white bg-success p-1" style="border-top-left-radius: 15px; border-top-right-radius: 15px;"><span class="h2"><span class="text-light"><md>:fas-map-marker-alt:</md></span> {{ text }}</span></div>{% endmacro %}
+<!-- ============================================================ -->
+
+{% macro show_tour_link(tour) %}[{{ tour.title }}]({{ baseUrl }}/gitAndGithub/trail/{{ tour.folder }}/)</span></div>{% endmacro %}
 <!-- ============================================================ -->
 
 {% macro show_git_term(term, current_page="") -%}<span class="badge text-dark" style="background-color: rgba(13, 202, 240, 0.2);">{% if current_page %}<trigger for="pop:{{ current_page }}-{{ term }}">{% endif %}++{{ term }}++{% if current_page %}</trigger>{% endif %}</span>{%- endmacro %}

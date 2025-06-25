@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import trail, show_tour_title, show_tour with context %}
+{% from "common/macros.njk" import trail, show_tour_title, show_tour, show_tour_link with context %}
 {% set tour = trail.recordingFolderHistory %}
 <frontmatter>
 title: "{{ tour.title }}"
@@ -14,7 +14,7 @@ pageNav: 4
 
 <span class="d-none" id="achievements">You should now be able to initialise a Git repository in a folder and commit snapshots of its files at times of your choice. So far, you did not learn how to actually make use of those snapshots (other than to show a list of them) -- we will do that in later tours.</span>
 
-<span id="next">coming soon ...</span>
+<span id="next">{{ show_tour_link(trail.backingUpOnCloud) }}</span>
 
 <div id="body">
 

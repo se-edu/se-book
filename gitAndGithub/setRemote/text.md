@@ -8,17 +8,20 @@
 
 <div id="body">
 {% call show_lesson_intro() %}
-Next, you need to **link the _local_ repo (i.e., the one on your computer) with the _remote_ repo** on GitHub.
-
+The second step of backing up a local repo on GitHub: **link the _local_ repo with the _remote_ repo** on GitHub.
 
 {% endcall %}
 
-**To communicate with another remote repo, you can first add it as a _remote_ of your repo**. Here is an example scenario you can follow to learn how to pull from another repo:
+**A Git {{ show_git_term('remote') }} is a reference to a repository hosted elsewhere**, usually on a server like GitHub, GitLab, or Bitbucket. It allows your local Git repo to communicate with another remote copy — for example, to upload to commits that you created locally but missing in the remote copy.
 
-{{ show_git_tabs('_3') }}
+**By _adding a remote_, you are informing the local repo details of a remote repo it can communicate with**, for example, where the repo exists, what name to use to refer to the remote, and which network protocol to use to communicate with it (e.g., HTTPS vs SSH).
 
+{% call show_hands_on_practical('Creating an empty repo on GitHub')  %}
 
+Add the empty remote repo you created on GitHub as a remote of a local repo you have.
 
+{{ show_git_tabs('-add-remote-fragment') }}
+{% endcall %}
 
 </div>
 

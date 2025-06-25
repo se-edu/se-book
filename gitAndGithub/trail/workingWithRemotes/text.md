@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import trail, show_tour_title, show_tour with context %}
+{% from "common/macros.njk" import trail, show_tour_title, show_tour, show_tour_link with context %}
 {% set tour = trail.workingWithRemotes %}
 <frontmatter>
 title: "{{ tour.title }}"

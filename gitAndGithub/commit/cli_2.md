@@ -1,9 +1,10 @@
+{% from "common/macros.njk" import hp_number, show_output with context %}
 You can use the `git log` command to see the commit history.
 
 ```bash{.no-line-numbers}
-$ git log
+git log
 ```
-{{ icon_output }}
+{% call show_output() %}
 ```bash{.no-line-numbers}
 commit d5f91de... (HEAD -> master)
 Author: ... <...@...>
@@ -11,6 +12,8 @@ Date:   ...
 
 Add fruits.txt
 ```
+{% endcall %}
+
 <box type="tip" seamless>
 
 Use the <kbd>Q</kbd> key to exit the output screen of the `git log` command.

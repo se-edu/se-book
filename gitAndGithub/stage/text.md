@@ -50,7 +50,7 @@ cherries
 
 
 **If you modify a staged file, it goes into the {{ show_git_term("'modified'") }} state** i.e., the file contains modifications that are not present in the copy that is waiting (in the staging area) to be included in the next snapshot. If you wish to include these new changes in the next snapshot, you need to stage the file again, which will overwrite the copy of the file that was previously in the staging area.<br>
-The example below shows how the status of a file changes when it is modified after it was changed.
+The example below shows how the status of a file changes when it is modified _after_ it was staged.
 
 {{ show_folder_columns('folder-change-after-staging-fragment.md') }}
 

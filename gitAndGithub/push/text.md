@@ -8,7 +8,8 @@
 
 <div id="body">
 {% call show_lesson_intro() %}
-Now, you can **update the remote repo with the revision history of the local repo**.
+The third step of backing up a local repo on GitHub: **push a copy of the local repo to the remote repo**.
+
 {% endcall %}
 
 

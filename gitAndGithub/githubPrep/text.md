@@ -8,7 +8,7 @@
 
 <div id="body">
 {% call show_lesson_intro() %}
-To use the cloud-based Git services of GitHub, **you need to prepare some tools/settings** first.
+To use GitHub, **you need to prepare some tools/settings** first.
 {% endcall %}
 
 1. Create a GitHub account.
