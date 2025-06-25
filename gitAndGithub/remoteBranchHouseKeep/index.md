@@ -1,7 +1,6 @@
 {% from "common/macros.njk" import trail with context %}
 <frontmatter>
-title: "{{ trail.workingWithRemotes.lessons.fork.title }}"
+title: "{{ trail.remoteBranches.lessons.remoteBranchHouseKeep.title }}"
 </frontmatter>
-
 
 <include src="unit-inPage-asFlat.md" boilerplate />

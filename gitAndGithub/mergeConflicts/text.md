@@ -1,14 +1,13 @@
-<span id="title">Dealing with merge conflicts</span>
+{% from "common/macros.njk" import trail, bold_number, callout, hp_number, label, show_git_term, show_git_term_tip, show_detour, show_exercise, show_git_tabs, show_hands_on_practical, show_lesson_intro, show_output, show_under_the_hood with context %}
 
 <span id="prereqs"></span>
-
-<span id="outcomes">{{ icon_outcome }} Can use Git to resolve merge conflicts</span>
-
-{% macro dropdown(text) %}<span class="btn btn-light border">{{ text }} :octicon-triangle-down:</span>{% endmacro %}
-{% macro button_green(text) %}<span class="btn btn-success ps-1 pe-1 pb-0 pt-0">{{ text }}</span>{% endmacro %}
-{% macro button_light(text) %}<span class="btn btn-light ps-1 pe-1 pb-0 pt-0 border">{{ text }}</span>{% endmacro %}
+<span id="outcomes">...</span>
+<span id="title">{{ trail.branchingLocally.lessons.mergeConflicts.title }}</span>
 
 <div id="body">
+{% call show_lesson_intro() %}
+...
+{% endcall %}
 
 **Merge conflicts happen when you try to combine two incompatible versions** (e.g., merging a branch to another but each branch changed the same part of the code in a different way).
 

@@ -1,9 +1,13 @@
-{% from "common/macros.njk" import show_git_tabs with context %}
-<span id="outcomes">{{ icon_outcome }} Can pull changes from a repo</span>
+{% from "common/macros.njk" import trail, bold_number, callout, hp_number, label, show_git_term, show_git_term_tip, show_detour, show_exercise, show_git_tabs, show_hands_on_practical, show_lesson_intro, show_output, show_under_the_hood with context %}
 
-<span id="title">`pull`, `fetch`: Downloading data from other repos</span>
+<span id="prereqs"></span>
+<span id="outcomes">...</span>
+<span id="title">{{ trail.workingWithRemotes.lessons.pull.title }}</span>
 
 <div id="body">
+{% call show_lesson_intro() %}
+  ...
+{% endcall %}
 
 Here's a scenario you can try in order to learn how to <trigger trigger="click" for="modal:githubPull-rcsPulling">pull</trigger> commits from another repo to yours.
 

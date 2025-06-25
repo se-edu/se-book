@@ -1,5 +1,7 @@
+{% from "common/macros.njk" import trail with context %}
 <frontmatter>
-title: "Git and GitHub: Merge Conflicts"
+title: "{{ trail.branchingLocally.lessons.mergeConflicts.title }}"
 </frontmatter>
+
 
 <include src="unit-inPage-asFlat.md" boilerplate />
