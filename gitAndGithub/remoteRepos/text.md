@@ -18,7 +18,7 @@ To back up your Git repo on the cloud, **you’ll need to use a _remote reposito
 * as an intermediary repo to work on the same files from multiple computers
 * for sharing the revision history of a codebase among team members of a multi-person project
 
-**It is possible to set up a Git remote repo on your own server**, but an easier option is to use a remote repo hosting service such as GitHub, GitLab, or BitBucket. In this lesson, we will be using GitHub.
+**It is possible to set up a Git remote repo on your own server**, but an easier option is to use a remote repo hosting service such as GitHub, GitLab, or BitBucket. In our case, we will be using GitHub.
 
 
 </div>

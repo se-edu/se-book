@@ -56,9 +56,12 @@ Don't panic. The error message is expected. It confirms that the folder currentl
 
 **Initialising a repo results in two things:**
 
-* **First, Git now recognises this folder as a Git repository**, which means it can now help you track the version history of files inside this folder. To confirm, you can run the `git status` command. It should respond with something like the following: {{ bold_number("a)") }}
+* **First, Git now recognises this folder as a Git repository**, which means it can now help you track the version history of files inside this folder. {{ bold_number("a)") }}
 
-<div class="indented-level1">
+{% call show_hands_on_practical('Verifying a folder is a Git repo') %}
+
+To confirm, you can run the `git status` command. It should respond with something like the following:
+
 
 ```{.no-line-numbers}
 git status
@@ -74,7 +77,7 @@ nothing to commit (create/copy files and use "git add" to track)
 {% endcall %}
 
 {{ icon_info }} Don't worry if you don't understand the output (we will learn about them later); what matters is that it no longer gives an error message as it did before.
-</div>
+{% endcall %}
 
 * **Second, Git created a hidden subfolder named `.git`** inside the `things` folder. This folder will be used by Git to store meta-data about this repository.{{ bold_number("b)") }}
 

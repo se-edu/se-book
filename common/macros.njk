@@ -131,19 +131,21 @@
 
 {% macro show_folder_contents(filename, prefix='') -%}
 {% set prefix_str = (prefix + '-') if prefix else '' %}
-<div class="border border-info p-0 bg-white" style="width: 250px;">
-<div class="bg-info text-white p-1" style="font-weight: 600;"><md>{{ icon_folder }} Working Directory</md></div>
+<div class="border border-info p-0 bg-white" style="width: 240px;">
+<div class="bg-info text-white p-1""><md>{{ icon_folder }} Working Directory</md></div>
 <div class="p-2">
 
-  <div class="border border-warning bg-light pb-0" style="width: 210px;">
-  <div class="bg-warning text-dark p-1" style="font-weight: 600;"><md>{{ icon_folder }} .git Folder</md></div>
-  <div style="width: 210px; ">
+  <div class="border border-warning bg-light pb-0" style="width: 220px;">
+  <div class="bg-warning text-dark p-1"><md>{{ icon_folder }} .git Folder</md></div>
+  <div style="width: 220px; ">
   <div class="pt-0 p-1">
 
   <span class="badge bg-warning text-dark mt-2">staging area</span><br>
   <div class="pt-0 pb-0 p-2">
+<small>
 
 <include src="{{ filename }}#{{ prefix_str }}staging"/>
+</small>
   </div>
 
   </div>
@@ -154,8 +156,10 @@
   </div>
   </div>
 <br>
+<small>
 
 <include src="{{ filename }}#{{ prefix_str }}working"/>
+</small>
 </div>
 </div>
 {%- endmacro %}
@@ -164,7 +168,7 @@
 {% macro show_folder_columns(filename, prefixes = ['a', 'b', 'c']) -%}
 <div class="d-flex flex-wrap gap-3">
 {% for p in prefixes %}
-<div class="p-2 bg-light text-start"  style="max-width: 270px;">
+<div class="p-2 bg-light text-start"  style="max-width: 255px;">
 {{ show_folder_contents(filename, p) }}
 <br>
 
@@ -190,6 +194,7 @@
 <!-- ============================================================ -->
 
 {% macro show_hands_on_practical(title) %}
+<div class="non-printable">
 <span style="position: relative; top: 10px;" class="badge rounded-pill bg-secondary fs-6">{{ icon_hands_on }} HANDS-ON: {{ title }}</span>
 <div class="indented-level1">
 
@@ -197,6 +202,7 @@
 
 {{ caller() }}
 </box>
+</div>
 </div>
 {% endmacro %}
 <!-- ============================================================ -->
