@@ -6,17 +6,22 @@
 
 <div id="body">
 {% call show_lesson_intro() %}
-Git allows you to **specify which files should be omitted from version control**.
+Git allows you to **specify which files should be omitted from reversion control**.
 {% endcall %}
 
-Often, there are files inside the Git working folder that you don't want to revision-control e.g., temporary log files. Follow the steps below to learn how to configure Git to ignore such files.
+**You can specify which files Git should omit from reversion control**. While you can always omit files from revision control simply by not staging them, having an 'ignore-list' is more convenient, especially if there are files inside the working folder that are not suitable for revision control %%(e.g., temporary log files)%% or files you want to prevent from accidentally including in a commit %%(files containing confidential information)%%.
 
-**1. Add a file into your repo's working folder that you supposedly don't want to revision-control** e.g., a file named `temp.txt`. Observe how Git has detected the new file.
+**A repo-specific ignore-list of files can be specified in a `.gitignore` file**, stored in the root of the repo folder.
 
-**2. Configure Git to ignore that file:**
+{% call show_hands_on_practical('Adding a file to the ignore-list')  %}
 
-{{ show_git_tabs() }}
+{{ hp_number ('1') }} **Add a file into your repo's working folder that you presumably do not want to revision-control** e.g., a file named `temp.txt`. Observe how Git has detected the new file.
 
+{{ hp_number ('2') }} **Configure Git to ignore that file:**
+
+{{ show_git_tabs('-ignore-file-fragment') }}
+
+{% endcall %}
 <box type="info" seamless>
 
 **The `.gitignore` file**
