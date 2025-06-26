@@ -20,4 +20,4 @@ origin  https://github.com/johndoe/foobar.git (push)
 ```
 {% endcall %}
 
-{{ icon_info }} The same remote will be listed twice, to show that you can do two operations (`fetch` and `push`) using this remote. You can ignore that for now. The important this is the remote you added is being listed.
+{{ icon_info }} The same remote will be listed twice, to show that you can do two operations (`fetch` and `push`) using this remote. You can ignore that for now. The important thing is the remote you added is being listed.

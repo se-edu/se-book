@@ -8,8 +8,16 @@
 {% call show_lesson_intro() %}
 ...
 {% endcall %}
+**5. Add a few more commits, and <trigger trigger="click" for="modal:push-tag">tag</trigger> some of them.**
 
-...
+<modal large header="Tools → Git and GitHub → `tag`: Naming commits" id="modal:push-tag">
+  <include src="../tag/text.md"/>
+</modal>
+
+**6. Push the new commits ==_and_ the tags==.**
+
+{{ show_git_tabs('-push-tags-fragment') }}
+
 </div>
 
 <div id="extras">

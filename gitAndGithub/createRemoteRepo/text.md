@@ -17,14 +17,14 @@ The first step of backing up a local repo on GitHub: **create an empty repositor
 {% call show_hands_on_practical('Creating an empty remote repo') %}
 
 {{ hp_number ('1') }} **Login to your GitHub account and choose to create a new repo.** <br>
-   <pic eager src="{{baseUrl}}/gitAndGithub/push/images/createNewRemoteRepo.png" width="150" />
+   <pic eager src="images/createNewRemoteRepo.png" width="150" />
 
 {{ hp_number ('2') }} **In the next screen, provide a name for your repo** but #r#keep the `Initialize this repo ...` tick box unchecked##.<br>
-   <pic eager src="{{baseUrl}}/gitAndGithub/push/images/fillNewRepoInfo.png" width="600" />
+   <pic eager src="images/fillNewRepoInfo.png" width="600" />
 
 {{ hp_number ('3') }} **Note the URL of the repo.** It will be of the form `https://github.com/{your_user_name}/{repo_name}.git`.<br>
    e.g., `https://github.com/johndoe/foobar.git` (note the `.git` at the end)<br>
-   <pic eager src="{{baseUrl}}/gitAndGithub/push/images/newRepoUrl.png" width="450" />
+   <pic eager src="images/newRepoUrl.png" width="450" />
 {% endcall %}
 
 {{ show_exercise('remote-control') }}

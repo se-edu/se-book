@@ -12,54 +12,57 @@ The third step of backing up a local repo on GitHub: **push a copy of the local 
 
 {% endcall %}
 
+**You can {{ show_git_term('push') }} content of one repository to another**. Pushing can transfer Git history (e.g., past commits) as well as files in the working directory. Note that pushing to a remote repo requires you to have write-access to it.
 
-**Pushing a repo** to the remote for the first time:
+When pushing to a remote repo, you typically need to specify the following information:
 
-{{ show_git_tabs('_4') }}
+* The name of the remote (e.g., `origin`).
+* The name of your current local branch (e.g., `master`).
+
+**If this is the first time you are pushing this branch to the remote repo, you can also ask Git to {{ show_git_term("track") }} this remote/branch pairing** (e.g., remember that this local `master` branch is _tracking_ the `master` branch in the upstream repo `origin` i.e., local `master` branch is tracking upstream `origin/master` branch), so in future you can push the same remote/branch without needing to specify them again.
+
+{% call show_hands_on_practical('Pushing a local repo to an empty remote repo')  %}
+
+Here's how you can push the content of a local repo to an empty remote repo (assuming you already have a local repo that is connected to an empty remote repo, from previous hands-on practicals):
+
+{{ show_git_tabs('-push-to-empty-remote-fragment') }}
+
+{% endcall %}
+
+**The push command can be used repeatedly to send further updates to another repo** e.g., to update the remote with commits you created since you pushed the first time.
+
+{% call show_hands_on_practical('Pushing to send further updates to a repo')  %}
+
+Add a few more commits to your local repo, and push those commits to the remote repo, as follows:
+
+{{ hp_number ('1') }} **Commit** some changes in your local repo.
+
+{{ hp_number ('2') }} **Push** the new commits to your fork on GitHub
+
+{{ show_git_tabs('-subsequent-push-fragment') }}
+
+{% endcall %}
 
 
-<div id="simple-push">
-
-Given below is a scenario you can try in order to learn how to <trigger trigger="click" for="modal:githubPushing-rcsPushing">push</trigger> commits to a remote repo hosted on GitHub:
-
-<modal large header="Project Management → Revision Control → Remote Repositories →" id="modal:githubPushing-rcsPushing">
-  <include src="..\..\revisionControl\remoteRepositories\text.md#section-pushing"/>
-</modal>
-
-
-**1. Commit** some changes in your local repo.
-
-**2. Push** the new commits to your fork on GitHub
-
-{{ show_git_tabs('_1') }}
-
-
-**5. Add a few more commits, and <trigger trigger="click" for="modal:push-tag">tag</trigger> some of them.**
-
-<modal large header="Tools → Git and GitHub → `tag`: Naming commits" id="modal:push-tag">
-  <include src="../tag/text.md"/>
-</modal>
-
-**6. Push the new commits ==_and_ the tags==.**
-
-{{ show_git_tabs('_2') }}
-
-</div>
-
-<box>
-
-****You can push to repos other than the one you cloned from****, as long as the target repo and your repo have a shared history.
-1. <trigger trigger="click" for="modal:push-addRemoteForNormalPushing">Add the GitHub repo URL as a remote</trigger>, if you haven't done so already.
-1. Push to the target repo.
-
-<modal large header="Git & GitHub → Pull →" id="modal:push-addRemoteForNormalPushing">
-  <include src="../pull/text.md#section-working-with-multiple-remotes"/>
-</modal>
-
-{{ show_git_tabs('_3') }}
-</box>
+**Note that you can push between two repos only if those repos have a shared history** among them (i.e., one should have been created by copying the other).
 
 </div>
 
 <div id="extras">
+{{ show_exercise('push-over') }}
+
+{% call show_detour('Pushing to multiple repos') %}
+
+**You can push to any number of repos**, as long as the target repos and your repo have a shared history.
+1. <trigger trigger="click" for="modal:push-addRemoteForNormalPushing">Add the GitHub repo URL as a remote</trigger> while giving a suitable name (e.g., `upstream`, `central`, `production`, `myOtherRemote` ...), if you haven't done so already.
+1. Push to the target repo -- remember to select the correct target repo when you do.
+
+<modal large header="Git & GitHub → Pull →" id="modal:push-addRemoteForNormalPushing">
+  <include src="../setRemote/text.md#body"/>
+</modal>
+
+{{ show_git_tabs('-push-to-multiple-repos-fragment') }}
+
+{% endcall %}
+
 </div>
