@@ -1,6 +1,5 @@
 {% from "common/macros.njk" import show_tour_overview, trail with context %}
 
-
 <span id="title"></span>
 
 <body id="body">
