@@ -2,7 +2,7 @@
 
 <span id="prereqs"></span>
 <span id="outcomes">...</span>
-<span id="title">{{ trail.workingWithRemotes.lessons.log.title }}</span>
+<span id="title">{{ trail.workingWithRemotes.lessons.pushTag.title }}</span>
 
 <div id="body">
 {% call show_lesson_intro() %}

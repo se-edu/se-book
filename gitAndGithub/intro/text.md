@@ -2,7 +2,7 @@
 
 <span id="prereqs"></span>
 <span id="outcomes">...</span>
-<span id="title">{{ trail.recordingFolderHistory.lessons.log.title }}</span>
+<span id="title">{{ trail.recordingFolderHistory.lessons.intro.title }}</span>
 
 <div id="body">
 {% call show_lesson_intro() %}

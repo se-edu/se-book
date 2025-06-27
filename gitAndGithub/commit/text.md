@@ -2,7 +2,7 @@
 
 <span id="outcomes">{{ icon_outcome }} can commit using git</span>
 
-<span id="title">{{ trail.recordingfolderhistory.lessons.commit.title }}</span>
+<span id="title">{{ trail.recordingFolderHistory.lessons.commit.title }}</span>
 
 <div id="body">
 {% call show_lesson_intro() %}
@@ -27,7 +27,7 @@ Assuming you have previously staged changes to the `fruits.txt`, go ahead and cr
 
 {% endcall %}
 
-**Git commits form a timeline**, as each corresponds to a point in time when you got Git to take a snapshot of your working directory. Each commit links to at least one previous commit, forming a structure that we can traverse.<br>
+**Git commits form a timeline**, as each corresponds to a point in time when you asked Git to take a snapshot of your working directory. Each commit links to at least one previous commit, forming a structure that we can traverse.<br>
 **A timeline of commits is called a {{ show_git_term('branch') }}**. By default, Git names the initial branch `master` -- though many now use `main` instead. You'll learn more about branches in future lessons. For now, just be aware that the commits you create in a new repo will be on a branch called `master` (or `main`) by default.
 
 <mermaid>

@@ -118,6 +118,14 @@
 {% macro show_git_term(term, current_page="") -%}<span class="badge text-dark" style="background-color: rgba(13, 202, 240, 0.2);">{% if current_page %}<trigger for="pop:{{ current_page }}-{{ term }}">{% endif %}++{{ term }}++{% if current_page %}</trigger>{% endif %}</span>{%- endmacro %}
 <!-- ============================================================ -->
 
+{% macro show_ref(text, style="success", arrow="←") -%}<span class="badge rounded-pill bg-light pt-0 pb-0 pe-0"> <span class="text-{{ style }}">{{ arrow }}</span> <span class="badge bg-{{ style }} text-white">{{ text }}</span></span>{%- endmacro %}
+<!-- ============================================================ -->
+
+{% macro show_commit(text, edge='|', desc='', style="info", msg='') %}
+<div class="d-flex align-items-center"><span class="d-flex justify-content-center align-items-center border bg-{{ style }} text-white border-{{ style }}" style="width: 30px; height: 30px; border-radius: 50%;"><md>{{ text }}</md></span>{% if desc %}<span class="ms-1"><md>{{ desc }}</md></span>{% endif %}{% if msg %}<span class="ms-2 font-monospace small"><md>%%{{ msg }}%%</md></span>{% endif %}</div>
+{% if edge %}<div class="d-flex justify-content-center align-items-center text-{{ style }}" style="width: 30px; height: 18px; padding: 0; margin: -3px 0;">{{ edge }}</div>{% endif %}{% endmacro %}
+<!-- ============================================================ -->
+
 {% macro show_git_term_tip(term, current_page) -%}
 <popover id="pop:{{ current_page }}-{{ term }}" placement="top" >
   <span slot="header" class="text-info"><md>Definition: **{{ term }}**</md></span>
@@ -132,7 +140,7 @@
 {% macro show_folder_contents(filename, prefix='') -%}
 {% set prefix_str = (prefix + '-') if prefix else '' %}
 <div class="border border-info p-0 bg-white" style="width: 240px;">
-<div class="bg-info text-white p-1""><md>{{ icon_folder }} Working Directory</md></div>
+<div class="bg-info text-white p-1"><md>{{ icon_folder }} Working Directory</md></div>
 <div class="p-2">
 
   <div class="border border-warning bg-light pb-0" style="width: 220px;">
@@ -302,7 +310,7 @@
 
 **Motivation**: <include src="{{ tour_folder }}/text.md#motivation" trim inline/>
 
-**Route**:
+**Lesson plan**:
 {% for lesson_name, lesson_data in tour.lessons %}
 {{ show_lesson_overview(lesson_data) }}
 {% endfor %}
