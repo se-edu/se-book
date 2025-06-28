@@ -60,7 +60,7 @@ If you now create a new commit `C4`, the state of the revision graph will be as 
 {{ show_commit('C1', edge='') }}
 <p/>
 
-Explanation: When you create `C4`, the current branch `master` move to point to `C4`, and `HEAD` moves along with it. However, the `master` branch in the remote `origin` remains at `C3` (because you have not pushed `C4` yet).
+Explanation: When you create `C4`, the current branch `master` move to point to `C4`, and `HEAD` moves along with it. However, the `master` branch in the remote `origin` remains at `C3` (because you have not pushed `C4` yet). The `origin/master` ref will move to `C4` after you push your repo to the remote again.
 
 {% call show_hands_on_practical('View the revision graph')  %}
 
