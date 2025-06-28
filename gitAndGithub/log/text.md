@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import trail, bold_number, callout, hp_number, label, show_commit, show_git_term, show_git_term_tip, show_detour, show_exercise, show_git_tabs, show_hands_on_practical, show_head, show_lesson_intro, show_output, show_ref, show_under_the_hood with context %}
+{% from "common/macros.njk" import trail, bold_number, callout, hp_number, label, show_commit, show_git_term, show_git_term_tip, show_detour, show_exercise, show_git_tabs, show_git_tabs_from_text, show_hands_on_practical, show_head, show_lesson_intro, show_output, show_ref, show_transformation_columns, show_under_the_hood with context %}
 
 <span id="prereqs"></span>
 <span id="outcomes">...</span>
@@ -50,7 +50,7 @@ In the revision graph above, there are two refs {{ show_ref('master') }} and &nb
 {{ show_commit('C1', edge='') }}
 <p/>
 
-In the revision graph above you see a third type of ref ({{ show_ref('origin/master') }}). This is a {{ show_git_term("remote tracking") }} branch ref that represents the state of a branch in a remote repository (if you previously set up the branch to track a remote branch). In this example, the `master` branch in the remote `origin` is also at the commit `C3` (which means you have not created new commits after you pushed to the remote).
+In the revision graph above you see a third type of ref ({{ show_ref('origin/master') }}). This is a {{ show_git_term("remote-tracking branch") }} ref that represents the state of a branch in a remote repository (if you previously set up the branch to track a remote branch). In this example, the `master` branch in the remote `origin` is also at the commit `C3` (which means you have not created new commits after you pushed to the remote).
 
 If you now create a new commit `C4`, the state of the revision graph will be as follows:
 
@@ -64,9 +64,65 @@ Explanation: When you create `C4`, the current branch `master` move to point to 
 
 {% call show_hands_on_practical('View the revision graph')  %}
 
-Let us use Git features to examine the revision graph of a simple repo. For this, use a repo with just a few commits and only one branch for this hands-on practical.
+**Use Git features to examine the revision graph of a simple repo.** For this, use a repo with just a few commits and only one branch for this hands-on practical.
 
 {{ show_git_tabs('-view-rg-normal') }}
+
+**Observe how the revision graph changes** as you add a commit, and push that commit to the remote repo.
+
+For example, we can update the `fruits.txt` in the `things` repo as follows, and commit it with the message `Update fruits list`.
+
+{% set a %}
+```{heading=":fas-file: fruits.txt"}
+apples
+bananas
+cherries
+dragon fruits
+elderberries
+figs
+```
+{% endset %}
+{% set b %}<small>%%[update file as...]%%</small> {% endset %}
+{% set c %}
+```{heading=":fas-file: fruits.txt"}
+apples, apricots
+bananas
+blueberries
+cherries
+dragon fruits
+figs
+```
+{% endset %}
+{{ show_transformation_columns(a, b, c) }}
+
+{% set cli %}
+After creating the new commit, the output of `git log --oneline --decorate` should be of the form:
+```
+e60deae (HEAD -> master) Update fruits list
+f761ea6 (origin/master) Add colours.txt, shapes.txt
+2bedace Add figs to fruits.txt
+d5f91de Add fruits.txt
+```
+After pushing the new commit to the remote, the remote-tracking branch ref should move to the new commit:
+```
+e60deae (HEAD -> master, origin/master) Update fruits list
+f761ea6 Add colours.txt, shapes.txt
+2bedace Add figs to fruits.txt
+d5f91de Add fruits.txt
+```
+{% endset %}
+{% set sourcetree %}
+
+After creating the new commit, the branch ref (`master`) will move to the new commit, but the remote-tracking branch ref (`origin/master`) will remain at the previous commit. Sourcetree will also indicate that your local branch is _1 commit ahead_ (i.e., has one more commit than) the remote-tracking branch.
+
+<pic src="images/sourcetreeBeforePushing.png" width="500" />
+
+After pushing the new commit to the remote, the remote-tracking branch ref should move to the new commit:
+
+<pic src="images/sourcetreeAfterPushing.png" width="500" />
+{% endset %}
+{{ show_git_tabs_from_text(cli, sourcetree) }}
+
 {% endcall %}
 
 </div>

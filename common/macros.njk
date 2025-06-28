@@ -190,6 +190,43 @@
 {%- endmacro %}
 <!-- ============================================================ -->
 
+{% macro show_transformation_columns(a, b, c) -%}
+<div class="d-flex flex-column flex-md-row align-items-center justify-content-left gap-2">
+<div class="flex-shrink-0">
+
+{{ a }}
+</div>
+
+<div class="flex-shrink-0 justify-content-center align-items-center text-center p-3" style="min-height: 30px;">
+
+→<br>
+{{ b }}
+</div>
+
+<div class="flex-shrink-0">
+
+{{ c }}
+</div>
+</div>
+
+
+{%- endmacro %}
+<!-- ============================================================ -->
+
+{% macro show_git_tabs_from_text(cli, sourcetree, indent_level='') -%}
+{% if indent_level %}<div class="indented-level{{ indent_level }}">{% endif %}
+<tabs>
+  <tab header="CLI">
+{{ cli }}
+  </tab>
+  <tab header="Sourcetree" class="d-print-none">
+{{ sourcetree }}
+  </tab>
+</tabs>
+{% if indent_level %}</div>{% endif %}
+{%- endmacro %}
+<!-- ============================================================ -->
+
 {% macro show_git_tabs(filename_suffix='', indent_level='') -%}
 {% if indent_level %}<div class="indented-level{{ indent_level }}">{% endif %}
 <tabs>
