@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import trail, bold_number, callout, hp_number, label, show_commit, show_git_term, show_git_term_tip, show_detour, show_exercise, show_git_tabs, show_hands_on_practical, show_lesson_intro, show_output, show_ref, show_under_the_hood with context %}
+{% from "common/macros.njk" import trail, bold_number, callout, hp_number, label, show_commit, show_git_term, show_git_term_tip, show_detour, show_exercise, show_git_tabs, show_hands_on_practical, show_head, show_lesson_intro, show_output, show_ref, show_under_the_hood with context %}
 
 <span id="prereqs"></span>
 <span id="outcomes">...</span>
@@ -35,26 +35,26 @@ It is useful to be able to **visualise the commits timeline, aka the _revision g
 
 **Git uses refs to name and keep track of various points in a repository’s history.** These refs are essentially 'named-pointers' that can serve as bookmarks to reach a certain point in the revision graph using the ref name.
 
-{{ show_commit('C3', desc=show_ref('master') + ' ' + show_ref('HEAD', style='danger')) }}
+{{ show_commit('C3', desc=show_ref('master') + ' ' + show_head()) }}
 {{ show_commit('C2') }}
 {{ show_commit('C1', edge='') }}
 <p/>
 
-In the revision graph above, there are two refs {{ show_ref('master') }} and {{ show_ref('HEAD', style='danger')}}.
+In the revision graph above, there are two refs {{ show_ref('master') }} and &nbsp;{{ show_head()}}.
 
-* {{ show_ref('master') }} is a {{ show_git_term("branch ref") }}. A branch points to the latest commit on a branch. **When you create a new commit, the ref of the branch we are currently in moves to the new commit.**
-* {{ show_ref('HEAD', style='danger')}} is a special ref. Normally, it points to the current branch (in this example, it is pointing to the `master` branch), and moves together with the branch ref.
+* {{ show_ref('master') }} is a {{ show_git_term("branch ref") }}. A branch points to the latest commit on a branch (in this visualisation, the commit shown alongside the ref is the one it points to i.e., `C3`). **When you create a new commit, the ref of the <tooltip content="the currently active branch">current</tooltip> branch moves to the new commit.**
+* {{ show_head()}} is a special ref. Normally, it points to the current branch (in this example, it is pointing to the `master` branch), and moves together with the branch ref.
 
-{{ show_commit('C3', desc=show_ref('master', arrow='↙') + ' ' + show_ref('HEAD', style='danger') + '<br>' + show_ref('origin/master', arrow="↖")) }}
+{{ show_commit('C3', desc=show_ref('master') + ' ' + show_head() + show_ref('origin/master')) }}
 {{ show_commit('C2') }}
 {{ show_commit('C1', edge='') }}
 <p/>
 
-In the revision graph above you see a third type of ref ({{ show_ref('origin/master', arrow="↖") }}). This is a {{ show_git_term("remote tracking") }} branch ref that represents the state of a branch in a remote repository (if you previously set up the branch to track a remote branch). In this example, the `master` branch in the remote `origin` is also at the commit `C3` (which means you have not created new commits after you pushed to the remote).
+In the revision graph above you see a third type of ref ({{ show_ref('origin/master') }}). This is a {{ show_git_term("remote tracking") }} branch ref that represents the state of a branch in a remote repository (if you previously set up the branch to track a remote branch). In this example, the `master` branch in the remote `origin` is also at the commit `C3` (which means you have not created new commits after you pushed to the remote).
 
 If you now create a new commit `C4`, the state of the revision graph will be as follows:
 
-{{ show_commit('#y#C4##', desc=show_ref('master') + ' ' + show_ref('HEAD', style='danger'), style="primary") }}
+{{ show_commit('#y#C4##', desc=show_ref('master') + ' ' + show_head(), style="primary") }}
 {{ show_commit('C3', desc= show_ref('origin/master')) }}
 {{ show_commit('C2') }}
 {{ show_commit('C1', edge='') }}
