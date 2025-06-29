@@ -56,8 +56,8 @@
     lessons: {
       log: {path: "gitAndGithub/log", title: "Examining the Revision History"},
       show: {path: "gitAndGithub/show", title: "Examining a Commit"},
-      checkout: {path: "gitAndGithub/checkout", title: "Traversing to a Specific Commit"},
       tag: {path: "gitAndGithub/tag", title: "Tagging Commits"},
+      checkout: {path: "gitAndGithub/checkout", title: "Traversing to a Specific Commit"},
       diff: {path: "gitAndGithub/diff", title: "Comparing Points of History"}
     }
   },
@@ -119,10 +119,13 @@
 {% macro show_git_term(term, current_page="") -%}<span class="badge text-dark" style="background-color: rgba(13, 202, 240, 0.2);">{% if current_page %}<trigger for="pop:{{ current_page }}-{{ term }}">{% endif %}++{{ term }}++{% if current_page %}</trigger>{% endif %}</span>{%- endmacro %}
 <!-- ============================================================ -->
 
-{% macro show_ref(text, style="success") -%}<span class="badge bg-{{ style }} text-white ps-1 pe-1">{{ text }}</span>{%- endmacro %}
+{% macro show_ref(text, style="success") -%}<span class="badge bg-{{ style }} text-white ps-1 pe-1">:octicon-git-branch: {{ text }}</span>{%- endmacro %}
 <!-- ============================================================ -->
 
-{% macro show_head() -%}<span style="position: relative; left: -5px;"><span class="text-danger m-0 p-0">←</span><span class="badge bg-danger text-white me-2 ps-1 pe-1">HEAD</span></span>{%- endmacro %}
+{% macro show_head() -%}<span style="position: relative; left: -2px;"><span class="text-danger m-0 p-0">←</span><span class="badge bg-danger text-white me-2 ps-1 pe-1">HEAD</span></span>{%- endmacro %}
+<!-- ============================================================ -->
+
+{% macro show_tag(text) -%}<span class="badge rounded-pill bg-light text-dark border border-secondary"><md>:octicon-tag: {{ text }}</md></span>{%- endmacro %}
 <!-- ============================================================ -->
 
 {% macro show_commit(text, edge='|', desc='', style="info", msg='') %}
