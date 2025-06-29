@@ -315,15 +315,16 @@
 {% endmacro %}
 <!-- ============================================================ -->
 
-{% macro show_lesson_overview(lesson_data) %}
+{% macro show_lesson_overview(lesson_data, is_outside_tour=0, tour=null) %}
 <div class="indented-level1 non-printable">
 
 <div class="border border-success pt-2 ps-2 pb-1 pe-1 border-bottom-0 rounded-top" style="background-color: #e6fff2">
 <include src="{{ baseUrl }}/{{ lesson_data.path }}/text.md#overview" inline />
 </div>
-
+{% set trial_link = baseUrl + '/gitAndGithub/trail/' + tour.folder + '/index.html' %}
+{% set direct_link = baseUrl + '/'+ lesson_data.path + '/index.html' %}
 {% set lesson_title = "Lesson: " + lesson_data.title %}
-&nbsp;&nbsp;→ **[{{ lesson_title }}](#{{ slugify(lesson_title) }})** covers that part.
+&nbsp;&nbsp; <a href="{{ direct_link }}" target="_blank">:glyphicon-new-window:</a> **[{{ lesson_title }}]({{ trial_link if is_outside_tour else '' }}#{{ slugify(lesson_title) }})** covers that part.
 </div>
 {% endmacro %}
 <!-- ============================================================ -->
@@ -340,7 +341,7 @@
 {% endmacro %}
 <!-- ============================================================ -->
 
-{% macro show_tour(tour) %}
+{% macro show_tour_intro(tour, is_outside_tour=0) %}
 {% set tour_folder = baseUrl + "/gitAndGithub/trail/" + tour.folder %}
 <div class="non-printable" style="background-color: #e6fff2; border-top-left-radius: 15px; border-top-right-radius: 15px;">
 
@@ -353,15 +354,16 @@
 
 **Lesson plan**:
 {% for lesson_name, lesson_data in tour.lessons %}
-{{ show_lesson_overview(lesson_data) }}
+{{ show_lesson_overview(lesson_data, is_outside_tour, tour) }}
 {% endfor %}
 
 </div>
 </div>
+{% endmacro %}
+<!-- ============================================================ -->
 
-{% for lesson_name, lesson_data in tour.lessons %}
-{{ show_lesson(lesson_data) }}
-{% endfor %}
+{% macro show_tour_outro(tour) %}
+{% set tour_folder = baseUrl + "/gitAndGithub/trail/" + tour.folder %}
 
 <div style="background-color: #e6fff2; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;" class="non-printable p-3 border-bottom border-5 border-success">
 
@@ -373,8 +375,19 @@
 {% endmacro %}
 <!-- ============================================================ -->
 
-{% macro show_tour_overview(tour) %}
+{% macro show_tour(tour) %}
+{{ show_tour_intro(tour) }}
 
+{% for lesson_name, lesson_data in tour.lessons %}
+{{ show_lesson(lesson_data) }}
+{% endfor %}
+
+{{ show_tour_outro(tour) }}
+{% endmacro %}
+<!-- ============================================================ -->
+
+{% macro show_tour_overview(tour) %}
+{% set tour_page =  baseUrl + '/gitAndGithub/trail/' + tour.folder + '/index.html' %}
 <div class="indented-level1">
 
 <div class="border border-success pt-2 ps-2 pb-1 pe-1 border-bottom-0 rounded-top" style="background-color: #e6fff2">
@@ -383,7 +396,16 @@ Target use case: <include src="{{ tour.folder }}/text.md#destination" trim inlin
 <small>This use case is covered by,</small>
 </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;→ **[<md>++{{ tour.title }}++</md>]({{ baseUrl }}/gitAndGithub/trail/{{ tour.folder }}/)**
+&nbsp;&nbsp;&nbsp;&nbsp;→ **[<md>++{{ tour.title }}++</md>]({{ tour_page }})**
+<panel type="seamless" header="tour details ..." expand-headerless>
+
+{{ show_tour_intro(tour, is_outside_tour=1) }}
+<div class="ps-5 pt-2" style="border-left: 3px dotted #e6fff2; border-right: 3px dotted #e6fff2; border-top: none; border-bottom: none;">
+
+Click [here]({{ tour_page }}) to see the full tour page.
+</div>
+{{ show_tour_outro(tour) }}
+</panel>
 </div>
 {% endmacro %}
 <!-- ============================================================ -->
