@@ -129,8 +129,9 @@
 <!-- ============================================================ -->
 
 {% macro show_commit(text, edge='|', desc='', style="info", msg='') %}
-<div class="d-flex align-items-center"><span class="d-flex justify-content-center align-items-center border bg-{{ style }} text-white border-{{ style }}" style="width: 30px; height: 30px; border-radius: 50%;"><md>{{ text }}</md></span>{% if desc %}<span class="ms-1"><md>{{ desc }}</md></span>{% endif %}{% if msg %}<span class="ms-2 font-monospace small"><md>%%{{ msg }}%%</md></span>{% endif %}</div>
-{% if edge %}<div class="d-flex justify-content-center align-items-center text-{{ style }}" style="width: 30px; height: 18px; padding: 0; margin: -3px 0;">{{ edge }}</div>{% endif %}{% endmacro %}
+{% set size = '25' %}
+<div class="d-flex align-items-center"><span class="d-flex justify-content-center align-items-center border bg-{{ style }} text-white border-{{ style }}" style="width: {{ size }}px; height: {{ size }}px; border-radius: 50%;"><md><small>{{ text }}</small></md></span>{% if desc %}<span class="ms-1"><md>{{ desc }}</md></span>{% endif %}{% if msg %}<span class="ms-2 font-monospace small"><md>%%{{ msg }}%%</md></span>{% endif %}</div>
+{% if edge %}<div class="d-flex justify-content-center align-items-center text-{{ style }}" style="width: {{ size }}px; height: 18px; padding: 0; margin: -4px 0;">{{ edge }}</div>{% endif %}{% endmacro %}
 <!-- ============================================================ -->
 
 {% macro show_git_term_tip(term, current_page) -%}
