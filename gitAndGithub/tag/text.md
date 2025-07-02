@@ -145,6 +145,63 @@ The same dialog used to add a tag can be used to delete and even move a tag. Not
 
 **Tags are different from commit messages**, in purpose and in form. A commit message is a description of the commit that is _part of_ the commit itself. A tags is a short name for a commit, which you can use to address a commit.
 </box>
+
+**Pushing commits to a remote does not push tags automatically.** You need to push tags specifically.
+
+<!-- ================== start: HANDS-ON =========================== -->
+{% call show_hands_on_practical("Pushing tags to a remote")  %}
+
+**Push tags you created earlier to the remote.**
+
+<box type="info" seamless>
+
+You can go to your remote on GitHub link `https://github.com/{USER}/{REPO}/tags` (e.g., `https://github.com/johndoe/things/tags`) to verify the tag is present there.
+
+<pic src="images/githubListTags.png" width="300" />
+
+Note how GitHub assumes these tags are meant as releases, and automatically provides zip and tar.gz archives of the repo (as at that tag).
+</box>
+
+{% set cli %} <!-- ------ start: Git Tabs --------------->
+
+{{ hp_number ('1') }} **Push a specific tag in the local repo to the remote** (e.g., `v1.0`) using the `git push <origin> <tag-name>` command.
+```bash{.no-line-numbers}
+git push origin v1.0
+```
+<box type="tip" seamless>
+
+In addition to verifying the tag's presence via GitHub, you can also use the following command to list the tags presently in the remote.
+```bash{.no-line-numbers}
+git ls-remote --tags origin
+```
+</box>
+
+{{ hp_number ('2') }} **Delete a tag in the remote**, using the `git push --delete <remote> <tag-name>` command.
+
+```bash{.no-line-numbers}
+git push --delete origin v1.0
+```
+{{ hp_number ('3') }} **Push all tags to the remote repo**, using the `git push <remote> --tags` command.
+
+```bash{.no-line-numbers}
+git push origin --tags
+```
+
+{% endset %}
+{% set sourcetree %}
+
+To push a specific tag, use the following menu:
+
+<pic src="images/sourcetreePushTag.png" width="400" />
+
+To push all tags, you can tick the `Push all tags` option when pushing commits:
+
+<pic src="images/sourcetreePushAllTags.png" width="500" />
+{% endset %}
+{{ show_git_tabs_from_text(cli, sourcetree) }}
+<!-- ------ end: Git Tabs -------------------------------->
+
+{% endcall %}<!-- ===== end: HANDS-ON ============================ -->
 </div>
 
 <div id="extras">

@@ -6,9 +6,10 @@
 
 <div id="body">
 {% call show_lesson_intro() %}
-...
+Git can tell you **the net effect of changes between two points of history**.
 {% endcall %}
 
+Suppose you’re trying to improve the performance of a piece of software by experimenting with different code tweaks. You commit after each change (as you should). After several commits, you now want to review the overall effect of all those changes on the code. With Git, you can do that easily.
 
 **Git can show you what changed in each commit.**
 
