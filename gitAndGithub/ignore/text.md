@@ -13,28 +13,23 @@ Git allows you to **specify which files should be omitted from reversion control
 
 **A repo-specific ignore-list of files can be specified in a `.gitignore` file**, stored in the root of the repo folder.
 
+* **The `.gitignore` file itself can be either revision controlled or ignored.**
+  * To version control it (the more common choice – which allows you to track how the `.gitignore` file changes over time), simply commit it as you would commit any other file.
+  * To ignore it, simply add its name to the `.gitignore` file itself.
+* **It supports file patterns** e.g., adding `temp/*.tmp` to the `.gitignore` file prevents Git from tracking any `.tmp` files in the `temp` directory.
+
 {% call show_hands_on_practical('Adding a file to the ignore-list')  %}
 
-{{ hp_number ('1') }} **Add a file into your repo's working folder that you presumably do not want to revision-control** e.g., a file named `temp.txt`. Observe how Git has detected the new file.
+{{ hp_number ('1') }} **Add a file into your repo's working folder that you presumably do not want to revision-control** e.g., a file named `temp.txt`. Observe how Git has detected the new file.<br>
+Add a few other files with `.tmp` extension.
 
-{{ hp_number ('2') }} **Configure Git to ignore that file:**
+{{ hp_number ('2') }} **Configure Git to ignore those files:**
 
 {{ show_git_tabs('-ignore-file-fragment') }}
 
+{{ hp_number ('3') }} **Optionally, stage and commit the `.gitignore` file.**
+
 {% endcall %}
-<box type="info" seamless>
-
-**The `.gitignore` file**
-
-The `.gitignore` file tells Git which files to ignore when tracking revision history. That file itself can be either revision controlled or ignored.
-* To version control it (the more common choice – which allows you to track how the `.gitignore` file changes over time), simply commit it as you would commit any other file.
-* To ignore it, follow the same steps you followed above when you set Git to ignore the `temp.txt` file.
-
-* It supports file patterns e.g., adding `temp/*.tmp` to the `.gitignore` file prevents Git from tracking any `.tmp` files in the `temp` directory.
-
-{{ icon_resource }} More information about the `.gitignore` file: [git-scm.com/docs/gitignore](https://git-scm.com/docs/gitignore)
-
-</box>
 
 **Files recommended to be omitted from version control**
 
@@ -43,8 +38,8 @@ The `.gitignore` file tells Git which files to ignore when tracking revision his
 * **Local files** i.e., files specific to your own computer %%e.g., local settings of your IDE%%
 * **Sensitive content** i.e., files containing sensitive/personal information %%e.g., credential files, personal identification data%% (especially, if there is a possibility of those files getting leaked via the revision control system).
 
-
 </div>
 
 <div id="extras">
+{{ show_exercise('ignoring-somethings') }}
 </div>
