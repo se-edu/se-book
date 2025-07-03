@@ -9,7 +9,7 @@
 Git can tell you **the net effect of changes between two points of history**.
 {% endcall %}
 
-**Git can show you what changed in each commit.** Given below are some use cases.
+**Git's {{ show_git_term("diff") }} feature can show you what changed between two points** in the revision history. Given below are some use cases.
 
 **Usage 1: Examining changes in the working directory**.<br>
 Example use case: To verify the next commit will include exactly what you intend it to include.

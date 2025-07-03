@@ -9,7 +9,7 @@
 When working with many commits, it helps to **tag specific commits with custom names** so they’re easier to refer to later.
 {% endcall %}
 
-**Git lets you tag commits with names, making them easy to reference later.** This is useful when you want to mark specific commits -- such as releases or key milestones (e.g., `v1.0` or `v2.1`). Using tags to refer to commits is much more convenient than using SHA hashes. In the diagram below, {{ show_tag('v1.0') }} and {{ show_tag('interim') }} are tags.
+**Git lets you {{ show_git_term('tag') }} commits with names, making them easy to reference later.** This is useful when you want to mark specific commits -- such as releases or key milestones (e.g., `v1.0` or `v2.1`). Using tags to refer to commits is much more convenient than using SHA hashes. In the diagram below, {{ show_tag('v1.0') }} and {{ show_tag('interim') }} are tags.
 
 {{ show_commit('C3', desc=show_ref('master') + show_head() + show_tag('interim'), msg='Update list') }}
 {{ show_commit('C2', desc=show_tag('v1.0'), msg='Populate list') }}
@@ -27,8 +27,8 @@ When working with many commits, it helps to **tag specific commits with custom n
 
 **Git supports two kinds of tags:**
 
-1. **A lightweight tag** is just a ref that points directly to a commit, like a branch that doesn’t move.
-2. **An annotated tag** is a full Git object that stores a reference to a commit along with metadata such as the tagger’s name, date, and a message.
+1. **A {{ show_git_term("lightweight tag") }}** is just a ref that points directly to a commit, like a branch that doesn’t move.
+2. **An {{ show_git_term("annotated tag") }}** is a full Git object that stores a reference to a commit along with metadata such as the tagger’s name, date, and a message.
 
 **Annotated tags are generally preferred for versioning and public releases,** while lightweight tags are often used for less formal purposes, such as marking a commit for your own reference.
 

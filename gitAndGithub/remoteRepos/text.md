@@ -18,9 +18,16 @@ To back up your Git repo on the cloud, **you’ll need to use a _remote reposito
 * as an intermediary repo to work on the same files from multiple computers
 * for sharing the revision history of a codebase among team members of a multi-person project
 
-**It is possible to set up a Git remote repo on your own server**, but an easier option is to use a remote repo hosting service such as GitHub, GitLab, or BitBucket. In our case, we will be using GitHub.
+**It is possible to set up a Git remote repo on your own server**, but an easier option is to use a remote repo hosting service such as GitHub.
 
+**GitHub is a web-based services that host Git repositories and add collaboration features** on top of Git. Two other similar platforms are GitLab or Bitbucket. While Git manages version control locally, these platforms make it easier for individuals and teams to work together by providing shared access to repositories, issue tracking, pull requests, and permission controls. They are widely used in both open-source and commercial software development. Here we'll be GitHub.
 
+**A Git repo can be put in one of two spaces:**
+
+* **A {{ show_git_term("GitHub user acccount") }} represents an individual user.** It is created when you sign up for GitHub and includes a username, profile page, and personal settings. With a user account, you can create your own repositories, contribute to others’ projects, and manage collaboration settings for any repositories you own.
+* **A {{ show_git_term("GitHub organisation") }} ({{ show_git_term("org") }} for short) is a shared account used by a group** such as a team, company, or open-source project. Organisations can own repositories and manage access to them through teams, roles, and permissions. Organisations are especially useful when managing repositories with shared ownership or when working at scale.
+
+Every GitHub user must have a user account, even if they primarily work within an organisation.
 </div>
 
 <div id="extras">
