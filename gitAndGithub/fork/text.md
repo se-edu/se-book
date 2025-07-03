@@ -20,7 +20,7 @@ GitHub allows you to **create a remote copy of another remote repo, called _fork
 
 {{ hp_number ('2') }} **Click on the <pic eager src="images/fork.png" height="30" /> button** in the top-right corner. In the next step,
   * choose to fork to your own account or to another GitHub organization that you are an admin of.
-  * ==Un-tick the `[ ] Copy the master branch only` option==, so that you get copies of other branches (if any) in the repo.
+  * ==un-tick the `[ ] Copy the master branch only` option==, so that you get copies of other branches (if any) in the repo.
 {% endcall %}<!-- ===== end: HANDS-ON ============================ -->
 
 
