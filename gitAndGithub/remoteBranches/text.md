@@ -15,11 +15,7 @@ Let's see how you can push a branch that you created in your local repo to the r
 
 Given below is how to push a branch named `add-intro` to your own fork named `samplerepo-pr-practice`.
 
-We assume that your local repo already has the remote added to it with the name `origin`. If that is not the case, you should first <trigger trigger="click" for="modal:remoteRepos-addRemoteForNormalPushing">configure your local repo to be able to communicate with the target remote repo</trigger>.
-
-<modal large header="Git & GitHub → Pull →" id="modal:remoteRepos-addRemoteForNormalPushing">
-  <include src="../pull/text.md#section-working-with-multiple-remotes"/>
-</modal>
+We assume that your local repo already has the remote added to it with the name `origin`. If that is not the case, you should first configure your local repo to be able to communicate with the target remote repo.
 
 {{ show_git_tabs('_1') }}
 

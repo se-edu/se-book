@@ -25,7 +25,6 @@ Reset is different from the _checkout_ feature:
 {{ show_commit('C2') }}
 {{ show_commit('C1', edge='') }}
 <p/>
-
 {% endset %}
 {% set b %}<small>%%[reset to `C2`...]%%</small> {% endset %}
 {% set c %}
@@ -33,7 +32,6 @@ Reset is different from the _checkout_ feature:
 {{ show_commit('C2', desc=show_ref('master') + show_head() + " <small>(the new _tip_)</small>") }}
 {{ show_commit('C1', edge='') }}
 <p/>
-
 {% endset %}
 {{ show_transformation_columns(a, b, c) }}
 

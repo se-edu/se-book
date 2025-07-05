@@ -52,6 +52,7 @@
 <variable id="icon_slides"><md>:far-images:</md></variable>
 <variable id="icon_under_the_hood"><md>:fas-wrench:</md></variable>
 <variable id="icon_video"><md>:glyphicon-facetime-video:</md></variable>
+<variable id="icon_warning"><span class="badge rounded-pill bg-warning text-dark">:fas-exclamation:</span></variable>
 <variable id="icon_windows"><md>:fab-windows:</md></variable>
 <variable id="icon_x"><md>:fas-times:</md></variable>
 <variable id="icon_x_red"><span style="color:red">{{ icon_x | safe }}</span></variable>
