@@ -10,11 +10,7 @@ pageNav: 4
 
 <span class="d-none" id="destination">To be able to work with an existing remote repository.</span>
 
-<span class="d-none" id="motivation">In some cases, you will be required to start with an existing remote repository, and work with that repository. In such case, you may have to create your own copies of that repository, and keep those copies updated when more changes appear in the remote repository.</span>
-
-<span class="d-none" id="achievements">...</span>
-
-<span id="next">coming soon ...</span>
+<span class="d-none" id="motivation">Often, you will need to start with an existing remote repository. In such cases, you may have to create your own copies of that repository, and keep those copies updated when more changes appear in the remote repository.</span>
 
 <div id="body">
 
@@ -23,3 +19,7 @@ pageNav: 4
 
 <div id="extras">
 </div>
+
+<span class="d-none" id="achievements">Now you can create you own remote and local copies of any repo on GitHub, and update your copy when there are new changes in the upstream repo.</span>
+
+<span id="next">{{ show_tour_link(trail.usingRevisionHistory) }}</span>

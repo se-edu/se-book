@@ -203,9 +203,32 @@ In the next dialog, choose as follows:<br>
 
 {% endcall %}<!-- ===== end: HANDS-ON ============================ -->
 
+**You can pull from any number of remote repos**, provided the repos involved have a shared history. This can be useful when the upstream repo you forked from has some new commits that you wish to bring over to your copies of the repo (i.e., your fork and your local repo).
+
+<!-- ================== start: HANDS-ON =========================== -->
+{% call show_hands_on_practical("Sync your repos with the upstream repo")  %}
+
+**Fork [se-edu/samplerepo-finances](https://github.com/se-edu/samplerepo-finances)** to your GitHub account.<br>
+**Clone your fork to your computer**.<br>
+Now, let's pretend that there are some new commits in upstream repo that you would like to bring over to your fork, and your local repo. Here are the steps:
+
+{{ hp_number ('1') }} **Add the upstream repo [se-edu/samplerepo-finances](https://github.com/se-edu/samplerepo-finances) as remote** named `upstream` in your local repo.
+
+{{ hp_number ('2') }} **Pull from the upstream repo.** If there are new commits (in this case, there will be none), those will come over to your local repo. For example:
+```bash{.no-line-numbers}
+git pull upstream master
+```
+
+.{{ hp_number ('3') }} **Push to your fork.** Any new commits you pulled from the upstream repo will now appear in your fork as well. For example:
+```bash{.no-line-numbers}
+git push origin master
+```
+
+{{ icon_tip }} The method given above is the more 'standard' method of synchronising a fork with the upstream repo. In addition, platforms such as GitHub can provide other ways (example: GitHub's [Sync fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) feature).
+
+{% endcall %}<!-- ===== end: HANDS-ON ============================ -->
+
 </div>
 <div id="extras">
 {{ show_exercise('push-over') }}
-
-<include src="detour-pull-from-multiple-repos-fragment.md" />
 </div>

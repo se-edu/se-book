@@ -12,9 +12,6 @@ pageNav: 4
 
 <span class="d-none" id="motivation">One (of several) benefits of maintaining a copy of a repo on a cloud server: it acts as a safety net %%(e.g., against the folder becoming inaccessible due to a hardware fault)%%.</span>
 
-<span class="d-none" id="achievements">You should now be able to creat a copy of your repo on GitHub, and keep it updated as you add more commits to your local repo. If something goes wrong with your local repo (e.g., disk crash), you can now recover the repo using the remote repo (this tour did not cover how exactly you can do that -- it will be covered in a future tour).</span>
-
-<span id="next">{{ show_tour_link(trail.usingRevisionHistory) }}</span>
 
 <div id="body">
 
@@ -23,3 +20,7 @@ pageNav: 4
 
 <div id="extras">
 </div>
+
+<span class="d-none" id="achievements">You should now be able to creat a copy of your repo on GitHub, and keep it updated as you add more commits to your local repo. If something goes wrong with your local repo (e.g., disk crash), you can now recover the repo using the remote repo (this tour did not cover how exactly you can do that -- it will be covered in a future tour).</span>
+
+<span id="next">{{ show_tour_link(trail.workingWithRemotes) }}</span>
