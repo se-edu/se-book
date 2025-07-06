@@ -20,72 +20,7 @@ When there are new changes in the remote, you need to **_pull_ those changes dow
 
 {{ hp_number ('1') }} **Set the stage by simulating the remote having newer commits** than a local repo (e.g., the `things` repo). We do this by 'rewinding' the local repo into a state it was in two commits before, as given below.
 
-<panel header="**Rewinding a repo to fall behind the remote repo**{.text-info}" expanded>
 
-Here are the steps to make the local repo fall two commits behind the remote repo:
-
-**Step 1:**{.text-info} **Push commits in the local repo to the remote**, if you haven't done so already.<br>
-%%Reason: to ensure the commits that we discard are still present in the remote repo.%%<br>
-```bash{.no-line-numbers}
-git push origin master
-```
-
-**Step 2:**{.text-info} **Move back the current branch ref** by two commits.
-```bash{.no-line-numbers}
-git reset --hard HEAD~2
-```
-{% set a %}
-{{ show_commit('C4', msg='Update fruits list', desc=show_ref('master') + show_head() + show_ref('origin/master')) }}
-{{ show_commit('C3', msg='Add colors.txt, shapes.txt', desc=show_tag('v1.0')) }}
-{{ show_commit('C2', msg='Add figs to fruits.txt', desc=show_tag('v0.9')) }}
-{{ show_commit('C1', msg='Add fruits.txt', edge='') }}
-{% endset %}
-{% set b %}{% endset %}
-{% set c %}
-{{ show_commit('C4', desc=show_ref('origin/master')) }}
-{{ show_commit('C3', desc=show_tag('v1.0')) }}
-{{ show_commit('C2', desc=show_ref('master') + show_head() + show_tag('v0.9')) }}
-{{ show_commit('C1', edge='') }}
-{% endset %}
-{{ show_transformation_columns(a, b, c) }}
-<p/>
-
-**Step 3:**{.text-info} **Move back the remote-tracking branch ref** by two commits.
-```bash{.no-line-numbers}
-git update-ref refs/remotes/origin/master HEAD
-```
-
-{% set a %}
-{{ show_commit('C4', desc=show_ref('origin/master')) }}
-{{ show_commit('C3', desc=show_tag('v1.0')) }}
-{{ show_commit('C2', desc=show_ref('master') + show_head() + show_tag('v0.9')) }}
-{{ show_commit('C1', edge='') }}
-{% endset %}
-{% set b %}{% endset %}
-{% set c %}
-{{ show_commit('  ', style='light') }}
-{{ show_commit('C3', style='secondary', desc=show_tag('v1.0')) }}
-{{ show_commit('C2', desc=show_ref('master') + show_head() + show_ref('origin/master') + ' ' + show_tag('v0.9')) }}
-{{ show_commit('C1', edge='') }}
-{% endset %}
-{{ show_transformation_columns(a, b, c) }}
-<p/>
-
-<box type="info" header="More on the `update-ref` command ...{.text-info}" seamless>
-
-* What it does: The `git update-ref refs/remotes/origin/master HEAD` commands resets the remote-tracking branch ref `origin/master` to follow the current `HEAD`, effectively making the repo 'forget' that it previously pushed two more commits to the remote.
-* What it is: `update-ref` is an example of what are known as Git {{ show_git_term("plumbing commands") }} -- lower-level commands used by Git internally. In contrast, day-to-day Git commands (such as `commit`, `log`, `push` etc.) are known as {{ show_git_term("porcelain commands") }} (as in, in bathrooms we see the porcelain parts but not the plumbing parts that works below the surface to make everything work).
-</box>
-
-Here are the three commands, for ease of copying:
-
-```bash{.no-line-numbers}
-git push origin master
-git reset --hard HEAD~2
-git update-ref refs/remotes/origin/master HEAD
-```
-</panel>
-<p/>
 
 {{ hp_number ('2') }} **Confirm the local repo is unaware of the missing two commits**. Now, your local repo state is exactly how it would be if you had cloned the repo 2 commits ago i.e., it is like somebody has added two more commits to the remote repo _after_ you cloned it.
 
