@@ -18,65 +18,68 @@ When there are new changes in the remote, you need to **_pull_ those changes dow
 <!-- ================== start: HANDS-ON =========================== -->
 {% call show_hands_on_practical("Fetch and merge from a remote")  %}
 
-{{ hp_number ('1') }} **Set the stage by simulating the remote having newer commits** than a local repo (e.g., the `things` repo). We do this by 'rewinding' the local repo into a state it was in two commits before, as given below.
+{{ hp_number ('1') }} **Clone the repo [se-edu/samplerepo-finances](https://github.com/se-edu/samplerepo-finances)**. It has 3 commits. Your clone now has a remote `origin` pointing to the remote repo you cloned from.
 
-
-
-{{ hp_number ('2') }} **Confirm the local repo is unaware of the missing two commits**. Now, your local repo state is exactly how it would be if you had cloned the repo 2 commits ago i.e., it is like somebody has added two more commits to the remote repo _after_ you cloned it.
+{{ hp_number ('2') }} **Change the remote `origin`** to point to [samplerepo-finances2](https://github.com/se-edu/samplerepo-finances2.git). This remote repo is a copy of the one you cloned, but it has two extra commits.
 
 {% set cli %} <!-- ------ start: Git Tabs --------------->
-A `git status` command will now report that `Your branch is up to date with 'origin/master'`, proving that the local repo is unaware that the remote repo has two extra commits. The `log` command shows that the current branch does not have the two commits we discarded earlier.
 ```bash{.no-line-numbers}
-git status
-git log --oneline --decorate
+git remote set-url origin https://github.com/se-edu/samplerepo-finances-2.git
 ```
-However, if you add the `--all` switch to the `log` command, you will see one more commit.
-```bash{.no-line-numbers highlight-lines="1['--all']"}
-git log --oneline --decorate --all
-```
-{% call show_output() %}
-```bash{.no-line-numbers highlight-lines="1"}
-f761ea6 (tag: v1.0) Add colours.txt, shapes.txt
-2bedace (HEAD -> master, tag: v0.9, origin/master) Add figs to fruits.txt
-d5f91de Add fruits.txt
-```
-{% endcall %}
-
-What does the `--all` switch do? It makes the output include all reachable commits, not just the commits in the current branch.<br>
-Why does it show an extra commit in the output here? Although we got rid of two commits from the `master` branch, in this example, one of those commits is still reachable via the tag `v1.0`, which makes it part of the visible revision graph. However, it is not part of the `master` branch.
 {% endset %}
 {% set sourcetree %}
-This is what you should see in the revision graph:
-
-<pic src="images/sourcetreeStartingPoint.png" width="500" />
-
-Observe how the local branch ref `master` and the remote-tracking branch ref `origin/master` have moved back two commits.
-
-Why does the revision graph show an extra commit (the one at the top)? Although we got rid of two commits from the `master` branch, in this example, one of those commits is still reachable by the tag `v1.0`, which makes it part of the revision graph. However, it is not part of the `master` branch.
-
-Are you seeing something like the below instead (i.e., `origin/master`)? In that case, the Sourcetree could be auto-fetching from the remotes periodically, making the repo automatically aware that it is behind the remote.
-
-<pic src="images/sourcetreeAfterFetching.png" width="500" />
-
+Go to `Repository` → `Repository settings ...` to update remotes.
 {% endset %}
 {{ show_git_tabs_from_text(cli, sourcetree) }}
 <!-- ------ end: Git Tabs -------------------------------->
 
-{{ hp_number ('3') }} **Fetch from the remote.**
+{{ hp_number ('3') }} **Verify the local repo is unaware of the extra commits** in the remote.
 
 {% set cli %} <!-- ------ start: Git Tabs --------------->
 
-Use the `git fetch <remote>` command to fetch changes from a remote. If the remote is not specified, the default remote `origin` will be used.
+```bash{.no-line-numbers}
+git status
+```
+{% call show_output() %}
+```bash{.no-line-numbers  highlight-lines="2"}
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+```
+{% endcall %}
+
+{% endset %}
+{% set sourcetree %}
+The revision graph should look like the below:
+
+<pic src="images/sourcetreeStartingPoint.png" width="500" />
+<p/>
+
+If it looks like the below, it is possible that Sourcetree is auto-fetching data from the repo periodically.
+
+<pic src="images/sourcetreeAfterFetching.png" width="500" />
+{% endset %}
+{{ show_git_tabs_from_text(cli, sourcetree) }}
+<!-- ------ end: Git Tabs -------------------------------->
+
+
+{{ hp_number ('3') }} **Fetch from the new remote.**
+
+{% set cli %} <!-- ------ start: Git Tabs --------------->
+
+Use the `git fetch <remote>` command to fetch changes from a remote. If the `<remote>` is not specified, the default remote `origin` will be used (which is not what we want in this case).
 
 ```bash{.no-line-numbers}
-git fetch origin
+git fetch other
 ```
 {% call show_output() %}
 ```bash{.no-line-numbers  highlight-lines="2['2bedace..e60deae']"}
-From https://github.com/.../things
-   2bedace..e60deae  master     -> origin/master
+remote: Enumerating objects: 8, done.
+... # more output ...
+   afbe966..cc6a151  master     -> origin/master
+ * [new tag]         beta       -> beta
 ```
-Observe that Git reports fetching a commit range (i.e., `SHA..SHA`) from the remote.
 {% endcall %}
 
 {% endset %}
@@ -137,7 +140,7 @@ git log --oneline --decorate
 {% set sourcetree %}
 To merge the fetched changes, right-click on the latest commit on `origin/remote` branch and choose `Merge`.
 
-<pic src="images/sourcetreeRightClickToMerge.png" width="500" />
+<pic src="images/sourcetreeRightClickToMerge.png" width="400" />
 
 In the next dialog, choose as follows:<br>
 <pic src="images/sourcetreeMergeDialog.png" width="500" />
@@ -163,7 +166,8 @@ The final result should be something like the below (same as the repo state befo
 <!-- ================== start: HANDS-ON =========================== -->
 {% call show_hands_on_practical("Pull from a remote")  %}
 
-{{ hp_number ('1') }} **Similar to previous hands-on practical, set simulate the remote having two newer commits** than a local repo.
+{{ hp_number ('1') }} **Similar to the previous hands-on practical, clone the repo** [se-edu/samplerepo-finances](https://github.com/se-edu/samplerepo-finances) (to a new location).<br>
+**Change the remote** `origin` to point to [samplerepo-finances2](https://github.com/se-edu/samplerepo-finances2.git).
 
 {{ hp_number ('2') }} **Pull the newer commits from the remote**, instead of a fetch followed by a merge.
 
@@ -201,4 +205,7 @@ In the next dialog, choose as follows:<br>
 
 </div>
 <div id="extras">
+{{ show_exercise('push-over') }}
+
+<include src="detour-pull-from-multiple-repos-fragment.md" />
 </div>

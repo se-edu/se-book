@@ -5,5 +5,5 @@ Before pushing the new commit, Sourcetree will indicate that your local branch i
 
 To push, click the `Push` button on the main menu, ensure the settings are as follows in the next dialog, and click the `Push` button on the dialog.
 
-<pic eager src="{{baseUrl}}/gitAndGithub/push/images/sourcetree_1.png" height="150" />
+<pic eager src="{{baseUrl}}/gitAndGithub/push/images/sourcetreePushDialog.png" height="150" />
 <p/>

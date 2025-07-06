@@ -51,18 +51,6 @@ Add a few more commits to your local repo, and push those commits to the remote 
 <div id="extras">
 {{ show_exercise('push-over') }}
 
-{% call show_detour('Pushing to multiple repos') %}
-
-**You can push to any number of repos**, as long as the target repos and your repo have a shared history.
-1. <trigger trigger="click" for="modal:push-addRemoteForNormalPushing">Add the GitHub repo URL as a remote</trigger> while giving a suitable name (e.g., `upstream`, `central`, `production`, `myOtherRemote` ...), if you haven't done so already.
-1. Push to the target repo -- remember to select the correct target repo when you do.
-
-<modal large header="Git & GitHub → Pull →" id="modal:push-addRemoteForNormalPushing">
-  <include src="../setRemote/text.md#body"/>
-</modal>
-
-{{ show_git_tabs('-push-to-multiple-repos-fragment') }}
-
-{% endcall %}
+<include src="detour-push-to-multiple-repos-fragment.md" />
 
 </div>
