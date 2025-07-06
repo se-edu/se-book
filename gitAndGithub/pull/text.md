@@ -18,42 +18,76 @@ When there are new changes in the remote, you need to **_pull_ those changes dow
 <!-- ================== start: HANDS-ON =========================== -->
 {% call show_hands_on_practical("Fetch and merge from a remote")  %}
 
-{{ hp_number ('1') }} **Set the stage by simulating the remote having newer commits** than a local repo (e.g., the `things` repo), as follows:
+{{ hp_number ('1') }} **Set the stage by simulating the remote having newer commits** than a local repo (e.g., the `things` repo). We do this by 'rewinding' the local repo into a state it was in two commits before, as given below.
 
-i) Push commits in the local repo to the remote, if you haven't done so already.<br>
-ii) Move back the current branch tip by two commits, to simulate a case of the local repo being two commits behind the remote repo.
+<panel header="**Rewinding a repo to fall behind the remote repo**{.text-info}" expanded>
 
+Here are the steps to make the local repo fall two commits behind the remote repo:
+
+**Step 1:**{.text-info} **Push commits in the local repo to the remote**, if you haven't done so already.<br>
+%%Reason: to ensure the commits that we discard are still present in the remote repo.%%<br>
+```bash{.no-line-numbers}
+git push origin master
+```
+
+**Step 2:**{.text-info} **Move back the current branch ref** by two commits.
+```bash{.no-line-numbers}
+git reset --hard HEAD~2
+```
 {% set a %}
-{{ show_commit('C4', msg='Update fruits list', desc=show_ref('master') + show_head()) }}
+{{ show_commit('C4', msg='Update fruits list', desc=show_ref('master') + show_head() + show_ref('origin/master')) }}
 {{ show_commit('C3', msg='Add colors.txt, shapes.txt', desc=show_tag('v1.0')) }}
 {{ show_commit('C2', msg='Add figs to fruits.txt', desc=show_tag('v0.9')) }}
 {{ show_commit('C1', msg='Add fruits.txt', edge='') }}
 {% endset %}
-{% set b %}<small>%%[reset to `C2`...]%%</small> {% endset %}
+{% set b %}{% endset %}
 {% set c %}
-{{ show_commit('  ', style='light') }}
-{{ show_commit('  ', style='light') }}
-{{ show_commit('C2', msg='Add figs ...', desc=show_ref('master') + show_head() + show_tag('v0.9')) }}
-{{ show_commit('C1', msg='Add fruits.txt', edge='') }}
-
+{{ show_commit('C4', desc=show_ref('origin/master')) }}
+{{ show_commit('C3', desc=show_tag('v1.0')) }}
+{{ show_commit('C2', desc=show_ref('master') + show_head() + show_tag('v0.9')) }}
+{{ show_commit('C1', edge='') }}
 {% endset %}
 {{ show_transformation_columns(a, b, c) }}
 <p/>
 
-To achieve the above, run the following commands:
-
-```bash
-git push origin master
-git reset --hard HEAD~2  # reset local branch ref
-git update-ref refs/remotes/origin/master HEAD  # reset remote-tracking branch ref
+**Step 3:**{.text-info} **Move back the remote-tracking branch ref** by two commits.
+```bash{.no-line-numbers}
+git update-ref refs/remotes/origin/master HEAD
 ```
-<box type="info" header="More on the `update-ref` command used above ...{.text-info}" seamless>
+
+{% set a %}
+{{ show_commit('C4', desc=show_ref('origin/master')) }}
+{{ show_commit('C3', desc=show_tag('v1.0')) }}
+{{ show_commit('C2', desc=show_ref('master') + show_head() + show_tag('v0.9')) }}
+{{ show_commit('C1', edge='') }}
+{% endset %}
+{% set b %}{% endset %}
+{% set c %}
+{{ show_commit('  ', style='light') }}
+{{ show_commit('C3', style='secondary', desc=show_tag('v1.0')) }}
+{{ show_commit('C2', desc=show_ref('master') + show_head() + show_ref('origin/master') + ' ' + show_tag('v0.9')) }}
+{{ show_commit('C1', edge='') }}
+{% endset %}
+{{ show_transformation_columns(a, b, c) }}
+<p/>
+
+<box type="info" header="More on the `update-ref` command ...{.text-info}" seamless>
 
 * What it does: The `git update-ref refs/remotes/origin/master HEAD` commands resets the remote-tracking branch ref `origin/master` to follow the current `HEAD`, effectively making the repo 'forget' that it previously pushed two more commits to the remote.
 * What it is: `update-ref` is an example of what are known as Git {{ show_git_term("plumbing commands") }} -- lower-level commands used by Git internally. In contrast, day-to-day Git commands (such as `commit`, `log`, `push` etc.) are known as {{ show_git_term("porcelain commands") }} (as in, in bathrooms we see the porcelain parts but not the plumbing parts that works below the surface to make everything work).
 </box>
 
-{{ hp_number ('2') }} **Confirm the local repo is unaware of the missing two commits**. Now, your local repo state is exactly how it would be if you had cloned the repo 2 commits ago, as if somebody has added two more commits to the remote repo since you cloned it.
+Here are the three commands, for ease of copying:
+
+```bash{.no-line-numbers}
+git push origin master
+git reset --hard HEAD~2
+git update-ref refs/remotes/origin/master HEAD
+```
+</panel>
+<p/>
+
+{{ hp_number ('2') }} **Confirm the local repo is unaware of the missing two commits**. Now, your local repo state is exactly how it would be if you had cloned the repo 2 commits ago i.e., it is like somebody has added two more commits to the remote repo _after_ you cloned it.
 
 {% set cli %} <!-- ------ start: Git Tabs --------------->
 A `git status` command will now report that `Your branch is up to date with 'origin/master'`, proving that the local repo is unaware that the remote repo has two extra commits. The `log` command shows that the current branch does not have the two commits we discarded earlier.
@@ -74,7 +108,7 @@ d5f91de Add fruits.txt
 {% endcall %}
 
 What does the `--all` switch do? It makes the output include all reachable commits, not just the commits in the current branch.<br>
-Why does it show an extra commit in the output here? Although we got rid of two commits from the `master` branch, in this example, one of those commits is still reachable by the tag `v1.0`, which makes it appear in the output. However, it is not part of the `master` branch.
+Why does it show an extra commit in the output here? Although we got rid of two commits from the `master` branch, in this example, one of those commits is still reachable via the tag `v1.0`, which makes it part of the visible revision graph. However, it is not part of the `master` branch.
 {% endset %}
 {% set sourcetree %}
 This is what you should see in the revision graph:
@@ -103,16 +137,22 @@ Use the `git fetch <remote>` command to fetch changes from a remote. If the remo
 git fetch origin
 ```
 {% call show_output() %}
-```bash{.no-line-numbers}
+```bash{.no-line-numbers  highlight-lines="2['2bedace..e60deae']"}
 From https://github.com/.../things
    2bedace..e60deae  master     -> origin/master
 ```
+Observe that Git reports fetching a commit range (i.e., `SHA..SHA`) from the remote.
 {% endcall %}
 
 {% endset %}
 {% set sourcetree %}
 Click on the `Fetch` button on the top menu:<br>
-<pic src="images/sourcetreeTopMenu.png" width="400" />
+<annotate src="images/sourcetreeTopMenu.png" width="400" alt="Sourcetree top menu">
+  <a-point x="45%" y="5%" content="Look within this box">
+    <div style="width: 45px; height: 50px; border: 2px solid red; margin: 20px auto;"></div>
+  </a-point>
+</annotate>
+
 {% endset %}
 {{ show_git_tabs_from_text(cli, sourcetree) }}
 <!-- ------ end: Git Tabs -------------------------------->
@@ -194,20 +234,25 @@ The final result should be something like the below (same as the repo state befo
 
 {% set cli %} <!-- ------ start: Git Tabs --------------->
 
-Use the `git pull <remote> <branch>` command to pull changes. If the `<remote>` and `<branch>` are not specified, Git will pull to the current branch from the remote branch it is tracking.
+Use the `git pull <remote> <branch>` command to pull changes.
 
 ```bash{.no-line-numbers}
 git pull origin master
 ```
-or
+The following works too. If the `<remote>` and `<branch>` are not specified, Git will pull to the current branch from the remote branch it is tracking.
 ```bash{.no-line-numbers}
 git pull
 ```
 {% endset %}
 {% set sourcetree %}
 Click on the `Pull` button on the top menu:<br>
-<pic src="images/sourcetreeTopMenu.png" width="400" />
+<annotate src="images/sourcetreeTopMenu.png" width="400" alt="Sourcetree top menu">
+<a-point x="24%" y="5%" content="Look within this box">
+<div style="width: 45px; height: 50px; border: 2px solid red; margin: 20px auto;"></div>
+</a-point>
+</annotate>
 
+<p/>
 In the next dialog, choose as follows:<br>
 <pic src="images/sourcetreePullDialog.png" width="500" />
 
