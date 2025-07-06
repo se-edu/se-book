@@ -8,9 +8,9 @@ pageNav: 4
 <span id="outcomes">{{ icon_outcome }} Can continue work by starting with an existing remote repo.</span>
 <span id="title"></span>
 
-<span class="d-none" id="destination">...</span>
+<span class="d-none" id="destination">To be able to work with an existing remote repository.</span>
 
-<span class="d-none" id="motivation">...</span>
+<span class="d-none" id="motivation">In some cases, you will be required to start with an existing remote repository, and work with that repository. In such case, you may have to create your own copies of that repository, and keep those copies updated when more changes appear in the remote repository.</span>
 
 <span class="d-none" id="achievements">...</span>
 
