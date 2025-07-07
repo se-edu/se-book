@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import trail, bold_number, callout, hp_number, label, show_git_term, show_git_term_tip, show_detour, show_exercise, show_git_tabs, show_hands_on_practical, show_lesson_intro, show_output, show_under_the_hood with context %}
+{% from "common/macros.njk" import trail, bold_number, callout, hp_number, label, show_commit, show_git_term, show_git_term_tip, show_detour, show_exercise, show_git_tabs, show_git_tabs_from_text, show_hands_on_practical, show_head, show_lesson_intro, show_output, show_ref, show_tag, show_transformation_columns, show_under_the_hood with context %}
 
 <span id="prereqs"></span>
 <span id="outcomes">...</span>
@@ -9,15 +9,13 @@
 ...
 {% endcall %}
 
-**Git supports branching**, which allows you to do multiple parallel changes to the content of a repository.
+**Git {{ show_git_term("branches") }} let you develop multiple versions of your work in parallel — effectively creating {{ show_git_term("diverged") }} timelines of your repository’s history.** For example, one team member can create a new branch to experiment with a change, while the rest of the team continues working on another branch. Branches can have meaningful names, such as `master`, `release`, or `draft`.
 
-First, let us learn how the repo looks like as you perform branching operations.
+**A Git branch is simply a ref (a named label) that points to a commit and automatically moves forward as you add new commits to that branch.** As you’ve seen before, the `HEAD` ref indicates which branch you’re currently working on, by pointing to corresponding branch ref.
 
-**A Git branch is simply a _named label_ pointing to a commit** which moves forward automatically as you add more commits to that branch. **The `HEAD` label indicates which branch you are on.**
+**Git creates a branch named `master` by default** (Git can be configured to use a different name e.g., `main`). When you add a commit, it goes into the branch you are currently on, and the branch ref (together with the `HEAD` ref) moves to the new commit.
 
-Git creates a branch named `master` (or `main`) by default. When you add a commit, it goes into the branch you are currently on, and the branch label (together with the `HEAD` label) moves to the new commit.
-
-Given below is an illustration of how branch labels move as branches evolve. Refer to the text below it for explanations of each stage.
+Given below is an illustration of how branch refs move as branches evolve. Refer to the text below it for explanations of each stage.
 
 <annotate src="{{ baseUrl }}/gitAndGithub/branch/images/branchesAsLabels1.png" height="500">
 <a-point x="2%" y="27%" label="[1]" opacity="0"/>
@@ -28,14 +26,10 @@ Given below is an illustration of how branch labels move as branches evolve. Ref
 </annotate>
 <p/>
 
-1. There is only one branch (i.e., `master`) and there is only one commit on it. The `HEAD` label is pointing to the `master` branch (as we are currently on that branch).
-   <box type="info" seamless>
-
-   To learn a bit more about how labels such as `master` and `HEAD` work, you can refer to [this article](https://blog.git-init.com/what-is-head-in-git/).
-   </box>
-1. A new commit has been added. The `master` and the `HEAD` labels have moved to the new commit.
-1. A new branch `fix1` has been added. The repo has switched to the new branch too (hence, the `HEAD` label is attached to the `fix1` branch).
-1. A new commit (`c`) has been added. The current branch label `fix1` moves to the new commit, together with the `HEAD` label.
+1. There is only one branch (i.e., `master`) and there is only one commit on it. The `HEAD` ref is pointing to the `master` branch (as we are currently on that branch).
+1. A new commit has been added. The `master` and the `HEAD` refs have moved to the new commit.
+1. A new branch `fix1` has been added. The repo has switched to the new branch too (hence, the `HEAD` ref is attached to the `fix1` branch).
+1. A new commit (`c`) has been added. The current branch ref `fix1` moves to the new commit, together with the `HEAD` ref.
 1. The repo has switched back to the `master` branch. Hence, the `HEAD` has moved back to `master` branch's <tooltip content="latest commit of that branch">tip</tooltip>.<br>
    At this point, the repo's working directory reflects the code at commit `b` (not `c`).
 
@@ -45,120 +39,172 @@ Given below is an illustration of how branch labels move as branches evolve. Ref
 <a-point x="90%" y="40%" label="[8]" opacity="0"/>
 </annotate>
 
-6. A new commit (`d`) has been added. The `master` and the `HEAD` labels have moved to that commit.
+6. A new commit (`d`) has been added. The `master` and the `HEAD` refs have moved to that commit.
 1. The repo has switched back to the `fix1` branch and added a new commit (`e`) to it.
 1. The repo has switched to the `master` branch and the `fix1` branch has been merged into the `master` branch, creating a _merge commit_ `f`. The repo is currently on the `master` branch.
 
-
-Now that you have some idea how the repo will look like when branches are being used, let's follow the steps below to learn how to perform branching operations using Git. You can use any repo you have on your computer (e.g. a clone of the [samplerepo-things](https://github.com/se-edu/samplerepo-things)) for this.
-
 <box type="warning" seamless>
 
-Note that how the revision graph appears (colors, positioning, orientation etc.) in your Git GUI varies based on the GUI you use, and might not match the exact diagrams given above.
+Note that appearance of the revision graph (colors, positioning, orientation etc.) varies based on the Git client you use, and might not match the exact diagrams given above.
 </box>
+<!-- ================== start: HANDS-ON =========================== -->
+{% call show_hands_on_practical("Work on parallel branches")  %}
 
-**0. Observe that you are normally in the branch called `master`.**
+{{ hp_number ('1') }} **Fork the [samplerepo-things](https://github.com/se-edu/samplerepo-things) repo, and clone it** onto your computer.
 
-{{ show_git_tabs('_0') }}
+{{ hp_number ('2') }} **Observe that you are in the branch called `master`.**
+{% set cli %} <!-- ------ start: Git Tabs --------------->
 
-**1. Start a branch named `feature1` and switch to the new branch.**
+```bash{.no-line-numbers}
+$ git status
+```
+{% call show_output() %}
+```bash{.no-line-numbers}
+on branch master
+```
+{% endcall %}
 
-{{ show_git_tabs('_1') }}
+{% endset %}
+{% set sourcetree %}
+<pic eager src="{{baseUrl}}/gitAndGithub/branch/images/onMasterBranch.png" height="120" />
+<p/>
+{% endset %}
+{{ show_git_tabs_from_text(cli, sourcetree) }}
+<!-- ------ end: Git Tabs -------------------------------->
 
-**2. Create some commits in the new branch.** %%Just commit as per normal. Commits you add while on a certain branch will become part of that branch.%%<br>
-Note how the `master` label and the `HEAD` label moves to the new commit (The `HEAD` label of the local repo is represented as :fas-dot-circle: in Sourcetree, as illustrated in the screenshot below).
+{{ hp_number ('3') }} **Start a branch named `feature1` and switch to the new branch.**
 
-<pic eager src="images/sourcetree_HEAD_dot.png" />
+{% set cli %} <!-- ------ start: Git Tabs --------------->
+You can use the `branch` command to create a new branch and the `checkout` command to switch to a specific branch.
 
-**3. Switch to the `master` branch.** Note how the changes you did in the `feature1` branch are no longer in the working directory.
+```bash{.no-line-numbers}
+$ git branch feature1
+$ git checkout feature1
+```
 
-{{ show_git_tabs('_2') }}
+One-step shortcut to create a branch and switch to it at the same time:
 
-**4. Add a commit to the master branch.** Let’s imagine it’s a bug fix.<br>
+```bash{.no-line-numbers}
+$ git checkout –b feature1
+```
+<box type="info" header="The new `switch` command" seamless>
+
+Git recently introduced a [`switch` command](https://git-scm.com/docs/git-switch) that you can use instead of the `checkout` command given above.
+
+To create a new branch and switch to it:
+```bash{.no-line-numbers highlight-lines="2['switch']"}
+$ git branch feature1
+$ git switch feature1
+```
+One-step shortcut:
+
+```bash{.no-line-numbers highlight-lines="1['switch –c']"}
+$ git switch –c feature1
+```
+</box>
+{% endset %}
+{% set sourcetree %}
+Click on the `Branch` button on the main menu. In the next dialog, enter the branch name and click `Create Branch`.
+
+<pic eager src="{{baseUrl}}/gitAndGithub/branch/images/sourcetreeCreateBranch.png" height="150" />
+<p/>
+
+Note how the `feature1` is indicated as the current branch (reason: Sourcetree automatically switches to the new branch when you create a new branch, if the `Checkout New Branch` was selected in the previous dialog).
+
+<pic eager src="{{baseUrl}}/gitAndGithub/branch/images/sourcetreeFeature1BranchActive.png" height="150" />
+<p/>
+{% endset %}
+{{ show_git_tabs_from_text(cli, sourcetree) }}
+<!-- ------ end: Git Tabs -------------------------------->
+
+{{ hp_number ('4') }} **Create some commits in the new branch.** %%Just commit as per normal. Commits you add while on a certain branch will become part of that branch.%%<br>
+Note how the `master` ref and the `HEAD` ref moves to the new commit.
+
+{% set cli %} <!-- ------ start: Git Tabs --------------->
+As before, you can use the `git log --one-line --decorate` command for this.
+{% endset %}
+{% set sourcetree %}
+* :fab-windows: At times, the `HEAD` ref of the local repo is represented as :fas-dot-circle: in Sourcetree, as illustrated in the screenshot below
+  <pic eager src="images/sourcetree_HEAD_dot.png" />.
+* :fab-apple: The `HEAD` ref is not shown in the UI if it is already pointing at the active branch.
+{% endset %}
+{{ show_git_tabs_from_text(cli, sourcetree) }}
+<!-- ------ end: Git Tabs -------------------------------->
+
+{{ hp_number ('5') }} **Switch to the `master` branch.** Note how the changes you did in the `feature1` branch are no longer in the working directory.
+
+{% set cli %} <!-- ------ start: Git Tabs --------------->
+```bash{.no-line-numbers}
+$ git checkout master
+```
+{% endset %}
+{% set sourcetree %}
+Double-click the `master` branch.
+
+<pic eager src="{{baseUrl}}/gitAndGithub/branch/images/sourcetreeMasterBranchSelected.png" height="150" />
+<p/>
+
+<box type="info" header="Revisiting `master` vs `origin/master`" seamless>
+
+In the screenshot above, you see a `master` ref and a `origin/master` ref for the same commit. The former identifies the <tooltip content="i.e., the most recent commit on the branch">tip</tooltip> of the local `master` branch while the latter identifies the tip of the `master` branch at the remote repo named `origin`. The fact that both refs point to the same commit means the local `master` branch and its remote counterpart are <tooltip content="neither one has commits the other one doesn't">in sync</tooltip> with each other.
+Similarly, `origin/HEAD` ref appearing against the same commit indicates that <tooltip content="`HEAD` ref indicates the currently checked-out branch's latest commit">the `HEAD` ref</tooltip> of the remote repo is pointing to this commit as well.
+
+</box>
+{% endset %}
+{{ show_git_tabs_from_text(cli, sourcetree) }}
+<!-- ------ end: Git Tabs -------------------------------->
+
+{{ hp_number ('6') }} **Add a commit to the master branch.** Let’s imagine it’s a bug fix.<br>
 To keep things simple for the time being, this commit should ==not involve the same content that you changed in the `feature1` branch==. To be on the safe side, you can change an entirely different file in this commit.
 
-<pic eager src="{{baseUrl}}/gitAndGithub/branch/images/sourcetree_4.png" height="100" />
-<p/>
-
-**5. Switch back to the `feature1` branch** %%(similar to step 3)%%.
-
-**6. Merge the `master` branch to the `feature1` branch**, giving an end-result like the following. Also note how Git has created a _merge commit_.
-
-<pic eager src="{{baseUrl}}/gitAndGithub/branch/images/sourcetree_5.png" height="120" />
-<p/>
-
-{{ show_git_tabs('_3') }}
-
-The objective of that merge was to _sync_ the `feature1` branch with the `master` branch. Observe how the changes you did in the `master` branch (i.e. the imaginary bug fix) is now available even when you are in the `feature1` branch.
-
-<box>
-
-****To undo a merge****,
-
-1. Ensure you are in the <popover content="If you merged branch `foo` onto branch `bar`, branch `bar` is the _receiving branch_">branch that received the merge</popover>.
-1. Do a hard reset (similar to how you delete a commit) of that branch to the commit that would be the tip of that branch had you not done the offending merge.
+<mermaid>
+gitGraph BT:
+    {{ "%%{init: { 'theme': 'default', 'gitGraph': {'mainBranchName': 'master'}} }%%" }}
+    commit
+    commit
+    branch feature1
+    commit
+    commit tag: "branch:feature1"
+    checkout master
+    commit tag: "branch:master ← HEAD"
+</mermaid>
 
 
-----{.dotted}
+{{ hp_number ('7') }} **Switch between the two branches and see how the working directory changes accordingly.** That is, now you have two parallel timelines that you can freely switch between.
 
-{{ icon_example }} In the example below, you merged `master` to `feature1`.
+{% endcall %}<!-- ===== end: HANDS-ON ============================ -->
 
-<annotate src="{{baseUrl}}/gitAndGithub/branch/images/sourcetree_5.png" height="120" >
-<a-point x="4%" y="47%" color="yellow" size="18" opacity="0.4" content="Do a hard reset to this commit"/>
-</annotate>
+**You can also start a branch from an earlier commit**, instead of the latest commit in the current branch. For that, simply check out the commit you wish to start from.
 
-If you want to undo that merge,
+<!-- ================== start: HANDS-ON =========================== -->
+{% call show_hands_on_practical("Start a branch from an earlier commit")  %}
 
-1. Ensure you are in the `feature1` branch (because that's the branch that _received_ the merge).
-1. Reset the `feature1` branch to the commit highlighted (in yellow) in the screenshot above (because that was the tip of the `feature1` branch before you merged the `master` branch to it.
+In the `samplerepo-things` repo that you used above, let's create a new branch that starts from the same commit the `feature1` branch started from. Let's pretend this branch will contain an alternative version of the content we added in the `feature1` branch.
 
-</box>
+<mermaid>
+gitGraph BT:
+    {{ "%%{init: { 'theme': 'default', 'gitGraph': {'mainBranchName': 'master'}} }%%" }}
+    commit
+    commit
+    branch feature1
+    branch feature1-alt
+    checkout feature1
+    commit
+    commit tag: "branch:feature1"
+    checkout master
+    commit tag: "branch:master"
+    checkout feature1-alt
+    commit tag: "branch: feature1-alt ← HEAD"
+</mermaid>
 
-<box type="info" seamless>
-
-Instead of merging `master` to `feature1`, an alternative is to [_rebase_](https://www.atlassian.com/git/tutorials/merging-vs-rebasing) the `feature1` branch. However, rebasing is an advanced feature that requires modifying past commits. If you modify past commits that have been pushed to a remote repository, you'll have to [_force-push_](https://www.datree.io/resources/git-push-force) the modified commit to the remote repo in order to update the commits in it.
-</box>
-
-**7. Add another commit to the `feature1` branch.**
-
-**8. Switch to the `master` branch and add one more commit.**
-
-**9. Merge `feature1` to the master branch**, giving and end-result like this:
-
-<pic eager src="{{baseUrl}}/gitAndGithub/branch/images/sourcetree_6.png" height="150" />
-<p/>
-
-{{ show_git_tabs('_3b') }}
-
-**10. Create a new branch called `add-countries`, switch to it, and add some commits to it** %%(similar to steps 1-2 above)%%. You should have something like this now:
-
-<pic eager src="{{baseUrl}}/gitAndGithub/branch/images/addCountriesBranchBeforeMerging.png" height="80" />
-<p/>
-
-<box type="wrong" seamless>
-
-**Avoid this rookie mistake!**{.text-danger}
-
-==Always remember to switch back to the `master` branch before creating a new branch.== If not, your new branch will be created on top of the current branch.
-</box>
-
-**11. Go back to the `master` branch and merge the `add-countries` branch onto the `master` branch** %%(similar to steps 8-9 above)%%. While you might expect to see something like the following,
-
-<pic eager src="{{baseUrl}}/gitAndGithub/branch/images/addCountriesBranchNoFastForward.png" height="100" />
-<p/>
-
-... you are likely to see something like this instead:
-
-<pic eager src="{{baseUrl}}/gitAndGithub/branch/images/addCountriesBranchAfterMerging.png" height="80" />
-<p/>
-
-That is because **Git does a _fast forward_ merge if possible**. Seeing that the `master` branch has not changed since you started the `add-countries` branch, Git has decided it is simpler to just put the commits of the `add-countries` branch in front of the `master` branch, without going into the trouble of creating an extra merge commit.
-
-**It is possible to force Git to create a merge commit even if fast forwarding is possible.**
-
-{{ show_git_tabs('_4') }}
+1. Switch to the `master` branch.
+1. Checkout the commit that is at which the `feature1` branch diverged from the `master` branch (e.g. `git checkout HEAD~1`). This will create a detached `HEAD`.
+1. Create a new branch called `feature1-alt`. The `HEAD` will now point to this new branch (i.e., no longer 'detached').
+1. Add a commit on the new branch.
+{% endcall %}<!-- ===== end: HANDS-ON ============================ -->
 
 </div>
 
 <div id="extras">
+{{ show_exercise('side-track') }}
 </div>

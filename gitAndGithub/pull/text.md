@@ -1,6 +1,5 @@
 {% from "common/macros.njk" import trail, bold_number, callout, hp_number, label, show_commit, show_git_term, show_git_term_tip, show_detour, show_exercise, show_git_tabs, show_git_tabs_from_text, show_hands_on_practical, show_head, show_lesson_intro, show_output, show_ref, show_tag, show_transformation_columns, show_under_the_hood with context %}
 
-
 <span id="prereqs"></span>
 <span id="outcomes">...</span>
 <span id="title">{{ trail.workingWithRemotes.lessons.pull.title }}</span>
@@ -85,7 +84,7 @@ remote: Enumerating objects: 8, done.
 {% endset %}
 {% set sourcetree %}
 Click on the `Fetch` button on the top menu:<br>
-<annotate src="images/sourcetreeTopMenu.png" width="400" alt="Sourcetree top menu">
+<annotate src="{{baseUrl}}/gitAndGithub/pull/images/sourcetreeTopMenu.png" width="400" alt="Sourcetree top menu">
   <a-point x="45%" y="5%" content="Look within this box">
     <div style="width: 45px; height: 50px; border: 2px solid red; margin: 20px auto;"></div>
   </a-point>
@@ -185,7 +184,7 @@ git pull
 {% endset %}
 {% set sourcetree %}
 Click on the `Pull` button on the top menu:<br>
-<annotate src="images/sourcetreeTopMenu.png" width="400" alt="Sourcetree top menu">
+<annotate src="{{baseUrl}}/gitAndGithub/pull/images/sourcetreeTopMenu.png" width="400" alt="Sourcetree top menu">
 <a-point x="24%" y="5%" content="Look within this box">
 <div style="width: 45px; height: 50px; border: 2px solid red; margin: 20px auto;"></div>
 </a-point>
