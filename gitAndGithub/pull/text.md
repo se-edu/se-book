@@ -84,7 +84,7 @@ remote: Enumerating objects: 8, done.
 {% endset %}
 {% set sourcetree %}
 Click on the `Fetch` button on the top menu:<br>
-<annotate src="{{baseUrl}}/gitAndGithub/pull/images/sourcetreeTopMenu.png" width="400" alt="Sourcetree top menu">
+<annotate src="{{baseUrl}}/gitAndGithub/images/sourcetreeTopMenu.png" width="400" alt="Sourcetree top menu">
   <a-point x="45%" y="5%" content="Look within this box">
     <div style="width: 45px; height: 50px; border: 2px solid red; margin: 20px auto;"></div>
   </a-point>
@@ -184,7 +184,7 @@ git pull
 {% endset %}
 {% set sourcetree %}
 Click on the `Pull` button on the top menu:<br>
-<annotate src="{{baseUrl}}/gitAndGithub/pull/images/sourcetreeTopMenu.png" width="400" alt="Sourcetree top menu">
+<annotate src="{{baseUrl}}/gitAndGithub/images/sourcetreeTopMenu.png" width="400" alt="Sourcetree top menu">
 <a-point x="24%" y="5%" content="Look within this box">
 <div style="width: 45px; height: 50px; border: 2px solid red; margin: 20px auto;"></div>
 </a-point>
