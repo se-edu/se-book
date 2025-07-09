@@ -10,7 +10,7 @@ It is useful to be able to **visualise the commits timeline, aka the _revision g
 
 {% endcall %}
 
-**The Git data model consists of two types of entities: {{ show_git_term("objects") }} and {{ show_git_term("refs") }}** (short for _references). In this lesson, you will encounter examples of both.
+**The Git data model consists of two types of entities: {{ show_git_term("objects") }} and {{ show_git_term("refs") }}** (short for _references_). In this lesson, you will encounter examples of both.
 
 **A Git {{ show_git_term("revision graph") }} is visualisation of a repo's revision history**, contains examples of both objects and refs. First, let us learn to work with simpler revision graphs consisting of one branch, such as the one given below.
 

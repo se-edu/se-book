@@ -1,12 +1,12 @@
 {% from "common/macros.njk" import trail, bold_number, callout, hp_number, label, show_commit, show_git_term, show_git_term_tip, show_detour, show_exercise, show_git_tabs, show_git_tabs_from_text, show_hands_on_practical, show_head, show_lesson_intro, show_output, show_ref, show_tag, show_transformation_columns, show_under_the_hood with context %}
 
 <span id="prereqs"></span>
-<span id="outcomes">...</span>
+<span id="outcomes">Can merge branches in a local repo.</span>
 <span id="title">{{ trail.branchingLocally.lessons.merge.title }}</span>
 
 <div id="body">
 {% call show_lesson_intro() %}
-...
+Most work done in **branches eventually gets _merged_** together.
 {% endcall %}
 
 **{{ show_git_term("Merging") }} combines the changes from one branch into another**, bringing their diverged timelines back together.
@@ -74,7 +74,7 @@ $ git merge master
 {% set sourcetree %}
 Right-click on the `master` branch and choose `merge master into the current branch`. Click `OK` in the next dialog.<br>
 The revision graph should look like this now (colours and line alignment might vary but the graph structure should be the same):<br>
-<pic eager src="{{baseUrl}}/gitAndGithub/merge/images/sourcetree_5.png" height="120" />
+<pic eager src="{{baseUrl}}/gitAndGithub/merge/images/sourcetreeAfterMeringMaster.png" height="120" />
 <p/>
 {% endset %}
 {{ show_git_tabs_from_text(cli, sourcetree) }}
@@ -132,7 +132,7 @@ git merge feature1
 {% set sourcetree %}
 Right-click on the `feature1` branch and choose `Merge...`. The resulting revision graph should look like this:
 
-<pic eager src="{{baseUrl}}/gitAndGithub/merge/images/sourcetree_6.png" height="150" />
+<pic eager src="{{baseUrl}}/gitAndGithub/merge/images/sourcetreeAfterMeringFeature1.png" height="150" />
 <p/>
 {% endset %}
 {{ show_git_tabs_from_text(cli, sourcetree) }}
@@ -243,32 +243,8 @@ To permanently prevent fast-forwarding:
 <!-- ------ end: Git Tabs -------------------------------->
 
 </div>
-
 <div id="extras">
 
-
-
-<box>
-
-****To undo a merge****,
-
-1. Ensure you are in the <popover content="If you merged branch `foo` onto branch `bar`, branch `bar` is the _receiving branch_">branch that received the merge</popover>.
-1. Do a hard reset (similar to how you delete a commit) of that branch to the commit that would be the tip of that branch had you not done the offending merge.
-
-
-----{.dotted}
-
-{{ icon_example }} In the example below, you merged `master` to `feature1`.
-
-<annotate src="{{baseUrl}}/gitAndGithub/merge/images/sourcetree_5.png" height="120" >
-<a-point x="4%" y="47%" color="yellow" size="18" opacity="0.4" content="Do a hard reset to this commit"/>
-</annotate>
-
-If you want to undo that merge,
-
-1. Ensure you are in the `feature1` branch (because that's the branch that _received_ the merge).
-1. Reset the `feature1` branch to the commit highlighted (in yellow) in the screenshot above (because that was the tip of the `feature1` branch before you merged the `master` branch to it.
-
-</box>
-
+{{ show_exercise('branch-bender') }}
+<include src="detour-undo-merge-fragment.md" />
 </div>

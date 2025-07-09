@@ -9,7 +9,7 @@
 Git allows you to **specify which files should be omitted from reversion control**.
 {% endcall %}
 
-**You can specify which files Git should omit from reversion control**. While you can always omit files from revision control simply by not staging them, having an 'ignore-list' is more convenient, especially if there are files inside the working folder that are not suitable for revision control %%(e.g., temporary log files)%% or files you want to prevent from accidentally including in a commit %%(files containing confidential information)%%.
+**You can specify which files Git should {{ show_git_term("ignore") }} from reversion control**. While you can always omit files from revision control simply by not staging them, having an 'ignore-list' is more convenient, especially if there are files inside the working folder that are not suitable for revision control %%(e.g., temporary log files)%% or files you want to prevent from accidentally including in a commit %%(files containing confidential information)%%.
 
 **A repo-specific ignore-list of files can be specified in a `.gitignore` file**, stored in the root of the repo folder.
 
