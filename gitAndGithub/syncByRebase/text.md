@@ -13,7 +13,7 @@
 
 Rebasing is especially useful when you want to update your branch with the latest changes from a main branch, but you prefer an uncluttered history with fewer merge commits.
 
-Suppose we have the following case, and we want to sync the `feature` branch with `master`, so that changes in `m2` become visible to the `feature` branch.
+Suppose we have the following revision graph, and we want to sync the `feature` branch with `master`, so that changes in commit `m2` become visible to the `feature` branch.
 <mermaid>
 gitGraph
     {{ "%%{init: { 'theme': 'default', 'gitGraph': {'mainBranchName': 'master'}} }%%" }}
@@ -27,7 +27,7 @@ gitGraph
     commit id: "[HEAD → feature] f2"
 </mermaid>
 
-If we merge the `master` branch to the `feature` branch as given below, `m2` become visible to `feature` branch. However, we ended up creating a merge commit.
+If we merge the `master` branch to the `feature` branch as given below, `m2` become visible to `feature` branch. However, it creates a merge commit.
 <mermaid>
 gitGraph
     {{ "%%{init: { 'theme': 'default', 'gitGraph': {'mainBranchName': 'master'}} }%%" }}
@@ -41,7 +41,7 @@ gitGraph
     commit id: "f2"
     merge master id: "[HEAD → feature] mc1"
 </mermaid>
-Instead of merging, if we _rebased_ the `feature` branch on the `master` branch, we would get the following. Note how the changes in `m2` are now visible to `feature` branch, but there is no merge commit, and the revision graph is simpler.
+Instead of merging, if we _rebased_ the `feature` branch on the `master` branch, we would get the following.
 <mermaid>
 gitGraph
     {{ "%%{init: { 'theme': 'default', 'gitGraph': {'mainBranchName': 'master'}} }%%" }}
@@ -54,7 +54,9 @@ gitGraph
     commit id: "[HEAD → feature] f2a"
 </mermaid>
 
-Note how the first commit in the feature branch, previously shown as `f1`, is now shown as `f1a` after the rebase. Although both commits contain the same changes, other details — such as the parent commit — are different, making them two distinct Git objects with different SHA values. Similarly, `f2` and `f2a` are also different. Thus, the history of the entire `feature` branch has changed after the rebase.
+Note how the rebasing changed the base of the `feature` branch from `m1` to `m2`. As a result, changes done in `m2` are now visible to the `feature` branch. But there is no merge commit, and the revision graph is simpler.
+
+Also note how the first commit in the feature branch, previously shown as `f1`, is now shown as `f1a` after the rebase. Although both commits contain the same changes, other details — such as the parent commit — are different, making them two distinct Git objects with different SHA values. Similarly, `f2` and `f2a` are also different. Thus, the history of the entire `feature` branch has changed after the rebase.
 
 **Because rebasing rewrites the commit history of your branch, it's important to use it carefully.** You should avoid rebasing branches that you’ve already shared with others, because rewriting published history can cause confusion and conflicts for anyone else working on the same branch.
 

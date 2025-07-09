@@ -163,9 +163,9 @@ gitGraph BT:
     commit id: "m2"
     branch feature1
     commit id: "f1"
-    commit id: "f2" tag: "branch: feature1"
+    commit id: "[feature] f2"
     checkout master
-    commit id: "m3" tag: "branch:master ← HEAD"
+    commit id: "[HEAD → master] m3"
     checkout feature1
 </mermaid>
 </div>
@@ -184,17 +184,17 @@ In the `samplerepo-things` repo that you used above, let's create a new branch t
 <mermaid>
 gitGraph BT:
     {{ "%%{init: { 'theme': 'default', 'gitGraph': {'mainBranchName': 'master'}} }%%" }}
-    commit
-    commit
+    commit id: "m1"
+    commit id: "m2"
     branch feature1
     branch feature1-alt
     checkout feature1
-    commit
-    commit tag: "branch:feature1"
+    commit id: "f1"
+    commit id: "[feature1] f2"
     checkout master
-    commit tag: "branch:master"
+    commit id: "[HEAD → master] m3"
     checkout feature1-alt
-    commit tag: "branch: feature1-alt ← HEAD"
+    commit id: "[HEAD → feature1-alt] a1"
 </mermaid>
 
 <box type="wrong" seamless>

@@ -44,9 +44,9 @@ gitGraph BT:
     commit id: "m2"
     branch feature1
     commit id: "f1"
-    commit id: "f2" tag: "branch: feature1 ← HEAD"
+    commit id: "[HEAD → feature1] f2"
     checkout master
-    commit id: "m3" tag: "branch:master"
+    commit id: "[master] m3"
     checkout feature1
 </mermaid>
 
@@ -60,9 +60,9 @@ gitGraph BT:
     commit id: "f1"
     commit id: "f2"
     checkout master
-    commit id: "m3" tag: "branch:master"
+    commit id: "[master] m3"
     checkout feature1
-    merge master id: "mc1"  tag: "branch: feature1 ← HEAD"
+    merge master id: "[HEAD → feature1] mc1"
 </mermaid>
 
 {% set cli %} <!-- ------ start: Git Tabs --------------->
@@ -99,9 +99,9 @@ gitGraph BT:
     commit id: "m3"
     checkout feature1
     merge master id: "mc1"
-    commit id: "f3"  tag: "branch: feature1"
+    commit id: "[feature1] f3"
     checkout master
-    commit id: "m4" tag: "branch:master ← HEAD"
+    commit id: "[HEAD → master] m4"
 </mermaid>
 
 {{ hp_number ('4') }} **Merge `feature1` to the master branch**, giving and end-result like this:
@@ -118,10 +118,10 @@ gitGraph BT:
     commit id: "m3"
     checkout feature1
     merge master id: "mc1"
-    commit id: "f3"  tag: "branch: feature1"
+    commit id: "[feature1] f3"
     checkout master
     commit id: "m4"
-    merge feature1 id: "mc2" tag: "branch:master ← HEAD"
+    merge feature1 id: "[HEAD → master] mc2"
 </mermaid>
 
 {% set cli %} <!-- ------ start: Git Tabs --------------->
@@ -148,10 +148,10 @@ Now, any changes you did in `feature1` branch are available in the master branch
 gitGraph BT:
     {{ "%%{init: { 'theme': 'default', 'gitGraph': {'mainBranchName': 'master'}} }%%" }}
     commit id: "m1"
-    commit id: "m2" tag: "branch:master ← HEAD"
+    commit id: "[HEAD → master] m2"
     branch bug-fix
     commit id: "b1"
-    commit id: "b2" tag: "branch: bug-fix"
+    commit id: "[bug-fix] b2"
     checkout master
 </mermaid>
 {% endset %}
@@ -163,7 +163,7 @@ gitGraph BT:
     commit id: "m1"
     commit id: "m2"
     commit id: "b1"
-    commit id: "b2" tag: "branch:master ← HEAD" tag: "branch: bug-fix"
+    commit id: "[HEAD → master][bug-fix] b2"
     checkout master
 </mermaid>
 {% endset %}
@@ -180,20 +180,31 @@ Let's continue with the same `samplerepo-things` repo we used above, and do a fa
 <mermaid>
 gitGraph BT:
     {{ "%%{init: { 'theme': 'default', 'gitGraph': {'mainBranchName': 'master'}} }%%" }}
-    commit id: "mc2"
+    commit id: "[master] mc2"
     branch add-countries
     commit id: "a1"
-    commit id: "a2" tag: "branch:add-countries ← HEAD"
+    commit id: "[HEAD → add-countries] a2"
 </mermaid>
 
-{{ hp_number ('2') }} **Go back to the `master` branch and merge the `add-countries` branch onto the `master` branch.** Observe there is no merge commit, and both branches now points to the same commit.
+{{ hp_number ('2') }} **Go back to the `master` branch.
 
 <mermaid>
 gitGraph BT:
     {{ "%%{init: { 'theme': 'default', 'gitGraph': {'mainBranchName': 'master'}} }%%" }}
+    commit id: "[HEAD → master] mc2"
+    branch add-countries
+    commit id: "a1"
+    commit id: "add-countries] a2"
+</mermaid>
+
+{{ hp_number ('3') }} **Merge the `add-countries` branch onto the `master` branch.** Observe there is no merge commit. The `master` branch ref (and the `HEAD` ref along with it) moved to the tip of the `add-countries` branch (i.e., `a2`) and both branches now points to `a2`.
+
+<mermaid>
+gitGraph BT:
+    {{ "%%{init: { 'theme': 'default', 'gitGraph': {'mainBranchName': 'master (and add-countries)'}} }%%" }}
     commit id: "mc2"
     commit id: "a1"
-    commit id: "a2" tag: "master ← HEAD" tag: "branch:add-countries"
+    commit id: "[HEAD → master][add-countries] a2"
 </mermaid>
 
 {% endcall %}<!-- ===== end: HANDS-ON ============================ -->
