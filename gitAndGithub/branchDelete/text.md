@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import trail, bold_number, callout, hp_number, label, show_commit, show_git_term, show_git_term_tip, show_detour, show_exercise, show_git_tabs, show_git_tabs_from_text, show_hands_on_practical, show_head, show_lesson_intro, show_output, show_ref, show_tag, show_transformation_columns, show_under_the_hood with context %}
+{% from "common/macros.njk" import trail, bold_number, callout, hp_number, label, show_commit, show_git_term, show_git_term_tip, show_detour, show_exercise, show_git_tabs, show_git_tabs_from_text, show_hands_on_practical, show_head, show_lesson_intro, show_output, show_ref, show_sidebar, show_tag, show_transformation_columns, show_under_the_hood with context %}
 
 <span id="prereqs"></span>
 <span id="outcomes">...</span>
@@ -72,8 +72,7 @@ gitGraph BT:
 {{ show_transformation_columns(a, b, c) }}
 
 In the above example, the commit `b1` is no longer reachable, unless we know its commit ID (i.e., the `SHA`).<br>
-
-<box type="info" header="****SIDEBAR: What makes a commit 'unreachable'?****{.text-info}" seamless>
+{% call show_sidebar("What makes a commit 'unreachable'?") %}
 
 **Recall that a commit only has a pointer to its parent commit** (not its descendent commits).
 
@@ -93,7 +92,7 @@ In the example below, `C4` is unreachable (i.e., cannot be reached by starting a
 </div>
 
 **Unreachable commits are not deleted immediately — Git keeps them for a while before cleaning them up.** By default, Git retains unreachable commits for at least **30 days**, during which they can still be recovered if you know their SHA. **After that, they will be garbage-collected, and will be lost for good.**
-</box>
+{% endcall %}
 
 <!-- ================== start: HANDS-ON =========================== -->
 {% call show_hands_on_practical("Delete branches")  %}
