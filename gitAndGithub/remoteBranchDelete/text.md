@@ -14,7 +14,7 @@ Often, you'll need to **delete a branch in a remote repo** after it has served i
 <!-- ================== start: HANDS-ON =========================== -->
 {% call show_hands_on_practical("Delete (and restore) branches in a remote")  %}
 
-{{ hp_number("1") }} **Fork the [samplerepo-books](https://github.com/se-edu/samplerepo-books)** to your GitHub account. When doing so, ==un-select the `Copy the master branch only` option==.<br>
+{{ hp_number("1") }} **Fork the [samplerepo-books](https://github.com/se-edu/samplerepo-books)** to your GitHub account. When doing so, ==un-tick the `Copy the master branch only` option==.<br>
 After forking, go to the fork and ensure all three branches are in there.
 
 {{ hp_number("2") }} **Clone the fork** to your computer.
