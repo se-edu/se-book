@@ -6,7 +6,7 @@
 
 <div id="body">
 {% call show_lesson_intro() %}
-To **work in parallel timelines, you can use Git _branches_.**
+**To work in parallel timelines, you can use Git _branches_.**
 {% endcall %}
 
 **Git {{ show_git_term("branches") }} let you develop multiple versions of your work in parallel — effectively creating {{ show_git_term("diverged") }} timelines of your repository’s history.** For example, one team member can create a new branch to experiment with a change, while the rest of the team continues working on another branch. Branches can have meaningful names, such as `master`, `release`, or `draft`.

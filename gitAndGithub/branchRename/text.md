@@ -6,7 +6,7 @@
 
 <div id="body">
 {% call show_lesson_intro() %}
-...
+**Branches can be renamed**, for example, to fix a mistake in the branch name.
 {% endcall %}
 
 **Local branches can be renamed easily.** Renaming a branch simply changes the branch reference (i.e., the name used to identify the branch) — it is just a cosmetic change.
@@ -14,7 +14,9 @@
 <!-- ================== start: HANDS-ON =========================== -->
 {% call show_hands_on_practical("Rename local branches")  %}
 
-<!-- commands to create the samplerepo-books
+**First, create the repo `samplerepo-books` for this hands-on practical**, by running the following commands in your terminal.
+
+```bash
 mkdir samplerepo-books
 cd samplerepo-books
 git init
@@ -26,22 +28,14 @@ echo "Textbooks" >> textbooks.txt
 git add .
 git commit -m "Add textbooks.txt"
 git switch -c fantasy master
-git echo "Fantasy Books" >> fantasy.txt
+echo "Fantasy Books" >> fantasy.txt
 git add .
 git commit -m "Add fantasy.txt"
 git checkout master
 git merge --no-ff -m "Merge branch textbooks" textbooks
+```
+The above should give you a repo similar to the revision graph given below, on the left.
 
-
-git remote add origin https://github.com/se-edu/samplerepo-books.git
-git push -u origin master
-git push -u origin fantasy
-git push -u origin textbooks
--->
-
-**Use a clone of the [samplerepo-books](https://github.com/se-edu/samplerepo-books) repo** for this hands-on practical.
-
-**Rename the `fantasy` branch to `fantasy-books`.** Similarly, rename `textbooks` branch to `study-books`.
 
 {% set a %}<!-- ------ start: transformation columns --------------->
 <mermaid>
@@ -79,6 +73,7 @@ gitGraph BT:
 {{ show_transformation_columns(a, b, c) }}
 <!-- ------ end: transformation columns -------------------------------->
 
+**Now, rename the `fantasy` branch to `fantasy-books`.** Similarly, rename `textbooks` branch to `study-books`. The outcome should be similar to the revision graph above, on the right.
 
 {% set cli %} <!-- ------ start: Git Tabs --------------->
 

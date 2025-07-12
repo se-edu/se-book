@@ -186,7 +186,7 @@ gitGraph BT:
     commit id: "[HEAD → add-countries] a2"
 </mermaid>
 
-{{ hp_number ('2') }} **Go back to the `master` branch.
+{{ hp_number ('2') }} **Go back to the `master` branch.**
 
 <mermaid>
 gitGraph BT:

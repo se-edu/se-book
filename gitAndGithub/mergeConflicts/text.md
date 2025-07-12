@@ -6,7 +6,7 @@
 
 <div id="body">
 {% call show_lesson_intro() %}
-When merging branches, you need to **guide Git on how to resolve conflicting changes** in different branches.
+When merging branches, **you need to guide Git on how to resolve conflicting changes** in different branches.
 {% endcall %}
 
 **A {{ show_git_term("merge conflict") }} happens when Git can't automatically combine changes from two branches** because the same parts of a file were modified differently in each branch. When this happens, **Git pauses the merge and marks the conflicting sections in the affected files so you can resolve them yourself.** Once you've reviewed and fixed the conflicts, you can tell Git they're resolved and complete the merge.

@@ -106,7 +106,8 @@
     lessons: {
       remoteBranchPush: {path: "gitAndGithub/remoteBranchPush", title: "Pushing Branches to a Remote"},
       remoteBranchPull: {path: "gitAndGithub/remoteBranchPull", title: "Pulling Branches from a Remote"},
-      remoteBranchHousekeeping: {path: "gitAndGithub/remoteBranchHousekeeping", title: "House-Keeping Remote Branches"}
+      remoteBranchDelete: {path: "gitAndGithub/remoteBranchDelete", title: "Deleting Branches from a Remote"},
+      remoteBranchRename: {path: "gitAndGithub/remoteBranchRename", title: "Renaming Branches in a Remote"}
     }
   }
 } %}
@@ -115,7 +116,10 @@
 {% macro show_tour_title(text) %}<div class="text-white bg-success p-1" style="border-top-left-radius: 15px; border-top-right-radius: 15px;"><span class="h2"><span class="text-light"><md>:fas-map-marker-alt:</md></span> {{ text }}</span></div>{% endmacro %}
 <!-- ============================================================ -->
 
-{% macro show_tour_link(tour) %}[{{ tour.title }}]({{ baseUrl }}/gitAndGithub/trail/{{ tour.folder }}/)</span></div>{% endmacro %}
+{% macro show_tour_link(tour) %}[{{ tour.title }}]({{ baseUrl }}/gitAndGithub/trail/{{ tour.folder }}/){% endmacro %}
+<!-- ============================================================ -->
+
+{% macro show_lesson_link(lesson) %}[Lesson: {{ lesson.title }}]({{ baseUrl }}/{{ lesson.path }}/index.html){% endmacro %}
 <!-- ============================================================ -->
 
 {% macro show_git_term(term, current_page="") -%}<span class="badge text-dark" style="background-color: rgba(13, 202, 240, 0.2);">{% if current_page %}<trigger for="pop:{{ current_page }}-{{ term }}">{% endif %}++{{ term }}++{% if current_page %}</trigger>{% endif %}</span>{%- endmacro %}
