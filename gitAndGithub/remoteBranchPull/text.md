@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import trail, bold_number, callout, hp_number, label, show_commit, show_git_term, show_git_term_tip, show_detour, show_exercise, show_git_tabs, show_git_tabs_from_text, show_hands_on_practical, show_head, show_lesson_intro, show_output, show_ref, show_tag, show_transformation_columns, show_under_the_hood with context %}
+{% from "common/macros.njk" import trail, bold_number, callout, hp_number, label, show_commit, show_git_term, show_git_term_tip, show_detour, show_exercise, show_git_tabs, show_git_tabs_from_text, show_hands_on_practical, show_head, show_lesson_intro, show_lesson_link, show_output, show_ref, show_tag, show_transformation_columns, show_under_the_hood with context %}
 
 <span id="prereqs"></span>
 <span id="outcomes">Can pull branches from a remote repo to a local repo.</span>
@@ -23,7 +23,87 @@ Sometimes we need to create a local copy of a branch from a remote repository, m
 
 </div>
 
-//HANDS-ON: examine remote-tracking branches
+<!-- ================== start: HANDS-ON =========================== -->
+{% call show_hands_on_practical("Work with a branch that existed in the remote")  %}
+
+This hands-on practical **uses the same [samplerepo-company](https://github.com/se-edu/samplerepo-company) repo** you used in {{ show_lesson_link(trail.remoteBranches.lessons.remoteBranchPush) }}. Fork and clone it if you haven't done that already.
+
+{{ hp_number("1") }} **Verify that the remote-tracking branch `origin/track-sales` exists in the local repo, but there is no local copy of it.**
+
+{% set cli %} <!-- ------ start: Git Tabs --------------->
+
+You can use the `git branch -a` command to list all local and tracking branches.
+
+```bash{.no-line-numbers}
+git branch -a
+```
+{% call show_output() %}
+```bash{.no-line-numbers}
+* hiring
+  master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/hiring
+  remotes/origin/master
+  remotes/origin/track-sales
+```
+<box type="tip" seamless>
+
+The `*` in the output above indicates the currently active branch.
+</box>
+
+Note how there is no `track-sales` in the list of branches (i.e., no local branch named `track-sales`), but there is a `remotes/origin/track-sales` (i.e., the remote-tracking branch)
+{% endcall %}
+
+{% endset %}
+{% set sourcetree %}
+Observe how the branch `track-sales` appear under `REMOTES` → `origin` but not under `BRANCHES`.
+
+<pic src="images/sourcetreeCheckRemoteTrackingBranch.png" width="200" />
+{% endset %}
+{{ show_git_tabs_from_text(cli, sourcetree) }}
+<!-- ------ end: Git Tabs -------------------------------->
+
+{{ hp_number("2") }} **Create a local copy of the remote branch `origin/track-sales`**.
+
+{% set cli %} <!-- ------ start: Git Tabs --------------->
+
+You can use the `git switch -c <branch> <remote-branch>` command for this e.g.,
+
+```bash{.no-line-numbers}
+git switch -c track-sales origin/track-sales
+```
+{% endset %}
+{% set sourcetree %}
+Locate the `track-sales` remote-tracking branch (look under `REMOTES` → `origin`), right-click, and choose `Checkout...`.<br>
+<pic src="images/sourcetreeRightClickToCheckout.png" width="500" />
+
+In the next dialog, choose as follows:<br>
+<pic src="images/sourcetreeBranchCheckoutDialog.png" width="500" />
+{% endset %}
+{{ show_git_tabs_from_text(cli, sourcetree) }}
+
+The above command/action does several things:
+1. Creates a new branch `track-sales`.
+1. Sets the new branch to track the remote branch `origin/track-sales`, which means the local branch ref `track-sales` will also move to where the `origin/track-sales` is.
+1. Switch to the newly-created branch i.e., makes it the current branch.
+<!-- ------ end: Git Tabs -------------------------------->
+
+{{ hp_number("3") }} **Add a commit to the `track-sales` branch and push to the remote**, to verify that the local branch is tracking the remote branch.
+
+<box type="tip" seamless>
+
+Commands to perform this step in one shot:
+
+```bash
+echo "5 reams of paper" >> sales.txt
+git commit -am "Update sales.txt"
+git push origin track-sales
+```
+
+</box>
+
+{% endcall %}<!-- ===== end: HANDS-ON ============================ -->
+
 
 ****Use case 2:**** **Working with branches that were added to the remote repository after you cloned it** %%e.g., a branch someone else pushed to the remote after you cloned%%.
 
