@@ -9,8 +9,6 @@
 Before learning about Git, let us first **understand what _revision control_** is.
 {% endcall %}
 
-<tabs>
-<tab header="{{ icon_text }}">
 
 Given below is a general introduction to revision control, adapted from <trigger trigger="click" for="modal:rcsWhat-bryanMercurialGuide">bryan-mercurial-guide</trigger>:
 <box seamless>
@@ -28,13 +26,6 @@ There are a number of reasons why you or your team might want to use an automate
 
 Most of these reasons are equally valid, at least in theory, whether you're working on a project by yourself, or with a hundred other people.
 </box>
-</tab>
-<tab header="{{ icon_video }}" class="d-print-none">
-
-@[youtube](M-O8ZNW9icQ)
-
-</tab>
-</tabs>
 
 <modal large header="Reference » Mercurial: The Definitive Guide" id="modal:rcsWhat-bryanMercurialGuide">
 <include src="../../common/references.md#bryan-mercurial-guide" />
