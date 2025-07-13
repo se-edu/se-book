@@ -167,6 +167,8 @@ Similar to the previous reset, but choose the `Hard - discard all working copy c
 
 **To get rid of uncommitted changes** (without resetting to a previous commit), you can reset to the `HEAD` commit.
 
+<div class="non-printable">
+
 {% set cli %} <!-- ------ start: Git Tabs --------------->
 
 The command `git reset` (without specifying a commit) defaults to `git reset HEAD`.
@@ -180,6 +182,7 @@ The command `git reset` (without specifying a commit) defaults to `git reset HEA
 {% endset %}
 {{ show_git_tabs_from_text(cli, sourcetree) }}
 <!-- ------ end: Git Tabs -------------------------------->
+</div>
 
 </div>
 

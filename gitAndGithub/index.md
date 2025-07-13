@@ -1,5 +1,5 @@
 <frontmatter>
-title: "Git and GitHub"
+title: "Revision Control Using Git (and GitHub)"
 pageNav: 4
 </frontmatter>
 

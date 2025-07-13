@@ -213,6 +213,8 @@ gitGraph BT:
 
 **It is possible to force Git to create a merge commit even if fast forwarding is possible.** This is useful if you wish the revision graph to visually show when each branch was merged to the main timeline.
 
+<div class="non-printable">
+
 {% set cli %} <!-- ------ start: Git Tabs --------------->
 
 To prevent Git from fast-forwarding, use the `--no-ff` switch when merging. Example:
@@ -252,6 +254,7 @@ To permanently prevent fast-forwarding:
 {% endset %}
 {{ show_git_tabs_from_text(cli, sourcetree) }}
 <!-- ------ end: Git Tabs -------------------------------->
+</div>
 
 </div>
 <div id="extras">

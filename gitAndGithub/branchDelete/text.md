@@ -2,7 +2,7 @@
 
 <span id="prereqs"></span>
 <span id="outcomes">...</span>
-<span id="title">{{ trail.remoteBranches.lessons.branchDelete.title }}</span>
+<span id="title">{{ trail.branchingLocally.lessons.branchDelete.title }}</span>
 
 <div id="body">
 {% call show_lesson_intro() %}
