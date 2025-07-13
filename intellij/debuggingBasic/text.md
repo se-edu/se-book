@@ -7,13 +7,10 @@
 <div id="main">
 <div id="body">
 
-<div v-closeable alt="video: debugging in IntelliJ">
+Refer to these se-edu guides:
 
-This video (from LaunchCode) gives a pretty good explanation of how to use the IntelliJ IDEA debugger.
-
-@[youtube](1bCgzjatcr4)
-
-</div>
+* [**Intellij IDEA: Debugging**](https://se-education.org/guides/tutorials/intellijDebugger.html)
+* [**VS Code: Debugging**](https://se-education.org/guides/tutorials/vscDebugger.html)
 
 </div>
 

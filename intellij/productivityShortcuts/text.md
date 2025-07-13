@@ -6,12 +6,9 @@
 
 <div id="body">
 
-<div v-closeable alt="video: IntelliJ shortcuts">
+Refer to these se-edu guides:
 
-@[youtube](41CC-F6KRP8)
-
-
-</div>
+* [**Intellij IDEA: Productivity shortcuts**](https://se-education.org/guides/tutorials/intellijProductivityShortcuts.html)
 
 </div>
 

@@ -6,19 +6,9 @@
 
 <div id="body">
 
-Some useful navigation shortcuts:
+Refer to these se-edu guides:
 
-1. Quickly locate a file by name.
-1. Go to the definition of a method from where it is used.
-1. Go back to the previous location.
-1. View the documentation of a method from where the method is being used, without navigating to the method itself.
-1. Find where a method/field is being used.
-
-<panel header="IntelliJ IDEA Code Navigation" expanded>
-
-@[youtube](1UHsJyCq1SU)
-
-</panel>
+* [**Intellij IDEA: Code navigation**](https://se-education.org/guides/tutorials/intellijCodeNavigation.html)
 
 </div>
 
