@@ -262,3 +262,38 @@ To permanently prevent fast-forwarding:
 {{ show_exercise('branch-bender') }}
 <include src="detour-undo-merge-fragment.md" />
 </div>
+
+
+{name: "intro", heading: "Introduction to Revision Control", priority: "1"},
+{name: "init", heading: "Putting a Folder Under Git's Control", priority: "1"},
+{name: "stage", heading: "Specifying What to include in a Snapshot", priority: "1"},
+{name: "commit", heading: "Saving a Snapshot", priority: "1"}
+{name: "remoteRepos", heading: "Remote Repositories", priority: "1"},
+{name: "createRemoteRepo", heading: "Creating a Repo on GitHub", priority: "1"},
+{name: "setRemote", heading: "Linking a Local Repo With a Remote Repo", priority: "1"},
+{name: "push", heading: "Updating the Remote Repo", priority: "1"},
+{name: "ignore", heading: "Omitting Files from Revision Control", priority: "1"}
+{name: "fork", heading: "Duplicating a Remote Repo on the Cloud", priority: "1"},
+{name: "clone", heading: "Creating a Local Copy of a Repo", priority: "1"},
+{name: "pull", heading: "Downloading Data Into a Local Repo", priority: "1"}
+{name: "log", heading: "Examining the Revision History", priority: "1"},
+{name: "show", heading: "Examining a Commit", priority: "1"},
+{name: "tag", heading: "Tagging Commits", priority: "1"},
+{name: "diff", heading: "Comparing Points of History", priority: "1"},
+{name: "checkout", heading: "Traversing to a Specific Commit", priority: "1"},
+{name: "reset", heading: "Rewriting History to Start Over", priority: "1"}
+{name: "selectiveStage", heading: "Controlling What Goes Into a Commit", priority: "1"},
+{name: "commitMessage", heading: "Writing Good Commit Messages", priority: "1"},
+{name: "interactiveRebase", heading: "Reorganising Commits", priority: "1"}
+{name: "branch", heading: "Creating Branches", priority: "1"},
+{name: "merge", heading: "Merging Branches", priority: "1"},
+{name: "mergeConflicts", heading: "Resolving Merge Conflicts", priority: "1"},
+{name: "branchRename", heading: "Renaming Branches", priority: "1"},
+{name: "branchDelete", heading: "Deleting Branches", priority: "1"}
+{name: "syncByMerge", heading: "Merging to Sync Branches", priority: "1"},
+{name: "syncByRebase", heading: "Rebasing to Sync Branches", priority: "1"},
+{name: "cherryPick", heading: "Copying Specific Commits", priority: "1"}
+{name: "remoteBranchPush", heading: "Pushing Branches to a Remote", priority: "1"},
+{name: "remoteBranchPull", heading: "Pulling Branches from a Remote", priority: "1"},
+{name: "remoteBranchDelete", heading: "Deleting Branches from a Remote", priority: "1"},
+{name: "remoteBranchRename", heading: "Renaming Branches in a Remote", priority: "1"}
