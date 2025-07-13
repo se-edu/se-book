@@ -6,7 +6,7 @@ pageNav: 4
 </frontmatter>
 
 <span id="outcomes">{{ icon_outcome }} Can exercise fine-grained control over the revision graph.</span>
-<span id="title"></span>
+<span id="title">{{ tour.title }}</span>
 
 <span class="d-none" id="destination">To be able to maintain a clean and meaningful revision history.</span>
 

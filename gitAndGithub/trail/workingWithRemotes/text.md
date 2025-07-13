@@ -6,7 +6,7 @@ pageNav: 4
 </frontmatter>
 
 <span id="outcomes">{{ icon_outcome }} Can continue work by starting with an existing remote repo.</span>
-<span id="title"></span>
+<span id="title">{{ tour.title }}</span>
 
 <span class="d-none" id="destination">To be able to work with an existing remote repository.</span>
 

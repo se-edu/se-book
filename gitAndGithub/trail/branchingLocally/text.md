@@ -6,7 +6,7 @@ pageNav: 4
 </frontmatter>
 
 <span id="outcomes">{{ icon_outcome }} Can use Git branches in a local repo.</span>
-<span id="title"></span>
+<span id="title">{{ tour.title }}</span>
 
 <span class="d-none" id="destination">To be able to make use of multiple timelines of work in a local repository.</span>
 
