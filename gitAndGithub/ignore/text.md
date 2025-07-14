@@ -41,5 +41,7 @@ Add a few other files with `.tmp` extension.
 </div>
 
 <div id="extras">
-{{ show_exercise('ignoring-somethings') }}
+{% call show_exercise("ignoring-somethings") %}
+coming soon ...
+{% endcall %}
 </div>

@@ -214,5 +214,7 @@ gitGraph BT:
 </div>
 
 <div id="extras">
-{{ show_exercise('side-track') }}
+{% call show_exercise('side-track') %}
+coming soon ...
+{% endcall %}
 </div>

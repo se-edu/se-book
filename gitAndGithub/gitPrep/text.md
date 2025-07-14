@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import trail, bold_number, callout, hp_number, label, show_git_term, show_git_term_tip, show_detour, show_exercise, show_git_tabs, show_hands_on_practical, show_lesson_intro, show_output, show_under_the_hood with context %}
+{% from "common/macros.njk" import trail, bold_number, callout, hp_number, label, show_commit, show_git_term, show_git_term_tip, show_detour, show_exercise, show_git_tabs, show_git_tabs_from_text, show_hands_on_practical, show_head, show_lesson_intro, show_lesson_link, show_output, show_prep, show_ref, show_resources, show_sidebar, show_tag, show_transformation_columns, show_under_the_hood with context %}
 
 <span id="prereqs"></span>
 
@@ -11,22 +11,196 @@
 Before you start learning Git, **you need to install some tools** in your computer.
 {% endcall %}
 
-First, install Git.
+##### Installing Git
 
-Next, ensure you have a suitable terminal app. Our instructions assume you use a Bash terminal.
+**Git is a free and open source software used for revision control.** To use Git, you need to install Git on your computer.
 
-Optionally, install a Git client.
-e.g., Sourcetree ([installation instructions](https://se-education.org/guides/tutorials/sourcetree.html)), which is Git + a GUI for Git.
+{% call show_prep("Install Git") %}
+<tabs>
+  <tab header=":fab-windows: Windows">
 
-<box type="tip" seamless>
+**Download the Git installer** from the [official Git website](https://git-scm.com/downloads/win).<br>
+**Run the installer** and make sure to **select the option to install Git Bash** when prompted.
 
-If you are new to Git, **we recommend you learn !!both!! the GUI method and the CLI method** -- The GUI method will help you visualize the result better while the CLI method is more universal (i.e., you will not be tied to any GUI) and more flexible/powerful.
+<box type="warning" seamless>
 
-**It is fine to learn the CLI way only** (using a GUI is optional), especially if you normally prefer to work with CLI over GUI.
+When running Git commands, we recommend Windows users to **use the Git Bash terminal** that comes with Git. To open Git Bash terminal, hit the <kbd>:fab-windows:</kbd> key and type `git bash`.
 </box>
 
+{% call show_sidebar("Git Bash Terminal") %}
+**Git Bash is a terminal application that lets you use Git from the command line on Windows.** Since Git was originally developed for Unix-like systems (like Linux and macOS), Windows does not come with a native shell that supports all the commands and utilities commonly used with Git.
 
+<pic src="images/gitBashWindow.png" />
+
+**Git Bash provides a Unix-like command-line environment on Windows.** It includes:
+- A Bash shell (Bash stands for *Bourne Again SHell*), which is a widely used command-line interpreter on Linux and macOS.
+- Common Unix tools and commands (like `ls`, `cat`, `ssh`, etc.) that are useful when working with Git and scripting.
+{% endcall %} <!-- show_sidebar -->
+  </tab>
+  <tab header=":fab-apple: MacOS">
+
+**Install [homebrew](https://brew.sh/)** if you don't already have it, and then, **run `brew install git`**
+  </tab>
+  <tab header=":fab-linux: Linux">
+
+**Use your Linux distribution's package manager to install Git.** Examples:
+
+* Debian/Ubuntu, run `sudo apt-get update` and then `sudo apt-get install git`.
+* Fedora: run `sudo dnf update` and then `sudo dnf install git`.
+
+  </tab>
+</tabs>
+
+**Verify Git is installed**, by running the following command in a terminal.
+```bash{.no-line-numbers}
+git --version
+```
+{% call show_output() %}
+```bash{.no-line-numbers}
+git version 2._._
+```
+The output should spit out the version number.
+{% endcall %} <!-- show_output -->
+{% endcall %} <!-- show_prep -->
+
+##### Configuring `user.name` and `user.email`
+
+**Git needs to know _who you are_ to record changes properly.** When you save a snapshot of your work in Git, it records your name and email as the author of that change. This ensures everyone working on the project can see who made which changes. **Accordingly, you should set the config settings `user.name` and `user.email` as before you start Git for revision control.**
+
+{% call show_prep("Set `user.name` and `user.email`") %}
+
+**To set the two config settings**, run the following commands in your terminal window:
+```bash{.no-line-numbers}
+git config --global user.name "Your Name"
+git config --global user.email "your_email@example.com"
+```
+
+**To check if they are set as intended**, you can use the following two commands:
+```bash{.no-line-numbers}
+git config --global user.name
+git config --global user.email
+```
+{% endcall %} <!-- show_prep -->
+
+##### Interacting with Git: CLI vs GUI
+**Git is fundamentally a command-line tool.** You primarily interact with it through its <tooltip content="Command-Line Interface">CLI</tooltip> by typing commands. This gives you full control over its features and helps you understand what’s really happening under the hood.
+
+**<tooltip content="Graphical User Interface">GUI</tooltip> clients for Git also exist,** such as Sourcetree, GitKraken, and the built-in Git support in editors like Intellij IDEA and VS Code. These tools provide a more visual way to perform some Git operations.
+
+**If you're new to Git, it's best to learn the CLI first.** The CLI is universal, always available (even on servers), and helps you build a solid understanding of Git’s concepts. You can use GUI clients as a supplement — for example, to visualise complex history structures.
+
+**Mastering the CLI gives you confidence and flexibility, while GUI tools can serve as helpful companions.**
+
+{% call show_prep("[Optional] Install a GUI client") %}
+**Optionally, you can install a Git GUI client.**
+e.g., Sourcetree ([installation instructions](https://se-education.org/guides/tutorials/sourcetree.html)).
+
+Our Git lessons shows how to perform Git operations in Git CLI, and in Sourcetree -- the latter just to illustrate how Git GUIs work. It is perfectly fine for you to learn the CLI only.
+
+<pic src="images/sourcetreeUi.png" /><br>
+<sub>%%[image credit: https://www.sourcetreeapp.com]%%</sub>
+
+{% endcall %} <!-- show_prep -->
+
+<div class="non-printable">
+
+##### Installing the Git-Mastery App
+
+**In these lessons, we are piloting a new companion app called Git-Mastery** that we have been developing to help Git learners. Specifically, it provides exercises that you can do to self-test your Git knowledge, and the app will also verify if your solution is correct.
+
+**If you are new to Git, we ==strongly recommend that you install and use the Git-Mastery app==.**
+
+{% call show_prep("[Recommended] Install and Configure the Git-Mastery App")  %}
+
+**1. Install the Git-Mastery App**
+
+<tabs>
+  <tab header=":fab-windows: Windows">
+
+* Download the `.exe` file from [the latest release](https://github.com/git-mastery/app/releases/latest). {{ numbers_abcd }}
+* Add the `.exe` to your `PATH` following [this guide](https://www.eukhost.com/kb/how-to-add-to-the-path-on-windows-10-and-windows-11/).
+  </tab>
+  <tab header=":fab-apple: MacOS">
+
+```bash{.no-line-numbers}
+brew tap git-mastery/gitmastery
+brew install gitmastery
+```
+  </tab>
+  <tab header=":fab-linux: Linux">
+
+<tabs>
+  <tab header="Debian/Ubuntu">
+
+Ensure you are running `libc` version 2.38 or newer.
+
+Then install the app by running the following commands:
+
+```bash
+sudo apt install software-properties-common
+sudo add-apt-repository "deb https://git-mastery.github.io/gitmastery-apt-repo any main"
+sudo apt update
+sudo apt-get install gitmastery
+```
+
+  </tab>
+  <tab header="Arch">
+
+Install using pacman:
+
+```bash
+sudo pacman -Syu gitmastery-bin
+```
+  </tab>
+  <tab header="Others">
+
+If you are using a Linux distribution that is not yet supported by Git-Mastery, please download the right binary for your architecture from [the latest release.](https://github.com/git-mastery/app/releases/latest)
+
+Install it to `/usr/bin` to access the binary, the following using version `3.3.0` as an example.
+
+```bash
+install -D -m 0755 gitmastery-3.3.0-linux-arm64 /usr/bin/gitmastery
+```
+  </tab>
+</tabs> <!-- linux versions -->
+
+  </tab> <!-- linux -->
+</tabs> <!-- os -->
+
+**2. To verify the installation**, run the `gitmastery --help` command from a couple of different folder locations.
+
+```bash{.no-line-numbers}
+gitmastery --help
+cd ../my-projects  # cd into a different folder
+gitmastery --help
+```
+
+<box type="info" seamless>
+
+The current version of #r#the app takes 5-10 seconds to respond to a command##. This is because the app comes with a bundled Python runtime (so that users don't need to install Python first) which needs to load first before the command can be executed.
+</box>
+
+**3. Trigger the initial setup** by running the `gitmastery setup` command in a suitable folder (the app will create files/folders inside this folder).
+
+```bash{.no-line-numbers}
+mkdir gitmastery-home
+cd gitmastery-home
+gitmastery setup
+```
+
+The `gitmastery setup` command will perform the following tasks:
+* Check if Git is installed. {{ numbers_abcd }}
+* Check if `user.name` and `user.email` are set.
+* Prompt you to specify a name for the **git-mastery** {{ show_git_term("exercises directory") }} -- you can accept the default.
+* Set up a mechanism to locally track the progress of your exercises.
+
+Notes:
+* If the command failed due to checks (a) or (b) failing, you can rectify the problem and run the command again.
+* If you wish to check the Git set up again at a later time, you can run the `gitmastery check git` command.
+
+{% endcall %} <!-- show_prep -->
 </div>
 
+</div>
 <div id="extras">
 </div>

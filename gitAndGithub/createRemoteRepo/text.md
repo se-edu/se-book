@@ -27,8 +27,10 @@ The first step of backing up a local repo on GitHub: **create an empty repositor
    <pic eager src="images/newRepoUrl.png" width="450" />
 {% endcall %}
 
-{{ show_exercise('remote-control') }}
 </div>
 
 <div id="extras">
+{% call show_exercise("remote-control") %}
+coming soon ...
+{% endcall %}
 </div>

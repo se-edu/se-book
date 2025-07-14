@@ -259,7 +259,9 @@ To permanently prevent fast-forwarding:
 </div>
 <div id="extras">
 
-{{ show_exercise('branch-bender') }}
+{% call show_exercise("branch-bender") %}
+coming soon ...
+{% endcall %}
 <include src="detour-undo-merge-fragment.md" />
 </div>
 

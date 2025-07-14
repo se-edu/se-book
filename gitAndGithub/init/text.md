@@ -11,14 +11,14 @@ To be able to save snapshots of a folder using Git, **you must first put the fol
 
 **Normally, we use Git to manage a revision history of a specific folder**, which gives us the ability to revision-control any file in that folder and its subfolders.
 
-**To put a folder under the control of Git, we _initialise_ a {{ show_git_term('repository', 'init')}} (short name: {{ show_git_term('repo') }})** in that folder. This way, we can initialise repos in different folders, to version-control different clusters of files independently of each other %%e.g., files belonging to different projects%%.
+**To put a folder under the control of Git, we _initialise_ a {{ show_git_term('repository', 'init')}} (short name: {{ show_git_term('repo') }})** in that folder. This way, we can initialise repos in different folders, to revision-control different clusters of files independently of each other %%e.g., files belonging to different projects%%.
 
 {{ show_git_term_tip('repository', 'init') }}
 
 You can follow the hands-on practical below to learn how to initialise a repo in a folder.
 
 {% call callout() %}
-{{ label('secondary', icon_hands_on + ' HANDS-ON') }} panels contain hands-on activities you can do as you learn Git.
+{{ label('secondary', icon_hands_on + ' HANDS-ON') }} panels contain hands-on activities you can do as you learn Git. If you are new to Git, ==we strongly recommend that you do them yourself== (even if they appear straightforward), as hands-on usage will help you internalise the concepts and operations better.
 {% endcall %}
 
 {% call show_hands_on_practical("Initialise a git repo in a folder") %}
@@ -79,7 +79,7 @@ nothing to commit (create/copy files and use "git add" to track)
 {{ icon_info }} Don't worry if you don't understand the output (we will learn about them later); what matters is that it no longer gives an error message as it did before.
 {% endcall %}
 
-* **Second, Git created a hidden subfolder named `.git`** inside the `things` folder. This folder will be used by Git to store meta-data about this repository.{{ bold_number("b)") }}
+* **Second, Git created a hidden subfolder named `.git`** inside the `things` folder. This folder will be used by Git to store metadata about this repository.{{ bold_number("b)") }}
 
 {% call callout() %}
   {{ label('info', icon_under_the_hood + ' UNDER-THE-HOOD') }} panels explain how a certain Git feature works under the hood i.e., some implementation details.<br>
@@ -107,7 +107,7 @@ To see the hidden folders, you might have to [configure Windows Explorer to show
   </tab>
   <tab header=":fab-apple: MacOS Finder">
 
-Press <kbd>⌘</kbd>+<kbd>⇧</kbd>+<kbd>.</kbd> to get Finder to show hidden folders/files.
+Press <kbd>⌘</kbd>+<kbd>⇧</kbd>+<kbd>.</kbd> to get Finder to show hidden folders/files inside the currently-selected folder.
   </tab>
 </tabs>
 
@@ -126,7 +126,9 @@ You can even dig around inside that folder -- it is just a bunch of subfolders a
   {{ label('danger', icon_exercise + ' EXERCISE') }} panels contain a Git-Mastery exercise that you can download using the Git-Mastery app, and you can use the same app to verify that your solution is correct.
 {% endcall %}
 
-{{ show_exercise('under-control') }}
+{% call show_exercise('under-control') %}
+Put the folder `[exercises]/control-me` under Git's control (i.e., initialise a repository in that folder).
+{% endcall %}
 <p/>
 
 {% call callout() %}

@@ -14,6 +14,7 @@
 {% if indent_level %}<div class="indented-level{{ indent_level }}">{% endif %}
 <div class="d-flex">
 <div class="me-3">
+<br>
 <span><md>**%%⤷%%**</md></span>
 </div>
 <div class="flex-grow-1">
@@ -173,7 +174,7 @@
   </div>
   <div class="pb-0" style="border-top: 1px dotted #aaa;">
 
-<span class="badge bg-light text-secondary mt-2">other meta data ...</span><br>
+<span class="badge bg-light text-secondary mt-2">other metadata ...</span><br>
   </div>
   </div>
   </div>
@@ -254,6 +255,18 @@
 {%- endmacro %}
 <!-- ============================================================ -->
 
+{% macro show_prep(title) %}
+<div class="non-printable">
+
+<panel type="dark" header=":fas-gear: PREPARATION: **{{ title }}**" expanded>
+
+{{ caller() }}
+</panel>
+<p/>
+</div>
+{% endmacro %}
+<!-- ============================================================ -->
+
 {% macro show_hands_on_practical(title) %}
 <div class="non-printable">
 <span style="position: relative; top: 10px;" class="badge rounded-pill bg-secondary fs-6">{{ icon_hands_on }} HANDS-ON: {{ title }}</span>
@@ -301,9 +314,25 @@
 {% macro show_exercise(identifier) %}
 <panel class="non-printable" type="danger" header="{{ icon_exercise }} EXERCISE: `{{ identifier }}`">
 
-**Description** is [here](https://git-mastery.github.io/exercises/{{ identifier | replace("-", "_") }}).<br>
-**To download** the exercise, run `gitmastery download {{ identifer }}`<br>
-**To verify** your solution, run `gitmastery verify`
+**To download** the exercise,
+
+* navigate inside the `gitmastery-exercies` folder.
+* run `gitmastery download {{ identifier }}` command.
+
+---{.dashed .border-danger}
+
+**Your task:**{.text-danger}
+<div class="indented-level1">
+
+{{ caller() }}
+</div>
+
+---{.dashed .border-danger}
+
+**To verify** your work,
+
+* navigate to anywhere inside the `gitmastery-exercies/{{ identifier }}` folder %%(or any sub-folder of it)%%.
+* run the `gitmastery verify` command.
 
 </panel>
 {% endmacro %}

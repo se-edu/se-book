@@ -69,3 +69,4 @@
 <variable id="java_tutorial">https://docs.oracle.com/javase/tutorial</variable>
 
 <variable id="numbers_abcd">\{texts="['a)', 'b)', 'c)', 'd)', 'e)', 'f)']"\}</variable>
+<variable id="numbers_roman">\{texts="['i.', 'ii.', 'iii.', 'iv', 'v', 'vi']"\}</variable>

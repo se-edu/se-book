@@ -83,6 +83,7 @@ white
 </div>
 
 <div id="extras">
-
-{{ show_exercise('conflict-mediator') }}
+{% call show_exercise("conflict-mediator") %}
+coming soon ...
+{% endcall %}
 </div>

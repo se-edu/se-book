@@ -49,7 +49,9 @@ Add a few more commits to your local repo, and push those commits to the remote 
 </div>
 
 <div id="extras">
-{{ show_exercise('push-over') }}
+{% call show_exercise("push-over") %}
+coming soon ...
+{% endcall %}
 
 <include src="detour-push-to-multiple-repos-fragment.md" />
 

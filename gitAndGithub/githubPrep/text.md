@@ -12,6 +12,7 @@ To use GitHub, **you need to prepare some tools/settings** first.
 {% endcall %}
 
 1. Create a GitHub account.
+1. (Optional) Set user.email to no-reply email
 1. Set up authentication.
 1. Install GitHub CLI.
 

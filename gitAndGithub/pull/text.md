@@ -229,5 +229,4 @@ git push origin master
 
 </div>
 <div id="extras">
-{{ show_exercise('push-over') }}
 </div>

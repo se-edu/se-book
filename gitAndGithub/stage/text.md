@@ -94,5 +94,7 @@ dragon fruits
 </div>
 
 <div id="extras">
-{{ show_exercise('stage-fright') }}
+{% call show_exercise("stage-fright") %}
+The `attendance` repo has three unstaged files. Stage them.
+{% endcall %}
 </div>

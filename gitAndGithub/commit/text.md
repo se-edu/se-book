@@ -55,6 +55,12 @@ gitGraph
 </div>
 
 <div id="extras">
+{% call show_exercise("grocery-shopping") %}
 
-{{ show_exercise('grocery-shopping') }}
+In the `shopping-list` repo given, there is a `shopping-list.txt`.
+
+1. Edit it to remove at least one item from the shopping list and add at least one new item to the shopping list.
+1. Stage the change and commit it.
+
+{% endcall %}
 </div>
