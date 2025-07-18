@@ -189,10 +189,10 @@ gitmastery setup
 ```
 
 The `gitmastery setup` command will perform the following tasks:
-* Check if Git is installed. {{ numbers_abcd }}
-* Check if `user.name` and `user.email` are set.
-* Prompt you to specify a name for the **git-mastery** {{ show_git_term("exercises directory") }} -- you can accept the default.
-* Set up a mechanism to locally track the progress of your exercises.
+* Checks if Git is installed. {{ numbers_abcd }}
+* Checks if `user.name` and `user.email` are set.
+* Prompts you to specify a name for the **git-mastery** {{ show_git_term("exercises directory") }} -- you can accept the default.
+* Sets up a mechanism to locally track the progress of your exercises.
 
 Notes:
 * If the command failed due to checks (a) or (b) failing, you can rectify the problem and run the command again.
