@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import trail, bold_number, callout, hp_number, label, show_git_term, show_git_term_tip, show_detour, show_exercise, show_folder_contents, show_git_tabs, show_hands_on_practical, show_lesson_intro, show_output, show_under_the_hood with context %}
+{% from "common/macros.njk" import trail, bold_number, callout, hp_number, label, show_git_term, show_git_term_tip, show_detour, show_detour_preview, show_exercise, show_folder_contents, show_git_tabs, show_hands_on_practical, show_lesson_intro, show_output, show_under_the_hood with context %}
 
 <span id="outcomes">{{ icon_outcome }} can commit using git</span>
 
@@ -63,4 +63,5 @@ In the `shopping-list` repo given, there is a `shopping-list.txt`.
 1. Stage the change and commit it.
 
 {% endcall %}
+{{ show_detour_preview('resetUncommitedChanges') }}
 </div>

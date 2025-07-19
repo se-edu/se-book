@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import trail, bold_number, callout, hp_number, label, show_git_term, show_git_term_tip, show_detour, show_exercise, show_git_tabs, show_hands_on_practical, show_lesson_intro, show_output, show_under_the_hood with context %}
+{% from "common/macros.njk" import trail, bold_number, callout, hp_number, label, show_commit, show_git_term, show_git_term_tip, show_detour, show_exercise, show_git_tabs, show_git_tabs_from_text, show_hands_on_practical, show_head, show_lesson_intro, show_lesson_link, show_output, show_ref, show_resources, show_sidebar, show_tag, show_transformation_columns, show_under_the_hood with context %}
 
 <span id="outcomes">{{ icon_outcome }} Can create a local Git repo</span>
 
@@ -135,15 +135,6 @@ Put the folder `[exercises]/control-me` under Git's control (i.e., initialise a 
 {{ label('warning', icon_detour + ' DETOUR') }} panels contain related directions you can optionally explore. We recommend that you ==only skim them the first time you are going through a tour== (i.e., just to know _what_ each detour covers); you can revisit them later, to deepen your knowledge further, or when you encounter a use case related to the concepts covered by the detour.
 {% endcall %}
 
-{% call show_detour('How to undo a repo initialisation') %}
-When Git initialises a repo in a folder, it does not touch any files in the folder, other than create the `.git` folder its contents. So, reversing the operation is as simple as deleting the newly-created `.git` folder.
+{{ show_detour('undoRepoInit') }}
 
-```bash{.no-line-numbers}
-git status #run this to confirm a repo exists
-
-rm -rf .git  #delete the .git folder
-
-git status #this should give an error, as the repo no longer exists
-```
-{% endcall %}
 </div>

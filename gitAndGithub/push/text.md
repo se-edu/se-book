@@ -53,6 +53,6 @@ Add a few more commits to your local repo, and push those commits to the remote 
 Create a new commit on your local copy `push-this` and push the change to the remote.
 {% endcall %}
 
-<include src="detour-push-to-multiple-repos-fragment.md" />
+{{ show_detour('pushToMultipleRepos') }}
 
 </div>

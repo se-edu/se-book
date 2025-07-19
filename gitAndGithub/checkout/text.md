@@ -59,12 +59,7 @@ If you check out a commit that comes before the commit in which you added a cert
 * Example 2: There is an uncommitted change to a file that conflicts with the version of that file in the commit you wish to check out.<br>
   → Git will abort the checkout, and the repo will remain in the current commit.
 
-{% call show_detour("Dealing with uncommitted confilicting changes when doing a checkout") %}
-**To proceed with a checkout when there are conflicting uncommitted changes in the working directory**, there are several options:
-* **Commit the changes**.
-* **<trigger trigger="click" for="modal:checkout-stash">Stash</trigger> the changes**.
-* **Discard the changes**.
-{% endcall %}
+{{ show_detour('conflictAtCheckout') }}
 
 
 <modal large header="Git & GitHub → Stash" id="modal:checkout-stash">

@@ -111,6 +111,17 @@
     }
   }
 } %}
+
+{% set detours = {
+  undoRepoInit: {lesson: trail.recordingFolderHistory.lessons.init, title: "Undoing a Repo Initialisation"},
+  stagingFileDeletions: {lesson: trail.recordingFolderHistory.lessons.stage, title: "Staging File Deletions"},
+  unstagingChanges: {lesson: trail.recordingFolderHistory.lessons.stage, title: "Unstaging Changes"},
+  pushToMultipleRepos: {lesson: trail.backingUpOnCloud.lessons.push, title: "Pushing to Multiple Reposs"},
+  conflictAtCheckout: {lesson: trail.usingRevisionHistory.lessons.checkout, title: "Dealing with Uncommitted Confilicting Changes at a Checkout"},
+  resetUncommitedChanges: {lesson: trail.usingRevisionHistory.lessons.reset, title: "Resetting Uncommitted Changes"},
+  resetTrackingBranch: {lesson: trail.usingRevisionHistory.lessons.reset, title: "Resetting a Remote-Tracking Branch Ref"},
+  undoMerge: {lesson: trail.branchingLocally.lessons.merge, title: "Undoing a Merge"}
+} %}
 <!-- ============================================================ -->
 
 {% macro show_tour_title(text) %}<div class="text-white bg-success p-1" style="border-top-left-radius: 15px; border-top-right-radius: 15px;"><span class="h2"><span class="text-light"><md>:fas-map-marker-alt:</md></span> {{ text }}</span></div>{% endmacro %}
@@ -291,10 +302,23 @@
 {% endmacro %}
 <!-- ============================================================ -->
 
-{% macro show_detour(title) %}
-<panel class="non-printable" header="{{ icon_detour }} DETOUR: **{{ title }}**" type="warning" peek>
+{% macro show_detour(detour_name) %}
+{% set detour = detours[detour_name] %}
+<a id="{{ detour_name }}"/>
+<panel class="non-printable" header="{{ icon_detour }} DETOUR: **{{ detour.title }}**" type="warning" peek>
 
-{{ caller() }}
+<include src="{{ baseUrl }}/{{ detour.lesson.path }}/detour-{{ detour_name }}-fragment.md" />
+</panel>
+{% endmacro %}
+<!-- ============================================================ -->
+
+{% macro show_detour_preview(detour_name) %}
+{% set detour = detours[detour_name] %}
+<panel class="non-printable" header="{{ icon_detour }} DETOUR: **{{ detour.title }}**" type="secondary" peek>
+
+<include src="{{ baseUrl }}/{{ detour.lesson.path }}/detour-{{ detour_name }}-fragment.md#preview" />
+
+That aspect is covered in a detour **under the lesson [{{ detour.lesson.title }}]({{ baseUrl }}/{{ detour.lesson.path }}#{{ detour_name }})**.
 </panel>
 {% endmacro %}
 <!-- ============================================================ -->

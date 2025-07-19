@@ -2,7 +2,7 @@
 
 Here is a example list of bash commands to add two commits while observing the list of commits
 
-```bash{.no-line-numbers}
+```bash
 $ echo "figs" >> fruits.txt  # add another line to fruits.txt
 $ git add fruits.txt  # stage the updated file
 $ git commit -m "Insert figs into fruits.txt"  # commit the changes
@@ -16,7 +16,7 @@ $ git log  # check commits list
 ```
 
 The output of the final `git log` should be something like this:
-```bash{.no-line-numbers highlight-lines="5,11,17"}
+```bash{highlight-lines="5,11,17"}
 commit 18300... (HEAD -> master)
 Author: ... <...@...>
 Date:   ...

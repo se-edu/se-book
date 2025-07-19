@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import trail, bold_number, callout, hp_number, label, show_commit, show_git_term, show_git_term_tip, show_detour, show_exercise, show_git_tabs, show_git_tabs_from_text, show_hands_on_practical, show_head, show_lesson_intro, show_output, show_ref, show_tag, show_transformation_columns, show_under_the_hood with context %}
+{% from "common/macros.njk" import trail, bold_number, callout, hp_number, label, show_commit, show_git_term, show_git_term_tip, show_detour, show_detour_preview, show_exercise, show_git_tabs, show_git_tabs_from_text, show_hands_on_practical, show_head, show_lesson_intro, show_output, show_ref, show_tag, show_transformation_columns, show_under_the_hood with context %}
 
 <span id="prereqs"></span>
 <span id="outcomes">Can reset Git history.</span>
@@ -164,29 +164,9 @@ Similar to the previous reset, but choose the `Hard - discard all working copy c
 
 {% endcall %}<!-- ===== end: HANDS-ON ============================ -->
 
-
-**To get rid of uncommitted changes** (without resetting to a previous commit), you can reset to the `HEAD` commit.
-
-<div class="non-printable">
-
-{% set cli %} <!-- ------ start: Git Tabs --------------->
-
-The command `git reset` (without specifying a commit) defaults to `git reset HEAD`.
-* `git reset`: moves any staged changes to working directory (i.e., unstage).
-* `git reset --hard`: get rid of any staged and unstaged changes.
-
-{% endset %}
-{% set sourcetree %}
-
-<pic src="images/sourcetreeResetCurrentChanges.png" width="400" />
-{% endset %}
-{{ show_git_tabs_from_text(cli, sourcetree) }}
-<!-- ------ end: Git Tabs -------------------------------->
-</div>
-
 </div>
 
 <div id="extras">
-
-<include src="detour-reset-tracking-branch-fragment.md" />
+{{ show_detour('resetUncommitedChanges') }}
+{{ show_detour('resetTrackingBranch') }}
 </div>
