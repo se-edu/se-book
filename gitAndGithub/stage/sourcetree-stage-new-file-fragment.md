@@ -2,7 +2,7 @@
 
 {{ hp_number('2.1') }} **Note how the file is shown as ‘unstaged’.** The question mark icon indicates the file is untracked.
 
-<pic eager src="{{baseUrl}}/gitAndGithub/stage/images/sourcetree_1a.png" height="220" />
+<pic eager src="{{baseUrl}}/gitAndGithub/stage/images/sourcetreeWinAddedFile.png" height="220" />
 <p/>
 
 <box type="tip" seamless>
@@ -12,7 +12,7 @@ If the newly-added file does not show up in Sourcetree UI, refresh the UI (:fab-
 
 {{ hp_number('2.2') }} **Stage the file** by selecting the `fruits.txt` and clicking on the `Stage Selected` button.
 
-<pic eager src="{{baseUrl}}/gitAndGithub/stage/images/sourcetree_1b.png" width="350"/>
+<pic eager src="{{baseUrl}}/gitAndGithub/stage/images/sourcetreeWinStageButton.png" width="350"/>
 <p/>
 
 :fab-apple: On macOs, the staging can be done using tick boxes or the `...` menu in front of the file.<br>
@@ -22,7 +22,7 @@ If the newly-added file does not show up in Sourcetree UI, refresh the UI (:fab-
 
 {{ hp_number('2.3') }} **Note how the file is staged now** i.e., `fruits.txt` appears in the `Staged files` panel now.
 
-<pic eager src="{{baseUrl}}/gitAndGithub/stage/images/sourcetree_1c.png" height="180" />
+<pic eager src="{{baseUrl}}/gitAndGithub/stage/images/sourcetreeWinNewFileStaged.png" height="180" />
 <p/>
 
 <box type="info" seamless>
