@@ -2,25 +2,21 @@
 
 {% call show_detour('Staging a file deletion') %}
 
-**Staging a File Deletion**
-
-When you delete a file from your working directory, Git doesn’t automatically assume you want that change to be part of your next commit. **To tell Git you intend to record a file deletion in the repository’s history, you need to stage the deletion explicitly.**
+When you delete a tracked file from your working directory, Git doesn’t automatically assume you want that change to be part of your next commit. **To tell Git you intend to record a file deletion in the repository’s history, you need to stage the deletion explicitly.**
 
 When you stage a deleted file, **you’re adding the _removal_ of the file to the staging area**, just like you’d stage a modified or newly created file. After staging, the next commit will reflect that the file was removed from the project.
-
-To stage a deleted file, you can use the following command:
 
 
 {% set cli %} <!-- ------ start: Git Tabs --------------->
 **To delete a file and stage the deletion in one go**, you can use the `git rm <file-name>` command. It removes the file from the working directory and stages the deletion at the same time.
 
-```bash{.no-line-numbers}
+```bash{.no-line-numbers highlight-lines="1['rm']"}
 git rm data/list.txt
 ```
 
 **If you’ve already deleted the file manually** (for example, using `rm` or deleting it in your file explorer), you can still stage the deletion using the `git add <file-name>` command. Even though the file no longer exists, git add records its deletion into the staging area.
 
-```bash{.no-line-numbers}
+```bash{.no-line-numbers highlight-lines="1['add']"}
 git add data/list.txt
 ```
 {% endset %}

@@ -44,7 +44,7 @@ cherries
 
 {{ hp_number(2) }} **Stage the new file**.
 
-{{ show_git_tabs('_1') }}
+{{ show_git_tabs('-stage-new-file-fragment') }}
 
 {% endcall %}
 
@@ -80,7 +80,7 @@ dragon fruits
 
 {{ hp_number('2') }} **Now, verify that Git sees that file as 'modified'.**
 
-{{ show_git_tabs('_2', indent_level=1) }}
+{{ show_git_tabs('-verify-file-modified-fragment', indent_level=1) }}
 
 {{ hp_number('3') }} **Stage the file again**, the same way you added/staged it earlier.
 
@@ -99,4 +99,5 @@ The `attendance` repo has three unstaged files. Stage them.
 {% endcall %}
 
 <include src="detour-stage-file-deletions-fragment.md" />
+<include src="detour-undo-staging-fragment.md" />
 </div>
