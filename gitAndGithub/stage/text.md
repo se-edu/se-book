@@ -97,4 +97,6 @@ dragon fruits
 {% call show_exercise("stage-fright") %}
 The `attendance` repo has three unstaged files. Stage them.
 {% endcall %}
+
+<include src="detour-stage-file-deletions-fragment.md" />
 </div>

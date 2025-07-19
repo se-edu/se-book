@@ -50,7 +50,7 @@ Add a few more commits to your local repo, and push those commits to the remote 
 
 <div id="extras">
 {% call show_exercise("push-over") %}
-coming soon ...
+Create a new commit on your local copy `push-this` and push the change to the remote.
 {% endcall %}
 
 <include src="detour-push-to-multiple-repos-fragment.md" />

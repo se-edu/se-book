@@ -129,7 +129,7 @@ gitmastery progress sync on
 **What happens when you switch on the Git-Mastery 'progress sync' feature?**
 
 * You Git-Mastery exercises progress will be backed up to your GitHub account. If you wipe out your local progress data by mistake, the remote copy will still be preserved.
-* Git-Mastery will create a repo in your GitHub account, to back up your progress data. This repo will be publicly visible. 
+* Git-Mastery will create a repo in your GitHub account, to back up your progress data. This repo will be publicly visible.
 
 </box>
 {% endcall %}<!-- show_prep GitHub CLI -->

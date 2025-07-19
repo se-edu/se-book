@@ -42,6 +42,11 @@ Add a few other files with `.tmp` extension.
 
 <div id="extras">
 {% call show_exercise("ignoring-somethings") %}
-coming soon ...
+Update the `.gitignore` (inside the `files/` folder) to reflect following requirements:
+
+1. While you wish to continue ignoring every file in the `many/` folder, you want to un-ignore just `many/file22.txt`.
+2. `why_am_i_hidden.txt` should not be hidden.
+3. `ignore_me.txt` should be hidden.
+4. Hide the `runaway.txt` file in `this/`, however, you don't know how many layers of nesting it is under, so use the pattern matching syntax.
 {% endcall %}
 </div>

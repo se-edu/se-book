@@ -31,6 +31,8 @@ The first step of backing up a local repo on GitHub: **create an empty repositor
 
 <div id="extras">
 {% call show_exercise("remote-control") %}
-coming soon ...
+Run `gitmastery verify` and follow the prompted name to create a new public GitHub repository. Then, provide the URL of that remote (without the `.git` at the end) when prompted<br>
+ e.g., `https://github.com/johndoe/gitmastery-johndoe-remote-control`
+
 {% endcall %}
 </div>

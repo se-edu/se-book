@@ -19,5 +19,4 @@
 {{ show_git_tabs_from_text(cli, sourcetree) }}
 <!-- ------ end: Git Tabs -------------------------------->
 
-
 {% endcall %}
