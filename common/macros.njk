@@ -68,7 +68,8 @@
       tag: {path: "gitAndGithub/tag", title: "Tagging Commits"},
       diff: {path: "gitAndGithub/diff", title: "Comparing Points of History"},
       checkout: {path: "gitAndGithub/checkout", title: "Traversing to a Specific Commit"},
-      reset: {path: "gitAndGithub/reset", title: "Rewriting History to Start Over"}
+      reset: {path: "gitAndGithub/reset", title: "Rewriting History to Start Over"},
+      revert: {path: "gitAndGithub/revert", title: "Reverting a Specific Commit"}
     }
   },
   fineTuningHistory: {
@@ -213,19 +214,17 @@
 <!-- ============================================================ -->
 
 {% macro show_transformation_columns(a, b, c) -%}
-<div class="d-flex flex-column flex-md-row align-items-center justify-content-left gap-2">
-<div class="flex-shrink-0">
+<div class="d-flex flex-column flex-md-row align-items-stretch justify-content-start gap-2">
+<div class="flex-shrink-0 d-flex flex-column justify-content-end">
 
 {{ a }}
 </div>
-
-<div class="flex-shrink-0 justify-content-center align-items-center text-center p-3" style="min-height: 30px;">
+<div class="flex-shrink-0 d-flex justify-content-center align-items-center text-center p-3" style="min-height: 30px;">
 
 →<br>
 {{ b }}
 </div>
-
-<div class="flex-shrink-0">
+<div class="flex-shrink-0 d-flex flex-column justify-content-end">
 
 {{ c }}
 </div>
