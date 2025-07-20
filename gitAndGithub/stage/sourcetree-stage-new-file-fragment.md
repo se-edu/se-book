@@ -10,12 +10,13 @@
 If the newly-added file does not show up in Sourcetree UI, refresh the UI (:fab-windows:: <kbd>F5</kbd><br> | :fab-apple: <kbd>⌥</kbd>+<kbd>R</kbd>)
 </box>
 
-{{ hp_number('2.2') }} **Stage the file** by selecting the `fruits.txt` and clicking on the `Stage Selected` button.
+{{ hp_number('2.2') }} **Stage the file**:
 
+:fab-windows: Select the `fruits.txt` and click on the `Stage Selected` button.<br>
 <pic eager src="{{baseUrl}}/gitAndGithub/stage/images/sourcetreeWinStageButton.png" width="350"/>
 <p/>
 
-:fab-apple: On macOs, the staging can be done using tick boxes or the `...` menu in front of the file.<br>
+:fab-apple: Staging can be done using tick boxes or the `...` menu in front of the file.<br>
 <pic eager src="{{baseUrl}}/gitAndGithub/stage/images/sourcetreeMacStageFile.png" />
 <p/>
 

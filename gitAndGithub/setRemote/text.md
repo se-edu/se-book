@@ -14,7 +14,18 @@ The second step of backing up a local repo on GitHub: **link the _local_ repo wi
 
 **A Git {{ show_git_term('remote') }} is a reference to a repository hosted elsewhere**, usually on a server like GitHub, GitLab, or Bitbucket. It allows your local Git repo to communicate with another remote copy — for example, to upload to commits that you created locally but missing in the remote copy.
 
-**By _adding a remote_, you are informing the local repo details of a remote repo it can communicate with**, for example, where the repo exists, what name to use to refer to the remote, and which network protocol to use to communicate with it (e.g., HTTPS vs SSH).
+**By _adding a remote_, you are informing the local repo details of a remote repo it can communicate with**, for example, where the repo exists and what name to use to refer to the remote.
+
+**The URL you use to connect to a remote repo depends on the protocol — HTTPS or SSH**:
+
+* **HTTPS URLs use the standard web protocol** and starts with `https://github.com/` (for GitHub users). e.g.,
+  ```{highlight-lines="1['.git']@yellow"}
+  https://github.com/username/repo-name.git
+  ```
+* **SSH URLs use the secure shell protocol** and starts with `git@github.com:`. e.g.,
+  ```{highlight-lines="1['.git']@yellow"}
+  git@github.com:username/repo-name.git
+  ```
 
 **A Git repo can have multiple remotes.** You simply need to specify different names for each remote (e.g., `upstream`, `central`, `production`, `other-backup` ...).
 
@@ -28,7 +39,7 @@ Add the empty remote repo you created on GitHub as a remote of a local repo you 
 {{ hp_number ('2') }} **List the current list of remotes** using the `git remote -v` command, for a sanity check. No output is expected if there are no remotes yet.
 
 {{ hp_number ('3') }} **Add a new remote repo** using the `git remote add <remote-name> <remote-url>` command.<br>
-   i.e., `git remote add origin https://github.com/{YOUR-GITHUB-USERNAME}/things.git`
+   i.e., if using HTTPS, `git remote add origin https://github.com/{YOUR-GITHUB-USERNAME}/things.git`
 
 {{ hp_number ('4') }} **List the remotes again to verify** the new remote was added.
 

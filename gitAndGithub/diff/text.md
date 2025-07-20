@@ -11,13 +11,22 @@ Git can tell you **the net effect of changes between two points of history**.
 
 **Git's {{ show_git_term("diff") }} feature can show you what changed between two points** in the revision history. Given below are some use cases.
 
-**Usage 1: Examining changes in the working directory**.<br>
+****Usage 1: Examining changes in the working directory.****<br>
 Example use case: To verify the next commit will include exactly what you intend it to include.
 
 <!-- ================== start: HANDS-ON =========================== -->
 {% call show_hands_on_practical("Examining staged and unstaged changes")  %}
 
-Compare the staged and unstaged changes of a local repo.
+{{ hp_number("0") }} **Preparation: For this, you can use the `things` repo** you created earlier. If you don't have it, you can clone a copy of a similar repo given [here](https://github.com/se-edu/samplerepo-things2).
+
+{{ hp_number("1") }} **Do some changes to the working directory. Stage some (but not all) changes.** For example, you can run the following commands.
+
+```bash
+echo "blue\nred\ngreen" >> clours.txt
+git add .  # a shortcut to stage all changes
+echo "no shapes added yet" >> shapes.txt
+```
+{{ hp_number("2") }} **Examine the staged and unstaged changes.**
 
 {% set cli %} <!-- ------ start: Git Tabs --------------->
 
@@ -55,13 +64,13 @@ Select the two commits: Click on one commit, and <kbd>Ctrl</kbd>-Click (or <kbd>
 <!-- ------ end: Git Tabs -------------------------------->
 {% endcall %}<!-- ===== end: HANDS-ON ============================ -->
 
-**Usage 2: Comparing two commits at different points of the revision graph**.<br>
+****Usage 2: Comparing two commits at different points of the revision graph.****<br>
 Example use case: Suppose you’re trying to improve the performance of a piece of software by experimenting with different code tweaks. You commit after each change (as you should). After several commits, you now want to review the overall effect of all those changes on the code.
 
 <!-- ================== start: HANDS-ON =========================== -->
 {% call show_hands_on_practical("Comparing two commits")  %}
 
-Compare two commits in a repo.
+**Compare two commits** in a repo (e.g., the `things` repo).
 
 {% set cli %} <!-- ------ start: Git Tabs --------------->
 
@@ -86,7 +95,7 @@ index 0000000..55c8449
 ```
 {% endcall %}
 
-Swap the commit order and see what happens.
+**Swap the commit order** in the command and see what happens.
 ```bash{.no-line-numbers}
 git diff HEAD v0.9
 ```
@@ -123,7 +132,7 @@ The same method can be used to compare the current state of the working director
 {% endcall %}<!-- ===== end: HANDS-ON ============================ -->
 
 
-**Usage 3: Examining changes to a specific file**.<br>
+****Usage 3: Examining changes to a specific file.****<br>
 Example use case: Similar to other use cases but when you are interested in a specific file only.
 
 <!-- ================== start: HANDS-ON =========================== -->

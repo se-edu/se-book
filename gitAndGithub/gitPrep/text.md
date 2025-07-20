@@ -177,7 +177,7 @@ gitmastery --help
 
 <box type="info" seamless>
 
-The current version of #r#the app takes 5-10 seconds to respond to a command##. This is because the app comes with a bundled Python runtime (so that users don't need to install Python first) which needs to load first before the command can be executed.
+The current version of #r#the app takes about 3-5 seconds to respond to a command##. This is because the app comes with a bundled Python runtime (so that users don't need to install Python first) which needs to load first before the command can be executed.
 </box>
 
 **3. Trigger the initial setup** by running the `gitmastery setup` command in a suitable folder (the app will create files/folders inside this folder).

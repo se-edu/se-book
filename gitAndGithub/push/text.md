@@ -19,11 +19,11 @@ When pushing to a remote repo, you typically need to specify the following infor
 * The name of the remote (e.g., `origin`).
 * The name of your current local branch (e.g., `master`).
 
-**If this is the first time you are pushing this branch to the remote repo, you can also ask Git to {{ show_git_term("track") }} this remote/branch pairing** (e.g., remember that this local `master` branch is _tracking_ the `master` branch in the upstream repo `origin` i.e., local `master` branch is tracking upstream `origin/master` branch), so in future you can push the same remote/branch without needing to specify them again.
+**If this is the first time you are pushing this branch to the remote repo, you can also ask Git to {{ show_git_term("track") }} this remote/branch pairing** (e.g., remember that this local `master` branch is _tracking_ the `master` branch in the <tooltip content="'upstream' is commonly used to refer to the remote repo connected to a local repo">upstream</tooltip> repo `origin` i.e., local `master` branch is tracking upstream `origin/master` branch), so in future you can push the same remote/branch without needing to specify them again.
 
 {% call show_hands_on_practical('Pushing a local repo to an empty remote repo')  %}
 
-Here's how you can push the content of a local repo to an empty remote repo (assuming you already have a local repo that is connected to an empty remote repo, from previous hands-on practicals):
+Here, we assume you already have a local repo that is connected to an empty remote repo, from previous hands-on practicals:
 
 {{ show_git_tabs('-push-to-empty-remote-fragment') }}
 

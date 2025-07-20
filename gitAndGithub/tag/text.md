@@ -34,7 +34,7 @@ When working with many commits, it helps to **tag specific commits with custom n
 
 {% call show_hands_on_practical('Adding tags')  %}
 
-**Add a few tags to commits in a local repo** (e.g., the `things` repo):
+{{ hp_number ('0') }} **Preparation: fork and clone the [samplerepo-preferences](https://github.com/se-edu/samplerepo-preferences).** Use the cloned repo in your computer for the following steps.
 
 {% set cli %}
 
@@ -59,10 +59,10 @@ git log --oneline --decorate
 ```
 {% call show_output() %}
 ```bash{.no-line-numbers highlight-lines="1['tag: v1.0']"}
-e60deae (HEAD -> master, tag: v1.0, origin/master) Update fruits list
-f761ea6 Add colours.txt, shapes.txt
-2bedace Add figs to fruits.txt
-d5f91de Add fruits.txt
+507bb74 (HEAD -> master, tag: v1.0, origin/master, origin/HEAD) Add donuts
+de97f08 Add cake
+5e6733a Add bananas
+3398df7 Add food.txt
 ```
 {% endcall %}
 
@@ -85,7 +85,7 @@ Date:   Sun Jun ...
 
 First beta release
 
-commit 2bedace6999087124af3d2c5305b5f0a58e151d4 (tag: v0.9)
+commit ....999087124af... (tag: v0.9)
 Author: ... <...@...>
 Date:   Sat Jun ...
 
@@ -155,7 +155,7 @@ The same dialog used to add a tag can be used to delete and even move a tag. Not
 
 <box type="info" seamless>
 
-You can go to your remote on GitHub link `https://github.com/{USER}/{REPO}/tags` (e.g., `https://github.com/johndoe/things/tags`) to verify the tag is present there.
+You can go to your remote on GitHub link `https://github.com/{USER}/{REPO}/tags` (e.g., `https://github.com/johndoe/samplerepo-prefrences/tags`) to verify the tag is present there.
 
 <pic src="images/githubListTags.png" width="300" />
 
