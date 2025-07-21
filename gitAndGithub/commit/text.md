@@ -64,4 +64,5 @@ In the `shopping-list` repo given, there is a `shopping-list.txt`.
 
 {% endcall %}
 {{ show_detour_preview('resetUncommitedChanges') }}
+{{ show_detour_preview('undoRecentCommits') }}
 </div>

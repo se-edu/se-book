@@ -6,7 +6,7 @@
 
 <div id="body">
 {% call show_lesson_intro() %}
-Git can **reverse the changes done in past commit, by _reverting_ it**.
+Git can add a new commit to **reverse the changes done in a specific past commit**, called _reverting_ a commit.
 {% endcall %}
 **When a past commit introduced a bug or an unwanted change, but you do not want to modify that commit** — because rewriting history can cause problems if others have already based work on it — **you can instead {{ show_git_term("revert") }} that commit.**
 

@@ -168,5 +168,6 @@ Similar to the previous reset, but choose the `Hard - discard all working copy c
 
 <div id="extras">
 {{ show_detour('resetUncommitedChanges') }}
+{{ show_detour('undoRecentCommits') }}
 {{ show_detour('resetTrackingBranch') }}
 </div>
