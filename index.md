@@ -94,8 +94,8 @@ title: "Book - Software Engineering for Self-Directed Learners"
 
 ### Project management
 
-* [Revision control]({{baseUrl}}/revisionControl/) 
-  [{{icon_print}}]({{baseUrl}}/revisionControl/print.html)
+* [Revision control with Git & GitHub]({{baseUrl}}/gitAndGithub/trail/)
+  [{{icon_print}}]({{baseUrl}}/gitAndGithub/print.html)
 
 * [Project planning]({{baseUrl}}/projectPlanning/)
   [{{icon_print}}]({{baseUrl}}/projectPlanning/print.html)
@@ -111,11 +111,6 @@ title: "Book - Software Engineering for Self-Directed Learners"
 * [UML]({{baseUrl}}/uml/) 
   [{{icon_print}}]({{baseUrl}}/uml/print.html)
 
-* [IntelliJ IDEA]({{baseUrl}}/intellij/)
-  [{{icon_print}}]({{baseUrl}}/intellij/print.html)
-  
-* [Git and GitHub]({{baseUrl}}/gitAndGithub/)
-  [{{icon_print}}]({{baseUrl}}/gitAndGithub/print.html)
 
 ### Principles
 

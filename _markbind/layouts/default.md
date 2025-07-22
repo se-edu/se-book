@@ -51,19 +51,16 @@
   * [Testing]({{baseUrl}}/testing/index.html)
   * [Test case design]({{baseUrl}}/testCaseDesign/index.html)
 * **Project management**
-  * [Revision control]({{baseUrl}}/revisionControl/index.html)
+  * [Revision control with Git & GitHub]({{baseUrl}}/gitAndGithub/trail/index.html)
   * [Project planning]({{baseUrl}}/projectPlanning/index.html)
   * [Teamwork]({{baseUrl}}/teamwork/index.html)
   * [SDLC process models]({{baseUrl}}/processModels/index.html)
 * **Tools**
   * [UML]({{baseUrl}}/uml/index.html)
-  * [IntelliJ IDEA]({{baseUrl}}/intellij/index.html)
-  * [Git and GitHub]({{baseUrl}}/gitAndGithub/index.html)
 * **Principles**
   * [Principles]({{baseUrl}}/principles/index.html)
 * **Supplementary**
   * [C++ to Java]({{baseUrl}}/cppToJava/index.html)
-  * [Git Learning Trail]({{baseUrl}}/gitAndGithub/trail/index.html)
   * [**Combined exercises**]({{baseUrl}}/combined/exercises.html)
   * [**List of definitions**]({{baseUrl}}/common/definitions.html)
   * [**List of references**]({{baseUrl}}/common/references.html)

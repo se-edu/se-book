@@ -102,7 +102,7 @@ Our Git lessons shows how to perform Git operations in Git CLI, and in Sourcetre
 
 {% endcall %} <!-- show_prep -->
 
-<div class="non-printable">
+<div class="non-printable" tags="git-mastery">
 
 ##### Installing the Git-Mastery App
 

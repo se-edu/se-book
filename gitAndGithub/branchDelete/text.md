@@ -63,8 +63,8 @@ gitGraph BT:
 gitGraph BT:
     {{ "%%{init: { 'theme': 'default', 'gitGraph': {'mainBranchName': 'master'}} }%%" }}
     commit id: "[HEAD → master] m1"
-    branch bug-fix
-    checkout bug-fix
+    branch _
+    checkout _
     commit id: "b1"
     checkout master
 </mermaid>
@@ -72,7 +72,8 @@ gitGraph BT:
 {{ show_transformation_columns(a, b, c) }}
 
 In the above example, the commit `b1` is no longer reachable, unless we know its commit ID (i.e., the `SHA`).<br>
-{% call show_sidebar("What makes a commit 'unreachable'?") %}
+
+{% call show_sidebar("What makes a commit 'unreachable'?") %} <!-- -------------------- -->
 
 **Recall that a commit only has a pointer to its parent commit** (not its descendent commits).
 
@@ -92,7 +93,7 @@ In the example below, `C4` is unreachable (i.e., cannot be reached by starting a
 </div>
 
 **Unreachable commits are not deleted immediately — Git keeps them for a while before cleaning them up.** By default, Git retains unreachable commits for at least **30 days**, during which they can still be recovered if you know their SHA. **After that, they will be garbage-collected, and will be lost for good.**
-{% endcall %}
+{% endcall %} <!-- end: sidebar -------------------------------------->
 
 <!-- ================== start: HANDS-ON =========================== -->
 {% call show_hands_on_practical("Delete branches")  %}
