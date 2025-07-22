@@ -1,19 +1,23 @@
-<div></div><p></p>
 <p><span class="dimmed"><strong><span>Tools → UML → Sequence Diagrams →
 </span></strong></span></p>
 <div id="title-and-body">
-<div><h4 id="self-invocation"><span id="self-invocation" class="anchor"></span><span>Self invocation</span><a class="fa fa-anchor" href="#self-invocation" onclick="event.stopPropagation()"></a></h4></div>
+<div><h4 id="self-invocation"><span>Self invocation</span><a class="fa fa-anchor" href="#self-invocation" onclick="event.stopPropagation()"></a></h4></div>
 <div id="main">
 <div>
 <p><strong>UML can show a method of an object calling another of its own methods.</strong></p>
 <p>Notation:</p>
-<pic src="/se-book/uml/sequenceDiagrams/selfInvocation/images/notation.png" height="120"></pic>
+<pic eager src="/se-book/uml/sequenceDiagrams/selfInvocation/images/notation.png" width="200"></pic>
 <p></p>
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The <code class="hljs inline no-lang" v-pre>markCellAt(...)</code> method of a <code class="hljs inline no-lang" v-pre>Logic</code> object is calling its own <code class="hljs inline no-lang" v-pre>updateState(...)</code> method.</p>
-<pic src="/se-book/uml/sequenceDiagrams/selfInvocation/images/logic.png" height="100"></pic>
+<pic eager src="/se-book/uml/sequenceDiagrams/selfInvocation/images/logic.png" width="350"></pic>
 <p></p>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In this variation, the <code class="hljs inline no-lang" v-pre>Book#write()</code> method is calling the <code class="hljs inline no-lang" v-pre>Chapter#getText()</code> method which in turn does a <em>call back</em> by calling the <code class="hljs inline no-lang" v-pre>getAuthor()</code> method of the calling object.</p>
-<pic src="/se-book/uml/sequenceDiagrams/selfInvocation/images/callBack.png" height="150"></pic>
-<p></p></box></div>
+<pic eager src="/se-book/uml/sequenceDiagrams/selfInvocation/images/callBack.png" width="350"></pic>
+<p></p></box>
+<p><span class="badge rounded-pill bg-success text-white"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> <strong>'Unroll' chained/compound method calls before drawing sequence diagram.</strong> Consider the Java statement <code class="hljs inline java" v-pre><span class="hljs-keyword">new</span> Book().add(<span class="hljs-keyword">new</span> Chapter());</code>. How do we show it as a sequence diagram? First, 'unroll' it into a simpler series of statements, which can then be drawn as a sequence diagram easily. For example, that statement is equivalent to the following:</p>
+<pre><code class="no-line-numbers hljs java" v-pre><span>Book b = <span class="hljs-keyword">new</span> Book();
+</span><span>Chapter c = <span class="hljs-keyword">new</span> Chapter();
+</span><span>b.add(c);
+</span></code></pre></div>
 <div></div></div></div>

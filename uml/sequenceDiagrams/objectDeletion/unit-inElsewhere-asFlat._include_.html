@@ -1,18 +1,25 @@
-<div></div><p></p>
 <p><span class="dimmed"><strong><span>Tools → UML → Sequence Diagrams →
 </span></strong></span></p>
 <div id="title-and-body">
-<div><h4 id="object-deletion"><span id="object-deletion" class="anchor"></span><span>Object deletion</span><a class="fa fa-anchor" href="#object-deletion" onclick="event.stopPropagation()"></a></h4></div>
+<div><h4 id="object-deletion"><span>Object deletion</span><a class="fa fa-anchor" href="#object-deletion" onclick="event.stopPropagation()"></a></h4></div>
 <div id="main">
 <div>
 <p><strong>UML uses an <code class="hljs inline no-lang" v-pre>X</code> at the end of the lifeline of an object to show its deletion.</strong></p>
-<box>
-<p><span class="badge rounded-pill bg-success text-white"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Although object deletion is not that important in languages such as Java that support automatic memory management, you can still show object deletion in UML diagrams to indicate the point at which the object ceases to be used.</p></box>
 <p>Notation:</p>
-<pic src="/se-book/uml/sequenceDiagrams/objectDeletion/images/notation.png" height="100"></pic>
+<pic eager src="/se-book/uml/sequenceDiagrams/objectDeletion/images/notation.png" height="100"></pic>
 <p></p>
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Note how the below diagram shows the deletion of the <code class="hljs inline no-lang" v-pre>Minefield</code> object.</p>
-<pic src="/se-book/uml/sequenceDiagrams/objectDeletion/images/logicMinefield.png" height="120"></pic>
+<pic eager src="/se-book/uml/sequenceDiagrams/objectDeletion/images/logicMinefield.png" height="120"></pic>
+<p></p></box>
+<p>Although languages such as Java do not support a <code class="hljs inline no-lang" v-pre>delete</code> operation (because they use automatic memory management), <strong>you can use the object deletion notation to indicate the point at which the object becomes <em>ready to be garbage-collected</em></strong> (i.e., the point at which it ceases to be referenced).</p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Note how <code class="hljs inline no-lang" v-pre>d</code> lifeline ends with an <code class="hljs inline no-lang" v-pre>X</code> to show that it is 'deleted' (i.e., ready to be garbage collected) after the <code class="hljs inline no-lang" v-pre>cook()</code> method returns.</p>
+<pre><code class="no-line-numbers hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Chef</span> </span>{
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">cook</span><span class="hljs-params">()</span> </span>{
+</span><span>        Dish d = <span class="hljs-keyword">new</span> Dish();
+</span><span>    }
+</span><span>}
+</span></code></pre><pic eager src="/se-book/uml/sequenceDiagrams/objectDeletion/images/chefCookDish.png" width="300"></pic>
 <p></p></box></div>
 <div></div></div></div>

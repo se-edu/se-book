@@ -1,8 +1,7 @@
-<div></div><p></p>
 <p><span class="dimmed"><strong><span>Design → Design Patterns →
 </span></strong></span></p>
 <div id="title-and-body">
-<div><h4 id="combining-design-patterns"><span id="combining-design-patterns" class="anchor"></span><span>Combining design patterns</span><a class="fa fa-anchor" href="#combining-design-patterns" onclick="event.stopPropagation()"></a></h4></div>
+<div><h4 id="combining-design-patterns"><span>Combining design patterns</span><a class="fa fa-anchor" href="#combining-design-patterns" onclick="event.stopPropagation()"></a></h4></div>
 <div id="main">
 <div>
 <p><strong>Design patterns are usually embedded in a larger design and sometimes applied in combination with other design patterns.</strong></p>
@@ -18,28 +17,28 @@
 <p>SIS can be accessed using multiple terminals. Shop assistants use their own terminals to access SIS, while the shop manager’s terminal continuously displays a list of all items in the store. In the future, it is expected that suppliers of items use their own applications to connect to SIS to get real-time information about the current stock status. User authentication is not required for the current version, but may be required in the future.</p>
 <p>A step by step explanation of the design is given below. Note that this is one out of many possible designs. Design patterns are also applied where appropriate.</p>
 <p>A <code class="hljs inline no-lang" v-pre>StockItem</code> can be an Appliance or an Accessory.</p>
-<pic src="/se-book/designPatterns/more/combiningDesignPatterns/images/stockItem.png" height="100"></pic>
+<pic eager src="/se-book/designPatterns/more/combiningDesignPatterns/images/stockItem.png" height="100"></pic>
 <p></p>
 <p>To track that each <code class="hljs inline no-lang" v-pre>Accessory</code> is associated with the correct <code class="hljs inline no-lang" v-pre>Appliance</code>, consider the following alternative class structures.</p>
-<pic src="/se-book/designPatterns/more/combiningDesignPatterns/images/alternativeOne.png" height="120"></pic>
+<pic eager src="/se-book/designPatterns/more/combiningDesignPatterns/images/alternativeOne.png" height="120"></pic>
 <p></p>
 <p>The third one seems more appropriate (the second one is suitable if accessories can have accessories). Next, consider between keeping a list of <code class="hljs inline no-lang" v-pre>Appliances</code>, and a list of <code class="hljs inline no-lang" v-pre>StockItems</code>.  Which is more appropriate?</p>
-<pic src="/se-book/designPatterns/more/combiningDesignPatterns/images/alternativeTwo.png" height="100"></pic>
+<pic eager src="/se-book/designPatterns/more/combiningDesignPatterns/images/alternativeTwo.png" height="100"></pic>
 <p></p>
 <p>The latter seems more suitable because it can handle both appliances and accessories the same way. Next, an abstraction occurrence pattern is applied to keep track of <code class="hljs inline no-lang" v-pre>StockItems</code>.</p>
-<pic src="/se-book/designPatterns/more/combiningDesignPatterns/images/alternativeThree.png" height="100"></pic>
+<pic eager src="/se-book/designPatterns/more/combiningDesignPatterns/images/alternativeThree.png" height="100"></pic>
 <p></p>
 <p>Note the inclusion of navigabilities. Here’s a sample object diagram based on the class model created thus far.</p>
-<pic src="/se-book/designPatterns/more/combiningDesignPatterns/images/stockItemListObjectDiagram.png" height="150"></pic>
+<pic eager src="/se-book/designPatterns/more/combiningDesignPatterns/images/stockItemListObjectDiagram.png" height="150"></pic>
 <p></p>
 <p>Next, apply the façade pattern to shield the SIS internals from the UI.</p>
-<pic src="/se-book/designPatterns/more/combiningDesignPatterns/images/withFacade.png" height="200"></pic>
+<pic eager src="/se-book/designPatterns/more/combiningDesignPatterns/images/withFacade.png" height="200"></pic>
 <p></p>
 <p>As UI consists of multiple views, the  MVC pattern is applied here.</p>
-<pic src="/se-book/designPatterns/more/combiningDesignPatterns/images/withMVC.png" height="270"></pic>
+<pic eager src="/se-book/designPatterns/more/combiningDesignPatterns/images/withMVC.png" height="270"></pic>
 <p></p>
 <p>Some views need to be updated when the data changes; apply the Observer pattern here.</p>
-<pic src="/se-book/designPatterns/more/combiningDesignPatterns/images/withObserver.png" height="270"></pic>
+<pic eager src="/se-book/designPatterns/more/combiningDesignPatterns/images/withObserver.png" height="270"></pic>
 <p></p>
 <p>In addition, the Singleton pattern can be applied to the façade class.</p></box></div>
 <div></div></div></div>

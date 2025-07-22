@@ -1,19 +1,31 @@
-<div></div><p></p>
 <p><span class="dimmed"><strong><span>Tools → Git and GitHub →
 </span></strong></span></p>
 <div id="title-and-body">
-<div><h4 id="dealing-with-merge-conflicts"><span id="dealing-with-merge-conflicts" class="anchor"></span><span>Dealing with merge conflicts</span><a class="fa fa-anchor" href="#dealing-with-merge-conflicts" onclick="event.stopPropagation()"></a></h4></div>
+<div><h4 id="resolving-merge-conflicts"><span>Resolving Merge Conflicts</span><a class="fa fa-anchor" href="#resolving-merge-conflicts" onclick="event.stopPropagation()"></a></h4></div>
 <div id="main">
 <div>
-<p><strong>Merge conflicts happen when you try to combine two incompatible versions</strong> (e.g., merging a branch to another but each branch changed the same part of the code in a different way).</p>
-<p>Here are the steps to simulate a merge conflict and use it to learn how to resolve merge conflicts.</p>
-<p><strong>0. Create an empty repo or clone an existing repo</strong>, to be used for this activity.</p>
-<p><strong>1. Start a branch named <code class="hljs inline no-lang" v-pre>fix1</code> in the repo. Create a commit</strong> that adds a line with some text to one of the files.</p>
-<p><strong>2. Switch back to <code class="hljs inline no-lang" v-pre>master</code> branch. Create a commit with a conflicting change</strong> i.e. it adds a line with some different text in the exact location the previous line was added.</p>
-<pic src="/se-book/gitAndGithub/mergeConflicts/images/sourcetree_1.png" height="350"></pic>
+<div class="non-printable">
+<div class="border border-success pt-0 ps-1 pb-1 pe-1 border-bottom-0 rounded-top" style="background-color: #e6fff2">
+<div class="indented">
+<br>
+<div id="overview">
+<p>When merging branches, <strong>you need to guide Git on how to resolve conflicting changes</strong> in different branches.</p></div>
+<span><small>This lesson covers that part.</small></span></div></div>
+<br></div>
+<p><strong>A <span class="badge text-dark" style="background-color: rgba(13, 202, 240, 0.2);"><span class="large">merge conflict</span></span> happens when Git can't automatically combine changes from two branches</strong> because the same parts of a file were modified differently in each branch. When this happens, <strong>Git pauses the merge and marks the conflicting sections in the affected files so you can resolve them yourself.</strong> Once you've reviewed and fixed the conflicts, you can tell Git they're resolved and complete the merge.</p>
+<p>More generally, a conflict occurs when Git cannot automatically reconcile different changes made to the same part of a file -- branch merge conflicts is just one example.</p>
+
+<div class="non-printable">
+<span style="position: relative; top: 10px;" class="badge rounded-pill bg-secondary fs-6"><span><span aria-hidden="true" class="fas fa-laptop-code"></span></span> HANDS-ON: Resolve merge conflict</span>
+<div class="indented-level1">
+<box type="dark" seamless no-icon>
+<p>In this hands-on practical, we simulate a merge conflict and use it to learn how to resolve merge conflicts. You can use any repo with at least one commit in the <code class="hljs inline no-lang" v-pre>master</code> branch for this.</p>
+<p><span style="position: relative; right: 25px;" class="badge rounded-pill text-dark bg-secondary text-white">1</span> <strong>Start a branch named <code class="hljs inline no-lang" v-pre>fix1</code> in the repo. Create a commit</strong> that adds a line with some text to one of the files.</p>
+<p><span style="position: relative; right: 25px;" class="badge rounded-pill text-dark bg-secondary text-white">2</span> <strong>Switch back to <code class="hljs inline no-lang" v-pre>master</code> branch. Create a commit with a conflicting change</strong> i.e. it adds a line with some different text in the exact location the previous line was added.</p>
+<pic eager src="/se-book/gitAndGithub/mergeConflicts/images/sourcetree_1.png" height="350"></pic>
 <p></p>
-<p><strong>3. Try to merge the <code class="hljs inline no-lang" v-pre>fix1</code> branch onto the <code class="hljs inline no-lang" v-pre>master</code> branch.</strong> Git will pause mid-way during the merge and report a merge conflict. If you open the conflicted file, you will see something like this:</p>
-<pre><code class="hljs txt" v-pre><span>COLORS
+<p><span style="position: relative; right: 25px;" class="badge rounded-pill text-dark bg-secondary text-white">3</span> <strong>Try to merge the <code class="hljs inline no-lang" v-pre>fix1</code> branch onto the <code class="hljs inline no-lang" v-pre>master</code> branch.</strong> Git will pause mid-way during the merge and report a merge conflict. If you open the conflicted file, you will see something like this:</p>
+<pre><code class="hljs" v-pre><span>COLORS
 </span><span>------
 </span><span>blue
 </span><span><span class="highlighted">&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span>
@@ -23,7 +35,7 @@
 </span><span><span class="highlighted">&gt;&gt;&gt;&gt;&gt;&gt; fix1</span>
 </span><span>red
 </span><span>white
-</span></code></pre><p><strong>4. Observe how the conflicted part is marked</strong> between a line starting with <code class="hljs inline no-lang" v-pre>&lt;&lt;&lt;&lt;&lt;&lt; </code> and a line starting with <code class="hljs inline no-lang" v-pre>&gt;&gt;&gt;&gt;&gt;&gt;</code>, separated by another line starting with <code class="hljs inline no-lang" v-pre>=======</code>.</p>
+</span></code></pre><p><span style="position: relative; right: 25px;" class="badge rounded-pill text-dark bg-secondary text-white">4</span> <strong>Observe how the conflicted part is marked</strong> between a line starting with <code class="hljs inline no-lang" v-pre>&lt;&lt;&lt;&lt;&lt;&lt; </code> and a line starting with <code class="hljs inline no-lang" v-pre>&gt;&gt;&gt;&gt;&gt;&gt;</code>, separated by another line starting with <code class="hljs inline no-lang" v-pre>=======</code>.</p>
 <p>Highlighted below is the conflicting part that is coming from the <code class="hljs inline no-lang" v-pre>master</code> branch:</p>
 <pre><code style="counter-reset: line 2;" class="line-numbers hljs txt" v-pre><span>blue
 </span><span>&lt;&lt;&lt;&lt;&lt;&lt; HEAD
@@ -40,7 +52,7 @@
 </span><span><span class="highlighted">green</span>
 </span><span>&gt;&gt;&gt;&gt;&gt;&gt; fix1
 </span><span>red
-</span></code></pre><p><strong>5. Resolve the conflict by editing the file</strong>. Let us assume you want to keep both lines in the merged version. You can modify the file to be like this:</p>
+</span></code></pre><p><span style="position: relative; right: 25px;" class="badge rounded-pill text-dark bg-secondary text-white">5</span> <strong>Resolve the conflict by editing the file</strong>. Let us assume you want to keep both lines in the merged version. You can modify the file to be like this:</p>
 <pre><code class="hljs txt" v-pre><span>COLORS
 </span><span>------
 </span><span>blue
@@ -48,5 +60,22 @@
 </span><span><span class="highlighted">green</span>
 </span><span>red
 </span><span>white
-</span></code></pre><p><strong>6. Stage the changes, and commit.</strong> You have now successfully resolved the merge conflict.</p></div>
-<div></div></div></div>
+</span></code></pre><p><span style="position: relative; right: 25px;" class="badge rounded-pill text-dark bg-secondary text-white">6</span> <strong>Stage the changes, and commit.</strong> You have now successfully resolved the merge conflict.</p></box></div></div>
+</div>
+<div>
+<panel tags="git-mastery" class="non-printable" type="danger"><template #header><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> EXERCISE: <code class="hljs inline no-lang" v-pre>conflict-mediator</code></p></template>
+<p><strong>To download</strong> the exercise,</p>
+<ul>
+<li>navigate inside the <code class="hljs inline no-lang" v-pre>gitmastery-exercies</code> folder.</li>
+<li>run <code class="hljs inline no-lang" v-pre>gitmastery download conflict-mediator</code> command.</li></ul>
+<hr class="dashed border-danger">
+<p><strong class="text-danger">Your task:</strong></p>
+<div class="indented-level1">
+<p>coming soon ...</p></div>
+<hr class="dashed border-danger">
+<p><strong>To verify</strong> your work,</p>
+<ul>
+<li>navigate to anywhere inside the <code class="hljs inline no-lang" v-pre>gitmastery-exercies/conflict-mediator</code> folder <span class="dimmed">(or any sub-folder of it)</span>.</li>
+<li>run the <code class="hljs inline no-lang" v-pre>gitmastery verify</code> command.</li></ul>
+<div class="bg-light">
+<p><div class="text-center"><small><a href="https://git-mastery.github.io/app/">Git-Mastery <strong>commands list</strong></a> | <a href="https://github.com/git-mastery/git-mastery/issues">Report Git-Mastery <strong>bugs</strong></a></small></div></p></div></panel></div></div></div>

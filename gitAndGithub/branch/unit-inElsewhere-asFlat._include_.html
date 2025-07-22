@@ -1,163 +1,180 @@
-<div></div><p></p>
 <p><span class="dimmed"><strong><span>Tools → Git and GitHub →
 </span></strong></span></p>
 <div id="title-and-body">
-<div><h4 id="branch-doing-multiple-parallel-changes"><span id="branch-doing-multiple-parallel-changes" class="anchor"></span><span><code class="hljs inline no-lang" v-pre>branch</code>: Doing multiple parallel changes</span><a class="fa fa-anchor" href="#branch-doing-multiple-parallel-changes" onclick="event.stopPropagation()"></a></h4></div>
+<div><h4 id="creating-branches"><span>Creating Branches</span><a class="fa fa-anchor" href="#creating-branches" onclick="event.stopPropagation()"></a></h4></div>
 <div id="main">
 <div>
-<p><strong>Git supports branching</strong>, which allows you to do multiple parallel changes to the content of a repository.</p>
-<p>First, let us learn how the repo looks like as you perform branching operations.</p>
-<p><strong>A Git branch is simply a <em>named label</em> pointing to a commit. The <code class="hljs inline no-lang" v-pre>HEAD</code> label indicates which branch you are on.</strong> Git creates a branch named <code class="hljs inline no-lang" v-pre>master</code> by default. When you add a commit, it goes into the branch you are currently on, and the branch label (together with the <code class="hljs inline no-lang" v-pre>HEAD</code> label) moves to the new commit.</p>
-<p>Given below is an illustration of how branch labels move as branches evolve. Refer to the text below it for explanations of each stage.</p>
-<annotate src="/se-book/gitAndGithub/branch/images/branchesAsLabels1.png" height="500">
-<a-point x="2%" y="27%" label="[1]" opacity="0"></a-point>
-<a-point x="2%" y="47%" label="[2]" opacity="0"></a-point>
-<a-point x="35%" y="25%" label="[3]" opacity="0"></a-point>
-<a-point x="65%" y="10%" label="[4]" opacity="0"></a-point>
-<a-point x="85%" y="10%" label="[5]" opacity="0"></a-point></annotate>
+<div class="non-printable">
+<div class="border border-success pt-0 ps-1 pb-1 pe-1 border-bottom-0 rounded-top" style="background-color: #e6fff2">
+<div class="indented">
+<br>
+<div id="overview">
+<p><strong>To work in parallel timelines, you can use Git <em>branches</em>.</strong></p></div>
+<span><small>This lesson covers that part.</small></span></div></div>
+<br></div>
+<p><strong>Git <span class="badge text-dark" style="background-color: rgba(13, 202, 240, 0.2);"><span class="large">branches</span></span> let you develop multiple versions of your work in parallel — effectively creating <span class="badge text-dark" style="background-color: rgba(13, 202, 240, 0.2);"><span class="large">diverged</span></span> timelines of your repository’s history.</strong> For example, one team member can create a new branch to experiment with a change, while the rest of the team continues working on another branch. Branches can have meaningful names, such as <code class="hljs inline no-lang" v-pre>master</code>, <code class="hljs inline no-lang" v-pre>release</code>, or <code class="hljs inline no-lang" v-pre>draft</code>.</p>
+<p><strong>A Git branch is simply a ref (a named label) that points to a commit and automatically moves forward as you add new commits to that branch.</strong> As you’ve seen before, the <code class="hljs inline no-lang" v-pre>HEAD</code> ref indicates which branch you’re currently working on, by pointing to corresponding branch ref.<br>
+<strong>When you add a commit, it goes into the branch you are currently on</strong>, and the branch ref (together with the <code class="hljs inline no-lang" v-pre>HEAD</code> ref) moves to the new commit.</p>
+<p><strong>Git creates a branch named <code class="hljs inline no-lang" v-pre>master</code> by default</strong> (Git can be configured to use a different name e.g., <code class="hljs inline no-lang" v-pre>main</code>).</p>
+<p>Given below is an illustration of how branch refs move as branches evolve. Refer to the text below it for explanations of each stage.</p>
+<annotate src="/se-book/gitAndGithub/branch/images/branchesAsLabels1.png" width="700">
+<a-point x="2%" y="27%" opacity="0"><template #label><p>[1]</p></template></a-point>
+<a-point x="2%" y="47%" opacity="0"><template #label><p>[2]</p></template></a-point>
+<a-point x="35%" y="25%" opacity="0"><template #label><p>[3]</p></template></a-point>
+<a-point x="65%" y="10%" opacity="0"><template #label><p>[4]</p></template></a-point>
+<a-point x="85%" y="10%" opacity="0"><template #label><p>[5]</p></template></a-point></annotate>
 <p></p>
-<ol>
-<li>
-<p>There is only one branch (i.e., <code class="hljs inline no-lang" v-pre>master</code>) and there is only one commit on it. The <code class="hljs inline no-lang" v-pre>HEAD</code> label is pointing to the <code class="hljs inline no-lang" v-pre>master</code> branch (as we are currently on that branch).</p>
-<box type="info" seamless>
-<p>To learn a bit more about how labels such as <code class="hljs inline no-lang" v-pre>master</code> and <code class="hljs inline no-lang" v-pre>HEAD</code> work, you can refer to <a href="https://initialcommit.com/blog/what-is-git-head">this article</a>.</p></box></li>
-<li>
-<p>A new commit has been added. The <code class="hljs inline no-lang" v-pre>master</code> and the <code class="hljs inline no-lang" v-pre>HEAD</code> labels have moved to the new commit.</p></li>
-<li>
-<p>A new branch <code class="hljs inline no-lang" v-pre>fix1</code> has been added. The repo has switched to the new branch too (hence, the <code class="hljs inline no-lang" v-pre>HEAD</code> label is attached to the <code class="hljs inline no-lang" v-pre>fix1</code> branch).</p></li>
-<li>
-<p>A new commit (<code class="hljs inline no-lang" v-pre>c</code>) has been added. The current branch label <code class="hljs inline no-lang" v-pre>fix1</code> moves to the new commit, together with the <code class="hljs inline no-lang" v-pre>HEAD</code> label.</p></li>
-<li>
-<p>The repo has switched back to the <code class="hljs inline no-lang" v-pre>master</code> branch. Hence, the <code class="hljs inline no-lang" v-pre>HEAD</code> has moved back to <code class="hljs inline no-lang" v-pre>master</code> branch's <tooltip><template #content>latest commit of that branch</template>tip</tooltip>.<br>
-At this point, the repo's working directory reflects the code at commit <code class="hljs inline no-lang" v-pre>b</code> (not <code class="hljs inline no-lang" v-pre>c</code>).</p></li></ol>
-<annotate src="/se-book/gitAndGithub/branch/images/branchesAsLabels2.png" width="600">
-<a-point x="15%" y="10%" label="[6]" opacity="0"></a-point>
-<a-point x="50%" y="5%" label="[7]" opacity="0"></a-point>
-<a-point x="90%" y="40%" label="[8]" opacity="0"></a-point></annotate>
-<ol start="6">
-<li>A new commit (<code class="hljs inline no-lang" v-pre>d</code>) has been added. The <code class="hljs inline no-lang" v-pre>master</code> and the <code class="hljs inline no-lang" v-pre>HEAD</code> labels have moved to that commit.</li>
-<li>The repo has switched back to the <code class="hljs inline no-lang" v-pre>fix1</code> branch and added a new commit (<code class="hljs inline no-lang" v-pre>e</code>) to it.</li>
-<li>The repo has switched to the <code class="hljs inline no-lang" v-pre>master</code> branch and the <code class="hljs inline no-lang" v-pre>fix1</code> branch has been merged into the <code class="hljs inline no-lang" v-pre>master</code> branch, creating a <em>merge commit</em> <code class="hljs inline no-lang" v-pre>f</code>. The repo is currently on the <code class="hljs inline no-lang" v-pre>master</code> branch.</li></ol>
-<p>Now that you have some idea how the repo will look like when branches are being used, let's follow the steps below to learn how to perform branching operations using Git. You can use any repo you have on your computer (e.g. a clone of the <a href="https://github.com/se-edu/samplerepo-things">samplerepo-things</a>) for this.</p>
-<p><strong>0. Observe that you are normally in the branch called <code class="hljs inline no-lang" v-pre>master</code>.</strong></p>
+<ul style="list-style-type: none; padding-inline-start: 0px;">
+<li texts="['[1]', '[2]', '[3]', '[4]', '[5]']" style="display: flex;"><span aria-hidden="true" style="line-height: unset; margin-inline-end: 0.35em; align-self: flex-start; flex-shrink: 0;">[1]</span><div>There is only one branch (i.e., <code class="hljs inline no-lang" v-pre>master</code>) and there is only one commit on it. The <code class="hljs inline no-lang" v-pre>HEAD</code> ref is pointing to the <code class="hljs inline no-lang" v-pre>master</code> branch (as we are currently on that branch).</div></li>
+<li style="display: flex;"><span aria-hidden="true" style="line-height: unset; margin-inline-end: 0.35em; align-self: flex-start; flex-shrink: 0;">[2]</span><div>A new commit has been added. The <code class="hljs inline no-lang" v-pre>master</code> and the <code class="hljs inline no-lang" v-pre>HEAD</code> refs have moved to the new commit.</div></li>
+<li style="display: flex;"><span aria-hidden="true" style="line-height: unset; margin-inline-end: 0.35em; align-self: flex-start; flex-shrink: 0;">[3]</span><div>A new branch <code class="hljs inline no-lang" v-pre>fix1</code> has been added. The repo has switched to the new branch too (hence, the <code class="hljs inline no-lang" v-pre>HEAD</code> ref is attached to the <code class="hljs inline no-lang" v-pre>fix1</code> branch).</div></li>
+<li style="display: flex;"><span aria-hidden="true" style="line-height: unset; margin-inline-end: 0.35em; align-self: flex-start; flex-shrink: 0;">[4]</span><div>A new commit (<code class="hljs inline no-lang" v-pre>c</code>) has been added. The current branch ref <code class="hljs inline no-lang" v-pre>fix1</code> moves to the new commit, together with the <code class="hljs inline no-lang" v-pre>HEAD</code> ref.</div></li>
+<li style="display: flex;"><span aria-hidden="true" style="line-height: unset; margin-inline-end: 0.35em; align-self: flex-start; flex-shrink: 0;">[5]</span><div>The repo has switched back to the <code class="hljs inline no-lang" v-pre>master</code> branch. Hence, the <code class="hljs inline no-lang" v-pre>HEAD</code> has moved back to <code class="hljs inline no-lang" v-pre>master</code> branch's <tooltip><template #content>latest commit of that branch</template>tip</tooltip>.<br>
+At this point, the repo's working directory reflects the code at commit <code class="hljs inline no-lang" v-pre>b</code> (not <code class="hljs inline no-lang" v-pre>c</code>).</div></li></ul>
+<annotate src="/se-book/gitAndGithub/branch/images/branchesAsLabels2.png" width="400">
+<a-point x="15%" y="10%" opacity="0"><template #label><p>[6]</p></template></a-point>
+<a-point x="50%" y="5%" opacity="0"><template #label><p>[7]</p></template></a-point></annotate>
+<ul style="list-style-type: none; padding-inline-start: 0px;">
+<li texts="['[6]', '[7]']" style="display: flex;"><span aria-hidden="true" style="line-height: unset; margin-inline-end: 0.35em; align-self: flex-start; flex-shrink: 0;">[6]</span><div>A new commit (<code class="hljs inline no-lang" v-pre>d</code>) has been added. The <code class="hljs inline no-lang" v-pre>master</code> and the <code class="hljs inline no-lang" v-pre>HEAD</code> refs have moved to that commit.</div></li>
+<li style="display: flex;"><span aria-hidden="true" style="line-height: unset; margin-inline-end: 0.35em; align-self: flex-start; flex-shrink: 0;">[7]</span><div>The repo has switched back to the <code class="hljs inline no-lang" v-pre>fix1</code> branch and added a new commit (<code class="hljs inline no-lang" v-pre>e</code>) to it.</div></li></ul>
+<box type="warning" seamless>
+<p>Note that appearance of the revision graph (colors, positioning, orientation etc.) varies based on the Git client you use, and might not match the exact diagrams given above.</p></box>
+
+<div class="non-printable">
+<span style="position: relative; top: 10px;" class="badge rounded-pill bg-secondary fs-6"><span><span aria-hidden="true" class="fas fa-laptop-code"></span></span> HANDS-ON: Work on parallel branches</span>
+<div class="indented-level1">
+<box type="dark" seamless no-icon>
+<p><span style="position: relative; right: 25px;" class="badge rounded-pill text-dark bg-secondary text-white">1</span> <strong>Fork the <a href="https://github.com/se-edu/samplerepo-things">samplerepo-things</a> repo, and clone it</strong> onto your computer.</p>
+<p><span style="position: relative; right: 25px;" class="badge rounded-pill text-dark bg-secondary text-white">2</span> <strong>Observe that you are in the branch called <code class="hljs inline no-lang" v-pre>master</code>.</strong></p>
 <tabs>
-  <tab><template #header>Sourcetree</template>
-    <div><pic src="/se-book/gitAndGithub/branch/images/onMasterBranch.png" height="120"></pic>
-<p></p></div></tab>
   <tab><template #header>CLI</template>
-    <div><pre><code class="no-line-numbers hljs" v-pre><span>$ git status
-</span></code></pre><p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
-<pre><code class="no-line-numbers hljs" v-pre><span>on branch master
-</span></code></pre></div></tab></tabs>
-<p><strong>1. Start a branch named <code class="hljs inline no-lang" v-pre>feature1</code> and switch to the new branch.</strong></p>
+ 
+<pre><code class="no-line-numbers hljs bash" v-pre><span>$ git status
+</span></code></pre><div class="d-flex">
+<div class="me-3">
+<span><span><strong><span class="dimmed">⤷</span></strong></span></span></div>
+<div class="flex-grow-1">
+<pre><code class="no-line-numbers hljs bash" v-pre><span>on branch master
+</span></code></pre></div></div></tab>
+  <tab class="d-print-none"><template #header>Sourcetree</template>
+<pic eager src="/se-book/gitAndGithub/branch/images/onMasterBranch.png" height="120"></pic>
+<p></p></tab></tabs>
+
+<p><span style="position: relative; right: 25px;" class="badge rounded-pill text-dark bg-secondary text-white">3</span> <strong>Start a branch named <code class="hljs inline no-lang" v-pre>feature1</code> and switch to the new branch.</strong></p>
 <tabs>
-  <tab><template #header>Sourcetree</template>
-    <div><p>Click on the <code class="hljs inline no-lang" v-pre>Branch</code> button on the main menu. In the next dialog, enter the branch name and click <code class="hljs inline no-lang" v-pre>Create Branch</code>.</p>
-<pic src="/se-book/gitAndGithub/branch/images/sourcetree_1.png" height="150"></pic>
-<p></p>
-<p>Note how the <code class="hljs inline no-lang" v-pre>feature1</code> is indicated as the current branch (reason: Sourcetree automatically switches to the new branch when you create a new branch).</p>
-<pic src="/se-book/gitAndGithub/branch/images/sourcetree_2.png" height="150"></pic>
-<p></p></div></tab>
   <tab><template #header>CLI</template>
-    <div><p>You can use the <code class="hljs inline no-lang" v-pre>branch</code> command to create a new branch and the <code class="hljs inline no-lang" v-pre>checkout</code> command to switch to a specific branch.</p>
-<pre><code class="no-line-numbers hljs" v-pre><span>$ git branch feature1
+ 
+<p>You can use the <code class="hljs inline no-lang" v-pre>branch</code> command to create a new branch and the <code class="hljs inline no-lang" v-pre>checkout</code> command to switch to a specific branch.</p>
+<pre><code class="no-line-numbers hljs bash" v-pre><span>$ git branch feature1
 </span><span>$ git checkout feature1
 </span></code></pre><p>One-step shortcut to create a branch and switch to it at the same time:</p>
-<pre><code class="no-line-numbers hljs" v-pre><span>$ git checkout –b feature1
-</span></code></pre></div></tab></tabs>
-<p><strong>2. Create some commits in the new branch.</strong> <span class="dimmed">Just commit as per normal. Commits you add while on a certain branch will become part of that branch.</span><br>
-Note how the <code class="hljs inline no-lang" v-pre>master</code> label and the <code class="hljs inline no-lang" v-pre>HEAD</code> label moves to the new commit (The <code class="hljs inline no-lang" v-pre>HEAD</code> label of the local repo is represented as <span aria-hidden="true" class="fas fa-dot-circle"></span> in Sourcetree).</p>
-<pic src="/se-book/gitAndGithub/branch/images/sourcetree_HEAD_dot.png"></pic>
-<p><strong>3. Switch to the <code class="hljs inline no-lang" v-pre>master</code> branch.</strong> Note how the changes you did in the <code class="hljs inline no-lang" v-pre>feature1</code> branch are no longer in the working directory.</p>
+<pre><code class="no-line-numbers hljs bash" v-pre><span>$ git checkout –b feature1
+</span></code></pre><box type="info" seamless><template #header><p>The new <code class="hljs inline no-lang" v-pre>switch</code> command</p></template>
+<p>Git recently introduced a <a href="https://git-scm.com/docs/git-switch"><code class="hljs inline no-lang" v-pre>switch</code> command</a> that you can use instead of the <code class="hljs inline no-lang" v-pre>checkout</code> command given above.</p>
+<p>To create a new branch and switch to it:</p>
+<pre><code class="no-line-numbers hljs bash" v-pre><span>$ git branch feature1
+</span><span><span>$ git <span class="highlighted">switch</span> feature1
+</span></span></code></pre><p>One-step shortcut:</p>
+<pre><code class="no-line-numbers hljs bash" v-pre><span><span>$ git <span class="highlighted">switch –c</span> feature1
+</span></span></code></pre></box></tab>
+  <tab class="d-print-none"><template #header>Sourcetree</template>
+<p>Click on the <code class="hljs inline no-lang" v-pre>Branch</code> button on the main menu. In the next dialog, enter the branch name and click <code class="hljs inline no-lang" v-pre>Create Branch</code>.</p>
+<pic eager src="/se-book/gitAndGithub/branch/images/sourcetreeCreateBranch.png" height="150"></pic>
+<p></p>
+<p>Note how the <code class="hljs inline no-lang" v-pre>feature1</code> is indicated as the current branch (reason: Sourcetree automatically switches to the new branch when you create a new branch, if the <code class="hljs inline no-lang" v-pre>Checkout New Branch</code> was selected in the previous dialog).</p>
+<pic eager src="/se-book/gitAndGithub/branch/images/sourcetreeFeature1BranchActive.png" height="150"></pic>
+<p></p></tab></tabs>
+
+<p><span style="position: relative; right: 25px;" class="badge rounded-pill text-dark bg-secondary text-white">4</span> <strong>Create some commits in the new branch.</strong> <span class="dimmed">Just commit as per normal. Commits you add while on a certain branch will become part of that branch.</span><br>
+Note how the <code class="hljs inline no-lang" v-pre>master</code> ref and the <code class="hljs inline no-lang" v-pre>HEAD</code> ref moves to the new commit.</p>
 <tabs>
-  <tab><template #header>Sourcetree</template>
-    <div><p>Double-click the <code class="hljs inline no-lang" v-pre>master</code> branch.</p>
-<pic src="/se-book/gitAndGithub/branch/images/sourcetree_3.png" height="150"></pic>
-<p></p></div></tab>
   <tab><template #header>CLI</template>
-    <div><pre><code class="no-line-numbers hljs" v-pre><span>$ git checkout master
-</span></code></pre></div></tab></tabs>
-<p><strong>4. Add a commit to the master branch.</strong> Let’s imagine it’s a bug fix.<br>
+ 
+<p>As before, you can use the <code class="hljs inline no-lang" v-pre>git log --one-line --decorate</code> command for this.</p></tab>
+  <tab class="d-print-none"><template #header>Sourcetree</template>
+<ul>
+<li>
+<p><span aria-hidden="true" class="fab fa-windows"></span> At times, the <code class="hljs inline no-lang" v-pre>HEAD</code> ref of the local repo is represented as <span aria-hidden="true" class="fas fa-dot-circle"></span> in Sourcetree, as illustrated in the screenshot below
+<pic eager src="/se-book/gitAndGithub/branch/images/sourcetree_HEAD_dot.png"></pic>.</p></li>
+<li>
+<p><span aria-hidden="true" class="fab fa-apple"></span> The <code class="hljs inline no-lang" v-pre>HEAD</code> ref is not shown in the UI if it is already pointing at the active branch.</p></li></ul></tab></tabs>
+
+<p><span style="position: relative; right: 25px;" class="badge rounded-pill text-dark bg-secondary text-white">5</span> <strong>Switch to the <code class="hljs inline no-lang" v-pre>master</code> branch.</strong> Note how the changes you did in the <code class="hljs inline no-lang" v-pre>feature1</code> branch are no longer in the working directory.</p>
+<tabs>
+  <tab><template #header>CLI</template>
+ 
+<pre><code class="no-line-numbers hljs bash" v-pre><span>$ git checkout master
+</span></code></pre></tab>
+  <tab class="d-print-none"><template #header>Sourcetree</template>
+<p>Double-click the <code class="hljs inline no-lang" v-pre>master</code> branch.</p>
+<pic eager src="/se-book/gitAndGithub/branch/images/sourcetreeMasterBranchSelected.png" height="150"></pic>
+<p></p>
+<box type="info" seamless><template #header><p>Revisiting <code class="hljs inline no-lang" v-pre>master</code> vs <code class="hljs inline no-lang" v-pre>origin/master</code></p></template>
+<p>In the screenshot above, you see a <code class="hljs inline no-lang" v-pre>master</code> ref and a <code class="hljs inline no-lang" v-pre>origin/master</code> ref for the same commit. The former identifies the <tooltip><template #content>i.e., the most recent commit on the branch</template>tip</tooltip> of the local <code class="hljs inline no-lang" v-pre>master</code> branch while the latter identifies the tip of the <code class="hljs inline no-lang" v-pre>master</code> branch at the remote repo named <code class="hljs inline no-lang" v-pre>origin</code>. The fact that both refs point to the same commit means the local <code class="hljs inline no-lang" v-pre>master</code> branch and its remote counterpart are <tooltip><template #content>neither one has commits the other one doesn't</template>in sync</tooltip> with each other.
+Similarly, <code class="hljs inline no-lang" v-pre>origin/HEAD</code> ref appearing against the same commit indicates that <tooltip><template #content><code class="hljs inline no-lang" v-pre>HEAD</code> ref indicates the currently checked-out branch's latest commit</template>the <code class="hljs inline no-lang" v-pre>HEAD</code> ref</tooltip> of the remote repo is pointing to this commit as well.</p></box></tab></tabs>
+
+<p><span style="position: relative; right: 25px;" class="badge rounded-pill text-dark bg-secondary text-white">6</span> <strong>Add a commit to the master branch.</strong> Let’s imagine it’s a bug fix.<br>
 To keep things simple for the time being, this commit should <mark>not involve the same content that you changed in the <code class="hljs inline no-lang" v-pre>feature1</code> branch</mark>. To be on the safe side, you can change an entirely different file in this commit.</p>
-<pic src="/se-book/gitAndGithub/branch/images/sourcetree_4.png" height="100"></pic>
-<p></p>
-<p><strong>5. Switch back to the <code class="hljs inline no-lang" v-pre>feature1</code> branch</strong> <span class="dimmed">(similar to step 3)</span>.</p>
-<p><strong>6. Merge the <code class="hljs inline no-lang" v-pre>master</code> branch to the <code class="hljs inline no-lang" v-pre>feature1</code> branch</strong>, giving an end-result like the following. Also note how Git has created a <em>merge commit</em>.</p>
-<pic src="/se-book/gitAndGithub/branch/images/sourcetree_5.png" height="120"></pic>
-<p></p>
-<tabs>
-  <tab><template #header>Sourcetree</template>
-    <div><p>Right-click on the <code class="hljs inline no-lang" v-pre>master</code> branch and choose <code class="hljs inline no-lang" v-pre>merge master into the current branch</code>. Click <code class="hljs inline no-lang" v-pre>OK</code> in the next dialog.</p></div></tab>
-  <tab><template #header>CLI</template>
-    <div><pre><code class="no-line-numbers hljs" v-pre><span>$ git merge master
-</span></code></pre></div></tab></tabs>
-<p>The objective of that merge was to <em>sync</em> the <code class="hljs inline no-lang" v-pre>feature1</code> branch with the <code class="hljs inline no-lang" v-pre>master</code> branch. Observe how the changes you did in the <code class="hljs inline no-lang" v-pre>master</code> branch (i.e. the imaginary bug fix) is now available even when you are in the <code class="hljs inline no-lang" v-pre>feature1</code> branch.</p>
-<box>
-<p><strong><strong>To undo a merge</strong></strong>,</p>
-<ol>
-<li>Ensure you are in the branch that received the merge.</li>
-<li>Do a hard reset (similar to <trigger trigger="click" for="modal:merge-reset">how you delete a commit</trigger>) of that branch to the commit that would be the tip of that branch had you not done the offending merge.</li></ol>
-<modal large id="modal:merge-reset">
-<div>
-<p><strong><strong>How do undo/delete a commit?</strong></strong></p>
-<tabs>
-  <tab><template #header>Sourcetree</template>
-    <div><p><strong>To undo the last commit</strong>, right-click on the commit just before it, and choose <code class="hljs inline no-lang" v-pre>Reset current branch to this commit</code>.</p>
-<p>In the next dialog, choose the mode <code class="hljs inline no-lang" v-pre>Mixed - keep working copy but reset index</code> option. This will make the offending commit disappear but will keep the changes that you included in that commit intact.</p>
-<pic src="/se-book/gitAndGithub/commit/images/sourcetree_9.png"></pic>
-<p>If you use the <code class="hljs inline no-lang" v-pre>Soft - ...</code> mode instead, the last commit will be undone as before, but the changes included in that commit will stay in the staging area.</p>
-<p><strong>To delete the last commit entirely</strong> (i.e., undo the commit and also discard the changes included in that commit), do as above but choose the <code class="hljs inline no-lang" v-pre>Hard - ...</code> mode instead.</p>
-<p><strong>To undo/delete last n commits</strong>, right-click on the commit just before the last n commits, and do as above.</p></div></tab>
-  <tab><template #header>CLI</template>
-    <div><p><strong>To undo the last commit</strong>, but keep the changes in the staging area, use the following command.</p>
-<pre><code class="no-line-numbers hljs" v-pre><span>$ git reset --soft HEAD~1
-</span></code></pre><p>To undo the last commit, and remove the changes from the staging area (but not discard the changes), used <code class="hljs inline no-lang" v-pre>--mixed</code> instead of <code class="hljs inline no-lang" v-pre>--soft</code>.</p>
-<pre><code class="no-line-numbers hljs" v-pre><span><span>$ git reset <span class="highlighted">--mixed</span> HEAD~1
-</span></span></code></pre><p><strong>To delete the last commit entirely</strong> (i.e., undo the commit and also discard the changes included in that commit), do as above but use the <code class="hljs inline no-lang" v-pre>--hard</code> flag instead (i.e., do a hard reset).</p>
-<pre><code class="no-line-numbers hljs" v-pre><span><span>$ git reset <span class="highlighted">--hard</span> HEAD~1
-</span></span></code></pre><p><strong>To undo/delete last n commits</strong>: <code class="hljs inline no-lang" v-pre>HEAD~1</code> is used to tell get you are targeting the commit one position before the latest commit -- in this case the target commit is the one we want to reset to, not the one we want to undo (as the command used is <code class="hljs inline no-lang" v-pre>reset</code>). To undo/delete two last commits, you can use <code class="hljs inline no-lang" v-pre>HEAD~2</code>, and so on.</p></div></tab></tabs></div></modal>
-<hr class="dotted">
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In the example below, you merged <code class="hljs inline no-lang" v-pre>master</code> to <code class="hljs inline no-lang" v-pre>feature1</code>.</p>
-<annotate src="/se-book/gitAndGithub/branch/images/sourcetree_5.png" height="120">
-<a-point x="4%" y="42%" color="yellow" size="18" opacity="0.4" content="Do a hard reset to this commit"></a-point></annotate>
-<p>If you want to undo that merge,</p>
-<ol>
-<li>Ensure you are in the <code class="hljs inline no-lang" v-pre>feature1</code> branch.</li>
-<li>Reset the <code class="hljs inline no-lang" v-pre>feature1</code> branch to the commit highlighted in the screenshot above (because that was the tip of the <code class="hljs inline no-lang" v-pre>feature1</code> branch before you merged the <code class="hljs inline no-lang" v-pre>master</code> branch to it.</li></ol></box>
-<box type="info" seamless>
-<p>Instead of merging <code class="hljs inline no-lang" v-pre>master</code> to <code class="hljs inline no-lang" v-pre>feature1</code>, an alternative is to <a href="https://www.atlassian.com/git/tutorials/merging-vs-rebasing"><em>rebase</em></a> the <code class="hljs inline no-lang" v-pre>feature1</code> branch. However, rebasing is an advanced feature that requires modifying past commits. If you modify past commits that have been pushed to a remote repository, you'll have to <a href="https://www.datree.io/resources/git-push-force"><em>force-push</em></a> the modified commit to the remote repo in order to update the commits in it.</p></box>
-<p><strong>7. Add another commit to the <code class="hljs inline no-lang" v-pre>feature1</code> branch.</strong></p>
-<p><strong>8. Switch to the <code class="hljs inline no-lang" v-pre>master</code> branch and add one more commit.</strong></p>
-<p><strong>9. Merge <code class="hljs inline no-lang" v-pre>feature1</code> to the master branch</strong>, giving and end-result like this:</p>
-<pic src="/se-book/gitAndGithub/branch/images/sourcetree_6.png" height="150"></pic>
-<p></p>
-<tabs>
-  <tab><template #header>Sourcetree</template>
-    <div><p>Right-click on the <code class="hljs inline no-lang" v-pre>feature1</code> branch and choose <code class="hljs inline no-lang" v-pre>Merge...</code>.</p></div></tab>
-  <tab><template #header>CLI</template>
-    <div><pre><code class="no-line-numbers hljs" v-pre><span>$ git merge feature1
-</span></code></pre></div></tab></tabs>
-<p><strong>10. Create a new branch called <code class="hljs inline no-lang" v-pre>add-countries</code>, switch to it, and add some commits to it</strong> <span class="dimmed">(similar to steps 1-2 above)</span>. You should have something like this now:</p>
-<pic src="/se-book/gitAndGithub/branch/images/addCountriesBranchBeforeMerging.png" height="80"></pic>
-<p></p>
+<div id="samplerepo-things-before-merging">
+<pre class="mermaid">
+gitGraph BT:
+    %%{init: { 'theme': 'default', 'gitGraph': {'mainBranchName': 'master'}} }%%
+    commit id: "m1"
+    commit id: "m2"
+    branch feature1
+    commit id: "f1"
+    commit id: "[feature] f2"
+    checkout master
+    commit id: "[HEAD → master] m3"
+    checkout feature1
+</pre></div>
+<p><span style="position: relative; right: 25px;" class="badge rounded-pill text-dark bg-secondary text-white">7</span> <strong>Switch between the two branches and see how the working directory changes accordingly.</strong> That is, now you have two parallel timelines that you can freely switch between.</p></box></div></div>
+
+<p><strong>You can also start a branch from an earlier commit</strong>, instead of the latest commit in the current branch. For that, simply check out the commit you wish to start from.</p>
+
+<div class="non-printable">
+<span style="position: relative; top: 10px;" class="badge rounded-pill bg-secondary fs-6"><span><span aria-hidden="true" class="fas fa-laptop-code"></span></span> HANDS-ON: Start a branch from an earlier commit</span>
+<div class="indented-level1">
+<box type="dark" seamless no-icon>
+<p>In the <code class="hljs inline no-lang" v-pre>samplerepo-things</code> repo that you used above, let's create a new branch that starts from the same commit the <code class="hljs inline no-lang" v-pre>feature1</code> branch started from. Let's pretend this branch will contain an alternative version of the content we added in the <code class="hljs inline no-lang" v-pre>feature1</code> branch.</p>
+<pre class="mermaid">
+gitGraph BT:
+    %%{init: { 'theme': 'default', 'gitGraph': {'mainBranchName': 'master'}} }%%
+    commit id: "m1"
+    commit id: "m2"
+    branch feature1
+    branch feature1-alt
+    checkout feature1
+    commit id: "f1"
+    commit id: "[feature1] f2"
+    checkout master
+    commit id: "[HEAD → master] m3"
+    checkout feature1-alt
+    commit id: "[HEAD → feature1-alt] a1"
+</pre>
 <box type="wrong" seamless>
-<p><strong class="text-danger">Avoid this common rookie mistake!</strong></p>
+<p><strong class="text-danger">Avoid this rookie mistake!</strong></p>
 <p><mark>Always remember to switch back to the <code class="hljs inline no-lang" v-pre>master</code> branch before creating a new branch.</mark> If not, your new branch will be created on top of the current branch.</p></box>
-<p><strong>11. Go back to the <code class="hljs inline no-lang" v-pre>master</code> branch and merge the <code class="hljs inline no-lang" v-pre>add-countries</code> branch onto the <code class="hljs inline no-lang" v-pre>master</code> branch</strong> <span class="dimmed">(similar to steps 8-9 above)</span>. While you might expect to see something like the following,</p>
-<pic src="/se-book/gitAndGithub/branch/images/addCountriesBranchNoFastForward.png" height="100"></pic>
-<p></p>
-<p>... you are likely to see something like this instead:</p>
-<pic src="/se-book/gitAndGithub/branch/images/addCountriesBranchAfterMerging.png" height="80"></pic>
-<p></p>
-<p>That is because <strong>Git does a <mark><em>fast forward</em> merge</mark> if possible</strong>. Seeing that the <code class="hljs inline no-lang" v-pre>master</code> branch has not changed since you started the <code class="hljs inline no-lang" v-pre>add-countries</code> branch, Git has decided it is simpler to just put the commits of the <code class="hljs inline no-lang" v-pre>add-countries</code> branch in front of the <code class="hljs inline no-lang" v-pre>master</code> branch, without going into the trouble of creating an extra merge commit.</p>
-<p><strong>It is possible to force Git to create a merge commit even if fast forwarding is possible.</strong></p>
-<tabs>
-  <tab><template #header>Sourcetree</template>
-    <div><p>Tick the box shown below when you merge a branch:</p>
-<pic src="/se-book/gitAndGithub/branch/images/mergeBranchDialog.png" height="150"></pic>
-<p></p></div></tab>
-  <tab><template #header>CLI</template>
-    <div><p>Use the <code class="hljs inline no-lang" v-pre>--no-ff</code> switch (short for <em>no fast forward</em>):</p>
-<pre><code class="no-line-numbers hljs" v-pre><span>$ git merge --no-ff add-countries
-</span></code></pre></div></tab></tabs></div>
-<div></div></div></div>
+<ol>
+<li>Switch to the <code class="hljs inline no-lang" v-pre>master</code> branch.</li>
+<li>Checkout the commit that is at which the <code class="hljs inline no-lang" v-pre>feature1</code> branch diverged from the <code class="hljs inline no-lang" v-pre>master</code> branch (e.g. <code class="hljs inline no-lang" v-pre>git checkout HEAD~1</code>). This will create a detached <code class="hljs inline no-lang" v-pre>HEAD</code>.</li>
+<li>Create a new branch called <code class="hljs inline no-lang" v-pre>feature1-alt</code>. The <code class="hljs inline no-lang" v-pre>HEAD</code> will now point to this new branch (i.e., no longer 'detached').</li>
+<li>Add a commit on the new branch.</li></ol></box></div></div>
+</div>
+<div>
+<panel tags="git-mastery" class="non-printable" type="danger"><template #header><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> EXERCISE: <code class="hljs inline no-lang" v-pre>side-track</code></p></template>
+<p><strong>To download</strong> the exercise,</p>
+<ul>
+<li>navigate inside the <code class="hljs inline no-lang" v-pre>gitmastery-exercies</code> folder.</li>
+<li>run <code class="hljs inline no-lang" v-pre>gitmastery download side-track</code> command.</li></ul>
+<hr class="dashed border-danger">
+<p><strong class="text-danger">Your task:</strong></p>
+<div class="indented-level1">
+<p>coming soon ...</p></div>
+<hr class="dashed border-danger">
+<p><strong>To verify</strong> your work,</p>
+<ul>
+<li>navigate to anywhere inside the <code class="hljs inline no-lang" v-pre>gitmastery-exercies/side-track</code> folder <span class="dimmed">(or any sub-folder of it)</span>.</li>
+<li>run the <code class="hljs inline no-lang" v-pre>gitmastery verify</code> command.</li></ul>
+<div class="bg-light">
+<p><div class="text-center"><small><a href="https://git-mastery.github.io/app/">Git-Mastery <strong>commands list</strong></a> | <a href="https://github.com/git-mastery/git-mastery/issues">Report Git-Mastery <strong>bugs</strong></a></small></div></p></div></panel></div></div></div>

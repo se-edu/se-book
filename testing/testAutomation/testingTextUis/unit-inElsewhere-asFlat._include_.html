@@ -1,8 +1,7 @@
-<div></div><p></p>
 <p><span class="dimmed"><strong><span>Quality Assurance → Testing → Test Automation →
 </span></strong></span></p>
 <div id="title-and-body">
-<div><h4 id="automated-testing-of-cli-applications"><span id="automated-testing-of-cli-applications" class="anchor"></span><span>Automated testing of CLI applications</span><a class="fa fa-anchor" href="#automated-testing-of-cli-applications" onclick="event.stopPropagation()"></a></h4></div>
+<div><h4 id="automated-testing-of-cli-applications"><span>Automated testing of CLI applications</span><a class="fa fa-anchor" href="#automated-testing-of-cli-applications" onclick="event.stopPropagation()"></a></h4></div>
 <div id="main">
 <div>
 <p><strong>A simple way to semi-automate testing of a CLI (Command Line Interface) app is by using input/output re-direction.</strong> Here are the high-level steps:</p>
@@ -13,13 +12,13 @@
 <ol>
 <li>
 <p>Store the test input in the text file <code class="hljs inline no-lang" v-pre>input.txt</code>.</p>
-<panel type="seamless"><template #header><p><span class="dimmed"><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example <code class="hljs inline no-lang" v-pre>input.txt</code></span></p></template>
+<panel type="seamless" class="non-printable"><template #header><p><span class="dimmed"><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example <code class="hljs inline no-lang" v-pre>input.txt</code></span></p></template>
 <pre><code class="hljs" v-pre><span>add Valid Name p/12345 valid@email.butNoPrefix
 </span><span>add Valid Name 12345 e/valid@email.butPhonePrefixMissing
 </span></code></pre></panel></li>
 <li>
 <p>Store the output you expect from the SUT in another text file <code class="hljs inline no-lang" v-pre>expected.txt</code>.</p>
-<panel type="seamless"><template #header><p><span class="dimmed"><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example <code class="hljs inline no-lang" v-pre>expected.txt</code></span></p></template>
+<panel type="seamless" class="non-printable"><template #header><p><span class="dimmed"><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example <code class="hljs inline no-lang" v-pre>expected.txt</code></span></p></template>
 <pre><code class="hljs" v-pre><span>Command: || [add Valid Name p/12345 valid@email.butNoPrefix]
 </span><span>Invalid command format: add
 </span><span>
@@ -36,7 +35,7 @@ e.g., In Python, assuming the code is in <code class="hljs inline no-lang" v-pre
 <code class="hljs inline no-lang" v-pre>python AddressBook.py &lt; input.txt &gt; output.txt</code></p></li>
 <li>
 <p><span class="badge rounded-pill bg-success text-white"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> If you are using Windows, use a normal MS-DOS terminal (i.e., <code class="hljs inline no-lang" v-pre>cmd.exe</code>) to run the app, not a PowerShell window.</p></li></ul>
-<panel minimized>
+<panel minimized class="non-printable">
 <template #header><span class="card-title"><span>More on the <code class="hljs inline no-lang" v-pre>&gt;</code> operator and the <code class="hljs inline no-lang" v-pre>&lt;</code> operator <span class="badge rounded-pill bg-secondary"><span><span aria-hidden="true" class="fas fa-plus"></span> extra</span></span></span></span></template>
 <p>A CLI program takes input from the keyboard and outputs to the console. That is because those two are the default input and output streams, respectively. But you can change that behavior using <code class="hljs inline no-lang" v-pre>&lt;</code> and <code class="hljs inline no-lang" v-pre>&gt;</code> operators. For example, if you run <code class="hljs inline no-lang" v-pre>AddressBook</code> in a command window, the output will be shown in the console, but if you run it like this,</p>
 <pre><code class="no-line-numbers hljs sh" v-pre><span>java AddressBook &gt; output.txt

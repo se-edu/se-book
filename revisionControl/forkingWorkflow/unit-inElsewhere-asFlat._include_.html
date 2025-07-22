@@ -1,27 +1,27 @@
-<div></div><p></p>
 <p><span class="dimmed"><strong><span>Project Management → Revision Control →
 </span></strong></span></p>
 <div id="title-and-body">
-<div><h4 id="forking-flow"><span id="forking-flow" class="anchor"></span><span>Forking flow</span><a class="fa fa-anchor" href="#forking-flow" onclick="event.stopPropagation()"></a></h4></div>
+<div><h4 id="forking-flow"><span>Forking flow</span><a class="fa fa-anchor" href="#forking-flow" onclick="event.stopPropagation()"></a></h4></div>
 <div id="main">
 <div>
-<pic src="/se-book/revisionControl/forkingWorkflow/images/diagram.png" height="330"></pic>
+<pic eager src="/se-book/revisionControl/forkingWorkflow/images/diagram.png" height="330"></pic>
 <p></p>
 <p><strong>In the <em>forking workflow</em>, the 'official' version of the software is kept in a remote repo designated as the 'main repo'. All team members fork the main repo and create pull requests from their fork to the main repo.</strong></p>
 <p>To illustrate how the workflow goes, let’s assume Jean wants to fix a bug in the code. Here are the steps:</p>
 <ol>
 <li>Jean creates a separate branch in her local repo and fixes the bug in that branch.<br>
-<span style="color: red"><big><span><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></span></big></span> Common mistake: Doing the proposed changes in the <code class="hljs inline no-lang" v-pre>master</code> branch -- if Jean does that, she will not be able to have more than one PR open at any time because any changes to the <code class="hljs inline no-lang" v-pre>master</code> branch will be reflected in all open PRs.</li>
+<span style="color: red"><span class="large"><span><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></span></span></span> Common mistake: Doing the proposed changes in the <code class="hljs inline no-lang" v-pre>master</code> branch -- if Jean does that, she will not be able to have more than one PR open at any time because any changes to the <code class="hljs inline no-lang" v-pre>master</code> branch will be reflected in all open PRs.</li>
 <li>Jean pushes the branch to her fork.</li>
 <li>Jean creates a pull request from that branch in her fork to the main repo.</li>
 <li>Other members review Jean’s pull request.</li>
 <li>If reviewers suggested any changes, Jean updates the PR accordingly.</li>
 <li>When reviewers are satisfied with the PR, one of the members (usually the team lead or a designated 'maintainer' of the main repo) merges the PR, which brings Jean’s code to the main repo.</li>
-<li>Other members, realizing there is new code in the upstream repo, sync their forks with the new upstream repo (i.e. the main repo). This is done by pulling the new code to their own local repo and pushing the updated code to their own fork.<br>
-<span style="color: red"><big><span><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></span></big></span> Possible mistake: Creating another 'reverse' PR from the team repo to the team member's fork to sync the member's fork with the merged code. PRs are meant to go from downstream repos to upstream repos, not in the other direction.</li></ol>
+<li>Other members, realizing there is new code in the upstream repo, sync their forks with the new upstream repo (i.e. the main repo). This is done by pulling the new code to their own local repo and pushing the updated code to their own fork. If there are unmerged branches in the local repo, they can be updated too e.g., by merging the new <code class="hljs inline no-lang" v-pre>master</code> branch to each of them.<br>
+<span style="color: red"><span class="large"><span><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></span></span></span> Possible mistake: Creating another 'reverse' PR from the team repo to the team member's fork to sync the member's fork with the merged code. PRs are meant to go from downstream repos to upstream repos, not in the other direction.</li></ol>
 <p>One main benefit of this workflow is that it does not require most contributors to have write permissions to the main repository. Only those who are merging PRs need write permissions.
 The main drawback of this workflow is the extra overhead of sending everything through forks.</p></div>
 <div>
-  <div><panel expanded><template #header><p><span><span aria-hidden="true" class="fas fa-paperclip"></span></span> Resources</p></template>
-<ul>
-<li><a href="https://www.atlassian.com/git/tutorials/comparing-workflows#forking-workflow">A detailed explanation of the Forking Workflow</a> - From Atlassian</li></ul></panel></div></div></div></div>
+<div><br>
+<h5 id="resources"><span><span aria-hidden="true" class="fas fa-paperclip"></span></span> Resources:<a class="fa fa-anchor" href="#resources" onclick="event.stopPropagation()"></a></h5>
+<div><ul>
+<li><a href="https://www.atlassian.com/git/tutorials/comparing-workflows#forking-workflow">A detailed explanation of the Forking Workflow</a> - From Atlassian</li></ul></div></div></div></div></div>

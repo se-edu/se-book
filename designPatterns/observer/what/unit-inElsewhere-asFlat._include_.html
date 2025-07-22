@@ -1,29 +1,28 @@
-<div></div><p></p>
 <p><span class="dimmed"><strong><span>Design → Design Patterns → Observer Pattern →
 </span></strong></span></p>
 <div id="title-and-body">
-<div><h4 id="what"><span id="what" class="anchor"></span><span>What</span><a class="fa fa-anchor" href="#what" onclick="event.stopPropagation()"></a></h4></div>
+<div><h4 id="what"><span>What</span><a class="fa fa-anchor" href="#what" onclick="event.stopPropagation()"></a></h4></div>
 <div id="main">
 <div>
 <p><strong>Context</strong></p>
 <p>An object (possibly more than one) is interested in being notified when a change happens to another object. That is, some objects want to ‘observe’ another object.</p>
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider this scenario from a student management system where the user is adding a new student to the system.</p>
-<pic src="/se-book/designPatterns/observer/what/images/sequenceDiagram.png" height="330"></pic>
+<pic eager src="/se-book/designPatterns/observer/what/images/sequenceDiagram.png" height="330"></pic>
 <p></p>
 <p>Now, assume the system has two additional views used in parallel by different users:</p>
 <ul>
 <li><code class="hljs inline no-lang" v-pre>StudentListUi</code>: that accesses a list of students and</li>
 <li><code class="hljs inline no-lang" v-pre>StudentStatsUi</code>: that generates statistics of current students.</li></ul>
 <p>When a student is added to the database using <code class="hljs inline no-lang" v-pre>NewStudentUi</code> shown above, both <code class="hljs inline no-lang" v-pre>StudentListUi</code> and <code class="hljs inline no-lang" v-pre>StudentStatsUi</code> should get updated automatically, as shown below.</p>
-<pic src="/se-book/designPatterns/observer/what/images/studentListUI.png" height="180"></pic>
+<pic eager src="/se-book/designPatterns/observer/what/images/studentListUI.png" height="180"></pic>
 <p></p>
 <p>However, the <code class="hljs inline no-lang" v-pre>StudentList</code> object has no knowledge about <code class="hljs inline no-lang" v-pre>StudentListUi</code> and <code class="hljs inline no-lang" v-pre>StudentStatsUi</code> (note the direction of the navigability) and has no way to inform those objects. This is an example of the type of problem addressed by the Observer pattern.</p></box>
 <p><strong>Problem</strong></p>
 <p>The ‘observed’ object does not want to be coupled to objects that are ‘observing’ it.</p>
 <p><strong>Solution</strong></p>
 <p>Force the communication through an interface known to both parties.</p>
-<pic src="/se-book/designPatterns/observer/what/images/studentListObserver.png" height="160"></pic>
+<pic eager src="/se-book/designPatterns/observer/what/images/studentListObserver.png" height="160"></pic>
 <p></p>
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Here is the Observer pattern applied to the student management system.</p>
@@ -67,7 +66,7 @@
 </span><span>}
 </span></code></pre><p>Note that <code class="hljs inline no-lang" v-pre>StudentList</code> is unaware of the exact nature of the two UIs but still manages to communicate with them via an intermediary.</p></li></ol></box>
 <p>Here is the generic description of the observer pattern:</p>
-<pic src="/se-book/designPatterns/observer/what/images/observableInterfaceDiagram.png" height="100"></pic>
+<pic eager src="/se-book/designPatterns/observer/what/images/observableInterfaceDiagram.png" height="100"></pic>
 <p></p>
 <ul>
 <li><code class="hljs inline no-lang" v-pre>&lt;&lt;Observer&gt;&gt;</code> is an interface: any class that implements it can observe an <code class="hljs inline no-lang" v-pre>&lt;&lt;Observable&gt;&gt;</code>. Any number of <code class="hljs inline no-lang" v-pre>&lt;&lt;Observer&gt;&gt;</code> objects can observe (i.e. listen to changes of) the <code class="hljs inline no-lang" v-pre>&lt;&lt;Observable&gt;&gt;</code> object.</li>
@@ -76,23 +75,22 @@
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In a GUI application, how is the Controller notified when the “save” button is clicked? UI frameworks such as JavaFX have inbuilt support for the Observer pattern.</p></box></div>
 <div>
-<div><panel expandable><template #header><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
-  <div><panel><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Polymorphism and the Observer pattern</p></template>
-<question has-input="true">
+<div><br>
+<h5 id="exercises"><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Exercises:<a class="fa fa-anchor" href="#exercises" onclick="event.stopPropagation()"></a></h5>
+<div><div><panel><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Polymorphism and the Observer pattern</p></template>
 <p>Explain how polymorphism is used in the Observer pattern.</p>
-<template #answer><div>
-<pic src="/se-book/designPatterns/observer/what/images/observableInterfaceNotation.png" height="90"></pic>
+<panel type="seamless" minimized><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Answer</p></template>
+<pic eager src="/se-book/designPatterns/observer/what/images/observableInterfaceNotation.png" height="90"></pic>
 <p></p>
 <p>With respect to the general form of the Observer pattern given above, when the Observable object invokes the <code class="hljs inline no-lang" v-pre>notifyObservers()</code> method, it is treating all <code class="hljs inline no-lang" v-pre>ConcreteObserver</code> objects as a general type called <code class="hljs inline no-lang" v-pre>Observer</code> and calling the <code class="hljs inline no-lang" v-pre>update()</code> method of each of them. However, the <code class="hljs inline no-lang" v-pre>update()</code> method of each <code class="hljs inline no-lang" v-pre>ConcreteObserver</code> could potentially show different behavior based on its actual type. That is, the <code class="hljs inline no-lang" v-pre>update()</code> method shows polymorphic behavior.</p>
 <p>In the example given below, the <code class="hljs inline no-lang" v-pre>notifyUIs</code> operation can result in <code class="hljs inline no-lang" v-pre>StudentListUi</code> and <code class="hljs inline no-lang" v-pre>StudentStatsUi</code> changing their views in two different ways.</p>
-<pic src="/se-book/designPatterns/observer/what/images/studentListStudentListObserver.png" height="190"></pic>
-<p></p></div></template></question></panel></div>
-  <div><panel><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Observer pattern usage</p></template>
-<question>
+<pic eager src="/se-book/designPatterns/observer/what/images/studentListStudentListObserver.png" height="190"></pic>
+<p></p></panel></panel></div>
+<div><panel><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Observer pattern usage</p></template>
 <p>The Observer pattern can be used when you want one object to initiate an activity in another object without having a direct dependency from the first object to the second object.</p>
 <ul radio-group="991dd" class="radio-list">
 <li class="radio-list-item"><label><input class="radio-list-input" name="991dd" type="radio"> True</label></li>
 <li class="radio-list-item"><label><input class="radio-list-input" name="991dd" type="radio"> False</label></li></ul>
-<template #answer><div>
+<panel type="seamless" minimized><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Answer</p></template>
 <p>True</p>
-<p>Explanation: Yes. For example, when applying the Observer pattern to an MVC structure, Views can get notified and update themselves about a change to the Model without the Model having to depend on the Views.</p></div></template></question></panel></div></panel></div></div></div></div>
+<p>Explanation: Yes. For example, when applying the Observer pattern to an MVC structure, Views can get notified and update themselves about a change to the Model without the Model having to depend on the Views.</p></panel></panel></div></div></div></div></div></div>

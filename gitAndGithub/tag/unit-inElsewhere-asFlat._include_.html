@@ -1,26 +1,148 @@
-<div></div><p></p>
 <p><span class="dimmed"><strong><span>Tools → Git and GitHub →
 </span></strong></span></p>
 <div id="title-and-body">
-<div><h4 id="tag-naming-commits"><span id="tag-naming-commits" class="anchor"></span><span><code class="hljs inline no-lang" v-pre>tag</code>: Naming commits</span><a class="fa fa-anchor" href="#tag-naming-commits" onclick="event.stopPropagation()"></a></h4></div>
+<div><h4 id="tagging-commits"><span>Tagging Commits</span><a class="fa fa-anchor" href="#tagging-commits" onclick="event.stopPropagation()"></a></h4></div>
 <div id="main">
 <div>
-<p><strong>Each Git commit is uniquely identified by a hash</strong> e.g., <code class="hljs inline no-lang" v-pre>d670460b4b4aece5915caf5c68d12f560a9fe3e4</code>. As you can imagine, using such an identifier is not very convenient for our day-to-day use. As a solution, Git allows adding a more human-readable <em>tag</em> to a commit e.g., <code class="hljs inline no-lang" v-pre>v1.0-beta</code>.</p>
-<p>Here's how you can tag a commit in a local repo:</p>
+<div class="non-printable">
+<div class="border border-success pt-0 ps-1 pb-1 pe-1 border-bottom-0 rounded-top" style="background-color: #e6fff2">
+<div class="indented">
+<br>
+<div id="overview">
+<p>When working with many commits, it helps to <strong>tag specific commits with custom names</strong> so they’re easier to refer to later.</p></div>
+<span><small>This lesson covers that part.</small></span></div></div>
+<br></div>
+<p><strong>Git lets you <span class="badge text-dark" style="background-color: rgba(13, 202, 240, 0.2);"><span class="large">tag</span></span> commits with names, making them easy to reference later.</strong> This is useful when you want to mark specific commits -- such as releases or key milestones (e.g., <code class="hljs inline no-lang" v-pre>v1.0</code> or <code class="hljs inline no-lang" v-pre>v2.1</code>). Using tags to refer to commits is much more convenient than using SHA hashes. In the diagram below, <span class="badge rounded-pill bg-light mt-0 mb-0 pb-0 pt-0 pe-1 ps-1 text-dark border border-secondary"><span><svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-tag" aria-hidden="true"><path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"/></svg> v1.0</span></span> and <span class="badge rounded-pill bg-light mt-0 mb-0 pb-0 pt-0 pe-1 ps-1 text-dark border border-secondary"><span><svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-tag" aria-hidden="true"><path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"/></svg> interim</span></span> are tags.</p>
+<div class="d-flex align-items-center"><span class="d-flex justify-content-center align-items-center border bg-info text-white border-info" style="width: 25px; height: 25px; border-radius: 50%;"><span><small>C3</small></span></span><span class="ms-1"><span><span class="badge bg-success text-white ps-1 pe-1"><svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-git-branch" aria-hidden="true"><path fill-rule="evenodd" d="M11.75 2.5a.75.75 0 100 1.5.75.75 0 000-1.5zm-2.25.75a2.25 2.25 0 113 2.122V6A2.5 2.5 0 0110 8.5H6a1 1 0 00-1 1v1.128a2.251 2.251 0 11-1.5 0V5.372a2.25 2.25 0 111.5 0v1.836A2.492 2.492 0 016 7h4a1 1 0 001-1v-.628A2.25 2.25 0 019.5 3.25zM4.25 12a.75.75 0 100 1.5.75.75 0 000-1.5zM3.5 3.25a.75.75 0 111.5 0 .75.75 0 01-1.5 0z"/></svg> master</span><span style="position: relative; left: -2px;"><span class="text-danger m-0 p-0">←</span><span class="badge bg-danger text-white me-2 ps-1 pe-1">HEAD</span></span><span class="badge rounded-pill bg-light mt-0 mb-0 pb-0 pt-0 pe-1 ps-1 text-dark border border-secondary"><span><svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-tag" aria-hidden="true"><path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"/></svg> interim</span></span></span></span><span class="ms-2 font-monospace small"><span><span class="dimmed">Update list</span></span></span></div>
+<div class="d-flex justify-content-center align-items-center text-info" style="width: 25px; height: 18px; padding: 0; margin: -4px 0;">|</div>
+<div class="d-flex align-items-center"><span class="d-flex justify-content-center align-items-center border bg-info text-white border-info" style="width: 25px; height: 25px; border-radius: 50%;"><span><small>C2</small></span></span><span class="ms-1"><span><span class="badge rounded-pill bg-light mt-0 mb-0 pb-0 pt-0 pe-1 ps-1 text-dark border border-secondary"><span><svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-tag" aria-hidden="true"><path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"/></svg> v1.0</span></span></span></span><span class="ms-2 font-monospace small"><span><span class="dimmed">Populate list</span></span></span></div>
+<div class="d-flex justify-content-center align-items-center text-info" style="width: 25px; height: 18px; padding: 0; margin: -4px 0;">|</div>
+<div class="d-flex align-items-center"><span class="d-flex justify-content-center align-items-center border bg-info text-white border-info" style="width: 25px; height: 25px; border-radius: 50%;"><span><small>C1</small></span></span><span class="ms-2 font-monospace small"><span><span class="dimmed">Add empty list</span></span></span></div>
+<p></p>
+<p><strong>A tag stays fixed to the commit.</strong> Unlike branch refs or <code class="hljs inline no-lang" v-pre>HEAD</code>, tags do not move automatically as new commits are made. As you see below, after adding a new commit, tags stay in the previous commits while <span class="badge bg-success text-white ps-1 pe-1"><svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-git-branch" aria-hidden="true"><path fill-rule="evenodd" d="M11.75 2.5a.75.75 0 100 1.5.75.75 0 000-1.5zm-2.25.75a2.25 2.25 0 113 2.122V6A2.5 2.5 0 0110 8.5H6a1 1 0 00-1 1v1.128a2.251 2.251 0 11-1.5 0V5.372a2.25 2.25 0 111.5 0v1.836A2.492 2.492 0 016 7h4a1 1 0 001-1v-.628A2.25 2.25 0 019.5 3.25zM4.25 12a.75.75 0 100 1.5.75.75 0 000-1.5zM3.5 3.25a.75.75 0 111.5 0 .75.75 0 01-1.5 0z"/></svg> master</span><span style="position: relative; left: -2px;"><span class="text-danger m-0 p-0">←</span><span class="badge bg-danger text-white me-2 ps-1 pe-1">HEAD</span></span> have moved to the new commit.</p>
+<div class="d-flex align-items-center"><span class="d-flex justify-content-center align-items-center border bg-info text-white border-info" style="width: 25px; height: 25px; border-radius: 50%;"><span><small>C4</small></span></span><span class="ms-1"><span><span class="badge bg-success text-white ps-1 pe-1"><svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-git-branch" aria-hidden="true"><path fill-rule="evenodd" d="M11.75 2.5a.75.75 0 100 1.5.75.75 0 000-1.5zm-2.25.75a2.25 2.25 0 113 2.122V6A2.5 2.5 0 0110 8.5H6a1 1 0 00-1 1v1.128a2.251 2.251 0 11-1.5 0V5.372a2.25 2.25 0 111.5 0v1.836A2.492 2.492 0 016 7h4a1 1 0 001-1v-.628A2.25 2.25 0 019.5 3.25zM4.25 12a.75.75 0 100 1.5.75.75 0 000-1.5zM3.5 3.25a.75.75 0 111.5 0 .75.75 0 01-1.5 0z"/></svg> master</span><span style="position: relative; left: -2px;"><span class="text-danger m-0 p-0">←</span><span class="badge bg-danger text-white me-2 ps-1 pe-1">HEAD</span></span></span></span><span class="ms-2 font-monospace small"><span><span class="dimmed">Trim the list</span></span></span></div>
+<div class="d-flex justify-content-center align-items-center text-info" style="width: 25px; height: 18px; padding: 0; margin: -4px 0;">|</div>
+<div class="d-flex align-items-center"><span class="d-flex justify-content-center align-items-center border bg-info text-white border-info" style="width: 25px; height: 25px; border-radius: 50%;"><span><small>C3</small></span></span><span class="ms-1"><span><span class="badge rounded-pill bg-light mt-0 mb-0 pb-0 pt-0 pe-1 ps-1 text-dark border border-secondary"><span><svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-tag" aria-hidden="true"><path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"/></svg> interim</span></span></span></span><span class="ms-2 font-monospace small"><span><span class="dimmed">Update list</span></span></span></div>
+<div class="d-flex justify-content-center align-items-center text-info" style="width: 25px; height: 18px; padding: 0; margin: -4px 0;">|</div>
+<div class="d-flex align-items-center"><span class="d-flex justify-content-center align-items-center border bg-info text-white border-info" style="width: 25px; height: 25px; border-radius: 50%;"><span><small>C2</small></span></span><span class="ms-1"><span><span class="badge rounded-pill bg-light mt-0 mb-0 pb-0 pt-0 pe-1 ps-1 text-dark border border-secondary"><span><svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-tag" aria-hidden="true"><path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"/></svg> v1.0</span></span></span></span><span class="ms-2 font-monospace small"><span><span class="dimmed">Populate list</span></span></span></div>
+<div class="d-flex justify-content-center align-items-center text-info" style="width: 25px; height: 18px; padding: 0; margin: -4px 0;">|</div>
+<div class="d-flex align-items-center"><span class="d-flex justify-content-center align-items-center border bg-info text-white border-info" style="width: 25px; height: 25px; border-radius: 50%;"><span><small>C1</small></span></span><span class="ms-2 font-monospace small"><span><span class="dimmed">Add empty list</span></span></span></div>
+<p></p>
+<p><strong>Git supports two kinds of tags:</strong></p>
+<ol>
+<li><strong>A <span class="badge text-dark" style="background-color: rgba(13, 202, 240, 0.2);"><span class="large">lightweight tag</span></span></strong> is just a ref that points directly to a commit, like a branch that doesn’t move.</li>
+<li><strong>An <span class="badge text-dark" style="background-color: rgba(13, 202, 240, 0.2);"><span class="large">annotated tag</span></span></strong> is a full Git object that stores a reference to a commit along with metadata such as the tagger’s name, date, and a message.</li></ol>
+<p><strong>Annotated tags are generally preferred for versioning and public releases,</strong> while lightweight tags are often used for less formal purposes, such as marking a commit for your own reference.</p>
+<div class="non-printable">
+<span style="position: relative; top: 10px;" class="badge rounded-pill bg-secondary fs-6"><span><span aria-hidden="true" class="fas fa-laptop-code"></span></span> HANDS-ON: Adding tags</span>
+<div class="indented-level1">
+<box type="dark" seamless no-icon>
+<p><span style="position: relative; right: 25px;" class="badge rounded-pill text-dark bg-secondary text-white">0</span> <strong>Preparation: fork and clone the <a href="https://github.com/se-edu/samplerepo-preferences">samplerepo-preferences</a>.</strong> Use the cloned repo in your computer for the following steps.</p>
 <tabs>
-  <tab><template #header>Sourcetree</template>
-    <div><p>Right-click on the commit (in the graphical revision graph) you want to tag and choose <code class="hljs inline no-lang" v-pre>Tag…</code>.</p>
-<p>Specify the tag name e.g. <code class="hljs inline no-lang" v-pre>v1.0</code> and click <code class="hljs inline no-lang" v-pre>Add Tag</code>.</p>
-<p>The added tag will appear in the revision graph view.</p>
-<pic src="/se-book/gitAndGithub/tag/images/sourcetree_1.png" height="70"></pic>
-<p></p></div></tab>
   <tab><template #header>CLI</template>
-    <div><p>To add a tag to the current commit as <code class="hljs inline no-lang" v-pre>v1.0</code>:</p>
-<pre><code class="no-line-numbers hljs" v-pre><span>$ git tag –a v1.0
-</span></code></pre><p>To view tags:</p>
-<pre><code class="no-line-numbers hljs" v-pre><span>$ git tag
-</span></code></pre><p>To learn how to add a tag to a past commit, go to the <a href="https://git-scm.com/book/en/v2/Git-Basics-Tagging">‘Git Basics – Tagging’ page of the git-scm book</a> and refer the ‘Tagging Later’ section.</p></div></tab></tabs>
-<p>After adding a tag to a commit, you can use the tag to refer to that commit, as an alternative to using the hash.</p>
+<p><span style="position: relative; right: 25px;" class="badge rounded-pill text-dark bg-secondary text-white">1</span> <strong>Add a lightweight tag to the current commit</strong> as <code class="hljs inline no-lang" v-pre>v1.0</code>:</p>
+<pre><code class="no-line-numbers hljs bash" v-pre><span>git tag v1.0
+</span></code></pre><p><span style="position: relative; right: 25px;" class="badge rounded-pill text-dark bg-secondary text-white">2</span> <strong>Verify the tag was added.</strong>
+To view tags:</p>
+<pre><code class="no-line-numbers hljs bash" v-pre><span>git tag
+</span></code></pre><div class="d-flex">
+<div class="me-3">
+<span><span><strong><span class="dimmed">⤷</span></strong></span></span></div>
+<div class="flex-grow-1">
+<pre><code class="no-line-numbers hljs bash" v-pre><span>v1.0
+</span></code></pre></div></div>
+<p>To view tags in the context of the revision graph:</p>
+<pre><code class="no-line-numbers hljs bash" v-pre><span>git <span class="hljs-built_in">log</span> --oneline --decorate
+</span></code></pre><div class="d-flex">
+<div class="me-3">
+<span><span><strong><span class="dimmed">⤷</span></strong></span></span></div>
+<div class="flex-grow-1">
+<pre><code class="no-line-numbers hljs bash" v-pre><span><span>507bb74 (HEAD -&gt; master, <span class="highlighted">tag: v1.0</span>, origin/master, origin/HEAD) Add donuts
+</span></span><span>de97f08 Add cake
+</span><span>5e6733a Add bananas
+</span><span>3398df7 Add food.txt
+</span></code></pre></div></div>
+<p><span style="position: relative; right: 25px;" class="badge rounded-pill text-dark bg-secondary text-white">3</span> <strong>Use the tag to refer to the commit</strong> e.g., <code class="hljs inline no-lang" v-pre>git show v1.0</code> should show the changes in the tagged commit.</p>
+<p><span style="position: relative; right: 25px;" class="badge rounded-pill text-dark bg-secondary text-white">4</span> <strong>Add an annotated tag to an earlier commit</strong>. The example below adds a tag <code class="hljs inline no-lang" v-pre>v0.9</code> to the commit <code class="hljs inline no-lang" v-pre>HEAD~2</code> with the message <code class="hljs inline no-lang" v-pre>First beta release</code>. The <code class="hljs inline no-lang" v-pre>-a</code> switch tells Git this is an annotated tag.</p>
+<pre><code class="no-line-numbers hljs bash" v-pre><span>git tag -a v0.9  HEAD~2 -m <span class="hljs-string">&quot;First beta release&quot;</span>
+</span></code></pre><p><span style="position: relative; right: 25px;" class="badge rounded-pill text-dark bg-secondary text-white">5</span> <strong>Check the new annotated tag</strong>. While both types of tags appear similarly in the revision graph, the <code class="hljs inline no-lang" v-pre>show</code> command on an annotated tag will show the details of the tag and the details of the commit it points to.</p>
+<pre><code class="no-line-numbers hljs bash" v-pre><span>git show v0.9
+</span></code></pre><div class="d-flex">
+<div class="me-3">
+<span><span><strong><span class="dimmed">⤷</span></strong></span></span></div>
+<div class="flex-grow-1">
+<pre><code class="no-line-numbers hljs bash" v-pre><span><span class="highlighted">tag v0.9</span>
+</span><span><span class="highlighted">Tagger: ... &lt;...@...&gt;</span>
+</span><span><span class="highlighted">Date:   Sun Jun ...</span>
+</span><span><span class="highlighted"></span>
+</span><span><span class="highlighted">First beta release</span>
+</span><span>
+</span><span>commit ....999087124af... (tag: v0.9)
+</span><span>Author: ... &lt;...@...&gt;
+</span><span>Date:   Sat Jun ...
+</span><span>
+</span><span>    Add figs to fruits.txt
+</span><span>
+</span><span>diff --git a/fruits.txt b/fruits.txt
+</span><span>index a8a0a01..7d0a594 100644
+</span><span><span class="hljs-comment"># rest of the diff goes here</span>
+</span></code></pre></div></div></tab>
+  <tab class="d-print-none"><template #header>Sourcetree</template>
+<p>Right-click on the commit (in the graphical revision graph) you want to tag and choose <code class="hljs inline no-lang" v-pre>Tag…</code>.</p>
+<p>Specify the tag name e.g. <code class="hljs inline no-lang" v-pre>v1.0</code> and click <code class="hljs inline no-lang" v-pre>Add Tag</code>.</p>
+<p>Configure tag properties in the next dialog and press <code class="hljs inline no-lang" v-pre>Add</code>. For example, you can choose whether to make it a lightweight tag or an annotated tag (default).</p>
+<pic eager src="/se-book/gitAndGithub/tag/images/sourcetreeAddTag.png" width="400"></pic>
+<p></p>
+<p>Tags will appear as labels in the revision graph, as seen below. To see the details of an annotated tag, you need to use the menu indicated in the screenshot.</p>
+<pic eager src="/se-book/gitAndGithub/tag/images/sourcetreeSeeTagDetails.png" width="500"></pic>
+<p></p></tab></tabs></box></div></div>
+<p><strong>If you need to change what a tag points to, you must delete the old one and create a new tag with the same name.</strong> This is because tags are designed to be fixed references to a specific commit, and there is no built-in mechanism to 'move' a tag.</p>
+<div class="non-printable">
+<span style="position: relative; top: 10px;" class="badge rounded-pill bg-secondary fs-6"><span><span aria-hidden="true" class="fas fa-laptop-code"></span></span> HANDS-ON: Deleting/moving tags</span>
+<div class="indented-level1">
+<box type="dark" seamless no-icon>
+<p><strong>Move the <code class="hljs inline no-lang" v-pre>v1.0</code> tag to the commit <code class="hljs inline no-lang" v-pre>HEAD~1</code></strong>, by deleting it first and creating it again at the destination commit.</p>
+<tabs>
+  <tab><template #header>CLI</template>
+<p><strong>Delete the previous <code class="hljs inline no-lang" v-pre>v1.0</code> tag</strong> by using the <code class="hljs inline no-lang" v-pre>-d</code> switch. Add it again to the other commit, as before.</p>
+<pre><code class="no-line-numbers hljs bash" v-pre><span>git tag -d v1.0
+</span><span>git tag v1.0 HEAD~1
+</span></code></pre></tab>
+  <tab class="d-print-none"><template #header>Sourcetree</template>
+<p>The same dialog used to add a tag can be used to delete and even move a tag. Note that the 'moving' here translates to deleting and re-adding behind the scene.</p>
+<pic src="/se-book/gitAndGithub/tag/images/sourcetreeMoveTag.png" width="500"></pic></tab></tabs></box></div></div>
 <box type="warning" seamless>
-<p><strong>Tags are different from commit messages</strong>, in purpose and in form. A commit message is a description of the commit that is <em>part of</em> the commit itself. A tags is a short name for a commit, which exists as a separate entity that <em>points to</em> a commit.</p></box></div>
+<p><strong>Tags are different from commit messages</strong>, in purpose and in form. A commit message is a description of the commit that is <em>part of</em> the commit itself. A tags is a short name for a commit, which you can use to address a commit.</p></box>
+<p><strong>Pushing commits to a remote does not push tags automatically.</strong> You need to push tags specifically.</p>
+
+<div class="non-printable">
+<span style="position: relative; top: 10px;" class="badge rounded-pill bg-secondary fs-6"><span><span aria-hidden="true" class="fas fa-laptop-code"></span></span> HANDS-ON: Pushing tags to a remote</span>
+<div class="indented-level1">
+<box type="dark" seamless no-icon>
+<p><strong>Push tags you created earlier to the remote.</strong></p>
+<box type="info" seamless>
+<p>You can go to your remote on GitHub link <code class="hljs inline no-lang" v-pre>https://github.com/{USER}/{REPO}/tags</code> (e.g., <code class="hljs inline no-lang" v-pre>https://github.com/johndoe/samplerepo-prefrences/tags</code>) to verify the tag is present there.</p>
+<pic src="/se-book/gitAndGithub/tag/images/githubListTags.png" width="300"></pic>
+<p>Note how GitHub assumes these tags are meant as releases, and automatically provides zip and tar.gz archives of the repo (as at that tag).</p></box>
+<tabs>
+  <tab><template #header>CLI</template>
+ 
+<p><span style="position: relative; right: 25px;" class="badge rounded-pill text-dark bg-secondary text-white">1</span> <strong>Push a specific tag in the local repo to the remote</strong> (e.g., <code class="hljs inline no-lang" v-pre>v1.0</code>) using the <code class="hljs inline no-lang" v-pre>git push &lt;origin&gt; &lt;tag-name&gt;</code> command.</p>
+<pre><code class="no-line-numbers hljs bash" v-pre><span>git push origin v1.0
+</span></code></pre><box type="tip" seamless>
+<p>In addition to verifying the tag's presence via GitHub, you can also use the following command to list the tags presently in the remote.</p>
+<pre><code class="no-line-numbers hljs bash" v-pre><span>git ls-remote --tags origin
+</span></code></pre></box>
+<p><span style="position: relative; right: 25px;" class="badge rounded-pill text-dark bg-secondary text-white">2</span> <strong>Delete a tag in the remote</strong>, using the <code class="hljs inline no-lang" v-pre>git push --delete &lt;remote&gt; &lt;tag-name&gt;</code> command.</p>
+<pre><code class="no-line-numbers hljs bash" v-pre><span>git push --delete origin v1.0
+</span></code></pre><p><span style="position: relative; right: 25px;" class="badge rounded-pill text-dark bg-secondary text-white">3</span> <strong>Push all tags to the remote repo</strong>, using the <code class="hljs inline no-lang" v-pre>git push &lt;remote&gt; --tags</code> command.</p>
+<pre><code class="no-line-numbers hljs bash" v-pre><span>git push origin --tags
+</span></code></pre></tab>
+  <tab class="d-print-none"><template #header>Sourcetree</template>
+<p>To push a specific tag, use the following menu:</p>
+<pic src="/se-book/gitAndGithub/tag/images/sourcetreePushTag.png" width="400"></pic>
+<p>To push all tags, you can tick the <code class="hljs inline no-lang" v-pre>Push all tags</code> option when pushing commits:</p>
+<pic src="/se-book/gitAndGithub/tag/images/sourcetreePushAllTags.png" width="500"></pic></tab></tabs>
+</box></div></div>
+</div>
 <div></div></div></div>

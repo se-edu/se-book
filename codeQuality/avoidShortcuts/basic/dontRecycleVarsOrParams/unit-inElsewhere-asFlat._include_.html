@@ -1,18 +1,17 @@
-<div></div><p></p>
 <p><span class="dimmed"><strong><span>Implementation → Code Quality → Error-Prone Practices → Basic →
 </span></strong></span></p>
 <div id="title-and-body">
-<div><h4 id="don-t-recycle-variables-or-parameters"><span id="don-t-recycle-variables-or-parameters" class="anchor"></span><span>Don't recycle variables or parameters</span><a class="fa fa-anchor" href="#don-t-recycle-variables-or-parameters" onclick="event.stopPropagation()"></a></h4></div>
+<div><h4 id="don-t-recycle-variables-or-parameters"><span>Don't recycle variables or parameters</span><a class="fa fa-anchor" href="#don-t-recycle-variables-or-parameters" onclick="event.stopPropagation()"></a></h4></div>
 <div id="main">
 <div>
 <ul>
-<li>Use one variable for one purpose. Do not reuse a variable for a different purpose other than its intended one, just because the data type is the same.</li>
-<li>Do not reuse formal parameters as local variables inside the method.</li></ul>
+<li><strong>Use one variable for one purpose.</strong> Do not reuse a variable for a different purpose other than its intended one, just because the data type is the same.</li>
+<li><strong>Do not <em>reuse</em> formal parameters as local variables</strong> inside the method.</li></ul>
 <box>
 <p><span style="color: red"><span><strong><span aria-hidden="true" class="fas fa-thumbs-down"></span> Bad</strong></span></span></p>
 <div class="alt-java">
-<pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">double</span> <span class="hljs-title">computeRectangleArea</span><span class="hljs-params">(<span class="hljs-keyword">double</span> length, <span class="hljs-keyword">double</span> width)</span> </span>{
-</span><span>    length = length * width;
+<pre><code class="no-line-numbers hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">double</span> <span class="hljs-title">computeRectangleArea</span><span class="hljs-params">(<span class="hljs-keyword">double</span><span> <span class="highlighted">length</span>, </span><span class="hljs-keyword">double</span> width)</span> </span>{
+</span><span><span>    <span class="highlighted">length</span> = length * width;  </span><span class="hljs-comment">// parameter reused as a variable</span>
 </span><span>    <span class="hljs-keyword">return</span> length;
 </span><span>}
 </span></code></pre></div>
@@ -23,7 +22,7 @@
 </span></code></pre></div>
 <p><span style="color: green"><span><strong><span aria-hidden="true" class="fas fa-thumbs-up"></span> Good</strong></span></span></p>
 <div class="alt-java">
-<pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">double</span> <span class="hljs-title">computeRectangleArea</span><span class="hljs-params">(<span class="hljs-keyword">double</span> length, <span class="hljs-keyword">double</span> width)</span> </span>{
+<pre><code class="no-line-numbers hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">double</span> <span class="hljs-title">computeRectangleArea</span><span class="hljs-params">(<span class="hljs-keyword">double</span> length, <span class="hljs-keyword">double</span> width)</span> </span>{
 </span><span>    <span class="hljs-keyword">double</span> area;
 </span><span>    area = length * width;
 </span><span>    <span class="hljs-keyword">return</span> area;

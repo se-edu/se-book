@@ -1,178 +1,159 @@
-<div></div><p></p>
 <p><span class="dimmed"><strong><span>Tools → Git and GitHub →
 </span></strong></span></p>
 <div id="title-and-body">
-<div><h4 id="push-uploading-data-to-other-repos"><span id="push-uploading-data-to-other-repos" class="anchor"></span><span><code class="hljs inline no-lang" v-pre>push</code>: Uploading data to other repos</span><a class="fa fa-anchor" href="#push-uploading-data-to-other-repos" onclick="event.stopPropagation()"></a></h4></div>
+<div><h4 id="updating-the-remote-repo"><span>Updating the Remote Repo</span><a class="fa fa-anchor" href="#updating-the-remote-repo" onclick="event.stopPropagation()"></a></h4></div>
 <div id="main">
 <div>
-<div id="simple-push">
-<p>Given below is a scenario you can try in order to learn how to <trigger trigger="click" for="modal:githubPushing-rcsPushing">push</trigger> commits to a remote repo hosted on GitHub:</p>
-<modal large id="modal:githubPushing-rcsPushing"><template #header>Project Management → Revision Control → Remote Repositories →</template>
-  <div>
-<p><strong>You can <mark><em>push</em></mark> new commits in one repo to another repo</strong> which will copy the new commits onto the destination repo. Note that pushing to a repo requires you to have write-access to it. Furthermore, you can push between repos only if those repos have a shared history among them (i.e., one was created by copying the other at some point in the past).</p></div></modal>
-<p><strong>1. Fork</strong> an existing GitHub repo (e.g., <a href="https://github.com/se-edu/samplerepo-things">samplerepo-things</a>) to your GitHub account.</p>
-<p><strong>2. Clone the fork</strong> (not the original) to your computer.</p>
-<p><strong>3. Commit</strong> some changes in your local repo.</p>
-<p><strong>4. Push</strong> the new commits to your fork on GitHub</p>
-<tabs>
-  <tab><template #header>Sourcetree</template>
-    <div><p>Click the <code class="hljs inline no-lang" v-pre>Push</code> button on the main menu, ensure the settings are as follows in the next dialog, and click the <code class="hljs inline no-lang" v-pre>Push</code> button on the dialog.</p>
-<pic src="/se-book/gitAndGithub/push/images/sourcetree_1.png" height="150"></pic>
-<p></p></div></tab>
-  <tab><template #header>CLI</template>
-    <div><p>Use the command <code class="hljs inline no-lang" v-pre>git push origin master</code>. Enter your Github username and password when prompted.</p></div></tab></tabs>
-<p><strong>5. Add a few more commits, and <trigger trigger="click" for="modal:push-tag">tag</trigger> some of them.</strong></p>
-<modal large id="modal:push-tag"><template #header>Tools → Git and GitHub → <code class="hljs inline no-lang" v-pre>tag</code>: Naming commits</template>
-  <div><p><span id="outcomes"><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can tag commits using Git</span></p>
-<p><span id="title"><code class="hljs inline no-lang" v-pre>tag</code>: Naming commits</span></p>
-<div id="body">
-<p><strong>Each Git commit is uniquely identified by a hash</strong> e.g., <code class="hljs inline no-lang" v-pre>d670460b4b4aece5915caf5c68d12f560a9fe3e4</code>. As you can imagine, using such an identifier is not very convenient for our day-to-day use. As a solution, Git allows adding a more human-readable <em>tag</em> to a commit e.g., <code class="hljs inline no-lang" v-pre>v1.0-beta</code>.</p>
-<p>Here's how you can tag a commit in a local repo:</p>
-<tabs>
-  <tab><template #header>Sourcetree</template>
-    <div><p>Right-click on the commit (in the graphical revision graph) you want to tag and choose <code class="hljs inline no-lang" v-pre>Tag…</code>.</p>
-<p>Specify the tag name e.g. <code class="hljs inline no-lang" v-pre>v1.0</code> and click <code class="hljs inline no-lang" v-pre>Add Tag</code>.</p>
-<p>The added tag will appear in the revision graph view.</p>
-<pic src="/se-book/gitAndGithub/tag/images/sourcetree_1.png" height="70"></pic>
-<p></p></div></tab>
-  <tab><template #header>CLI</template>
-    <div><p>To add a tag to the current commit as <code class="hljs inline no-lang" v-pre>v1.0</code>:</p>
-<pre><code class="no-line-numbers hljs" v-pre><span>$ git tag –a v1.0
-</span></code></pre><p>To view tags:</p>
-<pre><code class="no-line-numbers hljs" v-pre><span>$ git tag
-</span></code></pre><p>To learn how to add a tag to a past commit, go to the <a href="https://git-scm.com/book/en/v2/Git-Basics-Tagging">‘Git Basics – Tagging’ page of the git-scm book</a> and refer the ‘Tagging Later’ section.</p></div></tab></tabs>
-<p>After adding a tag to a commit, you can use the tag to refer to that commit, as an alternative to using the hash.</p>
-<box type="warning" seamless>
-<p><strong>Tags are different from commit messages</strong>, in purpose and in form. A commit message is a description of the commit that is <em>part of</em> the commit itself. A tags is a short name for a commit, which exists as a separate entity that <em>points to</em> a commit.</p></box></div>
-<div id="extras"></div></div></modal>
-<p><strong>6. Push the new commits <mark><em>and</em> the tags</mark>.</strong></p>
-<tabs>
-  <tab><template #header>Sourcetree</template>
-    <div><p>Push similar to before, but ensure the <code class="hljs inline no-lang" v-pre>[ ] Push all tags</code> option in the push dialog is ticked as well.
+<div class="non-printable">
+<div class="border border-success pt-0 ps-1 pb-1 pe-1 border-bottom-0 rounded-top" style="background-color: #e6fff2">
+<div class="indented">
 <br>
-<pic src="/se-book/gitAndGithub/push/images/pushTags.png" width="500"></pic></p></div></tab>
-  <tab><template #header>CLI</template>
-    <div><p>A normal push does not include tags. After pushing the commits (as before), push tags to the repo as well:</p>
-<p>To push a specific tag:</p>
-<pre><code class="no-line-numbers hljs" v-pre><span>$ git push origin v1.0b
-</span></code></pre><p>To push all tags:</p>
-<pre><code class="no-line-numbers hljs" v-pre><span>$ git push origin --tags
-</span></code></pre></div></tab></tabs></div>
-<box>
-<p><strong><strong>You can push to repos other than the one you cloned from</strong></strong>, as long as the target repo and your repo have a shared history.</p>
-<ol>
-<li><trigger trigger="click" for="modal:push-addRemoteForNormalPushing">Add the GitHub repo URL as a remote</trigger>, if you haven't done so already.</li>
-<li>Push to the target repo.</li></ol>
-<modal large id="modal:push-addRemoteForNormalPushing"><template #header>Git &amp; GitHub → Pull →</template>
-  <div>
-<h5 id="working-with-multiple-remotes"><span id="working-with-multiple-remotes" class="anchor"></span>Working with multiple remotes<a class="fa fa-anchor" href="#working-with-multiple-remotes" onclick="event.stopPropagation()"></a></h5>
-<p><strong>When you clone a repo, Git automatically adds a <em>remote</em> repo named <code class="hljs inline no-lang" v-pre>origin</code></strong> to your repo configuration. As you know, you can pull commits from that repo. As you know, <trigger trigger="click" for="modal:gitPull-rcsMultipleRepos">a Git repo can work with remote repos other than the one it was cloned from</trigger>.</p>
-<modal large id="modal:gitPull-rcsMultipleRepos"><template #header>Project Management → Revision Control → Remote Repositories →</template>
-  <div>
-<p><strong>A repo can work with any number of other repositories as long as they have a shared history</strong> e.g., <code class="hljs inline no-lang" v-pre>repo1</code> can pull from (or push to) <code class="hljs inline no-lang" v-pre>repo2</code> and <code class="hljs inline no-lang" v-pre>repo3</code> if they have a shared history between them.</p></div></modal>
-<p><strong>To communicate with another remote repo, you can first add it as a <em>remote</em> of your repo</strong>. Here is an example scenario you can follow to learn how to pull from another repo:</p>
-<tabs>
-  <tab><template #header>Sourcetree</template>
-    <div><ol>
-<li>
-<p>Open the local repo in Sourcetree. Suggested: Use your local clone of the <code class="hljs inline no-lang" v-pre>samplerepo-things</code> repo.</p></li>
-<li>
-<p>Choose <code class="hljs inline no-lang" v-pre>Repository</code> → <code class="hljs inline no-lang" v-pre>Repository Settings</code> menu option.</p></li>
-<li>
-<p>Add a new <em>remote</em> to the repo with the following values.</p>
-<pic src="/se-book/gitAndGithub/pull/images/fillRemoteInfoForSourceTree.png" width="450"></pic>
+<div id="overview">
+<p>The third step of backing up a local repo on GitHub: <strong>push a copy of the local repo to the remote repo</strong>.</p></div>
+<span><small>This lesson covers that part.</small></span></div></div>
+<br></div>
+<p><strong>You can <span class="badge text-dark" style="background-color: rgba(13, 202, 240, 0.2);"><span class="large">push</span></span> content of one repository to another</strong>. Pushing can transfer Git history (e.g., past commits) as well as files in the working directory. Note that pushing to a remote repo requires you to have write-access to it.</p>
+<p>When pushing to a remote repo, you typically need to specify the following information:</p>
 <ul>
-<li><code class="hljs inline no-lang" v-pre>Remote name</code>: the name you want to assign to the remote repo e.g., <code class="hljs inline no-lang" v-pre>upstream1</code></li>
-<li><code class="hljs inline no-lang" v-pre>URL/path</code>: the URL of your repo (ending in <code class="hljs inline no-lang" v-pre>.git</code>) that. Suggested: <code class="hljs inline no-lang" v-pre>https://github.com/se-edu/samplerepo-things-2.git</code> (<a href="https://github.com/se-edu/samplerepo-things-2"><code class="hljs inline no-lang" v-pre>samplerepo-things-2</code></a> is another repo that has a shared history with <code class="hljs inline no-lang" v-pre>samplerepo-things</code>)</li>
-<li><code class="hljs inline no-lang" v-pre>Username</code>: your GitHub username<br><br></li></ul></li>
-<li>
-<p>Now, you can fetch or pull (pulling will fetch the branch <em>and</em> merge the new code to the current branch) from the added repo as you did before <mark>but choose the remote name of the repo you want to pull from</mark> (instead of <code class="hljs inline no-lang" v-pre>origin</code>):<br>
-Click the <code class="hljs inline no-lang" v-pre>Fetch</code> button or the <code class="hljs inline no-lang" v-pre>Pull</code> button first.<br>
-<pic src="/se-book/gitAndGithub/pull/images/sourcetree_3.png" height="160"></pic></p>
-<p></p>
-<box type="tip" seamless>
-<p>If the <code class="hljs inline no-lang" v-pre>Remote branch to pull</code> dropdown is empty, click the <code class="hljs inline no-lang" v-pre>Refresh</code> button on its right.</p></box></li>
-<li>
-<p>If the pull from the <code class="hljs inline no-lang" v-pre>samplerepo-things-2</code> was successful, you should have received one more commit into your local repo.</p></li></ol></div></tab>
-  <tab><template #header>CLI</template>
-    <div><ol>
-<li>
-<p>Navigate to the folder containing the local repo.</p></li>
-<li>
-<p>Set the new remote repo as a <em>remote</em> of the local repo.<br>
-command: <code class="hljs inline no-lang" v-pre>git remote add {remote_name} {remote_repo_url}</code><br>
-e.g., <code class="hljs inline no-lang" v-pre>git remote add upstream1 https://github.com/johndoe/foobar.git</code></p></li>
-<li>
-<p>Now you can fetch or pull (pulling will fetch the branch <em>and</em> merge the new code to the current branch) from the new remote.<br>
-e.g., <code class="hljs inline no-lang" v-pre>git fetch upstream1 master</code> followed by <code class="hljs inline no-lang" v-pre>git merge upstream1/master</code>, or,<br>
-<code class="hljs inline no-lang" v-pre>git pull upstream1 master</code></p></li></ol></div></tab></tabs></div></modal>
+<li>The name of the remote (e.g., <code class="hljs inline no-lang" v-pre>origin</code>).</li>
+<li>The name of your current local branch (e.g., <code class="hljs inline no-lang" v-pre>master</code>).</li></ul>
+<p><strong>If this is the first time you are pushing this branch to the remote repo, you can also ask Git to <span class="badge text-dark" style="background-color: rgba(13, 202, 240, 0.2);"><span class="large">track</span></span> this remote/branch pairing</strong> (e.g., remember that this local <code class="hljs inline no-lang" v-pre>master</code> branch is <em>tracking</em> the <code class="hljs inline no-lang" v-pre>master</code> branch in the <tooltip><template #content>'upstream' is commonly used to refer to the remote repo connected to a local repo</template>upstream</tooltip> repo <code class="hljs inline no-lang" v-pre>origin</code> i.e., local <code class="hljs inline no-lang" v-pre>master</code> branch is tracking upstream <code class="hljs inline no-lang" v-pre>origin/master</code> branch), so in future you can push the same remote/branch without needing to specify them again.</p>
+<div class="non-printable">
+<span style="position: relative; top: 10px;" class="badge rounded-pill bg-secondary fs-6"><span><span aria-hidden="true" class="fas fa-laptop-code"></span></span> HANDS-ON: Pushing a local repo to an empty remote repo</span>
+<div class="indented-level1">
+<box type="dark" seamless no-icon>
+<p>Here, we assume you already have a local repo that is connected to an empty remote repo, from previous hands-on practicals:</p>
 <tabs>
-  <tab><template #header>Sourcetree</template>
-    <div><p>Push your repo to the new remote the usual way, but select the name of target remote instead of <code class="hljs inline no-lang" v-pre>origin</code> and remember to select the <code class="hljs inline no-lang" v-pre>Track</code> checkbox.<br>
-<pic src="/se-book/gitAndGithub/push/images/pushToRemote.png" width="470"></pic></p></div></tab>
   <tab><template #header>CLI</template>
-    <div><p>Push to the new remote the usual way  e.g., <code class="hljs inline no-lang" v-pre>git push upstream1 master</code> (assuming you gave the name <code class="hljs inline no-lang" v-pre>upstream1</code> to the remote).</p></div></tab></tabs></box>
-<box>
-<p><strong><strong>You can even push an entire local repository to GitHub</strong></strong>, to form an entirely new remote repository. For example, you created a local repo and worked with it for a while but now you want to upload it onto GitHub (as a backup or to share it with others). The steps are given below.</p>
-<p><strong>1. Create an <mark>empty</mark> remote repo on GitHub.</strong></p>
+    <div><pre><code class="no-line-numbers hljs bash" v-pre><span><span class="hljs-comment"># format: git push -u &lt;remote-repo-name&gt; &lt;branch-name&gt;</span>
+</span><span>git push -u origin master
+</span></code></pre><p>Explanation:</p>
+<ul>
+<li><code class="hljs inline no-lang" v-pre>push</code>: the Git sub-command that pushes the current local repo content to a remote repo</li>
+<li><code class="hljs inline no-lang" v-pre>origin</code>: name of the remote</li>
+<li><code class="hljs inline no-lang" v-pre>master</code>: branch to push</li>
+<li><code class="hljs inline no-lang" v-pre>-u</code> (or <code class="hljs inline no-lang" v-pre>--set-upstream</code>): the flag that tells Git to track that this local <code class="hljs inline no-lang" v-pre>master</code> is tracking <code class="hljs inline no-lang" v-pre>origin/master</code> branch</li></ul></div></tab>
+  <tab class="d-print-none"><template #header>Sourcetree</template>
+    <div><p>Click the <code class="hljs inline no-lang" v-pre>Push</code> button on the buttons ribbon at the top.</p>
+<annotate src="/se-book/gitAndGithub/images/sourcetreeTopMenu.png" width="400" alt="Sourcetree top menu">
+  <a-point x="34%" y="5%"><template #content><p>Look within this box</p></template>
+    <div style="width: 45px; height: 50px; border: 2px solid red; margin: 20px auto;"></div></a-point></annotate>
+<p>In the next dialog, ensure the settings are as follows, ensure the <code class="hljs inline no-lang" v-pre>Track</code> option is selected, and click the <code class="hljs inline no-lang" v-pre>Push</code> button on the dialog.</p>
+<annotate src="/se-book/gitAndGithub/push/images/sourcetreePushToEmptyRemote.png" width="500" alt="push to empty remote">
+<a-point x="90%" y="40%"><template #content><p>Look within this box</p></template>
+<div style="width: 45px; height: 50px; border: 2px solid red; margin: 20px auto;"></div></a-point></annotate></div></tab></tabs></box></div></div>
+<p><strong>The push command can be used repeatedly to send further updates to another repo</strong> e.g., to update the remote with commits you created since you pushed the first time.</p>
+<div class="non-printable">
+<span style="position: relative; top: 10px;" class="badge rounded-pill bg-secondary fs-6"><span><span aria-hidden="true" class="fas fa-laptop-code"></span></span> HANDS-ON: Pushing to send further updates to a repo</span>
+<div class="indented-level1">
+<box type="dark" seamless no-icon>
+<p>Add a few more commits to your local repo, and push those commits to the remote repo, as follows:</p>
+<p><span style="position: relative; right: 25px;" class="badge rounded-pill text-dark bg-secondary text-white">1</span> <strong>Commit</strong> some changes in your local repo.</p>
+<p><span style="position: relative; right: 25px;" class="badge rounded-pill text-dark bg-secondary text-white">2</span> <strong>Push</strong> the new commits to your fork on GitHub</p>
+<tabs>
+  <tab><template #header>CLI</template>
+    <div><p>Optionally, you can run the <code class="hljs inline no-lang" v-pre>git status</code> command, which should confirm that your local branch is 'ahead' by one commit (i.e., the local branch has one new commit that is not in the corresponding branch in the remote repo).</p>
+<pre><code class="no-line-numbers, hljs bash" v-pre><span>On branch master
+</span><span><span class="highlighted">Your branch is ahead of <span class="hljs-string">&#x27;origin/master&#x27;</span> by 1 commit.</span>
+</span><span>  (use <span class="hljs-string">&quot;git push&quot;</span> to publish your <span class="hljs-built_in">local</span> commits)
+</span><span>
+</span><span>nothing to commit, working tree clean
+</span></code></pre><p>To push the newer commit(s) to the remote, any of the following commands should work:</p>
+<ul>
+<li><code class="hljs inline no-lang" v-pre>git push origin master</code></li>
+<li><code class="hljs inline no-lang" v-pre>git push origin</code><br>
+(due to tracking you set up earlier, Git will assume you are pushing the<code class="hljs inline no-lang" v-pre>master</code> branch)</li>
+<li><code class="hljs inline no-lang" v-pre>git push</code><br>
+(due to tracking, Git will assume you are pushing to the remote <code class="hljs inline no-lang" v-pre>origin</code> and to the branch <code class="hljs inline no-lang" v-pre>master</code> i.e., <code class="hljs inline no-lang" v-pre>origin/master</code>)</li></ul></div></tab>
+  <tab class="d-print-none"><template #header>Sourcetree</template>
+    <div><p>Before pushing the new commit, Sourcetree will indicate that your local branch is 'ahead' by one commit (i.e., the local branch has one new commit that is not in the corresponding branch in the remote repo).</p>
+<pic eager src="/se-book/gitAndGithub/push/images/sourcetreeLocalBranchAhead.png" height="100"></pic>
+<p></p>
+<p>To push, click the <code class="hljs inline no-lang" v-pre>Push</code> button on the top buttons ribbon, ensure the settings are as follows in the next dialog, and click the <code class="hljs inline no-lang" v-pre>Push</code> button on the dialog.</p>
+<pic eager src="/se-book/gitAndGithub/push/images/sourcetreePushDialog.png" height="150"></pic>
+<p></p></div></tab></tabs></box></div></div>
+<p><strong>Note that you can push between two repos only if those repos have a shared history</strong> among them (i.e., one should have been created by copying the other).</p></div>
+<div>
+<panel tags="git-mastery" class="non-printable" type="danger"><template #header><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> EXERCISE: <code class="hljs inline no-lang" v-pre>push-over</code></p></template>
+<p><strong>To download</strong> the exercise,</p>
+<ul>
+<li>navigate inside the <code class="hljs inline no-lang" v-pre>gitmastery-exercies</code> folder.</li>
+<li>run <code class="hljs inline no-lang" v-pre>gitmastery download push-over</code> command.</li></ul>
+<hr class="dashed border-danger">
+<p><strong class="text-danger">Your task:</strong></p>
+<div class="indented-level1">
+<p>Create a new commit on your local copy <code class="hljs inline no-lang" v-pre>push-this</code> and push the change to the remote.</p></div>
+<hr class="dashed border-danger">
+<p><strong>To verify</strong> your work,</p>
+<ul>
+<li>navigate to anywhere inside the <code class="hljs inline no-lang" v-pre>gitmastery-exercies/push-over</code> folder <span class="dimmed">(or any sub-folder of it)</span>.</li>
+<li>run the <code class="hljs inline no-lang" v-pre>gitmastery verify</code> command.</li></ul>
+<div class="bg-light">
+<p><div class="text-center"><small><a href="https://git-mastery.github.io/app/">Git-Mastery <strong>commands list</strong></a> | <a href="https://github.com/git-mastery/git-mastery/issues">Report Git-Mastery <strong>bugs</strong></a></small></div></p></div></panel>
+<a id="pushToMultipleRepos"></a>
+<panel class="non-printable" type="warning" peek><template #header><p><span><span aria-hidden="true" class="fas fa-diamond-turn-right"></span></span> DETOUR: <strong>Pushing to Multiple Reposs</strong></p></template>
+<div><p><strong>You can push to any number of repos</strong>, as long as the target repos and your repo have a shared history.</p>
 <ol>
-<li>
-<p>Login to your GitHub account and choose to create a new Repo. <br>
-<pic src="/se-book/gitAndGithub/push/images/createNewRemoteRepo.png" width="150"></pic></p></li>
-<li>
-<p>In the next screen, provide a name for your repo but keep the <code class="hljs inline no-lang" v-pre>Initialize this repo ...</code> tick box unchecked.<br>
-<pic src="/se-book/gitAndGithub/push/images/fillNewRepoInfo.png" width="600"></pic></p></li>
-<li>
-<p>Note the URL of the repo. It will be of the form <code class="hljs inline no-lang" v-pre>https://github.com/{your_user_name}/{repo_name}.git</code>.<br>
-e.g., <code class="hljs inline no-lang" v-pre>https://github.com/johndoe/foobar.git</code> (note the <code class="hljs inline no-lang" v-pre>.git</code> at the end)<br>
-<pic src="/se-book/gitAndGithub/push/images/newRepoUrl.png" width="450"></pic></p></li></ol>
-<p><strong>2. <trigger trigger="click" for="modal:push-addRemote">Add the GitHub repo URL as a remote</trigger></strong> of the local repo. You can give it the name <code class="hljs inline no-lang" v-pre>origin</code> (or any other name).</p>
-<modal large id="modal:push-addRemote"><template #header>Git &amp; GitHub → Pull →</template>
+<li><trigger trigger="click" for="modal:push-addRemoteForNormalPushing">Add the GitHub repo URL as a remote</trigger> while giving a suitable name (e.g., <code class="hljs inline no-lang" v-pre>upstream</code>, <code class="hljs inline no-lang" v-pre>central</code>, <code class="hljs inline no-lang" v-pre>production</code>, <code class="hljs inline no-lang" v-pre>backup</code> ...), if you haven't done so already.</li>
+<li>Push to the target repo -- remember to select the correct target repo when you do.</li></ol>
+<modal large id="modal:push-addRemoteForNormalPushing"><template #header>Git &amp; GitHub → Push →</template>
   <div>
-<h5 id="working-with-multiple-remotes-2"><span id="working-with-multiple-remotes-2" class="anchor"></span>Working with multiple remotes<a class="fa fa-anchor" href="#working-with-multiple-remotes-2" onclick="event.stopPropagation()"></a></h5>
-<p><strong>When you clone a repo, Git automatically adds a <em>remote</em> repo named <code class="hljs inline no-lang" v-pre>origin</code></strong> to your repo configuration. As you know, you can pull commits from that repo. As you know, <trigger trigger="click" for="modal:gitPull-rcsMultipleRepos">a Git repo can work with remote repos other than the one it was cloned from</trigger>.</p>
+<div class="non-printable">
+<div class="border border-success pt-0 ps-1 pb-1 pe-1 border-bottom-0 rounded-top" style="background-color: #e6fff2">
+<div class="indented">
+<br>
+<div id="overview">
+<p>The second step of backing up a local repo on GitHub: <strong>link the <em>local</em> repo with the <em>remote</em> repo</strong> on GitHub.</p></div>
+<span><small>This lesson covers that part.</small></span></div></div>
+<br></div>
+<p><strong>A Git <span class="badge text-dark" style="background-color: rgba(13, 202, 240, 0.2);"><span class="large">remote</span></span> is a reference to a repository hosted elsewhere</strong>, usually on a server like GitHub, GitLab, or Bitbucket. It allows your local Git repo to communicate with another remote copy — for example, to upload to commits that you created locally but missing in the remote copy.</p>
+<p><strong>By <em>adding a remote</em>, you are informing the local repo details of a remote repo it can communicate with</strong>, for example, where the repo exists and what name to use to refer to the remote.</p>
+<p><strong>The URL you use to connect to a remote repo depends on the protocol — HTTPS or SSH</strong>:</p>
+<ul>
+<li><strong>HTTPS URLs use the standard web protocol</strong> and starts with <code class="hljs inline no-lang" v-pre>https://github.com/</code> (for GitHub users). e.g.,<pre><code class="hljs" v-pre><span><span>https://github.com/username/repo-name<span style="background-color: yellow;">.git</span>
+</span></span></code></pre></li>
+<li><strong>SSH URLs use the secure shell protocol</strong> and starts with <code class="hljs inline no-lang" v-pre>git@github.com:</code>. e.g.,<pre><code class="hljs" v-pre><span><span>git@github.com:username/repo-name<span style="background-color: yellow;">.git</span>
+</span></span></code></pre></li></ul>
+<p><strong>A Git repo can have multiple remotes.</strong> You simply need to specify different names for each remote (e.g., <code class="hljs inline no-lang" v-pre>upstream</code>, <code class="hljs inline no-lang" v-pre>central</code>, <code class="hljs inline no-lang" v-pre>production</code>, <code class="hljs inline no-lang" v-pre>other-backup</code> ...).</p>
+<div class="non-printable">
+<span style="position: relative; top: 10px;" class="badge rounded-pill bg-secondary fs-6"><span><span aria-hidden="true" class="fas fa-laptop-code"></span></span> HANDS-ON: Add a remote to a repo</span>
+<div class="indented-level1">
+<box type="dark" seamless no-icon>
+<p>Add the empty remote repo you created on GitHub as a remote of a local repo you have.</p>
+<tabs>
+  <tab><template #header>CLI</template>
+ 
+<p><span style="position: relative; right: 25px;" class="badge rounded-pill text-dark bg-secondary text-white">1</span> In a terminal, navigate to the folder containing the local repo <code class="hljs inline no-lang" v-pre>things</code> your created earlier.</p>
+<p><span style="position: relative; right: 25px;" class="badge rounded-pill text-dark bg-secondary text-white">2</span> <strong>List the current list of remotes</strong> using the <code class="hljs inline no-lang" v-pre>git remote -v</code> command, for a sanity check. No output is expected if there are no remotes yet.</p>
+<p><span style="position: relative; right: 25px;" class="badge rounded-pill text-dark bg-secondary text-white">3</span> <strong>Add a new remote repo</strong> using the <code class="hljs inline no-lang" v-pre>git remote add &lt;remote-name&gt; &lt;remote-url&gt;</code> command.<br>
+i.e., if using HTTPS, <code class="hljs inline no-lang" v-pre>git remote add origin https://github.com/{YOUR-GITHUB-USERNAME}/things.git</code></p>
+<p><span style="position: relative; right: 25px;" class="badge rounded-pill text-dark bg-secondary text-white">4</span> <strong>List the remotes again to verify</strong> the new remote was added.</p>
+<pre><code class="no-line-numbers hljs bash" v-pre><span>git remote -v
+</span></code></pre><div class="d-flex">
+<div class="me-3">
+<span><span><strong><span class="dimmed">⤷</span></strong></span></span></div>
+<div class="flex-grow-1">
+<pre><code class="no-line-numbers hljs" v-pre><span><span><span class="highlighted">origin</span><span>  https://github.com/johndoe/things.git (<span class="highlighted">fetch</span>)
+</span></span></span><span><span><span class="highlighted">origin</span><span>  https://github.com/johndoe/things.git (<span class="highlighted">push</span>)
+</span></span></span></code></pre></div></div>
+<p><span><span aria-hidden="true" class="fas fa-info-circle"></span></span> The same remote will be listed twice, to show that you can do two operations (<code class="hljs inline no-lang" v-pre>fetch</code> and <code class="hljs inline no-lang" v-pre>push</code>) using this remote. You can ignore that for now. The important thing is the remote you added is being listed.</p></tab>
+  <tab class="d-print-none"><template #header>Sourcetree</template>
+<p><span style="position: relative; right: 25px;" class="badge rounded-pill text-dark bg-secondary text-white">1</span> <strong>Open the local repo</strong> in Sourcetree.</p>
+<p><span style="position: relative; right: 25px;" class="badge rounded-pill text-dark bg-secondary text-white">2</span> <strong>Choose <code class="hljs inline no-lang" v-pre>Repository</code> → <code class="hljs inline no-lang" v-pre>Repository Settings</code></strong> menu option.</p>
+<p><span style="position: relative; right: 25px;" class="badge rounded-pill text-dark bg-secondary text-white">3</span> <strong>Add a new <em>remote</em></strong> to the repo with the following values.</p>
+   <pic eager src="/se-book/gitAndGithub/setRemote/images/fillRemoteInfoForSourceTree.png" width="450"></pic>
+<ul>
+<li><code class="hljs inline no-lang" v-pre>Remote name</code>: the name you want to assign to the remote repo i.e., <code class="hljs inline no-lang" v-pre>origin</code></li>
+<li><code class="hljs inline no-lang" v-pre>URL/path</code>: the URL of your remote repo<br>
+i.e., <code class="hljs inline no-lang" v-pre>https://github.com/{YOUR-GITHUB-USERNAME}/things.git</code></li>
+<li><code class="hljs inline no-lang" v-pre>Username</code>: your GitHub username<br><br></li></ul>
+<p><span style="position: relative; right: 25px;" class="badge rounded-pill text-dark bg-secondary text-white">4</span> <strong>Verify the remote was added</strong> by going to <code class="hljs inline no-lang" v-pre>Repository</code> → <code class="hljs inline no-lang" v-pre>Repository Settings</code> again.</p></tab></tabs>
 
-<p><strong>To communicate with another remote repo, you can first add it as a <em>remote</em> of your repo</strong>. Here is an example scenario you can follow to learn how to pull from another repo:</p>
+<p><span style="position: relative; right: 25px;" class="badge rounded-pill text-dark bg-secondary text-white">5</span> <strong>Add another <em>remote</em></strong>, to verify that a repo can have multiple remotes. You can use any name (e.g., <code class="hljs inline no-lang" v-pre>backup</code> and any URL for this).</p></box></div></div></div></modal>
 <tabs>
-  <tab><template #header>Sourcetree</template>
-    <div><ol>
-<li>
-<p>Open the local repo in Sourcetree. Suggested: Use your local clone of the <code class="hljs inline no-lang" v-pre>samplerepo-things</code> repo.</p></li>
-<li>
-<p>Choose <code class="hljs inline no-lang" v-pre>Repository</code> → <code class="hljs inline no-lang" v-pre>Repository Settings</code> menu option.</p></li>
-<li>
-<p>Add a new <em>remote</em> to the repo with the following values.</p>
-<pic src="/se-book/gitAndGithub/pull/images/fillRemoteInfoForSourceTree.png" width="450"></pic>
-<ul>
-<li><code class="hljs inline no-lang" v-pre>Remote name</code>: the name you want to assign to the remote repo e.g., <code class="hljs inline no-lang" v-pre>upstream1</code></li>
-<li><code class="hljs inline no-lang" v-pre>URL/path</code>: the URL of your repo (ending in <code class="hljs inline no-lang" v-pre>.git</code>) that. Suggested: <code class="hljs inline no-lang" v-pre>https://github.com/se-edu/samplerepo-things-2.git</code> (<a href="https://github.com/se-edu/samplerepo-things-2"><code class="hljs inline no-lang" v-pre>samplerepo-things-2</code></a> is another repo that has a shared history with <code class="hljs inline no-lang" v-pre>samplerepo-things</code>)</li>
-<li><code class="hljs inline no-lang" v-pre>Username</code>: your GitHub username<br><br></li></ul></li>
-<li>
-<p>Now, you can fetch or pull (pulling will fetch the branch <em>and</em> merge the new code to the current branch) from the added repo as you did before <mark>but choose the remote name of the repo you want to pull from</mark> (instead of <code class="hljs inline no-lang" v-pre>origin</code>):<br>
-Click the <code class="hljs inline no-lang" v-pre>Fetch</code> button or the <code class="hljs inline no-lang" v-pre>Pull</code> button first.<br>
-<pic src="/se-book/gitAndGithub/pull/images/sourcetree_3.png" height="160"></pic></p>
-<p></p>
-<box type="tip" seamless>
-<p>If the <code class="hljs inline no-lang" v-pre>Remote branch to pull</code> dropdown is empty, click the <code class="hljs inline no-lang" v-pre>Refresh</code> button on its right.</p></box></li>
-<li>
-<p>If the pull from the <code class="hljs inline no-lang" v-pre>samplerepo-things-2</code> was successful, you should have received one more commit into your local repo.</p></li></ol></div></tab>
   <tab><template #header>CLI</template>
-    <div><ol>
-<li>
-<p>Navigate to the folder containing the local repo.</p></li>
-<li>
-<p>Set the new remote repo as a <em>remote</em> of the local repo.<br>
-command: <code class="hljs inline no-lang" v-pre>git remote add {remote_name} {remote_repo_url}</code><br>
-e.g., <code class="hljs inline no-lang" v-pre>git remote add upstream1 https://github.com/johndoe/foobar.git</code></p></li>
-<li>
-<p>Now you can fetch or pull (pulling will fetch the branch <em>and</em> merge the new code to the current branch) from the new remote.<br>
-e.g., <code class="hljs inline no-lang" v-pre>git fetch upstream1 master</code> followed by <code class="hljs inline no-lang" v-pre>git merge upstream1/master</code>, or,<br>
-<code class="hljs inline no-lang" v-pre>git pull upstream1 master</code></p></li></ol></div></tab></tabs></div></modal>
-<p><strong>3. Push the repo</strong> to the remote.</p>
-<tabs>
-  <tab><template #header>Sourcetree</template>
-    <div><pic src="/se-book/gitAndGithub/push/images/pushToRemote.png" width="470"></pic></div></tab>
-  <tab><template #header>CLI</template>
-    <div><p>Push each branch to the new remote the usual way <mark>but use the <code class="hljs inline no-lang" v-pre>-u</code> flag</mark> to inform Git that you wish to <tooltip><template #content>i.e., remember which branch in the remote repo corresponds to which branch in the local repo</template>track</tooltip> the branch.<br>
-e.g., <code class="hljs inline no-lang" v-pre>git push -u origin master</code></p></div></tab></tabs></box></div>
-<div></div></div></div>
+ 
+<p>e.g., <code class="hljs inline no-lang" v-pre>git push backup master</code></p></tab>
+  <tab class="d-print-none"><template #header>Sourcetree</template>
+<pic eager src="/se-book/gitAndGithub/push/images/sourcetreePushDialog.png" width="470"></pic></tab></tabs>
+</div></panel></div></div></div>

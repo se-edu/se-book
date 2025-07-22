@@ -1,8 +1,7 @@
-<div></div><p></p>
 <p><span class="dimmed"><strong><span>Implementation → Error Handling → Assertions →
 </span></strong></span></p>
 <div id="title-and-body">
-<div><h4 id="what"><span id="what" class="anchor"></span><span>What</span><a class="fa fa-anchor" href="#what" onclick="event.stopPropagation()"></a></h4></div>
+<div><h4 id="what"><span>What</span><a class="fa fa-anchor" href="#what" onclick="event.stopPropagation()"></a></h4></div>
 <div id="main">
 <div>
 <p><strong><em>Assertions</em> are used to define assumptions about the program state so that the runtime can verify them.</strong> An assertion failure indicates a possible bug in the code <span class="dimmed">because the code has resulted in a program state that violates an assumption about how the code <em>should</em> behave</span>.</p>
@@ -11,6 +10,7 @@
 <p><strong>If the runtime detects an <em>assertion failure</em>, it typically takes some drastic action</strong> such as terminating the execution with an error message. This is because an assertion failure indicates a possible bug and the sooner the execution stops, the safer it is.</p>
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In the Java code below, suppose you set an assertion that <code class="hljs inline no-lang" v-pre>timeout</code> returned by <code class="hljs inline no-lang" v-pre>Config.getTimeout()</code> is greater than <code class="hljs inline no-lang" v-pre>0</code>. Now, if <code class="hljs inline no-lang" v-pre>Config.getTimeout()</code> returns <code class="hljs inline no-lang" v-pre>-1</code> in a specific execution of this line, the runtime can detect it as an <em>assertion failure</em> -- i.e. an assumption about the expected behavior of the code turned out to be wrong which could potentially be the result of a bug -- and take some drastic action such as terminating the execution.</p>
-<pre><code class="hljs java" v-pre><span><span class="hljs-keyword">int</span> timeout = Config.getTimeout(); 
+<pre><code class="no-line-numbers hljs java" v-pre><span><span class="hljs-keyword">int</span> timeout = Config.getTimeout();
+</span><span><span class="hljs-comment">// set assertion here ...</span>
 </span></code></pre></box></div>
 <div></div></div></div>

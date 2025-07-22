@@ -1,12 +1,11 @@
-<div></div><p></p>
 <p><span class="dimmed"><strong><span>Implementation → Code Quality → Comments → Intermediate →
 </span></strong></span></p>
 <div id="title-and-body">
-<div><h4 id="explain-what-and-why-not-how"><span id="explain-what-and-why-not-how" class="anchor"></span><span>Explain WHAT and WHY, not HOW</span><a class="fa fa-anchor" href="#explain-what-and-why-not-how" onclick="event.stopPropagation()"></a></h4></div>
+<div><h4 id="explain-what-and-why-not-how"><span>Explain WHAT and WHY, not HOW</span><a class="fa fa-anchor" href="#explain-what-and-why-not-how" onclick="event.stopPropagation()"></a></h4></div>
 <div id="main">
 <div>
-<p>Comments should explain the <em>what</em> and <em>why</em> aspects of the code, rather than the <em>how</em> aspect.</p>
-<p><span style="color:green"><span><span aria-hidden="true" class="fas fa-check"></span></span></span> <strong>What</strong>: The specification of what the code is <em>supposed</em> to do. The reader can compare such comments to the implementation to verify if the implementation is correct.</p>
+<p><strong>Comments should explain the <em>WHAT</em> and <em>WHY</em> aspects of the code, rather than the <em>HOW</em> aspect.</strong></p>
+<p><span style="color:green"><span><span aria-hidden="true" class="fas fa-check"></span></span></span> <strong>WHAT: The specification of what the code is <em>supposed</em> to do.</strong> The reader can compare such comments to the implementation to verify if the implementation is correct.</p>
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example: This method is possibly buggy because the implementation does not seem to match the comment. In this case, the comment could help the reader to detect the bug.</p>
 <pre><code class="hljs java" v-pre><span><span class="hljs-comment">/** Removes all spaces from the {<span class="hljs-doctag">@code</span> input} */</span>
@@ -14,20 +13,20 @@
 </span><span>    input.trim();
 </span><span>}
 </span></code></pre></box>
-<p><span style="color:green"><span><span aria-hidden="true" class="fas fa-check"></span></span></span> <strong>Why</strong>: The rationale for the current implementation.</p>
+<p><span style="color:green"><span><span aria-hidden="true" class="fas fa-check"></span></span></span> <strong>WHY: The rationale for the current implementation.</strong></p>
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example: Without this comment, the reader will not know the reason for calling this method.</p>
 <pre><code class="hljs java" v-pre><span><span class="hljs-comment">// Remove spaces to comply with IE23.5 formatting rules</span>
 </span><span>compact(input);
 </span></code></pre></box>
-<p><span style="color:red"><span><span aria-hidden="true" class="fas fa-times"></span></span></span> <strong>How</strong>: The explanation for how the code works. This should already be apparent from the code, if the code is self-explanatory. Adding comments to explain the same thing is redundant.</p>
+<p><span style="color:red"><span><span aria-hidden="true" class="fas fa-times"></span></span></span> <strong>HOW: The explanation for how the code works.</strong> This should already be apparent from the code, if the code is self-explanatory. Adding comments to explain the same thing is redundant.</p>
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example:</p>
 <p><span style="color: red"><span><strong><span aria-hidden="true" class="fas fa-thumbs-down"></span> Bad</strong></span></span> <span class="dimmed">Reason: Comment explains how the code works.</span></p>
 <pre><code class="hljs java" v-pre><span><span class="hljs-comment">// return true if both left end and right end are correct</span>
 </span><span><span class="hljs-comment">//    or the size has not incremented</span>
 </span><span><span class="hljs-keyword">return</span> (left &amp;&amp; right) || (input.size() == size);
-</span></code></pre><p><span style="color: green"><span><strong><span aria-hidden="true" class="fas fa-thumbs-up"></span> Good</strong></span></span> <span class="dimmed">Reason: Code refactored to be self-explanatory. Comment no longer needed.</span></p>
+</span></code></pre><p><span style="color: green"><span><strong><span aria-hidden="true" class="fas fa-thumbs-up"></span> Good</strong></span></span> <span class="dimmed">Reason: The code is now self-explanatory -- the comment is no longer needed.</span></p>
 <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">boolean</span> isSameSize = (input.size() == size);
 </span><span><span class="hljs-keyword">return</span> (isLeftEndCorrect &amp;&amp; isRightEndCorrect) || isSameSize;
 </span></code></pre></box></div>

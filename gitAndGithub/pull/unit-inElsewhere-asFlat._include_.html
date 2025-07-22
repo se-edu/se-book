@@ -1,113 +1,162 @@
-<div></div><p></p>
 <p><span class="dimmed"><strong><span>Tools → Git and GitHub →
 </span></strong></span></p>
 <div id="title-and-body">
-<div><h4 id="pull-fetch-downloading-data-from-other-repos"><span id="pull-fetch-downloading-data-from-other-repos" class="anchor"></span><span><code class="hljs inline no-lang" v-pre>pull</code>, <code class="hljs inline no-lang" v-pre>fetch</code>: Downloading data from other repos</span><a class="fa fa-anchor" href="#pull-fetch-downloading-data-from-other-repos" onclick="event.stopPropagation()"></a></h4></div>
+<div><h4 id="downloading-data-into-a-local-repo"><span>Downloading Data Into a Local Repo</span><a class="fa fa-anchor" href="#downloading-data-into-a-local-repo" onclick="event.stopPropagation()"></a></h4></div>
 <div id="main">
 <div>
-<p>Here's a scenario you can try in order to learn how to <trigger trigger="click" for="modal:githubPull-rcsPulling">pull</trigger> commits from another repo to yours.</p>
-<modal large id="modal:githubPull-rcsPulling"><template #header>Project Management → Revision Control → Remote Repositories →</template>
-  <div>
-<p><strong>You can <mark><em>pull</em></mark> from one repo to another, to receive new commits in the second repo</strong>, but only if the repos have a shared history. Let's say some new commits were added to the <tooltip><template #content><em>upstream</em> repo is a term used to refer to the repo you cloned from</template>upstream repo</tooltip> after you cloned it and you would like to copy over those new commits to your own clone i.e., <mark>sync</mark> your clone with the upstream repo. In that case, you pull from the upstream repo to your clone.</p></div></modal>
-<p><strong>1. Clone a repo</strong> (e.g., the repo used in <trigger for="modal:clone-repository" trigger="click">[Git &amp; GitHub → Clone]</trigger>) to be used for this activity.</p>
-<p><strong>2. Delete the last few commits to simulate cloning the repo a few commits ago.</strong></p>
-<modal large id="modal:clone-repository"><template #header><strong>Clone Repository</strong></template>
-  <div><panel type="seamless" expanded>
-  <template #header><span class="card-title"><div><code class="hljs inline no-lang" v-pre>clone</code>: Copying a repo</div></span></template>
-<p><span class="badge bg-light text-dark"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can clone a remote repo</span></span></span></span></p><p></p><p></p>
-<p></p>
-  <div>
-<p>Given below is an example scenario you can try yourself to learn Git <trigger trigger="click" for="modal:gitCloning-rcsCloning">cloning</trigger>.</p>
-<modal large id="modal:gitCloning-rcsCloning"><template #header>Project Management → Revision Control → Remote Repositories →</template>
-  <div>
-<p><strong>You can <mark><em>clone</em></mark> a repo</strong> to create a copy of that repo in another location on your computer. The copy will even have the revision history of the original repo i.e., identical to the original repo. For example, you can clone a remote repo onto your computer to create a local copy of the remote repo.<br></p></div></modal>
-<p>Suppose you want to clone the sample repo <a href="https://github.com/se-edu/samplerepo-things">samplerepo-things</a> to your computer.</p>
-<box type="warning" seamless>
-<p>Note that the URL of the GitHub project is different from the URL you need to clone a repo in that GitHub project.
-e.g.</p>
-<p>GitHub project URL: <code class="hljs inline no-lang" v-pre>https://github.com/se-edu/samplerepo-things</code> <br>
-Git repo URL: <code class="hljs inline no-lang" v-pre>https://github.com/se-edu/samplerepo-things.git</code> (note the <code class="hljs inline no-lang" v-pre>.git</code> at the end)</p></box>
-<tabs>
-  <tab><template #header>Sourcetree</template>
-    <div><p><code class="hljs inline no-lang" v-pre>File</code> → <code class="hljs inline no-lang" v-pre>Clone / New…</code> and provide the URL of the repo and the destination directory.</p></div></tab>
-  <tab><template #header>CLI</template>
-    <div><p>You can use the <code class="hljs inline no-lang" v-pre>clone</code> command to clone a repo.</p>
-<p>Follow the instructions given <a href="https://help.github.com/articles/cloning-a-repository/">here</a>.</p></div></tab></tabs></div>
-  <div></div></panel></div></modal>
-<tabs>
-  <tab><template #header>Sourcetree</template>
-    <div><p>Right-click the target commit (i.e. the commit that is 2 commits behind the tip) and choose <code class="hljs inline no-lang" v-pre>Reset current branch to this commit</code>.</p>
-<pic src="/se-book/gitAndGithub/pull/images/rightClickOnTargetCommit.png" height="100"></pic>
-<p></p>
-<p>Choose the <code class="hljs inline no-lang" v-pre>Hard - …</code> option and click <code class="hljs inline no-lang" v-pre>OK</code>.</p>
-<pic src="/se-book/gitAndGithub/pull/images/sourcetree_1.png" height="120"></pic>
-<p></p>
-<p>This is what you will see.</p>
-<pic src="/se-book/gitAndGithub/pull/images/sourcetree_2.png" height="150"></pic>
-<p></p>
-<p>Note the following (cross-refer the screenshot above):</p>
-<p>Arrow marked as <code class="hljs inline no-lang" v-pre>a</code>: The local repo is now at this commit, marked by the <code class="hljs inline no-lang" v-pre>master</code> label.<br>
-Arrow marked as <code class="hljs inline no-lang" v-pre>b</code>: The <code class="hljs inline no-lang" v-pre>origin/master</code> label shows what is the latest commit in the <code class="hljs inline no-lang" v-pre>master</code> branch in the remote repo. <code class="hljs inline no-lang" v-pre>origin</code> is the default name given to the upstream repo you cloned from.</p></div></tab>
-  <tab><template #header>CLI</template>
-    <div><p>Use the <code class="hljs inline no-lang" v-pre>reset</code> command to delete commits at the tip of the revision history.</p>
-<pre><code class="no-line-numbers hljs" v-pre><span>$ git reset --hard HEAD~2
-</span></code></pre><p>More info on the <code class="hljs inline no-lang" v-pre>git reset</code> command can be found <a href="https://git-scm.com/docs/git-reset">here</a>.</p></div></tab></tabs>
-<p>Now, your local repo state is exactly how it would be if you had cloned the repo 2 commits ago, as if somebody has added two more commits to the remote repo since you cloned it.</p>
-<p><strong>3. Pull</strong> from the other repo: To get those missing commits to your local repo (i.e. to sync your local repo with upstream repo) you can do a pull.</p>
-<tabs>
-  <tab><template #header>Sourcetree</template>
-    <div><p>Click the <code class="hljs inline no-lang" v-pre>Pull</code> button in the main menu, choose <code class="hljs inline no-lang" v-pre>origin</code> and <code class="hljs inline no-lang" v-pre>master</code> in the next dialog, and click <code class="hljs inline no-lang" v-pre>OK</code>.</p>
-<pic src="/se-book/gitAndGithub/pull/images/sourcetree_3.png" height="160"></pic>
-<p></p>
-<p>Now you should see something like this where <code class="hljs inline no-lang" v-pre>master</code> and <code class="hljs inline no-lang" v-pre>origin/master</code> are both pointing the same commit.</p>
-<pic src="/se-book/gitAndGithub/pull/images/sourcetree_4.png" height="100"></pic>
-<p></p></div></tab>
-  <tab><template #header>CLI</template>
-    <div><pre><code class="no-line-numbers hljs" v-pre><span>$ git pull origin
-</span></code></pre></div></tab></tabs>
-<p></p>
-<p><span><span aria-hidden="true" class="fas fa-info-circle"></span></span> <strong>You can also do a <code class="hljs inline no-lang" v-pre>fetch</code> instead of a <code class="hljs inline no-lang" v-pre>pull</code></strong> in which case the new commits will be downloaded to your repo but the working directory will remain at the current commit. To move the current state to the latest commit that was downloaded, you need to do a <code class="hljs inline no-lang" v-pre>merge</code>. A <code class="hljs inline no-lang" v-pre>pull</code> is a shortcut that does both those steps in one go.</p>
-<box>
-<div id="section-working-with-multiple-remotes">
-<h5 id="working-with-multiple-remotes"><span id="working-with-multiple-remotes" class="anchor"></span>Working with multiple remotes<a class="fa fa-anchor" href="#working-with-multiple-remotes" onclick="event.stopPropagation()"></a></h5>
-<p><strong>When you clone a repo, Git automatically adds a <em>remote</em> repo named <code class="hljs inline no-lang" v-pre>origin</code></strong> to your repo configuration. As you know, you can pull commits from that repo. As you know, <trigger trigger="click" for="modal:gitPull-rcsMultipleRepos">a Git repo can work with remote repos other than the one it was cloned from</trigger>.</p>
-<modal large id="modal:gitPull-rcsMultipleRepos"><template #header>Project Management → Revision Control → Remote Repositories →</template>
-  <div>
-<p><strong>A repo can work with any number of other repositories as long as they have a shared history</strong> e.g., <code class="hljs inline no-lang" v-pre>repo1</code> can pull from (or push to) <code class="hljs inline no-lang" v-pre>repo2</code> and <code class="hljs inline no-lang" v-pre>repo3</code> if they have a shared history between them.</p></div></modal>
-<p><strong>To communicate with another remote repo, you can first add it as a <em>remote</em> of your repo</strong>. Here is an example scenario you can follow to learn how to pull from another repo:</p>
-<tabs>
-  <tab><template #header>Sourcetree</template>
-    <div><ol>
-<li>
-<p>Open the local repo in Sourcetree. Suggested: Use your local clone of the <code class="hljs inline no-lang" v-pre>samplerepo-things</code> repo.</p></li>
-<li>
-<p>Choose <code class="hljs inline no-lang" v-pre>Repository</code> → <code class="hljs inline no-lang" v-pre>Repository Settings</code> menu option.</p></li>
-<li>
-<p>Add a new <em>remote</em> to the repo with the following values.</p>
-<pic src="/se-book/gitAndGithub/pull/images/fillRemoteInfoForSourceTree.png" width="450"></pic>
+<div class="non-printable">
+<div class="border border-success pt-0 ps-1 pb-1 pe-1 border-bottom-0 rounded-top" style="background-color: #e6fff2">
+<div class="indented">
+<br>
+<div id="overview">
+<p>When there are new changes in the remote, you need to <strong><em>pull</em> those changes down to your local repo</strong>.</p></div>
+<span><small>This lesson covers that part.</small></span></div></div>
+<br></div>
+<p><strong>There are two steps to bringing down changes from a remote repository into a local repository: <em>fetch</em> and <em>merge</em>.</strong></p>
 <ul>
-<li><code class="hljs inline no-lang" v-pre>Remote name</code>: the name you want to assign to the remote repo e.g., <code class="hljs inline no-lang" v-pre>upstream1</code></li>
-<li><code class="hljs inline no-lang" v-pre>URL/path</code>: the URL of your repo (ending in <code class="hljs inline no-lang" v-pre>.git</code>) that. Suggested: <code class="hljs inline no-lang" v-pre>https://github.com/se-edu/samplerepo-things-2.git</code> (<a href="https://github.com/se-edu/samplerepo-things-2"><code class="hljs inline no-lang" v-pre>samplerepo-things-2</code></a> is another repo that has a shared history with <code class="hljs inline no-lang" v-pre>samplerepo-things</code>)</li>
-<li><code class="hljs inline no-lang" v-pre>Username</code>: your GitHub username<br><br></li></ul></li>
-<li>
-<p>Now, you can fetch or pull (pulling will fetch the branch <em>and</em> merge the new code to the current branch) from the added repo as you did before <mark>but choose the remote name of the repo you want to pull from</mark> (instead of <code class="hljs inline no-lang" v-pre>origin</code>):<br>
-Click the <code class="hljs inline no-lang" v-pre>Fetch</code> button or the <code class="hljs inline no-lang" v-pre>Pull</code> button first.<br>
-<pic src="/se-book/gitAndGithub/pull/images/sourcetree_3.png" height="160"></pic></p>
-<p></p>
-<box type="tip" seamless>
-<p>If the <code class="hljs inline no-lang" v-pre>Remote branch to pull</code> dropdown is empty, click the <code class="hljs inline no-lang" v-pre>Refresh</code> button on its right.</p></box></li>
-<li>
-<p>If the pull from the <code class="hljs inline no-lang" v-pre>samplerepo-things-2</code> was successful, you should have received one more commit into your local repo.</p></li></ol></div></tab>
+<li><strong><span class="badge text-dark" style="background-color: rgba(13, 202, 240, 0.2);"><span class="large">Fetch</span></span> is the act of downloading the latest changes from the remote repository, but without applying them to your current branch yet.</strong> It updates your local copy of the remote branches so you can see what has changed remotely, but your own work and branch remain untouched.</li>
+<li><strong><span class="badge text-dark" style="background-color: rgba(13, 202, 240, 0.2);"><span class="large">Merge</span></span> is what you do after fetching, to actually incorporate the fetched changes into your current branch.</strong> It combines your work with the changes from the remote branch, creating a new commit if needed.</li></ul>
+
+<div class="non-printable">
+<span style="position: relative; top: 10px;" class="badge rounded-pill bg-secondary fs-6"><span><span aria-hidden="true" class="fas fa-laptop-code"></span></span> HANDS-ON: Fetch and merge from a remote</span>
+<div class="indented-level1">
+<box type="dark" seamless no-icon>
+<p><span style="position: relative; right: 25px;" class="badge rounded-pill text-dark bg-secondary text-white">1</span> <strong>Clone the repo <a href="https://github.com/se-edu/samplerepo-finances">se-edu/samplerepo-finances</a></strong>. It has 3 commits. Your clone now has a remote <code class="hljs inline no-lang" v-pre>origin</code> pointing to the remote repo you cloned from.</p>
+<p><span style="position: relative; right: 25px;" class="badge rounded-pill text-dark bg-secondary text-white">2</span> <strong>Change the remote <code class="hljs inline no-lang" v-pre>origin</code></strong> to point to <a href="https://github.com/se-edu/samplerepo-finances2.git">samplerepo-finances2</a>. This remote repo is a copy of the one you cloned, but it has two extra commits.</p>
+<tabs>
   <tab><template #header>CLI</template>
-    <div><ol>
-<li>
-<p>Navigate to the folder containing the local repo.</p></li>
-<li>
-<p>Set the new remote repo as a <em>remote</em> of the local repo.<br>
-command: <code class="hljs inline no-lang" v-pre>git remote add {remote_name} {remote_repo_url}</code><br>
-e.g., <code class="hljs inline no-lang" v-pre>git remote add upstream1 https://github.com/johndoe/foobar.git</code></p></li>
-<li>
-<p>Now you can fetch or pull (pulling will fetch the branch <em>and</em> merge the new code to the current branch) from the new remote.<br>
-e.g., <code class="hljs inline no-lang" v-pre>git fetch upstream1 master</code> followed by <code class="hljs inline no-lang" v-pre>git merge upstream1/master</code>, or,<br>
-<code class="hljs inline no-lang" v-pre>git pull upstream1 master</code></p></li></ol></div></tab></tabs></div></box></div>
+ 
+<pre><code class="no-line-numbers hljs bash" v-pre><span>git remote set-url origin https://github.com/se-edu/samplerepo-finances-2.git
+</span></code></pre></tab>
+  <tab class="d-print-none"><template #header>Sourcetree</template>
+<p>Go to <code class="hljs inline no-lang" v-pre>Repository</code> → <code class="hljs inline no-lang" v-pre>Repository settings ...</code> to update remotes.</p></tab></tabs>
+
+<p><span style="position: relative; right: 25px;" class="badge rounded-pill text-dark bg-secondary text-white">3</span> <strong>Verify the local repo is unaware of the extra commits</strong> in the remote.</p>
+<tabs>
+  <tab><template #header>CLI</template>
+ 
+<pre><code class="no-line-numbers hljs bash" v-pre><span>git status
+</span></code></pre><div class="d-flex">
+<div class="me-3">
+<span><span><strong><span class="dimmed">⤷</span></strong></span></span></div>
+<div class="flex-grow-1">
+<pre><code class="no-line-numbers hljs bash" v-pre><span>On branch master
+</span><span><span class="highlighted">Your branch is up to date with <span class="hljs-string">&#x27;origin/master&#x27;</span>.</span>
+</span><span>
+</span><span>nothing to commit, working tree clean
+</span></code></pre></div></div></tab>
+  <tab class="d-print-none"><template #header>Sourcetree</template>
+<p>The revision graph should look like the below:</p>
+<pic src="/se-book/gitAndGithub/pull/images/sourcetreeStartingPoint.png" width="500"></pic>
+<p></p>
+<p>If it looks like the below, it is possible that Sourcetree is auto-fetching data from the repo periodically.</p>
+<pic src="/se-book/gitAndGithub/pull/images/sourcetreeAfterFetching.png" width="500"></pic></tab></tabs>
+
+<p><span style="position: relative; right: 25px;" class="badge rounded-pill text-dark bg-secondary text-white">3</span> <strong>Fetch from the new remote.</strong></p>
+<tabs>
+  <tab><template #header>CLI</template>
+ 
+<p>Use the <code class="hljs inline no-lang" v-pre>git fetch &lt;remote&gt;</code> command to fetch changes from a remote. If the <code class="hljs inline no-lang" v-pre>&lt;remote&gt;</code> is not specified, the default remote <code class="hljs inline no-lang" v-pre>origin</code> will be used (which is not what we want in this case).</p>
+<pre><code class="no-line-numbers hljs bash" v-pre><span>git fetch other
+</span></code></pre><div class="d-flex">
+<div class="me-3">
+<span><span><strong><span class="dimmed">⤷</span></strong></span></span></div>
+<div class="flex-grow-1">
+<pre><code class="no-line-numbers hljs bash" v-pre><span>remote: Enumerating objects: 8, <span class="hljs-keyword">done</span>.
+</span><span>... <span class="hljs-comment"># more output ...</span>
+</span><span>   afbe966..cc6a151  master     -&gt; origin/master
+</span><span> * [new tag]         beta       -&gt; beta
+</span></code></pre></div></div></tab>
+  <tab class="d-print-none"><template #header>Sourcetree</template>
+<p>Click on the <code class="hljs inline no-lang" v-pre>Fetch</code> button on the top menu:<br></p>
+<annotate src="/se-book/gitAndGithub/images/sourcetreeTopMenu.png" width="400" alt="Sourcetree top menu">
+  <a-point x="45%" y="5%"><template #content><p>Look within this box</p></template>
+    <div style="width: 45px; height: 50px; border: 2px solid red; margin: 20px auto;"></div></a-point></annotate></tab></tabs>
+
+<p><span style="position: relative; right: 25px;" class="badge rounded-pill text-dark bg-secondary text-white">4</span> <strong>Verify the fetch worked</strong> i.e., the local repo is now aware of the two missing commits. Also observe how the tip of the <code class="hljs inline no-lang" v-pre>master</code> branch, the staging area, and the working directory remain unchanged after the fetch.</p>
+<tabs>
+  <tab><template #header>CLI</template>
+ 
+<p>Use the <code class="hljs inline no-lang" v-pre>git status</code> command to confirm the repo now knows that it is behind the remote repo.</p>
+<pre><code class="no-line-numbers hljs bash" v-pre><span>git status
+</span></code></pre><div class="d-flex">
+<div class="me-3">
+<span><span><strong><span class="dimmed">⤷</span></strong></span></span></div>
+<div class="flex-grow-1">
+<pre><code class="no-line-numbers hljs bash" v-pre><span>On branch master
+</span><span><span class="highlighted">Your branch is behind </span><span class="hljs-string highlighted">&#x27;origin/master&#x27;</span><span><span class="highlighted"> by 2 commits</span>, and can be fast-forwarded.
+</span></span><span>  (use <span class="hljs-string">&quot;git pull&quot;</span> to update your <span class="hljs-built_in">local</span> branch)
+</span><span>
+</span><span>nothing to commit, working tree clean
+</span></code></pre></div></div></tab>
+  <tab class="d-print-none"><template #header>Sourcetree</template>
+<p>Now, the revision graph should look something like the below. Note how the <code class="hljs inline no-lang" v-pre>origin/master</code> ref is now two commits ahead of the <code class="hljs inline no-lang" v-pre>master</code> ref.</p>
+<pic src="/se-book/gitAndGithub/pull/images/sourcetreeAfterFetching.png" width="500"></pic></tab></tabs>
+
+<p><span style="position: relative; right: 25px;" class="badge rounded-pill text-dark bg-secondary text-white">5</span> <strong>Merge the fetched changes.</strong></p>
+<tabs>
+  <tab><template #header>CLI</template>
+ 
+<p>Use the <code class="hljs inline no-lang" v-pre>git merge &lt;remote-tracking-branch&gt;</code> command to merge the fetched changes. Check the status and the revision graph to verify the branch tip has now moved by two more commits.</p>
+<pre><code class="no-line-numbers hljs bash" v-pre><span>git merge origin/master
+</span><span>
+</span><span>git status
+</span><span>git <span class="hljs-built_in">log</span> --oneline --decorate
+</span></code></pre></tab>
+  <tab class="d-print-none"><template #header>Sourcetree</template>
+<p>To merge the fetched changes, right-click on the latest commit on <code class="hljs inline no-lang" v-pre>origin/remote</code> branch and choose <code class="hljs inline no-lang" v-pre>Merge</code>.</p>
+<pic src="/se-book/gitAndGithub/pull/images/sourcetreeRightClickToMerge.png" width="400"></pic>
+<p>In the next dialog, choose as follows:<br>
+<pic src="/se-book/gitAndGithub/pull/images/sourcetreeMergeDialog.png" width="500"></pic></p>
+<p>The final result should be something like the below (same as the repo state before we started this hands-on practical):<br>
+<pic src="/se-book/gitAndGithub/pull/images/sourcetreeAfterMerging.png" width="500"></pic></p></tab></tabs>
+
+<p><span class="badge rounded-pill bg-warning text-dark"><span aria-hidden="true" class="fas fa-exclamation"></span></span> Note that merging the fetched changes can get complicated if there are multiple branches or the commits in the local repo conflicts with commits in the remote repo. We will address them when we learn more about Git branches, in a later lesson.</p></box></div></div>
+
+<p><strong><span class="badge text-dark" style="background-color: rgba(13, 202, 240, 0.2);"><span class="large">Pull</span></span> is a shortcut that combines fetch and merge</strong> — it fetches the latest changes from the remote and immediately merges them into your current branch. In practice, Git users typically use the pull instead of the fetch and merge.</p>
+<box type="info" seamless>
+<p><span class="badge text-dark" style="background-color: rgba(13, 202, 240, 0.2);"><span class="large">pull</span></span> = <span class="badge text-dark" style="background-color: rgba(13, 202, 240, 0.2);"><span class="large">fetch</span></span> + <span class="badge text-dark" style="background-color: rgba(13, 202, 240, 0.2);"><span class="large">merge</span></span></p></box>
+
+<div class="non-printable">
+<span style="position: relative; top: 10px;" class="badge rounded-pill bg-secondary fs-6"><span><span aria-hidden="true" class="fas fa-laptop-code"></span></span> HANDS-ON: Pull from a remote</span>
+<div class="indented-level1">
+<box type="dark" seamless no-icon>
+<p><span style="position: relative; right: 25px;" class="badge rounded-pill text-dark bg-secondary text-white">1</span> <strong>Similar to the previous hands-on practical, clone the repo</strong> <a href="https://github.com/se-edu/samplerepo-finances">se-edu/samplerepo-finances</a> (to a new location).<br>
+<strong>Change the remote</strong> <code class="hljs inline no-lang" v-pre>origin</code> to point to <a href="https://github.com/se-edu/samplerepo-finances2.git">samplerepo-finances2</a>.</p>
+<p><span style="position: relative; right: 25px;" class="badge rounded-pill text-dark bg-secondary text-white">2</span> <strong>Pull the newer commits from the remote</strong>, instead of a fetch followed by a merge.</p>
+<tabs>
+  <tab><template #header>CLI</template>
+ 
+<p>Use the <code class="hljs inline no-lang" v-pre>git pull &lt;remote&gt; &lt;branch&gt;</code> command to pull changes.</p>
+<pre><code class="no-line-numbers hljs bash" v-pre><span>git pull origin master
+</span></code></pre><p>The following works too. If the <code class="hljs inline no-lang" v-pre>&lt;remote&gt;</code> and <code class="hljs inline no-lang" v-pre>&lt;branch&gt;</code> are not specified, Git will pull to the current branch from the remote branch it is tracking.</p>
+<pre><code class="no-line-numbers hljs bash" v-pre><span>git pull
+</span></code></pre></tab>
+  <tab class="d-print-none"><template #header>Sourcetree</template>
+<p>Click on the <code class="hljs inline no-lang" v-pre>Pull</code> button on the top menu:<br></p>
+<annotate src="/se-book/gitAndGithub/images/sourcetreeTopMenu.png" width="400" alt="Sourcetree top menu">
+<a-point x="24%" y="5%"><template #content><p>Look within this box</p></template>
+<div style="width: 45px; height: 50px; border: 2px solid red; margin: 20px auto;"></div></a-point></annotate>
+<p></p>
+In the next dialog, choose as follows:<br>
+<pic src="/se-book/gitAndGithub/pull/images/sourcetreePullDialog.png" width="500"></pic></tab></tabs>
+
+<p><span style="position: relative; right: 25px;" class="badge rounded-pill text-dark bg-secondary text-white">3</span> <strong>Verify the outcome</strong> is same as the fetch + merge steps you did in the previous hands-on practical.</p></box></div></div>
+
+<p><strong>You can pull from any number of remote repos</strong>, provided the repos involved have a shared history. This can be useful when the upstream repo you forked from has some new commits that you wish to bring over to your copies of the repo (i.e., your fork and your local repo).</p>
+
+<div class="non-printable">
+<span style="position: relative; top: 10px;" class="badge rounded-pill bg-secondary fs-6"><span><span aria-hidden="true" class="fas fa-laptop-code"></span></span> HANDS-ON: Sync your repos with the upstream repo</span>
+<div class="indented-level1">
+<box type="dark" seamless no-icon>
+<p><strong>Fork <a href="https://github.com/se-edu/samplerepo-finances">se-edu/samplerepo-finances</a></strong> to your GitHub account.<br>
+<strong>Clone your fork to your computer</strong>.<br>
+Now, let's pretend that there are some new commits in upstream repo that you would like to bring over to your fork, and your local repo. Here are the steps:</p>
+<p><span style="position: relative; right: 25px;" class="badge rounded-pill text-dark bg-secondary text-white">1</span> <strong>Add the upstream repo <a href="https://github.com/se-edu/samplerepo-finances">se-edu/samplerepo-finances</a> as remote</strong> named <code class="hljs inline no-lang" v-pre>upstream</code> in your local repo.</p>
+<p><span style="position: relative; right: 25px;" class="badge rounded-pill text-dark bg-secondary text-white">2</span> <strong>Pull from the upstream repo.</strong> If there are new commits (in this case, there will be none), those will come over to your local repo. For example:</p>
+<pre><code class="no-line-numbers hljs bash" v-pre><span>git pull upstream master
+</span></code></pre><p>.<span style="position: relative; right: 25px;" class="badge rounded-pill text-dark bg-secondary text-white">3</span> <strong>Push to your fork.</strong> Any new commits you pulled from the upstream repo will now appear in your fork as well. For example:</p>
+<pre><code class="no-line-numbers hljs bash" v-pre><span>git push origin master
+</span></code></pre><p><span class="badge rounded-pill bg-success text-white"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> The method given above is the more 'standard' method of synchronising a fork with the upstream repo. In addition, platforms such as GitHub can provide other ways (example: GitHub's <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork">Sync fork</a> feature).</p></box></div></div>
+</div>
 <div></div></div></div>

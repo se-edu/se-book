@@ -1,8 +1,7 @@
-<div></div><p></p>
 <p><span class="dimmed"><strong><span>Tools → Git and GitHub →
 </span></strong></span></p>
 <div id="title-and-body">
-<div><h4 id="creating-prs"><span id="creating-prs" class="anchor"></span><span>Creating PRs</span><a class="fa fa-anchor" href="#creating-prs" onclick="event.stopPropagation()"></a></h4></div>
+<div><h4 id="creating-prs"><span>Creating PRs</span><a class="fa fa-anchor" href="#creating-prs" onclick="event.stopPropagation()"></a></h4></div>
 <div id="main">
 <div>
 <p>Suppose you want to propose some changes to a GitHub repo (e.g., <a href="https://github.com/se-edu/samplerepo-pr-practice">samplerepo-pr-practice</a>) as a <trigger trigger="click" for="modal:githubPullRequests-rcsPullRequests">pull request (PR)</trigger>.</p>
@@ -11,7 +10,7 @@
 <p>Given below is a scenario you can try in order to learn how to create PRs:</p>
 <modal large id="modal:githubPullRequests-rcsPullRequests"><template #header>Project Management → Revision Control → Remote Repositories →</template>
   <div>
-<p><strong>A <mark><em>pull request</em></mark> (PR for short) is a mechanism for contributing code to a remote repo,</strong> i.e., &quot;I'm <em>requesting</em> you to <em>pull</em> my proposed changes to your repo&quot;. For this to work, the two repos must have a shared history. The most common case is sending PRs from a fork to its <tooltip><template #content><em>upstream</em> repo is a repo you forked from</template>upstream</tooltip> repo.</p></div></modal>
+<p><strong>A <mark><em>pull request</em></mark> (PR for short) is a mechanism for contributing code to a remote repo</strong> i.e., &quot;I'm <em>requesting</em> you to <em>pull</em> my proposed changes to your repo&quot;. It's feature provided by RCS platforms such as GitHub. For this to work, the two repos must have a shared history. The most common case is sending PRs from a fork to its <tooltip><template #content><em>upstream</em> repo is a repo you forked from</template>upstream</tooltip> repo.</p></div></modal>
 <p><strong>1. Fork</strong> the repo onto your GitHub account.</p>
 <p><strong>2. Clone</strong> it onto your computer.</p>
 <p><strong>3. Commit</strong> your changes e.g., add a new file with some contents and commit it.</p>
@@ -26,76 +25,25 @@
 <p><strong><strong>[A] Pushing a new branch to a remote repo</strong></strong></p>
 <p>Let's see how you can push a branch that you created in your local repo to the remote repo. Note that this branch does not exist in the remote repo yet.</p>
 <p>Given below is how to push a branch named <code class="hljs inline no-lang" v-pre>add-intro</code> to your own fork named <code class="hljs inline no-lang" v-pre>samplerepo-pr-practice</code>.</p>
-<p>We assume that your local repo already has the remote added to it with the name <code class="hljs inline no-lang" v-pre>origin</code>. If that is not the case, you should first <trigger trigger="click" for="modal:remoteRepos-addRemoteForNormalPushing">configure your local repo to be able to communicate with the target remote repo</trigger>.</p>
-<modal large id="modal:remoteRepos-addRemoteForNormalPushing"><template #header>Git &amp; GitHub → Pull →</template>
-  <div>
-<h5 id="working-with-multiple-remotes"><span id="working-with-multiple-remotes" class="anchor"></span>Working with multiple remotes<a class="fa fa-anchor" href="#working-with-multiple-remotes" onclick="event.stopPropagation()"></a></h5>
-<p><strong>When you clone a repo, Git automatically adds a <em>remote</em> repo named <code class="hljs inline no-lang" v-pre>origin</code></strong> to your repo configuration. As you know, you can pull commits from that repo. As you know, <trigger trigger="click" for="modal:gitPull-rcsMultipleRepos">a Git repo can work with remote repos other than the one it was cloned from</trigger>.</p>
-<modal large id="modal:gitPull-rcsMultipleRepos"><template #header>Project Management → Revision Control → Remote Repositories →</template>
-  <div>
-<p><strong>A repo can work with any number of other repositories as long as they have a shared history</strong> e.g., <code class="hljs inline no-lang" v-pre>repo1</code> can pull from (or push to) <code class="hljs inline no-lang" v-pre>repo2</code> and <code class="hljs inline no-lang" v-pre>repo3</code> if they have a shared history between them.</p></div></modal>
-<p><strong>To communicate with another remote repo, you can first add it as a <em>remote</em> of your repo</strong>. Here is an example scenario you can follow to learn how to pull from another repo:</p>
+<p>We assume that your local repo already has the remote added to it with the name <code class="hljs inline no-lang" v-pre>origin</code>. If that is not the case, you should first configure your local repo to be able to communicate with the target remote repo.</p>
 <tabs>
-  <tab><template #header>Sourcetree</template>
-    <div><ol>
-<li>
-<p>Open the local repo in Sourcetree. Suggested: Use your local clone of the <code class="hljs inline no-lang" v-pre>samplerepo-things</code> repo.</p></li>
-<li>
-<p>Choose <code class="hljs inline no-lang" v-pre>Repository</code> → <code class="hljs inline no-lang" v-pre>Repository Settings</code> menu option.</p></li>
-<li>
-<p>Add a new <em>remote</em> to the repo with the following values.</p>
-<pic src="/se-book/gitAndGithub/pull/images/fillRemoteInfoForSourceTree.png" width="450"></pic>
-<ul>
-<li><code class="hljs inline no-lang" v-pre>Remote name</code>: the name you want to assign to the remote repo e.g., <code class="hljs inline no-lang" v-pre>upstream1</code></li>
-<li><code class="hljs inline no-lang" v-pre>URL/path</code>: the URL of your repo (ending in <code class="hljs inline no-lang" v-pre>.git</code>) that. Suggested: <code class="hljs inline no-lang" v-pre>https://github.com/se-edu/samplerepo-things-2.git</code> (<a href="https://github.com/se-edu/samplerepo-things-2"><code class="hljs inline no-lang" v-pre>samplerepo-things-2</code></a> is another repo that has a shared history with <code class="hljs inline no-lang" v-pre>samplerepo-things</code>)</li>
-<li><code class="hljs inline no-lang" v-pre>Username</code>: your GitHub username<br><br></li></ul></li>
-<li>
-<p>Now, you can fetch or pull (pulling will fetch the branch <em>and</em> merge the new code to the current branch) from the added repo as you did before <mark>but choose the remote name of the repo you want to pull from</mark> (instead of <code class="hljs inline no-lang" v-pre>origin</code>):<br>
-Click the <code class="hljs inline no-lang" v-pre>Fetch</code> button or the <code class="hljs inline no-lang" v-pre>Pull</code> button first.<br>
-<pic src="/se-book/gitAndGithub/pull/images/sourcetree_3.png" height="160"></pic></p>
-<p></p>
-<box type="tip" seamless>
-<p>If the <code class="hljs inline no-lang" v-pre>Remote branch to pull</code> dropdown is empty, click the <code class="hljs inline no-lang" v-pre>Refresh</code> button on its right.</p></box></li>
-<li>
-<p>If the pull from the <code class="hljs inline no-lang" v-pre>samplerepo-things-2</code> was successful, you should have received one more commit into your local repo.</p></li></ol></div></tab>
   <tab><template #header>CLI</template>
-    <div><ol>
-<li>
-<p>Navigate to the folder containing the local repo.</p></li>
-<li>
-<p>Set the new remote repo as a <em>remote</em> of the local repo.<br>
-command: <code class="hljs inline no-lang" v-pre>git remote add {remote_name} {remote_repo_url}</code><br>
-e.g., <code class="hljs inline no-lang" v-pre>git remote add upstream1 https://github.com/johndoe/foobar.git</code></p></li>
-<li>
-<p>Now you can fetch or pull (pulling will fetch the branch <em>and</em> merge the new code to the current branch) from the new remote.<br>
-e.g., <code class="hljs inline no-lang" v-pre>git fetch upstream1 master</code> followed by <code class="hljs inline no-lang" v-pre>git merge upstream1/master</code>, or,<br>
-<code class="hljs inline no-lang" v-pre>git pull upstream1 master</code></p></li></ol></div></tab></tabs></div></modal>
-<tabs>
-  <tab><template #header>Sourcetree</template>
+    <div><pre><code class="no-line-numbers hljs" v-pre><span>$ git push -u origin add-intro
+</span></code></pre><p>The <code class="hljs inline no-lang" v-pre>-u</code> (or <code class="hljs inline no-lang" v-pre>--set-upstream</code>) flag tells Git that you wish the local branch to 'track' the remote branch that will be created as a result of this push.</p>
+<p><span><span aria-hidden="true" class="fas fa-paperclip"></span></span> See <a href="https://git-scm.com/docs/git-push">git-scm.com/docs/git-push</a> for details of the <code class="hljs inline no-lang" v-pre>push</code> command.</p></div></tab>
+  <tab class="d-print-none"><template #header>Sourcetree</template>
     <div><ol>
 <li>Click on <code class="hljs inline no-lang" v-pre>Push</code> button, which opens up the Push dialog.</li>
 <li>Choose the remote that you wish to push the branch (assuming you've added that repo to your Sourcetree already).</li>
 <li>Select the branch(es) you want to push -- in this case, <code class="hljs inline no-lang" v-pre>add-intro</code>.<br>
 Ensure the <code class="hljs inline no-lang" v-pre>Track?</code> checkbox is ticked for the selected branch(es).</li>
 <li>Click <code class="hljs inline no-lang" v-pre>Push</code>.</li></ol>
-<pic src="/se-book/gitAndGithub/remoteBranches/images/pushBranchToFork.png" height="300"></pic>
-<p></p></div></tab>
-  <tab><template #header>CLI</template>
-    <div><pre><code class="no-line-numbers hljs" v-pre><span>$ git push -u origin add-intro
-</span></code></pre><p>The <code class="hljs inline no-lang" v-pre>-u</code> (or <code class="hljs inline no-lang" v-pre>--update</code>) flag tells Git that you wish the local branch to 'track' the remote branch that will be created as a result of this push.</p>
-<p><span><span aria-hidden="true" class="fas fa-paperclip"></span></span> See <a href="https://git-scm.com/docs/git-push">git-scm.com/docs/git-push</a> for details of the <code class="hljs inline no-lang" v-pre>push</code> command.</p></div></tab></tabs></div>
+<pic eager src="/se-book/gitAndGithub/remoteBranches/images/pushBranchToFork.png" height="300"></pic>
+<p></p></div></tab></tabs></div>
 <div id="pulling-a-new-branch">
 <p><strong><strong>[B] Pulling a remote branch for the first time</strong></strong></p>
 <p>Here, let's see how to fetch a new branch (i.e., it does not exist in your local repo yet) from a remote repo.</p>
 <tabs>
-  <tab><template #header>Sourcetree</template>
-    <div><p><strong>1. Check the list of remote branches</strong> by expanding the <code class="hljs inline no-lang" v-pre>REMOTES</code> menu on the left edge of Sourcetree. If the branch you expected to find is missing, you can click the <code class="hljs inline no-lang" v-pre>Fetch</code> button (in the top toolbar) to refresh the information shown under remotes.</p>
-<pic src="/se-book/gitAndGithub/remoteBranches/images/listRemoteBranches.png"></pic>
-<p></p>
-<p><strong>2. Double-click the branch name</strong> (e.g., <code class="hljs inline no-lang" v-pre>tweak-requirements</code> branch in the <code class="hljs inline no-lang" v-pre>myfork</code> remote), which should open the checkout dialog shown below.</p>
-<pic src="/se-book/gitAndGithub/remoteBranches/images/checkoutBranchDialog.png"></pic>
-<p></p>
-<p><strong>3. Go with the default settings</strong> (shown above) should be fine. Once you click <code class="hljs inline no-lang" v-pre>OK</code>, the branch will appear in your local repo. Furthermore, that repo will switch to that branch, and the local branch will <tooltip><template #content>i.e., will be linked to</template>track</tooltip> the remote branch as well.</p></div></tab>
   <tab><template #header>CLI</template>
     <div><p><strong>1. Fetch details from the remote.</strong> e.g., if the remote is named <code class="hljs inline no-lang" v-pre>myfork</code></p>
 <pre><code class="no-line-numbers hljs" v-pre><span>$ git fetch myfork
@@ -111,35 +59,43 @@ Ensure the <code class="hljs inline no-lang" v-pre>Track?</code> checkbox is tic
 </span></code></pre><p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
 <pre><code class="no-line-numbers hljs" v-pre><span>Switched to a new branch 'branch1'
 </span><span>branch 'branch1' set up to track 'myfork/branch1'.
-</span></code></pre><p><code class="hljs inline no-lang" v-pre>-c</code> flag tells Git to create a new local branch.</p></div></tab></tabs></div>
+</span></code></pre><p><code class="hljs inline no-lang" v-pre>-c</code> flag tells Git to create a new local branch.</p></div></tab>
+  <tab class="d-print-none"><template #header>Sourcetree</template>
+    <div><p><strong>1. Check the list of remote branches</strong> by expanding the <code class="hljs inline no-lang" v-pre>REMOTES</code> menu on the left edge of Sourcetree. If the branch you expected to find is missing, you can click the <code class="hljs inline no-lang" v-pre>Fetch</code> button (in the top toolbar) to refresh the information shown under remotes.</p>
+<pic eager src="/se-book/gitAndGithub/remoteBranches/images/listRemoteBranches.png"></pic>
+<p></p>
+<p><strong>2. Double-click the branch name</strong> (e.g., <code class="hljs inline no-lang" v-pre>tweak-requirements</code> branch in the <code class="hljs inline no-lang" v-pre>myfork</code> remote), which should open the checkout dialog shown below.</p>
+<pic eager src="/se-book/gitAndGithub/remoteBranches/images/checkoutBranchDialog.png"></pic>
+<p></p>
+<p><strong>3. Go with the default settings</strong> (shown above) should be fine. Once you click <code class="hljs inline no-lang" v-pre>OK</code>, the branch will appear in your local repo. Furthermore, that repo will switch to that branch, and the local branch will <tooltip><template #content>i.e., will be linked to</template>track</tooltip> the remote branch as well.</p></div></tab></tabs></div>
 <div id="syncing-branches">
 <p><strong><strong>[C] Syncing branches</strong></strong></p>
 <p>In this section we assume that you have a local branch that is already tracking a remote branch (e.g., as a result of doing [A] or [B] above).</p>
-<p><strong>To push new changes in the local branch to the corresponding remote branch:</strong></p>
+<p><strong>[C1] To push new changes in the local branch to the corresponding remote branch:</strong></p>
 <tabs>
-  <tab><template #header>Sourcetree</template>
-    <div><p>Similar to how you pushed a new branch (in [A]):</p>
-<pic src="/se-book/gitAndGithub/remoteBranches/images/pushBranchToFork.png" height="300"></pic>
-<p></p></div></tab>
   <tab><template #header>CLI</template>
     <div><p>Similar to [A] above, but omit the <code class="hljs inline no-lang" v-pre>-u</code> flag. e.g.,</p>
 <pre><code class="no-line-numbers hljs" v-pre><span>$ git push origin add-intro
-</span></code></pre></div></tab></tabs>
+</span></code></pre></div></tab>
+  <tab class="d-print-none"><template #header>Sourcetree</template>
+    <div><p>Similar to how you pushed a new branch (in [A]):</p>
+<pic eager src="/se-book/gitAndGithub/remoteBranches/images/pushBranchToFork.png" height="300"></pic>
+<p></p></div></tab></tabs>
 <box type="info" seamless>
 <p><strong>If you push but the remote branch has new commits that you don't have locally</strong>, Git will abort the push and will ask you to pull first.</p></box>
-<p><strong>To pull new changes from a remote branch to the corresponding local branch:</strong></p>
+<p><strong>[C2] To pull new changes from a remote branch to the corresponding local branch:</strong></p>
 <tabs>
-  <tab><template #header>Sourcetree</template>
-    <div><p><strong>1. Switch to the branch you want to update</strong> by double-clicking the branch name. e.g.,</p>
-<pic src="/se-book/gitAndGithub/branch/images/sourcetree_3.png"></pic>
-<p></p>
-<p><strong>2. Pull the updated in the remote branch to the local branch</strong> by right-clicking on the branch name (in the same place as above), and choosing <code class="hljs inline no-lang" v-pre>Pull &lt;remote&gt;/&lt;branch&gt; (tracked)</code> e.g., <code class="hljs inline no-lang" v-pre>Pull myfork/add-intro (tracked)</code>.</p></div></tab>
   <tab><template #header>CLI</template>
     <div><p><strong>1. Switch to the branch you want to update</strong> using <code class="hljs inline no-lang" v-pre>git checkout &lt;branch&gt;</code> e.g.,</p>
 <pre><code class="no-line-numbers hljs" v-pre><span>$ git checkout branch1
 </span></code></pre><p><strong>2. Pull the updated in the remote branch to the local branch</strong>, using <code class="hljs inline no-lang" v-pre>git pull &lt;remote&gt; &lt;branch&gt;</code> e.g.,</p>
 <pre><code class="no-line-numbers hljs" v-pre><span>$ git pull origin branch1
-</span></code></pre></div></tab></tabs>
+</span></code></pre></div></tab>
+  <tab class="d-print-none"><template #header>Sourcetree</template>
+    <div><p><strong>1. Switch to the branch you want to update</strong> by double-clicking the branch name. e.g.,</p>
+<pic eager src="/se-book/gitAndGithub/branch/images/sourcetree_3.png"></pic>
+<p></p>
+<p><strong>2. Pull the updated in the remote branch to the local branch</strong> by right-clicking on the branch name (in the same place as above), and choosing <code class="hljs inline no-lang" v-pre>Pull &lt;remote&gt;/&lt;branch&gt; (tracked)</code> e.g., <code class="hljs inline no-lang" v-pre>Pull myfork/add-intro (tracked)</code>.</p></div></tab></tabs>
 <box type="info" seamless>
 <p><strong>If you pull but your local branch has new commits the remote branch doesn't have</strong>, Git will automatically perform a merge between the local branch and the remote branch.</p></box>
 <div></div>
@@ -180,7 +136,7 @@ Description:</p>
 </p></li></ol></span><p></p>
 
 
-<p><strong>The next step of the PR life cycle is the PR <em>review</em>.</strong> The members of the repo that received your PR can now review your proposed changes.</p>
+<p><strong>The next step of the PR lifecycle is the PR <em>review</em>.</strong> The members of the repo that received your PR can now review your proposed changes.</p>
 <ul>
 <li>If they like the changes, they can <em>merge</em> the changes to their repo, which also closes the PR automatically.</li>
 <li>If they don't like it at all, they can simply close the PR too i.e., they reject your proposed change.</li>
@@ -194,26 +150,39 @@ Description:</p>
 <li>Pull the <code class="hljs inline no-lang" v-pre>master</code> branch from the upstream repo to your local repo.<pre><code class="no-line-numbers hljs" v-pre><span>git checkout master
 </span><span>git pull upstream master
 </span></code></pre></li>
-<li>In the local repo, and attempt to merge the <code class="hljs inline no-lang" v-pre>master</code> branch (that you updated in the previous step) onto the PR branch, in order to bring over the new code in the <code class="hljs inline no-lang" v-pre>master</code> branch to your PR branch.<pre><code class="no-line-numbers hljs" v-pre><span>git checkout pr-branch  # assuming pr-branch is the name of branch in the PR
+<li>In the local repo, attempt to merge the <code class="hljs inline no-lang" v-pre>master</code> branch (that you updated in the previous step) onto the PR branch, in order to bring over the new code in the <code class="hljs inline no-lang" v-pre>master</code> branch to your PR branch.<pre><code class="no-line-numbers hljs" v-pre><span>git checkout pr-branch  # assuming pr-branch is the name of branch in the PR
 </span><span>git merge master
 </span></code></pre></li>
 <li>The merge you are attempting will run into a merge conflict, due to the aforementioned conflicting code in the <code class="hljs inline no-lang" v-pre>master</code> branch.
 Resolve the conflict manually (this topic is covered <trigger trigger="click" for="modal:createPr-mergeConflicts">elsewhere</trigger>), and complete the merge.</li>
 <li>Push the PR branch to your fork. As the updated code in that branch no longer is conflicting with the <code class="hljs inline no-lang" v-pre>master</code> branch, the merge conflict alert in the PR will go away automatically.</li></ol>
 <modal large id="modal:createPr-mergeConflicts"><template #header>Git &amp; GitHub → Dealing with merge conflicts →</template>
-<div><p><span id="title">Dealing with merge conflicts</span></p>
-<p><span id="prereqs"></span></p>
-<p><span id="outcomes"><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can use Git to resolve merge conflicts</span></p>
+<div><p><span id="prereqs"></span>
+<span id="outcomes">Can resolve merge conflicts.</span>
+<span id="title">Resolving Merge Conflicts</span></p>
 <div id="body">
-<p><strong>Merge conflicts happen when you try to combine two incompatible versions</strong> (e.g., merging a branch to another but each branch changed the same part of the code in a different way).</p>
-<p>Here are the steps to simulate a merge conflict and use it to learn how to resolve merge conflicts.</p>
-<p><strong>0. Create an empty repo or clone an existing repo</strong>, to be used for this activity.</p>
-<p><strong>1. Start a branch named <code class="hljs inline no-lang" v-pre>fix1</code> in the repo. Create a commit</strong> that adds a line with some text to one of the files.</p>
-<p><strong>2. Switch back to <code class="hljs inline no-lang" v-pre>master</code> branch. Create a commit with a conflicting change</strong> i.e. it adds a line with some different text in the exact location the previous line was added.</p>
-<pic src="/se-book/gitAndGithub/mergeConflicts/images/sourcetree_1.png" height="350"></pic>
+<div class="non-printable">
+<div class="border border-success pt-0 ps-1 pb-1 pe-1 border-bottom-0 rounded-top" style="background-color: #e6fff2">
+<div class="indented">
+<br>
+<div id="overview">
+<p>When merging branches, <strong>you need to guide Git on how to resolve conflicting changes</strong> in different branches.</p></div>
+<span><small>This lesson covers that part.</small></span></div></div>
+<br></div>
+<p><strong>A <span class="badge text-dark" style="background-color: rgba(13, 202, 240, 0.2);"><span class="large">merge conflict</span></span> happens when Git can't automatically combine changes from two branches</strong> because the same parts of a file were modified differently in each branch. When this happens, <strong>Git pauses the merge and marks the conflicting sections in the affected files so you can resolve them yourself.</strong> Once you've reviewed and fixed the conflicts, you can tell Git they're resolved and complete the merge.</p>
+<p>More generally, a conflict occurs when Git cannot automatically reconcile different changes made to the same part of a file -- branch merge conflicts is just one example.</p>
+
+<div class="non-printable">
+<span style="position: relative; top: 10px;" class="badge rounded-pill bg-secondary fs-6"><span><span aria-hidden="true" class="fas fa-laptop-code"></span></span> HANDS-ON: Resolve merge conflict</span>
+<div class="indented-level1">
+<box type="dark" seamless no-icon>
+<p>In this hands-on practical, we simulate a merge conflict and use it to learn how to resolve merge conflicts. You can use any repo with at least one commit in the <code class="hljs inline no-lang" v-pre>master</code> branch for this.</p>
+<p><span style="position: relative; right: 25px;" class="badge rounded-pill text-dark bg-secondary text-white">1</span> <strong>Start a branch named <code class="hljs inline no-lang" v-pre>fix1</code> in the repo. Create a commit</strong> that adds a line with some text to one of the files.</p>
+<p><span style="position: relative; right: 25px;" class="badge rounded-pill text-dark bg-secondary text-white">2</span> <strong>Switch back to <code class="hljs inline no-lang" v-pre>master</code> branch. Create a commit with a conflicting change</strong> i.e. it adds a line with some different text in the exact location the previous line was added.</p>
+<pic eager src="/se-book/gitAndGithub/mergeConflicts/images/sourcetree_1.png" height="350"></pic>
 <p></p>
-<p><strong>3. Try to merge the <code class="hljs inline no-lang" v-pre>fix1</code> branch onto the <code class="hljs inline no-lang" v-pre>master</code> branch.</strong> Git will pause mid-way during the merge and report a merge conflict. If you open the conflicted file, you will see something like this:</p>
-<pre><code class="hljs txt" v-pre><span>COLORS
+<p><span style="position: relative; right: 25px;" class="badge rounded-pill text-dark bg-secondary text-white">3</span> <strong>Try to merge the <code class="hljs inline no-lang" v-pre>fix1</code> branch onto the <code class="hljs inline no-lang" v-pre>master</code> branch.</strong> Git will pause mid-way during the merge and report a merge conflict. If you open the conflicted file, you will see something like this:</p>
+<pre><code class="hljs" v-pre><span>COLORS
 </span><span>------
 </span><span>blue
 </span><span><span class="highlighted">&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span>
@@ -223,7 +192,7 @@ Resolve the conflict manually (this topic is covered <trigger trigger="click" fo
 </span><span><span class="highlighted">&gt;&gt;&gt;&gt;&gt;&gt; fix1</span>
 </span><span>red
 </span><span>white
-</span></code></pre><p><strong>4. Observe how the conflicted part is marked</strong> between a line starting with <code class="hljs inline no-lang" v-pre>&lt;&lt;&lt;&lt;&lt;&lt; </code> and a line starting with <code class="hljs inline no-lang" v-pre>&gt;&gt;&gt;&gt;&gt;&gt;</code>, separated by another line starting with <code class="hljs inline no-lang" v-pre>=======</code>.</p>
+</span></code></pre><p><span style="position: relative; right: 25px;" class="badge rounded-pill text-dark bg-secondary text-white">4</span> <strong>Observe how the conflicted part is marked</strong> between a line starting with <code class="hljs inline no-lang" v-pre>&lt;&lt;&lt;&lt;&lt;&lt; </code> and a line starting with <code class="hljs inline no-lang" v-pre>&gt;&gt;&gt;&gt;&gt;&gt;</code>, separated by another line starting with <code class="hljs inline no-lang" v-pre>=======</code>.</p>
 <p>Highlighted below is the conflicting part that is coming from the <code class="hljs inline no-lang" v-pre>master</code> branch:</p>
 <pre><code style="counter-reset: line 2;" class="line-numbers hljs txt" v-pre><span>blue
 </span><span>&lt;&lt;&lt;&lt;&lt;&lt; HEAD
@@ -240,7 +209,7 @@ Resolve the conflict manually (this topic is covered <trigger trigger="click" fo
 </span><span><span class="highlighted">green</span>
 </span><span>&gt;&gt;&gt;&gt;&gt;&gt; fix1
 </span><span>red
-</span></code></pre><p><strong>5. Resolve the conflict by editing the file</strong>. Let us assume you want to keep both lines in the merged version. You can modify the file to be like this:</p>
+</span></code></pre><p><span style="position: relative; right: 25px;" class="badge rounded-pill text-dark bg-secondary text-white">5</span> <strong>Resolve the conflict by editing the file</strong>. Let us assume you want to keep both lines in the merged version. You can modify the file to be like this:</p>
 <pre><code class="hljs txt" v-pre><span>COLORS
 </span><span>------
 </span><span>blue
@@ -248,9 +217,27 @@ Resolve the conflict manually (this topic is covered <trigger trigger="click" fo
 </span><span><span class="highlighted">green</span>
 </span><span>red
 </span><span>white
-</span></code></pre><p><strong>6. Stage the changes, and commit.</strong> You have now successfully resolved the merge conflict.</p></div>
-<div id="extras"></div></div></modal>
-<panel expanded><template #header><p><span><span aria-hidden="true" class="fas fa-paperclip"></span></span> Resources</p></template>
+</span></code></pre><p><span style="position: relative; right: 25px;" class="badge rounded-pill text-dark bg-secondary text-white">6</span> <strong>Stage the changes, and commit.</strong> You have now successfully resolved the merge conflict.</p></box></div></div>
+</div>
+<div id="extras">
+<panel tags="git-mastery" class="non-printable" type="danger"><template #header><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> EXERCISE: <code class="hljs inline no-lang" v-pre>conflict-mediator</code></p></template>
+<p><strong>To download</strong> the exercise,</p>
 <ul>
-<li><a href="https://help.github.com/articles/creating-a-pull-request/">GitHub's own documentation on creating a PR</a></li></ul></panel></div>
-<div></div></div></div>
+<li>navigate inside the <code class="hljs inline no-lang" v-pre>gitmastery-exercies</code> folder.</li>
+<li>run <code class="hljs inline no-lang" v-pre>gitmastery download conflict-mediator</code> command.</li></ul>
+<hr class="dashed border-danger">
+<p><strong class="text-danger">Your task:</strong></p>
+<div class="indented-level1">
+<p>coming soon ...</p></div>
+<hr class="dashed border-danger">
+<p><strong>To verify</strong> your work,</p>
+<ul>
+<li>navigate to anywhere inside the <code class="hljs inline no-lang" v-pre>gitmastery-exercies/conflict-mediator</code> folder <span class="dimmed">(or any sub-folder of it)</span>.</li>
+<li>run the <code class="hljs inline no-lang" v-pre>gitmastery verify</code> command.</li></ul>
+<div class="bg-light">
+<p><div class="text-center"><small><a href="https://git-mastery.github.io/app/">Git-Mastery <strong>commands list</strong></a> | <a href="https://github.com/git-mastery/git-mastery/issues">Report Git-Mastery <strong>bugs</strong></a></small></div></p></div></panel></div></div></modal></div>
+<div>
+<div><br>
+<h5 id="resources"><span><span aria-hidden="true" class="fas fa-paperclip"></span></span> Resources:<a class="fa fa-anchor" href="#resources" onclick="event.stopPropagation()"></a></h5>
+<div><ul>
+<li><a href="https://help.github.com/articles/creating-a-pull-request/">GitHub's own documentation on creating a PR</a></li></ul></div></div></div></div></div>

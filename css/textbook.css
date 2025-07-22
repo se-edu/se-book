@@ -137,6 +137,17 @@ mark {
 
 /* ========== site specific ============ */
 
+
+.bg-info {
+    background-color: #17a2b8 !important;
+}
+.text-info {
+    color: #17a2b8 !important;
+}
+.border-info {
+    border-color: #17a2b8 !important;
+}
+
 .website-content {
     margin: 12px auto 40px auto;
     max-width: 900px;
@@ -165,3 +176,38 @@ mark {
 .alt-python {
     display: none;
 }
+
+.callout {
+    position: relative;
+    z-index: 1000;
+    padding: 1rem;
+    background-color: #e6fff2;
+    border: 1px solid #198754;
+    border-radius: 0.5rem;
+    max-width: 600px;
+}
+
+/* Outer triangle (border color) */
+.callout::after {
+    content: "";
+    position: absolute;
+    bottom: -16px; /* slightly below the inner one */
+    left: 20px;
+    border-width: 16px 12px 0;
+    border-style: solid;
+    border-color: #198754 transparent transparent transparent;
+}
+
+/* Inner triangle (background color), slightly smaller to create "border" effect */
+.callout::before {
+    content: "";
+    position: absolute;
+    bottom: -14px;
+    left: 22px;
+    border-width: 14px 10px 0;
+    border-style: solid;
+    border-color: #e6fff2 transparent transparent transparent;
+    z-index: 1;
+}
+
+

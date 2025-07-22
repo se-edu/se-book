@@ -1,8 +1,7 @@
-<div></div><p></p>
 <p><span class="dimmed"><strong><span>Quality Assurance → Testing → Test Coverage →
 </span></strong></span></p>
 <div id="title-and-body">
-<div><h4 id="what"><span id="what" class="anchor"></span><span>What</span><a class="fa fa-anchor" href="#what" onclick="event.stopPropagation()"></a></h4></div>
+<div><h4 id="what"><span>What</span><a class="fa fa-anchor" href="#what" onclick="event.stopPropagation()"></a></h4></div>
 <div id="main">
 <div>
 <p><strong><em>Test coverage</em> is a metric used to measure the extent to which testing exercises the code</strong> i.e., how much of the code is 'covered' by the tests.</p>
@@ -25,20 +24,54 @@
 <li><code class="hljs inline no-lang" v-pre>(x &gt; 2) == false</code> : [e.g. <code class="hljs inline no-lang" v-pre>x == 0</code>]</li></ul>
 <p>Note 1: A case where both conditions are <code class="hljs inline no-lang" v-pre>true</code> is needed because most execution environments use a <em>short circuiting</em> behavior for compound boolean expressions e.g., given an expression <code class="hljs inline no-lang" v-pre>c1 &amp;&amp; c2</code>, <code class="hljs inline no-lang" v-pre>c2</code> will not be evaluated if <code class="hljs inline no-lang" v-pre>c1</code> is <code class="hljs inline no-lang" v-pre>false</code> (as the final result is going to be <code class="hljs inline no-lang" v-pre>false</code> anyway).</p></box>
 <ul>
-<li><strong>Path coverage</strong> measures coverage in terms of possible paths through a given part of the code executed. 100% path coverage means all possible paths have been executed. A commonly used notation for path analysis is called the <em>Control Flow Graph (CFG)</em>.</li>
+<li><strong>Path coverage</strong> measures coverage in terms of possible paths through a given part of the code executed. 100% path coverage means all possible paths have been executed. A commonly used notation for path analysis is called the <em>Control Flow Graph (CFG)</em>.</li></ul>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider the following Java method.</p>
+<pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">findRate</span><span class="hljs-params">(<span class="hljs-keyword">int</span> input)</span> </span>{
+</span><span>    <span class="hljs-keyword">if</span> (input == <span class="hljs-number">0</span>) {
+</span><span>        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+</span><span>    }
+</span><span>    cap = <span class="hljs-number">100</span>/input;
+</span><span>    <span class="hljs-keyword">if</span> (cap &lt; <span class="hljs-number">0</span>) {
+</span><span>        <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;
+</span><span>    } <span class="hljs-keyword">else</span> {
+</span><span>        <span class="hljs-keyword">return</span> cap;
+</span><span>    }
+</span><span>}
+</span></code></pre><p>It has 3 paths, as follows:</p>
+<ol>
+<li>enter -&gt; <code class="hljs inline no-lang" v-pre>2</code> -&gt; <code class="hljs inline no-lang" v-pre>3</code> -&gt; exit (can be triggered by input <code class="hljs inline no-lang" v-pre>0</code>)</li>
+<li>enter -&gt; <code class="hljs inline no-lang" v-pre>2</code> -&gt; <code class="hljs inline no-lang" v-pre>5</code> -&gt; <code class="hljs inline no-lang" v-pre>6</code>  -&gt; <code class="hljs inline no-lang" v-pre>7</code> -&gt; exit (can be triggered by input <code class="hljs inline no-lang" v-pre>-5</code>)</li>
+<li>enter -&gt; <code class="hljs inline no-lang" v-pre>2</code> -&gt; <code class="hljs inline no-lang" v-pre>5</code> -&gt; <code class="hljs inline no-lang" v-pre>6</code>  -&gt; <code class="hljs inline no-lang" v-pre>9</code> -&gt; exit (can be triggered by input <code class="hljs inline no-lang" v-pre>8</code>)</li></ol>
+<p>So, to achieve 100% path coverage, we need at least 3 test cases (e.g., <code class="hljs inline no-lang" v-pre>0</code>, <code class="hljs inline no-lang" v-pre>-5</code>, <code class="hljs inline no-lang" v-pre>8</code>).</p></box>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> A loop can increase the path count greatly.</p>
+<pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">sayHello</span><span class="hljs-params">(List&lt;String&gt; names)</span> </span>{
+</span><span>    <span class="hljs-keyword">for</span> (String n : names) {
+</span><span>        System.out.println(n);
+</span><span>    }
+</span><span>}
+</span></code></pre><p>The number of paths through this method is very large, as each possible length of <code class="hljs inline no-lang" v-pre>names</code> produces a unique path.</p>
+<ol>
+<li>enter -&gt; <code class="hljs inline no-lang" v-pre>2</code> -&gt; exit (if <code class="hljs inline no-lang" v-pre>names</code> is empty)</li>
+<li>enter -&gt; <code class="hljs inline no-lang" v-pre>2</code> -&gt; <code class="hljs inline no-lang" v-pre>3</code> -&gt; exit (if <code class="hljs inline no-lang" v-pre>names</code> has one entry)</li>
+<li>enter -&gt; <code class="hljs inline no-lang" v-pre>2</code> -&gt; <code class="hljs inline no-lang" v-pre>3</code> -&gt;  <code class="hljs inline no-lang" v-pre>2</code> -&gt; <code class="hljs inline no-lang" v-pre>3</code> -&gt; exit (if <code class="hljs inline no-lang" v-pre>names</code> has two entries)
+1 ...</li></ol>
+<p>So, achieving 100% path coverage of this method will be extremely difficult.</p></box>
+<ul>
 <li><strong>Entry/exit coverage</strong> measures coverage in terms of possible <em>calls to</em> and <em>exits</em> from the operations in the SUT.<br>
 <em>Entry points</em> refer to all places from which the method is called from the rest of the code i.e., all places where the control is handed over to the method in concern.<br>
 <em>Exit points</em> refer to points at which the control is returned to the caller e.g., return statements, throwing of exceptions.</li></ul></div>
 <div>
-<div><panel expandable><template #header><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
-  <div><panel><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Highest intensity coverage</p></template>
-<question>
+<div><br>
+<h5 id="exercises"><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Exercises:<a class="fa fa-anchor" href="#exercises" onclick="event.stopPropagation()"></a></h5>
+<div><div><panel><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Highest intensity coverage</p></template>
 <p>Which of these gives us the highest intensity of testing?</p>
 <ul radio-group="3db75" class="radio-list">
 <li class="radio-list-item"><label><input class="radio-list-input" name="3db75" type="radio"> a. 100% statement coverage</label></li>
 <li class="radio-list-item"><label><input class="radio-list-input" name="3db75" type="radio"> b. 100% path coverage</label></li>
 <li class="radio-list-item"><label><input class="radio-list-input" name="3db75" type="radio"> c. 100% branch coverage</label></li>
 <li class="radio-list-item"><label><input class="radio-list-input" name="3db75" type="radio"> d. 100% condition coverage</label></li></ul>
-<template #answer><div>
+<panel type="seamless" minimized><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Answer</p></template>
 <p>(b)</p>
-<p>Explanation: 100% path coverage implies all possible execution paths through the SUT have been tested. This is essentially ‘exhaustive testing’. While this is very hard to achieve for a non-trivial SUT, it technically gives us the highest intensity of testing. If all tests pass at 100% path coverage, the SUT code can be considered ‘bug free’. However, note that path coverage does not include paths that are missing from the code altogether because the programmer left them out by mistake.</p></div></template></question></panel></div></panel></div></div></div></div>
+<p>Explanation: 100% path coverage implies all possible execution paths through the SUT have been tested. This is essentially ‘exhaustive testing’. While this is very hard to achieve for a non-trivial SUT, it technically gives us the highest intensity of testing. If all tests pass at 100% path coverage, the SUT code can be considered ‘bug free’. However, note that path coverage does not include paths that are missing from the code altogether because the programmer left them out by mistake.</p></panel></panel></div></div></div></div></div></div>

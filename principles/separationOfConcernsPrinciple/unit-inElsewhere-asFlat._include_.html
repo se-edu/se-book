@@ -1,7 +1,6 @@
-<div></div><p></p>
 <p><span class="dimmed"><strong><span>Principles →</span></strong></span></p>
 <div id="title-and-body">
-<div><h4 id="separation-of-concerns-principle"><span id="separation-of-concerns-principle" class="anchor"></span><span>Separation of concerns principle</span><a class="fa fa-anchor" href="#separation-of-concerns-principle" onclick="event.stopPropagation()"></a></h4></div>
+<div><h4 id="separation-of-concerns-principle"><span>Separation of concerns principle</span><a class="fa fa-anchor" href="#separation-of-concerns-principle" onclick="event.stopPropagation()"></a></h4></div>
 <div id="main">
 <div>
 <box type="definition" seamless>
@@ -21,23 +20,17 @@
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The <trigger trigger="click" for="modal:soc-nTier">n-tier architecture</trigger> utilizes this principle. Each layer in the architecture has a well-defined functionality that has no functional overlap with each other.</p></box>
 <modal id="modal:soc-nTier"><template #header>TextBook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span></template>
   <div><div class="indented">
-<div></div><p></p>
-<p><span class="badge bg-light text-dark"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can identify n-tier architectural style</span></span></span></span></p><p></p><p></p>
-<p></p>
 <div>
 <p><strong>In the <em>n-tier</em> style, higher layers make use of services provided by lower layers.</strong> Lower layers are independent of higher layers. Other names: <em>multi-layered</em>, <em>layered</em>.</p>
-<pic src="/se-book/architecture/architecturalStyles/nTier/what/images/nTier.png" height="150"></pic>
+<pic eager src="/se-book/architecture/architecturalStyles/nTier/what/images/nTier.png" height="150"></pic>
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Operating systems and network communication software often use n-tier style.<br>
-<pic src="/se-book/architecture/architecturalStyles/nTier/what/images/nTierExamples.png" height="150"></pic></p></box>
+<pic eager src="/se-book/architecture/architecturalStyles/nTier/what/images/nTierExamples.png" height="150"></pic></p></box>
 <p></p></div>
 <div></div></div></div></modal>
 <p><strong>This principle should lead to higher <trigger trigger="click" for="soc-cohesion">cohesion</trigger> and lower <trigger trigger="click" for="soc-coupling">coupling</trigger>.</strong></p>
 <modal id="soc-coupling"><template #header>TextBook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span></template>
   <div><div class="indented">
-<div></div><p></p>
-<p><span class="badge bg-light text-dark"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain coupling</span></span></span></span></p><p></p><p></p>
-<p></p>
 <div>
 <p><strong><em>Coupling</em> is a measure of the degree of <em>dependence</em></strong> between components, classes, methods, etc. Low coupling indicates that a component is less dependent on other components. <strong>High coupling (aka <em>tight</em> coupling or <em>strong</em> coupling) is discouraged</strong> due to the following disadvantages:</p>
 <ul>
@@ -46,30 +39,27 @@
 <li><strong>Testing and reuse of the module is harder</strong> due to its dependence on other modules.</li></ul>
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In the example below, design <code class="hljs inline no-lang" v-pre>A</code> appears to have more coupling between the components than design <code class="hljs inline no-lang" v-pre>B</code>.</p>
-<pic src="/se-book/designFundamentals/coupling/what/images/playerPuzzleManager.png" height="220"></pic>
+<pic eager src="/se-book/designFundamentals/coupling/what/images/playerPuzzleManager.png" height="220"></pic>
 <p></p></box></div>
 <div>
-<div><panel expandable><template #header><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
-  <div><panel><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Coupling levels of alternative designs</p></template>
-<question has-input="true">
+<div><br>
+<h5 id="exercises"><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Exercises:<a class="fa fa-anchor" href="#exercises" onclick="event.stopPropagation()"></a></h5>
+<div><div><panel><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Coupling levels of alternative designs</p></template>
 <p>Discuss the coupling levels of alternative designs <em>x</em> and <em>y</em>.</p>
 <box>
-<pic src="/se-book/designFundamentals/coupling/what/images/alternativeDesigns.png" height="180"></pic>
+<pic eager src="/se-book/designFundamentals/coupling/what/images/alternativeDesigns.png" height="180"></pic>
 <p></p></box>
-<template #answer><div>
-<p>Overall coupling levels in <em>x</em> and <em>y</em> seem to be similar (neither has more dependencies than the other). (Note that the number of dependency links is not a definitive measure of the level of coupling. Some links may be stronger than the others.). However, in <em>x</em>, <code class="hljs inline no-lang" v-pre>A</code> is highly-coupled to the rest of the system while <code class="hljs inline no-lang" v-pre>B</code>, <code class="hljs inline no-lang" v-pre>C</code>, <code class="hljs inline no-lang" v-pre>D</code>, and <code class="hljs inline no-lang" v-pre>E</code> are standalone (do not depend on anything else). In <em>y</em>, no component is as highly-coupled as <code class="hljs inline no-lang" v-pre>A</code> of <em>x</em>. However, only <code class="hljs inline no-lang" v-pre>D</code> and <code class="hljs inline no-lang" v-pre>E</code> are standalone.</p></div></template></question></panel></div>
-  <div><panel><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Regressions and coupling</p></template>
-<question has-input="true">
+<panel type="seamless" minimized><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Answer</p></template>
+<p>Overall coupling levels in <em>x</em> and <em>y</em> seem to be similar (neither has more dependencies than the other). (Note that the number of dependency links is not a definitive measure of the level of coupling. Some links may be stronger than the others.). However, in <em>x</em>, <code class="hljs inline no-lang" v-pre>A</code> is highly-coupled to the rest of the system while <code class="hljs inline no-lang" v-pre>B</code>, <code class="hljs inline no-lang" v-pre>C</code>, <code class="hljs inline no-lang" v-pre>D</code>, and <code class="hljs inline no-lang" v-pre>E</code> are standalone (do not depend on anything else). In <em>y</em>, no component is as highly-coupled as <code class="hljs inline no-lang" v-pre>A</code> of <em>x</em>. However, only <code class="hljs inline no-lang" v-pre>D</code> and <code class="hljs inline no-lang" v-pre>E</code> are standalone.</p></panel></panel></div>
+<div><panel><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Regressions and coupling</p></template>
 <p>Explain the link (if any) between regressions and coupling.</p>
-<template #answer><div>
-<p>When the system is highly-coupled, the risk of regressions is higher too <span class="dimmed">e.g. when component <code class="hljs inline no-lang" v-pre>A</code> is modified, all components ‘coupled’ to component <code class="hljs inline no-lang" v-pre>A</code> risk ‘unintended behavioral changes’</span>.</p></div></template></question></panel></div>
-  <div><panel><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Coupling and testability</p></template>
-<question has-input="true">
+<panel type="seamless" minimized><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Answer</p></template>
+<p>When the system is highly-coupled, the risk of regressions is higher too <span class="dimmed">e.g. when component <code class="hljs inline no-lang" v-pre>A</code> is modified, all components ‘coupled’ to component <code class="hljs inline no-lang" v-pre>A</code> risk ‘unintended behavioral changes’</span>.</p></panel></panel></div>
+<div><panel><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Coupling and testability</p></template>
 <p>Discuss the relationship between coupling and <tooltip><template #content>a measure of how easily a given component can be tested</template>testability</tooltip>.</p>
-<template #answer><div>
-<p>Coupling decreases testability because if the <tooltip><template #content>Software Under Test</template>SUT</tooltip> is coupled to many other components, it becomes difficult to test the SUT in isolation of its dependencies.</p></div></template></question></panel></div>
-  <div><panel><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Statements about coupling</p></template>
-<question>
+<panel type="seamless" minimized><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Answer</p></template>
+<p>Coupling decreases testability because if the <tooltip><template #content>Software Under Test</template>SUT</tooltip> is coupled to many other components, it becomes difficult to test the SUT in isolation of its dependencies.</p></panel></panel></div>
+<div><panel><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Statements about coupling</p></template>
 <p>Choose the correct statements.</p>
 <ul class="contains-task-list">
 <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> a. As coupling increases, testability decreases.</li>
@@ -77,14 +67,11 @@
 <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> c. As coupling increases, the value of automated regression testing increases.</li>
 <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. As coupling increases, integration becomes easier as everything is connected together.</li>
 <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> e. As coupling increases, maintainability decreases.</li></ul>
-<template #answer><div>
+<panel type="seamless" minimized><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Answer</p></template>
 <p>(a)(b)(c)<s>(d)</s>(e)</p>
-<p>Explanation: High coupling means either more components are required to be integrated at once in a big-bang fashion (increasing the risk of things going wrong) or more drivers and stubs are required when integrating incrementally.</p></div></template></question></panel></div></panel></div></div></div></div></modal>
+<p>Explanation: High coupling means either more components are required to be integrated at once in a big-bang fashion (increasing the risk of things going wrong) or more drivers and stubs are required when integrating incrementally.</p></panel></panel></div></div></div></div></div></div></modal>
 <modal id="soc-cohesion"><template #header>TextBook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span></template>
   <div><div class="indented">
-<div></div><p></p>
-<p><span class="badge bg-light text-dark"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain cohesion</span></span></span></span></p><p></p><p></p>
-<p></p>
 <div>
 <p><strong><em>Cohesion</em> is a measure of how strongly-related and focused the various responsibilities of a component are.</strong> A highly-cohesive component keeps related functionalities together while keeping out all other unrelated things.</p>
 <p><strong>Higher cohesion is better.</strong> Disadvantages of low cohesion (aka <em>weak</em> cohesion):</p>
@@ -94,14 +81,14 @@
 <li>Lowers reusability of modules because they do not represent logical units of functionality.</li></ul></div>
 <div></div></div></div></modal></div>
 <div>
-<div><panel expandable><template #header><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
-  <div><panel><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Correct statements about SoC</p></template>
-<question>
+<div><br>
+<h5 id="exercises-2"><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Exercises:<a class="fa fa-anchor" href="#exercises-2" onclick="event.stopPropagation()"></a></h5>
+<div><div><panel><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Correct statements about SoC</p></template>
 <p>“Only the GUI class should interact with the user. The GUI class should only concern itself with user interactions”. This statement follows from,</p>
 <ul class="contains-task-list">
 <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> a. A software design should promote separation of concerns in a design.</li>
 <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> b. A software design should increase cohesion of its components.</li>
 <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> c. A software design should follow single responsibility principle.</li></ul>
-<template #answer><div>
+<panel type="seamless" minimized><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Answer</p></template>
 <p>(a)(b)(c)</p>
-<p>Explanation: By making ‘user interaction’ the GUI class’s sole responsibility, we increase its cohesion. This is also in line with the separation of concerns (i.e., we separated the concern of user interaction) and the single responsibility principle (the GUI class has only one responsibility).</p></div></template></question></panel></div></panel></div></div></div></div>
+<p>Explanation: By making ‘user interaction’ the GUI class’s sole responsibility, we increase its cohesion. This is also in line with the separation of concerns (i.e., we separated the concern of user interaction) and the single responsibility principle (the GUI class has only one responsibility).</p></panel></panel></div></div></div></div></div></div>

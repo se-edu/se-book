@@ -1,24 +1,59 @@
-<div></div><p></p>
 <p><span class="dimmed"><strong><span>Tools → Git and GitHub →
 </span></strong></span></p>
 <div id="title-and-body">
-<div><h4 id="clone-copying-a-repo"><span id="clone-copying-a-repo" class="anchor"></span><span><code class="hljs inline no-lang" v-pre>clone</code>: Copying a repo</span><a class="fa fa-anchor" href="#clone-copying-a-repo" onclick="event.stopPropagation()"></a></h4></div>
+<div><h4 id="creating-a-local-copy-of-a-repo"><span>Creating a Local Copy of a Repo</span><a class="fa fa-anchor" href="#creating-a-local-copy-of-a-repo" onclick="event.stopPropagation()"></a></h4></div>
 <div id="main">
 <div>
-<p>Given below is an example scenario you can try yourself to learn Git <trigger trigger="click" for="modal:gitCloning-rcsCloning">cloning</trigger>.</p>
-<modal large id="modal:gitCloning-rcsCloning"><template #header>Project Management → Revision Control → Remote Repositories →</template>
-  <div>
-<p><strong>You can <mark><em>clone</em></mark> a repo</strong> to create a copy of that repo in another location on your computer. The copy will even have the revision history of the original repo i.e., identical to the original repo. For example, you can clone a remote repo onto your computer to create a local copy of the remote repo.<br></p></div></modal>
-<p>Suppose you want to clone the sample repo <a href="https://github.com/se-edu/samplerepo-things">samplerepo-things</a> to your computer.</p>
+<div class="non-printable">
+<div class="border border-success pt-0 ps-1 pb-1 pe-1 border-bottom-0 rounded-top" style="background-color: #e6fff2">
+<div class="indented">
+<br>
+<div id="overview">
+<p>The next step is to <strong>create a local copy of the remote repo, by <em>cloning</em> the remote repo</strong>.</p></div>
+<span><small>This lesson covers that part.</small></span></div></div>
+<br></div>
+<p><strong>You can <span class="badge text-dark" style="background-color: rgba(13, 202, 240, 0.2);"><span class="large">clone</span></span> a repository to create a full copy of it on your computer.</strong> This copy includes the entire revision history, branches, and files of the original, so it behaves just like the original repository. For example, you can clone a repository from a hosting service like GitHub to your computer, giving you a complete local version to work with.</p>
+<p><strong>Cloning a repo automatically creates a remote named <code class="hljs inline no-lang" v-pre>origin</code></strong> which points to the repo you cloned from.</p>
+<p><strong>The repo you cloned from is often referred to as the <span class="badge text-dark" style="background-color: rgba(13, 202, 240, 0.2);"><span class="large">upstream</span></span> repo.</strong></p>
+
+<div class="non-printable">
+<span style="position: relative; top: 10px;" class="badge rounded-pill bg-secondary fs-6"><span><span aria-hidden="true" class="fas fa-laptop-code"></span></span> HANDS-ON: Cloning a remote repo</span>
+<div class="indented-level1">
+<box type="dark" seamless no-icon>
+<p><span style="position: relative; right: 25px;" class="badge rounded-pill text-dark bg-secondary text-white">1</span> <strong>Clone the remote repo (e.g., <a href="https://github.com/se-edu/samplerepo-things">samplerepo-things</a> to your computer.</strong></p>
 <box type="warning" seamless>
 <p>Note that the URL of the GitHub project is different from the URL you need to clone a repo in that GitHub project.
 e.g.</p>
 <p>GitHub project URL: <code class="hljs inline no-lang" v-pre>https://github.com/se-edu/samplerepo-things</code> <br>
 Git repo URL: <code class="hljs inline no-lang" v-pre>https://github.com/se-edu/samplerepo-things.git</code> (note the <code class="hljs inline no-lang" v-pre>.git</code> at the end)</p></box>
 <tabs>
-  <tab><template #header>Sourcetree</template>
-    <div><p><code class="hljs inline no-lang" v-pre>File</code> → <code class="hljs inline no-lang" v-pre>Clone / New…</code> and provide the URL of the repo and the destination directory.</p></div></tab>
   <tab><template #header>CLI</template>
-    <div><p>You can use the <code class="hljs inline no-lang" v-pre>clone</code> command to clone a repo.</p>
-<p>Follow the instructions given <a href="https://help.github.com/articles/cloning-a-repository/">here</a>.</p></div></tab></tabs></div>
+ 
+<p>You can use the <code class="hljs inline no-lang" v-pre>git clone &lt;repository-url&gt; [directory-name]</code> command to clone a repo.</p>
+<ul>
+<li><code class="hljs inline no-lang" v-pre>&lt;repository-url&gt;</code>: The URL of the remote repository you want to copy.</li>
+<li><code class="hljs inline no-lang" v-pre>[directory-name]</code> (optional): The name of the folder where you want the repository to be cloned. If you omit this, Git will create a folder with the same name as the repository.</li></ul>
+<pre><code class="no-line-numbers hljs bash" v-pre><span>git <span class="hljs-built_in">clone</span> https://github.com/se-edu/samplerepo-things.git  <span class="hljs-comment"># if using HTTPS</span>
+</span><span>git <span class="hljs-built_in">clone</span> git@github.com:se-edu/samplerepo-things.git  <span class="hljs-comment"># if using SSH</span>
+</span><span>
+</span><span>git <span class="hljs-built_in">clone</span> https://github.com/foo/bar.git my-bar-copy  <span class="hljs-comment"># also specifies a dir to use</span>
+</span></code></pre><p>For exact steps for cloning a repo from GitHub, refer to <a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository#cloning-a-repository">this GitHub document</a>.</p></tab>
+  <tab class="d-print-none"><template #header>Sourcetree</template>
+<tabs>
+  <tab><template #header><span aria-hidden="true" class="fab fa-windows"></span> Windows</template>
+<p><code class="hljs inline no-lang" v-pre>File</code> → <code class="hljs inline no-lang" v-pre>Clone / New ...</code> and provide the URL of the repo and the destination directory.<br></p></tab>
+  <tab><template #header><span aria-hidden="true" class="fab fa-apple"></span> Mac</template>
+<p><code class="hljs inline no-lang" v-pre>File</code> → <code class="hljs inline no-lang" v-pre>New ...</code> → Choose as shown below → Provide the URL of the repo and the destination directory in the next dialog.<br>
+<pic src="/se-book/gitAndGithub/clone/images/sourcetreeMacChooseToCloneFromUrl.png" width="300"></pic><br>
+<pic src="/se-book/gitAndGithub/clone/images/sourcetreeMacGiveUrl.png" width="500"></pic></p></tab></tabs></tab></tabs>
+
+<p><span style="position: relative; right: 25px;" class="badge rounded-pill text-dark bg-secondary text-white">2</span> <strong>Verify the clone has a remote named <code class="hljs inline no-lang" v-pre>origin</code></strong> pointing to the upstream repo.</p>
+<tabs>
+  <tab><template #header>CLI</template>
+ 
+<p>Use the <code class="hljs inline no-lang" v-pre>git remote -v</code> command that you learned earlier.</p></tab>
+  <tab class="d-print-none"><template #header>Sourcetree</template>
+<p>Choose <code class="hljs inline no-lang" v-pre>Repository</code> → <code class="hljs inline no-lang" v-pre>Repository Settings</code> menu option.</p></tab></tabs>
+</box></div></div>
+</div>
 <div></div></div></div>

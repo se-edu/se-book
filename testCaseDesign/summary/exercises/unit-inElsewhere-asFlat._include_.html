@@ -1,14 +1,13 @@
-<div></div><p></p>
 <p><span class="dimmed"><strong><span>Quality Assurance → Test Case Design →
 </span></strong></span></p>
 <div id="title-and-body">
-<div><h4 id="exercises"><span id="exercises" class="anchor"></span><span>Exercises</span><a class="fa fa-anchor" href="#exercises" onclick="event.stopPropagation()"></a></h4></div>
+<div><h4 id="exercises"><span>Exercises</span><a class="fa fa-anchor" href="#exercises" onclick="event.stopPropagation()"></a></h4></div>
 <div id="main">
 <div></div>
 <div>
-  <div><panel expandable><template #header><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
-  <div><panel><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Matric numbers</p></template>
-<question has-input="true">
+<div><br>
+<h5 id="exercises-2"><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Exercises:<a class="fa fa-anchor" href="#exercises-2" onclick="event.stopPropagation()"></a></h5>
+<div><div><panel><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Matric numbers</p></template>
 <p>Assume that students are given a matriculation number according to the following format:</p>
 <p>[Faculty Alphabet] [Gender Alphabet] [Serial Number] [Check Alphabet]</p>
 <p>E.g. CF1234X</p>
@@ -30,18 +29,17 @@
 <li>Single capital alphabet</li>
 <li>Only 'K', 'H', 'S', 'X' and 'Z' are valid</li></ul>
 <p>Assume you are testing the operation <code class="hljs inline no-lang" v-pre>isValidMatric(String matric): boolean</code>. Identify equivalence partitions and boundary values for the matriculation number.</p>
-<template #answer><div>
+<panel type="seamless" minimized><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Answer</p></template>
 <p>String length: (less than 7 characters), (7 characters), (more than 7 characters)</p>
 <p>For those with 7 characters,</p>
 <ul>
 <li>[Faculty Alphabet]: (‘C’, ‘G’), (‘c’, ‘g’), (any other character)</li>
 <li>[Gender Alphabet]: (‘F’, ‘M’), (‘f’, ‘m’), (any other character)</li>
 <li>[Serial Number]: (1000-9999), (0000-0999), (any other 4-characters string)</li>
-<li>[Check Alphabet]: ('K', 'H', 'S', ‘X’, 'Z'), ('k', 'h', ’s’, ‘x’, 'z'), (any other character)</li></ul></div></template></question></panel></div>
-  <div><panel><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> isValidDate</p></template>
-<question has-input="true">
+<li>[Check Alphabet]: ('K', 'H', 'S', ‘X’, 'Z'), ('k', 'h', ’s’, ‘x’, 'z'), (any other character)</li></ul></panel></panel></div>
+<div><panel><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> isValidDate</p></template>
 <p>Identify a set of equivalence partitions for testing the <code class="hljs inline no-lang" v-pre>isValidDate(String date)</code> method. The method checks if the parameter <code class="hljs inline no-lang" v-pre>date</code> is a day that falls in the period 1880/01/01 to 2030/12/31 (both inclusive). The date is given in the format yyyy/mm/dd.</p>
-<template #answer><div>
+<panel type="seamless" minimized><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Answer</p></template>
 <p><strong>Initial partitions</strong>: [null] [10 characters long] [shorter than 10 characters] [longer than 10 characters]</p>
 <p>For 10-character strings:</p>
 <ul>
@@ -50,15 +48,14 @@
 <li>c6-c7: [not an integer] [less than 1] [2] [31-day months: 1,3,5,7,8,10,12] [30-day months: 4,6,9,11] [13-99]</li>
 <li>c8: [‘/’] [ not ‘/’]</li>
 <li>c9-c10: [not an integer] [less than 1] [1-28] [29] [30] [31] [more than 31]</li></ul>
-<p>In practice, we often use ‘trusted’ library functions (e.g. those that come with the Java JDK or .NET framework) to convert strings into dates. In such cases, our testing need not be as thorough as those suggested by the above analysis. However, this kind of thorough testing is required if you are the person implementing such a trusted component.</p></div></template></question></panel></div>
-  <div><panel><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Dispatch resources</p></template>
-<question has-input="true">
+<p>In practice, we often use ‘trusted’ library functions (e.g. those that come with the Java JDK or .NET framework) to convert strings into dates. In such cases, our testing need not be as thorough as those suggested by the above analysis. However, this kind of thorough testing is required if you are the person implementing such a trusted component.</p></panel></panel></div>
+<div><panel><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Dispatch resources</p></template>
 <p>Given below is the overview of the method <code class="hljs inline no-lang" v-pre>dispatch(Resource, Task)</code>, from an emergency management system (e.g. a system used by those who handle emergency calls from the public about incidents such as fires, possible burglaries, domestic disturbances, etc.). A task might need multiple resources of multiple types. For example, the task ‘fire at Clementi MRT’ might need two fire engines and one ambulance.</p>
 <ul>
 <li><code class="hljs inline no-lang" v-pre>dispatch(Resource r, Task t): void</code></li>
 <li>Overview: This method dispatches the Resource <code class="hljs inline no-lang" v-pre>r</code> to the Task <code class="hljs inline no-lang" v-pre>t</code>. Since this can dispatch only one resource, it needs to be used multiple times should the task need multiple resources.</li></ul>
 <p>Imagine you are designing test cases to test the method <code class="hljs inline no-lang" v-pre>dispatch(Resource, Task)</code>. Taking into account equivalence partitions and boundary values, which different inputs will you combine to test the method?</p>
-<template #answer><div>
+<panel type="seamless" minimized><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Answer</p></template>
 <table class="table">
 <tbody>
   <tr>
@@ -80,16 +77,15 @@
       <ul>
         <li>A task requiring only one type of resource</li>
         <li>A task requiring multiple types of resources</li>
-        <li>null</li></ul></td></tr></tbody></table></div></template></question></panel></div>
-  <div><panel><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> transferTable</p></template>
-<question has-input="true">
+        <li>null</li></ul></td></tr></tbody></table></panel></panel></div>
+<div><panel><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> transferTable</p></template>
 <p>Given below is an operation description taken from a restaurant booking system. Use equivalence partitions and the boundary value analysis technique to design a set of test cases for it.</p>
 <ul>
 <li><code class="hljs inline no-lang" v-pre>boolean transferTable(Booking b, Table t)</code></li>
 <li>Description: Used to transfer a Booking <code class="hljs inline no-lang" v-pre>b</code> to Table <code class="hljs inline no-lang" v-pre>t</code>, if <code class="hljs inline no-lang" v-pre>t</code> has enough room.</li>
 <li>Preconditions: <code class="hljs inline no-lang" v-pre>t</code> has room for <code class="hljs inline no-lang" v-pre>b</code>, <code class="hljs inline no-lang" v-pre>b.getTable() != t</code></li>
 <li>Postconditions: <code class="hljs inline no-lang" v-pre>b.getTable() == t</code></li></ul>
-<template #answer><div>
+<panel type="seamless" minimized><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Answer</p></template>
 <p><strong>Equivalence partitions</strong></p>
 <ul>
 <li>
@@ -148,11 +144,10 @@
 <tr>
 <td style="text-align:center">7</td>
 <td style="text-align:center">Any valid</td>
-<td style="text-align:center">(booking size == table size - 1)</td></tr></tbody></table></div><p>Note: We can use Bookings of different sizes for different test cases so that we increase the chance of finding bugs. If there is a minimum and maximum booking size, we should include them in those test cases.</p></div></template></question></panel></div>
-  <div><panel><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> add(Item)</p></template>
-<question has-input="true">
+<td style="text-align:center">(booking size == table size - 1)</td></tr></tbody></table></div><p>Note: We can use Bookings of different sizes for different test cases so that we increase the chance of finding bugs. If there is a minimum and maximum booking size, we should include them in those test cases.</p></panel></panel></div>
+<div><panel><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> add(Item)</p></template>
 <p>Assume you are testing the <code class="hljs inline no-lang" v-pre>add(Item)</code> method specified below.</p>
-<pic src="/se-book/testCaseDesign/summary/exercises/images/itemList.png" height="100"></pic>
+<pic eager src="/se-book/testCaseDesign/summary/exercises/images/itemList.png" height="100"></pic>
 <p></p>
 <p>Assume <code class="hljs inline no-lang" v-pre>i</code> to be the Item being added.</p>
 <p><strong>Preconditions:</strong></p>
@@ -170,7 +165,7 @@
 <p>(a) What are the equivalence partitions relevant to testing the <code class="hljs inline no-lang" v-pre>add(Item)</code> method?</p>
 <p>(b) What are the boundary and non-boundary values you will use to test the <code class="hljs inline no-lang" v-pre>add(Item)</code> method?</p>
 <p>(c) Design a set of test cases to test the <code class="hljs inline no-lang" v-pre>add(Item)</code> method by considering the equivalence partitions and boundary values from your answers to (a) and (b) above.</p>
-<template #answer><div>
+<panel type="seamless" minimized><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Answer</p></template>
 <p>(a)</p>
 <p><code class="hljs inline no-lang" v-pre>i</code>: <code class="hljs inline no-lang" v-pre>i != null</code>, <code class="hljs inline no-lang" v-pre>i == null</code>
 <code class="hljs inline no-lang" v-pre>list</code>: <code class="hljs inline no-lang" v-pre>contains(i) == true</code>, <code class="hljs inline no-lang" v-pre>contains(i) == false</code>, <code class="hljs inline no-lang" v-pre>count() &lt; 10</code>, <code class="hljs inline no-lang" v-pre>count() == 10</code></p>
@@ -178,42 +173,38 @@
 <p>(b)</p>
 <p><code class="hljs inline no-lang" v-pre>list</code>: <code class="hljs inline no-lang" v-pre>count() == 0</code>, <code class="hljs inline no-lang" v-pre>count() == 9</code>, <code class="hljs inline no-lang" v-pre>count() == 10</code>; <code class="hljs inline no-lang" v-pre>count() == [1|2|3|4|5|6|7|8]</code> (1 preferred)</p>
 <p>(c)</p>
-<pic src="/se-book/testCaseDesign/summary/exercises/images/count.png" height="250"></pic>
-<p></p></div></template></question></panel></div>
-  <div><panel><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> setWife</p></template>
-<question has-input="true">
+<pic eager src="/se-book/testCaseDesign/summary/exercises/images/count.png" height="250"></pic>
+<p></p></panel></panel></div>
+<div><panel><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> setWife</p></template>
 <p>Use equivalence partitions and boundary values to choose test inputs for testing the <code class="hljs inline no-lang" v-pre>setWife</code> operation in the <code class="hljs inline no-lang" v-pre>Man</code> class.</p>
-<pic src="/se-book/testCaseDesign/summary/exercises/images/manWoman.png" height="90"></pic>
+<pic eager src="/se-book/testCaseDesign/summary/exercises/images/manWoman.png" height="90"></pic>
 <p></p>
-<template #answer><div>
-<pic src="/se-book/testCaseDesign/summary/exercises/images/manWomanPartitions.png" height="300"></pic>
+<panel type="seamless" minimized><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Answer</p></template>
+<pic eager src="/se-book/testCaseDesign/summary/exercises/images/manWomanPartitions.png" height="300"></pic>
 <p></p>
 <p>Partitioning ‘married’ as ‘to the same woman’ and ‘to a different woman’ seems redundant at first. Arguments for having it:</p>
 <ul>
 <li>The behavior (e.g. the error message shown) may be different in those two situations.</li>
-<li>The ‘to the same woman’ partition has a risk of misunderstanding between developer and user. For example, the developer might think it is OK to ignore the request while the users might expect to see an error message.</li></ul></div></template></question></panel></div>
-  <div><panel><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Pre-Release Game</p></template>
-<question>
+<li>The ‘to the same woman’ partition has a risk of misunderstanding between developer and user. For example, the developer might think it is OK to ignore the request while the users might expect to see an error message.</li></ul></panel></panel></div>
+<div><panel><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Pre-Release Game</p></template>
 <p>If you download a pre-release version of a new game (executable file) to do a test drive and submit bug reports, you would be doing</p>
 <ul class="contains-task-list">
 <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> a. white-box exploratory testing</li>
 <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> b. gray-box beta testing</li>
 <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> c. black-box exploratory testing</li>
 <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. black-box scripted testing</li></ul>
-<template #answer><div>
+<panel type="seamless" minimized><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Answer</p></template>
 <p>c</p>
-<p>Explanation: Since it is an executable only, you are unlikely to have knowledge of its internal workings. Therefore, your testing is most likely to be black-box testing. A ‘test drive’ sounds like exploratory testing rather than scripted testing.</p></div></template></question></panel></div>
-  <div><panel><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> True or False?</p></template>
-<question>
+<p>Explanation: Since it is an executable only, you are unlikely to have knowledge of its internal workings. Therefore, your testing is most likely to be black-box testing. A ‘test drive’ sounds like exploratory testing rather than scripted testing.</p></panel></panel></div>
+<div><panel><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> True or False?</p></template>
 <p>We can apply the equivalence partitioning technique in white-box fashion.</p>
 <ul radio-group="e3b2b" class="radio-list">
 <li class="radio-list-item"><label><input class="radio-list-input" name="e3b2b" type="radio"> True</label></li>
 <li class="radio-list-item"><label><input class="radio-list-input" name="e3b2b" type="radio"> False</label></li></ul>
-<template #answer><div>
+<panel type="seamless" minimized><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Answer</p></template>
 <p>True</p>
-<p>Explanation: In fact, when we know about how the SUT is implemented, we can make more informed decisions about partitioning test inputs into equivalence partitions. White-box equivalence partitioning is less speculative than black-box equivalence partitioning.</p></div></template></question></panel></div>
-  <div><panel><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Design test cases for the <code class="hljs inline no-lang" v-pre>day</code> parameter</p></template>
-<question>
+<p>Explanation: In fact, when we know about how the SUT is implemented, we can make more informed decisions about partitioning test inputs into equivalence partitions. White-box equivalence partitioning is less speculative than black-box equivalence partitioning.</p></panel></panel></div>
+<div><panel><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Design test cases for the <code class="hljs inline no-lang" v-pre>day</code> parameter</p></template>
 <ol>
 <li>
 <p>What are the <em>equivalence partitions</em> for the parameter <code class="hljs inline no-lang" v-pre>day</code> of this method?</p>
@@ -222,9 +213,9 @@
 </span><span><span class="hljs-comment"> */</span>
 </span><span><span class="hljs-function"><span class="hljs-keyword">boolean</span> <span class="hljs-title">isValidDay</span><span class="hljs-params">(<span class="hljs-keyword">int</span> year, <span class="hljs-keyword">int</span> month, <span class="hljs-keyword">int</span> day)</span> </span>{
 </span><span>
-</span><span>} 
+</span><span>}
 </span></code></pre></li>
 <li>
 <p>What are the <em>boundary values</em> for the parameter <code class="hljs inline no-lang" v-pre>day</code> in the question above?</p></li>
 <li>
-<p>Give 10 test inputs you would use for the parameter <code class="hljs inline no-lang" v-pre>day</code> in the question above.</p></li></ol></question></panel></div></panel></div></div></div></div>
+<p>Give 10 test inputs you would use for the parameter <code class="hljs inline no-lang" v-pre>day</code> in the question above.</p></li></ol></panel></div></div></div></div></div></div>

@@ -1,21 +1,20 @@
-<div></div><p></p>
 <p><span class="dimmed"><strong><span>Tools → UML → Class Diagrams → Associations →
 </span></strong></span></p>
 <div id="title-and-body">
-<div><h4 id="multiplicity"><span id="multiplicity" class="anchor"></span><span>Multiplicity</span><a class="fa fa-anchor" href="#multiplicity" onclick="event.stopPropagation()"></a></h4></div>
+<div><h4 id="multiplicity"><span>Multiplicity</span><a class="fa fa-anchor" href="#multiplicity" onclick="event.stopPropagation()"></a></h4></div>
 <div id="main">
 <div>
-<pic src="/se-book/uml/classDiagrams/associations/multiplicity/images/notation.png" height="120"></pic>
+<pic eager src="/se-book/uml/classDiagrams/associations/multiplicity/images/notation.png" height="120"></pic>
 <p></p>
 <p>Commonly used multiplicities:</p>
 <ul>
 <li><code class="hljs inline no-lang" v-pre>0..1</code> : <em>optional</em>, can be linked to 0 or 1 objects.</li>
 <li><code class="hljs inline no-lang" v-pre>1</code> : <em>compulsory</em>, must be linked to one object at all times.</li>
 <li><code class="hljs inline no-lang" v-pre>*</code> : can be linked to 0 or more objects.</li>
-<li><code class="hljs inline no-lang" v-pre>n..m</code> : the number of linked objects must be within <code class="hljs inline no-lang" v-pre>n</code> to <code class="hljs inline no-lang" v-pre>m</code> inclusive.</li></ul>
+<li><code class="hljs inline no-lang" v-pre>n..m</code> : the number of linked objects must be within <code class="hljs inline no-lang" v-pre>n</code> to <code class="hljs inline no-lang" v-pre>m</code> inclusive e.g., <code class="hljs inline no-lang" v-pre>2..5</code>, <code class="hljs inline no-lang" v-pre>1..*</code> (one or more), <code class="hljs inline no-lang" v-pre>*..5</code> (up to five)</li></ul>
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In the diagram below, an <code class="hljs inline no-lang" v-pre>Admin</code> object administers (is in charge of) any number of students but a <code class="hljs inline no-lang" v-pre>Student</code> object must always be under the charge of exactly one <code class="hljs inline no-lang" v-pre>Admin</code> object.</p>
-<pic src="/se-book/uml/classDiagrams/associations/multiplicity/images/adminStudent.png" width="300"></pic></box>
+<pic eager src="/se-book/uml/classDiagrams/associations/multiplicity/images/adminStudent.png" width="300"></pic></box>
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In the diagram below,</p>
 <ul>
@@ -23,17 +22,19 @@
 <li>A professor cannot supervise more than 5 students but can have no students to supervise.</li>
 <li>An admin can handle any number of professors and any number of students, including none.</li>
 <li>A professor/student can be handled by any number of admins, including none.</li></ul>
-<pic src="/se-book/uml/classDiagrams/associations/multiplicity/images/adminProfessorStudent.png" height="70"></pic></box></div>
+<pic eager src="/se-book/uml/classDiagrams/associations/multiplicity/images/adminProfessorStudent.png" height="70"></pic></box>
+<box type="warning" seamless>
+<p><strong>There is no <em>default</em> multiplicity</strong> in UML. If a class diagram does not show the multiplicity of an association, it simply means the <em>multiplicity is unspecified</em>.</p></box></div>
 <div>
-  <div><panel expandable><template #header><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
-  <div><panel><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Which statement agrees with the  multiplicity shown in this diagram?</p></template>
-<question>
-<pic src="/se-book/uml/classDiagrams/associations/multiplicity/images/unitItem.png" height="100"></pic>
+<div><br>
+<h5 id="exercises"><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Exercises:<a class="fa fa-anchor" href="#exercises" onclick="event.stopPropagation()"></a></h5>
+<div><div><panel><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Which statement agrees with the  multiplicity shown in this diagram?</p></template>
+<pic eager src="/se-book/uml/classDiagrams/associations/multiplicity/images/unitItem.png" height="100"></pic>
 <p></p>
 <ul class="contains-task-list">
 <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> a. A <code class="hljs inline no-lang" v-pre>Unit</code> object can be linked to any number of <code class="hljs inline no-lang" v-pre>Item</code> objects.</li>
 <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> b. An <code class="hljs inline no-lang" v-pre>Item</code> object must be linked to 1, 2, 3 or 4 <code class="hljs inline no-lang" v-pre>Unit</code> objects.</li>
 <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> c. A <code class="hljs inline no-lang" v-pre>Unit</code> object must be linked to 1, 2, 3, or 4 <code class="hljs inline no-lang" v-pre>Item</code> objects.</li>
 <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. A <code class="hljs inline no-lang" v-pre>Item</code> object can be linked to 0 or more <code class="hljs inline no-lang" v-pre>Unit</code> objects.</li></ul>
-<template #answer><div>
-<p>(c)(d)</p></div></template></question></panel></div></panel></div></div></div></div>
+<panel type="seamless" minimized><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Answer</p></template>
+<p>(c)(d)</p></panel></panel></div></div></div></div></div></div>

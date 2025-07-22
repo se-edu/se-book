@@ -1,54 +1,146 @@
-<div></div><p></p>
 <p><span class="dimmed"><strong><span>Tools → Git and GitHub →
 </span></strong></span></p>
 <div id="title-and-body">
-<div><h4 id="init-getting-started"><span id="init-getting-started" class="anchor"></span><span><code class="hljs inline no-lang" v-pre>init</code>: Getting started</span><a class="fa fa-anchor" href="#init-getting-started" onclick="event.stopPropagation()"></a></h4></div>
+<div><h4 id="putting-a-folder-under-git-s-control"><span>Putting a Folder Under Git's Control</span><a class="fa fa-anchor" href="#putting-a-folder-under-git-s-control" onclick="event.stopPropagation()"></a></h4></div>
 <div id="main">
 <div>
-<p>Let's take your first few steps in your Git journey.</p>
-<span class="non-printable">
-<p><strong>0. Take a peek at the full picture(?)</strong>. Optionally, if you are the sort who prefers to have some sense of the full picture before you get into the nitty-gritty details, watch the video in the panel below:
-</p></span><p></p>
-<panel class="non-printable"><template #header><p><span class="dimmed"><span><span aria-hidden="true" class="fas fa-paperclip"></span></span> Git Overview</span></p></template>
-<div class="block-embed block-embed-service-youtube" style="position: relative; padding-bottom: 60.9375%"><iframe type="text/html" src="//www.youtube.com/embed/v40b3ExbM0c" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></panel><p></p>
-<p><strong>1. First, install</strong> Sourcetree (<a href="https://se-education.org/guides/tutorials/sourcetree.html">installation instructions</a>), which is Git + a GUI for Git. If you prefer to use Git via the command line (i.e., without a GUI), you can <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">install Git</a> instead.</p>
-<p><strong>2. Next, create a directory for the repo</strong> (e.g., a directory named <code class="hljs inline no-lang" v-pre>things</code>).</p>
-<p><strong>3. Then, initialize a repository</strong> in that directory.</p>
+<div class="non-printable">
+<div class="border border-success pt-0 ps-1 pb-1 pe-1 border-bottom-0 rounded-top" style="background-color: #e6fff2">
+<div class="indented">
+<br>
+<div id="overview">
+<p>To be able to save snapshots of a folder using Git, <strong>you must first put the folder under Git's control by initialising a Git <em>repository</em></strong> in that folder.</p></div>
+<span><small>This lesson covers that part.</small></span></div></div>
+<br></div>
+<p><strong>Normally, we use Git to manage a revision history of a specific folder</strong>, which gives us the ability to revision-control any file in that folder and its subfolders.</p>
+<p><strong>To put a folder under the control of Git, we <em>initialise</em> a <span class="badge text-dark" style="background-color: rgba(13, 202, 240, 0.2);"><trigger for="pop:init-repository"><span class="large">repository</span></trigger></span> (short name: <span class="badge text-dark" style="background-color: rgba(13, 202, 240, 0.2);"><span class="large">repo</span></span>)</strong> in that folder. This way, we can initialise repos in different folders, to revision-control different clusters of files independently of each other <span class="dimmed">e.g., files belonging to different projects</span>.</p>
+<popover id="pop:init-repository" placement="top">
+  <template #header><span class="text-info"><span>Definition: <strong>repository</strong></span></span></template>
+  <template #content><div>
+    <span>A Git <em>repository</em> (short name: <em>repo</em>) is a database that tracks files and their version history of a folder.</span></div></template></popover>
+<p>You can follow the hands-on practical below to learn how to initialise a repo in a folder.</p>
+<div class="indented-level2 non-printable">
+<div class="callout shadow">
+<p><strong class="text-info">What is this?</strong>
+<span class="badge bg-secondary text-white"><span><span aria-hidden="true" class="fas fa-laptop-code"></span></span> HANDS-ON</span> panels contain hands-on activities you can do as you learn Git. If you are new to Git, <mark>we strongly recommend that you do them yourself</mark> (even if they appear straightforward), as hands-on usage will help you internalise the concepts and operations better.</p></div></div>
+<div class="non-printable">
+<span style="position: relative; top: 10px;" class="badge rounded-pill bg-secondary fs-6"><span><span aria-hidden="true" class="fas fa-laptop-code"></span></span> HANDS-ON: Initialise a git repo in a folder</span>
+<div class="indented-level1">
+<box type="dark" seamless no-icon>
+<p><span style="position: relative; right: 25px;" class="badge rounded-pill text-dark bg-secondary text-white">1</span> <strong>First, choose a folder.</strong> The folder may or may not have any files in it already. For this practical, let us create a folder named <code class="hljs inline no-lang" v-pre>things</code> for this purpose.</p>
+<pre><code class="no-line-numbers hljs bash" v-pre><span><span class="hljs-built_in">cd</span> my-projects
+</span><span>mkdir things
+</span></code></pre><p><span style="position: relative; right: 25px;" class="badge rounded-pill text-dark bg-secondary text-white">2</span> <strong>Then CD into it.</strong></p>
+<pre><code class="no-line-numbers hljs bash" v-pre><span><span class="hljs-built_in">cd</span> things
+</span></code></pre><p><span style="position: relative; right: 25px;" class="badge rounded-pill text-dark bg-secondary text-white">3</span> <strong>Run the <code class="hljs inline no-lang" v-pre>git status</code> command</strong> to check the status of the folder.</p>
+<pre><code class="no-line-numbers hljs bash" v-pre><span>git status
+</span></code></pre><div class="d-flex">
+<div class="me-3">
+<span><span><strong><span class="dimmed">⤷</span></strong></span></span></div>
+<div class="flex-grow-1">
+<pre><code class="no-line-numbers hljs" v-pre><span>fatal: not a git repository (or any of the parent directories): .git
+</span></code></pre></div></div>
+<p>Don't panic. The error message is expected. It confirms that the folder currently does not have a Git repo.</p>
+<p><span style="position: relative; right: 25px;" class="badge rounded-pill text-dark bg-secondary text-white">4</span> <strong>Now, initialise a repository</strong> in that folder.</p>
 <tabs>
-  <tab><template #header>Sourcetree</template>
-    <div><p><span aria-hidden="true" class="fab fa-windows"></span> Windows: Click <code class="hljs inline no-lang" v-pre>File</code> → <code class="hljs inline no-lang" v-pre>Clone/New…</code>. Click on <code class="hljs inline no-lang" v-pre>Create</code> button.<br>
-<span aria-hidden="true" class="fab fa-apple"></span> Mac: <code class="hljs inline no-lang" v-pre>New...</code> → <code class="hljs inline no-lang" v-pre>Create New Repository</code>.</p>
-<p>Enter the location of the directory (Windows version shown below) and click <code class="hljs inline no-lang" v-pre>Create</code>.</p>
-<pic src="/se-book/gitAndGithub/init/images/sourcetree_1.png" height="220"></pic>
-<p></p>
-<p>Go to the <code class="hljs inline no-lang" v-pre>things</code> folder and observe how a hidden folder <code class="hljs inline no-lang" v-pre>.git</code> has been created.</p>
-<p><span aria-hidden="true" class="fab fa-windows"></span> Windows: you might have to <a href="https://www.howtogeek.com/howto/windows-vista/show-hidden-files-and-folders-in-windows-vista/">configure Windows Explorer to show hidden files</a>.</p></div></tab>
   <tab><template #header>CLI</template>
-    <div><p>Open a Git Bash Terminal.</p>
-<p>If you installed Sourcetree, you can click the <code class="hljs inline no-lang" v-pre>Terminal</code> button to open a GitBash terminal (on a Linux/Mac environment, even a regular terminal should do).</p>
-<pic src="/se-book/gitAndGithub/init/images/cli_1.png" height="100"></pic>
-<p></p>
-<p>Navigate to the <code class="hljs inline no-lang" v-pre>things</code> directory.<br>
-Use the command <code class="hljs inline no-lang" v-pre>git init</code> which should initialize the repo.</p>
-<pre><code class="no-line-numbers hljs" v-pre><span>$ cd /c/repos/things
-</span><span>$ git init
-</span></code></pre><p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
-<pre><code class="no-line-numbers hljs" v-pre><span>Initialized empty Git repository in c:/repos/things/.git/
-</span></code></pre><p>You can use the <em>list all</em> command <code class="hljs inline no-lang" v-pre>ls -a</code> to view all files, which should show the <code class="hljs inline no-lang" v-pre>.git</code> directory that was created by the previous command.</p>
-<pre><code class="no-line-numbers hljs" v-pre><span>$ ls -a
-</span><span>.  ..  .git
-</span></code></pre><p>You can also use the <code class="hljs inline no-lang" v-pre>git status</code> command to check the status of the newly-created repo. It should respond with something like the following:</p>
-<pre><code class="no-line-numbers hljs" v-pre><span>$ git status
-</span></code></pre><p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
-<pre><code class="no-line-numbers hljs" v-pre><span># On branch master
-</span><span>#
-</span><span># No commits yet
-</span><span>#
+    <div><p>Use the command <code class="hljs inline no-lang" v-pre>git init</code> which should initialise the repo.</p>
+<pre><code class="no-line-numbers hljs bash" v-pre><span>git init
+</span></code></pre><div class="d-flex">
+<div class="me-3">
+<span><span><strong><span class="dimmed">⤷</span></strong></span></span></div>
+<div class="flex-grow-1">
+<pre><code class="no-line-numbers hljs" v-pre><span><span>Initialized empty Git repository in things/<span class="highlighted">.git</span>/
+</span></span></code></pre></div></div>
+<p><span><span aria-hidden="true" class="fas fa-info-circle"></span></span> The output might also contain a hint about a name for an initial branch (e.g., <code class="hljs inline no-lang" v-pre>hint: Using 'master' as the name for the initial branch ...</code>). You can ignore that for now.</p>
+<p><span><span aria-hidden="true" class="fas fa-info-circle"></span></span> Note how the output mentions the repo being created in <code class="hljs inline no-lang" v-pre>things/.git/</code> (not <code class="hljs inline no-lang" v-pre>things/</code>). More on that later.</p></div></tab>
+  <tab class="d-print-none"><template #header>Sourcetree</template>
+    <div><ul style="list-style-type: none; padding-inline-start: 0px;">
+<li style="display: flex;"><span aria-hidden="true" class="fab fa-windows" style="font-size: unset; min-width: 16px; line-height: unset; margin-inline-end: 0.35em; align-self: flex-start; flex-shrink: 0;">​</span><div>
+<p>Windows: Click <code class="hljs inline no-lang" v-pre>File</code> → <code class="hljs inline no-lang" v-pre>Clone/New…</code> → Click on <code class="hljs inline no-lang" v-pre>+ Create</code> button on the top menu bar.<br>
+<pic eager src="/se-book/gitAndGithub/init/images/sourcetree_1.png" height="220"></pic><br>
+Enter the location of the directory and click <code class="hljs inline no-lang" v-pre>Create</code>.</p></div></li>
+<li style="display: flex;"><span aria-hidden="true" class="fab fa-apple" style="font-size: unset; min-width: 16px; line-height: unset; margin-inline-end: 0.35em; align-self: flex-start; flex-shrink: 0;">​</span><div>
+<p>Mac: <code class="hljs inline no-lang" v-pre>New...</code> → <code class="hljs inline no-lang" v-pre>Create Local Repository</code> (or <code class="hljs inline no-lang" v-pre>Create New Repository</code>)  → Click <code class="hljs inline no-lang" v-pre>...</code> button to select the folder location for the repository → click the <code class="hljs inline no-lang" v-pre>Create</code> button.</p></div></li></ul></div></tab></tabs></box></div></div>
+<p><strong>Initialising a repo results in two things:</strong></p>
+<ul style="list-style-type: none; padding-inline-start: 0px;">
+<li style="display: flex;"><span aria-hidden="true" style="line-height: unset; margin-inline-end: 0.35em; align-self: flex-start; flex-shrink: 0;" class="fw-bold">a)</span><div><strong>First, Git now recognises this folder as a Git repository</strong>, which means it can now help you track the version history of files inside this folder.</div></li></ul>
+<div class="non-printable">
+<span style="position: relative; top: 10px;" class="badge rounded-pill bg-secondary fs-6"><span><span aria-hidden="true" class="fas fa-laptop-code"></span></span> HANDS-ON: Verifying a folder is a Git repo</span>
+<div class="indented-level1">
+<box type="dark" seamless no-icon>
+<p>To confirm, you can run the <code class="hljs inline no-lang" v-pre>git status</code> command. It should respond with something like the following:</p>
+<pre><code class="no-line-numbers hljs" v-pre><span>git status
+</span></code></pre><div class="d-flex">
+<div class="me-3">
+<span><span><strong><span class="dimmed">⤷</span></strong></span></span></div>
+<div class="flex-grow-1">
+<pre><code class="no-line-numbers hljs" v-pre><span>On branch master
+</span><span>
+</span><span>No commits yet
+</span><span>
 </span><span>nothing to commit (create/copy files and use &quot;git add&quot; to track)
-</span></code></pre></div></tab></tabs>
-<box type="tip" seamless>
-<p>As you see above, this textbook explains how to use Git via Sourcetree (a GUI client) as well as via the Git CLI. If you are new to Git, <strong>we recommend you learn <span class="underline">both</span> the GUI method and the CLI method</strong> -- The GUI method will help you visualize the result better while the CLI method is more universal (i.e., you will not be tied to any GUI) and more flexible/powerful.</p>
-<p><strong>It is fine to learn the CLI way only</strong> (using Sourcetree is optional), especially if you normally prefer to work with CLI user GUI.</p></box>
-<box type="warning" seamless>
-<p>If you are new to Git, <strong>we caution you against using Git or GitHub features that come with the IDE</strong> as it is better to learn Git independent of any other tool. Similarly, using clients provided by GitHub (e.g., <em>GitHub Desktop</em> GUI client) will make it harder for you to separate Git features from GitHub features.</p></box></div>
-<div></div></div></div>
+</span></code></pre></div></div>
+<p><span><span aria-hidden="true" class="fas fa-info-circle"></span></span> Don't worry if you don't understand the output (we will learn about them later); what matters is that it no longer gives an error message as it did before.</p></box></div></div>
+<ul style="list-style-type: none; padding-inline-start: 0px;">
+<li style="display: flex;"><span aria-hidden="true" style="line-height: unset; margin-inline-end: 0.35em; align-self: flex-start; flex-shrink: 0;" class="fw-bold">b)</span><div><strong>Second, Git created a hidden subfolder named <code class="hljs inline no-lang" v-pre>.git</code></strong> inside the <code class="hljs inline no-lang" v-pre>things</code> folder. This folder will be used by Git to store metadata about this repository.</div></li></ul>
+<div class="indented-level2 non-printable">
+<div class="callout shadow">
+<p><strong class="text-info">What is this?</strong>
+<span class="badge bg-info text-white"><span><span aria-hidden="true" class="fas fa-wrench"></span></span> UNDER-THE-HOOD</span> panels explain how a certain Git feature works under the hood i.e., some implementation details.<br>
+They can be skipped the first time you are taking a tour. But we recommend that you delve into some of them at some point. Reason: While Git <em>can</em> be used without knowing much about its internal workings, knowing those details will allow you to be more confident when using Git, and harness more of its awesome power.</p></div></div>
+<div class="indented-level1">
+<panel class="non-printable" type="info"><template #header><p><span><span aria-hidden="true" class="fas fa-wrench"></span></span> UNDER-THE-HOOD: <strong>How Git stores meta-data about the repository</strong></p></template>
+<p>Feel free to verify <code class="hljs inline no-lang" v-pre>.git</code> folder exists, as given below.</p>
+ <tabs>
+  <tab><template #header><span aria-hidden="true" class="fas fa-terminal"></span> Terminal</template>
+<p>You can use the <em>list all</em> command <code class="hljs inline no-lang" v-pre>ls -a</code> to view all files, which should show the <code class="hljs inline no-lang" v-pre>.git</code> folder that was created by the <code class="hljs inline no-lang" v-pre>init</code> command.</p>
+<pre><code class="no-line-numbers hljs bash" v-pre><span><span>ls <span class="highlighted">-a</span>
+</span></span></code></pre><p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
+<pre><code class="no-line-numbers hljs bash" v-pre><span><span>.  ..  <span class="highlighted">.git</span>
+</span></span></code></pre></tab>
+  <tab><template #header><span aria-hidden="true" class="fab fa-windows"></span> Windows Explorer</template>
+<p>To see the hidden folders, you might have to <a href="https://support.microsoft.com/en-us/windows/view-hidden-files-and-folders-in-windows-97fbc472-c603-9d90-91d0-1166d1d9f4b5">configure Windows Explorer to show hidden files</a> first.</p></tab>
+  <tab><template #header><span aria-hidden="true" class="fab fa-apple"></span> MacOS Finder</template>
+<p>Press <kbd>⌘</kbd>+<kbd>⇧</kbd>+<kbd>.</kbd> to get Finder to show hidden folders/files inside the currently-selected folder.</p></tab></tabs>
+<p>You can even dig around inside that folder -- it is just a bunch of subfolders and files.</p></panel></div>
+<p></p>
+<p><strong>A Git-controlled folder is divided into two main parts:</strong></p>
+<ol>
+<li><strong>The repository</strong> – stored in the hidden <code class="hljs inline no-lang" v-pre>.git</code> subfolder, which contains all the metadata and history.</li>
+<li><strong>The <span class="badge text-dark" style="background-color: rgba(13, 202, 240, 0.2);"><span class="large">working directory</span></span></strong> – everything else in that folder, where you create and edit files.</li></ol></div>
+<div>
+<div class="indented-level2 non-printable">
+<div class="callout shadow">
+<p><strong class="text-info">What is this?</strong>
+<span class="badge bg-danger text-white"><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> EXERCISE</span> panels contain a Git-Mastery exercise that you can download using the Git-Mastery app, and you can use the same app to verify that your solution is correct.</p></div></div>
+<panel tags="git-mastery" class="non-printable" type="danger"><template #header><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> EXERCISE: <code class="hljs inline no-lang" v-pre>under-control</code></p></template>
+<p><strong>To download</strong> the exercise,</p>
+<ul>
+<li>navigate inside the <code class="hljs inline no-lang" v-pre>gitmastery-exercies</code> folder.</li>
+<li>run <code class="hljs inline no-lang" v-pre>gitmastery download under-control</code> command.</li></ul>
+<hr class="dashed border-danger">
+<p><strong class="text-danger">Your task:</strong></p>
+<div class="indented-level1">
+<p>Put the folder <code class="hljs inline no-lang" v-pre>[exercises]/control-me</code> under Git's control (i.e., initialise a repository in that folder).</p></div>
+<hr class="dashed border-danger">
+<p><strong>To verify</strong> your work,</p>
+<ul>
+<li>navigate to anywhere inside the <code class="hljs inline no-lang" v-pre>gitmastery-exercies/under-control</code> folder <span class="dimmed">(or any sub-folder of it)</span>.</li>
+<li>run the <code class="hljs inline no-lang" v-pre>gitmastery verify</code> command.</li></ul>
+<div class="bg-light">
+<p><div class="text-center"><small><a href="https://git-mastery.github.io/app/">Git-Mastery <strong>commands list</strong></a> | <a href="https://github.com/git-mastery/git-mastery/issues">Report Git-Mastery <strong>bugs</strong></a></small></div></p></div></panel>
+<p></p>
+<div class="indented-level2 non-printable">
+<div class="callout shadow">
+<p><strong class="text-info">What is this?</strong>
+<span class="badge bg-warning text-dark"><span><span aria-hidden="true" class="fas fa-diamond-turn-right"></span></span> DETOUR</span> panels contain related directions you can optionally explore. We recommend that you <mark>only skim them the first time you are going through a tour</mark> (i.e., just to know <em>what</em> each detour covers); you can revisit them later, to deepen your knowledge further, or when you encounter a use case related to the concepts covered by the detour.</p></div></div>
+<a id="undoRepoInit"></a>
+<panel class="non-printable" type="warning" peek><template #header><p><span><span aria-hidden="true" class="fas fa-diamond-turn-right"></span></span> DETOUR: <strong>Undoing a Repo Initialisation</strong></p></template>
+<div><p>When Git initialises a repo in a folder, it does not touch any files in the folder, other than create the <code class="hljs inline no-lang" v-pre>.git</code> folder its contents. So, reversing the operation is as simple as deleting the newly-created <code class="hljs inline no-lang" v-pre>.git</code> folder.</p>
+<pre><code class="no-line-numbers hljs bash" v-pre><span>git status <span class="hljs-comment">#run this to confirm a repo exists</span>
+</span><span>
+</span><span>rm -rf .git  <span class="hljs-comment">#delete the .git folder</span>
+</span><span>
+</span><span>git status <span class="hljs-comment">#this should give an error, as the repo no longer exists</span>
+</span></code></pre></div></panel></div></div></div>

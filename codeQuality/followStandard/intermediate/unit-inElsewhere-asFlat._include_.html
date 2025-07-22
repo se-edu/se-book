@@ -1,15 +1,14 @@
-<div></div><p></p>
 <p><span class="dimmed"><strong><span>Implementation → Code Quality → Style →
 </span></strong></span></p>
 <div id="title-and-body">
-<div><h4 id="intermediate"><span id="intermediate" class="anchor"></span><span>Intermediate</span><a class="fa fa-anchor" href="#intermediate" onclick="event.stopPropagation()"></a></h4></div>
+<div><h4 id="intermediate"><span>Intermediate</span><a class="fa fa-anchor" href="#intermediate" onclick="event.stopPropagation()"></a></h4></div>
 <div id="main">
 <div>
 <p>Go through the <a href="https://se-education.org/guides/conventions/java/intermediate.html">Java coding standard at @SE-EDU</a> and learn the <em>intermediate</em> style rules.</p></div>
 <div>
-<div><panel expanded><template #header><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
-  <div><div><panel><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Unsuitable variable name</p></template>
-<question>
+<div><br>
+<h5 id="exercises"><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Exercises:<a class="fa fa-anchor" href="#exercises" onclick="event.stopPropagation()"></a></h5>
+<div><div><panel><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Unsuitable variable name</p></template>
 <p>According to the given Java coding standard, which one of these is not a good name?</p>
 <ul radio-group="d008b" class="radio-list">
 <li class="radio-list-item"><label><input class="radio-list-input" name="d008b" type="radio"> a. integer variable name: <code class="hljs inline no-lang" v-pre>totalPeople</code></label></li>
@@ -17,13 +16,12 @@
 <li class="radio-list-item"><label><input class="radio-list-input" name="d008b" type="radio"> c. method name (returns integer): <code class="hljs inline no-lang" v-pre>getPeopleCount</code></label></li>
 <li class="radio-list-item"><label><input class="radio-list-input" name="d008b" type="radio"> d. method name (returns boolean): <code class="hljs inline no-lang" v-pre>isValidAddress</code></label></li>
 <li class="radio-list-item"><label><input class="radio-list-input" name="d008b" type="radio"> e. String variable name: <code class="hljs inline no-lang" v-pre>description</code></label></li></ul>
-<template #answer><div>
+<panel type="seamless" minimized><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Answer</p></template>
 <p>b</p>
-<p>Explanation: <code class="hljs inline no-lang" v-pre>checkWeight</code> is an action. Naming variables as actions makes the code harder to follow. <code class="hljs inline no-lang" v-pre>isWeightValid</code> may be a better name.</p></div></template></question></panel></div>
+<p>Explanation: <code class="hljs inline no-lang" v-pre>checkWeight</code> is an action. Naming variables as actions makes the code harder to follow. <code class="hljs inline no-lang" v-pre>isWeightValid</code> may be a better name.</p></panel></panel></div>
 <div><panel><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Find intermediate coding standard violations</p></template>
-<question>
-<p>Repeat the exercise in the panel below but also find violations of <em>intermediate</em> level guidelines.</p>
-<div><panel><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Find basic coding standard violations</p></template>
+Repeat the exercise in the panel below but also find violations of _intermediate_ level guidelines.
+<div><panel><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Find coding standard violations</p></template>
 <p>Consider the code given below:</p>
 <pre><code class="line-numbers hljs java" v-pre><span><span class="hljs-keyword">import</span> java.util.*;
 </span><span>
@@ -49,16 +47,13 @@
 </span><span>    <span class="hljs-meta">@Override</span>
 </span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span><span class="hljs-params">()</span> </span>{ <span class="hljs-keyword">return</span> descriptionPrefix + description; }
 </span><span>}
-</span></code></pre><p>In what ways do the code violate the coding standard you are expected to follow?</p>
+</span></code></pre><p>What are the coding standard violations in the above code (as per the Java coding standard used in the course)?<br>
+For each violation, note down the line number, violation, and a possible correction.</p>
 <panel minimized><template #header><p><span aria-hidden="true" class="fas fa-lightbulb"></span> Some hints ...</p></template>
-<p>Here are three:</p>
-<ul>
-<li><code class="hljs inline no-lang" v-pre>descriptionPrefix</code> is a constant and should be named <code class="hljs inline no-lang" v-pre>DESCRIPTION_PREFIX</code></li>
-<li>method name <code class="hljs inline no-lang" v-pre>printingDescription()</code> should be named as <code class="hljs inline no-lang" v-pre>printDescription()</code></li>
-<li>boolean variable <code class="hljs inline no-lang" v-pre>important</code> should be named to sound boolean e.g., <code class="hljs inline no-lang" v-pre>isImportant</code></li></ul>
-<p>There are many more.</p></panel></panel></div>
-<template #hint><div>
+<p>[line 4] <code class="hljs inline no-lang" v-pre>descriptionPrefix</code> is a constant, which should be named using the screaming camel case (e.g., <code class="hljs inline no-lang" v-pre>DESCRIPTION_PREFIX</code>)</p>
+<p>There are more than 10 coding standard violations in this code.</p></panel></panel></div>
+<panel type="seamless" minimized><template #header><p>Hint</p></template>
 <p>Here's one you are more likely to miss:</p>
 <ul>
 <li><code class="hljs inline no-lang" v-pre>* Print the description as a string.</code> → <code class="hljs inline no-lang" v-pre>* Prints the description as a string.</code></li></ul>
-<p>There are more.</p></div></template></question></panel></div></div></panel></div></div></div></div>
+<p>There are more.</p></panel></panel></div></div></div></div></div></div>

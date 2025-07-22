@@ -1,11 +1,15 @@
-<div><panel src="/se-book/testCaseDesign/combiningTestInputs/heuristicValid/unit-inElsewhere-asFlat._include_.html" popup-url="/se-book/testCaseDesign/combiningTestInputs/heuristicValid"><template #header><p><span class="dimmed"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> Quality Assurance → Test Case Design → Combining Test Inputs → Heuristic: Each Valid Input at Least Once in a Positive Test Case</span></p></template></panel></div><p></p>
 <p><span class="dimmed"><strong><span>Quality Assurance → Test Case Design → Combining Test Inputs →
 </span></strong></span></p>
 <div id="title-and-body">
-<div><h4 id="heuristic-no-more-than-one-invalid-input-in-a-test-case"><span id="heuristic-no-more-than-one-invalid-input-in-a-test-case" class="anchor"></span><span>Heuristic: No more than one invalid input in a test case</span><a class="fa fa-anchor" href="#heuristic-no-more-than-one-invalid-input-in-a-test-case" onclick="event.stopPropagation()"></a></h4></div>
+<div><h4 id="heuristic-test-invalid-inputs-individually-before-combining-them"><span>Heuristic: Test invalid inputs individually before combining them</span><a class="fa fa-anchor" href="#heuristic-test-invalid-inputs-individually-before-combining-them" onclick="event.stopPropagation()"></a></h4></div>
 <div id="main">
 <div>
-<p>Consider the <trigger for="modal:heuristic-valid-test-case" trigger="click">test cases designed in [Heuristic: each valid input at least once in a positive test case]</trigger>.</p>
+<p><strong>To verify the SUT is handling a certain invalid input correctly, it is better to test that invalid input without combining it with other invalid inputs.</strong> For example, consider the test case 4 of <trigger for="modal:heuristic-valid-test-case" trigger="click">test cases designed in [Heuristic: each valid input at least once in a positive test case]</trigger>. After running that test case, can you be sure that the error message “invalid fruit” is caused by the invalid fruitName <code class="hljs inline no-lang" v-pre>Dog</code>?</p>
+<ul>
+<li>Answer: No</li>
+<li>Reason: Because it could have been (incorrectly) triggered by the other invalid unitPrice of <code class="hljs inline no-lang" v-pre>-1</code> in that test case, due to a bug in the code.</li></ul>
+<p>Therefore, if that test case was intended to verify that the invalid fruitName <code class="hljs inline no-lang" v-pre>Dog</code> triggers the &quot;invalid fruit&quot; error message, it is better not to include the invalid unitPrice <code class="hljs inline no-lang" v-pre>-1</code> in that test case at the same time. If the invalid value <code class="hljs inline no-lang" v-pre>-1</code> needs to be tested, we should test it in a separate test case.</p>
+<p>After applying the above insight to our running example, you get the following test cases.</p>
 <modal large id="modal:heuristic-valid-test-case"><template #header><strong>Extract from Quality Assurance → Test Case Design → Combining Test Inputs → Heuristic: each valid input at least once in a positive test case</strong></template>
   <div>
 <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead>
@@ -26,10 +30,10 @@
 <td style="text-align:center">20</td>
 <td style="text-align:center">Print oval label</td></tr>
 <tr>
-<td style="text-align:center">2.1</td>
-<td style="text-align:center">Cherry</td>
+<td style="text-align:center"><mark>2.1</mark></td>
+<td style="text-align:center"><mark>Cherry</mark></td>
 <td style="text-align:center">VV</td>
-<td style="text-align:center">Print square label</td></tr>
+<td style="text-align:center">Print <mark>square</mark> label</td></tr>
 <tr>
 <td style="text-align:center">3</td>
 <td style="text-align:center">VV</td>
@@ -39,12 +43,7 @@
 <td style="text-align:center">4</td>
 <td style="text-align:center"><span class="underline">Dog</span></td>
 <td style="text-align:center"><span class="underline">-1</span></td>
-<td style="text-align:center">Error message “invalid fruit&quot;</td></tr></tbody></table></div><p>VV/IV = Any Invalid or Valid Value VV = Any Valid Value</p></div></modal>
-<p>After running these test cases, can you be sure that the error message “invalid price” is shown for negative prices?</p>
-<ul>
-<li>Answer: No.</li>
-<li>Reason: <code class="hljs inline no-lang" v-pre>-1</code> -- the only input that is a negative price -– is in a test case that produces the error message “invalid fruit”.</li></ul>
-<p>In this case, a useful heuristic to apply is <strong>no more than one invalid input in a test case</strong>. After applying that, you get the following test cases.</p>
+<td style="text-align:center">Error message “invalid fruit&quot;</td></tr></tbody></table></div><p><span class="small">VV/IV = Any Invalid or Valid Value VV = Any Valid Value</span></p></div></modal>
 <box>
 <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead>
 <tr>
@@ -74,23 +73,25 @@
 <td style="text-align:center"><span class="underline">0</span></td>
 <td style="text-align:center">Error message “invalid price”</td></tr>
 <tr>
-<td style="text-align:center">4</td>
+<td style="text-align:center"><mark>4</mark></td>
 <td style="text-align:center">VV</td>
-<td style="text-align:center"><span class="underline">-1</span></td>
+<td style="text-align:center"><mark><span class="underline">-1</span></mark></td>
 <td style="text-align:center">Error message “invalid price&quot;</td></tr>
 <tr>
-<td style="text-align:center">4.1</td>
-<td style="text-align:center"><span class="underline">Dog</span></td>
+<td style="text-align:center"><mark>4.1</mark></td>
+<td style="text-align:center"><mark><span class="underline">Dog</span></mark></td>
 <td style="text-align:center">VV</td>
-<td style="text-align:center">Error message “invalid fruit&quot;</td></tr></tbody></table></div><p>VV/IV = Any Invalid or Valid Value VV = Any Valid Value</p></box></div>
+<td style="text-align:center">Error message “invalid fruit&quot;</td></tr></tbody></table></div><p><span class="small">VV/IV = Any Invalid or Valid Value VV = Any Valid Value</span></p></box>
+<p><strong>This is not to say <em>never</em> have more than one invalid input in a test case</strong>. In fact, an SUT might work correctly when only one invalid input is given but not when a certain combination of multiple invalid inputs is given. Hence, it is still useful to have test cases with multiple invalid inputs, <em>after</em> you already have confirmed that the SUT works when only one invalid input is given.</p>
+<p><strong><em>Test invalid inputs individually before combining them</em></strong> is the heuristic we learned here. As a test case with multiple invalid inputs <em>by itself</em> does not confirm that the SUT works for each of those invalid inputs, you are better off testing the SUT with one-invalid-input-at-a-time first, and if you can afford more test cases, also testing with combinations of invalid inputs.</p></div>
 <div>
-  <div><panel expandable><template #header><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
-  <div><panel><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Can define test cases precisely</p></template>
-<question>
+<div><br>
+<h5 id="exercises"><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Exercises:<a class="fa fa-anchor" href="#exercises" onclick="event.stopPropagation()"></a></h5>
+<div><div><panel><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Can define test cases precisely</p></template>
 <p>Applying the heuristics covered so far, we can determine the precise number of test cases required to test any given SUT effectively.</p>
 <ul radio-group="a7d7f" class="radio-list">
 <li class="radio-list-item"><label><input class="radio-list-input" name="a7d7f" type="radio"> True</label></li>
 <li class="radio-list-item"><label><input class="radio-list-input" name="a7d7f" type="radio"> False</label></li></ul>
-<template #answer><div>
+<panel type="seamless" minimized><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> Answer</p></template>
 <p>False</p>
-<p>Explanation: These heuristics are, well, heuristics only. They will help you to make better decisions about test case design. However, they are speculative in nature (especially, when testing in black-box fashion) and cannot give you the precise number of test cases.</p></div></template></question></panel></div></panel></div></div></div></div>
+<p>Explanation: These heuristics are, well, heuristics only. They will help you to make better decisions about test case design. However, they are speculative in nature (especially, when testing in black-box fashion) and cannot give you the precise number of test cases.</p></panel></panel></div></div></div></div></div></div>

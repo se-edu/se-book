@@ -1,14 +1,12 @@
-<div></div><p></p>
 <p><span class="dimmed"><strong><span>Implementation → Code Quality → Readability → Intermediate →
 </span></strong></span></p>
 <div id="title-and-body">
-<div><h4 id="slap-hard"><span id="slap-hard" class="anchor"></span><span>SLAP hard</span><a class="fa fa-anchor" href="#slap-hard" onclick="event.stopPropagation()"></a></h4></div>
+<div><h4 id="slap-hard"><span>SLAP hard</span><a class="fa fa-anchor" href="#slap-hard" onclick="event.stopPropagation()"></a></h4></div>
 <div id="main">
 <div>
-<p>Avoid varying the level of <trigger trigger="click" for="modal:slap-abstraction">abstraction</trigger> within a code fragment.
-Note: The book <em>The Productive Programmer</em> (by Neal Ford) calls this the <strong><em>Single Level of Abstraction Principle</em> (SLAP)</strong> <span class="dimmed">while the book <em>Clean Code</em> (by Robert C. Martin) calls this <em>One Level of Abstraction per Function</em></span>.</p>
+<p><strong>Avoid having multiple levels of <trigger trigger="click" for="modal:slap-abstraction">abstraction</trigger> within a code fragment.</strong>
+Note: The book <em>The Productive Programmer</em> (by Neal Ford) calls this the <em>Single Level of Abstraction Principle</em> (SLAP) <span class="dimmed">while the book <em>Clean Code</em> (by Robert C. Martin) calls this <em>One Level of Abstraction per Function</em></span>.</p>
 <box>
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example:</p>
 <p><span style="color: red"><span><strong><span aria-hidden="true" class="fas fa-thumbs-down"></span> Bad</strong></span></span> (<code class="hljs inline no-lang" v-pre>readData();</code> and <code class="hljs inline no-lang" v-pre>salary = basic * rise + 1000;</code> are at different levels of abstraction)</p>
 <pre><code class="hljs java" v-pre><span>readData();
 </span><span>salary = basic * rise + <span class="hljs-number">1000</span>;
@@ -20,11 +18,10 @@ Note: The book <em>The Productive Programmer</em> (by Neal Ford) calls this the 
 </span><span>displayResult();
 </span></code></pre></box>
 <modal large id="modal:slap-abstraction"><template #header></template>
-  <div><div></div><p></p>
-<p><span class="dimmed"><strong><span>Design → Design Fundamentals → Abstraction →
+  <div><p><span class="dimmed"><strong><span>Design → Design Fundamentals → Abstraction →
 </span></strong></span></p>
 <div id="title-and-body">
-<div><h4 id="what"><span id="what" class="anchor"></span><span>What</span><a class="fa fa-anchor" href="#what" onclick="event.stopPropagation()"></a></h4></div>
+<div><h4 id="what"><span>What</span><a class="fa fa-anchor" href="#what" onclick="event.stopPropagation()"></a></h4></div>
 <div id="main">
 <div>
 <box type="definition" seamless>
@@ -47,5 +44,39 @@ Note: The book <em>The Productive Programmer</em> (by Neal Ford) calls this the 
 <li>An OOP <em>class</em> is an abstraction over related data and behaviors.</li>
 <li>An <em>architecture</em> is a higher-level abstraction of the design of a software.</li>
 <li>Models (e.g., UML models) are abstractions of some aspect of reality.</li></ul></box></div>
-<div></div></div></div></div></modal></div>
+<div></div></div></div></div></modal>
+<p><strong>Also ensure that the code is written at the highest level of abstraction possible</strong>.</p>
+<box>
+<p><span style="color: red"><span><strong><span aria-hidden="true" class="fas fa-thumbs-down"></span> Bad</strong></span></span> (all statements are at a low levels of abstraction)</p>
+<pre><code class="hljs java" v-pre><span>low-level statement A1
+</span><span>low-level statement A2
+</span><span>low-level statement A3
+</span><span>low-level statement B1
+</span><span>low-level statement B2
+</span><span><span class="hljs-keyword">if</span> condition X :
+</span><span>    low-level statement C1
+</span><span>    low-level statement C2
+</span></code></pre><p><span style="color: green"><span><strong><span aria-hidden="true" class="fas fa-thumbs-up"></span> Good</strong></span></span> (all statements are at the same high level of abstraction)</p>
+<pre><code class="hljs java" v-pre><span>high-level step A
+</span><span>high-level step B
+</span><span><span class="hljs-keyword">if</span> condition X:
+</span><span>  high-level step C
+</span></code></pre></box>
+<p><strong>That said, it is sometimes possible to pack <em>two</em> levels of abstraction into the code</strong> without affecting readability that much, provided each step in the higher-level logic is clearly marked using comments and separated (e.g., using a blank line) from adjacent steps.</p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example: The following pseudocode has two levels of abstraction.</p>
+<pre><code class="java hljs" v-pre><span><span class="highlighted">//high-level step A</span>
+</span><span>low-level statement A1
+</span><span>low-level statement A2
+</span><span>low-level statement A3
+</span><span>
+</span><span><span class="highlighted">//high-level step B</span>
+</span><span>low-level statement B1
+</span><span>low-level statement B2
+</span><span>
+</span><span>if condition X :
+</span><span>    <span class="highlighted">//high-level step C</span>
+</span><span>    low-level statement C1
+</span><span>    low-level statement C2
+</span></code></pre></box></div>
 <div></div></div></div>
