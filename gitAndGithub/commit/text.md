@@ -6,7 +6,7 @@
 
 <div id="body">
 {% call show_lesson_intro() %}
-after staging, you can now proceed to **save the snapshot, aka creating a _commit_**.
+After staging, you can now proceed to **save the snapshot, aka creating a _commit_**.
 {% endcall %}
 
 **Saving a snapshot is called {{ show_git_term('committing') }} and a saved snapshot is called a {{ show_git_term('commit') }}.**

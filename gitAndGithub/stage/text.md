@@ -40,6 +40,11 @@ bananas
 cherries
 ```
 {% endcall %}
+
+:fab-windows: When using the `echo` command to write to text files from git-bash, you might see a warning `LF will be replaced by CRLF the next time Git touches it` when Git interacts with such a file. This warning is caused by the way line endings are handled differently by Git and Windows. You can simply ignore it, or suppress it in future by running the following command:
+```bash
+git config --global core.safecrlf false
+```
 </box>
 
 {{ hp_number(2) }} **Stage the new file**.
@@ -75,7 +80,7 @@ cherries
 dragon fruits
 ```
 {% endcall %}
-   </box>
+</box>
 </div>
 
 {{ hp_number('2') }} **Now, verify that Git sees that file as 'modified'.**

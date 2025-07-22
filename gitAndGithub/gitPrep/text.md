@@ -22,9 +22,23 @@ Before you start learning Git, **you need to install some tools** in your comput
 **Download the Git installer** from the [official Git website](https://git-scm.com/downloads/win).<br>
 **Run the installer** and make sure to **select the option to install Git Bash** when prompted.
 
+<box type="info" seamless>
+<panel type="seamless" header="Screenshots given below provide some guidance on the dialogs you might encounter when installing Git. In other cases, go with the default option." peek>
+<pic src="images/selectGitBash.png" /><br>
+<pic src="images/chooseTextEditor.png" /><br>
+<pic src="images/chooseGitCredentialManager.png" /><br>
+<pic src="images/chooseCheckoutStyle.png" /><br>
+<pic src="images/choosePullBehaviour.png" />
+</panel>
+</box>
+
 <box type="warning" seamless>
 
-When running Git commands, we recommend Windows users to **use the Git Bash terminal** that comes with Git. To open Git Bash terminal, hit the <kbd>:fab-windows:</kbd> key and type `git bash`.
+When running Git commands, we recommend Windows users to **use the Git Bash terminal** that comes with Git. To open Git Bash terminal, hit the <kbd>:fab-windows:</kbd> key and type `git-bash`.
+
+{{ icon_tip }} It may be possible that the installation didn't add shortcut to the Start Menu.
+You can navigate to the directory where `git-bash.exe` is (most likely `C:\Program Files\Git\git-bash.exe`), double click `git-bash.exe` to open Git Bash.<br>
+You can also right-click it and choose `Pin to Start` or `Pin to taskbar`.
 </box>
 
 {% call show_sidebar("Git Bash Terminal") %}
@@ -118,7 +132,8 @@ Our Git lessons shows how to perform Git operations in Git CLI, and in Sourcetre
   <tab header=":fab-windows: Windows">
 
 * Download the `.exe` file from [the latest release](https://github.com/git-mastery/app/releases/latest). {{ numbers_abcd }}
-* Add the `.exe` to your `PATH` following [this guide](https://www.eukhost.com/kb/how-to-add-to-the-path-on-windows-10-and-windows-11/).
+* Add the folder containing the `.exe` to your `PATH` following [this guide](https://www.eukhost.com/kb/how-to-add-to-the-path-on-windows-10-and-windows-11/).<br>
+  E.g. If the .exe is in `C:\Users\yourname\Desktop`, you should add this folder into your `PATH`.
   </tab>
   <tab header=":fab-apple: MacOS">
 

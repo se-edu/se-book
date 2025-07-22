@@ -2,7 +2,7 @@
 
 <span id="prereqs"></span>
 <span id="outcomes">...</span>
-<span id="title">{{ trail.syncingBranches.lessons.cherryPick.title }}</span>
+<span id="title">{{ trail.syncingBranches.lessons.syncByRebase.title }}</span>
 
 <div id="body">
 {% call show_lesson_intro() %}

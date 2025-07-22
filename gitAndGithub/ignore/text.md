@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import trail, bold_number, callout, hp_number, label, show_git_term, show_git_term_tip, show_detour, show_exercise, show_git_tabs, show_hands_on_practical, show_lesson_intro, show_output, show_under_the_hood with context %}
+{% from "common/macros.njk" import trail, bold_number, callout, hp_number, label, show_commit, show_git_term, show_git_term_tip, show_detour, show_exercise, show_git_tabs, show_git_tabs_from_text, show_hands_on_practical, show_head, show_lesson_intro, show_lesson_link, show_output, show_ref, show_resources, show_sidebar, show_tag, show_transformation_columns, show_under_the_hood with context %}
 
 <span id="prereqs"></span>
 <span id="outcomes">{{ icon_outcome }} Can set Git to ignore files</span>
@@ -13,10 +13,70 @@ Git allows you to **specify which files should be omitted from reversion control
 
 **A repo-specific ignore-list of files can be specified in a `.gitignore` file**, stored in the root of the repo folder.
 
-* **The `.gitignore` file itself can be either revision controlled or ignored.**
-  * To version control it (the more common choice – which allows you to track how the `.gitignore` file changes over time), simply commit it as you would commit any other file.
-  * To ignore it, simply add its name to the `.gitignore` file itself.
-* **It supports file patterns** e.g., adding `temp/*.tmp` to the `.gitignore` file prevents Git from tracking any `.tmp` files in the `temp` directory.
+**The `.gitignore` file itself can be either revision controlled or ignored.**
+
+* To version control it (the more common choice – which allows you to track how the `.gitignore` file changes over time), simply commit it as you would commit any other file.
+* To ignore it, simply add its name to the `.gitignore` file itself.
+
+**The `.gitignore` file supports file patterns** e.g., adding `temp/*.tmp` to the `.gitignore` file prevents Git from tracking any `.tmp` files in the `temp` directory.
+
+{% call show_sidebar("`.gitignore` File Syntax") %}
+
+* Blank lines: Ignored and can be used for spacing.
+* Comments: Begin with `#` (lines starting with # are ignored).
+  ```bash
+   # This is a comment
+   ```
+* Write the name or pattern of files/directories to ignore.
+  ```bash
+  log.txt          # Ignores a file named log.txt
+  ```
+* Wildcards:
+  * `*` matches any number of characters (except `/`)
+    ```bash
+    *.tmp         # Ignores all .tmp files
+    ```
+  * `?` matches a single character
+    ```bash
+    config?.yml   # Ignores config1.yml, configA.yml, etc.
+    ```
+  * `[abc]` matches a single character (a, b, or c)
+    ```bash
+    file[123].txt # Ignores file1.txt, file2.txt, file3.txt
+    ```
+
+* Directories:
+  * Add a trailing `/` to match directories.
+    ```bash
+    logs/         # Ignores the logs directory
+    ```
+  * Patterns without `/` match files/folders recursively.
+    ```bash
+    *.bak         # Ignores all .bak files anywhere
+    ```
+  * Patterns with `/` are relative to the `.gitignore` location.
+    ```bash
+    /secret.txt   # Only ignores secret.txt in the root directory
+    ```
+
+* Negation: Use `!` at the start of a line to not ignore something.
+  ```bash
+  *.log           # Ignores all .log files
+  !important.log  # Except important.log
+  ```
+
+Example:
+```bash{heading=".gitignore"}
+# Ignore all log files
+*.log
+
+# Ignore node_modules folder
+node_modules/
+
+# Don’t ignore main.log
+!main.log
+```
+{% endcall %}
 
 {% call show_hands_on_practical('Adding a file to the ignore-list')  %}
 
@@ -29,7 +89,7 @@ Add a few other files with `.tmp` extension.
 
 {{ hp_number ('3') }} **Optionally, stage and commit the `.gitignore` file.**
 
-{% endcall %}
+{% endcall %} <!-- end HOP -->
 
 **Files recommended to be omitted from version control**
 
@@ -42,11 +102,13 @@ Add a few other files with `.tmp` extension.
 
 <div id="extras">
 {% call show_exercise("ignoring-somethings") %}
-Update the `.gitignore` (inside the `files/` folder) to reflect following requirements:
+**1. Update the `.gitignore` file** (inside the `files/` folder) to reflect following requirements:
 
-1. While you wish to continue ignoring every file in the `many/` folder, you want to un-ignore just `many/file22.txt`.
-2. `why_am_i_hidden.txt` should not be hidden.
-3. `ignore_me.txt` should be hidden.
-4. Hide the `runaway.txt` file in `this/`, however, you don't know how many layers of nesting it is under, so use the pattern matching syntax.
+* Git should ignore every file in the `many/` folder except `many/file22.txt`.
+* `why_am_i_hidden.txt` should not be ignored Git.
+* `ignore_me.txt` should be ignored by Git.
+* Git should ignore any `runaway.txt` file in `this/` and any of its current and future subfolders (hint: use a pattern).
+
+**2. Commit the updated `.gitignore` file.**
 {% endcall %}
 </div>
