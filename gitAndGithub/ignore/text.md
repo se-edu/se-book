@@ -6,10 +6,10 @@
 
 <div id="body">
 {% call show_lesson_intro() %}
-Git allows you to **specify which files should be omitted from reversion control**.
+Git allows you to **specify which files should be omitted from revision control**.
 {% endcall %}
 
-**You can specify which files Git should {{ show_git_term("ignore") }} from reversion control**. While you can always omit files from revision control simply by not staging them, having an 'ignore-list' is more convenient, especially if there are files inside the working folder that are not suitable for revision control %%(e.g., temporary log files)%% or files you want to prevent from accidentally including in a commit %%(files containing confidential information)%%.
+**You can specify which files Git should {{ show_git_term("ignore") }} from revision control**. While you can always omit files from revision control simply by not staging them, having an 'ignore-list' is more convenient, especially if there are files inside the working folder that are not suitable for revision control %%(e.g., temporary log files)%% or files you want to prevent from accidentally including in a commit %%(files containing confidential information)%%.
 
 **A repo-specific ignore-list of files can be specified in a `.gitignore` file**, stored in the root of the repo folder.
 
@@ -105,7 +105,7 @@ Add a few other files with `.tmp` extension.
 **1. Update the `.gitignore` file** (inside the `files/` folder) to reflect following requirements:
 
 * Git should ignore every file in the `many/` folder except `many/file22.txt`.
-* `why_am_i_hidden.txt` should not be ignored Git.
+* `why_am_i_hidden.txt` should not be ignored by Git.
 * `ignore_me.txt` should be ignored by Git.
 * Git should ignore any `runaway.txt` file in `this/` and any of its current and future subfolders (hint: use a pattern).
 

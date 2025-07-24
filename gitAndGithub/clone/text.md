@@ -18,15 +18,17 @@ The next step is to **create a local copy of the remote repo, by _cloning_ the r
 <!-- ================== start: HANDS-ON =========================== -->
 {% call show_hands_on_practical("Cloning a remote repo")  %}
 
-{{ hp_number ('1') }} **Clone the remote repo (e.g., [samplerepo-things](https://github.com/se-edu/samplerepo-things) to your computer.**
+{{ hp_number ('1') }} **Clone the remote repo** to your computer. For example, you can clone the [samplerepo-things](https://github.com/se-edu/samplerepo-things) repo, or the fork your created from it in a previous lesson.
 
 <box type="warning" seamless>
 
 Note that the URL of the GitHub project is different from the URL you need to clone a repo in that GitHub project.
 e.g.
 
-GitHub project URL: `https://github.com/se-edu/samplerepo-things` <br>
-Git repo URL: `https://github.com/se-edu/samplerepo-things.git` (note the `.git` at the end)
+```bash{highlight-lines="2['.git']@yellow"}
+https://github.com/se-edu/samplerepo-things  # GitHub project URL
+https://github.com/se-edu/samplerepo-things.git # the repo URL
+```
 </box>
 
 {% set cli %} <!-- ------ start: Git Tabs --------------->

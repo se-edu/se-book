@@ -11,15 +11,15 @@ When there are new changes in the remote, you need to **_pull_ those changes dow
 
 **There are two steps to bringing down changes from a remote repository into a local repository: _fetch_ and _merge_.**
 
-* **{{ show_git_term("Fetch") }} is the act of downloading the latest changes from the remote repository, but without applying them to your current branch yet.** It updates your local copy of the remote branches so you can see what has changed remotely, but your own work and branch remain untouched.
-* **{{ show_git_term("Merge") }} is what you do after fetching, to actually incorporate the fetched changes into your current branch.** It combines your work with the changes from the remote branch, creating a new commit if needed.
+* **{{ show_git_term("Fetch") }} is the act of downloading the latest changes from the remote repository, but without applying them to your current branch yet.** It updates metadata in your repo so that repo knows what has changed in the remote repo, but your own local branch remain untouched.
+* **{{ show_git_term("Merge") }} is what you do after fetching, to actually incorporate the fetched changes into your local branch.** It combines your local branch with the changes from the corresponding branch from the remote repo.
 
 <!-- ================== start: HANDS-ON =========================== -->
 {% call show_hands_on_practical("Fetch and merge from a remote")  %}
 
 {{ hp_number ('1') }} **Clone the repo [se-edu/samplerepo-finances](https://github.com/se-edu/samplerepo-finances)**. It has 3 commits. Your clone now has a remote `origin` pointing to the remote repo you cloned from.
 
-{{ hp_number ('2') }} **Change the remote `origin`** to point to [samplerepo-finances2](https://github.com/se-edu/samplerepo-finances2.git). This remote repo is a copy of the one you cloned, but it has two extra commits.
+{{ hp_number ('2') }} **Change the remote `origin`** to point to [samplerepo-finances-2](https://github.com/se-edu/samplerepo-finances-2.git). This remote repo is a copy of the one you cloned, but it has two extra commits.
 
 {% set cli %} <!-- ------ start: Git Tabs --------------->
 ```bash{.no-line-numbers}
@@ -67,10 +67,10 @@ If it looks like the below, it is possible that Sourcetree is auto-fetching data
 
 {% set cli %} <!-- ------ start: Git Tabs --------------->
 
-Use the `git fetch <remote>` command to fetch changes from a remote. If the `<remote>` is not specified, the default remote `origin` will be used (which is not what we want in this case).
+Use the `git fetch <remote>` command to fetch changes from a remote. If the `<remote>` is not specified, the default remote `origin` will be used.
 
 ```bash{.no-line-numbers}
-git fetch other
+git fetch origin
 ```
 {% call show_output() %}
 ```bash{.no-line-numbers  highlight-lines="2['2bedace..e60deae']"}
@@ -155,7 +155,7 @@ The final result should be something like the below (same as the repo state befo
 {% endcall %}<!-- ===== end: HANDS-ON ============================ -->
 
 
-**{{ show_git_term("Pull") }} is a shortcut that combines fetch and merge** — it fetches the latest changes from the remote and immediately merges them into your current branch. In practice, Git users typically use the pull instead of the fetch and merge.
+**{{ show_git_term("Pull") }} is a shortcut that combines fetch and merge** — it fetches the latest changes from the remote and immediately merges them into your current branch. In practice, Git users typically use the pull instead of the fetch-then-merge.
 
 <box type="info" seamless>
 
@@ -166,9 +166,9 @@ The final result should be something like the below (same as the repo state befo
 {% call show_hands_on_practical("Pull from a remote")  %}
 
 {{ hp_number ('1') }} **Similar to the previous hands-on practical, clone the repo** [se-edu/samplerepo-finances](https://github.com/se-edu/samplerepo-finances) (to a new location).<br>
-**Change the remote** `origin` to point to [samplerepo-finances2](https://github.com/se-edu/samplerepo-finances2.git).
+**Change the remote** `origin` to point to [samplerepo-finances-2](https://github.com/se-edu/samplerepo-finances-2.git).
 
-{{ hp_number ('2') }} **Pull the newer commits from the remote**, instead of a fetch followed by a merge.
+{{ hp_number ('2') }} **Pull the newer commits from the remote**, instead of a fetch-then-merge.
 
 {% set cli %} <!-- ------ start: Git Tabs --------------->
 
@@ -225,8 +225,23 @@ git push origin master
 
 {{ icon_tip }} The method given above is the more 'standard' method of synchronising a fork with the upstream repo. In addition, platforms such as GitHub can provide other ways (example: GitHub's [Sync fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) feature).
 
+{{ hp_number ('4') }} **For good measure, let's pull from another repo.**<br>
+
+* Add the upstream repo [se-edu/samplerepo-finances-2](https://github.com/se-edu/samplerepo-finances-2) as remote named `other-upstream` in your local repo.{ texts="['4.1)','4.2)','4.3)']" }
+* Pull from it to your local repo; this will bring some new commits.<br>
+* Now, you can push those new commits to your fork.
+
+```bash
+git remote add other-upstream https://github.com/se-edu/samplerepo-finances-2.git
+git pull other-upstream master
+git push origin master
+```
+
+
 {% endcall %}<!-- ===== end: HANDS-ON ============================ -->
 
 </div>
 <div id="extras">
+{{ show_detour('pullingFromMultipleRemotes') }}
+
 </div>

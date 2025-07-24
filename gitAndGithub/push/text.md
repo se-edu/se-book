@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import trail, bold_number, callout, hp_number, label, show_git_term, show_git_term_tip, show_detour, show_exercise, show_git_tabs, show_hands_on_practical, show_lesson_intro, show_output, show_under_the_hood with context %}
+{% from "common/macros.njk" import trail, bold_number, callout, hp_number, label, show_commit, show_git_term, show_git_term_tip, show_detour, show_exercise, show_git_tabs, show_git_tabs_from_text, show_hands_on_practical, show_head, show_lesson_intro, show_lesson_link, show_output, show_ref, show_resources, show_sidebar, show_tag, show_transformation_columns, show_under_the_hood with context %}
 
 <span id="prereqs"></span>
 
@@ -37,7 +37,39 @@ Add a few more commits to your local repo, and push those commits to the remote 
 
 {{ hp_number ('1') }} **Commit** some changes in your local repo.
 
-{{ hp_number ('2') }} **Push** the new commits to your fork on GitHub
+{% set cli %} <!-- ------ start: Git Tabs --------------->
+Use the `git commit` command to create commits, as you did before.
+
+Optionally, you can run the `git status` command, which should confirm that your local branch is 'ahead' by one commit (i.e., the local branch has one new commit that is not in the corresponding branch in the remote repo).
+
+```bash{.no-line-numbers}
+git status
+```
+{% call show_output() %}
+```bash {highlight-lines="2"}
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+```
+{% endcall %}
+
+{% endset %}
+{% set sourcetree %}
+Create commits as you did before.
+
+Before pushing the new commit, Sourcetree will indicate that your local branch is 'ahead' by one commit (i.e., the local branch has one new commit that is not in the corresponding branch in the remote repo).
+
+<pic eager src="{{baseUrl}}/gitAndGithub/push/images/sourcetreeLocalBranchAhead.png" height="100" />
+<p/>
+
+{% endset %}
+{{ show_git_tabs_from_text(cli, sourcetree) }}
+<!-- ------ end: Git Tabs -------------------------------->
+
+
+{{ hp_number ('2') }} **Push** the new commits to your fork on GitHub.
 
 {{ show_git_tabs('-subsequent-push-fragment') }}
 
@@ -50,7 +82,7 @@ Add a few more commits to your local repo, and push those commits to the remote 
 
 <div id="extras">
 {% call show_exercise("push-over") %}
-Create a new commit on your local copy `push-this` and push the change to the remote.
+Create a new commit on your local copy of the repo in the `push-this` folder, and push the change to the remote.
 {% endcall %}
 
 {{ show_detour('pushToMultipleRepos') }}

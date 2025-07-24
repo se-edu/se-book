@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import trail, bold_number, callout, hp_number, label, show_commit, show_git_term, show_git_term_tip, show_detour, show_exercise, show_git_tabs, show_git_tabs_from_text, show_hands_on_practical, show_head, show_lesson_intro, show_output, show_ref, show_transformation_columns, show_under_the_hood with context %}
+{% from "common/macros.njk" import trail, bold_number, callout, hp_number, label, show_commit, show_git_term, show_git_term_tip, show_detour, show_exercise, show_git_tabs, show_git_tabs_from_text, show_hands_on_practical, show_head, show_lesson_intro, show_output, show_protip, show_ref, show_transformation_columns, show_under_the_hood with context %}
 
 <span id="prereqs"></span>
 <span id="outcomes">...</span>
@@ -14,13 +14,13 @@ It is also useful to be able to **see what changes were included in a specific c
 
 **Git shows changes included in a commit by _dynamically calculating_ the difference** between the snapshots stored in the target commit and the parent commit. This is because Git commits stores snapshots of the working directory, not changes themselves.
 
-**To address a specific commit, you can use its SHA** (e.g., `e60deaeb2964bf2ebc907b7416efc890c9d4914b`). In fact, just the first few characters of the SHA is enough to uniquely address a commit (e.g., `e60deae`).<br>
+**To address a specific commit, you can use its SHA** (e.g., `e60deaeb2964bf2ebc907b7416efc890c9d4914b`). In fact, just the first few characters of the SHA is enough to uniquely address a commit (e.g., `e60deae`), provided the partial SHA is long enough uniquely identify the commit (i.e., only one commit has that partial SHA).<br>
 **Naturally, a commit can be addressed using any ref pointing to it** too (e.g., `HEAD`, `master`).<br>
 **Another related technique is to use the `<ref>~<n>` notation** (e.g., `HEAD~1`) to address the commit that is `n` commits prior to the commit pointed by `<ref>` i.e., "start with the commit pointed by `<ref>` and go back `n` commits".<br>
-A shortcut of this notation is to use `HEAD~`, `HEAD~~`, `HEAD~~~`, ... to mean `HEAD~1`, `HEAD~2`, `HEAD~3` etc.
+A further shortcut of this notation is to use `HEAD~`, `HEAD~~`, `HEAD~~~`, ... to mean `HEAD~1`, `HEAD~2`, `HEAD~3` etc.
 
 {{ show_commit('C3', desc=show_ref('master') + ' ' + show_head(), msg='This commit can be addressed as `HEAD` or `master`') }}
-{{ show_commit('C2', msg='Can be addressed as `HEAD~1` or `master~1`') }}
+{{ show_commit('C2', msg='Can be addressed as `HEAD~1` or `master~1` or `HEAD~` or `master~`') }}
 {{ show_commit('C1', msg='Can be addressed as `HEAD~2` or `master~2`', edge='') }}
 <p/>
 
@@ -51,7 +51,7 @@ index 0000000..55c8449
 @@ -0,0 +1 @@
 +a file for colours
  ```
- A Git diff can consist of multiple _file diffs_, one for each changed file. Each file diff can contain one or more {{ show_git_term("hunk") }} i.e., a localised group of changes within the file — including lines added, removed, or left unchanged (included for context).
+ A Git diff can consist of multiple {{ show_git_term("file diffs") }}, one for each changed file. Each file diff can contain one or more {{ show_git_term("hunk") }} i.e., a localised group of changes within the file — including lines added, removed, or left unchanged (included for context).
 
 Here is the explanation of the above diff:
 <div class="border border-info p-2">
@@ -59,7 +59,7 @@ All changes in the commit:
 
 <div class="border border-info p-2">
 
-file diff for `fruits.txt`:
+File diff for `fruits.txt`:
 ```diff{.no-line-numbers}
 diff --git a/fruits.txt b/fruits.txt
 index 7d0a594..f84d1c9 100644
@@ -93,7 +93,7 @@ Hunk 2:
 </div>
 <div class="border border-info p-2">
 
-file diff for `colours.txt`:
+File diff for `colours.txt`:
 ```diff{.no-line-numbers}
 diff --git a/colours.txt b/colours.txt
 new file mode 100644
@@ -118,7 +118,7 @@ Here is an explanation of the diff:
 | **Part of Diff**                            | **Explanation** |
 |---------------------------------------------|-----------------|
 | `diff --git a/fruits.txt b/fruits.txt`{.diff}      | The diff header, indicating that it is comparing the file `fruits.txt` between two versions: the old (`a/`) and new (`b/`). |
-| `index 7d0a594..f84d1c9 100644`{.diff}            | Shows the SHA of the _file_ (not the commit) before and after the change, and the file mode (`100` means a regular file, `644` are file permission indicators). |
+| `index 7d0a594..f84d1c9 100644`{.diff}            | Shows the <popover content="just like Git uses a SHA to identify a commit, it uses SHA values to identify binary objects such as files">SHA of the _file_ (not the commit)</popover> before and after the change, and the file mode (`100` means a regular file, `644` are file permission indicators). |
 | `--- a/fruits.txt`{.diff}<br>`+++ b/fruits.txt`{.diff} | Marks the old version of the file (`a/fruits.txt`) and the new version of the file (`b/fruits.txt`). |
 | `@@ -1,6 +1,6 @@`{.diff}                            | This {{ show_git_term("hunk header") }} shows that lines 1-6 (i.e., starting at line `1`, showing `6` lines) in the old file were compared with lines 1–6 in the new file. |
 | `-apples`{.diff}<br>`+apples, apricots`{.diff}  | Removed line `apples` and added line `apples, apricots`. |
@@ -140,7 +140,7 @@ Points to note:
   `-`{.diff} indicates a line being deleted.
 * Editing a line is seen as deleting the original line and adding the new line.
 
-{% call show_hands_on_practical('View specific commits')  %}
+{% call show_hands_on_practical('View specific commits')  %} <!-- ================ -->
 
 **View contents of specific commits** in a repo (e.g., the `things` repo):
 
@@ -207,7 +207,49 @@ Click on the commit. The remaining panels (indicated in the image below) will be
 {% endset %}
 {{ show_git_tabs_from_text(cli, sourcetree) }}
 
-{% endcall %}
+{% endcall %} <!-- end: HOP -->
+
+{% call show_protip("Use Git Aliases to Work Faster") %}
+
+**The Git {{ show_git_term("alias") }} feature allows you to create custom shortcuts for frequently used Git commands.** This saves time and reduces typing, especially for long or complex commands. Once an alias is defined, you can use the alias just like any other Git command e.g., use `git lod` as an alias for `git log --oneline --decorate`.
+
+<div class="non-printable">
+
+**To define a global git alias, you can use the `git config --global alias.<alias> "<div>"` command.** e.g.,
+
+```bash
+git config --global alias.lod "log --oneline --graph --decorate"
+```
+</div>
+
+**You can also create shell-level aliases using your shell configuration (e.g., `.bashrc`, `.zshrc`) to make even shorter aliases.** This lets you create shortcuts for any command, including Git commands, and even combine them with other tools. e.g., instead of the Git alias `git lod`, you can define a shorter shell-level alias `glod`.
+
+<div class="non-printable">
+
+<tabs>
+  <tab header=":fab-windows: Windows + Git-Bash">
+
+**1. Locate your `.bash_profile` file** (likely to be in : `C:\Users\<YourName>\.bash_profile` -- if it doesn’t exist, create it.)
+  </tab>
+  <tab header=":fab-windows: Windows + WSL (Ubuntu or other Linux distro)">
+
+**1. Locate your shell's config file e.g., `.bashrc` or `.zshrc`** (likely to be in your `~` folder)
+  </tab>
+  <tab header=":fab-apple: MacOS | :fab-linux: Linux">
+
+**1. Locate your shell's config file e.g., `.bashrc` or `.zshrc`** (likely to be in your `~` folder)
+  </tab>
+</tabs>
+
+**2. Add aliases to that file:**
+```bash
+alias gs='git status'
+alias glod='git log --oneline --graph --decorate'
+```
+**3. Apply changes** by running the command  `source ~/.zshrc` or `source ~/.bash_profile` or `source ~/.bashrc`, depending on which file you put the aliases in.
+</div>
+
+{% endcall %} <!-- end pro-tip -->
 </div>
 <div id="extras">
 </div>
