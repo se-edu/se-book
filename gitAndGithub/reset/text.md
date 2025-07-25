@@ -15,10 +15,10 @@ Suppose you realise your last few commits have gone in the wrong direction, and 
 
 {{ show_git_term_tip('tip', 'reset') }}
 
-Reset is different from the _checkout_ feature:
+Resetting is different from the _checkout_ feature:
 
-* Reset: Lets you start over from a past state. Rewrites history by moving the branch ref.
-* Checkout: Lets you explore a past state without rewriting history. Moves the `HEAD` ref.
+* Reset: Lets you start over from a past state. It rewrites history by moving the branch ref to a new location.
+* Checkout: Lets you explore a past state _without_ rewriting history. It just moves the `HEAD` ref.
 
 {% set a %}
 {{ show_commit('C3', desc=show_ref('master') + show_head() + " <small>(original _tip_ of the branch)</small>") }}
@@ -28,7 +28,7 @@ Reset is different from the _checkout_ feature:
 {% endset %}
 {% set b %}<small>%%[reset to `C2`...]%%</small> {% endset %}
 {% set c %}
-{{ show_commit('C3', style="light", desc="<small><md>#r#no longer in the `master` branch!##</md></small>") }}
+{{ show_commit('C3', style="light", desc="<small><md>#r#commit no longer in the `master` branch!##</md></small>") }}
 {{ show_commit('C2', desc=show_ref('master') + show_head() + " <small>(the new _tip_)</small>") }}
 {{ show_commit('C1', edge='') }}
 <p/>
@@ -83,7 +83,7 @@ Now we have some 'bad' commits and some 'bad' changes in both the staging area a
 {{ hp_number ('2') }} **Do a _soft_ reset to `B2`** (i.e., discard last two commits). Verify,
 
 * the `master` branch is now pointing at `B2`, and,
-* the changes that were in the discarded commits are now in the staging area.
+* the changes that were in the discarded commits (i.e., `B3`and `B4`) are now in the staging area.
 
 {% set cli %} <!-- ------ start: Git Tabs --------------->
 
@@ -124,7 +124,7 @@ In the next dialog, choose `Soft - keep all local changes`.
 
 {% set cli %} <!-- ------ start: Git Tabs --------------->
 
-Use the `git --mixed reset <commit>` command to do a mixed reset (the `--mixed` flag is the default, and can be omitted).
+Use the `git --mixed reset <commit>` command to do a mixed reset. The `--mixed` flag is the default, and can be omitted.
 
 ```bash{.no-line-numbers}
 git reset HEAD~1

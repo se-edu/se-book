@@ -39,10 +39,27 @@ Suppose you added a new feature to a software product, and while testing it, you
 
 **To get out of a "detached HEAD" state, you can simply check out a branch**, which "re-attaches" `HEAD` to the branch you checked out.
 
+
+{% set a %}
+{{ show_commit('C3', desc=show_ref('master')) }}
+{{ show_commit('C2', desc=show_head() + " <small>#r#detached head!##</small>") }}
+{{ show_commit('C1', edge='') }}
+<p/>
+{% endset %}
+{% set b %}<small>%%[check out `master`...]%%</small> {% endset %}
+{% set c %}
+{{ show_commit('C3', desc=show_ref('master') + show_head() + " <small>%%head re-attached!%%</small>") }}
+{{ show_commit('C2') }}
+{{ show_commit('C1', edge='') }}
+<p/>
+{% endset %}
+{{ show_transformation_columns(a, b, c) }}
+
+
 <!-- ================== start: HANDS-ON =========================== -->
 {% call show_hands_on_practical('Checking out some commits')  %}
 
-**Checkout a few commits in a local repo** (e.g., the `things` repo), which examining the working directory to verify that it matches the state when you created the corresponding commit:
+**Checkout a few commits in a local repo** (e.g., the `things` repo), while examining the working directory to verify that it matches the state when you created the corresponding commit:
 
 {{ show_git_tabs('-checkout-commits-fragment') }}
 
@@ -59,14 +76,10 @@ If you check out a commit that comes before the commit in which you added a cert
 * Example 2: There is an uncommitted change to a file that conflicts with the version of that file in the commit you wish to check out.<br>
   → Git will abort the checkout, and the repo will remain in the current commit.
 
-{{ show_detour('conflictAtCheckout') }}
-
-
-<modal large header="Git & GitHub → Stash" id="modal:checkout-stash">
-  <include src="../stash/unit-inElsewhere-asPanelBody.md" boilerplate />
-</modal>
-
+**The Git {{ show_git_term("stash") }} feature temporarily set aside uncommitted changes** you’ve made (in your working directory and staging area), without committing them. This is useful when you’re in the middle of some work, but need to switch to another state (e.g., checkout a previous commit), and your current changes are not yet ready to be committed or discarded. You can later reapply the stashed changes when you’re ready to resume that work.
 </div>
 
 <div id="extras">
+{{ show_detour('stashingChanges') }}
+{{ show_detour('conflictAtCheckout') }}
 </div>

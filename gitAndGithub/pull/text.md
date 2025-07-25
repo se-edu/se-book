@@ -94,7 +94,7 @@ Click on the `Fetch` button on the top menu:<br>
 {{ show_git_tabs_from_text(cli, sourcetree) }}
 <!-- ------ end: Git Tabs -------------------------------->
 
-{{ hp_number ('4') }} **Verify the fetch worked** i.e., the local repo is now aware of the two missing commits. Also observe how the tip of the `master` branch, the staging area, and the working directory remain unchanged after the fetch.
+{{ hp_number ('4') }} **Verify the fetch worked** i.e., the local repo is now aware of the two missing commits. Also observe how the local branch ref of the `master` branch, the staging area, and the working directory remain unchanged after the fetch.
 
 {% set cli %} <!-- ------ start: Git Tabs --------------->
 
@@ -151,7 +151,7 @@ The final result should be something like the below (same as the repo state befo
 {{ show_git_tabs_from_text(cli, sourcetree) }}
 <!-- ------ end: Git Tabs -------------------------------->
 
-{{ icon_warning }} Note that merging the fetched changes can get complicated if there are multiple branches or the commits in the local repo conflicts with commits in the remote repo. We will address them when we learn more about Git branches, in a later lesson.
+{{ icon_warning }} Note that merging the fetched changes can get complicated if there are multiple branches or the commits in the local repo conflict with commits in the remote repo. We will address them when we learn more about Git branches, in a later lesson.
 {% endcall %}<!-- ===== end: HANDS-ON ============================ -->
 
 

@@ -2,5 +2,5 @@
 
 **To proceed with a checkout when there are conflicting uncommitted changes in the working directory**, there are several options:
 * **Commit the changes**.
-* **<trigger trigger="click" for="modal:checkout-stash">Stash</trigger> the changes**.
+* **Stash the changes**.
 * **Discard the changes**.

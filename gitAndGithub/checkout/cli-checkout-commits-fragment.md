@@ -5,6 +5,12 @@
 ```bash{.no-line-numbers}
 git log --oneline --decorate
 ```
+{{ icon_tip }} Reminder: You can use <trigger trigger="click" for="modal:checkout-aliases">aliases</trigger> to reduce typing Git commands.
+
+<modal large header="" id="modal:checkout-aliases">
+  <include src="../common/aliases-fragment.md"/>
+</modal>
+
 {% call show_output() %}
 ```bash{.no-line-numbers}
 e60deae (HEAD -> master, origin/master) Update fruits list

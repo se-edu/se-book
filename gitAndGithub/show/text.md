@@ -195,7 +195,7 @@ To view the parent commit of the latest commit, you can use any of these command
  git show e60deae  # first few characters of the SHA
  git show e60deae.....  # run git log to find the full SHA and specify the full SHA
  ```
- to view the one two commits prior to the latest commit, you can use `git show HEAD~2` etc.
+To view the one two commits prior to the latest commit, you can use `git show HEAD~2` etc.
 
 {% endset %}
 {% set sourcetree %}
@@ -206,50 +206,11 @@ Click on the commit. The remaining panels (indicated in the image below) will be
 
 {% endset %}
 {{ show_git_tabs_from_text(cli, sourcetree) }}
-
 {% endcall %} <!-- end: HOP -->
 
-{% call show_protip("Use Git Aliases to Work Faster") %}
+<include src="../common/aliases-fragment.md" />
 
-**The Git {{ show_git_term("alias") }} feature allows you to create custom shortcuts for frequently used Git commands.** This saves time and reduces typing, especially for long or complex commands. Once an alias is defined, you can use the alias just like any other Git command e.g., use `git lod` as an alias for `git log --oneline --decorate`.
-
-<div class="non-printable">
-
-**To define a global git alias, you can use the `git config --global alias.<alias> "<div>"` command.** e.g.,
-
-```bash
-git config --global alias.lod "log --oneline --graph --decorate"
-```
 </div>
 
-**You can also create shell-level aliases using your shell configuration (e.g., `.bashrc`, `.zshrc`) to make even shorter aliases.** This lets you create shortcuts for any command, including Git commands, and even combine them with other tools. e.g., instead of the Git alias `git lod`, you can define a shorter shell-level alias `glod`.
-
-<div class="non-printable">
-
-<tabs>
-  <tab header=":fab-windows: Windows + Git-Bash">
-
-**1. Locate your `.bash_profile` file** (likely to be in : `C:\Users\<YourName>\.bash_profile` -- if it doesn’t exist, create it.)
-  </tab>
-  <tab header=":fab-windows: Windows + WSL (Ubuntu or other Linux distro)">
-
-**1. Locate your shell's config file e.g., `.bashrc` or `.zshrc`** (likely to be in your `~` folder)
-  </tab>
-  <tab header=":fab-apple: MacOS | :fab-linux: Linux">
-
-**1. Locate your shell's config file e.g., `.bashrc` or `.zshrc`** (likely to be in your `~` folder)
-  </tab>
-</tabs>
-
-**2. Add aliases to that file:**
-```bash
-alias gs='git status'
-alias glod='git log --oneline --graph --decorate'
-```
-**3. Apply changes** by running the command  `source ~/.zshrc` or `source ~/.bash_profile` or `source ~/.bashrc`, depending on which file you put the aliases in.
-</div>
-
-{% endcall %} <!-- end pro-tip -->
-</div>
 <div id="extras">
 </div>

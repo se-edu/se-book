@@ -11,7 +11,7 @@ Git can tell you **the net effect of changes between two points of history**.
 
 **Git's {{ show_git_term("diff") }} feature can show you what changed between two points** in the revision history. Given below are some use cases.
 
-****Usage 1: Examining changes in the working directory.****<br>
+**++Usage 1: Examining changes in the working directory++**<br>
 Example use case: To verify the next commit will include exactly what you intend it to include.
 
 <!-- ================== start: HANDS-ON =========================== -->
@@ -30,7 +30,7 @@ echo "no shapes added yet" >> shapes.txt
 
 {% set cli %} <!-- ------ start: Git Tabs --------------->
 
-The `git diff` command shows unstaged changes in the working directory (tracked files only). The output of the `diff` command, is a diff view (introduced in [this lesson](../show/index.html)).
+**The `git diff` command shows unstaged changes** in the working directory (tracked files only). The output of the `diff` command, is a diff view (introduced in [this lesson](../show/index.html)).
 
 ```bash{.no-line-numbers}
 git diff
@@ -47,7 +47,7 @@ a file for shapes
 ```
 {% endcall %}
 
-The `git diff --staged` (same as `git diff --cached`) command shows the staged changes.
+**The `git diff --staged` command shows the staged changes** (same as `git diff --cached`).
 
 ```bash{.no-line-numbers}
 git diff --staged
@@ -64,7 +64,7 @@ Select the two commits: Click on one commit, and <kbd>Ctrl</kbd>-Click (or <kbd>
 <!-- ------ end: Git Tabs -------------------------------->
 {% endcall %}<!-- ===== end: HANDS-ON ============================ -->
 
-****Usage 2: Comparing two commits at different points of the revision graph.****<br>
+**++Usage 2: Comparing two commits at different points of the revision graph++**<br>
 Example use case: Suppose you’re trying to improve the performance of a piece of software by experimenting with different code tweaks. You commit after each change (as you should). After several commits, you now want to review the overall effect of all those changes on the code.
 
 <!-- ================== start: HANDS-ON =========================== -->
@@ -132,7 +132,7 @@ The same method can be used to compare the current state of the working director
 {% endcall %}<!-- ===== end: HANDS-ON ============================ -->
 
 
-****Usage 3: Examining changes to a specific file.****<br>
+**++Usage 3: Examining changes to a specific file++**<br>
 Example use case: Similar to other use cases but when you are interested in a specific file only.
 
 <!-- ================== start: HANDS-ON =========================== -->

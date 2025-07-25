@@ -4,9 +4,6 @@
 {%- macro bold_number(text) %}{{ "{" }} text="{{ text }}" t-class="fw-bold" {{ "}" }}{% endmacro -%}
 <!-- ============================================================ -->
 
-{%- macro hp_number(text) %}<span style="position: relative; right: 25px;" class="badge rounded-pill text-dark bg-secondary text-white">{{ text }}</span>{% endmacro -%}
-<!-- ============================================================ -->
-
 {%- macro label(style, text) %}<span class="badge bg-{{ style }} text-{{ 'dark' if style in ['warning', 'light'] else 'white' }}">{{ text }}</span>{% endmacro -%}
 <!-- ============================================================ -->
 
@@ -120,6 +117,7 @@
   pushToMultipleRepos: {lesson: trail.backingUpOnCloud.lessons.push, title: "Pushing to Multiple Reposs"},
   managingRemotes: {lesson: trail.backingUpOnCloud.lessons.setRemote, title: "Managing Details of a Remote"},
   pullingFromMultipleRemotes: {lesson: trail.workingWithRemotes.lessons.pull, title: "Pulling from Multiple Remotes"},
+  stashingChanges: {lesson: trail.usingRevisionHistory.lessons.checkout, title: "Stashing Uncommitted Changes Temporarily"},
   conflictAtCheckout: {lesson: trail.usingRevisionHistory.lessons.checkout, title: "Dealing with Uncommitted Confilicting Changes at a Checkout"},
   resetUncommitedChanges: {lesson: trail.usingRevisionHistory.lessons.reset, title: "Resetting Uncommitted Changes"},
   undoRecentCommits: {lesson: trail.usingRevisionHistory.lessons.reset, title: "Undoing/Deleting Recent Commits"},
@@ -279,12 +277,15 @@
 {% endmacro %}
 <!-- ============================================================ -->
 
+{%- macro hp_number(text) %}<span style="position: relative; right: 12px; background-color: rgba(255, 0, 0, 0.2); border-radius: 0 0.7em 0.7em 0" class="ps-3 pe-3 pb-1 pt-1 text-dark text-dark"><small>**{{ text }}**</small></span>{% endmacro -%}
+<!-- ============================================================ -->
+
 {% macro show_hands_on_practical(title) %}
 <div class="non-printable">
-<span style="position: relative; top: 10px;" class="badge rounded-pill bg-secondary fs-6">{{ icon_hands_on }} HANDS-ON: {{ title }}</span>
+<span style="position: relative; top: 10px; background-color: rgba(255, 0, 0, 0.2);" class="badge rounded-pill text-dark fs-6">{{ icon_hands_on }} HANDS-ON: {{ title }}</span>
 <div class="indented-level1">
 
-<box type="dark" seamless no-icon>
+<box type="important" seamless no-icon>
 
 {{ caller() }}
 </box>

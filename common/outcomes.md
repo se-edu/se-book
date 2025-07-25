@@ -419,7 +419,6 @@ pageNav: 3
 <include src="../gitAndGithub/ignore/unit-inParent-asOutcome.md" boilerplate />
 <include src="../gitAndGithub/tag/unit-inParent-asOutcome.md" boilerplate />
 <include src="../gitAndGithub/checkout/unit-inParent-asOutcome.md" boilerplate />
-<include src="../gitAndGithub/stash/unit-inParent-asOutcome.md" boilerplate />
 <include src="../gitAndGithub/clone/unit-inParent-asOutcome.md" boilerplate />
 <include src="../gitAndGithub/pull/unit-inParent-asOutcome.md" boilerplate />
 <include src="../gitAndGithub/fork/unit-inParent-asOutcome.md" boilerplate />

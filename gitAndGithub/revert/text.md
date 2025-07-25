@@ -33,7 +33,7 @@ Git can add a new commit to **reverse the changes done in a specific past commit
 <!-- ================== start: HANDS-ON =========================== -->
 {% call show_hands_on_practical("Revert a commit")  %}
 
-{{ hp_number("0") }} **Preparation: Run the following commands to create a repo with a few commits:**
+{{ hp_number("Preparation") }} **Run the following commands to create a repo with a few commits:**
 
 ```bash
 mkdir pioneers
