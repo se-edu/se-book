@@ -6,7 +6,7 @@
 
 <div class="non-printable">
 
-**To define a global git alias, you can use the `git config --global alias.<alias> "<div>"` command.** e.g.,
+**To define a global git alias, you can use the `git config --global alias.<alias> "command"` command.** e.g.,
 
 ```bash
 git config --global alias.lod "log --oneline --graph --decorate"

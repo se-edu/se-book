@@ -17,7 +17,7 @@ Example use case: To verify the next commit will include exactly what you intend
 <!-- ================== start: HANDS-ON =========================== -->
 {% call show_hands_on_practical("Examining staged and unstaged changes")  %}
 
-{{ hp_number("0") }} **Preparation: For this, you can use the `things` repo** you created earlier. If you don't have it, you can clone a copy of a similar repo given [here](https://github.com/se-edu/samplerepo-things2).
+{{ hp_number("Preparation") }} **For this, you can use the `things` repo** you created earlier. If you don't have it, you can clone a copy of a similar repo given [here](https://github.com/se-edu/samplerepo-things2).
 
 {{ hp_number("1") }} **Do some changes to the working directory. Stage some (but not all) changes.** For example, you can run the following commands.
 

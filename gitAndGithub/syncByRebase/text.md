@@ -60,12 +60,6 @@ Also note how the first commit in the feature branch, previously shown as `f1`, 
 
 **Because rebasing rewrites the commit history of your branch, it's important to use it carefully.** You should avoid rebasing branches that you’ve already shared with others, because rewriting published history can cause confusion and conflicts for anyone else working on the same branch.
 
-
-<box type="warning" seamless>
-
-**{{ show_git_term("force-pushing") }}: If you modify past commits that have been pushed to a remote repository, you'll have to [_force-push_](https://www.datree.io/resources/git-push-force)** the modified commit to the remote repo in order to update the commits in it.
-</box>
-
 </div>
 
 <div id="extras">

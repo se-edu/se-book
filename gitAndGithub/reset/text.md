@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import trail, bold_number, callout, hp_number, label, show_commit, show_git_term, show_git_term_tip, show_detour, show_detour_preview, show_exercise, show_git_tabs, show_git_tabs_from_text, show_hands_on_practical, show_head, show_lesson_intro, show_output, show_ref, show_tag, show_transformation_columns, show_under_the_hood with context %}
+{% from "common/macros.njk" import trail, bold_number, callout, hp_number, label, show_commit, show_git_term, show_git_term_tip, show_detour, show_detour_preview, show_exercise, show_git_tabs, show_git_tabs_from_text, show_hands_on_practical, show_head, show_lesson_intro, show_output, show_ref, show_tag, show_tour_link, show_transformation_columns, show_under_the_hood with context %}
 
 <span id="prereqs"></span>
 <span id="outcomes">Can reset Git history.</span>
@@ -89,12 +89,12 @@ Now we have some 'bad' commits and some 'bad' changes in both the staging area a
 
 Use the `git reset --soft <commit>` command to do a soft reset.
 
-```bash{.no-line-numbers}
+```bash
 git reset --soft HEAD~2
 ```
 You can run the following commands to verify the current status of the repo is as expected.
 
-```bash{.no-line-numbers}
+```bash
 git status                    # check overall status
 git log --oneline --decorate  # check the branch tip
 git diff                      # check unstaged changes
@@ -126,7 +126,7 @@ In the next dialog, choose `Soft - keep all local changes`.
 
 Use the `git --mixed reset <commit>` command to do a mixed reset. The `--mixed` flag is the default, and can be omitted.
 
-```bash{.no-line-numbers}
+```bash
 git reset HEAD~1
 ```
 Verify the repo status, as before.
@@ -150,7 +150,7 @@ Similar to the previous reset, but choose the `Mixed - keep working copy but res
 
 Use the `git --hard reset <commit>` command.
 
-```bash{.no-line-numbers}
+```bash
 git reset --hard HEAD~1
 ```
 Verify the repo status, as before.
@@ -164,10 +164,83 @@ Similar to the previous reset, but choose the `Hard - discard all working copy c
 
 {% endcall %}<!-- ===== end: HANDS-ON ============================ -->
 
+**Rewriting history can cause your local repo to {{ show_git_term("diverge") }} from its remote counterpart.** For example, if you discard earlier commits and create new ones in their place, and you’ve already pushed the original commits to a remote repository, your local branch history will no longer match the corresponding remote branch. Git refers to this as a diverged history.
+
+To protect the integrity of the remote, Git will reject attempts to push a diverged branch using a normal push. If you want **to _overwrite_ the remote history with your local version, you must perform a {{ show_git_term("force push") }}**.
+
+<!-- ================== start: HANDS-ON =========================== -->
+{% call show_hands_on_practical("Force-push commits")  %}
+
+{{ hp_number("Preparation") }} **Choose a local-remote repo pair under your control** e.g., the `things` repo from {{ show_tour_link(trail.backingUpOnCloud) }}.
+
+{{ hp_number("1") }} **Rewrite the last commit**: Reset the current branch back by one commit, and add a new commit.<br>
+For example, you can use the following commands.
+
+```bash
+git reset --hard HEAD~1
+echo "water" >> drinks.txt
+git add .
+git commit -m "Add drinks.txt"
+```
+
+{{ hp_number("2") }} **Observe how the local branch is diverged**.
+```bash
+git log --oneline --graph --all
+```
+{% call show_output() %}
+```bash
+* fc1d04e (HEAD -> master) Add drinks.txt
+| * e60deae (upstream/master, origin/master) Update fruits list
+|/
+* f761ea6 (tag: v1.0) Add colours.txt, shapes.txt
+* 2bedace (tag: v0.9) Add figs to fruits.txt
+* d5f91de Add fruits.txt
+```
+{% endcall %}
+
+
+{{ hp_number("3") }} **Attempt to push to the remote.** Observe Git rejects the push.
+
+```bash
+git push origin master
+```
+{% call show_output() %}
+```bash
+To https://github.com/.../things.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/.../things.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. If you want to integrate the remote changes,
+hint: ...
+```
+{% endcall %}
+
+{{ hp_number("4") }} **Do a force-push.**
+
+You can use the `--force` (or `-f`) flag to force push.
+
+```bash
+git push -f origin master
+```
+
+<box type="tip" seamless>
+
+**A safer alternative to `--force` is `--force-with-lease`** which overwrites the remote branch only if it hasn’t changed since you last fetched it (i.e., only if remote doesn't have recent changes that you are unaware of):
+```bash
+git push -force-with-lease origin master
+```
+</box>
+
+
+<!-- ------ end: Git Tabs -------------------------------->
+
+{% endcall %}<!-- ===== end: HANDS-ON ============================ -->
+
 </div>
 
 <div id="extras">
 {{ show_detour('resetUncommitedChanges') }}
+{{ show_detour_preview('updateLastCommit') }}
 {{ show_detour('undoRecentCommits') }}
 {{ show_detour('resetTrackingBranch') }}
 </div>

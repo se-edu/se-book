@@ -34,7 +34,7 @@ The second step of backing up a local repo on GitHub: **link the _local_ repo wi
 Add the empty remote repo you created on GitHub as a remote of a local repo you have.
 
 {% set cli %} <!-- ------ start: Git Tabs --------------->
-{{ hp_number ('1') }} In a terminal, navigate to the folder containing the local repo `things` your created earlier.
+{{ hp_number ('1') }} **In a terminal, navigate to the folder containing the local repo** `things` your created earlier.
 
 {{ hp_number ('2') }} **List the current list of remotes** using the `git remote -v` command, for a sanity check. No output is expected if there are no remotes yet.
 
