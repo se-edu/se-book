@@ -28,6 +28,9 @@ Given below is an illustration of how such a merge looks like in the revision gr
 * We have switched to the `master` branch (thus, `HEAD` is now pointing to `master` ref).
 * The `fix1` branch has been merged into the `master` branch, creating a _merge commit_ `f`. The repo is still on the `master` branch.
 
+**A merge commit has two parent commits** e.g., in the above example, the merge commit `f` has both `d` and `e` as parent commits. **The parent commit on the receiving branch is considered the {{ show_git_term("first parent") }} and the other is considered the {{ show_git_term("second parent") }}** e.g., in the example above, `fix1` branch is being merged into the `master` branch (i.e., the receiving branch) -- accordingly, `d` is the first parent and `e` is the second parent.
+
+
 <!-- ================== start: HANDS-ON =========================== -->
 {% call show_hands_on_practical("Merge a branch (with a merge commit)")  %}
 
@@ -197,7 +200,7 @@ gitGraph BT:
     commit id: "add-countries] a2"
 </mermaid>
 
-{{ hp_number ('3') }} **Merge the `add-countries` branch onto the `master` branch.** Observe there is no merge commit. The `master` branch ref (and the `HEAD` ref along with it) moved to the tip of the `add-countries` branch (i.e., `a2`) and both branches now points to `a2`.
+{{ hp_number ('3') }} **Merge the `add-countries` branch onto the `master` branch.** Observe that there is no merge commit. The `master` branch ref (and the `HEAD` ref along with it) moved to the tip of the `add-countries` branch (i.e., `a2`) and both branches now points to `a2`.
 
 <mermaid>
 gitGraph BT:
@@ -256,11 +259,81 @@ To permanently prevent fast-forwarding:
 <!-- ------ end: Git Tabs -------------------------------->
 </div>
 
+**A {{ show_git_term("squash merge") }} combines all the changes from a branch into a single commit on the receiving branch**, without preserving the full commit history of the branch being merged. This is especially useful when the feature branch contains many small or experimental commits that would clutter the main branch’s history. By squashing, you retain the final state of the changes while presenting them as one cohesive unit, making the project history easier to read and manage. It also helps maintain a linear, simplified commit log on the main branch.
+
+{% set a %} <!-- ------ start: transformation columns --------------->
+<mermaid>
+gitGraph BT:
+    {{ "%%{init: { 'theme': 'default', 'gitGraph': {'mainBranchName': 'master'}} }%%" }}
+    commit id: "[HEAD → master] m1"
+    branch feature
+    checkout feature
+    commit id: "f1"
+    commit id: "[feature] f2"
+</mermaid>
+
+{% endset %}
+{% set b %}<small>%%[squash merge...]%%</small> {% endset %}
+{% set c %}
+<mermaid>
+gitGraph BT:
+    {{ "%%{init: { 'theme': 'default', 'gitGraph': {'mainBranchName': 'master'}} }%%" }}
+    commit id: "m1"
+    branch feature
+    checkout feature
+    commit id: "f1"
+    commit id: "[feature] f2"
+    checkout master
+    commit id: "[HEAD → master] s1 (same as f1+f2)" type: HIGHLIGHT
+</mermaid>
+
+{% endset %}
+{{ show_transformation_columns(a, b, c) }}
+<!-- ------ end: transformation columns -------------------------------->
+
+In the example above, the branch `feature` has been squash merged onto the `master` branch, creating a single 'squashed' commit `s1` that combines the all commits in `feature` branch.
+
 </div>
 <div id="extras">
 
 {% call show_exercise("branch-bender") %}
-coming soon ...
+
+In the given `webapp` repo, there are three branches: `feature/login`, `feature/dashboard`, `feature/payments`
+
+1. Merge `feature/login` onto the `main` branch, ==while ensuring a merge commit is created== (i.e., no fast-forwarding).
+1. Merge `feature/dashboard` onto the `main` branch.
+1. Merge `feature/payments` onto the `main` branch.
+
+The final result should look like this:
+
+<mermaid>
+gitGraph
+commit
+branch feature/login
+checkout main
+branch feature/dashboard
+checkout main
+branch feature/payment
+checkout feature/login
+commit
+commit
+checkout main
+merge feature/login
+checkout feature/dashboard
+commit
+commit
+commit
+checkout main
+merge feature/dashboard
+checkout feature/payment
+commit
+commit
+checkout main
+merge feature/payment
+</mermaid>
 {% endcall %}
+
 {{ show_detour('undoMerge') }}
+{{ show_detour('compareBranches') }}
+{{ show_detour('squashMerge') }}
 </div>
