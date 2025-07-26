@@ -17,12 +17,8 @@
 <panel type="seamless" src="../../../uml/classDiagrams/classInheritance/what/unit-inElsewhere-asFlat.md#main" boilerplate header="{{ icon_prereq }} UML → Class Diagrams → Inheritance → What" alt="{{ icon_prereq }} UML/Inheritance" {{ panel_state }} />
 {% endmacro %}
 
-<div class="print-only">
-{{ print_sensitive_panels() }}
-</div>
-<div class="non-printable">
+
 {{ print_sensitive_panels("expanded") }}
-</div>
 
 
 ##### Modeling composition
@@ -32,12 +28,8 @@
 <panel type="seamless" src="../../../uml/classDiagrams/composition/what/unit-inElsewhere-asFlat.md#main" boilerplate header="{{ icon_prereq }} UML → Class Diagrams → Composition → What" alt="{{ icon_prereq }} UML/Composition" {{ panel_state }} />
 {% endmacro %}
 
-<div class="print-only">
-{{ print_sensitive_panels() }}
-</div>
-<div class="non-printable">
+
 {{ print_sensitive_panels("expanded") }}
-</div>
 
 
 ##### Modeling aggregation
@@ -47,12 +39,8 @@
 <panel type="seamless" src="../../../uml/classDiagrams/aggregation/what/unit-inElsewhere-asFlat.md#main" boilerplate header="{{ icon_prereq }} UML → Class Diagrams → Aggregation → What" alt="{{ icon_prereq }} UML/Aggregation" {{ panel_state }} />
 {% endmacro %}
 
-<div class="print-only">
-{{ print_sensitive_panels() }}
-</div>
-<div class="non-printable">
+
 {{ print_sensitive_panels("expanded") }}
-</div>
 
 
 ##### Modeling dependencies
@@ -62,12 +50,8 @@
 <panel type="seamless" src="../../../uml/classDiagrams/dependencies/what/unit-inElsewhere-asFlat.md#main" boilerplate header="{{ icon_prereq }} UML → Class Diagrams → Dependencies → What" alt="{{ icon_prereq }} UML/Dependencies" {{ panel_state }} />
 {% endmacro %}
 
-<div class="print-only">
-{{ print_sensitive_panels() }}
-</div>
-<div class="non-printable">
+
 {{ print_sensitive_panels("expanded") }}
-</div>
 
 
 </div>
@@ -83,12 +67,8 @@
 <panel type="seamless" src="../../../uml/classDiagrams/enumerations/what/unit-inElsewhere-asFlat.md#main" boilerplate header="{{ icon_prereq }} UML → Class Diagrams → Enumerations → What" alt="{{ icon_prereq }} UML/Enumerations" {{ panel_state }} />
 {% endmacro %}
 
-<div class="print-only">
-{{ print_sensitive_panels() }}
-</div>
-<div class="non-printable">
+
 {{ print_sensitive_panels("expanded") }}
-</div>
 
 
 ##### Modeling abstract classes
@@ -98,12 +78,8 @@
 <panel type="seamless" src="../../../uml/classDiagrams/abstractClasses/what/unit-inElsewhere-asFlat.md#main" boilerplate header="{{ icon_prereq }} UML → Class Diagrams → Abstract Classes → What" alt="{{ icon_prereq }} UML/AbstractClasses" {{ panel_state }} />
 {% endmacro %}
 
-<div class="print-only">
-{{ print_sensitive_panels() }}
-</div>
-<div class="non-printable">
+
 {{ print_sensitive_panels("expanded") }}
-</div>
 
 
 ##### Modeling interfaces
@@ -113,12 +89,8 @@
 <panel type="seamless" src="../../../uml/classDiagrams/interfaces/what/unit-inElsewhere-asFlat.md#main" boilerplate header="{{ icon_prereq }} UML → Class Diagrams → Interfaces → What" alt="{{ icon_prereq }} UML/Interfaces" {{ panel_state }} />
 {% endmacro %}
 
-<div class="print-only">
-{{ print_sensitive_panels() }}
-</div>
-<div class="non-printable">
+
 {{ print_sensitive_panels("expanded") }}
-</div>
 
 
 </div>

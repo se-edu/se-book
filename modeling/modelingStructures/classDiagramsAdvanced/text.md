@@ -13,12 +13,7 @@
 <panel type="seamless" src="../../../uml/classDiagrams/associationClasses/what/unit-inElsewhere-asFlat.md#main" boilerplate header="{{ icon_prereq }} UML → Class Diagrams → Association Classes → What" alt="{{ icon_prereq }} UML/AssociationsClasses" {{ panel_state }} />
 {% endmacro %}
 
-<div class="print-only">
-{{ print_sensitive_panels() }}
-</div>
-<div class="non-printable">
 {{ print_sensitive_panels("expanded") }}
-</div>
 
 
 </div>

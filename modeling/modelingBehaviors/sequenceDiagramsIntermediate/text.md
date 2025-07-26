@@ -14,12 +14,7 @@
 <panel type="seamless" src="../../../uml/sequenceDiagrams/staticMethods/unit-inElsewhere-asFlat.md#main" boilerplate header="{{ icon_prereq }} UML {{ icon_embedding }} Sequence Diagrams → Calls to Static Methods" alt="{{ icon_prereq }} UML/SD/Optional" {{ panel_state }} />
 {% endmacro %}
 
-<div class="print-only">
-{{ print_sensitive_panels() }}
-</div>
-<div class="non-printable">
 {{ print_sensitive_panels("expanded") }}
-</div>
 
 
 </div>

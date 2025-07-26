@@ -14,12 +14,8 @@
 <panel type="seamless" src="../../../uml/classDiagrams/classLevelMembers/what/unit-inElsewhere-asFlat.md#main" boilerplate header="{{ icon_prereq }} UML {{ icon_embedding }} Class Diagrams → Class-Level Members → What" alt="{{ icon_prereq }} Class-Level Members" {{ panel_state }} />
 {% endmacro %}
 
-<div class="print-only">
-{{ print_sensitive_panels() }}
-</div>
-<div class="non-printable">
+
 {{ print_sensitive_panels("expanded") }}
-</div>
 
 **_Associations_ are the main connections among the classes in a class diagram.**
 {% macro print_sensitive_panels(panel_state="") %}
@@ -28,12 +24,8 @@
 <panel type="seamless" src="../../../uml/classDiagrams/associationsAsAttributes/what/unit-inElsewhere-asFlat.md#main" boilerplate header="{{ icon_prereq }} UML {{ icon_embedding }} Class Diagrams → Associations as Attributes" alt="{{ icon_prereq }} UML/Associations" {{ panel_state }} />
 {% endmacro %}
 
-<div class="print-only">
-{{ print_sensitive_panels() }}
-</div>
-<div class="non-printable">
+
 {{ print_sensitive_panels("expanded") }}
-</div>
 
 The most basic class diagram is a bunch of classes with some solid lines among them to represent associations, such as this one.
 
@@ -56,12 +48,7 @@ In addition, **associations can show additional decorations such as _association
 <panel type="seamless" src="../../../uml/classDiagrams/associations/multiplicity/unit-inElsewhere-asFlat.md#main" boilerplate header="{{ icon_prereq }} UML {{ icon_embedding }} Class Diagrams → Associations → Multiplicity" alt="{{ icon_prereq }} UML/Multiplicity" {{ panel_state }} />
 {% endmacro %}
 
-<div class="print-only">
-{{ print_sensitive_panels() }}
-</div>
-<div class="non-printable">
 {{ print_sensitive_panels("expanded") }}
-</div>
 
 <box>
 

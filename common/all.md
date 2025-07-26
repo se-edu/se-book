@@ -88,14 +88,6 @@ title: "SE Book [All-In-One-Page Big File!]"
 <include src="../processModels/chapter.md" boilerplate />
 
 
-# SECTION: TOOLS
-
-<include src="../uml/chapter.md" boilerplate />
-
-<include src="../intellij/chapter.md" boilerplate />
-
-<include src="../gitAndGithub/chapter.md" boilerplate />
-
 
 # SECTION: PRINCIPLES
 

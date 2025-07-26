@@ -77,13 +77,6 @@ pageNav: 3
 <include src="../teamwork/print.md#main" />
 <include src="../processModels/print.md#main" />
 
-<hr>
-
-# SECTION: TOOLS
-
-<include src="../uml/print.md#main" />
-<include src="../intellij/print.md#main" />
-<include src="../gitAndGithub/print.md#main" />
 
 <hr>
 

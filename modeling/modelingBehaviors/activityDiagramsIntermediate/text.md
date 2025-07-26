@@ -11,13 +11,7 @@
 <panel type="seamless" src="../../../uml/activityDiagrams/basicNotations/swimlanes/unit-inElsewhere-asFlat.md#main" boilerplate header="{{ icon_prereq }} UML {{ icon_embedding }} Activity Diagrams → Intermediate Notation → Swim Lanes" alt="{{ icon_prereq }} UML/AD/SwimLanes" {{ panel_state }} />
 {% endmacro %}
 
-<div class="print-only">
-{{ print_sensitive_panels() }}
-</div>
-<div class="non-printable">
 {{ print_sensitive_panels("expanded") }}
-</div>
-
 
 </div>
 

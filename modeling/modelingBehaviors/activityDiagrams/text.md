@@ -27,14 +27,7 @@ Some examples in which a certain workflow is relevant to software project:
 <panel type="seamless" src="../../../uml/activityDiagrams/basicNotations/parallelPaths/unit-inElsewhere-asFlat.md#main" boilerplate header="{{ icon_prereq }} UML {{ icon_embedding }} Activity Diagrams → Basic Notation → Parallel Paths" alt="{{ icon_prereq }} UML/AD/ParallelPaths" {{ panel_state }} />
 {% endmacro %}
 
-<div class="print-only">
-{{ print_sensitive_panels() }}
-</div>
-<div class="non-printable">
 {{ print_sensitive_panels("expanded") }}
-</div>
-
-
 
 </div>
 
