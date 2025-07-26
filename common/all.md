@@ -79,7 +79,7 @@ title: "SE Book [All-In-One-Page Big File!]"
 
 # SECTION: PROJECT MANAGEMENT
 
-<include src="../revisionControl/chapter.md" boilerplate />
+<include src="../gitAndGithub/chapter.md" boilerplate />
 
 <include src="../projectPlanning/chapter.md" boilerplate />
 

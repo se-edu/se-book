@@ -1,6 +1,6 @@
 <span id="title">Feature branch flow</span>
 
-<span id="prereqs"><panel src="../forkingWorkflow/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Revision Control → Forking Workflow%%" popup-url="{{ baseUrl }}/revisionControl/forkingWorkflow" /></span>
+<span id="prereqs"><panel src="../forkingWorkflow/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Revision Control → Forking Workflow%%" popup-url="{{ baseUrl }}/gitAndGithub/forkingWorkflow" /></span>
 
 <span id="outcomes">{{ icon_outcome }} Can explain feature branch flow</span>
 
@@ -12,7 +12,7 @@ As this workflow require all team members to have write access to the repository
   * it is better to _protect_ the main branch using some mechanism, to reduce the risk of accidental undesirable changes to it.
   * it is not suitable for situations where the code contributors are not 'trusted' enough to be given write permission.
 
-<pic eager src="{{baseUrl}}/revisionControl/featureBranchFlow/images/diagram.png" height="330" />
+<pic eager src="{{baseUrl}}/gitAndGithub/featureBranchFlow/images/diagram.png" height="330" />
 <p/>
 
 </div>

@@ -8,7 +8,9 @@
 
 <div id="body">
 
-Suppose you want to propose some changes to a GitHub repo (e.g., [samplerepo-pr-practice](https://github.com/se-edu/samplerepo-pr-practice)) as a <trigger trigger="click" for="modal:githubPullRequests-rcsPullRequests">pull request (PR)</trigger>.
+**A ==_pull request_== (PR for short) is a mechanism for contributing code to a remote repo** i.e., "I'm _requesting_ you to _pull_ my proposed changes to your repo". It's feature provided by RCS platforms such as GitHub. For this to work, the two repos must have a shared history. The most common case is sending PRs from a fork to its <tooltip content="_upstream_ repo is a repo you forked from">upstream</tooltip> repo.
+
+Suppose you want to propose some changes to a GitHub repo (e.g., [samplerepo-pr-practice](https://github.com/se-edu/samplerepo-pr-practice)) as a pull request (PR).
 
 <box type="tip" seamless>
 
@@ -16,10 +18,6 @@ Suppose you want to propose some changes to a GitHub repo (e.g., [samplerepo-pr-
 </box>
 
 Given below is a scenario you can try in order to learn how to create PRs:
-
-<modal large header="Project Management → Revision Control → Remote Repositories →" id="modal:githubPullRequests-rcsPullRequests">
-  <include src="..\..\revisionControl\remoteRepositories\text.md#section-pull-request"/>
-</modal>
 
 **1. Fork** the repo onto your GitHub account.
 

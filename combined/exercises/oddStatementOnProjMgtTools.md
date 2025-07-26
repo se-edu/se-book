@@ -1,7 +1,6 @@
 <panel header="{{ icon_Q_A }} Pick the odd one out of these project management tools/techniques." expanded>
 
 <panel header="%%{{ icon_prereq }}%% Prerequisites" minimized>
-  <panel src="../../revisionControl/what/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} Revision Control: What" />
   <panel src="../../projectPlanning/ganttCharts/unit-inElsewhere-asFlat.md" boilerplate header="Project Planning: Gantt Charts" />
   <panel src="../../projectPlanning/issueTrackers/unit-inElsewhere-asFlat.md" boilerplate header="{{ icon_prereq }} Project Planning: Issue Trackers" />
   <panel src="../../projectPlanning/pertCharts/unit-inElsewhere-asFlat.md" boilerplate header="Project Planning: PERT Charts" />

@@ -15,6 +15,5 @@ Refer to these se-edu guides:
 </div>
 
 <div id="extras">
-<include src="resourcesPanel.md" boilerplate/>
 </div>
 </div>

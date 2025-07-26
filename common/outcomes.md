@@ -321,19 +321,6 @@ pageNav: 3
 
 ## Project management
 
-### Revision control
-
-<include src="../revisionControl/what/unit-inParent-asOutcome.md" boilerplate />
-<include src="../revisionControl/repositories/unit-inParent-asOutcome.md" boilerplate />
-<include src="../revisionControl/savingHistory/unit-inParent-asOutcome.md" boilerplate />
-<include src="../revisionControl/usingHistory/unit-inParent-asOutcome.md" boilerplate />
-<include src="../revisionControl/remoteRepositories/unit-inParent-asOutcome.md" boilerplate />
-<include src="../revisionControl/branching/unit-inParent-asOutcome.md" boilerplate />
-<include src="../revisionControl/drcsVsCrcs/unit-inParent-asOutcome.md" boilerplate />
-<include src="../revisionControl/forkingWorkflow/unit-inParent-asOutcome.md" boilerplate />
-<include src="../revisionControl/featureBranchFlow/unit-inParent-asOutcome.md" boilerplate />
-<include src="../revisionControl/centralizedFlow/unit-inParent-asOutcome.md" boilerplate />
-
 ### Project planning
 
 <include src="../projectPlanning/workBreakdownStructure/unit-inParent-asOutcome.md" boilerplate />

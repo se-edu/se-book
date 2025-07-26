@@ -9,7 +9,7 @@
 Refer to these se-edu guides:
 
 * [**Intellij IDEA: Setting up**](https://se-education.org/guides/tutorials/intellijProjectSetup.html)
-* **VS Code:** First few tutorials given [here](https://se-education.org/guides/tutorials/vscode.html).
+* **VS Code:** Refer to the first few tutorials given [here](https://se-education.org/guides/tutorials/vscode.html).
 
 </div>
 

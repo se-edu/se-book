@@ -13,4 +13,3 @@ Automatic merge went well; stopped before committing as requested
 {% endcall %}
 
  At that point, you can go ahead and make the commit yourself, th the commit message you want.
- 

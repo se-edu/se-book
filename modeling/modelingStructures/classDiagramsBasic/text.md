@@ -4,7 +4,6 @@
 
 <div id="body">
 
-%%<small>{{ icon_info }} Contents related to UML diagrams in the panels given below belong to a different chapter (i.e., the chapter dedicated to UML); they have been embedded here for convenience.</small>%%
 
 **Classes form the basis of class diagrams.**
 
