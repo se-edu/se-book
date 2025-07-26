@@ -152,6 +152,8 @@ Ensure you are running `libc` version 2.38 or newer.
 Then install the app by running the following commands:
 
 ```bash
+echo "deb [trusted=yes] https://git-mastery.github.io/gitmastery-apt-repo any main" | \
+  sudo tee /etc/apt/sources.list.d/gitmastery.list > /dev/null
 sudo apt install software-properties-common
 sudo add-apt-repository "deb https://git-mastery.github.io/gitmastery-apt-repo any main"
 sudo apt update

@@ -81,6 +81,7 @@ nothing to commit (create/copy files and use "git add" to track)
 
 * **Second, Git created a hidden subfolder named `.git`** inside the `things` folder. This folder will be used by Git to store metadata about this repository.{{ bold_number("b)") }}
 
+<!--
 {% call callout() %}
   {{ label('info', icon_under_the_hood + ' UNDER-THE-HOOD') }} panels explain how a certain Git feature works under the hood i.e., some implementation details.<br>
   They can be skipped the first time you are taking a tour. But we recommend that you delve into some of them at some point. Reason: While Git _can_ be used without knowing much about its internal workings, knowing those details will allow you to be more confident when using Git, and harness more of its awesome power.
@@ -114,6 +115,7 @@ Press <kbd>⌘</kbd>+<kbd>⇧</kbd>+<kbd>.</kbd> to get Finder to show hidden fo
 You can even dig around inside that folder -- it is just a bunch of subfolders and files.
 {% endcall %}
 <p/>
+-->
 
 **A Git-controlled folder is divided into two main parts:**
 
@@ -122,9 +124,12 @@ You can even dig around inside that folder -- it is just a bunch of subfolders a
 
 </div>
 <div id="extras">
+<div tags="git-mastery">
+
 {% call callout() %}
   {{ label('danger', icon_exercise + ' EXERCISE') }} panels contain a Git-Mastery exercise that you can download using the Git-Mastery app, and you can use the same app to verify that your solution is correct.
 {% endcall %}
+</div>
 
 {% call show_exercise('under-control') %}
 Put the folder `[exercises]/control-me` under Git's control (i.e., initialise a repository in that folder).

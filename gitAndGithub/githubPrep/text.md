@@ -94,7 +94,6 @@ brew install gh
   <tab header=":fab-linux: Linux">
 
 **1. Install GitHub CLI**, as explained in the [GitHub CLI Linux installation guide](https://github.com/cli/cli/blob/trunk/docs/install_linux.md) for your distribution.
-...
   </tab>
 </tabs>
 
