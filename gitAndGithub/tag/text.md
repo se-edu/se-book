@@ -143,7 +143,7 @@ The same dialog used to add a tag can be used to delete and even move a tag. Not
 
 <box type="warning" seamless>
 
-**Tags are different from commit messages**, in purpose and in form. A commit message is a description of the commit that is _part of_ the commit itself. A tags is a short name for a commit, which you can use to address a commit.
+**Tags are different from commit messages**, in purpose and in form. A commit message is a description of the commit that is _part of_ the commit itself. A tag is a short name for a commit, which you can use to address a commit.
 </box>
 
 **Pushing commits to a remote does not push tags automatically.** You need to push tags specifically.

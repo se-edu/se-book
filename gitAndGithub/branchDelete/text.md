@@ -31,11 +31,11 @@ gitGraph BT:
 gitGraph BT:
     {{ "%%{init: { 'theme': 'default', 'gitGraph': {'mainBranchName': 'master'}} }%%" }}
     commit id: "m1"
-    branch bug-fix
-    checkout bug-fix
+    branch _
+    checkout _
     commit id: "b1"
     checkout master
-    merge bug-fix id: "[HEAD → master] mc1"
+    merge _ id: "[HEAD → master] mc1"
 </mermaid>
 {% endset %}
 {{ show_transformation_columns(a, b, c) }}
@@ -79,7 +79,7 @@ In the above example, the commit `b1` is no longer reachable, unless we know its
 
 **A commit is considered {{ show_git_term("reachable") }} if you can get to it by starting at a branch, tag, or other ref and walking backward through its parent commits.** This is the normal state for commits — they are part of the visible history of a branch or tag.
 
-**When no branch, tag, or ref points to a commit (directly or indirectly), it becomes {{ show_git_term("unreachable") }}.** This often happens when you delete a branch or rewrite history (e.g., with reset or rebase), leaving some commits {{ show_git_term('"orphaned"') }} without a name pointing to them.
+**When no branch, tag, or ref points to a commit (directly or indirectly), it becomes {{ show_git_term("unreachable") }}.** This often happens when you delete a branch or rewrite history (e.g., with reset or rebase), leaving some commits {{ show_git_term('"orphaned"') }} (or {{ show_git_term('"dangling"') }}) without a ref pointing to them.
 
 <div class="indented-level1">
 
@@ -98,7 +98,7 @@ In the example below, `C4` is unreachable (i.e., cannot be reached by starting a
 <!-- ================== start: HANDS-ON =========================== -->
 {% call show_hands_on_practical("Delete branches")  %}
 
-{{ hp_number("0") }} **First, create the repo `samplerepo-books-2` for this hands-on practical**, by running the following commands in your terminal.
+{{ hp_number("Preparation") }} **First, create the repo `samplerepo-books-2` for this hands-on practical**, by running the following commands in your terminal.
 
 ```bash
 mkdir samplerepo-books-2
@@ -200,7 +200,7 @@ Try again but this time, tick the `Force delete` option, which will force Git to
 
 Observe how the branch ref `fantasy` is gone, together with any unmerged commits on it.
 
-{{ hp_number("4") }}  Attempt to view the 'unreachable' commit whose `SHA` you noted in step 2.
+{{ hp_number("4") }}  **Attempt to view the 'unreachable' commit** whose `SHA` you noted in step 2.
 
 e.g., `git show 32b34fb` (use the `SHA` you copied earlier)
 

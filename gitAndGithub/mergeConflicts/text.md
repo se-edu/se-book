@@ -84,6 +84,9 @@ white
 
 <div id="extras">
 {% call show_exercise("conflict-mediator") %}
-coming soon ...
+The given repo `conflict` is currently in the middle of a merge operation but has run into a merge conflict.<br>
+**Resolve the merge conflict** in the `script.py` and **complete the merge**.<br>
+The intended outcome is `print("Hello Everyone and World!")`.
+
 {% endcall %}
 </div>

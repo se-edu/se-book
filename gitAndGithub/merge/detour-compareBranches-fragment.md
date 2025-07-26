@@ -7,5 +7,11 @@
 
 Here are two ways to compare two branches:
 
-* Using double-dot notation `git diff branchA..branchB`: This displays changes needed to go from `branchA` to `branchB` (i.e., what `branchB` has that `branchA` doesn’t).
-* Using triple-dot notation `git diff branchA...branchB`: This shows the diff between the merge base and `branchB`, highlighting what has changed in `branchB` since it split from `branchA`.
+* **Double-dot notation** `git diff branchA..branchB`: Changes based on commits in `branchB` but not in `branchA`. This is the one used more commonly.
+* **Triple-dot notation** `git diff branchA...branchB`: This shows changes in all the commits that are reachable by either of two references but not by both of them.<br>
+  i.e., commits unique to `branchA` or `branchB`.
+
+{% call show_resources() %}
+
+* [**Notations used for referring commits/branches**, from git-scm.com](https://git-scm.com/book/en/v2/Git-Tools-Revision-Selection)
+{% endcall %}

@@ -22,7 +22,7 @@ Example use case: To verify the next commit will include exactly what you intend
 {{ hp_number("1") }} **Do some changes to the working directory. Stage some (but not all) changes.** For example, you can run the following commands.
 
 ```bash
-echo "blue\nred\ngreen" >> clours.txt
+echo "blue\nred\ngreen" >> colours.txt
 git add .  # a shortcut to stage all changes
 echo "no shapes added yet" >> shapes.txt
 ```
