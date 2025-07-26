@@ -8,7 +8,7 @@
 
 <div id="body">
 {% call show_lesson_intro() %}
-Before you start learning Git, **you need to install some tools** in your computer.
+Before you start learning Git, **you need to install some tools** on your computer.
 {% endcall %}
 
 ##### Installing Git
@@ -36,7 +36,7 @@ Before you start learning Git, **you need to install some tools** in your comput
 
 When running Git commands, we recommend Windows users to **use the Git Bash terminal** that comes with Git. To open Git Bash terminal, hit the <kbd>:fab-windows:</kbd> key and type `git-bash`.
 
-{{ icon_tip }} It may be possible that the installation didn't add shortcut to the Start Menu.
+{{ icon_tip }} It may be possible that the installation didn't add a shortcut to the Start Menu.
 You can navigate to the directory where `git-bash.exe` is (most likely `C:\Program Files\Git\git-bash.exe`), double click `git-bash.exe` to open Git Bash.<br>
 You can also right-click it and choose `Pin to Start` or `Pin to taskbar`.
 </box>
@@ -79,7 +79,7 @@ The output should spit out the version number.
 
 ##### Configuring `user.name` and `user.email`
 
-**Git needs to know _who you are_ to record changes properly.** When you save a snapshot of your work in Git, it records your name and email as the author of that change. This ensures everyone working on the project can see who made which changes. **Accordingly, you should set the config settings `user.name` and `user.email` as before you start Git for revision control.**
+**Git needs to know _who you are_ to record changes properly.** When you save a snapshot of your work in Git, it records your name and email as the author of that change. This ensures everyone working on the project can see who made which changes. **Accordingly, you should set the config settings `user.name` and `user.email` before you start Git for revision control.**
 
 {% call show_prep("Set `user.name` and `user.email`") %}
 
@@ -109,7 +109,7 @@ git config --global user.email
 **Optionally, you can install a Git GUI client.**
 e.g., Sourcetree ([installation instructions](https://se-education.org/guides/tutorials/sourcetree.html)).
 
-Our Git lessons shows how to perform Git operations in Git CLI, and in Sourcetree -- the latter just to illustrate how Git GUIs work. It is perfectly fine for you to learn the CLI only.
+Our Git lessons show how to perform Git operations in Git CLI, and in Sourcetree -- the latter just to illustrate how Git GUIs work. It is perfectly fine for you to learn the CLI only.
 
 <pic src="images/sourcetreeUi.png" /><br>
 <sub>%%[image credit: https://www.sourcetreeapp.com]%%</sub>

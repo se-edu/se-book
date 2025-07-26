@@ -1,6 +1,6 @@
 <panel type="secondary" header="###  <small><small>{{ icon_important }} [Exercise] Run HelloWorld</small></small>" expanded >
 
-**A. Install Java** in your computer, if you haven't done so already. Java 17 is recommended.
+**A. Install Java** on your computer, if you haven't done so already. Java 17 is recommended.
 
 <box type="tip" seamless>
 
@@ -20,7 +20,7 @@ Ensure the installation is correct, as follows.
    1. Run the command `javac` and ensure it results in a help message.
       If it outputs an error message such as `javac is not recognized as internal or external command`, you need to configure the `PATH` variable of your OS so that the OS know where your `javac` executable is.
 
-**B. Write, compile and run a small Java program** %%(e.g., a HelloWorld program)%% in your computer. You can use any code editor to write the program but use the command prompt to compile and run the program. Here are suggested steps:
+**B. Write, compile and run a small Java program** %%(e.g., a HelloWorld program)%% on your computer. You can use any code editor to write the program but use the command prompt to compile and run the program. Here are suggested steps:
    1. Open notepad (or any other text editor)
    1. Copy-paste this code into the editor.
       ```java

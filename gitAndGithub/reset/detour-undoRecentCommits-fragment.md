@@ -2,7 +2,7 @@
 
 <div id="preview">
 
-**How do you undo or delete the last few commits** if you realise they were incorrect, unnecessary, or done too soon?.
+**How do you undo or delete the last few commits** if you realise they were incorrect, unnecessary, or done too soon?
 </div>
 
 Undoing or deleting recent `n` commits is easily accomplished with Git's `reset` feature.

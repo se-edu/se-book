@@ -1,6 +1,6 @@
 {% from "common/macros.njk" import hp_number, show_output with context %}
 
-Here is a example list of bash commands to add two commits while observing the list of commits
+Here is an example list of bash commands to add two commits while observing the list of commits
 
 ```bash
 $ echo "figs" >> fruits.txt  # add another line to fruits.txt

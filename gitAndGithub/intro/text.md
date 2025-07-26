@@ -21,7 +21,7 @@ There are a number of reasons why you or your team might want to use an automate
 
 * **It will track the history and evolution of your project**, so you don't have to. For every change, you'll have a log of who made it; why they made it; when they made it; and what the change was.
 * **It makes it easier for you to collaborate** when you're working with other people. For example, when people more or less simultaneously make potentially incompatible changes, the software will help you to identify and resolve those conflicts.
-* **It can help you to recover from mistakes**. If you make a change that later turns out to be an error, you can revert to an earlier version of one or more files. In fact, a y good revision control tool will even help you to efficiently figure out exactly when a problem was introduced.
+* **It can help you to recover from mistakes**. If you make a change that later turns out to be an error, you can revert to an earlier version of one or more files. In fact, a good revision control tool will even help you to efficiently figure out exactly when a problem was introduced.
 * **It will help you to work simultaneously on, and manage the drift between, multiple versions of your project.**
 
 Most of these reasons are equally valid, at least in theory, whether you're working on a project by yourself, or with a hundred other people.

@@ -34,7 +34,7 @@ When working with many commits, it helps to **tag specific commits with custom n
 
 {% call show_hands_on_practical('Adding tags')  %}
 
-{{ hp_number ('0') }} **Preparation: fork and clone the [samplerepo-preferences](https://github.com/se-edu/samplerepo-preferences).** Use the cloned repo in your computer for the following steps.
+{{ hp_number ('0') }} **Preparation: fork and clone the [samplerepo-preferences](https://github.com/se-edu/samplerepo-preferences).** Use the cloned repo on your computer for the following steps.
 
 {% set cli %}
 

@@ -30,7 +30,7 @@ You can follow the hands-on practical below to learn how to initialise a repo in
   mkdir things
   ```
 
-{{ hp_number(2) }} **Then CD into it.**
+{{ hp_number(2) }} **Then `cd` into it.**
 
 ```bash {.no-line-numbers}
 cd things

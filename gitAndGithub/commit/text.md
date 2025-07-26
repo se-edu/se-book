@@ -11,12 +11,12 @@ After staging, you can now proceed to **save the snapshot, aka creating a _commi
 
 **Saving a snapshot is called {{ show_git_term('committing') }} and a saved snapshot is called a {{ show_git_term('commit') }}.**
 
-**A git commit is a full snapshot of your working directory based on the files you have staged**, more precisely, a record of the exact state of all files in the staging area (index) at that moment -- even the files that have not changed since the last commit. This is in contrast to other revision control software that only store the <tooltip content="i.e., the changes made since the last commit">delta</tooltip> in a commit. Consequently, a Git commit has all the information it needs to recreate the snapshot of working directory at the time the commit was created.<br>
+**A Git commit is a full snapshot of your working directory based on the files you have staged**, more precisely, a record of the exact state of all files in the staging area (index) at that moment -- even the files that have not changed since the last commit. This is in contrast to other revision control software that only store the <tooltip content="i.e., the changes made since the last commit">delta</tooltip> in a commit. Consequently, a Git commit has all the information it needs to recreate the snapshot of the working directory at the time the commit was created.<br>
 **A commit also includes metadata** such as the author, date, and an optional {{ show_git_term('commit message') }} describing the change.
 
 <box type="important" light>
 
-A Git commit is a snapshot of _all_ tracked files, not simply a delta of _what changed since last commit_.
+A Git commit is a snapshot of _all_ tracked files, not simply a delta of _what changed since the last commit_.
 </box>
 
 {% call show_hands_on_practical("Creating your first commit") %}

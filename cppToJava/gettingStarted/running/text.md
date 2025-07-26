@@ -11,7 +11,7 @@ To run the HelloWorld program, in a command console, run the following command f
 {{ icon_terminal }} `java HelloWorld`
 
 Notes:
-* `java` in the command above refers to the Java interpreter installed in your computer.
+* `java` in the command above refers to the Java interpreter installed on your computer.
 * Similar to `javac`, your console should be able to find the java executable.
 
 

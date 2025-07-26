@@ -12,13 +12,13 @@ To save a snapshot, **you start by specifying what to include in it, also called
 
 **Git considers new files that you add to the working directory as {{ show_git_term("'untracked'") }}** i.e., Git is aware of them, but they are not yet under Git's control. The same applies to files that existed in the working folder at the time you initialised the repo.
 
-**A Git repo has an internal space called the {{ show_git_term('staging area') }} which it uses to build the next snapshot**. Another name for the staging area is the {{ show_git_term('index') }}).
+**A Git repo has an internal space called the {{ show_git_term('staging area') }} which it uses to build the next snapshot**. Another name for the staging area is the {{ show_git_term('index') }}.
 
-**We can {{ show_git_term('stage', 'stage') }}) an untracked file** to tell Git that we want its current version to be included in the next snapshot. Once you stage an untracked file, it becomes {{ show_git_term("'tracked'") }} (i.e., under Git's control).
+**We can {{ show_git_term('stage', 'stage') }} an untracked file** to tell Git that we want its current version to be included in the next snapshot. Once you stage an untracked file, it becomes {{ show_git_term("'tracked'") }} (i.e., under Git's control).
 
 {{ show_git_term_tip('stage', 'stage') }}
 
-In the example below, you can see how staging files change the status of the repo as you from (a) to (c).
+In the example below, you can see how staging files change the status of the repo as you go from (a) to (c).
 
 {{ show_folder_columns('folder-staging-after-init-fragment.md') }}
 
@@ -31,7 +31,7 @@ In the example below, you can see how staging files change the status of the rep
 Here is an easy way to do that with a single terminal command.
 
 ```bash {.no-line-numbers }
-echo "apples\nbananas\ncherries\n" > fruits.txt
+echo -e "apples\nbananas\ncherries\n" > fruits.txt
 ```
 {% call show_output() %}
 ```txt {heading="things/fruits.txt"}
@@ -94,7 +94,7 @@ dragon fruits
 {% endcall %}
 
 
-**Git does not track empty folders**. You can test this by adding an empty subfolder inside the `things` folder (e.g., `things/more-things` and checking if it shows up as 'untracked' (it will not). If you add a file to that folder (e.g., `things/more-things/food.txt`) and then staged that file (e.g., `git add more-things/food.txt`), the folder will now be included in the next snapshot.
+**Git does not track empty folders**. You can test this by adding an empty subfolder inside the `things` folder (e.g., `things/more-things`) and checking if it shows up as 'untracked' (it will not). If you add a file to that folder (e.g., `things/more-things/food.txt`) and then staged that file (e.g., `git add more-things/food.txt`), the folder will now be included in the next snapshot.
 
 </div>
 
