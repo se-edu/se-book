@@ -13,7 +13,7 @@ Pros:
 
 Cons:
 
-* A developer may subconsciously only test situations that he knows to work (i.e. test it too 'gently').
+* A developer may subconsciously only test situations that he knows to work (i.e., test it too 'gently').
 * A developer may be blind to his own mistakes (if he did not consider a certain combination of input while writing the code, it is possible for him to miss it again during testing).
 * A developer may have misunderstood what the SUT is supposed to do in the first place.
 * A developer may lack the testing expertise.

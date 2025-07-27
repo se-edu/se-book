@@ -84,7 +84,7 @@ The revision graph should look like this now (colours and line alignment might v
 
 <!-- ------ end: Git Tabs -------------------------------->
 
-Observe how the changes you did in the `master` branch (i.e. the imaginary bug fix in `m3`) is now available even when you are in the `feature1` branch.<br>
+Observe how the changes you did in the `master` branch (i.e., the imaginary bug fix in `m3`) is now available even when you are in the `feature1` branch.<br>
 Furthermore, observe (e.g., `git show HEAD`) how the merge commit contains the sum of changes done in  commits `m3`, `f1`, and `f2`.
 
 {{ hp_number ('3') }} **Add another commit to the `feature1` branch.**<br>

@@ -6,7 +6,7 @@
 
 <div id="body">
 
-**User stories capture user requirements in a way that is convenient for <popover content="i.e. which features to include in the product">scoping</popover>, <popover content="i.e. how much effort each feature will take">estimation</popover>, and <popover content="i.e. when to deliver each feature">scheduling</popover>.**
+**User stories capture user requirements in a way that is convenient for <popover content="i.e., which features to include in the product">scoping</popover>, <popover content="i.e., how much effort each feature will take">estimation</popover>, and <popover content="i.e., when to deliver each feature">scheduling</popover>.**
 
 > [User stories] strongly shift the focus from writing about features to discussing them. In fact, these discussions are more important than whatever text is written. <sub>[Mike Cohn, MountainGoat Software [:link:](https://www.mountaingoatsoftware.com/agile/user-stories)]</sub>
 

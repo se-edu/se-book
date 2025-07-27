@@ -16,7 +16,7 @@ It is preferable that some part of the code executes these commands without havi
 
 **Solution**
 
-The essential element of this pattern is to have a general `<<Command>>` object that can be passed around, stored, executed, etc without knowing the type of command (i.e. via polymorphism).
+The essential element of this pattern is to have a general `<<Command>>` object that can be passed around, stored, executed, etc without knowing the type of command (i.e., via polymorphism).
 
 Let us examine an example application of the pattern first:
 

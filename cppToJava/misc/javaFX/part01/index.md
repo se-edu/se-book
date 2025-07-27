@@ -86,9 +86,9 @@ We will also have to set up the IDE further, so that warnings and errors show up
 
 In We will create a package for each of the component. Ensure that your Project pane is open (<kbd>Alt</kbd>+<kbd>1</kbd>). Right click on the `src` folder, and select `New` → `Package`:
 
-* `seedu.address` - contains the _controller_ classes (i.e. the part that deals with the business logic)
-* `seedu.address.model` - contains the _model_ classes (i.e. the part that deals with data)
-* `seedu.address.view` - contains the _views_ (i.e. the part that deals with presenting the data to the user)
+* `seedu.address` - contains the _controller_ classes (i.e., the part that deals with the business logic)
+* `seedu.address.model` - contains the _model_ classes (i.e., the part that deals with data)
+* `seedu.address.view` - contains the _views_ (i.e., the part that deals with presenting the data to the user)
 
 <pic eager src="images/new-packages.png" alt="New Packages" height="200" />
 <p/>

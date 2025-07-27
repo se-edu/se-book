@@ -12,7 +12,7 @@
 <include src="../../common/definitions.md#def-open-closed-principle" trim />
 </box>
 
-In object-oriented programming, OCP can be achieved in various ways. This often requires separating the _specification (i.e. interface)_ of a module from its _implementation_.
+In object-oriented programming, OCP can be achieved in various ways. This often requires separating the _specification (i.e., interface)_ of a module from its _implementation_.
 
 <box>
 

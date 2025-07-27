@@ -54,7 +54,7 @@ You are asked to find out the average age of a group of people Adam, Beth, Charl
 
 {{ icon_example }} The state and behavior of our running example are as follows:
 
-| Object      | Real World? | Virtual World? | Example of State (i.e. Data)       | Examples of Behavior (i.e. Operations)                |
+| Object      | Real World? | Virtual World? | Example of State (i.e., Data)       | Examples of Behavior (i.e., Operations)                |
 | :---------: |:-----------:|:--------------:|:----------------------------------:| :----------------------------------------------------:|
 | Adam        | {{ icon_tick }} | {{ icon_tick }} | Name, Date of Birth                | Calculate age based on birthday                       |
 | Pen         | {{ icon_tick }} | %%-%%           | Ink color, Amount of ink remaining | Write                                                 |

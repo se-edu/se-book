@@ -52,7 +52,7 @@ Suppose `Logic` supports a `reset()` operation. You can model it like this:
 
 </box>
 
-Our current model assumes that the `Minefield` object has enough information (i.e. H, W, and mine locations) to create itself.
+Our current model assumes that the `Minefield` object has enough information (i.e., H, W, and mine locations) to create itself.
 
 <box>
 

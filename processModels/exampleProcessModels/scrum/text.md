@@ -15,7 +15,7 @@ This description of Scrum was adapted from Wikipedia [retrieved on 18/10/2011], 
 * **The Product Owner**, who represents the stakeholders and the business
 * **The Team**, a cross-functional group who do the actual analysis, design, implementation, testing, etc.
 
-**A Scrum project is divided into iterations called Sprints.** A sprint is the basic unit of development in Scrum. Sprints tend to last between one week and one month, and are a timeboxed (i.e. restricted to a specific duration) effort of a constant length.
+**A Scrum project is divided into iterations called Sprints.** A sprint is the basic unit of development in Scrum. Sprints tend to last between one week and one month, and are a timeboxed (i.e., restricted to a specific duration) effort of a constant length.
 
 **Each sprint is preceded by a planning meeting**, where the tasks for the sprint are identified and an estimated commitment for the sprint goal is made, and followed by a review or retrospective meeting, where the progress is reviewed and lessons for the next sprint are identified.
 

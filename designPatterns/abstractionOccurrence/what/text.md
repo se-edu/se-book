@@ -47,7 +47,7 @@ The above solution requires common information to be duplicated by all instances
 <pic eager src="{{baseUrl}}/designPatterns/abstractionOccurrence/what/images/bookFriends.png" height="240" />
 <p/>
 
-The design above segregates the common and unique information into a class hierarchy. Each book title is represented by a separate class with common data (i.e. Name, Author, ISBN) hard-coded in the class itself. This solution is problematic because each book title is represented as a class, resulting in thousands of classes (one for each title). Every time the library buys new books, the source code of the system will have to be updated with new classes.
+The design above segregates the common and unique information into a class hierarchy. Each book title is represented by a separate class with common data (i.e., Name, Author, ISBN) hard-coded in the class itself. This solution is problematic because each book title is represented as a class, resulting in thousands of classes (one for each title). Every time the library buys new books, the source code of the system will have to be updated with new classes.
 
 </box>
 
@@ -74,7 +74,7 @@ The general solution:
 <pic eager src="{{baseUrl}}/designPatterns/abstractionOccurrence/what/images/abstractionOccurrence.png" height="40" />
 <p/>
 
-The `<<Abstraction>>` class should hold all common information, and the unique information should be kept by the `<<Occurrence>>` class. Note that ‘Abstraction’ and ‘Occurrence’ are not class names, but roles played by each class. Think of this diagram as a _meta-model_ (i.e. a ‘model of a model’) of the `BookTitle-BookCopy` class diagram given above.
+The `<<Abstraction>>` class should hold all common information, and the unique information should be kept by the `<<Occurrence>>` class. Note that ‘Abstraction’ and ‘Occurrence’ are not class names, but roles played by each class. Think of this diagram as a _meta-model_ (i.e., a ‘model of a model’) of the `BookTitle-BookCopy` class diagram given above.
 
 </div>
 

@@ -15,7 +15,7 @@ Some examples in which a certain workflow is relevant to software project:
 
 {{ icon_example }} A software that automates the work of an insurance company needs to take into account the workflow of processing an insurance claim.
 
-{{ icon_example }} The algorithm of a piece of code represents the workflow (i.e. the execution flow) of the code.
+{{ icon_example }} The algorithm of a piece of code represents the workflow (i.e., the execution flow) of the code.
 </box>
 
 

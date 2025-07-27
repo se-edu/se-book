@@ -6,7 +6,7 @@
 
 <div id="body">
 
-**A textual description (i.e. _prose_) can be used to describe requirements.** Prose is especially useful when describing abstract ideas such as the vision of a product.
+**A textual description (i.e., _prose_) can be used to describe requirements.** Prose is especially useful when describing abstract ideas such as the vision of a product.
 
 <box>
 

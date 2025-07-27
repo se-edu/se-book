@@ -12,7 +12,7 @@
 
 **Sidebar: Domain Modeling**{.text-info}
 
-**_Domain modeling_ is modeling the <tooltip content="the relevant information that needs to be examined to understand a problem">problem domain</tooltip>** i.e. to model how things actually work in the real world. Domain modeling is useful in understanding the problem domain, which is essential to the success of a project.
+**_Domain modeling_ is modeling the <tooltip content="the relevant information that needs to be examined to understand a problem">problem domain</tooltip>** i.e., to model how things actually work in the real world. Domain modeling is useful in understanding the problem domain, which is essential to the success of a project.
 
 **Domain modeling can be done using**,
 
@@ -36,7 +36,7 @@ Description: The snakes and ladders game is played by two or more players using 
 
 </box>
 
-**CCDs do not contain solution-specific classes** (i.e. classes that are used in the solution domain but do not exist in the problem domain). For example, a class called DatabaseConnection could appear in a class diagram but not usually in a CCD because DatabaseConnection is something related to a software solution but not an entity in the problem domain.
+**CCDs do not contain solution-specific classes** (i.e., classes that are used in the solution domain but do not exist in the problem domain). For example, a class called DatabaseConnection could appear in a class diagram but not usually in a CCD because DatabaseConnection is something related to a software solution but not an entity in the problem domain.
 
 **CCDs represents the class _structure_ of the problem domain** and not their behavior, just like class diagrams. To show behavior, use other diagrams such as sequence diagrams.
 

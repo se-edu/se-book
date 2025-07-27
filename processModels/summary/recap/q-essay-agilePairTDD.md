@@ -43,13 +43,13 @@ Arguments against pair programming:
 
 * Testing will not be neglected due to time pressure (because it is done first).
 * Forces the developer to think about how exactly the component should behave, before jumping into implementing it.
-* Avoids wasting programmer effort (i.e. the code ends up doing exactly what's needed; no less, no more).
+* Avoids wasting programmer effort (i.e., the code ends up doing exactly what's needed; no less, no more).
 * Forces the programmer to automate all tests.
 
 Arguments against TDD (not necessarily true):
 
 * Since tests can be seen as ‘executable specifications’, programmers tend to neglect other forms of documentation.
-* Promotes ‘trial-and-error’ coding instead of making programmers think through their algorithms (i.e. ‘just keep hacking until all tests pass’).
+* Promotes ‘trial-and-error’ coding instead of making programmers think through their algorithms (i.e., ‘just keep hacking until all tests pass’).
 * Gives a false sense of security. (What if you forgot to test certain scenarios?)
 * Not intuitive. Some programmers might resist adopting TDD.
 

@@ -14,7 +14,7 @@
 
 {{ icon_example }} Some examples of using models for analysis:
 
-1. Models of the <tooltip content="i.e. the environment in which the software is expected to solve a problem">problem domain</tooltip> can be built to aid the understanding of the problem to be solved.
+1. Models of the <tooltip content="i.e., the environment in which the software is expected to solve a problem">problem domain</tooltip> can be built to aid the understanding of the problem to be solved.
 2. When planning a software solution, models can be created to figure out how the solution is to be built. An <trigger trigger="click" for="modal:modelingIntro-archiDiagrams">architecture diagram</trigger> is such a model.
 
 </box>

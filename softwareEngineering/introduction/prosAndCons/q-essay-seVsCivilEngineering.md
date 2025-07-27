@@ -1,6 +1,6 @@
 <panel header="{{ icon_Q_A }} SE vs Civil Engineering">
 
-Compare Software Engineering with Civil Engineering in terms of how work products in CE (i.e. buildings) differ from those of SE (i.e. software).
+Compare Software Engineering with Civil Engineering in terms of how work products in CE (i.e., buildings) differ from those of SE (i.e., software).
 
 <panel type="seamless" header="Hint" minimized>
 

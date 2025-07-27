@@ -8,7 +8,7 @@ Suppose we wrote a program to follow the class structure given in this class dia
 
 Draw object diagrams to represent the object structures after each of these steps below. Assume that we are trying to minimize the number of total objects.
 
-i.e. apply step 1 → [diagram 1] → apply step 2 on diagram 1 → [diagram 2] and so on.
+i.e., apply step 1 → [diagram 1] → apply step 2 on diagram 1 → [diagram 2] and so on.
 
 1. There are no persons.
 
@@ -18,7 +18,7 @@ i.e. apply step 1 → [diagram 1] → apply step 2 on diagram 1 → [diagram 2] 
 
 4. `Alfred` is also the guardian of another person. That person lists `Alfred`'s home address as his home address as well as office address.
 
-5. `Alfred` has an office address at the `Wayne Industries` building which is different from his home address (i.e. `Bat Cave`).
+5. `Alfred` has an office address at the `Wayne Industries` building which is different from his home address (i.e., `Bat Cave`).
 
 <panel header=":fas-lightbulb: hint" minimized>
 

@@ -6,7 +6,7 @@
 
 <div id="body">
 
-**A test driver is the code that ‘drives’ the <tooltip content="Software Under Test">SUT</tooltip> for the purpose of testing** i.e. invoking the SUT with test inputs and verifying if the behavior is as expected. 
+**A test driver is the code that ‘drives’ the <tooltip content="Software Under Test">SUT</tooltip> for the purpose of testing** i.e., invoking the SUT with test inputs and verifying if the behavior is as expected.
 
 <box>
 

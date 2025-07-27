@@ -6,7 +6,7 @@
 
 <div id="body">
 
-An API should be well-designed (i.e. should cater for the needs of its users) and well-documented.
+An API should be well-designed (i.e., should cater for the needs of its users) and well-documented.
 
 When you write software consisting of multiple components, you need to define the API of each component.
 

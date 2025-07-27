@@ -30,7 +30,7 @@ Now consider the following:
 
 In the above scenario,
 
-* The `Admin` class follows LSP because it fulfills `Payroll`’s expectation of `Staff` objects (i.e. it works for all positive values). Substituting `Admin` objects for `Staff` objects will not break the `Payroll` class functionality.
+* The `Admin` class follows LSP because it fulfills `Payroll`’s expectation of `Staff` objects (i.e., it works for all positive values). Substituting `Admin` objects for `Staff` objects will not break the `Payroll` class functionality.
 * The `Academic` class violates LSP because it will not work for percent values over `100` as expected by the `Payroll` class. Substituting `Academic` objects for `Staff` objects can potentially break the `Payroll` class functionality.
 
 <panel type="seamless" header="%%Another example%%">

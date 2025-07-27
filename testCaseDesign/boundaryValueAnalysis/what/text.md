@@ -15,7 +15,7 @@
 </box>
 
 
-**BVA suggests that when picking test inputs from an equivalence partition, values near boundaries (i.e. boundary values) are more likely to find bugs.**
+**BVA suggests that when picking test inputs from an equivalence partition, values near boundaries (i.e., boundary values) are more likely to find bugs.**
 
 Boundary values are sometimes called _corner cases_.
 

@@ -24,7 +24,7 @@
 </box>
 
 
-**The effort is traditionally measured in _man hour/day/month_** i.e. work that can be done by one person in one hour/day/month. The _Task ID_ is a label for easy reference to a task. Simple labeling is suitable for a small project, while a more informative labeling system can be adopted for bigger projects.
+**The effort is traditionally measured in _man hour/day/month_** i.e., work that can be done by one person in one hour/day/month. The _Task ID_ is a label for easy reference to a task. Simple labeling is suitable for a small project, while a more informative labeling system can be adopted for bigger projects.
 
 <box>
 

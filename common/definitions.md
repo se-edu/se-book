@@ -84,7 +84,7 @@ e.g., `createEmptyList`, `listOfIntegers`, `htmlText`, `dvdPlayer`. This book de
 
 <div id="def-cli">
 
-**CLI application**: An application that has a _Command Line Interface_. i.e. user interacts with the app by typing in commands.
+**CLI application**: An application that has a _Command Line Interface_. i.e., user interacts with the app by typing in commands.
 
 </div>
 
@@ -250,7 +250,7 @@ Also known as
 
 <div id="def-rcs">
 
-**RCS**:  **Revision control software** are the software tools that automate the process of _Revision Control_ i.e. managing revisions of software artifacts.
+**RCS**:  **Revision control software** are the software tools that automate the process of _Revision Control_ i.e., managing revisions of software artifacts.
 
 </div>
 

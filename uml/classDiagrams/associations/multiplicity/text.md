@@ -25,7 +25,7 @@ Commonly used multiplicities:
 <box>
 
 {{ icon_example }} In the diagram below,
-* Each student must be supervised by exactly one professor. i.e. There cannot be a student who doesn't have a supervisor or has multiple supervisors.
+* Each student must be supervised by exactly one professor. i.e., There cannot be a student who doesn't have a supervisor or has multiple supervisors.
 * A professor cannot supervise more than 5 students but can have no students to supervise.
 * An admin can handle any number of professors and any number of students, including none.
 * A professor/student can be handled by any number of admins, including none.

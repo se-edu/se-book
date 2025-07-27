@@ -6,7 +6,7 @@
 
 <div id="body">
 
-**The _happy path_ should be clear and prominent in your code.** Restructure the code to make the happy path (i.e. the execution path taken when everything goes well) less-nested as much as possible. It is the ‘unusual’ cases that should be nested. Someone reading the code should not get distracted by alternative paths taken when error conditions happen. One technique that could help in this regard is the use of [guard clauses](http://wiki.c2.com/?GuardClause).
+**The _happy path_ should be clear and prominent in your code.** Restructure the code to make the happy path (i.e., the execution path taken when everything goes well) less-nested as much as possible. It is the ‘unusual’ cases that should be nested. Someone reading the code should not get distracted by alternative paths taken when error conditions happen. One technique that could help in this regard is the use of [guard clauses](http://wiki.c2.com/?GuardClause).
 
 <box>
 

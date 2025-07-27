@@ -47,7 +47,7 @@ class Woman:
 
 <box>
 
-{{ icon_example }} The role of `Student` objects in this association is `charges` %%(i.e. Admin is in charge of students)%%
+{{ icon_example }} The role of `Student` objects in this association is `charges` %%(i.e., Admin is in charge of students)%%
 
 <pic eager src="{{baseUrl}}/uml/classDiagrams/associations/roles/images/adminStudent.png" height="70" />
 <p/>

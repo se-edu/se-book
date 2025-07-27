@@ -20,7 +20,7 @@ Choose the incorrect statement.
 
 d
 
-Explanation: A sequence diagram is a behavior diagram, not a structure diagram. An SD can represent how objects interact with each other (i.e., behavior), not how they are connected to each other (i.e. structure).
+Explanation: A sequence diagram is a behavior diagram, not a structure diagram. An SD can represent how objects interact with each other (i.e., behavior), not how they are connected to each other (i.e., structure).
 
 </panel>
 </panel>

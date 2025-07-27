@@ -23,7 +23,7 @@
 
 </box>
 
-**Testing all possible combinations is effective but not efficient.** If you test all possible combinations for the above example, you need to test 6x5x2x6=360 cases. Doing so has a higher chance of discovering bugs (i.e. effective) but the number of test cases will be too high (i.e. not efficient). Therefore, **you need smarter ways to combine test inputs that are both effective and efficient.**
+**Testing all possible combinations is effective but not efficient.** If you test all possible combinations for the above example, you need to test 6x5x2x6=360 cases. Doing so has a higher chance of discovering bugs (i.e., effective) but the number of test cases will be too high (i.e., not efficient). Therefore, **you need smarter ways to combine test inputs that are both effective and efficient.**
 
 </div>
 

@@ -20,7 +20,7 @@ In this hands-on practical, we simulate a merge conflict and use it to learn how
 
 {{ hp_number("1") }} **Start a branch named `fix1` in the repo. Create a commit** that adds a line with some text to one of the files.
 
-{{ hp_number("2") }} **Switch back to `master` branch. Create a commit with a conflicting change** i.e. it adds a line with some different text in the exact location the previous line was added.
+{{ hp_number("2") }} **Switch back to `master` branch. Create a commit with a conflicting change** i.e., it adds a line with some different text in the exact location the previous line was added.
 
 <pic eager src="{{baseUrl}}/gitAndGithub/mergeConflicts/images/sourcetree_1.png" height="350" />
 <p/>

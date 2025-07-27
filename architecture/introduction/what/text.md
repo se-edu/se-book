@@ -35,7 +35,7 @@ Main components:
 
 </box>
 
-**The architecture is typically designed by the _software architect_**, who provides the technical vision of the system and makes high-level (i.e. architecture-level) technical decisions about the project.
+**The architecture is typically designed by the _software architect_**, who provides the technical vision of the system and makes high-level (i.e., architecture-level) technical decisions about the project.
 
 
 <!-- TODO:

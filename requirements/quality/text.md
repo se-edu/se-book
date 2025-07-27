@@ -17,7 +17,7 @@ Here are some characteristics of well-defined requirements <trigger for="pop:zie
 * Independent
 * <tooltip content="Not divisible any further">Atomic</tooltip>
 * Necessary
-* Implementation-free (i.e. abstract)
+* Implementation-free (i.e., abstract)
 
 Besides these criteria for individual requirements, the set of requirements as a whole should be
 

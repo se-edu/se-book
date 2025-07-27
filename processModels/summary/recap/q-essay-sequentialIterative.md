@@ -18,7 +18,7 @@ f) Suitability for a school project.
 
 a) Quality of the final product:
 
-* Iterative: Frequent reworking can deteriorate the design. Frequent refactoring should be used to prevent this. Frequent customer feedback can help to improve the quality (i.e. quality as seen by the customer).
+* Iterative: Frequent reworking can deteriorate the design. Frequent refactoring should be used to prevent this. Frequent customer feedback can help to improve the quality (i.e., quality as seen by the customer).
 *	Sequential: Final quality depends on the quality of each phase. Any quality problems in any phase could result in a low quality product.
 
 b) Risk of overshooting the deadline.

@@ -14,7 +14,7 @@
 </div>
 </box>
 
-**A use case describes only the externally visible behavior, not internal details, of a system** i.e. should minimize details that are not part of the interaction between the user and the system.
+**A use case describes only the externally visible behavior, not internal details, of a system** i.e., should minimize details that are not part of the interaction between the user and the system.
 
 <box>
   
