@@ -426,11 +426,14 @@ That aspect is covered in a detour **in the lesson [_{{ detour.lesson.title }}_]
 {% endmacro %}
 <!-- ============================================================ -->
 
-{% macro show_sidebar(title) %}
+{% macro show_sidebar(title, non_printable=0) %}
+{% if non_printable %}<div class="non-printable">{% endif %}
+
 <box class="bg-light" icon=":fas-bookmark:" type="info" header="****SIDEBAR: {{ title }}****{.text-info}" seamless>
 
 {{ caller() }}
 </box>
+{% if non_printable %}</div>{% endif %}
 {% endmacro %}
 <!-- ============================================================ -->
 

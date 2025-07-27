@@ -20,7 +20,7 @@ Git allows you to **specify which files should be omitted from revision control*
 
 **The `.gitignore` file supports file patterns** e.g., adding `temp/*.tmp` to the `.gitignore` file prevents Git from tracking any `.tmp` files in the `temp` directory.
 
-{% call show_sidebar("`.gitignore` File Syntax") %}
+{% call show_sidebar("`.gitignore` File Syntax", non_printable=1) %}
 
 * Blank lines: Ignored and can be used for spacing.
 * Comments: Begin with `#` (lines starting with # are ignored).

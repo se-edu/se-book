@@ -1,7 +1,7 @@
 {% from "common/macros.njk" import trail, bold_number, callout, hp_number, label, show_commit, show_git_term, show_git_term_tip, show_detour, show_exercise, show_git_tabs, show_git_tabs_from_text, show_hands_on_practical, show_head, show_lesson_intro, show_output, show_protip, show_ref, show_transformation_columns, show_under_the_hood with context %}
 
 <span id="prereqs"></span>
-<span id="outcomes">...</span>
+<span id="outcomes">Can examine the changes in a commit.</span>
 <span id="title">{{ trail.usingRevisionHistory.lessons.show.title }}</span>
 
 <div id="body">
@@ -53,7 +53,9 @@ index 0000000..55c8449
  ```
  A Git diff can consist of multiple {{ show_git_term("file diffs") }}, one for each changed file. Each file diff can contain one or more {{ show_git_term("hunk") }} i.e., a localised group of changes within the file — including lines added, removed, or left unchanged (included for context).
 
-Here is the explanation of the above diff:
+<div class="non-printable">
+
+Given below is how the above diff is divided into its components:
 <div class="border border-info p-2">
 All changes in the commit:
 
@@ -139,6 +141,7 @@ Points to note:
 * `+`{.diff} indicates a line being added.<br>
   `-`{.diff} indicates a line being deleted.
 * Editing a line is seen as deleting the original line and adding the new line.
+</div>
 
 {% call show_hands_on_practical('View specific commits')  %} <!-- ================ -->
 
