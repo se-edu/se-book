@@ -32,9 +32,13 @@ Git allows you to **specify which files should be omitted from revision control*
   log.txt          # Ignores a file named log.txt
   ```
 * Wildcards:
-  * `*` matches any number of characters (except `/`)
+  * `*` matches any number of characters, except `/` (i.e., for matching a string within a single directory level):
     ```bash
-    *.tmp         # Ignores all .tmp files
+    abc/*.tmp     # Ignores all .tmp files in abc directory
+    ```
+  * `**` matches any number of characters (including `/`)
+    ```bash
+    **/foo.tmp    # Ignores all foo.tmp files in any directory
     ```
   * `?` matches a single character
     ```bash
@@ -102,9 +106,9 @@ Add a few other files with `.tmp` extension.
 
 <div id="extras">
 {% call show_exercise("ignoring-somethings") %}
-**1. Update the `.gitignore` file** (inside the `files/` folder) to reflect following requirements:
+**1. Update the `.gitignore` file** (inside the `files/` folder) to reflect the following requirements:
 
-* Git should ignore every file in the `many/` folder except `many/file22.txt`.
+* Git should ignore every file in the `many/` folder except the file `many/file22.txt`.
 * `why_am_i_hidden.txt` should not be ignored by Git.
 * `ignore_me.txt` should be ignored by Git.
 * Git should ignore any `runaway.txt` file in `this/` and any of its current and future subfolders (hint: use a pattern).

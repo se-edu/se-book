@@ -11,11 +11,11 @@
 To use GitHub, **you need to sign up for an account, and configure related tools/settings** first.
 {% endcall %}
 
-**GitHub is a web-based services that host Git repositories and add collaboration features** on top of Git. Two other similar platforms are GitLab or Bitbucket. While Git manages version control locally, these platforms make it easier for individuals and teams to work together by providing shared access to repositories, issue tracking, pull requests, and permission controls. They are widely used in both open-source and commercial software development. Here we'll be GitHub.
+**GitHub is a web-based service that hosts Git repositories and adds collaboration features** on top of Git. Two other similar platforms are GitLab and Bitbucket. While Git manages version control locally, such platforms make it easier for individuals and teams to work together by providing shared access to repositories, issue tracking, pull requests, and permission controls. They are widely used in both open-source and commercial software development. Here we'll be using GitHub.
 
 **On GitHub, a Git repo can be put in one of two spaces:**
 
-* **A {{ show_git_term("GitHub user acccount") }} represents an individual user.** It is created when you sign up for GitHub and includes a username, profile page, and personal settings. With a user account, you can create your own repositories, contribute to others’ projects, and manage collaboration settings for any repositories you own.
+* **A {{ show_git_term("GitHub user account") }} represents an individual user.** It is created when you sign up for GitHub and includes a username, profile page, and personal settings. With a user account, you can create your own repositories, contribute to others’ projects, and manage collaboration settings for any repositories you own.
 * **A {{ show_git_term("GitHub organisation") }} ({{ show_git_term("org") }} for short) is a shared account used by a group** such as a team, company, or open-source project. Organisations can own repositories and manage access to them through teams, roles, and permissions. Organisations are especially useful when managing repositories with shared ownership or when working at scale.
 
 **Every GitHub user must have a user account**, even if they primarily work within an organisation.
@@ -113,7 +113,7 @@ gh auth status
 ```
 You should see confirmation that you’re logged in.
 
-**4. Verify that Github and Github CLI is setup for Git-Mastery:**
+**4. Verify that Github and GitHub CLI is set up for Git-Mastery:**
 
 ```bash{.no-line-numbers}
 gitmastery check github
@@ -122,6 +122,7 @@ gitmastery check github
 **5. [Optional, Recommended] Ask Git-Mastery to switch on the 'progress sync' feature.**
 
 ```bash{.no-line-numbers}
+# cd into the gitmastery-exercises folder first
 gitmastery progress sync on
 ```
 
@@ -129,7 +130,7 @@ gitmastery progress sync on
 
 **What happens when you switch on the Git-Mastery 'progress sync' feature?**
 
-* You Git-Mastery exercises progress will be backed up to your GitHub account. If you wipe out your local progress data by mistake, the remote copy will still be preserved.
+* Your Git-Mastery exercises progress will be backed up to your GitHub account. If you wipe out your local progress data by mistake, the remote copy will still be preserved.
 * Git-Mastery will create a repo in your GitHub account, to back up your progress data. This repo will be publicly visible.
 
 </box>

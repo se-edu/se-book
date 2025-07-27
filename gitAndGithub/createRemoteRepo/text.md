@@ -12,7 +12,7 @@ The first step of backing up a local repo on GitHub: **create an empty repositor
 
 {% endcall %}
 
-**You can create a remote repository based on an existing local repository**, to serve as a remote copy of you local repo. For example, suppose you created a local repo and worked with it for a while, but now you want to upload it onto GitHub. The first step is to create an empty repository on GitHub.
+**You can create a remote repository based on an existing local repository**, to serve as a remote copy of your local repo. For example, suppose you created a local repo and worked with it for a while, but now you want to upload it onto GitHub. The first step is to create an empty repository on GitHub.
 
 {% call show_hands_on_practical('Creating an empty remote repo') %}
 
@@ -22,7 +22,7 @@ The first step of backing up a local repo on GitHub: **create an empty repositor
 {{ hp_number ('2') }} **In the next screen, provide a name for your repo** but #r#keep the `Initialize this repo ...` tick box unchecked##.<br>
    <pic eager src="images/fillNewRepoInfo.png" width="600" />
 
-{{ hp_number ('3') }} **Note the URL of the repo.** It will be of the form `https://github.com/{your_user_name}/{repo_name}.git`.<br>
+{{ hp_number ('3') }} **Note the URL of the repo.** It will be of the form<br> `https://github.com/{your_user_name}/{repo_name}.git`.<br>
    e.g., `https://github.com/johndoe/foobar.git` (note the `.git` at the end)<br>
    <pic eager src="images/newRepoUrl.png" width="450" />
 {% endcall %}

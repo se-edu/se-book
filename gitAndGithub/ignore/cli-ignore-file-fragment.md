@@ -4,7 +4,7 @@ Create a file named `.gitignore` in the working directory root and add the follo
 temp.txt
 ```
 
-Observe how `temp.text` is no longer detected as 'untracked' by running the `git status` command (but now it will detect the `.gitignore` file as 'untracked'.
+Observe how `temp.txt` is no longer detected as 'untracked' by running the `git status` command (but now it will detect the `.gitignore` file as 'untracked'.
 
 Update the `.gitignore` file as follows:
 
