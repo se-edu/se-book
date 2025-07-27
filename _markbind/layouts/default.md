@@ -34,7 +34,7 @@
 * **Design**
   * [Design]({{baseUrl}}/design/index.html)
   * [Design fundamentals]({{baseUrl}}/designFundamentals/index.html)
-  * [Modeling]({{baseUrl}}/modeling/index.html)
+  * [Modeling (using UML)]({{baseUrl}}/modeling/index.html)
   * [Architecture]({{baseUrl}}/architecture/index.html)
   * [Design patterns]({{baseUrl}}/designPatterns/index.html)
   * [Design approaches]({{baseUrl}}/designApproaches/index.html)
@@ -51,12 +51,10 @@
   * [Testing]({{baseUrl}}/testing/index.html)
   * [Test case design]({{baseUrl}}/testCaseDesign/index.html)
 * **Project management**
-  * [Revision control with Git & GitHub]({{baseUrl}}/gitAndGithub/trail/index.html)
+  * [Revision control (using Git & GitHub)]({{baseUrl}}/gitAndGithub/trail/tours.html)
   * [Project planning]({{baseUrl}}/projectPlanning/index.html)
   * [Teamwork]({{baseUrl}}/teamwork/index.html)
   * [SDLC process models]({{baseUrl}}/processModels/index.html)
-* **Tools**
-  * [UML]({{baseUrl}}/uml/index.html)
 * **Principles**
   * [Principles]({{baseUrl}}/principles/index.html)
 * **Supplementary**
