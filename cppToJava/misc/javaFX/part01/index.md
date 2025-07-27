@@ -45,7 +45,7 @@ If this is the first time using IntelliJ, you need to tell IntelliJ where to fin
 
 1. On the Welcome screen, press `Configure` → `Settings`.
 2. On the left hand side, select `Languages & Frameworks` → `JavaFX`
-3. Under `Path to SceneBuilder:`, select the path to where SceneBuilder is installed (e.g. `C:\Users\Admin\AppData\Local\SceneBuilder\SceneBuilder.exe` on Windows)
+3. Under `Path to SceneBuilder:`, select the path to where SceneBuilder is installed (e.g., `C:\Users\Admin\AppData\Local\SceneBuilder\SceneBuilder.exe` on Windows)
 
   <pic eager src="images/config-scene-builder-settings.png" alt="Scene Builder settings" height="350" />
   <p/>
@@ -72,7 +72,7 @@ Additionally, [Oracle also has a tutorial on JavaFX](http://docs.oracle.com/java
   <p/>
 
 3. Press `Next`.
-4. Give a name for the application (e.g. `AddressApp`), and specify a suitable location.
+4. Give a name for the application (e.g., `AddressApp`), and specify a suitable location.
 5. Press `Finish`. If prompted to create a new directory, just press `OK`.
 
 Remove the `sample` package and its content. We will manually create our own package and resources in our tutorial.

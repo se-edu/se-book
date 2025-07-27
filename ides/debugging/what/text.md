@@ -8,7 +8,7 @@
 
 **_Debugging_ is the process of discovering defects in the program.** Here are some approaches to debugging:
 
-* {{ bad }} -- **By inserting temporary print statements**: This is an ad-hoc approach in which print statements are inserted in the program to print information relevant to debugging, such as variable values. e.g. `Exiting process() method, x is 5.347`. This approach is not recommended due to these reasons:
+* {{ bad }} -- **By inserting temporary print statements**: This is an ad-hoc approach in which print statements are inserted in the program to print information relevant to debugging, such as variable values. e.g., `Exiting process() method, x is 5.347`. This approach is not recommended due to these reasons:
   * Incurs extra effort when inserting and removing the print statements. 
   * These extraneous program modifications increase the risk of introducing errors into the program.
   * These print statements, if not removed promptly after the debugging, may even appear unexpectedly in the production version. 

@@ -75,7 +75,7 @@ Let's assume you are testing a CLI app called `AddressBook`. Here are the detail
    FC output.txt expected.txt
    ```
 
-Note that the above technique is only suitable when testing CLI apps, and only if the exact output can be predetermined. %%If the output varies from one run to the other (e.g. it contains a time stamp), this technique will not work. In those cases, you need more sophisticated ways of automating tests.%%
+Note that the above technique is only suitable when testing CLI apps, and only if the exact output can be predetermined. %%If the output varies from one run to the other (e.g., it contains a time stamp), this technique will not work. In those cases, you need more sophisticated ways of automating tests.%%
 
 <include src="../../../common/popOvers.md#cli" />
 

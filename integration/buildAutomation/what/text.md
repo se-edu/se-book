@@ -8,7 +8,7 @@
 
 **Build automation tools automate the steps of the build process, usually by means of build scripts.**
 
-In a non-trivial project, building a product from its source code can be a complex multi-step process. %%For example, it can include steps such as: pull code from the revision control system, compile, link, run automated tests, automatically update release documents (e.g. build number), package into a distributable, push to repo, deploy to a server, delete temporary files created during building/testing, email developers of the new build, and so on. Furthermore, this build process can be done ‘on demand’, it can be scheduled (e.g. every day at midnight) or it can be triggered by various events (e.g. triggered by a code push to the revision control system).%%
+In a non-trivial project, building a product from its source code can be a complex multistep process. %%For example, it can include steps such as: pull code from the revision control system, compile, link, run automated tests, automatically update release documents (e.g., build number), package into a distributable, push to repo, deploy to a server, delete temporary files created during building/testing, email developers of the new build, and so on. Furthermore, this build process can be done ‘on demand’, it can be scheduled (e.g., every day at midnight) or it can be triggered by various events (e.g., triggered by a code push to the revision control system).%%
 
 Some of these build steps such as compiling, linking and packaging, are already automated in most modern IDEs. %%For example, several steps happen automatically when the ‘build’ button of the IDE is clicked. Some IDEs even allow customization of this build process to some extent.%%
 

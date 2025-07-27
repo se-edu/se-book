@@ -5,9 +5,9 @@
 - [ ] c. Debugging
 - [ ] d. Code navigation %%e.g., to navigate from a method call to the method implementation%%
 - [ ] e. Simulation %%e.g., run a mobile app in a simulator%%
-- [ ] f. Code analysis %%e.g. to find unreachable code%%
-- [ ] g. Reverse engineering design/documentation %%e.g. generate diagrams from code%%
-- [ ] h. Visual programming %%e.g. write programs using ‘drag and drop’ actions instead of typing code%%
+- [ ] f. Code analysis %%e.g., to find unreachable code%%
+- [ ] g. Reverse engineering design/documentation %%e.g., generate diagrams from code%%
+- [ ] h. Visual programming %%e.g., write programs using ‘drag and drop’ actions instead of typing code%%
 - [ ] i. Syntax assistance %%e.g., show hints as you type%%
 - [ ] j. Code generation %%e.g., to generate the code required by simply specifying which component/structure you want to implement%%
 - [ ] k. Extension %%i.e., ability to add more functionality to the IDE using plugins%%

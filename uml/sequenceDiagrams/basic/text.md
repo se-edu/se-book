@@ -22,7 +22,7 @@ The player runs the `newgame` action on the `TextUi` object which results in the
 
 </box>
 
-The `:TextUi` in the above example denotes _an unnamed instance of the class TextUi_. If there were two instances of `TextUi` in the diagram, they can be distinguished by naming them e.g. `TextUi1:TextUi` and `TextUi2:TextUi`.
+The `:TextUi` in the above example denotes _an unnamed instance of the class TextUi_. If there were two instances of `TextUi` in the diagram, they can be distinguished by naming them e.g., `TextUi1:TextUi` and `TextUi2:TextUi`.
 
 **Arrows representing method calls should be solid arrows while those representing method returns should be dashed arrows**.
 

@@ -6,7 +6,7 @@ a)	top-down<br>
 b)	bottom-up<br>
 c)	sandwich
 
-Note that dashed arrows show dependencies (e.g. A depends on B, C and D, and is therefore higher-level than B, C and D).
+Note that dashed arrows show dependencies (e.g., A depends on B, C and D, and is therefore higher-level than B, C and D).
 
 <pic eager src="{{baseUrl}}/integration/approaches/topDownVsBottomUp/images/abc.png" height="190" />
 <p/>

@@ -76,7 +76,7 @@ Every real world object has,
 
 * Calculator: the buttons and the display are part of the interface; circuits are part of the implementation.
 * Adam: In the context of our 'calculate average age' example,
-  * the interface of Adam consists of requests that Adam will respond to, e.g.  "Give age to the nearest year, as at Jan 1st of this year" "State your name".
+  * the interface of Adam consists of requests that Adam will respond to, e.g.,  "Give age to the nearest year, as at Jan 1st of this year" "State your name".
   * the implementation includes the mental calculation Adam uses to calculate the age which is not visible to other objects.
 
 </box>

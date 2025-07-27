@@ -28,11 +28,11 @@
 <span slot="header" class="card-title"><md>%%Other details a test case can contain ...%% {{ icon_extra }}</md></span>
 A more elaborate test case can have other details such as those given below.
 
-* A unique identifier : %%e.g. TC0034-a%%
-* A descriptive name: %%e.g. vertical scrollbar activation for long web pages%%
-* Objectives: %%e.g. to check whether the vertical scrollbar is correctly activated when a long web page is loaded to the browser%%
-* Classification information: %%e.g. priority - medium, category - UI features%%
-* Cleanup, if any: %%e.g. empty the browser cache.%%
+* A unique identifier : %%e.g., TC0034-a%%
+* A descriptive name: %%e.g., vertical scrollbar activation for long web pages%%
+* Objectives: %%e.g., to check whether the vertical scrollbar is correctly activated when a long web page is loaded to the browser%%
+* Classification information: %%e.g., priority - medium, category - UI features%%
+* Cleanup, if any: %%e.g., empty the browser cache.%%
 
 </panel><p/>
 

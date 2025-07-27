@@ -44,7 +44,7 @@ Eclipse is a fully functional Java IDE out-of-the-box.
 
 The Eclipse plugin system can be used to create an IDE for different programming languages while reusing most of the existing IDE features of Eclipse.
 
-E.g. https://marketplace.eclipse.org/content/pydev-python-ide-eclipse
+e.g., https://marketplace.eclipse.org/content/pydev-python-ide-eclipse
 
 </box>
 

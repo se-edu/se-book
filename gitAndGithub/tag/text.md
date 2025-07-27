@@ -100,7 +100,7 @@ index a8a0a01..7d0a594 100644
 {% set sourcetree %}
 Right-click on the commit (in the graphical revision graph) you want to tag and choose `Tag…`.
 
-Specify the tag name e.g. `v1.0` and click `Add Tag`.
+Specify the tag name e.g., `v1.0` and click `Add Tag`.
 
 Configure tag properties in the next dialog and press `Add`. For example, you can choose whether to make it a lightweight tag or an annotated tag (default).
 

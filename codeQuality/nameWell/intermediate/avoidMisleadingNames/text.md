@@ -22,7 +22,7 @@ This is misleading because `colorBlue` is named similar to `colorWhite` and `col
 
 </box>
 
-Avoid misleading or ambiguous names (e.g. those with multiple meanings), similar sounding names, hard-to-pronounce ones (e.g. avoid ambiguities like "is that a lowercase L, capital I or number 1?", or "is that number 0 or letter O?"), almost similar names.
+Avoid misleading or ambiguous names (e.g., those with multiple meanings), similar sounding names, hard-to-pronounce ones (e.g., avoid ambiguities like "is that a lowercase L, capital I or number 1?", or "is that number 0 or letter O?"), almost similar names.
 
 <box>
 

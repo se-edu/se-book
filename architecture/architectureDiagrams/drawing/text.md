@@ -8,7 +8,7 @@
 
 While architecture diagrams have no standard notation, try to follow these basic guidelines when drawing them.
 
-* Minimize the variety of symbols. If the symbols you choose do not have widely-understood meanings %%e.g. A drum symbol is widely-understood as representing a database%%, explain their meaning.
+* Minimize the variety of symbols. If the symbols you choose do not have widely-understood meanings %%e.g., A drum symbol is widely-understood as representing a database%%, explain their meaning.
 
 * Avoid the indiscriminate use of double-headed arrows to show interactions between components.
 

@@ -21,14 +21,14 @@ Here are some examples of different coverage criteria:
 
 For 100% branch or decision coverage, two test cases are required:
 
-  * `(x > 2 && x < 44) == true` :  [e.g. `x == 4`]
-  * `(x > 2 && x < 44) == false` :  [e.g. `x == 100`]
+  * `(x > 2 && x < 44) == true` :  [e.g., `x == 4`]
+  * `(x > 2 && x < 44) == false` :  [e.g., `x == 100`]
 
 For 100% condition coverage, three test cases are required:
 
-  * `(x > 2) == true` , `(x < 44) == true` : [e.g. `x == 4`] <sup>%%[see note 1]%%</sup>
-  * `(x < 44) == false` : [e.g. `x == 100`]
-  * `(x > 2) == false` : [e.g. `x == 0`]
+  * `(x > 2) == true` , `(x < 44) == true` : [e.g., `x == 4`] <sup>%%[see note 1]%%</sup>
+  * `(x < 44) == false` : [e.g., `x == 100`]
+  * `(x > 2) == false` : [e.g., `x == 0`]
 
 Note 1: A case where both conditions are `true` is needed because most execution environments use a _short circuiting_ behavior for compound boolean expressions e.g., given an expression `c1 && c2`, `c2` will not be evaluated if `c1` is `false` (as the final result is going to be `false` anyway).
 </box>

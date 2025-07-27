@@ -97,7 +97,7 @@ void getName() {
 
 </box>
 
-In addition to Stubs, there are other type of replacements you can use during testing, e.g. _Mocks_, _Fakes_, _Dummies_, _Spies_.
+In addition to Stubs, there are other type of replacements you can use during testing, e.g., _Mocks_, _Fakes_, _Dummies_, _Spies_.
 
 </div>
 

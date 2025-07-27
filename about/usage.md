@@ -54,7 +54,7 @@ Less important info
 <p/>
 </div>
 
-**{{ icon_layers }} Tabs indicate _alternative_ content** (e.g. video vs text). You can choose the one you like and ignore the other tabs.
+**{{ icon_layers }} Tabs indicate _alternative_ content** (e.g., video vs text). You can choose the one you like and ignore the other tabs.
 
 <div class="indented-level2">
 <box>

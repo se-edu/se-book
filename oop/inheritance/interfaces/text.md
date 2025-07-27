@@ -20,7 +20,7 @@
 
 <box>
 
-{{ icon_example }} In the example above, `AcademicStaff` _is a_ `SalariedStaff`.  An `AcademicStaff` object can be used anywhere a `SalariedStaff` object is expected e.g. `SalariedStaff ss = new AcademicStaff()`. 
+{{ icon_example }} In the example above, `AcademicStaff` _is a_ `SalariedStaff`.  An `AcademicStaff` object can be used anywhere a `SalariedStaff` object is expected e.g., `SalariedStaff ss = new AcademicStaff()`.
 
 </box>
 

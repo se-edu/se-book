@@ -17,7 +17,7 @@ Some differences between system testing and acceptance testing:
 | Done on the development environment or a test bed | Done on the deployment site or on a close simulation of the deployment site |
 | Both negative and positive test cases | More focus on positive test cases |
 
-%%Note: _negative_ test cases: cases where the SUT is not expected to work normally e.g. incorrect inputs; _positive_ test cases: cases where the SUT is expected to work normally%%
+%%Note: _negative_ test cases: cases where the SUT is not expected to work normally e.g., incorrect inputs; _positive_ test cases: cases where the SUT is expected to work normally%%
 
 <box>
 
@@ -28,7 +28,7 @@ The requirement specification need not be the same as the system specification. 
 | Requirements specification | System specification |
 | :------------------------- | :------------------- |
 | limited to how the system behaves in normal working conditions | can also include details on how it will fail gracefully when pushed beyond limits, how to recover, etc. specification
-| written in terms of problems that need to be solved (e.g. provide a method to locate an email quickly)| written in terms of how the system solves those problems (e.g. explain the email search feature) |
+| written in terms of problems that need to be solved (e.g., provide a method to locate an email quickly)| written in terms of how the system solves those problems (e.g., explain the email search feature) |
 | specifies the interface available for intended end-users | could contain additional APIs not available for end-users (for the use of developers/testers) |
 
 However, **in many cases one document serves as both a requirement specification and a system specification.**

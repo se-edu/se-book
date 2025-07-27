@@ -24,7 +24,7 @@ An example (from the same source as above) is the code smell _data class_ i.e., 
 > Software systems are prone to the build up of **cruft** - deficiencies in internal quality that make it harder than it would ideally be to modify and extend the system further. Technical Debt is a metaphor, coined by Ward Cunningham, that frames how to think about dealing with this cruft, thinking of it like a financial debt. The extra effort that it takes to add new features is the interest paid on the debt.<br>
 > --[https://martinfowler.com/bliki/TechnicalDebt.html](https://martinfowler.com/bliki/TechnicalDebt.html)
 
-While it is important to refactor frequently so as to avoid the accumulation of ‘messy’ code (aka technical debt), an important question is how much refactoring is _too much_ refactoring? **It is too much refactoring when the benefits no longer justify the cost.** The costs and the benefits depend on the context. That is why some refactorings are ‘opposites’ of each other (e.g. [_extract method_](https://refactoring.com/catalog/extractMethod.html) vs [_inline method_](https://refactoring.com/catalog/inlineMethod.html)).
+While it is important to refactor frequently so as to avoid the accumulation of ‘messy’ code (aka technical debt), an important question is how much refactoring is _too much_ refactoring? **It is too much refactoring when the benefits no longer justify the cost.** The costs and the benefits depend on the context. That is why some refactorings are ‘opposites’ of each other (e.g., [_extract method_](https://refactoring.com/catalog/extractMethod.html) vs [_inline method_](https://refactoring.com/catalog/inlineMethod.html)).
 
 </div>
 
