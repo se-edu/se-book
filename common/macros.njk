@@ -409,7 +409,7 @@ That aspect is covered in a detour **in the lesson [_{{ detour.lesson.title }}_]
 {% set trial_link = baseUrl + '/gitAndGithub/trail/' + tour.folder + '/index.html' %}
 {% set direct_link = baseUrl + '/'+ lesson_data.path + '/index.html' %}
 {% set lesson_title = lesson_data.title %}
-&nbsp;&nbsp; <a href="{{ direct_link }}" target="_blank">:glyphicon-new-window:</a> **[{{ lesson_title }}]({{ trial_link if is_outside_tour else '' }}#{{ slugify(lesson_title) }})** covers that part.
+&nbsp;&nbsp; <a href="{{ direct_link }}" target="_blank">:glyphicon-new-window:</a> **[{{ lesson_title }}]({{ trial_link if is_outside_tour else '' }}{{'' if is_outside_tour else ('#' + slugify(lesson_title)) }})** covers that part.
 </div>
 {% endmacro %}
 <!-- ============================================================ -->

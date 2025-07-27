@@ -2,7 +2,7 @@
 
 <span id="title">&nbsp;</span>
 
-<body id="body">
+<div id="body">
 
 # :fas-route: ++Git Learning Trail++{.text-success}
 
@@ -14,4 +14,4 @@ This Git learning trail is divided into several 'tours', each aiming to cover th
 {{ show_tour_overview(tour) }}
 {% endfor %}
 
-</body>
+</div>

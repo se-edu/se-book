@@ -94,7 +94,7 @@ title: "Book - Software Engineering for Self-Directed Learners"
 
 ### Project management
 
-* [Revision control with Git & GitHub]({{baseUrl}}/gitAndGithub/trail/)
+* [Revision control (using Git & GitHub)]({{baseUrl}}/gitAndGithub/trail/tours.html)
   [{{icon_print}}]({{baseUrl}}/gitAndGithub/print.html)
 
 * [Project planning]({{baseUrl}}/projectPlanning/)
@@ -105,12 +105,6 @@ title: "Book - Software Engineering for Self-Directed Learners"
 
 * [Process models]({{baseUrl}}/processModels/) 
   [{{icon_print}}]({{baseUrl}}/processModels/print.html)
-
-### Tools
-
-* [UML]({{baseUrl}}/uml/) 
-  [{{icon_print}}]({{baseUrl}}/uml/print.html)
-
 
 ### Principles
 
