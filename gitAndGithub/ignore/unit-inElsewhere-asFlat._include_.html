@@ -1,7 +1,7 @@
 <p><span class="dimmed"><strong><span>Tools → Git and GitHub →
 </span></strong></span></p>
 <div id="title-and-body">
-<div><h4 id="omitting-files-from-revision-control"><span>Omitting Files from Revision Control</span><a class="fa fa-anchor" href="#omitting-files-from-revision-control" onclick="event.stopPropagation()"></a></h4></div>
+<div><h4 id="t2l6-omitting-files-from-revision-control"><span>T2L6. Omitting Files from Revision Control</span><a class="fa fa-anchor" href="#t2l6-omitting-files-from-revision-control" onclick="event.stopPropagation()"></a></h4></div>
 <div id="main">
 <div>
 <div class="non-printable">
@@ -9,29 +9,76 @@
 <div class="indented">
 <br>
 <div id="overview">
-<p>Git allows you to <strong>specify which files should be omitted from reversion control</strong>.</p></div>
+<p>Git allows you to <strong>specify which files should be omitted from revision control</strong>.</p></div>
 <span><small>This lesson covers that part.</small></span></div></div>
 <br></div>
-<p><strong>You can specify which files Git should <span class="badge text-dark" style="background-color: rgba(13, 202, 240, 0.2);"><span class="large">ignore</span></span> from reversion control</strong>. While you can always omit files from revision control simply by not staging them, having an 'ignore-list' is more convenient, especially if there are files inside the working folder that are not suitable for revision control <span class="dimmed">(e.g., temporary log files)</span> or files you want to prevent from accidentally including in a commit <span class="dimmed">(files containing confidential information)</span>.</p>
+<p><strong>You can specify which files Git should <span class="badge text-dark" style="background-color: rgba(13, 202, 240, 0.2);"><span class="large">ignore</span></span> from revision control</strong>. While you can always omit files from revision control simply by not staging them, having an 'ignore-list' is more convenient, especially if there are files inside the working folder that are not suitable for revision control <span class="dimmed">(e.g., temporary log files)</span> or files you want to prevent from accidentally including in a commit <span class="dimmed">(files containing confidential information)</span>.</p>
 <p><strong>A repo-specific ignore-list of files can be specified in a <code class="hljs inline no-lang" v-pre>.gitignore</code> file</strong>, stored in the root of the repo folder.</p>
-<ul>
-<li><strong>The <code class="hljs inline no-lang" v-pre>.gitignore</code> file itself can be either revision controlled or ignored.</strong>
+<p><strong>The <code class="hljs inline no-lang" v-pre>.gitignore</code> file itself can be either revision controlled or ignored.</strong></p>
 <ul>
 <li>To version control it (the more common choice – which allows you to track how the <code class="hljs inline no-lang" v-pre>.gitignore</code> file changes over time), simply commit it as you would commit any other file.</li>
-<li>To ignore it, simply add its name to the <code class="hljs inline no-lang" v-pre>.gitignore</code> file itself.</li></ul></li>
-<li><strong>It supports file patterns</strong> e.g., adding <code class="hljs inline no-lang" v-pre>temp/*.tmp</code> to the <code class="hljs inline no-lang" v-pre>.gitignore</code> file prevents Git from tracking any <code class="hljs inline no-lang" v-pre>.tmp</code> files in the <code class="hljs inline no-lang" v-pre>temp</code> directory.</li></ul>
+<li>To ignore it, simply add its name to the <code class="hljs inline no-lang" v-pre>.gitignore</code> file itself.</li></ul>
+<p><strong>The <code class="hljs inline no-lang" v-pre>.gitignore</code> file supports file patterns</strong> e.g., adding <code class="hljs inline no-lang" v-pre>temp/*.tmp</code> to the <code class="hljs inline no-lang" v-pre>.gitignore</code> file prevents Git from tracking any <code class="hljs inline no-lang" v-pre>.tmp</code> files in the <code class="hljs inline no-lang" v-pre>temp</code> directory.</p>
 <div class="non-printable">
-<span style="position: relative; top: 10px;" class="badge rounded-pill bg-secondary fs-6"><span><span aria-hidden="true" class="fas fa-laptop-code"></span></span> HANDS-ON: Adding a file to the ignore-list</span>
+<box class="bg-light" type="info" seamless><template #header><p><strong class="text-info"><strong>SIDEBAR: <code class="hljs inline no-lang" v-pre>.gitignore</code> File Syntax</strong></strong></p></template><template #icon><span aria-hidden="true" class="fas fa-bookmark"></span></template>
+<ul>
+<li>
+<p>Blank lines: Ignored and can be used for spacing.</p></li>
+<li>
+<p>Comments: Begin with <code class="hljs inline no-lang" v-pre>#</code> (lines starting with # are ignored).</p>
+<pre><code class="hljs bash" v-pre><span> <span class="hljs-comment"># This is a comment</span>
+</span></code></pre></li>
+<li>
+<p>Write the name or pattern of files/directories to ignore.</p>
+<pre><code class="hljs bash" v-pre><span>log.txt          <span class="hljs-comment"># Ignores a file named log.txt</span>
+</span></code></pre></li>
+<li>
+<p>Wildcards:</p>
+<ul>
+<li><code class="hljs inline no-lang" v-pre>*</code> matches any number of characters, except <code class="hljs inline no-lang" v-pre>/</code> (i.e., for matching a string within a single directory level):<pre><code class="hljs bash" v-pre><span>abc/*.tmp     <span class="hljs-comment"># Ignores all .tmp files in abc directory</span>
+</span></code></pre></li>
+<li><code class="hljs inline no-lang" v-pre>**</code> matches any number of characters (including <code class="hljs inline no-lang" v-pre>/</code>)<pre><code class="hljs bash" v-pre><span>**/foo.tmp    <span class="hljs-comment"># Ignores all foo.tmp files in any directory</span>
+</span></code></pre></li>
+<li><code class="hljs inline no-lang" v-pre>?</code> matches a single character<pre><code class="hljs bash" v-pre><span>config?.yml   <span class="hljs-comment"># Ignores config1.yml, configA.yml, etc.</span>
+</span></code></pre></li>
+<li><code class="hljs inline no-lang" v-pre>[abc]</code> matches a single character (a, b, or c)<pre><code class="hljs bash" v-pre><span>file[123].txt <span class="hljs-comment"># Ignores file1.txt, file2.txt, file3.txt</span>
+</span></code></pre></li></ul></li>
+<li>
+<p>Directories:</p>
+<ul>
+<li>Add a trailing <code class="hljs inline no-lang" v-pre>/</code> to match directories.<pre><code class="hljs bash" v-pre><span>logs/         <span class="hljs-comment"># Ignores the logs directory</span>
+</span></code></pre></li>
+<li>Patterns without <code class="hljs inline no-lang" v-pre>/</code> match files/folders recursively.<pre><code class="hljs bash" v-pre><span>*.bak         <span class="hljs-comment"># Ignores all .bak files anywhere</span>
+</span></code></pre></li>
+<li>Patterns with <code class="hljs inline no-lang" v-pre>/</code> are relative to the <code class="hljs inline no-lang" v-pre>.gitignore</code> location.<pre><code class="hljs bash" v-pre><span>/secret.txt   <span class="hljs-comment"># Only ignores secret.txt in the root directory</span>
+</span></code></pre></li></ul></li>
+<li>
+<p>Negation: Use <code class="hljs inline no-lang" v-pre>!</code> at the start of a line to not ignore something.</p>
+<pre><code class="hljs bash" v-pre><span>*.<span class="hljs-built_in">log</span>           <span class="hljs-comment"># Ignores all .log files</span>
+</span><span>!important.log  <span class="hljs-comment"># Except important.log</span>
+</span></code></pre></li></ul>
+<p>Example:</p>
+<div class="code-block"><div class="code-block-heading"><span>.gitignore</span></div><div class="code-block-content"><pre><code heading=".gitignore" class="hljs bash" v-pre><span><span class="hljs-comment"># Ignore all log files</span>
+</span><span>*.<span class="hljs-built_in">log</span>
+</span><span>
+</span><span><span class="hljs-comment"># Ignore node_modules folder</span>
+</span><span>node_modules/
+</span><span>
+</span><span><span class="hljs-comment"># Don’t ignore main.log</span>
+</span><span>!main.log
+</span></code></pre></div></div></box></div>
+<div class="non-printable">
+<span style="position: relative; top: 10px; background-color: rgba(255, 0, 0, 0.2);" class="badge rounded-pill text-dark fs-6"><span><span aria-hidden="true" class="fas fa-laptop-code"></span></span> HANDS-ON: Adding a file to the ignore-list</span>
 <div class="indented-level1">
-<box type="dark" seamless no-icon>
-<p><span style="position: relative; right: 25px;" class="badge rounded-pill text-dark bg-secondary text-white">1</span> <strong>Add a file into your repo's working folder that you presumably do not want to revision-control</strong> e.g., a file named <code class="hljs inline no-lang" v-pre>temp.txt</code>. Observe how Git has detected the new file.<br>
+<box type="important" seamless no-icon>
+<p><span style="position: relative; right: 12px; background-color: rgba(255, 0, 0, 0.2); border-radius: 0 0.7em 0.7em 0" class="ps-3 pe-3 pb-1 pt-1 text-dark text-dark"><small><strong>1</strong></small></span> <strong>Add a file into your repo's working folder that you presumably do not want to revision-control</strong> e.g., a file named <code class="hljs inline no-lang" v-pre>temp.txt</code>. Observe how Git has detected the new file.<br>
 Add a few other files with <code class="hljs inline no-lang" v-pre>.tmp</code> extension.</p>
-<p><span style="position: relative; right: 25px;" class="badge rounded-pill text-dark bg-secondary text-white">2</span> <strong>Configure Git to ignore those files:</strong></p>
+<p><span style="position: relative; right: 12px; background-color: rgba(255, 0, 0, 0.2); border-radius: 0 0.7em 0.7em 0" class="ps-3 pe-3 pb-1 pt-1 text-dark text-dark"><small><strong>2</strong></small></span> <strong>Configure Git to ignore those files:</strong></p>
 <tabs>
   <tab><template #header>CLI</template>
     <div><p>Create a file named <code class="hljs inline no-lang" v-pre>.gitignore</code> in the working directory root and add the following line in it.</p>
 <div class="code-block"><div class="code-block-heading"><span>.gitignore</span></div><div class="code-block-content"><pre><code heading=".gitignore" class="hljs" v-pre><span>temp.txt
-</span></code></pre></div></div><p>Observe how <code class="hljs inline no-lang" v-pre>temp.text</code> is no longer detected as 'untracked' by running the <code class="hljs inline no-lang" v-pre>git status</code> command (but now it will detect the <code class="hljs inline no-lang" v-pre>.gitignore</code> file as 'untracked'.</p>
+</span></code></pre></div></div><p>Observe how <code class="hljs inline no-lang" v-pre>temp.txt</code> is no longer detected as 'untracked' by running the <code class="hljs inline no-lang" v-pre>git status</code> command (but now it will detect the <code class="hljs inline no-lang" v-pre>.gitignore</code> file as 'untracked'.</p>
 <p>Update the <code class="hljs inline no-lang" v-pre>.gitignore</code> file as follows:</p>
 <div class="code-block"><div class="code-block-heading"><span>.gitignore</span></div><div class="code-block-content"><pre><code heading=".gitignore" class="hljs" v-pre><span>temp.txt
 </span><span><span class="highlighted">*.tmp</span>
@@ -47,7 +94,9 @@ Also take note of other options available e.g., <code class="hljs inline no-lang
 <div class="code-block"><div class="code-block-heading"><span>.gitignore</span></div><div class="code-block-content"><pre><code heading=".gitignore" class="hljs" v-pre><span>temp.txt
 </span><span><span class="highlighted">*.tmp</span>
 </span></code></pre></div></div></div></tab></tabs>
-<p><span style="position: relative; right: 25px;" class="badge rounded-pill text-dark bg-secondary text-white">3</span> <strong>Optionally, stage and commit the <code class="hljs inline no-lang" v-pre>.gitignore</code> file.</strong></p></box></div></div>
+<p><span style="position: relative; right: 12px; background-color: rgba(255, 0, 0, 0.2); border-radius: 0 0.7em 0.7em 0" class="ps-3 pe-3 pb-1 pt-1 text-dark text-dark"><small><strong>3</strong></small></span> <strong>Optionally, stage and commit the <code class="hljs inline no-lang" v-pre>.gitignore</code> file.</strong></p>
+<p><span style="position: relative; right: 12px; background-color: rgba(255, 0, 0, 0.2); border-radius: 0 0.7em 0.7em 0" class="ps-3 pe-3 pb-1 pt-1 text-dark text-dark"><small><strong><span aria-hidden="true" class="far fa-square-check"></span> done!</strong></small></span></p></box></div></div>
+ 
 <p><strong>Files recommended to be omitted from version control</strong></p>
 <ul>
 <li><strong>Binary files</strong> <em>generated</em> when building your project <span class="dimmed">e.g., <code class="hljs inline no-lang" v-pre>*.class</code>, <code class="hljs inline no-lang" v-pre>*.jar</code>, <code class="hljs inline no-lang" v-pre>*.exe</code></span> (reasons: 1. no need to version control these files as they can be generated again from the source code 2. Revision control systems are optimized for tracking text-based files, not binary files.</li>
@@ -58,21 +107,22 @@ Also take note of other options available e.g., <code class="hljs inline no-lang
 <panel tags="git-mastery" class="non-printable" type="danger"><template #header><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> EXERCISE: <code class="hljs inline no-lang" v-pre>ignoring-somethings</code></p></template>
 <p><strong>To download</strong> the exercise,</p>
 <ul>
-<li>navigate inside the <code class="hljs inline no-lang" v-pre>gitmastery-exercies</code> folder.</li>
+<li>navigate inside the [exercises] folder.</li>
 <li>run <code class="hljs inline no-lang" v-pre>gitmastery download ignoring-somethings</code> command.</li></ul>
 <hr class="dashed border-danger">
 <p><strong class="text-danger">Your task:</strong></p>
 <div class="indented-level1">
-<p>Update the <code class="hljs inline no-lang" v-pre>.gitignore</code> (inside the <code class="hljs inline no-lang" v-pre>files/</code> folder) to reflect following requirements:</p>
-<ol>
-<li>While you wish to continue ignoring every file in the <code class="hljs inline no-lang" v-pre>many/</code> folder, you want to un-ignore just <code class="hljs inline no-lang" v-pre>many/file22.txt</code>.</li>
-<li><code class="hljs inline no-lang" v-pre>why_am_i_hidden.txt</code> should not be hidden.</li>
-<li><code class="hljs inline no-lang" v-pre>ignore_me.txt</code> should be hidden.</li>
-<li>Hide the <code class="hljs inline no-lang" v-pre>runaway.txt</code> file in <code class="hljs inline no-lang" v-pre>this/</code>, however, you don't know how many layers of nesting it is under, so use the pattern matching syntax.</li></ol></div>
+<p><strong>1. Update the <code class="hljs inline no-lang" v-pre>.gitignore</code> file</strong> (inside the <code class="hljs inline no-lang" v-pre>files/</code> folder) to reflect the following requirements:</p>
+<ul>
+<li>Git should ignore every file in the <code class="hljs inline no-lang" v-pre>many/</code> folder except the file <code class="hljs inline no-lang" v-pre>many/file22.txt</code>.</li>
+<li><code class="hljs inline no-lang" v-pre>why_am_i_hidden.txt</code> should not be ignored by Git.</li>
+<li><code class="hljs inline no-lang" v-pre>ignore_me.txt</code> should be ignored by Git.</li>
+<li>Git should ignore any <code class="hljs inline no-lang" v-pre>runaway.txt</code> file in <code class="hljs inline no-lang" v-pre>this/</code> and any of its current and future subfolders (hint: use a pattern).</li></ul>
+<p><strong>2. Commit the updated <code class="hljs inline no-lang" v-pre>.gitignore</code> file.</strong></p></div>
 <hr class="dashed border-danger">
 <p><strong>To verify</strong> your work,</p>
 <ul>
-<li>navigate to anywhere inside the <code class="hljs inline no-lang" v-pre>gitmastery-exercies/ignoring-somethings</code> folder <span class="dimmed">(or any sub-folder of it)</span>.</li>
+<li>navigate to anywhere inside the <code class="hljs inline no-lang" v-pre>gitmastery-exercises/ignoring-somethings</code> folder <span class="dimmed">(or any sub-folder of it)</span>.</li>
 <li>run the <code class="hljs inline no-lang" v-pre>gitmastery verify</code> command.</li></ul>
 <div class="bg-light">
 <p><div class="text-center"><small><a href="https://git-mastery.github.io/app/">Git-Mastery <strong>commands list</strong></a> | <a href="https://github.com/git-mastery/git-mastery/issues">Report Git-Mastery <strong>bugs</strong></a></small></div></p></div></panel></div></div></div>

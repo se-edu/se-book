@@ -4,13 +4,11 @@
 <div><h4 id="creating-prs"><span>Creating PRs</span><a class="fa fa-anchor" href="#creating-prs" onclick="event.stopPropagation()"></a></h4></div>
 <div id="main">
 <div>
-<p>Suppose you want to propose some changes to a GitHub repo (e.g., <a href="https://github.com/se-edu/samplerepo-pr-practice">samplerepo-pr-practice</a>) as a <trigger trigger="click" for="modal:githubPullRequests-rcsPullRequests">pull request (PR)</trigger>.</p>
+<p><strong>A <mark><em>pull request</em></mark> (PR for short) is a mechanism for contributing code to a remote repo</strong> i.e., &quot;I'm <em>requesting</em> you to <em>pull</em> my proposed changes to your repo&quot;. It's feature provided by RCS platforms such as GitHub. For this to work, the two repos must have a shared history. The most common case is sending PRs from a fork to its <tooltip><template #content><em>upstream</em> repo is a repo you forked from</template>upstream</tooltip> repo.</p>
+<p>Suppose you want to propose some changes to a GitHub repo (e.g., <a href="https://github.com/se-edu/samplerepo-pr-practice">samplerepo-pr-practice</a>) as a pull request (PR).</p>
 <box type="tip" seamless>
 <p><a href="https://github.com/se-edu/samplerepo-pr-practice">samplerepo-pr-practice</a> is an unmonitored repo you can use to practice working with PRs. Feel free to send PRs to it.</p></box>
 <p>Given below is a scenario you can try in order to learn how to create PRs:</p>
-<modal large id="modal:githubPullRequests-rcsPullRequests"><template #header>Project Management → Revision Control → Remote Repositories →</template>
-  <div>
-<p><strong>A <mark><em>pull request</em></mark> (PR for short) is a mechanism for contributing code to a remote repo</strong> i.e., &quot;I'm <em>requesting</em> you to <em>pull</em> my proposed changes to your repo&quot;. It's feature provided by RCS platforms such as GitHub. For this to work, the two repos must have a shared history. The most common case is sending PRs from a fork to its <tooltip><template #content><em>upstream</em> repo is a repo you forked from</template>upstream</tooltip> repo.</p></div></modal>
 <p><strong>1. Fork</strong> the repo onto your GitHub account.</p>
 <p><strong>2. Clone</strong> it onto your computer.</p>
 <p><strong>3. Commit</strong> your changes e.g., add a new file with some contents and commit it.</p>
@@ -93,7 +91,7 @@ Ensure the <code class="hljs inline no-lang" v-pre>Track?</code> checkbox is tic
 </span></code></pre></div></tab>
   <tab class="d-print-none"><template #header>Sourcetree</template>
     <div><p><strong>1. Switch to the branch you want to update</strong> by double-clicking the branch name. e.g.,</p>
-<pic eager src="/se-book/gitAndGithub/branch/images/sourcetree_3.png"></pic>
+<pic eager src="/se-book/gitAndGithub/branch/images/listRemoteBranches.png"></pic>
 <p></p>
 <p><strong>2. Pull the updated in the remote branch to the local branch</strong> by right-clicking on the branch name (in the same place as above), and choosing <code class="hljs inline no-lang" v-pre>Pull &lt;remote&gt;/&lt;branch&gt; (tracked)</code> e.g., <code class="hljs inline no-lang" v-pre>Pull myfork/add-intro (tracked)</code>.</p></div></tab></tabs>
 <box type="info" seamless>
@@ -159,7 +157,7 @@ Resolve the conflict manually (this topic is covered <trigger trigger="click" fo
 <modal large id="modal:createPr-mergeConflicts"><template #header>Git &amp; GitHub → Dealing with merge conflicts →</template>
 <div><p><span id="prereqs"></span>
 <span id="outcomes">Can resolve merge conflicts.</span>
-<span id="title">Resolving Merge Conflicts</span></p>
+<span id="title">T6L3. Resolving Merge Conflicts</span></p>
 <div id="body">
 <div class="non-printable">
 <div class="border border-success pt-0 ps-1 pb-1 pe-1 border-bottom-0 rounded-top" style="background-color: #e6fff2">
@@ -173,15 +171,15 @@ Resolve the conflict manually (this topic is covered <trigger trigger="click" fo
 <p>More generally, a conflict occurs when Git cannot automatically reconcile different changes made to the same part of a file -- branch merge conflicts is just one example.</p>
 
 <div class="non-printable">
-<span style="position: relative; top: 10px;" class="badge rounded-pill bg-secondary fs-6"><span><span aria-hidden="true" class="fas fa-laptop-code"></span></span> HANDS-ON: Resolve merge conflict</span>
+<span style="position: relative; top: 10px; background-color: rgba(255, 0, 0, 0.2);" class="badge rounded-pill text-dark fs-6"><span><span aria-hidden="true" class="fas fa-laptop-code"></span></span> HANDS-ON: Resolve merge conflict</span>
 <div class="indented-level1">
-<box type="dark" seamless no-icon>
+<box type="important" seamless no-icon>
 <p>In this hands-on practical, we simulate a merge conflict and use it to learn how to resolve merge conflicts. You can use any repo with at least one commit in the <code class="hljs inline no-lang" v-pre>master</code> branch for this.</p>
-<p><span style="position: relative; right: 25px;" class="badge rounded-pill text-dark bg-secondary text-white">1</span> <strong>Start a branch named <code class="hljs inline no-lang" v-pre>fix1</code> in the repo. Create a commit</strong> that adds a line with some text to one of the files.</p>
-<p><span style="position: relative; right: 25px;" class="badge rounded-pill text-dark bg-secondary text-white">2</span> <strong>Switch back to <code class="hljs inline no-lang" v-pre>master</code> branch. Create a commit with a conflicting change</strong> i.e. it adds a line with some different text in the exact location the previous line was added.</p>
+<p><span style="position: relative; right: 12px; background-color: rgba(255, 0, 0, 0.2); border-radius: 0 0.7em 0.7em 0" class="ps-3 pe-3 pb-1 pt-1 text-dark text-dark"><small><strong>1</strong></small></span> <strong>Start a branch named <code class="hljs inline no-lang" v-pre>fix1</code> in the repo. Create a commit</strong> that adds a line with some text to one of the files.</p>
+<p><span style="position: relative; right: 12px; background-color: rgba(255, 0, 0, 0.2); border-radius: 0 0.7em 0.7em 0" class="ps-3 pe-3 pb-1 pt-1 text-dark text-dark"><small><strong>2</strong></small></span> <strong>Switch back to <code class="hljs inline no-lang" v-pre>master</code> branch. Create a commit with a conflicting change</strong> i.e., it adds a line with some different text in the exact location the previous line was added.</p>
 <pic eager src="/se-book/gitAndGithub/mergeConflicts/images/sourcetree_1.png" height="350"></pic>
 <p></p>
-<p><span style="position: relative; right: 25px;" class="badge rounded-pill text-dark bg-secondary text-white">3</span> <strong>Try to merge the <code class="hljs inline no-lang" v-pre>fix1</code> branch onto the <code class="hljs inline no-lang" v-pre>master</code> branch.</strong> Git will pause mid-way during the merge and report a merge conflict. If you open the conflicted file, you will see something like this:</p>
+<p><span style="position: relative; right: 12px; background-color: rgba(255, 0, 0, 0.2); border-radius: 0 0.7em 0.7em 0" class="ps-3 pe-3 pb-1 pt-1 text-dark text-dark"><small><strong>3</strong></small></span> <strong>Try to merge the <code class="hljs inline no-lang" v-pre>fix1</code> branch onto the <code class="hljs inline no-lang" v-pre>master</code> branch.</strong> Git will pause mid-way during the merge and report a merge conflict. If you open the conflicted file, you will see something like this:</p>
 <pre><code class="hljs" v-pre><span>COLORS
 </span><span>------
 </span><span>blue
@@ -192,7 +190,7 @@ Resolve the conflict manually (this topic is covered <trigger trigger="click" fo
 </span><span><span class="highlighted">&gt;&gt;&gt;&gt;&gt;&gt; fix1</span>
 </span><span>red
 </span><span>white
-</span></code></pre><p><span style="position: relative; right: 25px;" class="badge rounded-pill text-dark bg-secondary text-white">4</span> <strong>Observe how the conflicted part is marked</strong> between a line starting with <code class="hljs inline no-lang" v-pre>&lt;&lt;&lt;&lt;&lt;&lt; </code> and a line starting with <code class="hljs inline no-lang" v-pre>&gt;&gt;&gt;&gt;&gt;&gt;</code>, separated by another line starting with <code class="hljs inline no-lang" v-pre>=======</code>.</p>
+</span></code></pre><p><span style="position: relative; right: 12px; background-color: rgba(255, 0, 0, 0.2); border-radius: 0 0.7em 0.7em 0" class="ps-3 pe-3 pb-1 pt-1 text-dark text-dark"><small><strong>4</strong></small></span> <strong>Observe how the conflicted part is marked</strong> between a line starting with <code class="hljs inline no-lang" v-pre>&lt;&lt;&lt;&lt;&lt;&lt; </code> and a line starting with <code class="hljs inline no-lang" v-pre>&gt;&gt;&gt;&gt;&gt;&gt;</code>, separated by another line starting with <code class="hljs inline no-lang" v-pre>=======</code>.</p>
 <p>Highlighted below is the conflicting part that is coming from the <code class="hljs inline no-lang" v-pre>master</code> branch:</p>
 <pre><code style="counter-reset: line 2;" class="line-numbers hljs txt" v-pre><span>blue
 </span><span>&lt;&lt;&lt;&lt;&lt;&lt; HEAD
@@ -209,7 +207,7 @@ Resolve the conflict manually (this topic is covered <trigger trigger="click" fo
 </span><span><span class="highlighted">green</span>
 </span><span>&gt;&gt;&gt;&gt;&gt;&gt; fix1
 </span><span>red
-</span></code></pre><p><span style="position: relative; right: 25px;" class="badge rounded-pill text-dark bg-secondary text-white">5</span> <strong>Resolve the conflict by editing the file</strong>. Let us assume you want to keep both lines in the merged version. You can modify the file to be like this:</p>
+</span></code></pre><p><span style="position: relative; right: 12px; background-color: rgba(255, 0, 0, 0.2); border-radius: 0 0.7em 0.7em 0" class="ps-3 pe-3 pb-1 pt-1 text-dark text-dark"><small><strong>5</strong></small></span> <strong>Resolve the conflict by editing the file</strong>. Let us assume you want to keep both lines in the merged version. You can modify the file to be like this:</p>
 <pre><code class="hljs txt" v-pre><span>COLORS
 </span><span>------
 </span><span>blue
@@ -217,22 +215,25 @@ Resolve the conflict manually (this topic is covered <trigger trigger="click" fo
 </span><span><span class="highlighted">green</span>
 </span><span>red
 </span><span>white
-</span></code></pre><p><span style="position: relative; right: 25px;" class="badge rounded-pill text-dark bg-secondary text-white">6</span> <strong>Stage the changes, and commit.</strong> You have now successfully resolved the merge conflict.</p></box></div></div>
+</span></code></pre><p><span style="position: relative; right: 12px; background-color: rgba(255, 0, 0, 0.2); border-radius: 0 0.7em 0.7em 0" class="ps-3 pe-3 pb-1 pt-1 text-dark text-dark"><small><strong>6</strong></small></span> <strong>Stage the changes, and commit.</strong> You have now successfully resolved the merge conflict.</p>
+<p><span style="position: relative; right: 12px; background-color: rgba(255, 0, 0, 0.2); border-radius: 0 0.7em 0.7em 0" class="ps-3 pe-3 pb-1 pt-1 text-dark text-dark"><small><strong><span aria-hidden="true" class="far fa-square-check"></span> done!</strong></small></span></p></box></div></div>
 </div>
 <div id="extras">
 <panel tags="git-mastery" class="non-printable" type="danger"><template #header><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> EXERCISE: <code class="hljs inline no-lang" v-pre>conflict-mediator</code></p></template>
 <p><strong>To download</strong> the exercise,</p>
 <ul>
-<li>navigate inside the <code class="hljs inline no-lang" v-pre>gitmastery-exercies</code> folder.</li>
+<li>navigate inside the [exercises] folder.</li>
 <li>run <code class="hljs inline no-lang" v-pre>gitmastery download conflict-mediator</code> command.</li></ul>
 <hr class="dashed border-danger">
 <p><strong class="text-danger">Your task:</strong></p>
 <div class="indented-level1">
-<p>coming soon ...</p></div>
+<p>The given repo <code class="hljs inline no-lang" v-pre>conflict</code> is currently in the middle of a merge operation but has run into a merge conflict.<br>
+<strong>Resolve the merge conflict</strong> in the <code class="hljs inline no-lang" v-pre>script.py</code> and <strong>complete the merge</strong>.<br>
+The intended outcome is <code class="hljs inline no-lang" v-pre>print(&quot;Hello Everyone and World!&quot;)</code>.</p></div>
 <hr class="dashed border-danger">
 <p><strong>To verify</strong> your work,</p>
 <ul>
-<li>navigate to anywhere inside the <code class="hljs inline no-lang" v-pre>gitmastery-exercies/conflict-mediator</code> folder <span class="dimmed">(or any sub-folder of it)</span>.</li>
+<li>navigate to anywhere inside the <code class="hljs inline no-lang" v-pre>gitmastery-exercises/conflict-mediator</code> folder <span class="dimmed">(or any sub-folder of it)</span>.</li>
 <li>run the <code class="hljs inline no-lang" v-pre>gitmastery verify</code> command.</li></ul>
 <div class="bg-light">
 <p><div class="text-center"><small><a href="https://git-mastery.github.io/app/">Git-Mastery <strong>commands list</strong></a> | <a href="https://github.com/git-mastery/git-mastery/issues">Report Git-Mastery <strong>bugs</strong></a></small></div></p></div></panel></div></div></modal></div>

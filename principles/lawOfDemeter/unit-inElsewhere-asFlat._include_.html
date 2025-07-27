@@ -40,7 +40,7 @@
 <ul>
 <li><code class="hljs inline no-lang" v-pre>mf.init();</code>: this does not violate LoD since LoD allows calling operations of parameters received.</li>
 <li><code class="hljs inline no-lang" v-pre>mf.getCell(1, 3).clear();</code>: this violates LoD because <code class="hljs inline no-lang" v-pre>Logic</code> is handling <code class="hljs inline no-lang" v-pre>Cell</code> objects deep inside <code class="hljs inline no-lang" v-pre>Minefield</code>. Instead, it should be <code class="hljs inline no-lang" v-pre>mf.clearCellAt(1, 3);</code>.</li>
-<li><code class="hljs inline no-lang" v-pre>timer.start();</code>: this does not violate LoD because <code class="hljs inline no-lang" v-pre>timer</code> appears to be an internal component (i.e. a variable) of <code class="hljs inline no-lang" v-pre>Logic</code> itself.</li>
+<li><code class="hljs inline no-lang" v-pre>timer.start();</code>: this does not violate LoD because <code class="hljs inline no-lang" v-pre>timer</code> appears to be an internal component (i.e., a variable) of <code class="hljs inline no-lang" v-pre>Logic</code> itself.</li>
 <li><code class="hljs inline no-lang" v-pre>Cell c = new Cell();</code> <code class="hljs inline no-lang" v-pre>c.init();</code>: this does not violate LoD because <code class="hljs inline no-lang" v-pre>c</code> was created inside the operation.</li></ul></panel></panel></div>
 <div><panel><template #header><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span></span> LoD violation?</p></template>
 <p>This violates the Law of Demeter.</p>
