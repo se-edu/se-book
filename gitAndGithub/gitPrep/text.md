@@ -49,6 +49,11 @@ You can also right-click it and choose `Pin to Start` or `Pin to taskbar`.
 **Git Bash provides a Unix-like command-line environment on Windows.** It includes:
 - A Bash shell (Bash stands for *Bourne Again SHell*), which is a widely used command-line interpreter on Linux and macOS.
 - Common Unix tools and commands (like `ls`, `cat`, `ssh`, etc.) that are useful when working with Git and scripting.
+
+<box type="tip" seamless>
+
+**When copy-pasting text onto a Git Bash terminal**, you will not be able to use the familiar <kbd>Ctrl</kbd>+<kbd>V</kbd> key combo to paste. Instead, right-click on the terminal and use the `Paste` menu option.
+</box>
 {% endcall %} <!-- show_sidebar -->
   </tab>
   <tab header=":fab-apple: MacOS">
