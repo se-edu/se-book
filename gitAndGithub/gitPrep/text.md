@@ -137,7 +137,7 @@ Our Git lessons show how to perform Git operations in Git CLI, and in Sourcetree
   <tab header=":fab-windows: Windows">
 
 * Download the `.exe` file from [the latest release](https://github.com/git-mastery/app/releases/latest). {{ numbers_abcd }}
-* Add the folder containing the `.exe` to your `PATH` following [this guide](https://www.wikihow.com/Change-the-PATH-Environment-Variable-on-Windows).<br>
+* Add the folder containing the `.exe` to your Windows System Variable `PATH`, by following [this guide](https://www.wikihow.com/Change-the-PATH-Environment-Variable-on-Windows).<br>
   E.g. If the .exe is in `C:\Users\yourname\Desktop`, you should add this folder into your `PATH`.
   </tab>
   <tab header=":fab-apple: MacOS">
@@ -213,7 +213,9 @@ gitmastery setup
 The `gitmastery setup` command will perform the following tasks:
 * Checks if Git is installed. {{ numbers_abcd }}
 * Checks if `user.name` and `user.email` are set.
-* Prompts you to specify a name for the **git-mastery** {{ show_git_term("exercises directory") }} -- you can accept the default by pressing <kbd>Enter</kbd>.
+* Prompts you to specify a name for the **git-mastery** {{ show_git_term("exercises directory") }}
+  * Recommended: accept the default (i.e., `gitmastery-exercises`) by pressing <kbd>Enter</kbd>.
+  * If you choose to specify a different name for that folder, remember to use that name instead whenever our instructions refer to the `gitmastery-exercises` folder.
 * Sets up a mechanism to locally track the progress of your exercises.
 
 Notes:

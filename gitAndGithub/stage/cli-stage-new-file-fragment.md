@@ -34,6 +34,14 @@ git add fruits.txt
 
 You can replace the `add` with `stage` (e.g., `git stage fruits.txt`) and the result is the same (they are synonyms).
 </box>
+<box type="info" seamless icon=":fab-windows:">
+
+Windows users: When using the `echo` command to write to text files from Git Bash, you might see a warning `LF will be replaced by CRLF the next time Git touches it` when Git interacts with such a file. This warning is caused by the way line endings are handled differently by Git and Windows. You can simply ignore it, or suppress it in future by running the following command:
+```bash
+git config --global core.safecrlf false
+```
+
+</box>
 </div>
 
 {{ hp_number(2.3) }} **Check the status again.** You can see the file is no longer 'untracked'.

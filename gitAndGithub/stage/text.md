@@ -14,7 +14,7 @@ To save a snapshot, **you start by specifying what to include in it, also called
 
 **A Git repo has an internal space called the {{ show_git_term('staging area') }} which it uses to build the next snapshot**. Another name for the staging area is the {{ show_git_term('index') }}.
 
-**We can {{ show_git_term('stage', 'stage') }} an untracked file** to tell Git that we want its current version to be included in the next snapshot. Once you stage an untracked file, it becomes {{ show_git_term("'tracked'") }} (i.e., under Git's control).
+**We can {{ show_git_term('stage', 'stage') }} an untracked file** to tell Git that we want its current version to be included in the next snapshot. Once you stage an untracked file, it becomes {{ show_git_term("'tracked'") }} (i.e., under Git's control). A staged file can be {{ show_git_term("unstaged") }} to indicate that we no longer want it to be included in the next snapshot.
 
 {{ show_git_term_tip('stage', 'stage') }}
 
@@ -31,7 +31,7 @@ In the example below, you can see how staging files change the status of the rep
 Here is an easy way to do that with a single terminal command.
 
 ```bash {.no-line-numbers }
-echo -e "apples\nbananas\ncherries\n" > fruits.txt
+echo -e "apples\nbananas\ncherries" > fruits.txt
 ```
 {% call show_output() %}
 ```txt {heading="things/fruits.txt"}
@@ -41,10 +41,7 @@ cherries
 ```
 {% endcall %}
 
-:fab-windows: When using the `echo` command to write to text files from git-bash, you might see a warning `LF will be replaced by CRLF the next time Git touches it` when Git interacts with such a file. This warning is caused by the way line endings are handled differently by Git and Windows. You can simply ignore it, or suppress it in future by running the following command:
-```bash
-git config --global core.safecrlf false
-```
+
 </box>
 
 {{ hp_number(2) }} **Stage the new file**.
@@ -91,10 +88,12 @@ dragon fruits
 
 {{ hp_number('4') }} **Verify that Git no longer sees it as 'modified'**, similar to step 2.
 
-{% endcall %}
+{% endcall %} <!-- end: HOP -->
 
+**Staging (and unstaging) is how you tell Git which changes you want to include in the next snapshot, regardless of whether a file is currently tracked.** If a file is untracked, staging it will both begin tracking the file and include it in the next snapshot. If the file is already tracked, staging will simply mark its current changes for inclusion in the next commit. <span class="non-printable">In fact, Git supports fine-grained selective staging i.e., staging only specific changes within a file while leaving other changes to the same file unstaged. This will be covered in a later lesson.</span>
 
-**Git does not track empty folders**. You can test this by adding an empty subfolder inside the `things` folder (e.g., `things/more-things`) and checking if it shows up as 'untracked' (it will not). If you add a file to that folder (e.g., `things/more-things/food.txt`) and then staged that file (e.g., `git add more-things/food.txt`), the folder will now be included in the next snapshot.
+**Git does not track empty folders**. It tracks only folders that contain tracked files.<br>
+<span class="non-printable">You can test this by adding an empty subfolder inside the `things` folder (e.g., `things/more-things`) and checking if it shows up as 'untracked' (it will not). If you add a file to that folder (e.g., `things/more-things/food.txt`) and then staged that file (e.g., `git add more-things/food.txt`), the folder will now be included in the next snapshot.</span>
 
 </div>
 

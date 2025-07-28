@@ -46,7 +46,7 @@ HEAD is now at 2bedace Add figs to fruits.txt
 * The working directory should match the state it was in at that commit (e.g., files added after that commit -- such as `shapes.txt` should not be in the folder).
 
 ```bash{.no-line-numbers}
-git log --one-line --decorate
+git log --oneline --decorate
 ```
 {% call show_output() %}
 ```bash{.no-line-numbers highlight-lines="1['HEAD']@pink}
@@ -64,7 +64,7 @@ But note how the output does not show commits you added _after_ the checked-out 
 </box>
 
 ```bash{.no-line-numbers highlight-lines="1['--all']@yellow"}
-git log --one-line --decorate --all
+git log --oneline --decorate --all
 ```
 {% call show_output() %}
 ```bash{.no-line-numbers highlight-lines="1,2,['--all']@yellow"}

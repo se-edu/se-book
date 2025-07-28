@@ -111,7 +111,7 @@ git switch -c textbooks
 echo "Textbooks" >> textbooks.txt
 git add .
 git commit -m "Add textbooks.txt"
-git switch -c fantasy master
+git switch -c fantasy
 echo "Fantasy Books" >> fantasy.txt
 git add .
 git commit -m "Add fantasy.txt"
