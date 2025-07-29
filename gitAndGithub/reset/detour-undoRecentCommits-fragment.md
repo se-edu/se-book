@@ -15,7 +15,7 @@ Undoing or deleting recent `n` commits is easily accomplished with Git's `reset`
   ```bash
   git reset --soft HEAD~3
   ```
-* **To undo recent `n` commits, and move changes to the working directory, do a `mixe` reset** the commit `HEAD~n` e.g.,
+* **To undo recent `n` commits, and move changes to the working directory, do a `mixed` reset** the commit `HEAD~n` e.g.,
   ```bash
   git reset --mixed HEAD~3
   ```

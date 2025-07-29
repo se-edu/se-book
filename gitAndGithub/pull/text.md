@@ -11,7 +11,7 @@ When there are new changes in the remote, you need to **_pull_ those changes dow
 
 **There are two steps to bringing down changes from a remote repository into a local repository: _fetch_ and _merge_.**
 
-* **{{ show_git_term("Fetch") }} is the act of downloading the latest changes from the remote repository, but without applying them to your current branch yet.** It updates metadata in your repo so that repo knows what has changed in the remote repo, but your own local branch remain untouched.
+* **{{ show_git_term("Fetch") }} is the act of downloading the latest changes from the remote repository, but without applying them to your current branch yet.** It updates metadata in your repo so that it knows what has changed in the remote repo, but your own local branch remains untouched.
 * **{{ show_git_term("Merge") }} is what you do after fetching, to actually incorporate the fetched changes into your local branch.** It combines your local branch with the changes from the corresponding branch from the remote repo.
 
 <!-- ================== start: HANDS-ON =========================== -->
@@ -218,7 +218,7 @@ Now, let's pretend that there are some new commits in upstream repo that you wou
 git pull upstream master
 ```
 
-.{{ hp_number ('3') }} **Push to your fork.** Any new commits you pulled from the upstream repo will now appear in your fork as well. For example:
+{{ hp_number ('3') }} **Push to your fork.** Any new commits you pulled from the upstream repo will now appear in your fork as well. For example:
 ```bash{.no-line-numbers}
 git push origin master
 ```

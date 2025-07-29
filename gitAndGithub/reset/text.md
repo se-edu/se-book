@@ -35,7 +35,7 @@ Resetting is different from the _checkout_ feature:
 {% endset %}
 {{ show_transformation_columns(a, b, c) }}
 
-**There are three types of resets: soft, mixed, hard.** All three moves the branch pointer to a new commit but they vary based on what happens to the staging area and the working directory.
+**There are three types of resets: soft, mixed, hard.** All three move the branch pointer to a new commit, but they vary based on what happens to the staging area and the working directory.
 
 * {{ show_git_term("soft reset") }}: Moves the cumulative changes from the discarded commits in to the staging area, waiting to be committed again. Any staged and unstaged changes that existed before the reset will remain untouched.
 * {{ show_git_term("mixed reset") }}: Cumulative changes from the discarded commits, and any existing staged changes, are moved into the working directory.
@@ -83,7 +83,7 @@ Now we have some 'bad' commits and some 'bad' changes in both the staging area a
 {{ hp_number ('2') }} **Do a _soft_ reset to `B2`** (i.e., discard last two commits). Verify,
 
 * the `master` branch is now pointing at `B2`, and,
-* the changes that were in the discarded commits (i.e., `B3`and `B4`) are now in the staging area.
+* the changes that were in the discarded commits (i.e., `B3` and `B4`) are now in the staging area.
 
 {% set cli %} <!-- ------ start: Git Tabs --------------->
 

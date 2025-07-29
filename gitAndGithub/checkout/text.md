@@ -76,7 +76,7 @@ If you check out a commit that comes before the commit in which you added a cert
 * Example 2: There is an uncommitted change to a file that conflicts with the version of that file in the commit you wish to check out.<br>
   → Git will abort the checkout, and the repo will remain in the current commit.
 
-**The Git {{ show_git_term("stash") }} feature temporarily set aside uncommitted changes** you’ve made (in your working directory and staging area), without committing them. This is useful when you’re in the middle of some work, but need to switch to another state (e.g., checkout a previous commit), and your current changes are not yet ready to be committed or discarded. You can later reapply the stashed changes when you’re ready to resume that work.
+**The Git {{ show_git_term("stash") }} feature temporarily sets aside uncommitted changes** you’ve made (in your working directory and staging area), without committing them. This is useful when you’re in the middle of some work, but need to switch to another state (e.g., checkout a previous commit), and your current changes are not yet ready to be committed or discarded. You can later reapply the stashed changes when you’re ready to resume that work.
 </div>
 
 <div id="extras">

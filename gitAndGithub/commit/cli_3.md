@@ -33,5 +33,5 @@ commit d5f91...
 Author: ... <...@...>
 Date:   ...
 
-    Add colours.txt, shapes.txt
+    Add fruits.txt
 ```

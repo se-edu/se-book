@@ -20,6 +20,6 @@ pageNav: 4
 <div id="extras">
 </div>
 
-<span class="d-none" id="achievements">Now you can create you own remote and local copies of any repo on GitHub, and update your copy when there are new changes in the upstream repo.</span>
+<span class="d-none" id="achievements">Now you can create your own remote and local copies of any repo on GitHub, and update your copy when there are new changes in the upstream repo.</span>
 
 <span id="next">{{ show_tour_link(trail.usingRevisionHistory) }}</span>

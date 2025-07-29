@@ -18,7 +18,7 @@ The next step is to **create a local copy of the remote repo, by _cloning_ the r
 <!-- ================== start: HANDS-ON =========================== -->
 {% call show_hands_on_practical("Cloning a remote repo")  %}
 
-{{ hp_number ('1') }} **Clone the remote repo** to your computer. For example, you can clone the [samplerepo-things](https://github.com/se-edu/samplerepo-things) repo, or the fork your created from it in a previous lesson.
+{{ hp_number ('1') }} **Clone the remote repo** to your computer. For example, you can clone the [samplerepo-things](https://github.com/se-edu/samplerepo-things) repo, or the fork you created from it in a previous lesson.
 
 <box type="warning" seamless>
 

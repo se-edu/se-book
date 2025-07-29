@@ -26,9 +26,9 @@ Before you start learning Git, **you need to install some tools** on your comput
 <panel type="seamless" header="Screenshots given below provide some guidance on the dialogs you might encounter when installing Git. In other cases, go with the default option." peek>
 <pic src="images/selectGitBash.png" /><br>
 <pic src="images/chooseTextEditor.png" /><br>
-<pic src="images/chooseGitCredentialManager.png" /><br>
 <pic src="images/chooseCheckoutStyle.png" /><br>
 <pic src="images/choosePullBehaviour.png" />
+<pic src="images/chooseGitCredentialManager.png" /><br>
 </panel>
 </box>
 
@@ -139,6 +139,7 @@ Our Git lessons show how to perform Git operations in Git CLI, and in Sourcetree
 * Download the `.exe` file from [the latest release](https://github.com/git-mastery/app/releases/latest). {{ numbers_abcd }}
 * Add the folder containing the `.exe` to your Windows System Variable `PATH`, by following [this guide](https://www.wikihow.com/Change-the-PATH-Environment-Variable-on-Windows).<br>
   E.g. If the .exe is in `C:\Users\yourname\Desktop`, you should add this folder into your `PATH`.
+* Close and reopen the Git Bash terminal (for the updated `PATH` to take effect).
   </tab>
   <tab header=":fab-apple: MacOS">
 
