@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import hp_number, show_output with context %}
+{% from "common/macros.njk" import trail, bold_number, callout, hp_number, label, show_commit, show_git_term, show_git_term_tip, show_detour, show_exercise, show_git_tabs, show_git_tabs_from_text, show_hands_on_practical, show_head, show_lesson_intro, show_lesson_link, show_output, show_protip, show_ref, show_resources, show_sidebar, show_tag, show_transformation_columns, show_under_the_hood with context %}
 
 Here is an example list of bash commands to add two commits while observing the list of commits
 
@@ -35,3 +35,32 @@ Date:   ...
 
     Add fruits.txt
 ```
+
+{% call show_protip("Staging multiple files in one go") %}
+Here are several ways of staging multiple files simultaneously.
+
+**Specify multiple files:**
+```bash
+git add f1.txt f2.txt data/lists/f3.tt
+```
+
+**Add using a [glob pattern](https://en.wikipedia.org/wiki/Glob_(programming)):**
+```bash
+git add *.txt  # adds all .txt files in the current directory
+```
+
+**Add all files in the current directory and subdirectories:**
+```bash
+git add .
+```
+
+**Add all changes in a specific directory and subdirectories:**
+```bash
+git add path/to/directory
+```
+
+**Add all changes in the entire repository:**
+```bash
+git add -A
+```
+{% endcall %}

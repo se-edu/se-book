@@ -70,7 +70,7 @@ Set up your computer's GitHub authentication, as described in the se-edu guide [
 **GitHub offers its own clients to make working with GitHub more convenient.**
 
 * **The {{ show_git_term("GitHub Desktop") }} app provides a GUI for performing GitHub operations** from your desktop, without needing to visit the GitHub web UI.
-* **The {{ show_git_term("GitHub CLI (`gh`)") }} brings GitHub-specific commands to your terminal**, letting you perform operations on GitHub from your commandline.
+* **The {{ show_git_term("GitHub CLI (`gh`)") }} brings GitHub-specific commands to your terminal**, letting you perform operations on GitHub from your command line.
 
 <div class="non-printable" tags="git-mastery">
 
@@ -85,7 +85,7 @@ Set up your computer's GitHub authentication, as described in the se-edu guide [
   </tab>
   <tab header=":fab-apple: MacOS">
 
-**1. Installx GitHub CLI using Homebrew**:
+**1. Install GitHub CLI using Homebrew**:
 
 ```bash{.no-line-numbers}
 brew install gh

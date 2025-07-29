@@ -132,7 +132,15 @@ You can even dig around inside that folder -- it is just a bunch of subfolders a
 </div>
 
 {% call show_exercise('under-control') %}
-Put the folder `[exercises]/control-me` under Git's control (i.e., initialise a repository in that folder).
+<box type="info" seamless>
+
+When you download a Git-Mastery exercise, the output will tell you which directory you need to `cd` into, for you to start the exercise:
+
+<pic src="images/gitmasteryDownloadOutput.png" />
+<p/>
+</box>
+
+**Put the folder `under-control/control-me` under Git's control** (i.e., initialise a repository in the `control-me` folder).
 {% endcall %}
 <p/>
 

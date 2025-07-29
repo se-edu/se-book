@@ -125,7 +125,7 @@ Note how the class can use `PREFIX` and `format()` (instead of `Formatter.PREFIX
 
 </box>
 
-**When using the commandline to compile/run Java, you should take the package into account.**
+**When using the command line to compile/run Java, you should take the package into account.**
 
 <box>
 
