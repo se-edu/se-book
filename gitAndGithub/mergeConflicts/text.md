@@ -16,7 +16,9 @@ More generally, a conflict occurs when Git cannot automatically reconcile differ
 <!-- ================== start: HANDS-ON =========================== -->
 {% call show_hands_on_practical("Resolve merge conflict")  %}
 
-In this hands-on practical, we simulate a merge conflict and use it to learn how to resolve merge conflicts. You can use any repo with at least one commit in the `master` branch for this.
+{{ hp_number(hop_target) }} To simulate a merge conflict and use it to learn how to resolve merge conflicts.
+
+{{ hp_number(hop_preparation) }} You can use any repo with at least one commit in the `master` branch.
 
 {{ hp_number("1") }} **Start a branch named `fix1` in the repo. Create a commit** that adds a line with some text to one of the files.
 

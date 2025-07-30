@@ -34,7 +34,7 @@ Given below is an illustration of how such a merge looks like in the revision gr
 <!-- ================== start: HANDS-ON =========================== -->
 {% call show_hands_on_practical("Merge a branch (with a merge commit)")  %}
 
-In this hands-on practical, we continue with the `samplerepo-things` repo from earlier, which should look like the following. Note that we are ignoring the `feature1-alt` branch, for simplicity.
+{{ hp_number(hop_preparation) }} We continue with the `samplerepo-things` repo from earlier, which should look like the following. Note that we are ignoring the `feature1-alt` branch, for simplicity.
 
 <include src="../branch/text.md#samplerepo-things-before-merging" />
 
@@ -177,7 +177,7 @@ In the example above, the `master` branch has not changed since the merge base (
 <!-- ================== start: HANDS-ON =========================== -->
 {% call show_hands_on_practical("Do a fast-forward merge")  %}
 
-Let's continue with the same `samplerepo-things` repo we used above, and do a fast-forward merge this time.
+{{ hp_number(hop_preparation) }} Let's continue with the same `samplerepo-things` repo we used above, and do a fast-forward merge this time.
 
 {{ hp_number ('1') }} **Create a new branch called `add-countries`, switch to it, and add some commits to it**. You should have something like this now:
 <mermaid>

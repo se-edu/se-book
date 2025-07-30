@@ -14,7 +14,7 @@ When the revision history gets 'messy', **Git has a way to 'tidy up' the recent 
 <!-- ================== start: HANDS-ON =========================== -->
 {% call show_hands_on_practical("Tidy-up commits")  %}
 
-**Run the following commands to create a sample repo** that we'll be using for this hands-on practical:
+{{ hp_number(hop_preparation) }} **Run the following commands to create a sample repo** that we'll be using for this hands-on practical:
 
 ```bash
 mkdir samplerepo-sitcom
@@ -40,12 +40,14 @@ echo "Engineer" >> Howard.txt
 git add .
 git commit -m "C4: Adddd Howard.txt"
 ```
-Here are the commits that should be in the created repo, and **how each commit needs to be 'tidied up'**.
+{{ hp_number(hop_target) }} Here are the commits that should be in the created repo, and **how each commit needs to be 'tidied up'**.
 * `C4: Adddd Howard.txt` -- Fix typo in the commit message `Adddd` → `Add`.
 * `X: Incorrectly update Stuart.txt` -- Drop this commit.
 * `C2: Add Stuart.txt` -- Swap this commit with the one below.
 * `C3: Add Sheldon.txt` -- Swap this commit with the one above.
 * `C1: Add Penny.txt` -- No change required.
+
+{{ hp_number("1") }} **Start the interactive rebasing**.
 
 {% set cli %} <!-- ------ start: Git Tabs --------------->
 
@@ -97,14 +99,14 @@ The command will take you to the text editor, which will present you with a wall
 1. **At the bottom, instructions on how to edit those lines**.
 {% endcall %}
 
-**Edit the commit list to specify the rebase actions**, as follows:
+{{ hp_number("2") }} **Edit the commit list to specify the rebase actions**, as follows:
 ```bash{.no-line-numbers}
 pick 60bd28d C2: Add Stuart.txt
 pick 97a8c4a C3: Add Sheldon.txt
 drop 8b9a36f X: Incorrectly update Stuart.txt
 reword 8ab6941 C4: Addddd Howard.txt
 ```
-**Once you exit the text editor, Git will perform the rebase** based on the actions you specified, from top to bottom.
+{{ hp_number("4") }} **Once you exit the text editor, Git will perform the rebase** based on the actions you specified, from top to bottom.
 
 **At some steps, Git will pause the rebase and ask for your inputs.** In this case, it will ask you to specify the new commit message when it is processing the following line.
 ```bash{.no-line-numbers}
@@ -116,10 +118,10 @@ reword 8ab6941 C4: Addddd Howard.txt
 **To go to the interactive rebase mode**, right-click the parent commit of the earliest commit you want to reorganise (in this case, it is `C1: Add Penny.txt`) and choose `Rebase children of <SHA> interactively...`<br>
 <pic src="images/sourcetreeRightClickToRebase.png" width="500" />
 
-**To indicate what action you want to perform on each commit**, select the commit in the list and click on the button for the action you want to do on it:<br>
+{{ hp_number("2") }} **To indicate what action you want to perform on each commit**, select the commit in the list and click on the button for the action you want to do on it:<br>
 <pic src="images/sourcetreeIndicateModifications.png" width="700" />
 
-**To execute the rebase**, after indicating the action for all commits (the dialog will look like the below), click `OK`.<br>
+{{ hp_number("3") }} **To execute the rebase**, after indicating the action for all commits (the dialog will look like the below), click `OK`.<br>
 <pic src="images/sourcetreeExecuteModifications.png" width="700" />
 
 {% endset %}

@@ -14,7 +14,7 @@
 <!-- ================== start: HANDS-ON =========================== -->
 {% call show_hands_on_practical("Rename local branches")  %}
 
-**First, create the repo `samplerepo-books` for this hands-on practical**, by running the following commands in your terminal.
+{{ hp_number(hop_preparation) }} **First, create the repo `samplerepo-books` for this hands-on practical**, by running the following commands in your terminal.
 
 ```bash
 mkdir samplerepo-books
@@ -73,7 +73,9 @@ gitGraph BT:
 {{ show_transformation_columns(a, b, c) }}
 <!-- ------ end: transformation columns -------------------------------->
 
-**Now, rename the `fantasy` branch to `fantasy-books`.** Similarly, rename `textbooks` branch to `study-books`. The outcome should be similar to the revision graph above, on the right.
+{{ hp_number(hop_target) }} **Rename the `fantasy` branch to `fantasy-books`.** Similarly, rename `textbooks` branch to `study-books`. The outcome should be similar to the revision graph above, on the right.
+
+{{ hp_number("steps:") }}
 
 {% set cli %} <!-- ------ start: Git Tabs --------------->
 

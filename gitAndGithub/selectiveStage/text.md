@@ -35,7 +35,7 @@ This level of control is particularly useful when:
 <!-- ================== start: HANDS-ON =========================== -->
 {% call show_hands_on_practical("Stage changes selectively")  %}
 
-You can use any repo for this.
+{{ hp_number(hop_preparation) }} You can use any repo for this.
 
 {{ hp_number("1") }} **Do several changes to some tracked files.** Change multiple files. Also change multiple locations in the same file.
 

@@ -207,7 +207,7 @@ In the next dialog, choose as follows:<br>
 <!-- ================== start: HANDS-ON =========================== -->
 {% call show_hands_on_practical("Sync your repos with the upstream repo")  %}
 
-{{ hp_number("Preparation") }} **Fork [se-edu/samplerepo-finances](https://github.com/se-edu/samplerepo-finances)** to your GitHub account.<br>
+{{ hp_number(hop_preparation) }} **Fork [se-edu/samplerepo-finances](https://github.com/se-edu/samplerepo-finances)** to your GitHub account.<br>
 **Clone your fork to your computer**.<br>
 Now, let's pretend that there are some new commits in upstream repo that you would like to bring over to your fork, and your local repo. Here are the steps:
 

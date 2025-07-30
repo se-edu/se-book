@@ -45,7 +45,7 @@ Resetting is different from the _checkout_ feature:
 <!-- ================== start: HANDS-ON =========================== -->
 {% call show_hands_on_practical("Resetting to past commits")  %}
 
-{{ hp_number ('1') }} **First, set the stage** as follows (e.g., in the `things` repo):<br>
+{{ hp_number(hop_preparation) }} **First, set the stage** as follows (e.g., in the `things` repo):<br>
 i) Add four commits that are supposedly 'bad' commits.<br>
 ii) Do a 'bad' change to one file and stage it.<br>
 iii) Do a 'bad' change to another file, but don't stage it.
@@ -80,7 +80,7 @@ echo "another bad shape" >> shapes.txt
 
 Now we have some 'bad' commits and some 'bad' changes in both the staging area and the working directory. Let's use the reset feature to get rid of all of them, but do it in three steps so that you can learn all three types of resets.
 
-{{ hp_number ('2') }} **Do a _soft_ reset to `B2`** (i.e., discard last two commits). Verify,
+{{ hp_number ('1') }} **Do a _soft_ reset to `B2`** (i.e., discard last two commits). Verify,
 
 * the `master` branch is now pointing at `B2`, and,
 * the changes that were in the discarded commits (i.e., `B3` and `B4`) are now in the staging area.
@@ -115,7 +115,7 @@ In the next dialog, choose `Soft - keep all local changes`.
 {{ show_git_tabs_from_text(cli, sourcetree) }}
 <!-- ------ end: Git Tabs -------------------------------->
 
-{{ hp_number ('3') }} **Do a _mixed_ reset to commit `B1`**. Verify,
+{{ hp_number ('2') }} **Do a _mixed_ reset to commit `B1`**. Verify,
 
 * the `master` branch is now pointing at `B1`.
 * the staging area is empty.
@@ -140,7 +140,7 @@ Similar to the previous reset, but choose the `Mixed - keep working copy but res
 {{ show_git_tabs_from_text(cli, sourcetree) }}
 <!-- ------ end: Git Tabs -------------------------------->
 
-{{ hp_number ('4') }} **Do a _hard_ reset to commit `C4`**. Verify,
+{{ hp_number ('3') }} **Do a _hard_ reset to commit `C4`**. Verify,
 
 * the `master` branch is now pointing at `C4` i.e., all 'bad' commits are gone.
 * the staging area is empty.
@@ -171,7 +171,7 @@ To protect the integrity of the remote, Git will reject attempts to push a diver
 <!-- ================== start: HANDS-ON =========================== -->
 {% call show_hands_on_practical("Force-push commits")  %}
 
-{{ hp_number("Preparation") }} **Choose a local-remote repo pair under your control** e.g., the `things` repo from {{ show_tour_link(trail.backingUpOnCloud) }}.
+{{ hp_number(hop_preparation) }} **Choose a local-remote repo pair under your control** e.g., the `things` repo from {{ show_tour_link(trail.backingUpOnCloud) }}.
 
 {{ hp_number("1") }} **Rewrite the last commit**: Reset the current branch back by one commit, and add a new commit.<br>
 For example, you can use the following commands.

@@ -49,9 +49,9 @@ Note that appearance of the revision graph (colors, positioning, orientation etc
 <!-- ================== start: HANDS-ON =========================== -->
 {% call show_hands_on_practical("Work on parallel branches")  %}
 
-{{ hp_number ('1') }} **Fork the [samplerepo-things](https://github.com/se-edu/samplerepo-things) repo, and clone it** onto your computer.
+{{ hp_number(hop_preparation) }} **Fork the [samplerepo-things](https://github.com/se-edu/samplerepo-things) repo, and clone it** onto your computer.
 
-{{ hp_number ('2') }} **Observe that you are in the branch called `master`.**
+{{ hp_number ('1') }} **Observe that you are on the branch called `master`.**
 {% set cli %} <!-- ------ start: Git Tabs --------------->
 
 ```bash{.no-line-numbers}
@@ -71,7 +71,7 @@ on branch master
 {{ show_git_tabs_from_text(cli, sourcetree) }}
 <!-- ------ end: Git Tabs -------------------------------->
 
-{{ hp_number ('3') }} **Start a branch named `feature1` and switch to the new branch.**
+{{ hp_number ('2') }} **Start a branch named `feature1` and switch to the new branch.**
 
 {% set cli %} <!-- ------ start: Git Tabs --------------->
 You can use the `branch` command to create a new branch and the `checkout` command to switch to a specific branch.
@@ -116,7 +116,7 @@ Note how the `feature1` is indicated as the current branch (reason: Sourcetree a
 {{ show_git_tabs_from_text(cli, sourcetree) }}
 <!-- ------ end: Git Tabs -------------------------------->
 
-{{ hp_number ('4') }} **Create some commits in the new branch.** %%Just commit as per normal. Commits you add while on a certain branch will become part of that branch.%%<br>
+{{ hp_number ('3') }} **Create some commits in the new branch.** %%Just commit as per normal. Commits you add while on a certain branch will become part of that branch.%%<br>
 Note how the `master` ref and the `HEAD` ref moves to the new commit.
 
 {% set cli %} <!-- ------ start: Git Tabs --------------->
@@ -130,7 +130,7 @@ As before, you can use the `git log --one-line --decorate` command for this.
 {{ show_git_tabs_from_text(cli, sourcetree) }}
 <!-- ------ end: Git Tabs -------------------------------->
 
-{{ hp_number ('5') }} **Switch to the `master` branch.** Note how the changes you did in the `feature1` branch are no longer in the working directory.
+{{ hp_number ('4') }} **Switch to the `master` branch.** Note how the changes you did in the `feature1` branch are no longer in the working directory.
 
 {% set cli %} <!-- ------ start: Git Tabs --------------->
 ```bash{.no-line-numbers}
@@ -153,7 +153,7 @@ Similarly, `origin/HEAD` ref appearing against the same commit indicates that <t
 {{ show_git_tabs_from_text(cli, sourcetree) }}
 <!-- ------ end: Git Tabs -------------------------------->
 
-{{ hp_number ('6') }} **Add a commit to the master branch.** Let’s imagine it’s a bug fix.<br>
+{{ hp_number ('5') }} **Add a commit to the master branch.** Let’s imagine it’s a bug fix.<br>
 To keep things simple for the time being, this commit should ==not involve the same content that you changed in the `feature1` branch==. To be on the safe side, you can change an entirely different file in this commit.
 <div id="samplerepo-things-before-merging">
 <mermaid>
@@ -170,7 +170,7 @@ gitGraph BT:
 </mermaid>
 </div>
 
-{{ hp_number ('7') }} **Switch between the two branches and see how the working directory changes accordingly.** That is, now you have two parallel timelines that you can freely switch between.
+{{ hp_number ('6') }} **Switch between the two branches and see how the working directory changes accordingly.** That is, now you have two parallel timelines that you can freely switch between.
 
 {% endcall %}<!-- ===== end: HANDS-ON ============================ -->
 

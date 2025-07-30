@@ -98,7 +98,7 @@ In the example below, `C4` is unreachable (i.e., cannot be reached by starting a
 <!-- ================== start: HANDS-ON =========================== -->
 {% call show_hands_on_practical("Delete branches")  %}
 
-{{ hp_number("Preparation") }} **First, create the repo `samplerepo-books-2` for this hands-on practical**, by running the following commands in your terminal.
+{{ hp_number(hop_preparation) }} **First, create the repo `samplerepo-books-2` for this hands-on practical**, by running the following commands in your terminal.
 
 ```bash
 mkdir samplerepo-books-2

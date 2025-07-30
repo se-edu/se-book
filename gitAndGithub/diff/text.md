@@ -17,7 +17,7 @@ Example use case: To verify the next commit will include exactly what you intend
 <!-- ================== start: HANDS-ON =========================== -->
 {% call show_hands_on_practical("Examining staged and unstaged changes")  %}
 
-{{ hp_number("Preparation") }} **For this, you can use the `things` repo** you created earlier. If you don't have it, you can clone a copy of a similar repo given [here](https://github.com/se-edu/samplerepo-things2).
+{{ hp_number(hop_preparation) }} **For this, you can use the `things` repo** you created earlier. If you don't have it, you can clone a copy of a similar repo given [here](https://github.com/se-edu/samplerepo-things2).
 
 {{ hp_number("1") }} **Do some changes to the working directory. Stage some (but not all) changes.** For example, you can run the following commands.
 
@@ -70,7 +70,9 @@ Example use case: Suppose you’re trying to improve the performance of a piece 
 <!-- ================== start: HANDS-ON =========================== -->
 {% call show_hands_on_practical("Comparing two commits")  %}
 
-**Compare two commits** in a repo (e.g., the `things` repo).
+{{ hp_number(hop_target) }} **Compare two commits** in a repo.
+
+{{ hp_number(hop_preparation) }} You can use any repo with multiple commits e.g., the `things` repo.
 
 {% set cli %} <!-- ------ start: Git Tabs --------------->
 
@@ -138,7 +140,9 @@ Example use case: Similar to other use cases but when you are interested in a sp
 <!-- ================== start: HANDS-ON =========================== -->
 {% call show_hands_on_practical("Examining changes to a specific file")  %}
 
-Examine the changes done to a file between two different points in the version history (including the working directory).
+{{ hp_number(hop_target) }} **Examine the changes done to a file between two different points in the version history** (including the working directory).
+
+{{ hp_number(hop_preparation) }} Use any repo with multiple commits e.g. the `things` repo.
 
 {% set cli %} <!-- ------ start: Git Tabs --------------->
 

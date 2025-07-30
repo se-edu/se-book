@@ -59,7 +59,9 @@ Suppose you added a new feature to a software product, and while testing it, you
 <!-- ================== start: HANDS-ON =========================== -->
 {% call show_hands_on_practical('Checking out some commits')  %}
 
-**Checkout a few commits in a local repo** (e.g., the `things` repo), while examining the working directory to verify that it matches the state when you created the corresponding commit:
+{{ hp_number(hop_target) }} **Checkout a few commits in a local repo** , while examining the working directory to verify that it matches the state when you created the corresponding commit
+
+{{ hp_number(hop_preparation) }} Use any repo with commits e.g., the `things` repo
 
 {{ show_git_tabs('-checkout-commits-fragment') }}
 
