@@ -49,7 +49,7 @@ As you know, you can use `git add <filename>` to stage changes to an entire file
 ```bash{.no-line-numbers}
 git add -p
 ```
-This command will take you to an interactive mode in which you can go through each hunk and decide if you want to stage it. The video below has contains a demonstration of how this feature works:
+This command will take you to an interactive mode in which you can go through each hunk and decide if you want to stage it. The video below contains a demonstration of how this feature works:
 
 @[youtube](blbzIgM-aOU)
 

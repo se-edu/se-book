@@ -110,7 +110,7 @@ index 55c8449..0000000
 -a file for colours
 # rest of the diff ...
 ```
-As you can see, the `diff` is _directional_ i.e., `dif <commit1> <commit2>` shows what changes you need to do to go from the `<commit1>` to `<commit2>`. If you swap `<commit1>` and `<commit2>`, the output will change accordingly e.g., lines previously shown as 'added' will now be shown as 'deleted'.
+As you can see, the `diff` is _directional_ i.e., `diff <commit1> <commit2>` shows what changes you need to do to go from the `<commit1>` to `<commit2>`. If you swap `<commit1>` and `<commit2>`, the output will change accordingly e.g., lines previously shown as 'added' will now be shown as 'deleted'.
 {% endcall %}
 
 {% endset %}

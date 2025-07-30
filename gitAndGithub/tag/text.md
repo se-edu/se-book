@@ -34,7 +34,9 @@ When working with many commits, it helps to **tag specific commits with custom n
 
 {% call show_hands_on_practical('Adding tags')  %}
 
-{{ hp_number ('0') }} **Preparation: fork and clone the [samplerepo-preferences](https://github.com/se-edu/samplerepo-preferences).** Use the cloned repo on your computer for the following steps.
+{{ hp_number(hop_target) }} **Add a few tags to a repository.**
+
+{{ hp_number (hop_preparation) }} **Fork and clone the [samplerepo-preferences](https://github.com/se-edu/samplerepo-preferences).** Use the cloned repo on your computer for the following steps.
 
 {% set cli %}
 
@@ -121,6 +123,8 @@ Tags will appear as labels in the revision graph, as seen below. To see the deta
 
 {% call show_hands_on_practical('Deleting/moving tags')  %}
 
+{{ hp_number(hop_preparation) }} Continue with the same repo you used for the previous hands-on practical.
+
 **Move the `v1.0` tag to the commit `HEAD~1`**, by deleting it first and creating it again at the destination commit.
 
 {% set cli %}
@@ -151,11 +155,13 @@ The same dialog used to add a tag can be used to delete and even move a tag. Not
 <!-- ================== start: HANDS-ON =========================== -->
 {% call show_hands_on_practical("Pushing tags to a remote")  %}
 
-**Push tags you created earlier to the remote.**
+{{ hp_number(hop_target) }} **Push tags you created earlier to the remote.**
+
+{{ hp_number(hop_preparation) }} Continue with the same repo you used for the previous hands-on practical.
 
 <box type="info" seamless>
 
-You can go to your remote on GitHub link `https://github.com/{USER}/{REPO}/tags` (e.g., `https://github.com/johndoe/samplerepo-prefrences/tags`) to verify the tag is present there.
+You can go to your remote on GitHub link `https://github.com/{USER}/{REPO}/tags` (e.g., `https://github.com/johndoe/samplerepo-preferences/tags`) to verify the tag is present there.
 
 <pic src="images/githubListTags.png" width="300" />
 

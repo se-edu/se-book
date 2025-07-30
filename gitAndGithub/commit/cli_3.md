@@ -17,19 +17,19 @@ $ git log  # check commits list
 
 The output of the final `git log` should be something like this:
 ```bash{highlight-lines="5,11,17"}
-commit 18300... (HEAD -> master)
+commit ... (HEAD -> master)
 Author: ... <...@...>
 Date:   ...
 
     Add colours.txt, shapes.txt
 
-commit 2beda...
+commit ...
 Author: ... <...@...>
 Date:   ...
 
     Insert figs into fruits.txt
 
-commit d5f91...
+commit ...
 Author: ... <...@...>
 Date:   ...
 
@@ -41,7 +41,7 @@ Here are several ways of staging multiple files simultaneously.
 
 **Specify multiple files:**
 ```bash
-git add f1.txt f2.txt data/lists/f3.tt
+git add f1.txt f2.txt data/lists/f3.txt
 ```
 
 **Add using a [glob pattern](https://en.wikipedia.org/wiki/Glob_(programming)):**

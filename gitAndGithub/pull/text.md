@@ -63,7 +63,7 @@ If it looks like the below, it is possible that Sourcetree is auto-fetching data
 <!-- ------ end: Git Tabs -------------------------------->
 
 
-{{ hp_number ('3') }} **Fetch from the new remote.**
+{{ hp_number ('4') }} **Fetch from the new remote.**
 
 {% set cli %} <!-- ------ start: Git Tabs --------------->
 
@@ -94,7 +94,7 @@ Click on the `Fetch` button on the top menu:<br>
 {{ show_git_tabs_from_text(cli, sourcetree) }}
 <!-- ------ end: Git Tabs -------------------------------->
 
-{{ hp_number ('4') }} **Verify the fetch worked** i.e., the local repo is now aware of the two missing commits. Also observe how the local branch ref of the `master` branch, the staging area, and the working directory remain unchanged after the fetch.
+{{ hp_number ('5') }} **Verify the fetch worked** i.e., the local repo is now aware of the two missing commits. Also observe how the local branch ref of the `master` branch, the staging area, and the working directory remain unchanged after the fetch.
 
 {% set cli %} <!-- ------ start: Git Tabs --------------->
 
@@ -123,7 +123,7 @@ Now, the revision graph should look something like the below. Note how the `orig
 {{ show_git_tabs_from_text(cli, sourcetree) }}
 <!-- ------ end: Git Tabs -------------------------------->
 
-{{ hp_number ('5') }} **Merge the fetched changes.**
+{{ hp_number ('6') }} **Merge the fetched changes.**
 
 {% set cli %} <!-- ------ start: Git Tabs --------------->
 
@@ -207,7 +207,7 @@ In the next dialog, choose as follows:<br>
 <!-- ================== start: HANDS-ON =========================== -->
 {% call show_hands_on_practical("Sync your repos with the upstream repo")  %}
 
-**Fork [se-edu/samplerepo-finances](https://github.com/se-edu/samplerepo-finances)** to your GitHub account.<br>
+{{ hp_number("Preparation") }} **Fork [se-edu/samplerepo-finances](https://github.com/se-edu/samplerepo-finances)** to your GitHub account.<br>
 **Clone your fork to your computer**.<br>
 Now, let's pretend that there are some new commits in upstream repo that you would like to bring over to your fork, and your local repo. Here are the steps:
 

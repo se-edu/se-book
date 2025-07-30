@@ -99,7 +99,7 @@ Add a few other files with `.tmp` extension.
 
 * **Binary files** _generated_ when building your project %%e.g., `*.class`, `*.jar`, `*.exe`%% (reasons: 1. no need to version control these files as they can be generated again from the source code 2. Revision control systems are optimized for tracking text-based files, not binary files.
 * **Temporary files** %%e.g., log files generated while testing the product%%
-* **Local files** i.e., files specific to your own computer %%e.g., local settings of your IDE%%
+* **Local files** i.e., files specific to your own computer %%e.g., local settings of your IDE (`.idea/`)%%
 * **Sensitive content** i.e., files containing sensitive/personal information %%e.g., credential files, personal identification data%% (especially, if there is a possibility of those files getting leaked via the revision control system).
 
 </div>

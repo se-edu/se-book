@@ -16,7 +16,7 @@ Detailed and well-written **commit messages can increase the value of Git revisi
 
 **A complete commit message can include a short summary line (the {{ show_git_term("subject") }}) followed by a more detailed {{ show_git_term("body") }} if needed.** The subject line should be a concise description of the change, while the body can elaborate on the context, rationale, side effects, or other details if the change is more complex.
 
-**A commit message has the following structure** (note how the subject and the body is separated by a blank line):
+**A commit message has the following structure** (note how the subject and the body are separated by a blank line):
 ```bash{highlight-lines="2"}
 Subject line
 <blank line>

@@ -11,7 +11,7 @@ The next step is to **create a local copy of the remote repo, by _cloning_ the r
 
 **You can {{ show_git_term("clone") }} a repository to create a full copy of it on your computer.** This copy includes the entire revision history, branches, and files of the original, so it behaves just like the original repository. For example, you can clone a repository from a hosting service like GitHub to your computer, giving you a complete local version to work with.
 
-**Cloning a repo automatically creates a remote named `origin`** which points to the repo you cloned from.
+**Cloning a repo automatically creates a remote named {{ show_git_term("origin") }}** which points to the repo you cloned from.
 
 **The repo you cloned from is often referred to as the {{ show_git_term("upstream") }} repo.**
 

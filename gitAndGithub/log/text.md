@@ -12,7 +12,7 @@ It is useful to be able to **visualise the commits timeline, aka the _revision g
 
 **The Git data model consists of two types of entities: {{ show_git_term("objects") }} and {{ show_git_term("refs") }}** (short for _references_). In this lesson, you will encounter examples of both.
 
-**A Git {{ show_git_term("revision graph") }} is a visualisation of a repo's revision history**, contains examples of both objects and refs. First, let us learn to work with simpler revision graphs consisting of one branch, such as the one given below.
+**A Git {{ show_git_term("revision graph") }} is a visualisation of a repo's revision history**, containing examples of both objects and refs. First, let us learn to work with simpler revision graphs consisting of one branch, such as the one given below.
 
 
 {{ show_commit('C3') }}
@@ -64,7 +64,9 @@ Explanation: When you create `C4`, the current branch `master` moves to `C4`, an
 
 {% call show_hands_on_practical('View the revision graph')  %}
 
-**Use Git features to examine the revision graph of a simple repo.** For this, use a repo with just a few commits and only one branch for this hands-on practical.
+{{ hp_number(hop_target) }} **Use Git features to examine the revision graph of a simple repo.**
+
+{{ hp_number(hop_preparation) }} For this, use a repo with just a few commits and only one branch for this hands-on practical.
 
 {{ show_git_tabs('-view-rg-normal') }}
 

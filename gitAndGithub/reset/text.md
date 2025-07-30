@@ -124,7 +124,7 @@ In the next dialog, choose `Soft - keep all local changes`.
 
 {% set cli %} <!-- ------ start: Git Tabs --------------->
 
-Use the `git --mixed reset <commit>` command to do a mixed reset. The `--mixed` flag is the default, and can be omitted.
+Use the `git reset --mixed <commit>` command to do a mixed reset. The `--mixed` flag is the default, and can be omitted.
 
 ```bash
 git reset HEAD~1
@@ -227,7 +227,7 @@ git push -f origin master
 
 **A safer alternative to `--force` is `--force-with-lease`** which overwrites the remote branch only if it hasn’t changed since you last fetched it (i.e., only if remote doesn't have recent changes that you are unaware of):
 ```bash
-git push -force-with-lease origin master
+git push --force-with-lease origin master
 ```
 </box>
 

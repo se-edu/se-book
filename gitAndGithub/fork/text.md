@@ -14,11 +14,11 @@ GitHub allows you to **create a remote copy of another remote repo, called _fork
 <!-- ================== start: HANDS-ON =========================== -->
 {% call show_hands_on_practical("Forking a repo on GitHub")  %}
 
-{{ hp_number ('0') }} **Create a GitHub account if you don't have one yet.**
+{{ hp_number('Preparation') }} **Create a GitHub account if you don't have one yet.**
 
-{{ hp_number ('1') }}  **Go to the GitHub repo you want to fork** e.g., [samplerepo-things](https://github.com/se-edu/samplerepo-things)
+{{ hp_number('1') }}  **Go to the GitHub repo you want to fork** e.g., [samplerepo-things](https://github.com/se-edu/samplerepo-things)
 
-{{ hp_number ('2') }} **Click on the <pic eager src="images/fork.png" height="30" /> button** in the top-right corner. In the next step,
+{{ hp_number('2') }} **Click on the <pic eager src="images/fork.png" height="30" /> button** in the top-right corner. In the next step,
   * choose to fork to your own account or to another GitHub organization that you are an admin of.
   * ==un-tick the `[ ] Copy the master branch only` option==, so that you get copies of other branches (if any) in the repo.
 {% endcall %}<!-- ===== end: HANDS-ON ============================ -->

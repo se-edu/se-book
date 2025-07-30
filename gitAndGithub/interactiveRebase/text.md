@@ -6,7 +6,7 @@
 
 <div id="body">
 {% call show_lesson_intro() %}
-When the revision history get 'messy', **Git has a way to 'tidy up' the recent commits.**
+When the revision history gets 'messy', **Git has a way to 'tidy up' the recent commits.**
 {% endcall %}
 
 **Git has a powerful tool called {{ show_git_term("interactive rebasing") }} which lets you review and reorganise your recent commits.** With it, you can reword commit messages, change their order, delete commits, combine several commits into one (squash), or split a commit into smaller pieces. This feature is useful for tidying up a commit history that has become messy — for example, when some commits are out of order, poorly described, or include changes that would be clearer if split up or combined.
@@ -126,7 +126,7 @@ reword 8ab6941 C4: Addddd Howard.txt
 {{ show_git_tabs_from_text(cli, sourcetree) }}
 <!-- ------ end: Git Tabs -------------------------------->
 
-**The final result** should be something like the below, 'tidied up' exactly as we wanted:
+**The final result** should be something like the following, 'tidied up' exactly as we wanted:
 ```{.no-line-numbers}
 * 727d877 C4: Add Howard.txt
 * 764fc29 C3: Add Sheldon.txt

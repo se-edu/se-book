@@ -3,10 +3,22 @@
  **You can unstage a staged file, which simply removes it from the staging area but keeps the changes in your working directory.** This is useful if you later realise that you don’t actually want to include a staged file in the next commit — perhaps you staged it by mistake, or you want to include that change in a later commit.
 
 {% set cli %} <!-- ------ start: Git Tabs --------------->
-* **To unstage a file you added or modified**, run `git restore --staged <file-name(s)>`. This command removes the file from the staging area, leaving your working directory untouched.
+* **To unstage a file you added or modified**, run `git restore --staged <file(s)>`. This command removes the file from the staging area, leaving your working directory untouched.
   ```bash{highlight-lines="1['restore --staged']"}
   git restore --staged plan.txt budget.txt data/list.txt
   ```
+  <box type="warning" seamless>
+
+  **If your repo does not have any commits yet, `git restore --staged` will fail** with the error #r#fatal: could not resolve HEAD##.<br>
+  The remedy is to use `git reset <file(s)>` instead.
+  ```bash
+  git reset plan.txt
+  ```
+  **In fact, `git reset` is an alternative way of unstaging files**, and it works regardless of whether you have any commits.
+
+  **Wait. Then why does `git restore --staged` exists at all**, given it is more verbose and doesn't even work in some special cases?<br>
+  Answer: It is still considered the "modern" way of unstaging files (it was introduced more recently), because it is more intuitive and purpose-specific -- whereas the `git reset` serves multiple purposes and, if used incorrectly, can cause unintended consequences.
+  </box>
 * **To unstage a file deletion** (staged using `git rm`), use the same command as above. It will unstage the deletion and restore the file in the staging area.<br>
   **If you also deleted the file from your working directory**, you may need to recover it separately with `git restore <file-name(s)>`
   ```bash{highlight-lines="1['restore']"}

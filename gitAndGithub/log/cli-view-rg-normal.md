@@ -35,7 +35,7 @@ For comparison, given below the visual representation of the same revision graph
 {% endcall %}
 
 {% call show_sidebar("Working with the 'less' pager") %}
-**Some Git commands — such as `git log`— may show their output through a {{ show_git_term("pager") }}.** A pager is a program that lets you view long text one screen at a time, so you don’t miss anything that scrolls off the top. For example, the output of `git log` command will temporarily hide the current content of the terminal, and enter the pager view that shows output one screen at a time. When you exit the pager, the `git log` output will disappear from view, and the previous content of the pager will reappear.
+**Some Git commands — such as `git log`— may show their output through a {{ show_git_term("pager") }}.** A pager is a program that lets you view long text one screen at a time, so you don’t miss anything that scrolls off the top. For example, the output of `git log` command will temporarily hide the current content of the terminal, and enter the pager view that shows output one screen at a time. When you exit the pager, the `git log` output will disappear from view, and the previous content of the terminal will reappear.
 
 {% set a %} <!-- ------ start: transformation columns --------------->
 ```

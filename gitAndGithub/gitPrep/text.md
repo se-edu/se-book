@@ -140,6 +140,17 @@ Our Git lessons show how to perform Git operations in Git CLI, and in Sourcetree
 * Add the folder containing the `.exe` to your Windows System Variable `PATH`, by following [this guide](https://www.wikihow.com/Change-the-PATH-Environment-Variable-on-Windows).<br>
   E.g. If the .exe is in `C:\Users\yourname\Desktop`, you should add this folder into your `PATH`.
 * Close and reopen the Git Bash terminal (for the updated `PATH` to take effect).
+
+<panel header="**++:far-face-surprise: :fas-virus-covid: Windows Defender says gitmastery.exe is a virus?++**{.badge .bg-warning .text-dark}" icon=":fas-face-surprise:"  peek>
+
+**In some cases, Windows Defender virus scanner can incorrectly block gitmastery.exe** as a virus. The Git-Mastery team is currently working on getting the app white-listed. In the meantime, it is safe to override the warning/blockade, either by choosing `Run anyway` option (if given) or using the following steps.
+
+1. Open `Windows Security` → `Virus & threat protection`.
+1. Click `Protection history`.
+1. Find the blocked `gitmastery.exe` and click it.
+1. Choose `Actions` → `Allow on device`.<br>
+   After this step, you may need to re-download the file if it was removed previously.
+</panel>
   </tab>
   <tab header=":fab-apple: MacOS">
 
