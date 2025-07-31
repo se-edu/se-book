@@ -11,7 +11,7 @@ Git can also **_reset_ the revision history to a specific point** so that you ca
 
 Suppose you realise your last few commits have gone in the wrong direction, and you want to go back to an earlier commit and continue from there — as if the “bad” commits never happened. Git’s _reset_ feature can help you do that.
 
-**Git {{ show_git_term("reset") }} moves the {{ show_git_term('tip', 'reset') }} of the current branch to a specific commit**, optionally adjusting your staged and unstaged changes to match. **This effectively rewrites the branch's history** by discarding any commits that came after that point.
+**Git {{ show_git_term("reset") }} moves the {{ show_git_term('tip', 'tip', 'reset') }} of the current branch to a specific commit**, optionally adjusting your staged and unstaged changes to match. **This effectively rewrites the branch's history** by discarding any commits that came after that point.
 
 {{ show_git_term_tip('tip', 'reset') }}
 
@@ -148,7 +148,7 @@ Similar to the previous reset, but choose the `Mixed - keep working copy but res
 
 {% set cli %} <!-- ------ start: Git Tabs --------------->
 
-Use the `git --hard reset <commit>` command.
+Use the `git reset --hard <commit>` command.
 
 ```bash
 git reset --hard HEAD~1

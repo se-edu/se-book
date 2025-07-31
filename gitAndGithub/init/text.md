@@ -11,9 +11,9 @@ To be able to save snapshots of a folder using Git, **you must first put the fol
 
 **Normally, we use Git to manage a revision history of a specific folder**, which gives us the ability to revision-control any file in that folder and its subfolders.
 
-**To put a folder under the control of Git, we _initialise_ a {{ show_git_term('repository', 'init')}} (short name: {{ show_git_term('repo') }})** in that folder. This way, we can initialise repos in different folders, to revision-control different clusters of files independently of each other %%e.g., files belonging to different projects%%.
+**To put a folder under the control of Git, we _initialise_ a {{ show_git_term('repository', 'repo', 'init')}} (short name: {{ show_git_term('repo') }})** in that folder. This way, we can initialise repos in different folders, to revision-control different clusters of files independently of each other %%e.g., files belonging to different projects%%.
 
-{{ show_git_term_tip('repository', 'init') }}
+{{ show_git_term_tip('repo', 'init') }}
 
 You can follow the hands-on practical below to learn how to initialise a repo in a folder.
 

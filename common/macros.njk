@@ -138,9 +138,6 @@
 {% macro show_lesson_link(lesson) %}[Lesson {{ lesson.title }}]({{ baseUrl }}/{{ lesson.path }}/index.html){% endmacro %}
 <!-- ============================================================ -->
 
-{% macro show_git_term(term, current_page="") -%}<span class="badge text-dark" style="background-color: rgba(13, 202, 240, 0.2);">{% if current_page %}<trigger for="pop:{{ current_page }}-{{ term }}">{% endif %}++{{ term }}++{% if current_page %}</trigger>{% endif %}</span>{%- endmacro %}
-<!-- ============================================================ -->
-
 {% macro show_ref(text, style="success") -%}<span class="badge bg-{{ style }} text-white ps-1 pe-1">:octicon-git-branch: {{ text }}</span>{%- endmacro %}
 <!-- ============================================================ -->
 
@@ -156,11 +153,14 @@
 {% if edge %}<div class="d-flex justify-content-center align-items-center text-{{ style }}" style="width: {{ size }}px; height: 18px; padding: 0; margin: -4px 0;">{{ edge }}</div>{% endif %}{% endmacro %}
 <!-- ============================================================ -->
 
-{% macro show_git_term_tip(term, current_page) -%}
-<popover id="pop:{{ current_page }}-{{ term }}" placement="top" >
-  <span slot="header" class="text-info"><md>Definition: **{{ term }}**</md></span>
+{% macro show_git_term(term, definitiona_id="", current_page="") -%}<span class="badge text-dark" style="background-color: rgba(13, 202, 240, 0.2);">{% if current_page %}<trigger for="pop:{{ current_page }}-{{ definition_id }}">{% endif %}++{{ term }}++{% if current_page %}</trigger>{% endif %}</span>{%- endmacro %}
+<!-- ============================================================ -->
+
+{% macro show_git_term_tip(id, current_page) -%}
+<popover id="pop:{{ current_page }}-{{ definition_id }}" placement="top" >
+  <span slot="header" class="text-info"><md>Definition: **<include src="{{ baseUrl }}/gitAndGithub/trail/terms-fragment.md#{{ id }}-term" inline trim/>**</md></span>
   <div slot="content">
-    <include src="{{ baseUrl }}/gitAndGithub/trail/terms-fragment.md#{{ slugify(term) }}" inline trim/>
+    <include src="{{ baseUrl }}/gitAndGithub/trail/terms-fragment.md#{{ id }}-definition" inline trim/>
   </div>
 </popover>
 

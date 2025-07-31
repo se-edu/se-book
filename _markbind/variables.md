@@ -11,7 +11,7 @@
 <variable id="bullet_checkbox_selected_green">{ icon="fas-square-check" i-class="text-success" }</variable>
 
 <variable name="hop_preparation">:fas-suitcase: Preparation</variable>
-<variable name="hop_target">:fas-bullseye: Target</variable>
+<variable name="hop_target">:fas-arrow-right::fas-grip-lines-vertical: Target</variable>
 
 <variable id="icon_deadline"><md>:alarm_clock:</md></variable>
 <variable id="icon_detour"><md>:fas-diamond-turn-right:</md></variable>

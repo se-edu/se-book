@@ -14,7 +14,7 @@ To save a snapshot, **you start by specifying what to include in it, also called
 
 **A Git repo has an internal space called the {{ show_git_term('staging area') }} which it uses to build the next snapshot**. Another name for the staging area is the {{ show_git_term('index') }}.
 
-**We can {{ show_git_term('stage', 'stage') }} an untracked file** to tell Git that we want its current version to be included in the next snapshot. Once you stage an untracked file, it becomes {{ show_git_term("'tracked'") }} (i.e., under Git's control). A staged file can be {{ show_git_term("unstaged") }} to indicate that we no longer want it to be included in the next snapshot.
+**We can {{ show_git_term('stage', 'stage', 'stage') }} an untracked file** to tell Git that we want its current version to be included in the next snapshot. Once you stage an untracked file, it becomes {{ show_git_term("'tracked'") }} (i.e., under Git's control). A staged file can be {{ show_git_term("unstaged") }} to indicate that we no longer want it to be included in the next snapshot.
 
 {{ show_git_term_tip('stage', 'stage') }}
 

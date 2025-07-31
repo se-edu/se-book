@@ -80,6 +80,11 @@ git version 2._._
 ```
 The output should display the version number.
 {% endcall %} <!-- show_output -->
+
+<box type="important" seamless icon=":fab-windows:">
+
+**On Windows**, you might need to close and open the terminal again for it to recognise changes done elsewhere in the computer (e.g., newly-installed software, changes to system variables, etc.).
+</box>
 {% endcall %} <!-- show_prep -->
 
 ##### Configuring `user.name` and `user.email`

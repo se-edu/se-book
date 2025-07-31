@@ -11,7 +11,10 @@
 To use GitHub, **you need to sign up for an account, and configure related tools/settings** first.
 {% endcall %}
 
-**GitHub is a web-based service that hosts Git repositories and adds collaboration features** on top of Git. Two other similar platforms are GitLab and Bitbucket. While Git manages version control locally, such platforms make it easier for individuals and teams to work together by providing shared access to repositories, issue tracking, pull requests, and permission controls. They are widely used in both open-source and commercial software development. Here we'll be using GitHub.
+**GitHub is a web-based service that hosts Git repositories and adds collaboration features** on top of Git. Two other similar platforms are GitLab and Bitbucket. While Git manages version control locally, such platforms provide additional features such as shared access to repositories, issue tracking, code reviews, and permission controls. They are widely used in software development projects, for both {{ show_git_term("open-source software (OSS)", "oss", "githubPrep") }} and {{ show_git_term("closed-source software") }} projects.
+
+{{ show_git_term_tip('oss', 'githubPrep') }}
+
 
 **On GitHub, a Git repo can be put in one of two spaces:**
 

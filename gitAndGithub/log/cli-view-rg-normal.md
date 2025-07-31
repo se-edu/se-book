@@ -77,7 +77,7 @@ Date:   Sat ...
 | `N`          | Repeat the last search (backward)
 | `h`          | Show help screen with all `less` commands
 
-**If you’d rather see the output directly**, without using a pager, you can add the --no-pager flag to the command e.g.,
+**If you’d rather see the output directly**, without using a pager, you can add the `--no-pager` flag to the command e.g.,
 ```bash
 git --no-pager log
 ```
