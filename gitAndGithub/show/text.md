@@ -200,7 +200,7 @@ To view the parent commit of the latest commit, you can use any of these command
  git show e60deae  # first few characters of the SHA
  git show e60deae.....  # run git log to find the full SHA and specify the full SHA
  ```
-To view the one two commits prior to the latest commit, you can use `git show HEAD~2` etc.
+To view the commit that is two commits before the latest commit, you can use `git show HEAD~2` etc.
 
 {% endset %}
 {% set sourcetree %}

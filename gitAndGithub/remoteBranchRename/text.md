@@ -14,11 +14,11 @@ Occasionally, you might need to **rename a branch in a remote repo**.
 <!-- ================== start: HANDS-ON =========================== -->
 {% call show_hands_on_practical("Rename branches in a remote")  %}
 
-This hands-on practical can be done using the fork and the clone of the [samplerepo-books](https://github.com/se-edu/samplerepo-books) that you created in {{ show_lesson_link(trail.remoteBranches.lessons.remoteBranchDelete) }}.
+{{ hp_number(hop_preparation) }} You can use the fork and the clone of the [samplerepo-books](https://github.com/se-edu/samplerepo-books) that you created in {{ show_lesson_link(trail.remoteBranches.lessons.remoteBranchDelete) }}.
 
-**Rename the branch `fantasy`** in the remote (i.e., your fork) to `fantasy-books`.
+{{ hp_number(hop_target) }} **Rename the branch `fantasy`** in the remote (i.e., your fork) to `fantasy-books`.
 
-Here are the steps:
+{{ hp_number("steps") }}
 
 1. Ensure you are in the `master` branch.
 1. Create a local copy of the remote-tracking branch `origin/fantasy`.

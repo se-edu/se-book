@@ -34,13 +34,13 @@ Given below is an illustration of how branch refs move as branches evolve. Refer
 * The repo has switched back to the `master` branch. Hence, the `HEAD` has moved back to `master` branch's <tooltip content="latest commit of that branch">tip</tooltip>.<br>
    At this point, the repo's working directory reflects the code at commit `b` (not `c`).
 
-<annotate src="{{ baseUrl }}/gitAndGithub/branch/images/branchesAsLabels2.png" width="400">
+<annotate src="{{ baseUrl }}/gitAndGithub/branch/images/branchesAsLabels2.png" width="460">
 <a-point x="15%" y="10%" label="[6]" opacity="0"/>
 <a-point x="50%" y="5%" label="[7]" opacity="0"/>
 </annotate>
 
 * A new commit (`d`) has been added. The `master` and the `HEAD` refs have moved to that commit. {texts="['[6]', '[7]']"}
-* The repo has switched back to the `fix1` branch and added a new commit (`e`) to it.
+* The repo has switched back to the `fix1` branch and added a new commit `e` to it. Note how the branch ref `fix1` (together with `HEAD`) has moved to the new commit `e` while the branch ref `master` still points to `d`.
 
 <box type="warning" seamless>
 
@@ -117,7 +117,7 @@ Note how the `feature1` is indicated as the current branch (reason: Sourcetree a
 <!-- ------ end: Git Tabs -------------------------------->
 
 {{ hp_number ('3') }} **Create some commits in the new branch.** %%Just commit as per normal. Commits you add while on a certain branch will become part of that branch.%%<br>
-Note how the `master` ref and the `HEAD` ref moves to the new commit.
+Note how the `master` ref and the `HEAD` ref move to the new commit.
 
 {% set cli %} <!-- ------ start: Git Tabs --------------->
 As before, you can use the `git log --one-line --decorate` command for this.

@@ -37,7 +37,7 @@ Resetting is different from the _checkout_ feature:
 
 **There are three types of resets: soft, mixed, hard.** All three move the branch pointer to a new commit, but they vary based on what happens to the staging area and the working directory.
 
-* {{ show_git_term("soft reset") }}: Moves the cumulative changes from the discarded commits in to the staging area, waiting to be committed again. Any staged and unstaged changes that existed before the reset will remain untouched.
+* {{ show_git_term("soft reset") }}: Moves the cumulative changes from the discarded commits into the staging area, waiting to be committed again. Any staged and unstaged changes that existed before the reset will remain untouched.
 * {{ show_git_term("mixed reset") }}: Cumulative changes from the discarded commits, and any existing staged changes, are moved into the working directory.
 * {{ show_git_term("hard reset") }}: All staged and unstaged changes are discarded. Both the working directory and the staging area are aligned with the target commit (as if no changes were done after that commit).
 

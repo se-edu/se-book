@@ -107,7 +107,7 @@ gitGraph BT:
     commit id: "[HEAD → master] m4"
 </mermaid>
 
-{{ hp_number ('4') }} **Merge `feature1` to the master branch**, giving and end-result like this:
+{{ hp_number ('4') }} **Merge `feature1` to the master branch**, giving an end-result like this:
 
 <mermaid>
 gitGraph BT:
@@ -200,7 +200,7 @@ gitGraph BT:
     commit id: "add-countries] a2"
 </mermaid>
 
-{{ hp_number ('3') }} **Merge the `add-countries` branch onto the `master` branch.** Observe that there is no merge commit. The `master` branch ref (and the `HEAD` ref along with it) moved to the tip of the `add-countries` branch (i.e., `a2`) and both branches now points to `a2`.
+{{ hp_number ('3') }} **Merge the `add-countries` branch onto the `master` branch.** Observe that there is no merge commit. The `master` branch ref (and the `HEAD` ref along with it) moved to the tip of the `add-countries` branch (i.e., `a2`) and both branches now point to `a2`.
 
 <mermaid>
 gitGraph BT:

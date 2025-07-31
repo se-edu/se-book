@@ -14,7 +14,7 @@
 
 Unlike merging or rebasing — which bring over all changes since the branches diverged — cherry-picking lets you choose individual commits and apply just those, one at a time, to your current branch. This is useful when you want to bring over a bug fix or a small feature from another branch without merging the entire branch history.
 
-Because cherry-picking copies only the chosen commits, it creates new commits on your branch with the same changes but different SHA values.
+Because cherry-picking copies only the chosen commits, **it creates new commits on your branch with the same changes but different SHA values**.
 
 Suppose we have the following revision graph, and we want to bring over the changes introduced in `m3` (in the `master` branch) onto the `feature` branch.
 <mermaid>

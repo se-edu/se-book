@@ -9,7 +9,7 @@
 **Local branches can be replicated in a remote**.
 {% endcall %}
 
-**Pushing a copy of a local branches to the corresponding remote repo makes those branches available remotely.**
+**Pushing a copy of local branches to the corresponding remote repo makes those branches available remotely.**
 
 In a previous lesson, we saw how to push the default branch to a remote repository and have Git set up tracking between the local and remote branches using a remote-tracking reference. **Pushing any other local branch to a remote works the same way as pushing the default branch — you simply specify the target branch instead of the default branch.** Pushing any new commits in any local branch to a corresponding remote branch is done similarly as well.
 
@@ -50,7 +50,7 @@ gitGraph BT:
 
 
 <!-- ================== start: HANDS-ON =========================== -->
-{% call show_hands_on_practical("Push locla branches to remote")  %}
+{% call show_hands_on_practical("Push local branches to remote")  %}
 
 <!-- commands to create samplerepo-company
 
@@ -73,10 +73,10 @@ git commit -am "Add Michael to employees.txt"
 -->
 
 
-{{ hp_number("1") }} **Fork the [samplerepo-company](https://github.com/se-edu/samplerepo-company)** to your GitHub account. When doing so, ==un-tick the `Copy the master branch only` option==.<br>
+{{ hp_number(hop_preparation) }} **Fork the [samplerepo-company](https://github.com/se-edu/samplerepo-company)** to your GitHub account. When doing so, ==un-tick the `Copy the master branch only` option==.<br>
 After forking, go to the fork and ensure both branches (`master`, and `track-sales`) are in there.
 
-{{ hp_number("2") }} **Clone the fork** to your computer. It should look something like this:
+**Clone the fork** to your computer. It should look something like this:
 
 <mermaid>
 gitGraph BT:
@@ -95,7 +95,7 @@ gitGraph BT:
 The `origin/HEAD` remote-tracking ref indicates where the `HEAD` ref is in the remote `origin`.
 </box>
 
-{{ hp_number("3") }} **Create a new branch `hiring`, and add a commit to that branch.** The commit can contain any changes you want.
+{{ hp_number("1") }} **Create a new branch `hiring`, and add a commit to that branch.** The commit can contain any changes you want.
 
 <box type="tip" seamless>
 
@@ -124,7 +124,7 @@ gitGraph BT:
 </mermaid>
  The resulting revision graph should look like the one above.
 
-{{ hp_number("4") }} **Push the `hiring` branch to the remote.**
+{{ hp_number("2") }} **Push the `hiring` branch to the remote.**
 
 {% set cli %} <!-- ------ start: Git Tabs --------------->
 
@@ -141,7 +141,7 @@ git push origin -u hiring
 {{ show_git_tabs_from_text(cli, sourcetree) }}
 <!-- ------ end: Git Tabs -------------------------------->
 
-{{ hp_number("5") }} **Verify the branch has been pushed to the remote** by visiting the fork on GitHub, and looking for the `origin/hiring` remote-tracking ref in the local repo.
+{{ hp_number("3") }} **Verify the branch has been pushed to the remote** by visiting the fork on GitHub, and looking for the `origin/hiring` remote-tracking ref in the local repo.
 {% endcall %}<!-- ===== end: HANDS-ON ============================ -->
 
 </div>

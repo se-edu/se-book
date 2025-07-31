@@ -35,32 +35,3 @@ Date:   ...
 
     Add fruits.txt
 ```
-
-{% call show_protip("Staging multiple files in one go") %}
-Here are several ways of staging multiple files simultaneously.
-
-**Specify multiple files:**
-```bash
-git add f1.txt f2.txt data/lists/f3.txt
-```
-
-**Add using a [glob pattern](https://en.wikipedia.org/wiki/Glob_(programming)):**
-```bash
-git add *.txt  # adds all .txt files in the current directory
-```
-
-**Add all files in the current directory and subdirectories:**
-```bash
-git add .
-```
-
-**Add all changes in a specific directory and subdirectories:**
-```bash
-git add path/to/directory
-```
-
-**Add all changes in the entire repository:**
-```bash
-git add -A
-```
-{% endcall %}

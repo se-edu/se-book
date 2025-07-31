@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import trail, bold_number, callout, hp_number, label, show_git_term, show_git_term_tip, show_detour, show_exercise,show_folder_columns, show_folder_contents, show_git_tabs, show_hands_on_practical, show_lesson_intro, show_output, show_under_the_hood with context %}
+{% from "common/macros.njk" import trail, bold_number, callout, hp_number, label, show_commit, show_folder_columns, show_git_term, show_git_term_tip, show_detour, show_exercise, show_git_tabs, show_git_tabs_from_text, show_hands_on_practical, show_head, show_lesson_intro, show_lesson_link, show_output, show_protip, show_ref, show_resources, show_sidebar, show_tag, show_transformation_columns, show_under_the_hood with context %}
 
 <span id="outcomes">{{ icon_outcome }} Can stage files</span>
 <span id="title">{{ trail.recordingFolderHistory.lessons.stage.title }}</span>
@@ -90,10 +90,48 @@ dragon fruits
 
 {% endcall %} <!-- end: HOP -->
 
-**Staging (and unstaging) is how you tell Git which changes you want to include in the next snapshot, regardless of whether a file is currently tracked.** If a file is untracked, staging it will both begin tracking the file and include it in the next snapshot. If the file is already tracked, staging will simply mark its current changes for inclusion in the next commit. <span class="non-printable">In fact, Git supports fine-grained selective staging i.e., staging only specific changes within a file while leaving other changes to the same file unstaged. This will be covered in a later lesson.</span>
+**Staging applies regardless of whether a file is currently tracked.**
+ * Staging a tracked file will both begin tracking the file and include it in the next snapshot.
+ * **Staging an already tracked file will simply mark its current changes for inclusion in the next commit.**
+
+<div class="non-printable">
+
+**Git also supports fine-grained selective staging** i.e., staging only specific changes within a file while leaving other changes to the same file unstaged. This will be covered in a later lesson.
+</div>
 
 **Git does not track empty folders**. It tracks only folders that contain tracked files.<br>
 <span class="non-printable">You can test this by adding an empty subfolder inside the `things` folder (e.g., `things/more-things`) and checking if it shows up as 'untracked' (it will not). If you add a file to that folder (e.g., `things/more-things/food.txt`) and then staged that file (e.g., `git add more-things/food.txt`), the folder will now be included in the next snapshot.</span>
+
+
+{% call show_protip("Staging multiple files in one go") %}
+Here are several ways of staging multiple files simultaneously.
+
+**Specify multiple files:**
+```bash
+git add f1.txt f2.txt data/lists/f3.txt
+```
+
+**Add using a [glob pattern](https://en.wikipedia.org/wiki/Glob_(programming)):**
+```bash
+git add *.txt  # adds all .txt files in the current directory
+```
+
+**Add all files in the current directory and subdirectories:**
+```bash
+git add .
+```
+
+**Add all changes in a specific directory and subdirectories:**
+```bash
+git add path/to/directory
+```
+
+**Add all changes in the entire repository:**
+```bash
+git add -A
+```
+{% endcall %} <!-- end: show_protip -->
+
 
 </div>
 

@@ -26,7 +26,7 @@ Sometimes we need to create a local copy of a branch from a remote repository, m
 <!-- ================== start: HANDS-ON =========================== -->
 {% call show_hands_on_practical("Work with a branch that existed in the remote")  %}
 
-This hands-on practical **uses the same [samplerepo-company](https://github.com/se-edu/samplerepo-company) repo** you used in {{ show_lesson_link(trail.remoteBranches.lessons.remoteBranchPush) }}. Fork and clone it if you haven't done that already.
+{{ hp_number(hop_preparation) }} **Use the same [samplerepo-company](https://github.com/se-edu/samplerepo-company) repo** you used in {{ show_lesson_link(trail.remoteBranches.lessons.remoteBranchPush) }}. Fork and clone it if you haven't done that already.
 
 {{ hp_number("1") }} **Verify that the remote-tracking branch `origin/track-sales` exists in the local repo, but there is no local copy of it.**
 

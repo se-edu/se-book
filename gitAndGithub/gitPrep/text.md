@@ -95,8 +95,8 @@ The output should display the version number.
 
 **To set the two config settings**, run the following commands in your terminal window:
 ```bash{.no-line-numbers}
-git config --global user.name "Your Name"
-git config --global user.email "your_email@example.com"
+git config --global user.name "<your-name>"
+git config --global user.email "<your-email@example.com>"
 ```
 
 **To check if they are set as intended**, you can use the following two commands:
@@ -169,7 +169,7 @@ brew install gitmastery
 <tabs>
   <tab header="Debian/Ubuntu">
 
-Ensure you are running `libc` version 2.38 or newer.
+Ensure you are running `libc` version 2.38 or newer (you can use the `ldd --version` command to check the current version).
 
 Then install the app by running the following commands:
 

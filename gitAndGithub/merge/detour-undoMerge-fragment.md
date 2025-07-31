@@ -14,4 +14,4 @@
 If you want to undo that merge,
 
 1. Ensure you are in the `feature1` branch (because that's the branch that _received_ the merge).
-1. Reset the `feature1` branch to the commit highlighted (in yellow) in the screenshot above (because that was the tip of the `feature1` branch before you merged the `master` branch to it.
+1. Reset the `feature1` branch to the commit highlighted (in yellow) in the screenshot above (because that was the tip of the `feature1` branch before you merged the `master` branch to it).

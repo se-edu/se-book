@@ -153,7 +153,7 @@ Observe that all commits remain. The only missing thing is the `textbook` ref.
 
 {{ hp_number("2") }} **Make a copy of the `SHA` of the tip of the (unmerged) `fantasy` branch.**
 
-{{ hp_number("3") }} **Delete the `fantasy` branch..**
+{{ hp_number("3") }} **Delete the `fantasy` branch.**
 
 {% set cli %} <!-- ------ start: Git Tabs --------------->
 

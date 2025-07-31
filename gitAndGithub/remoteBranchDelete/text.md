@@ -14,20 +14,20 @@ Often, you'll need to **delete a branch in a remote repo** after it has served i
 <!-- ================== start: HANDS-ON =========================== -->
 {% call show_hands_on_practical("Delete (and restore) branches in a remote")  %}
 
-{{ hp_number("1") }} **Fork the [samplerepo-books](https://github.com/se-edu/samplerepo-books)** to your GitHub account. When doing so, ==un-tick the `Copy the master branch only` option==.<br>
+{{ hp_number(hop_preparation) }} **Fork the [samplerepo-books](https://github.com/se-edu/samplerepo-books)** to your GitHub account. When doing so, ==un-tick the `Copy the master branch only` option==.<br>
 After forking, go to the fork and ensure all three branches are in there.
 
-{{ hp_number("2") }} **Clone the fork** to your computer.
+**Clone the fork** to your computer.
 
-{{ hp_number("3") }} **Create a local copy of the `fantasy` branch** in your clone.
+{{ hp_number("1") }} **Create a local copy of the `fantasy` branch** in your clone.
 
-Follow instructions in {{ show_lesson_link(trail.remoteBranches.lessons.remoteBranchPush) }}.
+Follow instructions in {{ show_lesson_link(trail.remoteBranches.lessons.remoteBranchPull) }}.
 
-{{ hp_number("4") }} **Delete the remote branch `fantasy`.**
+{{ hp_number("2") }} **Delete the remote branch `fantasy`.**
 
 {% set cli %} <!-- ------ start: Git Tabs --------------->
 
-You can use the `git push <remote> --delete <branch>` command to delete a branch in a remote. This is like pushing changes in a branch to a remote, except we request the branch to be deleted instead by adding the `--delete` switch.
+You can use the `git push <remote> --delete <branch>` command to delete a branch in a remote. This is like pushing changes in a branch to a remote, except we request the branch to be deleted instead, by adding the `--delete` switch.
 ```bash{.no-line-numbers}
 git push origin --delete fantasy
 ```
@@ -43,11 +43,11 @@ Locate the remote branch under `REMOTES` → `origin`, right-click on the branch
 {{ show_git_tabs_from_text(cli, sourcetree) }}
 <!-- ------ end: Git Tabs -------------------------------->
 
-{{ hp_number("5") }} **Verify the branch was deleted** from the remote, by going to the fork on GitHub and checking the branches page `https://github.com/{YOUR_USERNAME}/samplerepo-books/branches`<br> e.g., `https://github.com/johndoe/samplerepo-books/branches`.
+{{ hp_number("3") }} **Verify the branch was deleted** from the remote, by going to the fork on GitHub and checking the branches page `https://github.com/{YOUR_USERNAME}/samplerepo-books/branches`<br> e.g., `https://github.com/johndoe/samplerepo-books/branches`.
 
 **Also verify the local copy has not been deleted**.
 
-{{ hp_number("6") }} **Restore the remote branch from the local copy.**
+{{ hp_number("4") }} **Restore the remote branch from the local copy.**
 
 Push the local branch to the remote, while enabling the tracking option (as if pushing the branch to the remote for the first time), as covered in {{ show_lesson_link(trail.remoteBranches.lessons.remoteBranchPush) }}.
 
