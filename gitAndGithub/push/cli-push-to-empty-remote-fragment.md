@@ -1,6 +1,5 @@
-
+Use the `git push -u <remote-repo-name> <branch-name>` to push the commits to a remote repository.
 ```bash{.no-line-numbers}
-# format: git push -u <remote-repo-name> <branch-name>
 git push -u origin master
 ```
 Explanation:

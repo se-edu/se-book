@@ -84,7 +84,7 @@ Set up your computer's GitHub authentication, as described in the se-edu guide [
 <tabs>
   <tab header=":fab-windows: Windows">
 
-**1. Download and run the .msi installer** from the [GitHub CLI releases page](https://github.com/cli/cli/releases).
+**1. Download and run the installer** from the [GitHub CLI releases page](https://github.com/cli/cli/releases). This is the file named as `GitHub CLI {version} windows {chip variant} installer`.
   </tab>
   <tab header=":fab-apple: MacOS">
 

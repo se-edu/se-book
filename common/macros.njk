@@ -129,6 +129,10 @@
 } %}
 <!-- ============================================================ -->
 
+{% macro button_green(text) %}<span class="btn btn-success ps-1 pe-1 pb-0 pt-0">{{ text }}</span>{% endmacro %}
+{% macro button_light(text) %}<span class="btn btn-light ps-1 pe-1 pb-0 pt-0 border">{{ text }}</span>{% endmacro %}
+<!-- ============================================================ -->
+
 {% macro show_tour_title(text) %}<div class="text-white bg-success p-1" style="border-top-left-radius: 15px; border-top-right-radius: 15px;"><span class="h2"><span class="text-light"><md>:fas-map-marker-alt:</md></span> {{ text }}</span></div>{% endmacro %}
 <!-- ============================================================ -->
 
@@ -341,7 +345,7 @@ That aspect is covered in a detour **in the lesson [_{{ detour.lesson.title }}_]
 {% endmacro %}
 <!-- ============================================================ -->
 
-{% macro show_exercise(identifier, has_download=1) %}
+{% macro show_exercise(identifier, has_download=1, has_verify=1) %}
 <panel tags="git-mastery" class="non-printable" type="danger" header="{{ icon_exercise }} EXERCISE: `{{ identifier }}`">
 {% if has_download %}
 **To download** the exercise,
@@ -360,12 +364,12 @@ That aspect is covered in a detour **in the lesson [_{{ detour.lesson.title }}_]
 </div>
 
 ---{.dashed .border-danger}
-
+{% if has_verify %}
 **To verify** your work,
 
 * navigate to anywhere inside the `gitmastery-exercises/{{ identifier }}` folder %%(or any sub-folder of it)%%.
 * run the `gitmastery verify` command.
-
+{% endif %}
 <div class="bg-light">
 
   -><small>[Git-Mastery **commands list**](https://git-mastery.github.io/app/) | [Report Git-Mastery **bugs**](https://github.com/git-mastery/git-mastery/issues)</small><-

@@ -60,7 +60,10 @@ origin  https://github.com/johndoe/things.git (push)
 
 {{ hp_number('1') }} **Open the local repo** in Sourcetree.
 
-{{ hp_number('2') }} **Choose `Repository` → `Repository Settings`** menu option.
+{{ hp_number('2') }} **Open the dialog for adding a remote**, as follows:
+
+:fab-windows: Choose `Repository` → `Repository Settings` menu option.<br>
+:fab-apple: Choose `Repository` → `Repository Settings...` → Choose `Remotes` tab.
 
 {{ hp_number('3') }} **Add a new _remote_** to the repo with the following values.
 
