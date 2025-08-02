@@ -11,7 +11,7 @@
 
 **Git {{ show_git_term("branches") }} let you develop multiple versions of your work in parallel — effectively creating {{ show_git_term("diverged") }} timelines of your repository’s history.** For example, one team member can create a new branch to experiment with a change, while the rest of the team continues working on another branch. Branches can have meaningful names, such as `master`, `release`, or `draft`.
 
-**A Git branch is simply a ref (a named label) that points to a commit and automatically moves forward as you add new commits to that branch.** As you’ve seen before, the `HEAD` ref indicates which branch you’re currently working on, by pointing to corresponding branch ref.<br>
+**A Git branch is simply a ref (a named label) that points to a commit and automatically moves forward as you add new commits to that branch.** As you’ve seen before, the `HEAD` ref indicates which branch you’re currently working on, by pointing to the corresponding branch ref.<br>
 **When you add a commit, it goes into the branch you are currently on**, and the branch ref (together with the `HEAD` ref) moves to the new commit.
 
 **Git creates a branch named `master` by default** (Git can be configured to use a different name e.g., `main`).
@@ -130,7 +130,7 @@ As before, you can use the `git log --one-line --decorate` command for this.
 {{ show_git_tabs_from_text(cli, sourcetree) }}
 <!-- ------ end: Git Tabs -------------------------------->
 
-{{ hp_number ('4') }} **Switch to the `master` branch.** Note how the changes you did in the `feature1` branch are no longer in the working directory.
+{{ hp_number ('4') }} **Switch to the `master` branch.** Note how the changes you made in the `feature1` branch are no longer in the working directory.
 
 {% set cli %} <!-- ------ start: Git Tabs --------------->
 ```bash{.no-line-numbers}
@@ -226,7 +226,7 @@ This repo uses `main` (not `master`) as the default branch.
 
 1. **Create a branch** named `bug-fix`.<br>
    **Switch to that branch**.
-1. **Update the `greet.py`** file so that the `greet` function use the `name` variable in the output, as follows:
+1. **Update the `greet.py`** file so that the `greet` function uses the `name` variable in the output, as follows:
    ```diff
    -    print("Hi Alice")
    +    print(f"Hi {name}")

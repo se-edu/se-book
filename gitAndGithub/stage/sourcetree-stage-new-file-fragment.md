@@ -10,6 +10,16 @@
 If the newly-added file does not show up in Sourcetree UI, refresh the UI (:fab-windows:: <kbd>F5</kbd><br> | :fab-apple: <kbd>⌥</kbd>+<kbd>R</kbd>)
 </box>
 
+<box type="warning" seamless>
+
+**Sourcetree screenshots/instructions: :fab-windows: vs :fab-apple:**
+
+Note that Sourcetree UI can vary slightly between Windows and Mac versions. Some of the screenshots given in our lessons are from the Windows version while some are from the Mac version.
+
+In som cases, we have specified how they differ.<br>
+In other cases, you may need to adapt if the given screenshots/instructions are slightly different from what you are seeing in your Sourcetree.
+</box>
+
 {{ hp_number('2.2') }} **Stage the file**:
 
 :fab-windows: Select the `fruits.txt` and click on the `Stage Selected` button.<br>

@@ -204,7 +204,7 @@ Observe how the branch ref `fantasy` is gone, together with any unmerged commits
 
 e.g., `git show 32b34fb` (use the `SHA` you copied earlier)
 
-Observe how the commit still exists and still reachable using the commit ID, although not reachable by other means, and not visible in the revision graph.
+Observe how the commit still exists and still is reachable using the commit ID, although it is not reachable by other means, and not visible in the revision graph.
 <!-- ------ end: Git Tabs -------------------------------->
 
 {% endcall %}<!-- ===== end: HANDS-ON ============================ -->

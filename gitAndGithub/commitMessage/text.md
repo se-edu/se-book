@@ -75,7 +75,7 @@ You can write your full commit message in the textbox you have been using to wri
 
 {% call show_protip("Configure Git to use your preferred text editor") %}
 
-**Git will use the default text editor when it needs you to write a commit message.** However, Git can can be configured to use a different text editor of your choice.
+**Git will use the default text editor when it needs you to write a commit message.** However, Git can be configured to use a different text editor of your choice.
 
 <div class="non-printable">
 

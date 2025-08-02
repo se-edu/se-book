@@ -73,7 +73,7 @@ git commit -am "Add Michael to employees.txt"
 -->
 
 
-{{ hp_number(hop_preparation) }} **Fork the [samplerepo-company](https://github.com/se-edu/samplerepo-company)** to your GitHub account. When doing so, ==un-tick the `Copy the master branch only` option==.<br>
+{{ hp_number(hop_preparation) }} **Fork the [samplerepo-company](https://github.com/se-edu/samplerepo-company)** to your GitHub account. When doing so, ==un-tick the <code>Copy the master branch only</code> option==.<br>
 After forking, go to the fork and ensure both branches (`master`, and `track-sales`) are in there.
 
 **Clone the fork** to your computer. It should look something like this:

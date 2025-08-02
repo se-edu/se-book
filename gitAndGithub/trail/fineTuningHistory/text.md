@@ -10,7 +10,7 @@ pageNav: 4
 
 <span class="d-none" id="destination">To be able to maintain a clean and meaningful revision history.</span>
 
-<span class="d-none" id="motivation">The usefulness of the revision history increases if it consisted of well-crafted and well-documented commits.</span>
+<span class="d-none" id="motivation">The usefulness of the revision history increases if it consists of well-crafted and well-documented commits.</span>
 
 <span class="d-none" id="achievements">You should now be able to create more meaningful commits from the start, and also refine them further after they’ve been created.</span>
 

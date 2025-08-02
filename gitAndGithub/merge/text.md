@@ -84,7 +84,7 @@ The revision graph should look like this now (colours and line alignment might v
 
 <!-- ------ end: Git Tabs -------------------------------->
 
-Observe how the changes you did in the `master` branch (i.e., the imaginary bug fix in `m3`) is now available even when you are in the `feature1` branch.<br>
+Observe how the changes you made in the `master` branch (i.e., the imaginary bug fix in `m3`) is now available even when you are in the `feature1` branch.<br>
 Furthermore, observe (e.g., `git show HEAD`) how the merge commit contains the sum of changes done in  commits `m3`, `f1`, and `f2`.
 
 {{ hp_number ('3') }} **Add another commit to the `feature1` branch.**<br>
@@ -141,7 +141,7 @@ Right-click on the `feature1` branch and choose `Merge...`. The resulting revisi
 {{ show_git_tabs_from_text(cli, sourcetree) }}
 <!-- ------ end: Git Tabs -------------------------------->
 
-Now, any changes you did in `feature1` branch are available in the master branch.
+Now, any changes you made in `feature1` branch are available in the master branch.
 {% endcall %}<!-- ===== end: HANDS-ON ============================ -->
 
 **When the branch you're merging into hasn't diverged** — meaning it hasn't had any new commits since the merge base —  **Git simply moves the branch pointer forward to include all the new commits**, keeping the history clean and linear. This is **called a {{ show_git_term("fast-forward merge") }}** because Git simply "fast-forwards" the branch pointer to the tip of the other branch. The result looks as if all the changes had been made directly on one branch, without any branching at all.
@@ -214,7 +214,7 @@ gitGraph BT:
 
 
 
-**It is possible to force Git to create a merge commit even if fast forwarding is possible.** This is useful if you wish the revision graph to visually show when each branch was merged to the main timeline.
+**It is possible to force Git to create a merge commit even if fast forwarding is possible.** This is useful if you prefer the revision graph to visually show when each branch was merged to the main timeline.
 
 <div class="non-printable">
 

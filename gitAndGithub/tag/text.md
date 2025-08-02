@@ -17,7 +17,7 @@ When working with many commits, it helps to **tag specific commits with custom n
 <p/>
 
 
-**A tag stays fixed to the commit.** Unlike branch refs or `HEAD`, tags do not move automatically as new commits are made. As you see below, after adding a new commit, tags stay in the previous commits while {{ show_ref('master')  + show_head() }} have moved to the new commit.
+**A tag stays fixed to the commit.** Unlike branch refs or `HEAD`, tags do not move automatically as new commits are made. As you see below, after adding a new commit, tags stay in the previous commits while {{ show_ref('master')  + show_head() }} has moved to the new commit.
 
 {{ show_commit('C4', desc=show_ref('master') + show_head(), msg='Trim the list') }}
 {{ show_commit('C3', desc=show_tag('interim'), msg='Update list') }}

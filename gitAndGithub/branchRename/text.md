@@ -97,7 +97,7 @@ git log --one-line --decorate --graph --all  # verify the changes
 ```
 {{ icon_info }} Note these additional switches to the `log` command:
 * `--all`: Shows all branches, not just the current branch.
-* `--graph`: Shows a graph-like visualisation (notice how `*` is used to indicate a commit, and branches are indicated using vertical lines.
+* `--graph`: Shows a graph-like visualisation (notice how `*` is used to indicate a commit, and branches are indicated using vertical lines).
 {% endcall %}
 
 {% endset %}
