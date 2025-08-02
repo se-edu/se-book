@@ -6,10 +6,10 @@
 
 <div id="body">
 {% call show_lesson_intro() %}
-**Merging is one way to keep one branch synchronise itself** with changes introduced into another.
+**Merging is one way to keep one branch synchronised** with another.
 {% endcall %}
 
-**When working in parallel branches, you’ll often need to {{ show_git_term("sync") }} (short for synchronise) one branch with changes made in another.** For example, while developing a feature in one branch, you might want to bring in a recent bug fix from another branch that your branch doesn’t yet have.
+**When working in parallel branches, you’ll often need to {{ show_git_term("sync") }} (short for synchronise) one branch with another.** For example, while developing a feature in one branch, you might want to bring in a recent bug fix from another branch that your branch doesn’t yet have.
 
 **The simplest way to sync branches is to merge** — that is, to sync a branch `b1` with changes from another branch `b2`, you merge `b2` into `b1`. In fact, you can merge them periodically to keep one branch up to date with the other.
 

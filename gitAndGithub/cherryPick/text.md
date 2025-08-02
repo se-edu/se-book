@@ -50,10 +50,9 @@ gitGraph
     commit id: "[HEAD → feature] m3a" type: HIGHLIGHT
 </mermaid>
 
-Note how it makes the changes done in `m3` available (from now on) in the `feature` branch, with minimal changes to the revison graph.<br>
-Also note that the new commit `m3a` contains the same changes as `m3`, but it will a different Git object with a different SHA value.
+Note how it makes the changes done in `m3` available (from now on) in the `feature` branch, with minimal changes to the revision graph. Also note that the new commit `m3a` contains the same changes as `m3`, but it will be a different Git object with a different SHA value.
 
-**Cherry-picking is another Git operation that can result in conflicts** i.e., if the changes in the cherry-picked commit conflicts with the changes in the receiving branch.
+**Cherry-picking is another Git operation that can result in conflicts** i.e., if the changes in the cherry-picked commit conflict with the changes in the receiving branch.
 </div>
 <div id="extras">
 </div>
