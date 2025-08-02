@@ -9,7 +9,12 @@
 Occasionally, you might need to **rename a branch in a remote repo**.
 {% endcall %}
 
-**You can't rename remote branches in place. Instead, you create a new branch with the desired name and delete the old one.** This involves renaming your local branch to the new name, pushing it to the remote (which effectively creates a new remote branch), and then removing the old branch from the remote. This ensures the remote reflects the updated name while preserving the commit history and any work already done on the branch.
+**Git does not have a way to rename remote branches in place. Instead, you create a new branch with the desired name and delete the old one.** This involves renaming your local branch to the new name, pushing it to the remote (which effectively creates a new remote branch), and then removing the old branch from the remote. This ensures the remote reflects the updated name while preserving the commit history and any work already done on the branch.
+
+<box type="tip" seamless>
+
+While Git cannot rename a remote branch in place, **[GitHub allows you to rename a branch](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-branches-in-your-repository/renaming-a-branch) in a remote repo.** If you use this approach, the local repo still needs to be updated to reflect the change.
+</box>
 
 <!-- ================== start: HANDS-ON =========================== -->
 {% call show_hands_on_practical("Rename branches in a remote")  %}
@@ -18,7 +23,7 @@ Occasionally, you might need to **rename a branch in a remote repo**.
 
 {{ hp_number(hop_target) }} **Rename the branch `fantasy`** in the remote (i.e., your fork) to `fantasy-books`.
 
-{{ hp_number("steps") }}
+{{ hp_number("Steps") }}
 
 1. Ensure you are in the `master` branch.
 1. Create a local copy of the remote-tracking branch `origin/fantasy`.

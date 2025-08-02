@@ -16,7 +16,7 @@ Sometimes we need to create a local copy of a branch from a remote repository, m
 
 **When you clone a repository,**
 
-1. **Git checks out the default branch.** You can start working on this branch immediately. This branch is tracking the default branch in the remote, which means you easily synchronise changes in this branch with the remote by pulling and pushing.
+1. **Git checks out the default branch.** You can start working on this branch immediately. This branch is tracking the default branch in the remote, which means you can easily synchronise changes in this branch with the remote by pulling and pushing.
 1. **Git also _fetches_ all the other branches from the remote.** These other branches are not immediately available as local branches, but they are visible as remote-tracking branches.<br>
    **You can think of remote-tracking branches as read-only references** to the state of those branches in the remote repository at the time of cloning. They allow you to see what work has been done on those branches without yet making local copies of them.<br>
    **To work on one of these branches, you can create a new local branch based on the remote-tracking branch.** Once you do this, your local branch will usually be configured to track the corresponding branch on the remote, so you can easily synchronise your work later.

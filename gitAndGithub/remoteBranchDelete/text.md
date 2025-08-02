@@ -6,7 +6,7 @@
 
 <div id="body">
 {% call show_lesson_intro() %}
-Often, you'll need to **delete a branch in a remote repo** after it has served it purpose.
+Often, you'll need to **delete a branch in a remote repo** after it has served its purpose.
 {% endcall %}
 
 **To delete a branch in a remote repository, you simply tell Git to remove the reference to that branch from the remote.** This does not delete the branch from your local repository — it only removes it from the remote, so others won’t see it anymore. This is useful for cleaning up clutter in the remote repo e.g., delete old or merged branches that are no longer needed on the remote.
@@ -45,7 +45,7 @@ Locate the remote branch under `REMOTES` → `origin`, right-click on the branch
 
 {{ hp_number("3") }} **Verify the branch was deleted** from the remote, by going to the fork on GitHub and checking the branches page `https://github.com/{YOUR_USERNAME}/samplerepo-books/branches`<br> e.g., `https://github.com/johndoe/samplerepo-books/branches`.
 
-**Also verify the local copy has not been deleted**.
+**Also verify that the local copy has not been deleted**.
 
 {{ hp_number("4") }} **Restore the remote branch from the local copy.**
 

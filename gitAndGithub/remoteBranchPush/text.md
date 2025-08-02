@@ -95,11 +95,11 @@ gitGraph BT:
 The `origin/HEAD` remote-tracking ref indicates where the `HEAD` ref is in the remote `origin`.
 </box>
 
-{{ hp_number("1") }} **Create a new branch `hiring`, and add a commit to that branch.** The commit can contain any changes you want.
+{{ hp_number("1") }} **Create a new branch called `hiring`, and add a commit to that branch.** The commit can contain any changes you want.
 
 <box type="tip" seamless>
 
-Here are the commands you can run in the terminal to do this step in on shot:
+Here are the commands you can run in the terminal to do this step in one shot:
 
 ```bash{.no-line-numbers}
 git switch -c hiring
