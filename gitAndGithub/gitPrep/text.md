@@ -155,6 +155,8 @@ Our Git lessons show how to perform Git operations in Git CLI, and in Sourcetree
 1. Find the blocked `gitmastery.exe` and click it.
 1. Choose `Actions` → `Allow on device`.<br>
    After this step, you may need to re-download the file if it was removed previously.
+
+Alternatively, refer to [this page](https://support.microsoft.com/en-us/windows/virus-and-threat-protection-in-the-windows-security-app-1362f4cd-d71a-b52a-0b66-c2820032b65e) to see how to exclude a file from Windows virus scanner (look for the section named 'Exclusions').
 </panel>
   </tab>
   <tab header=":fab-apple: MacOS">

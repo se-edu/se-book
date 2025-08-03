@@ -69,7 +69,7 @@ Explanation: When you create `C4`, the current branch `master` moves to `C4`, an
 
 {{ hp_number(hop_target) }} **Use Git features to examine the revision graph of a simple repo.**
 
-{{ hp_number(hop_preparation) }} For this, use a repo with just a few commits and only one branch for this hands-on practical.
+{{ hp_number(hop_preparation) }} Use a repo with just a few commits and only one branch.
 
 {{ show_git_tabs('-view-rg-normal') }}
 
