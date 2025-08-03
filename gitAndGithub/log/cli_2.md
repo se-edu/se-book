@@ -6,7 +6,7 @@ git log
 ```
 {% call show_output() %}
 ```bash{.no-line-numbers}
-commit d5f91de... (HEAD -> master)
+commit ... (HEAD -> master)
 Author: ... <...@...>
 Date:   ...
 

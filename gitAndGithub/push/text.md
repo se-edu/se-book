@@ -12,20 +12,40 @@ The third step of backing up a local repo on GitHub: **push a copy of the local 
 
 {% endcall %}
 
-**You can {{ show_git_term('push') }} content of one repository to another**. Pushing can transfer Git history (e.g., past commits) as well as files in the working directory. Note that pushing to a remote repo requires you to have write-access to it.
+**You can {{ show_git_term('push') }} content of one repository to another**, usually from your local repo to a remote repo. Pushing transfers recorded Git history (such as past commits), but it does not transfer unstaged changes or untracked files.
 
-When pushing to a remote repo, you typically need to specify the following information:
+* **To push, you need to have <tooltip content="permission to update contents on the remote">write-access</tooltip> to the remote repo**.
+* **Pushing is performed one branch at a time**; you must specify which branch you want to push.
 
-* The name of the remote (e.g., `origin`).
-* The name of your current local branch (e.g., `master`).
+**You can configure Git to {{ show_git_term("track") }} a pairing between a local branch and a remote branch**, so in future you can push from the same local branch to the corresponding remote branch without needing to specify them again. For example, you can set your local `master` branch to _track_ the `master` branch on the remote repo `origin` i.e., local `master` branch will track the <tooltip content="'upstream' is commonly used to refer to the remote repo connected to a local repo">upstream</tooltip> branch `origin/master`.
 
-**If this is the first time you are pushing this branch to the remote repo, you can also ask Git to {{ show_git_term("track") }} this remote/branch pairing** (e.g., remember that this local `master` branch is _tracking_ the `master` branch in the <tooltip content="'upstream' is commonly used to refer to the remote repo connected to a local repo">upstream</tooltip> repo `origin` i.e., local `master` branch is tracking upstream `origin/master` branch), so in future you can push the same remote/branch without needing to specify them again.
+{{ show_commit('C3', desc=show_ref('master') + show_head() + show_ref('origin/master')) }}
+{{ show_commit('C2') }}
+{{ show_commit('C1', edge='') }}
+<p/>
+
+In the revision graph above, you see a new type of ref ({{ show_ref('origin/master') }}). This is a {{ show_git_term("remote-tracking branch") }} **ref that represents the state of a corresponding branch in a remote repository** (if you previously set up the branch to 'track' a remote branch). In this example, the `master` branch in the remote `origin` is also at the commit `C3` (which means you have not created new commits after you pushed to the remote).
+
+If you now create a new commit `C4`, the state of the revision graph will be as follows:
+
+{{ show_commit('#y#C4##', desc=show_ref('master')  + show_head(), style="primary") }}
+{{ show_commit('C3', desc= show_ref('origin/master')) }}
+{{ show_commit('C2') }}
+{{ show_commit('C1', edge='') }}
+<p/>
+
+Explanation: When you create `C4`, the current branch `master` moves to `C4`, and `HEAD` moves along with it. However, the `master` branch in the remote `origin` remains at `C3` (because you have not pushed `C4` yet). That is, the remote-tracking branch `origin/master` is _one commit {{ show_git_term("behind") }}_ the local branch `master` (or, the local branch is _one commit {{ show_git_term("ahead") }}_). The `origin/master` ref will move to `C4` only after you push your local branch to the remote again.
 
 {% call show_hands_on_practical('Pushing a local repo to an empty remote repo')  %}
 
-Here, we assume you already have a local repo that is connected to an empty remote repo, from previous hands-on practicals:
+{{ hp_number(hop_preparation) }} Use a local repo that is connected to an empty remote repo e.g., the `things` repo from previous hands-on practicals:
+
+{{ hp_number("1") }} **Push the `master` branch** to the remote. **Also instruct Git to track this branch pair**.
 
 {{ show_git_tabs('-push-to-empty-remote-fragment') }}
+
+{{ hp_number("2") }} **Observe the remote-tracking branch** `origin/master` is now pointing at the same commit as the `master` branch.
+{{ show_git_tabs('-after-pushing-to-empty-remote-fragment') }}
 
 {% endcall %}
 
@@ -33,14 +53,14 @@ Here, we assume you already have a local repo that is connected to an empty remo
 
 {% call show_hands_on_practical('Pushing to send further updates to a repo')  %}
 
-Add a few more commits to your local repo, and push those commits to the remote repo, as follows:
+{{ hp_number(hop_target) }} Add a few more commits to the same local repo, and push those commits to the remote repo.
 
 {{ hp_number ('1') }} **Commit** some changes in your local repo.
 
 {% set cli %} <!-- ------ start: Git Tabs --------------->
 Use the `git commit` command to create commits, as you did before.
 
-Optionally, you can run the `git status` command, which should confirm that your local branch is 'ahead' by one commit (i.e., the local branch has one new commit that is not in the corresponding branch in the remote repo).
+Optionally, you can run the `git status` command, which should confirm that your local branch is 'ahead' by one commit (i.e., the local branch has commits that are not present in the corresponding branch in the remote repo).
 
 ```bash{.no-line-numbers}
 git status
@@ -55,6 +75,14 @@ nothing to commit, working tree clean
 ```
 {% endcall %}
 
+You can also use the `git log --one-line --graph` command to see where the branch refs are. Note how the remote-tracking branch `origin/master` is one commit behind the local `master`.
+
+```bash {highlight-lines="1['HEAD']@pink,1['master']@#e6fff2,2['origin/master']@#e6fff2"}
+e60deae (HEAD -> master) Update fruits list
+f761ea6 (origin/master) Add colours.txt, shapes.txt
+2bedace Add figs to fruits.txt
+d5f91de Add fruits.txt
+```
 {% endset %}
 {% set sourcetree %}
 Create commits as you did before.

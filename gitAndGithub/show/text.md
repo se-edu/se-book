@@ -6,7 +6,7 @@
 
 <div id="body">
 {% call show_lesson_intro() %}
-It is also useful to be able to **see what changes were included in a specific commit**.
+It is useful to be able to **see what changes were included in a specific commit**.
 
 {% endcall %}
 
