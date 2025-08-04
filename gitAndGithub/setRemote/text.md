@@ -41,6 +41,11 @@ Add the empty remote repo you created on GitHub as a remote of a local repo you 
 {{ hp_number ('3') }} **Add a new remote repo** using the `git remote add <remote-name> <remote-url>` command.<br>
    i.e., if using HTTPS, `git remote add origin https://github.com/{YOUR-GITHUB-USERNAME}/things.git`
 
+```bash
+git remote add origin https://github.com/JohnDoe/things.git  # using HTTPS
+git remote add origin git@github.com:JohnDoe/things.git  # using SSH
+```
+
 {{ hp_number ('4') }} **List the remotes again to verify** the new remote was added.
 
 ```bash {.no-line-numbers}

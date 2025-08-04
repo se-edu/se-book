@@ -141,7 +141,7 @@ git push origin -u hiring
 {{ show_git_tabs_from_text(cli, sourcetree) }}
 <!-- ------ end: Git Tabs -------------------------------->
 
-{{ hp_number("3") }} **Verify the branch has been pushed to the remote** by visiting the fork on GitHub, and looking for the `origin/hiring` remote-tracking ref in the local repo.
+{{ hp_number("3") }} **Verify that the branch has been pushed to the remote** by visiting the fork on GitHub, and looking for the `origin/hiring` remote-tracking ref in the local repo.
 {% endcall %}<!-- ===== end: HANDS-ON ============================ -->
 
 </div>

@@ -1,4 +1,5 @@
-{% from "common/macros.njk" import trail, bold_number, callout, hp_number, label, show_commit, show_git_term, show_git_term_tip, show_detour, show_exercise, show_git_tabs, show_git_tabs_from_text, show_hands_on_practical, show_head, show_lesson_intro, show_output, show_ref, show_tag, show_transformation_columns, show_under_the_hood with context %}
+{% from "common/macros.njk" import trail, bold_number, callout, hp_number, label, show_commit, show_folder_columns, show_git_term, show_git_term_tip, show_detour, show_exercise, show_git_tabs, show_git_tabs_from_text, show_hands_on_practical, show_head, show_lesson_intro, show_lesson_link, show_output, show_protip, show_ref, show_resources, show_sidebar, show_tag, show_transformation_columns, show_under_the_hood with context %}
+
 
 <span id="prereqs"></span>
 <span id="outcomes">Can fetch/pull from a remote repository.</span>
@@ -127,7 +128,7 @@ Now, the revision graph should look something like the below. Note how the `orig
 
 {% set cli %} <!-- ------ start: Git Tabs --------------->
 
-Use the `git merge <remote-tracking-branch>` command to merge the fetched changes. Check the status and the revision graph to verify the branch tip has now moved by two more commits.
+Use the `git merge <remote-tracking-branch>` command to merge the fetched changes. Check the status and the revision graph to verify that the branch tip has now moved by two more commits.
 
 ```bash{.no-line-numbers}
 git merge origin/master
@@ -212,6 +213,11 @@ In the next dialog, choose as follows:<br>
 Now, let's pretend that there are some new commits in upstream repo that you would like to bring over to your fork, and your local repo. Here are the steps:
 
 {{ hp_number ('1') }} **Add the upstream repo [se-edu/samplerepo-finances](https://github.com/se-edu/samplerepo-finances) as remote** named `upstream` in your local repo.
+
+<box type="tip" seamless>
+
+Adding remotes was covered in {{ show_lesson_link(trail.backingUpOnCloud.lessons.setRemote) }}
+</box>
 
 {{ hp_number ('2') }} **Pull from the upstream repo.** If there are new commits (in this case, there will be none), those will come over to your local repo. For example:
 ```bash{.no-line-numbers}
