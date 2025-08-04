@@ -75,7 +75,7 @@ nothing to commit, working tree clean
 ```
 {% endcall %}
 
-You can also use the `git log --one-line --graph` command to see where the branch refs are. Note how the remote-tracking branch `origin/master` is one commit behind the local `master`.
+You can also use the `git log --oneline --graph` command to see where the branch refs are. Note how the remote-tracking branch `origin/master` is one commit behind the local `master`.
 
 ```bash {highlight-lines="1['HEAD']@pink,1['master']@#e6fff2,2['origin/master']@#e6fff2"}
 e60deae (HEAD -> master) Update fruits list
@@ -110,7 +110,7 @@ Before pushing the new commit, Sourcetree will indicate that your local branch i
 
 <div id="extras">
 {% call show_exercise("push-over") %}
-Create a new commit on your local copy of the repo in the `push-this` folder, and push the change to the remote.
+Create a new commit on the `main` branch of the local repo in `push-this` folder, and push the updated `main` branch to the remote.
 {% endcall %}
 
 {{ show_detour('pushToMultipleRepos') }}

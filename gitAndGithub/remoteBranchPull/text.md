@@ -110,6 +110,11 @@ git push origin track-sales
 <div class="indented-level1">
 
 **Simply fetch to update your local repository with information about the new branch.** After that, you can create a local copy of it and work with it just as you did in Use Case 1.
+
+<box type="tip" seamless>
+
+Fetching was covered in {{ show_lesson_link(trail.workingWithRemotes.lessons.pull) }}.
+</box>
 </div>
 
 

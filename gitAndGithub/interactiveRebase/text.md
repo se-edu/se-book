@@ -106,7 +106,7 @@ pick 97a8c4a C3: Add Sheldon.txt
 drop 8b9a36f X: Incorrectly update Stuart.txt
 reword 8ab6941 C4: Addddd Howard.txt
 ```
-{{ hp_number("4") }} **Once you exit the text editor, Git will perform the rebase** based on the actions you specified, from top to bottom.
+{{ hp_number("4") }} **Once you save edits and exit the text editor, Git will perform the rebase** based on the actions you specified, from top to bottom.
 
 **At some steps, Git will pause the rebase and ask for your inputs.** In this case, it will ask you to specify the new commit message when it is processing the following line.
 ```bash{.no-line-numbers}

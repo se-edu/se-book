@@ -86,7 +86,7 @@ white
 
 <div id="extras">
 {% call show_exercise("conflict-mediator") %}
-The given repo `conflict` has an unmerged branch `josh`.<br>
+The given repo `conflict` has an unmerged branch `josh` and a merged branch `john`.<br>
 **Merge branch `josh` onto `main`.** This will result in a merge conflict in the `script.py` file.<br>
 **Resolve the merge conflict** and **complete the merge**.<br>
 The intended outcome is `print('Hello Everyone and World!')`.

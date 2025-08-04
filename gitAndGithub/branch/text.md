@@ -120,7 +120,7 @@ Note how the `feature1` is indicated as the current branch (reason: Sourcetree a
 Note how the `master` ref and the `HEAD` ref move to the new commit.
 
 {% set cli %} <!-- ------ start: Git Tabs --------------->
-As before, you can use the `git log --one-line --decorate` command for this.
+As before, you can use the `git log --oneline --decorate` command for this.
 {% endset %}
 {% set sourcetree %}
 * :fab-windows: At times, the `HEAD` ref of the local repo is represented as :fas-dot-circle: in Sourcetree, as illustrated in the screenshot below

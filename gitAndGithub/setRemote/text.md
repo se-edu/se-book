@@ -90,7 +90,7 @@ origin  https://github.com/johndoe/things.git (push)
 
 <div id="extras">
 {% call show_exercise("link-me") %}
-Add the [git-mastery/link-me](https://github.com/git-mastery/link-me) repository as the `upstream` remote for the `link-this` repository.
+In the `link-this` repo provided, add the [git-mastery/link-me](https://github.com/git-mastery/link-me) repository as a remote named `upstream`.
 {% endcall %}
 {{ show_detour('managingRemotes') }}
 </div>

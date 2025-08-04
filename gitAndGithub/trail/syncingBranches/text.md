@@ -10,9 +10,9 @@ pageNav: 4
 
 <span class="d-none" id="destination">To be able to keep branches in a local repository synchronised with each other, as needed.</span>
 
-<span class="d-none" id="motivation">While working on one branch, you might want to have access to changes introduced in another branch (e.g., take advantage of a bug fix introduced in another branch).</span>
+<span class="d-none" id="motivation">While working on one branch, you might want to have access to changes introduced in another branch (e.g., to take advantage of a bug fix introduced in another branch).</span>
 
-<span class="d-none" id="achievements">Now you can bring over changes in one branch to another, in a local repository.</span>
+<span class="d-none" id="achievements">You should now be able to bring changes from one branch to another in your local repository.</span>
 
 <span id="next">{{ show_tour_link(trail.remoteBranches) }}</span>
 

@@ -117,4 +117,5 @@ Add a few other files with `.tmp` extension.
 
 **2. Commit the updated `.gitignore` file.**
 {% endcall %}
+{{ show_detour('ignoreTrackedFiles') }}
 </div>

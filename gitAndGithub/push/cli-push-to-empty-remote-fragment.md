@@ -1,4 +1,4 @@
-Use the `git push -u <remote-repo-name> <branch-name>` to push the commits to a remote repository.
+Use the `git push -u <remote-repo-name> <local-branch-name>` to push the commits to a remote repository.
 ```bash{.no-line-numbers}
 git push -u origin master
 ```

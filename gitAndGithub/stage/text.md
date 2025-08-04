@@ -41,6 +41,10 @@ cherries
 ```
 {% endcall %}
 
+To see the content of the file, yoy can use the `cat` command:
+```bash
+cat fruits.txt
+```
 
 </box>
 
@@ -102,36 +106,7 @@ dragon fruits
 **Git does not track empty folders**. It tracks only folders that contain tracked files.<br>
 <span class="non-printable">You can test this by adding an empty subfolder inside the `things` folder (e.g., `things/more-things`) and checking if it shows up as 'untracked' (it will not). If you add a file to that folder (e.g., `things/more-things/food.txt`) and then staged that file (e.g., `git add more-things/food.txt`), the folder will now be included in the next snapshot.</span>
 
-
-{% call show_protip("Staging multiple files in one go") %}
-Here are several ways of staging multiple files simultaneously.
-
-**Specify multiple files:**
-```bash
-git add f1.txt f2.txt data/lists/f3.txt
-```
-
-**Add using a [glob pattern](https://en.wikipedia.org/wiki/Glob_(programming)):**
-```bash
-git add *.txt  # adds all .txt files in the current directory
-```
-
-**Add all files in the current directory and subdirectories:**
-```bash
-git add .
-```
-
-**Add all changes in a specific directory and subdirectories:**
-```bash
-git add path/to/directory
-```
-
-**Add all changes in the entire repository:**
-```bash
-git add -A
-```
-{% endcall %} <!-- end: show_protip -->
-
+<include src="../common/protip-multiple-files-notation-fragment.md" />
 
 </div>
 

@@ -83,7 +83,7 @@ To rename a branch, use the `git branch -m <current-name> <new-name>` command (`
 ```bash{.no-line-numbers highlight-lines="3['--graph'],3['--all']"}
 git branch -m fantasy fantasy-books
 git branch -m textbooks study-books
-git log --one-line --decorate --graph --all  # verify the changes
+git log --oneline --decorate --graph --all  # verify the changes
 ```
 {% call show_output() %}
 ```bash{.no-line-numbers}

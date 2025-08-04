@@ -228,8 +228,10 @@ git pull upstream master
 ```bash{.no-line-numbers}
 git push origin master
 ```
+<box type="info" seamless>
 
-{{ icon_tip }} The method given above is the more 'standard' method of synchronising a fork with the upstream repo. In addition, platforms such as GitHub can provide other ways (example: GitHub's [Sync fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) feature).
+The method given above is the more 'standard' method of synchronising a fork with the upstream repo. In addition, platforms such as GitHub can provide other ways (example: GitHub's [Sync fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) feature).
+</box>
 
 {{ hp_number ('4') }} **For good measure, let's pull from another repo.**<br>
 

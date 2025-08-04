@@ -19,11 +19,21 @@
   **Wait. Then why does `git restore --staged` exists at all**, given it is more verbose and doesn't even work in some special cases?<br>
   Answer: It is still considered the "modern" way of unstaging files (it was introduced more recently), because it is more intuitive and purpose-specific -- whereas the `git reset` serves multiple purposes and, if used incorrectly, can cause unintended consequences.
   </box>
+  <box type="tip" seamless>
+
+  The `restore` command can accept multiple files/paths as input, which means you can use the <trigger trigger="click" for="modal:unstaging-protipMultipleFilesNotation">notation for specifying multiple files</trigger>. For example, to unstage all changes you've staged, you can use the `git restore --staged .`
+  </box>
 * **To unstage a file deletion** (staged using `git rm`), use the same command as above. It will unstage the deletion and restore the file in the staging area.<br>
   **If you also deleted the file from your working directory**, you may need to recover it separately with `git restore <file-name(s)>`
   ```bash{highlight-lines="1['restore']"}
   git restore data/list.txt data/plan.txt
   ```
+
+
+<modal large header="" id="modal:unstaging-protipMultipleFilesNotation">
+  <include src="../common/protip-multiple-files-notation-fragment.md" />
+</modal>
+
 {% endset %}
 {% set sourcetree %}
 To unstage a file, locate the file among the `staged files` section, click the `...` in front the file, and choose `Unstage file`:<br>
@@ -33,6 +43,6 @@ To unstage a file, locate the file among the `staged files` section, click the `
 <!-- ------ end: Git Tabs -------------------------------->
 
 {% call show_exercise('staging-intervention') %}
-Unstage the following files: `adam.txt`, `josh.txt`, `mary.txt`.
+In the repo `intervention` given, unstage the following files: `adam.txt`, `josh.txt`, `mary.txt`.
 Keep other files staged.
 {% endcall %} <!-- show_exercise -->

@@ -91,8 +91,10 @@ Given every commit has a unique hash, the #r#commit hash values you see in our e
 
 In the revision graph above, there are two refs {{ show_ref('master') }} and &nbsp;{{ show_head()}}.
 
-* {{ show_ref('master') }} is a {{ show_git_term("branch ref") }}. A branch points to the latest commit on a branch (in this visualisation, the commit shown alongside the ref is the one it points to i.e., `C3`). **When you create a new commit, the ref of the <tooltip content="the currently active branch">current</tooltip> branch moves to the new commit.**
-* {{ show_head()}} is a special ref. Normally, it points to the current branch (in this example, it is pointing to the `master` branch), and moves together with the branch ref.
+* {{ show_ref('master') }} is a branch ref. **A {{ show_git_term("branch ref") }} points to the latest commit on a branch**. In this visualisation, the commit shown alongside the ref is the one it points to i.e., `C3`.<br>
+  **When you create a new commit, the branch ref of the <tooltip content="the currently active branch">current</tooltip> branch moves to the new commit.**
+* **{{ show_head()}} is a special ref that typically points to the current branch and moves along with that branch ref.** In this example, it is pointing to the `master` branch.<br>
+  In certain cases, the `HEAD` may point directly to a specific commit instead of a branch. This situation is called a "detached `HEAD`", which will be covered in a later lesson.
 
 
 {% call show_hands_on_practical('View the revision graph')  %}
