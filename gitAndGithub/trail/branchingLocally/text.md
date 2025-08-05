@@ -8,7 +8,7 @@ pageNav: 4
 <span id="outcomes">{{ icon_outcome }} Can use Git branches in a local repo.</span>
 <span id="title">{{ tour.title }}</span>
 
-<span class="d-none" id="destination">To be able to make use of multiple timelines of work in a local repository.</span>
+<span class="d-none" id="destination">To make use of multiple timelines of work in a local repository.</span>
 
 <span class="d-none" id="motivation">At times, you need to do multiple parallel changes to files e.g., to try two alternative implementations of the same feature.</span>
 

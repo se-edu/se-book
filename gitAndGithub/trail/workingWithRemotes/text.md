@@ -8,7 +8,7 @@ pageNav: 4
 <span id="outcomes">{{ icon_outcome }} Can continue work by starting with an existing remote repo.</span>
 <span id="title">{{ tour.title }}</span>
 
-<span class="d-none" id="destination">To be able to work with an existing remote repository.</span>
+<span class="d-none" id="destination">To work with an existing remote repository.</span>
 
 <span class="d-none" id="motivation">Often, you will need to start with an existing remote repository. In such cases, you may have to create your own copies of that repository, and keep those copies updated when more changes appear in the remote repository.</span>
 

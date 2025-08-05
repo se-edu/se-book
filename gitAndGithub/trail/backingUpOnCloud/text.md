@@ -8,7 +8,7 @@ pageNav: 4
 <span id="outcomes">{{ icon_outcome }} Can back up a Git repository on a cloud-based Git service such as GitHub</span>
 <span id="title">{{ tour.title }}</span>
 
-<span class="d-none" id="destination">To be able to back up a Git repository on a cloud-based Git service such as GitHub.</span>
+<span class="d-none" id="destination">To back up a Git repository on a cloud-based Git service such as GitHub.</span>
 
 <span class="d-none" id="motivation">One (of several) benefits of maintaining a copy of a repo on a cloud server: it acts as a safety net %%(e.g., against the folder becoming inaccessible due to a hardware fault)%%.</span>
 

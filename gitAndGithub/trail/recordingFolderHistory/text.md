@@ -8,7 +8,7 @@ pageNav: 4
 <span id="outcomes">{{ icon_outcome }} Can use Git to take snapshots of a folder</span>
 <span id="title">{{ tour.title }}</span>
 
-<span class="d-none" id="destination">To be able to use Git to systematically record the history of a folder in your own computer. More specifically, to use Git to save a snapshot of the folder at specific points of time.</span>
+<span class="d-none" id="destination">To use Git to systematically record the history of a folder in your own computer. More specifically, to use Git to save a snapshot of the folder at specific points of time.</span>
 
 <span class="d-none" id="motivation">Recording the history of files in a folder %%(e.g, code files of a software project, case notes, files related to an article/book that you are authoring)%% can be useful in case you need to refer to past versions.</span>
 

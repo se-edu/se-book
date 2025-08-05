@@ -8,7 +8,7 @@ pageNav: 4
 <span id="outcomes">{{ icon_outcome }} Can keep Git branches in sync.</span>
 <span id="title">{{ tour.title }}</span>
 
-<span class="d-none" id="destination">To be able to keep branches in a local repository synchronised with each other, as needed.</span>
+<span class="d-none" id="destination">To keep branches in a local repository synchronised with each other, as needed.</span>
 
 <span class="d-none" id="motivation">While working on one branch, you might want to have access to changes introduced in another branch (e.g., to take advantage of a bug fix introduced in another branch).</span>
 

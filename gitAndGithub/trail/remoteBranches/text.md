@@ -8,7 +8,7 @@ pageNav: 4
 <span id="outcomes">{{ icon_outcome }} Can work with branches of a remote repo.</span>
 <span id="title">{{ tour.title }}</span>
 
-<span class="d-none" id="destination">To be able to synchronise branches in the local repo with a remote repo's branches.</span>
+<span class="d-none" id="destination">To synchronise branches in the local repo with a remote repo's branches.</span>
 
 <span class="d-none" id="motivation">It is useful to be able to have another copy of branches in a remote repo.</span>
 
