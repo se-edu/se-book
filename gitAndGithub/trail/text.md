@@ -15,7 +15,7 @@ We've packaged our Git (and GitHub) lessons as 'Learning Trail' which is divided
 <tree>
 |
   Tour 1
-    Lessons: T1L1 → T1L2 ... → T1L6 → <span class="badge bg-warning text-dark rounded-pill">Usage: Save snapshots of a folder</span>
+    Lessons: T1L1 → T1L2 ... → T1L6 → <span class="badge bg-warning text-dark rounded-pill">Usage: Saving snapshots of a folder</span>
   Tour 2
     Lessons: T2L1 → T2L2 ... → T2L6 → Usage: ...
   ...

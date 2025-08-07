@@ -91,7 +91,7 @@ Some examples for `<editor command>`
 |--------------|---------------------------
 | Vim (default) | `vim`
 | Nano         | `nano`
-| VS Code      | `code --wait` e.g., `git config --global core.editor "code --wait"`
+| VS Code      | `code --wait` e.g., `git config --global core.editor "code --wait"`<br><br><small>{{ icon_info }} For this to work, your computer should already be configured to launch VS Code using the `code` command. See [here](https://code.visualstudio.com/docs/configure/command-line#_launching-from-command-line) to find how (refer the 'Launching from command line' section).</small>
 | Sublime Text | `subl -n -w`
 | Atom         | `atom --wait`
 | Notepad++    | `notepad++.exe` (Windows only)

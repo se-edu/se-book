@@ -10,7 +10,7 @@ It is useful to be able to **see what changes were included in a specific commit
 
 {% endcall %}
 
-**When you examine a commit, normally what you see is the 'changes since the previous commit'.** This should not be interpreted as _Git commits contain only the changes introduced since the last commit_. As you recall, a Git commit contains a full snapshot of the working directory. However, tools used to examine commits typically show only the changes, as that is the more informative part.
+**When you examine a commit, normally what you see is the 'changes made since the previous commit'.** This does not mean that a Git commit contains only the changes made since the previous commit. As you recall, a Git commit contains a full snapshot of the working directory. However, tools used to examine commits typically show only the changes, as that is the more informative part.
 
 **Git shows changes included in a commit by _dynamically calculating_ the difference** between the snapshots stored in the target commit and the parent commit. This is because Git commits store snapshots of the working directory, not changes themselves.
 
@@ -24,7 +24,7 @@ A related alternative notation is `HEAD~`, `HEAD~~`, `HEAD~~~`, ... to mean `HEA
 {{ show_commit('C1', msg='Can be addressed as `HEAD~2` or `master~2`', edge='') }}
 <p/>
 
-**Git uses the {{ show_git_term("diff") }} format to show file changes in a commit.** The diff format was originally developed for Unix, later extended with headers and metadata to show changes between file versions and commits. Here is an example diff showing the changes to a file.
+**Git uses the {{ show_git_term("diff") }} format to show file changes in a commit.** The diff format was originally developed for Unix. It was later extended with headers and metadata to show changes between file versions and commits. Here is an example diff showing the changes to a file.
 
 ```diff{.no-line-numbers}
 diff --git a/fruits.txt b/fruits.txt

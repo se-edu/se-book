@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import trail, bold_number, callout, hp_number, label, show_commit, show_git_term, show_git_term_tip, show_detour, show_exercise, show_git_tabs, show_git_tabs_from_text, show_hands_on_practical, show_head, show_lesson_intro, show_output, show_ref, show_tag, show_transformation_columns, show_under_the_hood with context %}
+{% from "common/macros.njk" import trail, bold_number, callout, hp_number, label, show_commit, show_git_term, show_git_term_tip, show_detour, show_exercise, show_git_tabs, show_git_tabs_from_text, show_hands_on_practical, show_head, show_lesson_intro, show_output, show_protip, show_ref, show_tag, show_transformation_columns, show_under_the_hood with context %}
 
 <span id="prereqs"></span>
 <span id="outcomes">Able to work in parallel Git branches, in the local repo.</span>
@@ -95,7 +95,7 @@ To create a new branch and switch to it:
 $ git branch feature1
 $ git switch feature1
 ```
-One-step shortcut (by using `-c` or `--create` switch):
+One-step shortcut (by using `-c` or `--create` flag):
 
 ```bash{.no-line-numbers highlight-lines="1['switch –c']"}
 $ git switch –c feature1
@@ -116,8 +116,12 @@ Note how the `feature1` is indicated as the current branch (reason: Sourcetree a
 {{ show_git_tabs_from_text(cli, sourcetree) }}
 <!-- ------ end: Git Tabs -------------------------------->
 
-{{ hp_number ('3') }} **Create some commits in the new branch.** %%Just commit as per normal. Commits you add while on a certain branch will become part of that branch.%%<br>
-Note how the `master` ref and the `HEAD` ref move to the new commit.
+{{ hp_number ('3') }} **Create some commits in the new branch, as follows.**
+
+* Add a file named `numbers.txt`, stage it, commit it.{texts="['3.1', '3.2', '3.3', '3.4']"}
+* Observe how commits you add while on `feature` branch will becomes part of that branch.<br>
+  Observe how the `master` ref and the `HEAD` ref move to the new commit.
+
 
 {% set cli %} <!-- ------ start: Git Tabs --------------->
 As before, you can use the `git log --oneline --decorate` command for this.
@@ -129,6 +133,8 @@ As before, you can use the `git log --oneline --decorate` command for this.
 {% endset %}
 {{ show_git_tabs_from_text(cli, sourcetree) }}
 <!-- ------ end: Git Tabs -------------------------------->
+
+* Add some texts to `numbers.txt`, stage the changes, and commit it. This commit too will be added to the `feature1` branch.{texts="['3.3', '3.4']"}
 
 {{ hp_number ('4') }} **Switch to the `master` branch.** Note how the changes you made in the `feature1` branch are no longer in the working directory.
 
@@ -154,7 +160,7 @@ Similarly, `origin/HEAD` ref appearing against the same commit indicates that <t
 <!-- ------ end: Git Tabs -------------------------------->
 
 {{ hp_number ('5') }} **Add a commit to the master branch.** Let’s imagine it’s a bug fix.<br>
-To keep things simple for the time being, this commit should ==not involve the same content that you changed in the `feature1` branch==. To be on the safe side, you can change an entirely different file in this commit.
+To keep things simple for the time being, this commit should ==not involve the `numbers.txt` file that you changed in the `feature1` branch==. Of course, this is easily done, as the `numbers.txt` file you added in the `feature` branch is not even visible when you are in the `master` branch.
 <div id="samplerepo-things-before-merging">
 <mermaid>
 gitGraph BT:
@@ -163,7 +169,7 @@ gitGraph BT:
     commit id: "m2"
     branch feature1
     commit id: "f1"
-    commit id: "[feature] f2"
+    commit id: "[feature1] f2"
     checkout master
     commit id: "[HEAD → master] m3"
     checkout feature1
@@ -209,6 +215,20 @@ gitGraph BT:
 1. Checkout the commit that is at which the `feature1` branch diverged from the `master` branch (e.g. `git checkout HEAD~1`). This will create a detached `HEAD`.
 1. Create a new branch called `feature1-alt`. The `HEAD` will now point to this new branch (i.e., no longer 'detached').
 1. Add a commit on the new branch.
+
+{% call show_protip("Creating a branch based on another branch in one shot") %}
+
+Suppose you are currently on branch `b2` and you want to create a new branch `b3` that starts from `b1`. Normally, you can do that in two steps:
+
+```bash
+git switch b1     # switch to the intended base branch first
+git switch -c b3  # create the new branch and switch to it
+```
+This can be done in one shot using the `git switch -c <new-branch> <base-branch>` command:
+```
+git switch -c b3 b1
+```
+{% endcall %}
 {% endcall %}<!-- ===== end: HANDS-ON ============================ -->
 
 </div>

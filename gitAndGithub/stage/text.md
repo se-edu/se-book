@@ -41,6 +41,11 @@ cherries
 ```
 {% endcall %}
 
+<box type="important" icon=":fab-windows:" seamless>
+
+**Windows users: Use the git-bash terminal** to run the above command (and all commands given in these lessons). Some of them might not work in other terminals such as the PowerShell.
+</box>
+
 To see the content of the file, yoy can use the `cat` command:
 ```bash
 cat fruits.txt

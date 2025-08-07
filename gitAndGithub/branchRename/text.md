@@ -27,11 +27,12 @@ git switch -c textbooks
 echo "Textbooks" >> textbooks.txt
 git add .
 git commit -m "Add textbooks.txt"
+git switch master
 git switch -c fantasy
 echo "Fantasy Books" >> fantasy.txt
 git add .
 git commit -m "Add fantasy.txt"
-git checkout master
+git switch master
 git merge --no-ff -m "Merge branch textbooks" textbooks
 ```
 The above should give you a repo similar to the revision graph given below, on the left.

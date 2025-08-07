@@ -87,7 +87,7 @@ The revision graph should look like this now (colours and line alignment might v
 Observe how the changes you made in the `master` branch (i.e., the imaginary bug fix in `m3`) is now available even when you are in the `feature1` branch.<br>
 Furthermore, observe (e.g., `git show HEAD`) how the merge commit contains the sum of changes done in  commits `m3`, `f1`, and `f2`.
 
-{{ hp_number ('3') }} **Add another commit to the `feature1` branch.**<br>
+{{ hp_number ('3') }} **Add another commit to the `feature1` branch**, in which you do some further changes to the `numbers.txt`.<br>
 **Switch to the `master` branch and add one more commit.**
 
 <mermaid>
@@ -179,7 +179,10 @@ In the example above, the `master` branch has not changed since the merge base (
 
 {{ hp_number(hop_preparation) }} Let's continue with the same `samplerepo-things` repo we used above, and do a fast-forward merge this time.
 
-{{ hp_number ('1') }} **Create a new branch called `add-countries`, switch to it, and add some commits to it**. You should have something like this now:
+{{ hp_number ('1') }} **Create a new branch called `add-countries`, and some commits to it** as follows:<br>
+Switch to the new branch, add a file named `countries.txt`, stage it, and commit it.<br>
+Do some changes to `countries.txt`, and commit those changes.<br>
+You should have something like this now:
 <mermaid>
 gitGraph BT:
     {{ "%%{init: { 'theme': 'default', 'gitGraph': {'mainBranchName': 'master'}} }%%" }}
@@ -291,7 +294,7 @@ gitGraph BT:
 {{ show_transformation_columns(a, b, c) }}
 <!-- ------ end: transformation columns -------------------------------->
 
-In the example above, the branch `feature` has been squash merged onto the `master` branch, creating a single 'squashed' commit `s1` that combines the all commits in `feature` branch.
+In the example above, the branch `feature` has been squash merged onto the `master` branch, creating a single 'squashed' commit `s1` that combines all the commits in `feature` branch.
 
 </div>
 <div id="extras">
@@ -313,7 +316,7 @@ branch feature/login
 checkout main
 branch feature/dashboard
 checkout main
-branch feature/payment
+branch feature/payments
 checkout feature/login
 commit
 commit
@@ -325,11 +328,11 @@ commit
 commit
 checkout main
 merge feature/dashboard
-checkout feature/payment
+checkout feature/payments
 commit
 commit
 checkout main
-merge feature/payment
+merge feature/payments
 </mermaid>
 {% endcall %}
 

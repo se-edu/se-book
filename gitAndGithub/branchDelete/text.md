@@ -6,7 +6,7 @@
 
 <div id="body">
 {% call show_lesson_intro() %}
-**Branches can be deleted**, to get rid of them when they are no longer needed.
+**Branches can be deleted** to get rid of them when they are no longer needed.
 {% endcall %}
 
 **Deleting a branch deletes the corresponding branch ref from the revision history** (it does not delete any commits). The impact of the loss of the branch ref depends on whether the branch has been merged.
@@ -111,11 +111,12 @@ git switch -c textbooks
 echo "Textbooks" >> textbooks.txt
 git add .
 git commit -m "Add textbooks.txt"
+git switch master
 git switch -c fantasy
 echo "Fantasy Books" >> fantasy.txt
 git add .
 git commit -m "Add fantasy.txt"
-git checkout master
+git switch master
 git merge --no-ff -m "Merge branch textbooks" textbooks
 ```
 

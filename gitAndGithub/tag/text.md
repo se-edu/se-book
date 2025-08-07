@@ -129,7 +129,7 @@ Tags will appear as labels in the revision graph, as seen below. To see the deta
 
 {% set cli %}
 
-**Delete the previous `v1.0` tag** by using the `-d` switch. Add it again to the other commit, as before.
+**Delete the previous `v1.0` tag** by using the `-d` <tooltip content="a synonym for 'flag' or 'option'">switch</tooltip>. Add it again to the other commit, as before.
 ```bash{.no-line-numbers}
 git tag -d v1.0
 git tag v1.0 HEAD~1

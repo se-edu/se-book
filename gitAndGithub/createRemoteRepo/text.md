@@ -37,7 +37,8 @@ If you enable any of the three `Add _____` options shown above, GitHub will not 
 
 <div id="extras">
 {% call show_exercise("remote-control", has_verify=0) %}
-1. Run `gitmastery verify`.
+1. As per the usual practice, `cd` into the `remote-control` folder.
+1. Run `gitmastery verify` command.<br>
 1. Take note of the repo name provided by Git-Mastery app (in its response).
 1. Create a new public GitHub repository using the repo name given.
 1. Provide the URL of that remote (without the `.git` at the end) when prompted<br>
