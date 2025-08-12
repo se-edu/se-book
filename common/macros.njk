@@ -346,7 +346,7 @@ That aspect is covered in a detour **in the lesson [_{{ detour.lesson.title }}_]
 {% endmacro %}
 <!-- ============================================================ -->
 
-{% macro show_exercise(identifier, has_download=1, has_verify=1) %}
+{% macro show_exercise(identifier, has_download=1, has_verify=1, scenario=0) %}
 <panel tags="git-mastery" class="non-printable" type="danger" header="{{ icon_exercise }} EXERCISE: `{{ identifier }}`">
 {% if has_download %}
 **To download** the exercise,
@@ -357,7 +357,10 @@ That aspect is covered in a detour **in the lesson [_{{ detour.lesson.title }}_]
 **#r#No download##** required for this exercise.
 {% endif %}
 ---{.dashed .border-danger}
+{% if scenario %}
 
+**Scenario:** {{ scenario }}
+{% endif %}
 **Your task:**{.text-danger}
 <div class="indented-level1">
 
@@ -373,7 +376,7 @@ That aspect is covered in a detour **in the lesson [_{{ detour.lesson.title }}_]
 {% endif %}
 <div class="bg-light">
 
-  -><small>[Git-Mastery **commands list**](https://git-mastery.github.io/app/) | [Report Git-Mastery **bugs**](https://github.com/git-mastery/git-mastery/issues)</small><-
+  -><small>[Git-Mastery **commands list**](https://git-mastery.github.io/app/) | [Report Git-Mastery **bugs**](https://github.com/git-mastery/git-mastery/issues) | [How to **update** Git-Mastery](https://git-mastery.github.io/app/update) </small><-
 </div>
 </panel>
 {% endmacro %}

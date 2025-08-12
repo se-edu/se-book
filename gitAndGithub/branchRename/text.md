@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import trail, bold_number, callout, hp_number, label, show_commit, show_git_term, show_git_term_tip, show_detour, show_exercise, show_git_tabs, show_git_tabs_from_text, show_hands_on_practical, show_head, show_lesson_intro, show_output, show_ref, show_tag, show_transformation_columns, show_under_the_hood with context %}
+{% from "common/macros.njk" import trail, bold_number, callout, hp_number, label, show_commit, show_folder_columns, show_git_term, show_git_term_tip, show_detour, show_exercise, show_git_tabs, show_git_tabs_from_text, show_hands_on_practical, show_head, show_lesson_intro, show_lesson_link, show_output, show_protip, show_ref, show_resources, show_sidebar, show_tag, show_transformation_columns, show_under_the_hood with context %}
 
 <span id="prereqs"></span>
 <span id="outcomes">Can rename a branch in a local repository.</span>
@@ -112,7 +112,41 @@ Right-click on the branch name and choose `Rename...`. Provide the new branch na
 <!-- ------ end: Git Tabs -------------------------------->
 {% endcall %}<!-- ===== end: HANDS-ON ============================ -->
 
+{% call show_sidebar("Branch naming conventions") %}
+
+**Branch names can contain lowercase letters, numbers, `/`, dashes (`-`), underscores (`_`), and dots (`.`)**.
+You can use uppercase letters too, but many teams avoid them for consistency.
+
+**A common branch naming convention is to prefix it with `<category>/`.** Some examples:
+* `feature/login-form` — for new features (`origin/feature/login-form` could be the matching remote-tracking branch)
+* `bugfix/profile-photo` — for fixing bugs
+* `hotfix/payment-crash` — for urgent production fixes
+* `release/2.0` — for prepping a release
+* `experiment/ai-chatbot` — for “just trying stuff”
+
+Although forward-slash (`/`) in the prefix doesn't mean folders, some tools treat it kind of like a path so you can group related branches when you run git branch. Shown below is an example of how Sourcetree groups branches with the same prefix.
+
+<pic src="images/sourcetreeGroupedBranches.png" />
+{% endcall %}
 
 </div>
 <div id="extras">
+{% set scenario %}
+In the `rename-this` repo, you have been working on the login feature for your application on the branch `login`. On second thoughts, you now wish you had named it `feature/login`, to indicate the category of work done in the branch.
+<mermaid>
+gitGraph
+    commit id: "m1"
+    commit id: "m2"
+    branch login
+    commit id: "b1"
+    checkout main
+    commit id: "m3"
+    checkout login
+    commit id: "b2"
+</mermaid>
+{% endset %}
+{% call show_exercise("branch-rename", scenario=scenario)  %}
+
+In the `rename-this` repo, rename the `login` branch to `feature/login`.
+{% endcall %}
 </div>

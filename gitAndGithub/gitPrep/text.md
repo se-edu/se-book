@@ -55,6 +55,12 @@ You can also right-click it and choose `Pin to Start` or `Pin to taskbar`.
 **When copy-pasting text onto a Git Bash terminal**, you will not be able to use the familiar <kbd>Ctrl</kbd>+<kbd>V</kbd> key combo to paste. Instead, right-click on the terminal and use the `Paste` menu option.
 </box>
 {% endcall %} <!-- show_sidebar -->
+
+<box type="important" seamless icon=":fab-windows:">
+
+**On Windows**, you might need to close and open the terminal again for it to recognise changes done elsewhere in the computer (e.g., newly-installed software, changes to system variables, etc.).
+</box>
+
   </tab>
   <tab header=":fab-apple: MacOS">
 
@@ -81,10 +87,7 @@ git version 2._._
 The output should display the version number.
 {% endcall %} <!-- show_output -->
 
-<box type="important" seamless icon=":fab-windows:">
 
-**On Windows**, you might need to close and open the terminal again for it to recognise changes done elsewhere in the computer (e.g., newly-installed software, changes to system variables, etc.).
-</box>
 {% endcall %} <!-- show_prep -->
 
 ##### Configuring `user.name` and `user.email`
@@ -240,6 +243,13 @@ The `gitmastery setup` command will perform the following tasks:
 Notes:
 * If the command failed due to checks (a) or (b) failing, you can rectify the problem and run the command again.
 * If you wish to check the Git set up again at a later time, you can run the `gitmastery check git` command.
+
+**4. Keep the app updated.** As the Git-Mastery app is under active development, it is likely to get updated several times during the semester. When you run a `gitmastery <command>`, the output will warn you if there is a new version, in which case you should update the app immediately, by following the instructions in that message.
+
+<box type="info" seamless>
+
+Instructions for updating the Git-Mastery app are [here](https://git-mastery.github.io/app/update).
+</box>
 
 {% endcall %} <!-- show_prep -->
 </div>

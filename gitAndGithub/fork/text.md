@@ -36,4 +36,7 @@ GitHub does not allow you to fork the same repo more than once to the same desti
 </div>
 
 <div id="extras">
+{% call show_exercise("fork-repo") %}
+Fork the repo https://github.com/git-mastery/gm-shapes to your GitHub account, while retaining the original repo name `gm-shapes`.
+{% endcall %}
 </div>

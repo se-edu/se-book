@@ -82,4 +82,12 @@ Choose `Repository` → `Repository Settings` menu option.
 </div>
 
 <div id="extras">
+{% call show_exercise('clone-repo') %}
+
+1. Fork the repo https://github.com/git-mastery/gm-shapes to your GitHub account, if you haven't done so already. Retain the original repo name `gm-shapes`.
+1. Clone the fork to your computer, placing it in the folder `clone-repo/shapes` (note how the target folder is `shapes`, not `gm-shapes`).<br>
+   {{ icon_tip }} If you did this step correctly, you should now have local repo `shapes`.
+1. Set up a remote named `upstream` in that `shapes` repo, to point to the upstream repo [git-mastery/gm-shapes](https://github.com/git-mastery/gm-shapes).
+
+{% endcall %}
 </div>
