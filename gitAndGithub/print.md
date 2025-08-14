@@ -10,7 +10,7 @@ title: "Git and GitHub [Printable]"
 <div id="main">
 
 # Git and GitHub
-{% for lesson in ['intro', 'gitPrep', 'init', 'stage', 'commit', 'remoteRepos', 'githubPrep', 'createRemoteRepo', 'setRemote', 'push', 'ignore', 'fork', 'clone', 'pull', 'log', 'show', 'tag', 'diff', 'checkout', 'reset', 'revert', 'selectiveStage', 'commitMessage', 'interactiveRebase', 'branch', 'merge', 'mergeConflicts', 'branchRename', 'branchDelete', 'syncByMerge', 'syncByRebase', 'cherryPick', 'remoteBranchPush', 'remoteBranchPull', 'remoteBranchDelete', 'remoteBranchRename'] %}
+{% for lesson in ['intro', 'gitPrep', 'init', 'stage', 'commit', 'log','remoteRepos', 'githubPrep', 'createRemoteRepo', 'setRemote', 'push', 'ignore', 'fork', 'clone', 'pull', 'show', 'tag', 'diff', 'checkout', 'reset', 'revert', 'selectiveStage', 'commitMessage', 'interactiveRebase', 'branch', 'merge', 'mergeConflicts', 'branchRename', 'branchDelete', 'syncByMerge', 'syncByRebase', 'cherryPick', 'remoteBranchPush', 'remoteBranchPull', 'remoteBranchDelete', 'remoteBranchRename'] %}
 
 <include src="{{ lesson }}/unit-inParent-asFlat-print.md" boilerplate />
 {% endfor %}

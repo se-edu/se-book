@@ -14,6 +14,11 @@ It is useful to be able to **see what changes were included in a specific commit
 
 **Git shows changes included in a commit by _dynamically calculating_ the difference** between the snapshots stored in the target commit and the parent commit. This is because Git commits store snapshots of the working directory, not changes themselves.
 
+**Although each commit represents a copy of the entire working directory, Git uses space efficiently in two main ways:**
+
+1. **Reuse of unchanged data:** If a file hasn’t changed since a previous commit, the commit simply points to the already stored version of that file instead of making another copy. This means only new or changed files take up extra space, while unchanged files are reused.
+1. **Compression:** Git also compresses all the files and data it stores using an algorithm (zlib). So, even the objects that are stored (whether reused or new) take up less disk space because they are saved in a compressed format.
+
 **To address a specific commit, you can use its SHA** (e.g., `e60deaeb2964bf2ebc907b7416efc890c9d4914b`). In fact, just the first few characters of the SHA is enough to uniquely address a commit (e.g., `e60deae`), provided the partial SHA is long enough to uniquely identify the commit (i.e., only one commit has that partial SHA).<br>
 **Naturally, a commit can be addressed using any ref pointing to it** too (e.g., `HEAD`, `master`).<br>
 **Another related technique is to use the `<ref>~<n>` notation** (e.g., `HEAD~1`) to address the commit that is `n` commits prior to the commit pointed by `<ref>` i.e., "start with the commit pointed by `<ref>` and go back `n` commits".<br>

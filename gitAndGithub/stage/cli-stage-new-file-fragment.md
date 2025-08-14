@@ -23,7 +23,7 @@ nothing added to commit but untracked files present (use "git add" to track)
 {% endcall %}
 </div>
 
-{{ hp_number(2.2) }} **Use the `git add <file(s)>` command** to stage the file.
+{{ hp_number(2.2) }} **Use the `git add <file>` command** to stage the file.
 <div class="indented-level1">
 
 ```bash{.no-line-numbers}

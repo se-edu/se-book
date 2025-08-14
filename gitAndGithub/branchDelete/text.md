@@ -220,17 +220,17 @@ In the `delete-my-branches` repo, you were trying out two alternative optimisati
 You decided that the approach in the branch `optimization-approach-1` is better and merged it. As the work has already been merged, you can now delete that branch to reduce clutter.
 
 <mermaid>
-gitGraph
+gitGraph BT:
     commit id: "Implement loading"
     commit id: "Fix loading bug"
-    branch optimization-approach-1
+    branch opt...approach-1
     commit id: "Apply bubble sort"
-    commit id: "Fix sorting bug"
+    commit id: "[opti...-1] Fix sorting bug"
     checkout main
-    branch optimization-approach-2
-    commit id: "Apply merge sort"
+    branch opt...approach-2
+    commit id: "[opti...-2] Apply merge sort"
     checkout main
-    merge optimization-approach-1
+    merge opt...approach-1 id: "[HEAD → main] Merge ...'...approach-1"
 </mermaid>
 
 Since you no longer need the work done in the branch `optimization-approach-2`, you can discard it by deleting the branch.
@@ -239,6 +239,20 @@ Since you no longer need the work done in the branch `optimization-approach-2`, 
 
 1. Delete the `optimization-approach-1` branch.
 2. Delete the `optimization-approach-2` branch as well.
+
+Expected outcome:
+
+<mermaid>
+gitGraph BT:
+    commit id: "Implement loading"
+    commit id: "Fix loading bug"
+    branch _
+    commit id: "Apply bubble sort"
+    commit id: "Fix sorting bug"
+    checkout main
+    merge _ id: "[HEAD → main] Merge ...'...approach-1"
+</mermaid>
+
 
 {% endcall %}
 
