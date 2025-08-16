@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import trail, bold_number, callout, hp_number, label, show_commit, show_git_term, show_git_term_tip, show_detour, show_exercise, show_git_tabs, show_git_tabs_from_text, show_hands_on_practical, show_head, show_lesson_intro, show_lesson_link, show_output, show_prep, show_ref, show_resources, show_sidebar, show_tag, show_transformation_columns, show_under_the_hood with context %}
+{% from "common/macros.njk" import trail, bold_number, callout, hp_number, label, show_commit, show_git_term, show_git_term_tip, show_detour, show_exercise, show_git_tabs, show_git_tabs_from_text, show_hands_on_practical, show_head, show_lesson_intro, show_lesson_link, show_output, show_prep, show_ref, show_resources, show_sidebar, show_tag, show_transformation_columns, show_troubleshooting, show_under_the_hood with context %}
 
 <span id="prereqs"></span>
 
@@ -195,6 +195,12 @@ Install using pacman:
 ```bash
 sudo pacman -Syu gitmastery-bin
 ```
+
+{% call show_troubleshooting() %}
+
+* A related issue (and a workaround) reported by a user https://github.com/nus-cs2103-AY2526S1/forum/issues/25
+{% endcall %}
+
   </tab>
   <tab header="Others">
 
@@ -211,9 +217,9 @@ install -D -m 0755 gitmastery-3.3.0-linux-arm64 /usr/bin/gitmastery
   </tab> <!-- linux -->
 </tabs> <!-- os -->
 
-**2. To verify the installation**, run the `gitmastery --help` command from a couple of different folder locations.
+**2. To verify the installation**, run the `gitmastery --help` command from a couple of different folder locations. An example given below (IMPORTANT: change the `cd` command to match your folders):
 
-```bash{.no-line-numbers}
+```bash{.no-line-numbers highlight-lines="2['../my-projects']"}
 gitmastery --help
 cd ../my-projects  # cd into a different folder
 gitmastery --help

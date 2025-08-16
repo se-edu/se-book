@@ -119,6 +119,22 @@ git commit -m "Add fantasy.txt"
 git switch master
 git merge --no-ff -m "Merge branch textbooks" textbooks
 ```
+The result should be something like this:
+<mermaid>
+gitGraph BT:
+    {{ "%%{init: { 'theme': 'default', 'gitGraph': {'mainBranchName': 'master'}} }%%" }}
+    commit id: "m1"
+    branch textbooks
+    checkout textbooks
+    commit id: "[textbooks] t1"
+    checkout master
+    branch fantasy
+    checkout fantasy
+    commit id: "[fantasy] f1"
+    checkout master
+    merge textbooks id: "[HEAD → master] mc1"
+</mermaid>
+
 
 {{ hp_number("1") }} **Delete the (the merged) `textbooks` branch.**
 {% set cli %} <!-- ------ start: Git Tabs --------------->

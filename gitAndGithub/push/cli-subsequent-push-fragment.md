@@ -1,12 +1,12 @@
 
 
-To push the newer commit(s) to the remote, any of the following commands should work:
+To push the newer commit(s) in the current branch `master` to the remote `origin`, you can use any of the following commands:
 
 * `git push origin master`
 * `git push origin`<br>
-  (due to tracking you set up earlier, Git will assume you are pushing the `master` branch)
+  → Git will assume you are pushing the current branch (e.g., `master`) even if you don't specify it.
 * `git push`<br>
-  (due to tracking, Git will assume you are pushing to the remote `origin` and to the branch `master` i.e., `origin/master`)
+  → Git will assume you are pushing the current branch (e.g., `master`). Due to tracking you've set up earlier, Git will assume that you want to push it to the matching branch on `origin`.
 
 After pushing, the revision graph should look something like the following (note how both local and remote-tracking branch refs are pointing to the same commit again).
 

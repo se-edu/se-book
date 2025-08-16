@@ -1,0 +1,5 @@
+{% from "common/macros.njk" import trail, bold_number, callout, hp_number, label, show_commit, show_git_term, show_git_term_tip, show_detour, show_exercise, show_git_tabs, show_git_tabs_from_text, show_hands_on_practical, show_head, show_lesson_intro, show_lesson_link, show_output, show_protip, show_ref, show_resources, show_sidebar, show_tag, show_transformation_columns, show_under_the_hood with context %}
+
+**To create another PR** while the current PR is still under review, you can create a new branch, add your new proposed change in that branch, and create a new PR using that branch instead of the `master` branch.
+
+Steps for creating a PR from another branch is similar to how you created one from the `master` branch, except when sending the PR you should choose the other branch in place of the `master` branch.

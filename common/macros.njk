@@ -314,12 +314,14 @@
 {% endmacro %}
 <!-- ============================================================ -->
 
-{% macro show_detour(detour_name) %}
+{% macro show_detour(detour_name, detour_title='', detour_path='') %}
 {% set detour = detours[detour_name] %}
+{% set title = detour_title if detour_title else detour.title %}
+{% set path = detour_path if detour_path else (baseUrl + "/" + detour.lesson.path + "/detour-" + detour_name + "-fragment.md") %}
 <a id="{{ detour_name }}"/>
-<panel class="non-printable" header="{{ icon_detour }} DETOUR: **{{ detour.title }}**" type="warning" peek>
+<panel class="non-printable" header="{{ icon_detour }} DETOUR: **{{ title }}**" type="warning" peek>
 
-<include src="{{ baseUrl }}/{{ detour.lesson.path }}/detour-{{ detour_name }}-fragment.md" />
+<include src="{{ path }}" />
 </panel>
 {% endmacro %}
 <!-- ============================================================ -->
@@ -389,6 +391,15 @@ That aspect is covered in a detour **in the lesson [_{{ detour.lesson.title }}_]
 
 {{ caller() }}
 </panel>
+{% endmacro %}
+<!-- ============================================================ -->
+
+{% macro show_troubleshooting() %}
+<panel type="seamless" header="%%**:fas-screwdriver-wrench: Troubleshooting tips ...** (click to expand)%%">
+
+{{ caller() }}
+</panel>
+
 {% endmacro %}
 <!-- ============================================================ -->
 
