@@ -190,16 +190,13 @@ sudo apt-get install gitmastery
   </tab>
   <tab header="Arch">
 
-Install using pacman:
+Use an [AUR helper](https://wiki.archlinux.org/title/AUR_helpers) to install `gitmastery-bin`. For example using [yay](https://github.com/Jguer/yay):
 
 ```bash
-sudo pacman -Syu gitmastery-bin
+yay -S gitmastery-bin
 ```
 
-{% call show_troubleshooting() %}
-
-* A related issue (and a workaround) reported by a user https://github.com/nus-cs2103-AY2526S1/forum/issues/25
-{% endcall %}
+Alternatively, you can build the `PKGBUILD` yourself following the [instructions on the Arch wiki](https://wiki.archlinux.org/title/Arch_User_Repository#Installing_and_upgrading_packages).
 
   </tab>
   <tab header="Others">

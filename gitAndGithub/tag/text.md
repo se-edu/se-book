@@ -170,7 +170,7 @@ Note how GitHub assumes these tags are meant as releases, and automatically prov
 
 {% set cli %} <!-- ------ start: Git Tabs --------------->
 
-{{ hp_number ('1') }} **Push a specific tag in the local repo to the remote** (e.g., `v1.0`) using the `git push <origin> <tag-name>` command.
+{{ hp_number ('1') }} **Push a specific tag in the local repo to the remote** (e.g., `v1.0`) using the `git push <remote> <tag-name>` command.
 ```bash{.no-line-numbers}
 git push origin v1.0
 ```
