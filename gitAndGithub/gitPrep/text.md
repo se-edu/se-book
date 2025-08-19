@@ -146,7 +146,7 @@ Our Git lessons show how to perform Git operations in Git CLI, and in Sourcetree
 
 * Download the `.exe` file from [the latest release](https://github.com/git-mastery/app/releases/latest). {{ numbers_abcd }}
 * Add the folder containing the `.exe` to your Windows System Variable `PATH`, by following [this guide](https://www.wikihow.com/Change-the-PATH-Environment-Variable-on-Windows).<br>
-  E.g. If the .exe is in `C:\Users\yourname\Desktop`, you should add this folder into your `PATH`.
+  E.g. If the file location is `C:\Users\Jane\Tools\gitmastery.exe`, you should add `C:\Users\Jane\Tools` to your `PATH`.
 * Close and reopen the Git Bash terminal (for the updated `PATH` to take effect).
 
 <panel header="**++:far-face-surprise: :fas-virus-covid: Windows Defender says gitmastery.exe is a virus?++**{.badge .bg-warning .text-dark}" icon=":fas-face-surprise:"  peek>

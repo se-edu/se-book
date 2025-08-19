@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import trail, bold_number, callout, hp_number, label, show_commit, show_git_term, show_git_term_tip, show_detour, show_exercise, show_git_tabs, show_git_tabs_from_text, show_hands_on_practical, show_head, show_lesson_intro, show_output, show_ref, show_tag, show_transformation_columns, show_under_the_hood with context %}
+{% from "common/macros.njk" import trail, bold_number, button_green, callout, hp_number, label, show_commit, show_git_term, show_git_term_tip, show_detour, show_exercise, show_git_tabs, show_git_tabs_from_text, show_hands_on_practical, show_head, show_lesson_intro, show_output, show_ref, show_tag, show_transformation_columns, show_under_the_hood with context %}
 
 
 <span id="prereqs"></span>
@@ -39,9 +39,15 @@ Add the empty remote repo you created on GitHub as a remote of a local repo you 
 {{ hp_number ('2') }} **List the current list of remotes** using the `git remote -v` command, for a sanity check. No output is expected if there are no remotes yet.
 
 {{ hp_number ('3') }} **Add a new remote repo** using the `git remote add <remote-name> <remote-url>` command.<br>
-   i.e., if using HTTPS, `git remote add origin https://github.com/{YOUR-GITHUB-USERNAME}/things.git`
 
-```bash
+Format of the `<remote-url>`:
+```bash{highlight-lines="1['<owner>'],1['<repo>'],2['<owner>'],2['<repo>']"}
+https://github.com/<owner>/<repo>.git  # using HTTPS
+git@github.com:<owner>/<repo>.git  # using SSH
+```
+
+The full command:
+```bash{highlight-lines="1['JohnDoe'],1['things'],2['JohnDoe'],2['things']"}
 git remote add origin https://github.com/JohnDoe/things.git  # using HTTPS
 git remote add origin git@github.com:JohnDoe/things.git  # using SSH
 ```
@@ -76,7 +82,17 @@ origin  https://github.com/johndoe/things.git (push)
 
    * `Remote name`: the name you want to assign to the remote repo i.e., `origin`
    * `URL/path`: the URL of your remote repo<br>
-     i.e., `https://github.com/{YOUR-GITHUB-USERNAME}/things.git`
+     ```bash{highlight-lines="1['<owner>'],1['<repo>'],2['<owner>'],2['<repo>']"}
+     https://github.com/<owner>/<repo>.git  # using HTTPS
+     git@github.com:<owner>/<repo>.git  # using SSH
+     ```
+     e.g.,
+     ```bash{highlight-lines="1['JohnDoe'],1['things'],2['JohnDoe'],2['things']"}
+     https://github.com/JohnDoe/things.git  # using HTTPS
+     git@github.com:JohnDoe/things.git  # using SSH
+     ```
+
+
    * `Username`: your GitHub username<br><br>
 
 {{ hp_number('4') }} **Verify the remote was added** by going to `Repository` → `Repository Settings` again.
@@ -85,6 +101,13 @@ origin  https://github.com/johndoe/things.git (push)
 <!-- ------ end: Git Tabs -------------------------------->
 {{ hp_number('5') }} **Add another _remote_**, to verify that a repo can have multiple remotes. You can use any name (e.g., `backup` and any URL for this).
 {% endcall %}
+
+<box type="tip" seamless class="non-printable">
+
+**To find the URL of a repo on GitHub**, you can click on the {{ button_green(':fas-angle-left::fas-angle-right: Code :fas-caret-down:') }} button:
+
+<pic src="images/githubFindUrl.png" />
+</box>
 
 </div>
 
