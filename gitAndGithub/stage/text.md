@@ -100,7 +100,7 @@ dragon fruits
 {% endcall %} <!-- end: HOP -->
 
 **Staging applies regardless of whether a file is currently tracked.**
- * Staging a tracked file will both begin tracking the file and include it in the next snapshot.
+ * Staging an untracked file will both begin tracking the file and include it in the next snapshot.
  * **Staging an already tracked file will simply mark its current changes for inclusion in the next commit.**
 
 <div class="non-printable">

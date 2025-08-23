@@ -113,7 +113,8 @@ Use Java Collections classes for storing data. For example, you can use an [`Arr
 <include boilerplate src="dukeExtensionTitle.md" var-extId="A-MoreOOP"
          var-extHeading="Make the code more OOP"/>
 
-Refactor the code to extract out closely related code as classes.
+Gradually (i.e., in small steps) extract out closely related code as classes.
+
 * **Minimal**: Extract the following classes:
   * `Ui`: deals with interactions with the user
   * `Storage`: deals with loading tasks from the file and saving tasks in the file
@@ -180,6 +181,12 @@ Your class names may differ from the ones given above. The design can differ too
 <box type="tip" seamless>
 
 You can get some inspiration from how the class structure of the [addressbook-level2](https://github.com/se-edu/addressbook-level2) is organized.
+</box>
+<box type="important" seamless>
+
+**Common mistake:** Trying to do the entire change in one shot.{.text-danger}
+
+**Recommended:** Change one small code change at a time, while ensuring the code works after each step.<br> Example: identify one bit of functionality that is best put in the `Storage` class → move only that functionality to a new class `Storage` → Test the code to ensure everything is working → Look for the next piece of functionality to move to `Storage` class, and so on.
 </box>
 </div><hr>
 <div id="A-JUnit">
@@ -257,6 +264,12 @@ Add JavaDoc comments to the code.
          var-extHeading="Tweak the code to comply with a coding standard"/>
 
 Tweak the code to comply with a given coding standard. From this point onward, ensure any new code added are compliant with the given coding standard.
+
+<box type="tip" seamless>
+
+SE-EDU guides on configuring the code style in IDEs: [Intellij IDEA](https://se-education.org/guides/tutorials/intellijCodeStyle.html) | [VS Code](https://se-education.org/guides/tutorials/vscCodeStyle.html)
+</box>
+
 </div><hr>
 <div id="A-CheckStyle">
 <include boilerplate src="dukeExtensionTitle.md" var-extId="A-CheckStyle"

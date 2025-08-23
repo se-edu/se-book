@@ -301,7 +301,7 @@ In the example above, the branch `feature` has been squash merged onto the `mast
 
 {% call show_exercise("branch-bender") %}
 
-In the given `webapp` repo, there are three branches: `feature/login`, `feature/dashboard`, `feature/payments`
+Do the following operations in the given `webapp` repo, in the given order:
 
 1. Merge `feature/login` onto the `main` branch, ==while ensuring a merge commit is created== (i.e., no fast-forwarding).
 1. Merge `feature/dashboard` onto the `main` branch.

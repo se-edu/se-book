@@ -119,7 +119,7 @@ Note how the `feature1` is indicated as the current branch (reason: Sourcetree a
 {{ hp_number ('3') }} **Create some commits in the new branch, as follows.**
 
 * Add a file named `numbers.txt`, stage it, commit it.{texts="['3.1', '3.2', '3.3', '3.4']"}
-* Observe how commits you add while on `feature` branch will becomes part of that branch.<br>
+* Observe how commits you add while on `feature1` branch will becomes part of that branch.<br>
   Observe how the `master` ref and the `HEAD` ref move to the new commit.
 
 
@@ -159,8 +159,8 @@ Similarly, `origin/HEAD` ref appearing against the same commit indicates that <t
 {{ show_git_tabs_from_text(cli, sourcetree) }}
 <!-- ------ end: Git Tabs -------------------------------->
 
-{{ hp_number ('5') }} **Add a commit to the master branch.** Let’s imagine it’s a bug fix.<br>
-To keep things simple for the time being, this commit should ==not involve the `numbers.txt` file that you changed in the `feature1` branch==. Of course, this is easily done, as the `numbers.txt` file you added in the `feature` branch is not even visible when you are in the `master` branch.
+{{ hp_number ('5') }} **Add a commit to the `master` branch.** Let’s imagine it’s a bug fix.<br>
+To keep things simple for the time being, this commit should ==not involve the `numbers.txt` file that you changed in the `feature1` branch==. Of course, this is easily done, as the `numbers.txt` file you added in the `feature1` branch is not even visible when you are in the `master` branch.
 <div id="samplerepo-things-before-merging">
 <mermaid>
 gitGraph BT:
