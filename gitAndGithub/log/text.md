@@ -32,7 +32,7 @@ gitGraph
 mkdir things  # create a folder for the repo
 cd things
 git init
-echo -e "apples\nbananas\ncherries" > fruits.txt
+echo -e "apples\nbananas\ncherries\ndragon fruits" > fruits.txt
 git add fruits.txt
 git commit -m "Add fruits.txt"
 ```
