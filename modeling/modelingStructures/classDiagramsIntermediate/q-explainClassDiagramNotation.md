@@ -1,4 +1,4 @@
-<panel header="{{ icon_Q }} Explain notations in the class diagram">
+<panel header="{{ icon_Q }} Explain notations in the class diagram" expanded >
 
 Explain the meaning of various class diagram notations in the following class diagram:
 
