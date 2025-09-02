@@ -38,6 +38,7 @@ In the `shopping-list` repo given, there is a `shopping-list.txt`.
 1. Stage the change and commit it.
 
 {% endcall %}
+{{ show_detour('stagingFileDeletions') }}
 {{ show_detour_preview('updateLastCommit') }}
 {{ show_detour_preview('resetUncommitedChanges') }}
 {{ show_detour_preview('undoRecentCommits') }}

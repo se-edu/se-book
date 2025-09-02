@@ -23,20 +23,25 @@ You can follow the hands-on practical below to learn how to initialise a repo in
 
 {% call show_hands_on_practical("Initialise a git repo in a folder") %}
 
-{{ hp_number(1) }} **First, choose a folder.** The folder may or may not have any files in it already. For this practical, let us create a folder named `things` for this purpose.
+{{ hp_number('Preparation') }} **Choose a folder** to put under Git's control. The folder may or may not contain any files. For this practical, let us create a folder named `things` for this purpose.
 
   ```bash {.no-line-numbers}
   cd my-projects
   mkdir things
   ```
 
-{{ hp_number(2) }} **Then `cd` into it.**
+<box type="warning" seamless id="no-mixing-git-with-file-sync-software">
+
+**Avoid putting Git repos inside cloud-synced (e.g., OneDrive, Dropbox) folders.** Reason: Multiple tools trying to detect/sync changes in the same folder can cause conflicts and unexpected behaviors.<br> If you want to access project files from multiple computers, use Git to do that (rather than cloud syncing tools).
+</box>
+
+{{ hp_number(1) }} **Then `cd` into it.**
 
 ```bash {.no-line-numbers}
 cd things
 ```
 
-{{ hp_number(3) }} **Run the `git status` command** to check the status of the folder.
+{{ hp_number(2) }} **Run the `git status` command** to check the status of the folder.
 
 ```bash {.no-line-numbers}
 git status
@@ -48,7 +53,7 @@ fatal: not a git repository (or any of the parent directories): .git
 {% endcall %}
 Don't panic. The error message is expected. It confirms that the folder currently does not have a Git repo.
 
-{{ hp_number(4) }} **Now, initialise a repository** in that folder.
+{{ hp_number(3) }} **Now, initialise a repository** in that folder.
 
 {{ show_git_tabs() }}
 

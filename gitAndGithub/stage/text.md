@@ -1,4 +1,5 @@
-{% from "common/macros.njk" import trail, bold_number, callout, hp_number, label, show_commit, show_folder_columns, show_git_term, show_git_term_tip, show_detour, show_exercise, show_git_tabs, show_git_tabs_from_text, show_hands_on_practical, show_head, show_lesson_intro, show_lesson_link, show_output, show_protip, show_ref, show_resources, show_sidebar, show_tag, show_transformation_columns, show_under_the_hood with context %}
+{% from "common/macros.njk" import trail, bold_number, callout, hp_number, label, show_commit, show_folder_columns, show_git_term, show_git_term_tip, show_detour, show_detour_preview, show_exercise, show_git_tabs, show_git_tabs_from_text, show_hands_on_practical, show_head, show_lesson_intro, show_lesson_link, show_output, show_protip, show_ref, show_resources, show_sidebar, show_tag, show_transformation_columns, show_troubleshooting, show_under_the_hood with context %}
+
 
 <span id="outcomes">{{ icon_outcome }} Can stage files</span>
 <span id="title">{{ trail.recordingFolderHistory.lessons.stage.title }}</span>
@@ -14,7 +15,7 @@ To save a snapshot, **you start by specifying what to include in it, also called
 
 **A Git repo has an internal space called the {{ show_git_term('staging area') }} which it uses to build the next snapshot**. Another name for the staging area is the {{ show_git_term('index') }}.
 
-**We can {{ show_git_term('stage', 'stage', 'stage') }} an untracked file** to tell Git that we want its current version to be included in the next snapshot. Once you stage an untracked file, it becomes {{ show_git_term("'tracked'") }} (i.e., under Git's control). A staged file can be {{ show_git_term("unstaged") }} to indicate that we no longer want it to be included in the next snapshot.
+**We can {{ show_git_term('stage', 'stage', 'stage') }} an untracked file** to tell Git that we want its current version to be included in the next snapshot (in Git terminology, such a snapshot is called a {{ show_git_term("commit") }}). Once you stage an untracked file, it becomes {{ show_git_term("'tracked'") }} (i.e., under Git's control). A staged file can be {{ show_git_term("unstaged") }} to indicate that we no longer want it to be included in the next snapshot.
 
 {{ show_git_term_tip('stage', 'stage') }}
 
@@ -119,6 +120,6 @@ dragon fruits
 {% call show_exercise("stage-fright") %}
 The `attendance` repo has three unstaged files. Stage them.
 {% endcall %}
-{{ show_detour('stagingFileDeletions') }}
 {{ show_detour('unstagingChanges') }}
+{{ show_detour_preview('stagingFileDeletions') }}
 </div>

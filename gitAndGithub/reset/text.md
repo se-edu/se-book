@@ -60,13 +60,16 @@ iii) Do a 'bad' change to another file, but don't stage it.
 {{ icon_tip }} The following commands can be used to add commits `B1`-`B4`:
 ```bash
 echo "bad colour" >> colours.txt
-git commit -am "Incorrectly update colours.txt"
+git add colours.txt
+git commit -m "Incorrectly update colours.txt"
 
 echo "bad shape" >> shapes.txt
-git commit -am "Incorrectly update shapes.txt"
+git add shapes.txt
+git commit -m "Incorrectly update shapes.txt"
 
 echo "bad fruit" >> fruits.txt
-git commit -am "Incorrectly update fruits.txt"
+git add fruits.txt
+git commit -m "Incorrectly update fruits.txt"
 
 echo "bad line" >> incorrect.txt
 git add incorrect.txt

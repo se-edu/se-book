@@ -124,8 +124,8 @@
 
 {% set detours = {
   undoRepoInit: {lesson: trail.recordingFolderHistory.lessons.init, title: "Undoing a Repo Initialisation"},
-  stagingFileDeletions: {lesson: trail.recordingFolderHistory.lessons.stage, title: "Staging File Deletions"},
   unstagingChanges: {lesson: trail.recordingFolderHistory.lessons.stage, title: "Unstaging Changes"},
+  stagingFileDeletions: {lesson: trail.recordingFolderHistory.lessons.commit, title: "Staging File Deletions"},
   pushToMultipleRepos: {lesson: trail.backingUpOnCloud.lessons.push, title: "Pushing to Multiple Repos"},
   managingRemotes: {lesson: trail.backingUpOnCloud.lessons.setRemote, title: "Managing Details of a Remote"},
   ignoreTrackedFiles: {lesson: trail.backingUpOnCloud.lessons.ignore, title: "Ignoring Previously-Tracked Files"},
@@ -338,13 +338,19 @@
 {% endmacro %}
 <!-- ============================================================ -->
 
+{% macro show_detour_link(detour_name) -%}
+{% set detour = detours[detour_name] %}
+the tour _{{ detour.title }}_ given in the lesson [_{{ detour.lesson.title }}_]({{ baseUrl }}/{{ detour.lesson.path }}#{{ detour_name }})
+{%- endmacro %}
+<!-- ============================================================ -->
+
 {% macro show_detour_preview(detour_name) %}
 {% set detour = detours[detour_name] %}
 <panel class="non-printable" header="{{ icon_detour }} Related DETOUR: **{{ detour.title }}**" type="secondary" expanded>
 
 <include src="{{ baseUrl }}/{{ detour.lesson.path }}/detour-{{ detour_name }}-fragment.md#preview" />
 
-That aspect is covered in a detour **in the lesson [_{{ detour.lesson.title }}_]({{ baseUrl }}/{{ detour.lesson.path }}#{{ detour_name }})**.
+That aspect is covered in {{ show_detour_link(detour_name) }}.
 </panel>
 {% endmacro %}
 <!-- ============================================================ -->
