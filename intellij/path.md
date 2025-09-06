@@ -1,1 +1,1 @@
-Tools → IntelliJ IDEA →
+Tools → IDEs →

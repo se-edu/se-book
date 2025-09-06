@@ -504,11 +504,13 @@ Some examples of errors:
 <include boilerplate src="dukeExtensionTitle.md" var-extId="A-AiAssisted"
          var-extHeading="Enhance the code using AI tools"/>
 
-Use AI tools (e.g., GitHub Copilot, ChatGPT) to enhance your chatbot code. For example, you can get AI tools to help you,
+Use AI tools (e.g., GitHub Copilot, ChatGPT, Claude, Cursor etc.) to enhance your chatbot code. For example, you can get AI tools to help you,
 
 * improve the quality of the current code.
 * tweak an existing feature to make it more useful to the user.
 * add or improve documentation, tests.
+
+You can refer the [se-edu guide on AI-Assisted Coding](https://se-education.org/guides/tutorials/aiAssistedCoding.html) for further resources.
 
 </div>
 
