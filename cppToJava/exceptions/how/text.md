@@ -115,7 +115,7 @@ No exceptions {{ icon_output }} | `IOException` {{ icon_output }} | `IndexOutOfB
 
 </box>
 
-**Java comes with a collection of [built-in exception classes](https://www.geeksforgeeks.org/built-exceptions-java-examples/)** that you can use. When they are not enough, **it is possible to [create your own exception classes](https://www.javatpoint.com/custom-exception)**.
+**Java comes with a collection of [built-in exception classes](https://www.geeksforgeeks.org/built-exceptions-java-examples/)** that you can use. When they are not enough, **it is possible to create your own exception classes**.
 
 </div>
 

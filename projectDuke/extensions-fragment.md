@@ -522,7 +522,7 @@ You can refer the [se-edu guide on AI-Assisted Coding](https://se-education.org/
 <include boilerplate src="dukeExtensionTitle.md" var-extId="B-TentativeScheduling" var-extStyle="info"
          var-extHeading="Tentative scheduling"/>
 
-Provide a way for an event to be tentatively scheduled in multiple slots, and later to be confirmed to one the slots.
+Provide a way for an event to be tentatively scheduled in multiple slots, and later to be confirmed to one of the slots.
 </div><hr>
 <div id="B-Snooze">
 <include boilerplate src="dukeExtensionTitle.md" var-extId="B-Snooze" var-extStyle="info"

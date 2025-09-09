@@ -1,6 +1,5 @@
 **Tutorials**:
 
-* [**Java Assertions**](https://www.javatpoint.com/assertion-in-java) -- a simple tutorial from _javatpoint.com_
 * [**Programming with Assertions** (first half)](http://docs.oracle.com/javase/8/docs/technotes/guides/language/assert.html) -- a more detailed tutorial from _Oracle_
 
 **Best practices**:

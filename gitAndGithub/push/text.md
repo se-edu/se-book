@@ -53,9 +53,14 @@ Explanation: When you create `C4`, the current branch `master` moves to `C4`, an
 
 {% call show_hands_on_practical('Pushing to send further updates to a repo')  %}
 
-{{ hp_number(hop_target) }} Add a few more commits to the same local repo, and push those commits to the remote repo.
+{{ hp_number(hop_target) }} Add a commit to the same local repo, and push it to the remote repo.
 
-{{ hp_number ('1') }} **Commit** some changes in your local repo.
+{{ hp_number ('1') }} **Commit** some changes in your local repo. Example:
+
+```bash
+echo "Elderberries" >> fruits.txt
+git commit -am "Update fruits list"
+```
 
 {% set cli %} <!-- ------ start: Git Tabs --------------->
 Use the `git commit` command to create commits, as you did before.

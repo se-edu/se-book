@@ -2,7 +2,7 @@
 
 <span id="prereqs"></span>
 <span id="outcomes">Able to view the revision graph, and changes included in each commit.</span>
-<span id="title">{{ trail.usingRevisionHistory.lessons.log.title }}</span>
+<span id="title">{{ trail.recordingFolderHistory.lessons.log.title }}</span>
 
 <div id="body">
 {% call show_lesson_intro() %}
