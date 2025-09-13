@@ -14,7 +14,8 @@
 
 First, import the relevant Java package:
 ```java{.no-line-numbers}
-import java.util.logging.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 ```
 
 Next, create a `Logger`:
