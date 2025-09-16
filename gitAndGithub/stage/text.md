@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import trail, bold_number, callout, hp_number, label, show_commit, show_folder_columns, show_git_term, show_git_term_tip, show_detour, show_detour_preview, show_exercise, show_git_tabs, show_git_tabs_from_text, show_hands_on_practical, show_head, show_lesson_intro, show_lesson_link, show_output, show_protip, show_ref, show_resources, show_sidebar, show_tag, show_transformation_columns, show_troubleshooting, show_under_the_hood with context %}
+{% from "common/macros.njk" import trail, bold_number, callout, hp_number, label, show_commit, show_folder_columns, show_git_term, show_git_term_tip, show_detour, show_detour_preview, show_exercise, show_git_tabs, show_git_tabs_from_text, show_hands_on_practical, show_hop_prep, show_head, show_lesson_intro, show_lesson_link, show_output, show_protip, show_ref, show_resources, show_sidebar, show_tag, show_transformation_columns, show_troubleshooting, show_under_the_hood with context %}
 
 
 <span id="outcomes">{{ icon_outcome }} Can stage files</span>
@@ -25,7 +25,13 @@ In the example below, you can see how staging files change the status of the rep
 
 {% call show_hands_on_practical("Adding untracked files") %}
 
-{{ hp_number(1) }} **First, add a file** (e.g., `fruits.txt`) to the `things` folder.
+{{ hp_number('preparation') }}
+
+{{ show_hop_prep('hp-add-files',is_continue=1) }}
+<!-- ------ end: show_hop_prep -------------------------------->
+
+
+{{ hp_number(1) }} **Add a file** (e.g., `fruits.txt`) to the `things` repo folder.
 
 <box type="tip" seamless>
 
@@ -67,6 +73,11 @@ The example below shows how the status of a file changes when it is modified _af
 {{ show_folder_columns('folder-change-after-staging-fragment.md') }}
 
 {% call show_hands_on_practical("Re-staging 'modified' files") %}
+
+{{ hp_number('preparation') }}
+
+{{ show_hop_prep('hp-stage-modified', is_continue=1) }}
+<!-- ------ end: show_hop_prep -------------------------------->
 
 {{ hp_number('1') }} **First, add another line to `fruits.txt`**, to make it 'modified'.
 <div class="indented-level1">

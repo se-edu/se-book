@@ -326,6 +326,15 @@
 {% endmacro %}
 <!-- ============================================================ -->
 
+{% macro show_gm_footer() %}
+<div class="bg-light">
+
+  -><small>[Git-Mastery **commands list**](https://git-mastery.github.io/app/) | [Report Git-Mastery **bugs**](https://github.com/git-mastery/git-mastery/issues) | [How to **update** Git-Mastery](https://git-mastery.github.io/app/update) </small><-
+</div>
+</panel>
+{% endmacro %}
+<!-- ============================================================ -->
+
 {% macro show_detour(detour_name, detour_title='', detour_path='') %}
 {% set detour = detours[detour_name] %}
 {% set title = detour_title if detour_title else detour.title %}
@@ -366,6 +375,40 @@ That aspect is covered in {{ show_detour_link(detour_name) }}.
 {% endmacro %}
 <!-- ============================================================ -->
 
+{% macro show_hop_prep(identifier, manual_info='', gm_info='', is_continue=0) %}
+{% if is_continue %}
+**You can continue using the sandbox created in the previous hands-on practical**, or,
+
+<panel type="seamless" header="get the Git-Mastery app to create a fresh sandbox (click to expand)" minimized expand-headerless>
+
+* Navigate inside the `gitmastery-exercises` folder.{{ numbers_roman }}
+* Run `gitmastery download {{ identifier }}` command.
+
+{{ show_gm_footer() }}
+</panel>
+<p/>
+{% else %}
+<tabs>
+  <tab header="With Git-Mastery">
+
+**To prepare** the sandbox for this practical:
+
+* Navigate inside the `gitmastery-exercises` folder.{{ numbers_roman }}
+* Run `gitmastery download {{ identifier }}` command.
+
+The sandbox will be set up inside the `gitmastery-exercises/{{ identifier }}` folder.
+
+{{ show_gm_footer() }}
+  </tab>
+  <tab header="Manual">
+
+{{ manual_info }}
+</tab>
+</tabs>
+{% endif %}
+{% endmacro %}
+<!-- ============================================================ -->
+
 {% macro show_exercise(identifier, has_download=1, has_verify=1, scenario=0) %}
 <panel tags="git-mastery" class="non-printable" type="danger" header="{{ icon_exercise }} EXERCISE: `{{ identifier }}`">
 {% if has_download %}
@@ -396,10 +439,7 @@ That aspect is covered in {{ show_detour_link(detour_name) }}.
 
 <small>%%**To reset the exercise** and start over, navigate to the `gitmastery-exercises/{{ identifier }}` folder and run the `gitmastery progress reset` command.%%</small>
 {% endif %}
-<div class="bg-light">
-
-  -><small>[Git-Mastery **commands list**](https://git-mastery.github.io/app/) | [Report Git-Mastery **bugs**](https://github.com/git-mastery/git-mastery/issues) | [How to **update** Git-Mastery](https://git-mastery.github.io/app/update) </small><-
-</div>
+{{ show_gm_footer() }}
 </panel>
 {% endmacro %}
 <!-- ============================================================ -->

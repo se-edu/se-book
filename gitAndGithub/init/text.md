@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import trail, bold_number, callout, hp_number, label, show_commit, show_git_term, show_git_term_tip, show_detour, show_exercise, show_git_tabs, show_git_tabs_from_text, show_hands_on_practical, show_head, show_lesson_intro, show_lesson_link, show_output, show_ref, show_resources, show_sidebar, show_tag, show_transformation_columns, show_under_the_hood with context %}
+{% from "common/macros.njk" import trail, bold_number, callout, hp_number, label, show_commit, show_git_term, show_git_term_tip, show_detour, show_exercise, show_git_tabs, show_git_tabs_from_text, show_hands_on_practical, show_hop_prep, show_head, show_lesson_intro, show_lesson_link, show_output, show_ref, show_resources, show_sidebar, show_tag, show_transformation_columns, show_under_the_hood with context %}
 
 <span id="outcomes">{{ icon_outcome }} Can create a local Git repo</span>
 
@@ -25,10 +25,17 @@ You can follow the hands-on practical below to learn how to initialise a repo in
 
 {{ hp_number('Preparation') }} **Choose a folder** to put under Git's control. The folder may or may not contain any files. For this practical, let us create a folder named `things` for this purpose.
 
-  ```bash {.no-line-numbers}
-  cd my-projects
-  mkdir things
-  ```
+You can get the Git-Mastery app to <tooltip content="setting up the needed folders, files, repos needed for the practical">create the _sandbox_</tooltip> for doing this practical, or create the sandbox manually. Instructions for the both options are given below.
+
+{% set manual_info %} <!-- ------ start: show_hop_prep --------------->
+Assuming you have a folder named `git-practicals` that you wish to use for doing Git hands-on practicals in, you can run the following commands.
+```bash
+cd git-practicals
+mkdir things
+```
+{% endset %}
+{{ show_hop_prep('hp-init-repo', manual_info) }}
+<!-- ------ end: show_hop_prep -------------------------------->
 
 <box type="warning" seamless id="no-mixing-git-with-file-sync-software">
 
