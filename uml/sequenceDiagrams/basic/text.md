@@ -31,7 +31,7 @@ Note that unlike in object diagrams, the **class/object name is not underlined i
 **The arrowhead style depends on the type of method call.** Arrows showing _synchronous_ (i.e., the caller method is blocked from doing anything else until the called method returns) should use _filled_ arrowheads (e.g., <img src="images/filled-arrowhead.png" width="40">). Most method calls (e.g., normal Java method calls) are synchronous.  _Asynchronous_ method calls (i.e., the caller method does not have to wait till the called method returns) are shown using _lined_ arrowheads (e.g., <img src="images/lined-arrowhead.png" width="40">). As the latter is out of scope for this textbook, all sequence diagram arrow heads you encounter in this textbook will be of the first type.
 <box>
 
-{{ icon_x_red }} **[Common notation error] Activation bar too long:** The activation bar of a method cannot start before the method call arrives and a method cannot remain active after the method has returned. %%In the two sequence diagrams below, the one on the left commits this error because the activation bar starts _before_ the method `Foo#xyz()` is called and remains active _after_ the method returns.%%
+{{ icon_x_red }} **[Common notation error] Activation bar too long:** The activation bar of a method cannot start before the method call arrives and a method cannot keep executing after the method has returned. %%In the two sequence diagrams below, the one on the left commits this error because the activation bar starts _before_ the method `Foo#xyz()` is called and keeps executing even _after_ the method returns.%%
 
 <pic eager src="{{baseUrl}}/uml/sequenceDiagrams/basic/images/commonError-activationBarTooLong.png" height="120" />
 

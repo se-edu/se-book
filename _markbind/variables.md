@@ -72,5 +72,5 @@
 <variable id="java_api">https://docs.oracle.com/javase/{{ java_version }}/docs/api</variable>
 <variable id="java_tutorial">https://docs.oracle.com/javase/tutorial</variable>
 
-<variable id="numbers_abcd">\{texts="['a)', 'b)', 'c)', 'd)', 'e)', 'f)']"\}</variable>
-<variable id="numbers_roman">\{texts="['i.', 'ii.', 'iii.', 'iv', 'v', 'vi']"\}</variable>
+<variable id="numbers_abcd">\{texts="['a)', 'b)', 'c)', 'd)', 'e)', 'f)', 'g)', 'h)']"\}</variable>
+<variable id="numbers_roman">\{texts="['i.', 'ii.', 'iii.', 'iv.', 'v.', 'vi.', 'vii.']"\}</variable>

@@ -1,5 +1,5 @@
 <frontmatter>
-title: "Git & GitHub: Centralized Flow"
+title: "Git & GitHub: Centralized Workflow"
 </frontmatter>
 
 <include src="unit-inPage-asFlat.md" boilerplate />

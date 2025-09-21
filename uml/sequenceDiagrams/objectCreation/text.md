@@ -12,7 +12,7 @@ Notation:
 <p/>
 
 * The arrow that represents the constructor arrives at the side of the box representing the instance.
-* The activation bar represents the period the constructor is active.
+* The activation bar represents the period the constructor is being executed.
 
 <box>
 
