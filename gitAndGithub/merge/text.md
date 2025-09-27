@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import trail, bold_number, callout, hp_number, label, show_commit, show_git_term, show_git_term_tip, show_detour, show_exercise, show_git_tabs, show_git_tabs_from_text, show_hands_on_practical, show_head, show_lesson_intro, show_output, show_ref, show_tag, show_transformation_columns, show_under_the_hood with context %}
+{% from "common/macros.njk" import trail, bold_number, callout, hp_number, label, show_commit, show_folder_columns, show_git_term, show_git_term_tip, show_detour, show_detour_link, show_exercise, show_git_tabs, show_git_tabs_from_text, show_hands_on_practical, show_hop_prep, show_head, show_multiple_columns, show_lesson_intro, show_lesson_link, show_output, show_protip, show_ref, show_resources, show_sidebar, show_tag, show_transformation_columns, show_troubleshooting, show_under_the_hood with context %}
 
 <span id="prereqs"></span>
 <span id="outcomes">Can merge branches in a local repo.</span>
@@ -29,6 +29,10 @@ Given below is an illustration of how such a merge looks like in the revision gr
 * The `fix1` branch has been merged into the `master` branch, creating a _merge commit_ `f`. The repo is still on the `master` branch.
 
 **A merge commit has two parent commits** e.g., in the above example, the merge commit `f` has both `d` and `e` as parent commits. **The parent commit on the receiving branch is considered the {{ show_git_term("first parent") }} and the other is considered the {{ show_git_term("second parent") }}** e.g., in the example above, `fix1` branch is being merged into the `master` branch (i.e., the receiving branch) -- accordingly, `d` is the first parent and `e` is the second parent.
+
+**The branch you are merging into called the {{ show_git_term("destination branch") }}** (other terms: _receiving_ branch, _target_ branch)<br>
+**The branch you are merging is referred to as the {{ show_git_term("source branch") }}</tooltip>** (other terms: _incoming_ branch, _merge_ branch).<br>
+In the above example, `master` is the destination branch and `fix1` is the source branch.
 
 
 <!-- ================== start: HANDS-ON =========================== -->
@@ -144,7 +148,7 @@ Right-click on the `feature1` branch and choose `Merge...`. The resulting revisi
 Now, any changes you made in `feature1` branch are available in the master branch.
 {% endcall %}<!-- ===== end: HANDS-ON ============================ -->
 
-**When the branch you're merging into hasn't diverged** — meaning it hasn't had any new commits since the merge base —  **Git simply moves the branch pointer forward to include all the new commits**, keeping the history clean and linear. This is **called a {{ show_git_term("fast-forward merge") }}** because Git simply "fast-forwards" the branch pointer to the tip of the other branch. The result looks as if all the changes had been made directly on one branch, without any branching at all.
+**When the destination branch hasn't diverged** — meaning it hasn't had any new commits since the merge base —  **Git simply moves the branch pointer forward to include all the new commits in the source branch**, keeping the history clean and linear. This is **called a {{ show_git_term("fast-forward merge") }}** because Git simply "fast-forwards" the branch pointer to the tip of the other branch. The result looks as if all the changes had been made directly on one branch, without any branching at all.
 
 {% set a %}
 <mermaid>
@@ -262,7 +266,7 @@ To permanently prevent fast-forwarding:
 <!-- ------ end: Git Tabs -------------------------------->
 </div>
 
-**A {{ show_git_term("squash merge") }} combines all the changes from a branch into a single commit on the receiving branch**, without preserving the full commit history of the branch being merged. This is especially useful when the feature branch contains many small or experimental commits that would clutter the main branch’s history. By squashing, you retain the final state of the changes while presenting them as one cohesive unit, making the project history easier to read and manage. It also helps maintain a linear, simplified commit log on the main branch.
+**A {{ show_git_term("squash merge") }} takes all the changes from the source branch and combines them into a single commit on the destination branch.** It is especially useful when the source branch has many small or experimental commits that would otherwise clutter history.
 
 {% set a %} <!-- ------ start: transformation columns --------------->
 <mermaid>
@@ -287,7 +291,7 @@ gitGraph BT:
     commit id: "f1"
     commit id: "[feature] f2"
     checkout master
-    commit id: "[HEAD → master] s1 (same as f1+f2)" type: HIGHLIGHT
+    commit id: "[HEAD → master] s1 (same as f1+f2)"
 </mermaid>
 
 {% endset %}
@@ -295,6 +299,54 @@ gitGraph BT:
 <!-- ------ end: transformation columns -------------------------------->
 
 In the example above, the branch `feature` has been squash merged onto the `master` branch, creating a single 'squashed' commit `s1` that combines all the commits in `feature` branch.
+
+
+After a squash merge, you typically delete the source branch, so its individual commits are no longer kept. The destination branch's history stays linear, as the work done in the source branch is replaced by one commit on the destination branch. As a result, a squash merge commit is just a normal commit, and does not have a 'parent' reference to the source branch.
+
+{% set a %} <!-- ------ start: transformation columns --------------->
+<mermaid>
+gitGraph BT:
+    {{ "%%{init: { 'theme': 'default', 'gitGraph': {'mainBranchName': 'master'}} }%%" }}
+    commit id: "[HEAD → master] m1"
+    branch feature
+    checkout feature
+    commit id: "f1"
+    commit id: "[feature] f2"
+    checkout master
+    merge feature
+</mermaid>
+<small>->[If using a regular merge,<br> with a merge commit]<-</small>
+{% endset %}
+{% set b %}
+<mermaid>
+gitGraph BT:
+    {{ "%%{init: { 'theme': 'default', 'gitGraph': {'mainBranchName': 'master'}} }%%" }}
+    commit id: "m1"
+    commit id: "f1"
+    commit id: "[HEAD → master][feature] f2"
+</mermaid>
+
+<small>->[If using a fast-forward merge]<-</small>
+{% endset %}
+{% set c %}
+<mermaid>
+gitGraph BT:
+    {{ "%%{init: { 'theme': 'default', 'gitGraph': {'mainBranchName': 'master'}} }%%" }}
+    commit id: "m1"
+    commit id: "[HEAD → master] s1 (same as f1+f2)"
+</mermaid>
+
+<small>->[If using a squash merge, and after<br>deleting the source branch thereafter]<-</small>
+{% endset %}
+{{ show_multiple_columns([a, '|', b, '|', c]) }}
+<!-- ------ end: transformation columns -------------------------------->
+
+<p/>
+
+<div class="non-printable">
+
+The mechanics of doing a squash merge is covered in a separate detour.
+</div>
 
 </div>
 <div id="extras">

@@ -251,6 +251,26 @@
 </div>
 </div>
 
+{%- endmacro %}
+{% set border %}
+<div class="flex-shrink-0 d-flex flex-column justify-content-end" style="border-right: 1px dotted grey;">
+</div>
+{% endset %}
+<!-- ============================================================ -->
+
+{% macro show_multiple_columns(cell_contents) -%}
+<div class="d-flex flex-column flex-md-row align-items-stretch justify-content-start gap-2">
+{% for c in cell_contents %}
+{% if c == '|' %}
+{{ border }}
+{% else %}
+<div class="flex-shrink-0 d-flex flex-column justify-content-end">
+
+{{ c }}
+</div>
+{% endif %}
+{% endfor %}
+</div>
 
 {%- endmacro %}
 <!-- ============================================================ -->

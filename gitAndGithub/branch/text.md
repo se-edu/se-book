@@ -18,29 +18,29 @@
 
 Given below is an illustration of how branch refs move as branches evolve. Refer to the text below it for explanations of each stage.
 
-<annotate src="{{ baseUrl }}/gitAndGithub/branch/images/branchesAsLabels1.png" width="700">
-<a-point x="2%" y="27%" label="[1]" opacity="0"/>
-<a-point x="2%" y="47%" label="[2]" opacity="0"/>
-<a-point x="35%" y="25%" label="[3]" opacity="0"/>
-<a-point x="65%" y="10%" label="[4]" opacity="0"/>
-<a-point x="85%" y="10%" label="[5]" opacity="0"/>
+<annotate src="{{ baseUrl }}/gitAndGithub/branch/images/branchesAsLabels1.png" width="750">
+<a-point x="2%" y="47%" label="[1]" opacity="0"/>
+<a-point x="35%" y="25%" label="[2]" opacity="0"/>
+<a-point x="65%" y="10%" label="[3]" opacity="0"/>
+<a-point x="90%" y="80%" label="[4]" opacity="0"/>
 </annotate>
 <p/>
 
-* There is only one branch (i.e., `master`) and there is only one commit on it. The `HEAD` ref is pointing to the `master` branch (as we are currently on that branch). {texts="['[1]', '[2]', '[3]', '[4]', '[5]']"}
+* There is only one branch (i.e., `master`) and there is only one commit on it. The `HEAD` ref is pointing to the `master` branch (as we are currently on that branch). {texts="['[1]', '[2]', '[3]', '[4]']"}
 * A new commit has been added. The `master` and the `HEAD` refs have moved to the new commit.
 * A new branch `fix1` has been added. The repo has switched to the new branch too (hence, the `HEAD` ref is attached to the `fix1` branch).
 * A new commit (`c`) has been added. The current branch ref `fix1` moves to the new commit, together with the `HEAD` ref.
-* The repo has switched back to the `master` branch. Hence, the `HEAD` has moved back to `master` branch's <tooltip content="latest commit of that branch">tip</tooltip>.<br>
    At this point, the repo's working directory reflects the code at commit `b` (not `c`).
 
-<annotate src="{{ baseUrl }}/gitAndGithub/branch/images/branchesAsLabels2.png" width="460">
-<a-point x="15%" y="10%" label="[6]" opacity="0"/>
-<a-point x="50%" y="5%" label="[7]" opacity="0"/>
+<annotate src="{{ baseUrl }}/gitAndGithub/branch/images/branchesAsLabels2.png" width="700">
+<a-point x="15%" y="10%" label="[5]" opacity="0"/>
+<a-point x="50%" y="5%" label="[6]" opacity="0"/>
+<a-point x="70%" y="5%" label="[7]" opacity="0"/>
 </annotate>
 
-* A new commit (`d`) has been added. The `master` and the `HEAD` refs have moved to that commit. {texts="['[6]', '[7]']"}
+* A new commit (`d`) has been added. The `master` and the `HEAD` refs have moved to that commit. {texts="['[5]', '[6]', '[7]']"}
 * The repo has switched back to the `fix1` branch and added a new commit `e` to it. Note how the branch ref `fix1` (together with `HEAD`) has moved to the new commit `e` while the branch ref `master` still points to `d`.
+* The repo has switched back to the `master` branch. Hence, the `HEAD` has moved back to `master` branch's <tooltip content="latest commit of that branch">tip</tooltip>.<br>
 
 <box type="warning" seamless>
 
