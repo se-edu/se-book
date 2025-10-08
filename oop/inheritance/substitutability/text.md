@@ -6,7 +6,7 @@
 
 <div id="body">
 
-**Every instance of a subclass is an instance of the superclass, but not vice-versa.** As a result, inheritance allows _substitutability_: the ability to substitute a child class object where a parent class object is expected.
+**Every instance of a subclass is an instance of the superclass, but not vice versa.** As a result, inheritance allows _substitutability_: the ability to substitute a child class object where a parent class object is expected.
 
 <box>
 
