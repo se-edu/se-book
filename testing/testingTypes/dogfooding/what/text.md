@@ -10,7 +10,7 @@
 
 For example, suppose a company produces an email client software. Then, getting some of the employees to use that software for their day-to-day emailing would be dogfooding. Such longer-term, consistent, and authentic use of the software can point to areas of improvement that regular testing (which is often short-term and 'simulated') might not encounter.
 
-Note that dogfooding to be useful, observations need to be deliberately collected and processed i.e., just using the product itself is not enough.
+Note that for dogfooding to be useful, observations need to be deliberately collected and processed i.e., just using the product itself is not enough.
 
 </div>
 
