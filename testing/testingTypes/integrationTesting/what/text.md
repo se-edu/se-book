@@ -6,7 +6,7 @@
 
 <div id="body">
 
-**_Integration testing_ : testing whether different parts of the software _work together_ (i.e., integrates) as expected.** Integration tests aim to discover bugs in the 'glue code' related to how components interact with each other. These bugs are often the result of misunderstanding what the parts are supposed to do vs what the parts are actually doing.
+**_Integration testing_: testing whether different parts of the software _work together_ (i.e., integrates) as expected.** Integration tests aim to discover bugs in the 'glue code' related to how components interact with each other. These bugs are often the result of misunderstanding what the parts are supposed to do vs what the parts are actually doing.
 
 <box>
 
