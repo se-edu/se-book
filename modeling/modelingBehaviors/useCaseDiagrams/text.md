@@ -10,9 +10,27 @@
 
 <box>
 
-{{ icon_example }} A simple use case diagram:
+{{ icon_example }} An example use case diagram:
 
-<pic eager src="{{baseUrl}}/specifyingRequirements/useCases/introduction/images/ticketMachine.png" height="250" />
+<puml>
+@startuml
+left to right direction
+actor "Staff" as s
+actor "Customer" as c
+rectangle "Ticket Machine" {
+  usecase "Set schedule" as UC1
+  usecase "Set price" as UC2
+  usecase "Buy ticket" as UC3
+  usecase "Upload" as UC4
+}
+(UC1) .> (UC4) : <<include>>
+(UC2) .> (UC4) : <<include>>
+
+c --> UC3
+s --> UC1
+s --> UC2
+@enduml
+</puml>
 
 </box>
 
