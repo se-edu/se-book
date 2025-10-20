@@ -28,11 +28,11 @@ Given below is an illustration of how such a merge looks like in the revision gr
 * We have switched to the `master` branch (thus, `HEAD` is now pointing to `master` ref).
 * The `fix1` branch has been merged into the `master` branch, creating a _merge commit_ `f`. The repo is still on the `master` branch.
 
-**A merge commit has two parent commits** e.g., in the above example, the merge commit `f` has both `d` and `e` as parent commits. **The parent commit on the receiving branch is considered the {{ show_git_term("first parent") }} and the other is considered the {{ show_git_term("second parent") }}** e.g., in the example above, `fix1` branch is being merged into the `master` branch (i.e., the receiving branch) -- accordingly, `d` is the first parent and `e` is the second parent.
-
 **The branch you are merging into called the {{ show_git_term("destination branch") }}** (other terms: _receiving_ branch, _target_ branch)<br>
 **The branch you are merging is referred to as the {{ show_git_term("source branch") }}</tooltip>** (other terms: _incoming_ branch, _merge_ branch).<br>
 In the above example, `master` is the destination branch and `fix1` is the source branch.
+
+**A merge commit has two parent commits** e.g., in the above example, the merge commit `f` has both `d` and `e` as parent commits. **The parent commit on the destination branch is considered the {{ show_git_term("first parent") }} and the parent commit on the source branch is considered the {{ show_git_term("second parent") }}** e.g., in the example above, `fix1` branch is the source branch that is being merged into the destination branch `master` -- accordingly, `d` is the first parent and `e` is the second parent.
 
 
 <!-- ================== start: HANDS-ON =========================== -->
