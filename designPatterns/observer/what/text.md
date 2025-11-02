@@ -78,7 +78,7 @@ Force the communication through an interface known to both parties.
 1. All interested observers are updated by calling the `notifyUIs` operation.
    ```java
    // StudentList class
-   public void notifyUIs() {
+   private void notifyUIs() {
        // for each observer in the list
        for (Observer o: observerList) {
            o.update();
