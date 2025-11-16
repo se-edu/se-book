@@ -109,20 +109,26 @@ gh auth login
 
 When prompted, choose the protocol (i.e., `HTTPS` or `SSH`) you used previously to set up your GitHub authentication.
 
-**3. Verify the setup** by checking the status of your GitHub CLI with your GitHub account.
+**3. Give GitHub CLI permission to delete repos in your account**, as this is required for some of the Git-Mastery exercises.
+
+```bash{.no-line-numbers}
+gh auth refresh -s delete_repo
+```
+
+**4. Verify the setup** by checking the status of your GitHub CLI with your GitHub account.
 
 ```bash{.no-line-numbers}
 gh auth status
 ```
 You should see confirmation that you’re logged in.
 
-**4. Verify that Github and GitHub CLI is set up for Git-Mastery:**
+**5. Verify that Github and GitHub CLI is set up for Git-Mastery:**
 
 ```bash{.no-line-numbers}
 gitmastery check github
 ```
 
-**5. [Optional, Recommended] Ask Git-Mastery to switch on the 'progress sync' feature.**
+**6. [Optional, Recommended] Ask Git-Mastery to switch on the 'progress sync' feature.**
 
 ```bash{.no-line-numbers}
 # cd into the gitmastery-exercises folder first
