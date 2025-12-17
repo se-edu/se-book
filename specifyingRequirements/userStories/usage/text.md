@@ -130,7 +130,7 @@ To give another example, based on the scenario 'D. 100th use', you might have us
 
 </div>
 
-While use cases can be recorded on <tooltip content="e.g. index cards or sticky notes">physical paper</tooltip> in the initial stages, an online tool is more suitable for longer-term management of user stories, especially if the team is not <tooltip content="physically in the same location">co-located</tooltip>.
+While user stories can be recorded on <tooltip content="e.g. index cards or sticky notes">physical paper</tooltip> in the initial stages, an online tool is more suitable for longer-term management of user stories, especially if the team is not <tooltip content="physically in the same location">co-located</tooltip>.
 
 <span class="non-printable">
 <panel header="**Tool Examples**: How to use some example online tools to manage user stories" alt="tool examples">
