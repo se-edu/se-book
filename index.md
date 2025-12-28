@@ -94,9 +94,6 @@ title: "Book - Software Engineering for Self-Directed Learners"
 
 ### Project management
 
-* [Revision control (using Git & GitHub)]({{baseUrl}}/gitAndGithub/trail/tours.html)
-  [{{icon_print}}]({{baseUrl}}/gitAndGithub/print.html)
-
 * [Project planning]({{baseUrl}}/projectPlanning/)
   [{{icon_print}}]({{baseUrl}}/projectPlanning/print.html)
   
