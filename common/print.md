@@ -72,7 +72,6 @@ pageNav: 3
 
 # SECTION: PROJECT MANAGEMENT
 
-<include src="../gitAndGithub/print.md#main" />
 <include src="../projectPlanning/print.md#main" />
 <include src="../teamwork/print.md#main" />
 <include src="../processModels/print.md#main" />

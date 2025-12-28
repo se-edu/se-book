@@ -26,7 +26,6 @@
   * [Testing](#testing)
   * [Test Case Design](#test-case-design)
 * [**SECTION: PROJECT MANAGEMENT**](#section-project-management) 
-  * [Revision Control (Using Git & GitHub)](#revision-control)
   * [Project Planning](#project-planning)
   * [Teamwork](#teamwork)
   * [SDLC Process Models](#sdlc-process-models)

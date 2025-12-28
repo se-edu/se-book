@@ -51,7 +51,6 @@
   * [Testing]({{baseUrl}}/testing/index.html)
   * [Test case design]({{baseUrl}}/testCaseDesign/index.html)
 * **Project management**
-  * [Revision control (using Git & GitHub)]({{baseUrl}}/gitAndGithub/trail/tours.html)
   * [Project planning]({{baseUrl}}/projectPlanning/index.html)
   * [Teamwork]({{baseUrl}}/teamwork/index.html)
   * [SDLC process models]({{baseUrl}}/processModels/index.html)

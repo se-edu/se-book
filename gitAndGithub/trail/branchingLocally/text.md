@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import trail, show_tour_title, show_tour, show_tour_link with context %}
+{% from "common/macros.njk" import trail, show_gm_tour_link, show_tour_title, show_tour, show_tour_link with context %}
 {% set tour = trail.branchingLocally %}
 <frontmatter>
 title: "{{ tour.title }}"
@@ -18,7 +18,7 @@ pageNav: 4
 
 <div id="body">
 
-{{ show_tour(tour) }}
+See {{ show_gm_tour_link("branchingLocally", "Tour 6: Branching Locally") }}
 </div>
 
 <div id="extras">

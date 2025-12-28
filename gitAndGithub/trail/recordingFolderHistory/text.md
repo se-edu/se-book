@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import trail, show_tour_title, show_tour, show_tour_link with context %}
+{% from "common/macros.njk" import trail, show_gm_tour_link, show_tour_title, show_tour, show_tour_link with context %}
 {% set tour = trail.recordingFolderHistory %}
 <frontmatter>
 title: "{{ tour.title }}"
@@ -14,7 +14,8 @@ pageNav: 4
 
 <div id="body">
 
-{{ show_tour(tour) }}
+See {{ show_gm_tour_link("recordingFolderHistory", "Tour 1: Recording the History of a Folder") }}
+
 </div>
 
 <div id="extras">
