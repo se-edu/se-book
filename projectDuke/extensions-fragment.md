@@ -32,6 +32,8 @@ t.markAsDone();
 ```
 </panel>
 
+{{ icon_tip }} **Add more classes along the way**, following the OOP approach.
+
 </div><hr>
 <div id="A-Inheritance">
 <include boilerplate src="dukeExtensionTitle.md" var-extId="A-Inheritance"
