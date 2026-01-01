@@ -6,7 +6,7 @@
 
 <div id="body">
 
-**Typically, you should choose three values around the boundary to test: one value from the boundary, one value just below the boundary, and one value just above the boundary.** The number of values to pick depends on other factors, such as the cost of each test case.
+**You should try to both boundary values and non-boundary values.** Give priority to boundary values over non-boundary values. For example, pick one non-boundary value from each partition, or if you can afford more test cases, pick two non-boundary values (e.g., one just below the boundary, and one just above the boundary).
 
 <box>
 <div class="text-monospace">
