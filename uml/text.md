@@ -7,6 +7,7 @@
 <include src="objectDiagrams/container-inParent-asPanel.md" boilerplate />
 <include src="activityDiagrams/container-inParent-asPanel.md" boilerplate />
 <include src="notes/container-inParent-asPanel.md" boilerplate />
+<include src="stereotypes/container-inParent-asPanel.md" boilerplate />
 <include src="miscellaneous/container-inParent-asPanel.md" boilerplate />
 
 </div>

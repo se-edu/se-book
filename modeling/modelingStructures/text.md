@@ -7,6 +7,7 @@
 <include src="addingMoreInfo/unit-inParent-asPanel.md" boilerplate />
 <include src="classDiagramsIntermediate/unit-inParent-asPanel.md" boilerplate />
 <include src="classDiagramsAdvanced/unit-inParent-asPanel.md" boilerplate />
+<include src="customisingUml/unit-inParent-asPanel.md" boilerplate />
 <include src="objectDiagrams/unit-inParent-asPanel.md" boilerplate />
 <include src="objectOrientedDomainModels/unit-inParent-asPanel.md" boilerplate />
 <include src="deploymentDiagrams/unit-inParent-asPanel.md" boilerplate />
