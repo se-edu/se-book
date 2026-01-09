@@ -8,7 +8,7 @@
 
 <div id="body">
 
-See [Git-Mastery site → **Lesson: T10L1. Git Workflows**](https://git-mastery.github.io/lessons/workflows/)
+See [Git-Mastery site → **Lesson: T10L1. Git Workflows**](https://git-mastery.org/lessons/workflows/)
 
 </div>
 

@@ -179,10 +179,10 @@ Ensure you are running `libc` version 2.38 or newer (you can use the `ldd --vers
 Then install the app by running the following commands:
 
 ```bash
-echo "deb [trusted=yes] https://git-mastery.github.io/gitmastery-apt-repo any main" | \
+echo "deb [trusted=yes] https://git-mastery.org/gitmastery-apt-repo any main" | \
   sudo tee /etc/apt/sources.list.d/gitmastery.list > /dev/null
 sudo apt install software-properties-common
-sudo add-apt-repository "deb https://git-mastery.github.io/gitmastery-apt-repo any main"
+sudo add-apt-repository "deb https://git-mastery.org/gitmastery-apt-repo any main"
 sudo apt update
 sudo apt-get install gitmastery
 ```
@@ -251,7 +251,7 @@ Notes:
 
 <box type="info" seamless>
 
-Instructions for updating the Git-Mastery app are [here](https://git-mastery.github.io/app/update).
+Instructions for updating the Git-Mastery app are [here](https://git-mastery.org/app/update).
 </box>
 
 {% endcall %} <!-- show_prep -->

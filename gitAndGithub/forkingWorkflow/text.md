@@ -6,7 +6,7 @@
 
 <div id="body">
 
-See [Git-Mastery site → **Lesson: T10L2. Forking Workflow (with Branching)**](https://git-mastery.github.io/lessons/forkingWorkflow/)
+See [Git-Mastery site → **Lesson: T10L2. Forking Workflow (with Branching)**](https://git-mastery.org/lessons/forkingWorkflow/)
 
 </div>
 
