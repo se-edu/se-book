@@ -27,7 +27,7 @@ Class1 .right.> Class2: "<<create>>"
 
 </box>
 
-**The same `<< >>` notation is also used to denotes a built-in _classifier_ kinds `<<interface>>` and `<<enumeration>>`.** While they look like stereotypes syntactically, they are semantically closer to keywords indicating the element’s true type -- unlike stereotypes, which are optional information that don't change the underlying UML element. For example, removing a steretype from an element doesn't change the type of the element but removing `<<interface>>` or `<<enumeraton>>` from an element changes the element to a regular class.
+**The same `<< >>` notation is also used to denotes built-in _classifier_ kinds `<<interface>>` and `<<enumeration>>`.** While they look like stereotypes syntactically, they are semantically closer to keywords indicating the element’s true type -- unlike stereotypes, which are optional information that don't change the underlying UML element. For example, removing a stereotype from an element doesn't change the type of the element but removing `<<interface>>` or `<<enumeration>>` from an element changes the element to a regular class.
 </div>
 
 <div id="extras">
