@@ -27,7 +27,7 @@ pageNav: 3
 
 ## Contact us
 
-* You can contact us as `seer[at]comp.nus.edu.sg`.
+* You can contact us as `seer[at]nus.edu.sg`.
 
 
 ## Acknowledgements
