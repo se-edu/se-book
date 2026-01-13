@@ -1,1 +1,1 @@
-Git Learning Trail →
+Git-Mastery →
