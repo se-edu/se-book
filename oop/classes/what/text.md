@@ -18,9 +18,9 @@
 
 Consider the example of writing an OOP program to calculate the average age of Adam, Beth, Charlie, and Daisy.
 
-Instructions for creating objects `Adam`, `Beth`, `Charlie`, and `Daisy` will be very similar because they are all of the same kind: they all represent ‘persons’ with the same interface, the same kind of data (i.e., `name`, `dateOfBirth`, etc.), and the same kind of behavior (i.e., `getAge(Date)`, `getName()`, etc.). Therefore, you can have a class called `Person` containing instructions on how to create `Person` objects and use that class to instantiate objects `Adam`, `Beth`, `Charlie`, and `Daisy`.
+Instructions for creating objects `Adam`, `Beth`, `Charlie`, and `Daisy` will be very similar because they are all the same kind: they all represent ‘persons’ with the same interface, the same kind of data (i.e., `name`, `dateOfBirth`, etc.), and the same kind of behavior (i.e., `getAge(Date)`, `getName()`, etc.). Therefore, you can have a class called `Person` containing instructions on how to create `Person` objects and use that class to instantiate objects `Adam`, `Beth`, `Charlie`, and `Daisy`.
 
-Similarly, you need classes `AgeList`, `Calculator`, and `Main` classes to instantiate one each of `AgeList`, `Calculator`, and `Main` objects.
+Similarly, you need `AgeList`, `Calculator`, and `Main` classes to instantiate one each of `AgeList`, `Calculator`, and `Main` objects.
 
 Class | Objects
 ------|--------
