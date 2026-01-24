@@ -22,7 +22,7 @@ Notation:
 
 </box>
 
-**It does not matter whether the triangle is filled or empty.**
+**It does not matter whether the triangle is filled or empty**, although a hollow triangle is used typically.
 
 <div class="alt-java">
 <box>

@@ -68,7 +68,7 @@ Furthermore, **Java allows multiple inheritance among interfaces.** A Java inter
 
 <box>
 
-{{ icon_example }} The design below is allowed by Java. %%In case you are not familiar with UML notation used: solid lines indicate normal inheritance; dashed lines indicate interface inheritance; the triangle points to the parent.%%
+{{ icon_example }} The design below is allowed by Java. %%In case you are not familiar with the UML notation used: A solid line with a triangle denotes _inheritance_, corresponding to `extends` in Java (e.g., a class extending another class, or an interface extending another interface). A dashed line with a triangle denotes interface implementation, corresponding to `implements` in Java. The triangle points to the class being inherited or the interface being implemented.%%
 
 <pic eager src="{{baseUrl}}/oop/inheritance/interfaces/images/studentStaff.png" height="250" />
 <p/>
