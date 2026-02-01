@@ -33,7 +33,7 @@ For each violation, note down the line number, violation, and a possible correct
 
 <panel header=":fas-lightbulb: Some hints ..." minimized>
 
-[line 4] `descriptionPrefix` is a constant, which should be named using the screaming camel case (e.g., `DESCRIPTION_PREFIX`)
+[line 4] `descriptionPrefix` is a constant, which should be named using the screaming snake case (e.g., `DESCRIPTION_PREFIX`)
 
 There are more than 10 coding standard violations in this code.
 
