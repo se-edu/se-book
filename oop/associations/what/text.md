@@ -33,7 +33,7 @@ Objects in an OO solution need to be connected to each other to form a network s
 
 <box>
 
-{{ icon_example }} In our example, the `Course` class can have a `students` variable to keeps track of students associated with a particular course.
+{{ icon_example }} In our example, the `Course` class can have a `students` variable to keep track of students associated with a particular course.
 </box>
 
 </div>

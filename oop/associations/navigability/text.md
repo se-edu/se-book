@@ -27,7 +27,7 @@ class Person {
     //...
 }
 
-class Cat{
+class Cat {
     Person owner;
     //...
 }
