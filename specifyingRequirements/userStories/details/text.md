@@ -67,7 +67,7 @@ Conditions:
 <panel minimized >
 <span slot="header" class="card-title">{{ icon_example }} More examples {{ icon_extra }}</md></span>
 
-User stories for a travel website (credit: Mike Cohen)
+User stories for a travel website (credit: Mike Cohn)
 
 <box>
 <div class="text-monospace">
