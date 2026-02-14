@@ -465,7 +465,7 @@ Improve the GUI to make it more _polished_. Some examples:
   Given that the participants of the conversion are fixed (i.e., you and the chatbot), do you even need big profile pictures?
 * Focus more on tweaks that actually _improves_ the user experience (UX). Some changes %%(e.g., profile pictures, background graphics)%% can be eye catching but can even degrade the UX if not done right %%(e.g., it can make the text harder to read)%%
 
-{{ icon_tip }} You can take inspiration from [these past projects](https://nus-cs2103-ay2425s1.github.io/website/admin/ip-showcase.html). If you adopt any ideas from them, don't forget to give credit to the original author.
+{{ icon_tip }} You can take inspiration from [these past projects](https://nus-cs2103-ay2526s1.github.io/website/admin/ip-showcase.html). If you adopt any ideas from them, don't forget to give credit to the original author.
 
 {{ icon_info }} Minimal requirement: Implement at least one of the examples (i - vi) given above.
 
