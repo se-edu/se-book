@@ -15,7 +15,7 @@ Notation:
 
 <box>
 
-{{ icon_example }} `Minefield` calls the `Cell#setMine` method if the cell is supposed to be a mined cell, and calls the `Cell:setMineCount(...)` method otherwise.
+{{ icon_example }} `Minefield` calls the `Cell#setMine()` method if the cell is supposed to be a mined cell, and calls the `Cell:setCount(...)` method otherwise.
 
 <pic eager src="{{baseUrl}}/uml/sequenceDiagrams/alternativePaths/images/minefieldCell.png" width="250" />
 <p/>
