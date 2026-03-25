@@ -6,7 +6,7 @@
 
 <div id="body">
 
-**You should try to both boundary values and non-boundary values.** Give priority to boundary values over non-boundary values. For example, pick one non-boundary value from each partition, or if you can afford more test cases, pick two non-boundary values (e.g., one just below the boundary, and one just above the boundary).
+**You should try to test both boundary values and non-boundary values.** Give priority to boundary values over non-boundary values. For example, pick one non-boundary value from each partition, or if you can afford more test cases, pick two non-boundary values (e.g., one just below the boundary, and one just above the boundary).
 
 <box>
 <div class="text-monospace">
