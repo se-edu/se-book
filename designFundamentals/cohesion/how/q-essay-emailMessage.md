@@ -1,6 +1,6 @@
 <panel header="{{ icon_Q_A }} Which class is more cohesive?">
 
-Compare the cohesion of the following two versions of the `EmailMessage` class. Which one is more cohesive and why?
+Compare the cohesion of the following two versions of the `EmailMessage` class. Which one is less cohesive and why?
 
 ```java
 // version-1
