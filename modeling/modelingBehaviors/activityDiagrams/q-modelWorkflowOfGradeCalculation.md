@@ -20,7 +20,7 @@
 * Repeat the whole grade calculation process for the number of times specified by the user.
 
 
-<panel type="seamless" header="Example Activity Diagram" minimized>
+<panel header="An example activity diagram, to help you recall the notation (#r#not a model solution##):" minimized>
 
 <pic eager src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Activity_conducting.svg"><br>
 <sub>[[source:wikipeida](https://en.wikipedia.org/wiki/Activity_diagram)]</sub>
