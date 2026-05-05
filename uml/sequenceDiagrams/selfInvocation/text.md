@@ -27,13 +27,87 @@ Notation:
 
 </box>
 
+<box>
+
 {{ icon_tip }} **'Unroll' chained/compound method calls before drawing sequence diagram.** Consider the Java statement `new Book().add(new Chapter());`{.java}. How do we show it as a sequence diagram? First, 'unroll' it into a simpler series of statements, which can then be drawn as a sequence diagram easily. For example, that statement is equivalent to the following:
-```java{.no-line-numbers}
+```java{highlight-lines="2"}
 Book b = new Book();
-Chapter c = new Chapter();
+Chapter c = new Chapter();  // a is a temporary variable used for unrolling
 b.add(c);
 ```
 
+<puml>
+@startuml
+skinparam Shadowing false
+hide footbox
+
+Participant "____" as u
+Participant "b:Book" as b
+Participant "b:Chapter" as c
+
+create b
+u -> b
+activate b
+u <-- b
+deactivate b
+
+create c
+u -> c
+activate c
+u <-- c
+deactivate c
+
+u -> b: add(c)
+activate b
+u <-- b
+deactivate b
+
+@enduml
+
+</puml>
+
+Another example:
+```java {highlight-lines="3"}
+Person person;
+// ...
+person.getAddress().printStreet()
+```
+
+After unrolling:
+
+```java {highlight-lines="3,4"}
+Person person;
+// ...
+Address a = person.getAddress();  // a is a temporary variable used for unrolling
+a.printStreet();
+```
+
+The result will be as follows:
+
+<puml>
+@startuml
+skinparam Shadowing false
+hide footbox
+
+Participant "____" as u
+Participant "person:Person" as p
+Participant "a:Address" as a
+
+u -> p: getAddress()
+activate p
+u <-- p: a
+deactivate p
+
+u -> a: printStreet()
+activate a
+u <-- a
+deactivate a
+
+@enduml
+</puml>
+
+
+</box>
 </div>
 
 <div id="extras">
