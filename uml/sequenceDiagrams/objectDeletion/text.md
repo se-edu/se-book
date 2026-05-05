@@ -6,7 +6,7 @@
 
 <div id="body">
 
-**UML uses an `X` at the end of the lifeline of an object to show its deletion.**
+**UML uses an `X` at the end of the lifeline of an object to show its deletion.** The lifeline ending at `X` visually indicates that the object ceases to exist at that point.
 
 Notation:
 
