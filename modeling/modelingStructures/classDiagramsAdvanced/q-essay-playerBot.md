@@ -39,7 +39,7 @@ class Human implements Player {
 
 (b) Add these association classes to the diagram:<br>
 i. A `Player` object can _challenge_ another `Player` object. The `Challenge` class keeps track of the association between the two `Player` objects: the _challenger_ and the _target_ of the challenge.<br>
-ii. A `Human` object can _train_ a `SmartBot` object. The `Lesson` class keeps track of that association.
+ii. A `Human` object can _train_ a `TrainableBot` object. The `Lesson` class keeps track of that association.
 
 
 (c) Convert the two association classes to normal classes.
