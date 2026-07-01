@@ -16,7 +16,7 @@ IDEs for different programming languages are similar in how they support editing
 
 </box>
 
-**A _software framework_ is a reusable implementation of a software (or part thereof) providing _generic_ functionality that can be selectively customized to produce a _specific_ application.**
+**A _software framework_ is a reusable implementation of software (or part thereof) that provides _generic_ functionality that can be selectively customized to produce a _specific_ application.**
 
 <box>
 
