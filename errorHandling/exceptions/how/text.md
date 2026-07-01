@@ -6,7 +6,7 @@
 
 <div id="body">
 
-**Most languages allow code that encountered an "exceptional" situation to encapsulate details of the situation in an _Exception_ object and _throw_/_raise_ that object so that another piece of code can _catch_ it and deal with it.** This is especially useful when the code that encountered the unusual situation does not know how to deal with it.
+**Most languages allow code that encountered an "exceptional" situation to encapsulate details of the situation in an _Exception_ object and _throw_ or _raise_ that object so that another piece of code can _catch_ it and deal with it.** This is especially useful when the code that encountered the unusual situation does not know how to deal with it.
 
 The extract below from the {{ oracle }} (with slight adaptations) explains how exceptions are typically handled.
 
