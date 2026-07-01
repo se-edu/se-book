@@ -26,7 +26,7 @@ _Preconditions_, _Postconditions_, and _Class Invariants_.** Refer to [Programmi
 
 **Exceptions and assertions are two complementary ways of handling errors in software but they serve different purposes.** Therefore, both assertions and exceptions should be used in code.
 
-* The raising of an exception indicates an unusual condition created by the user %%(e.g.  user inputs an unacceptable input)%% or the environment %%(e.g., a file needed for the program is missing)%%.
+* The raising of an exception indicates an unusual condition created by the user %%(e.g., the user inputs an unacceptable input)%% or the environment %%(e.g., a file needed for the program is missing)%%.
 * An assertion failure indicates the programmer made a mistake in the code %%(e.g., a null value is returned from a method that is not supposed to return null under any circumstances)%%.
 
 </div>
