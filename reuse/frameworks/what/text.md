@@ -6,7 +6,7 @@
 
 <div id="body">
 
-**The overall structure and execution flow of a specific category of software systems can be very similar. The similarity is an opportunity to reuse at a high scale.**
+**The overall structure and execution flow of a specific category of software systems can be very similar. This similarity is an opportunity for large-scale reuse.**
 
 <box>
 
