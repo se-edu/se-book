@@ -6,7 +6,7 @@
 
 <div id="body">
 
-A bidirectional association in the design (shown in (a)) is usually emulated at code level using two variables (as shown in (b)).
+A bidirectional association in the design (shown in (a)) is usually emulated at the code level using two variables (as shown in (b)).
 
 
 <pic eager src="{{baseUrl}}/errorHandling/defensiveProgramming/referentialIntegrity/images/manWoman.png" height="140" />
