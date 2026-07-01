@@ -6,7 +6,7 @@
 
 <div id="body">
 
-**A _platform_ provides a runtime environment for applications.** A platform is often bundled with various libraries, tools, frameworks, and technologies in addition to a runtime environment but the defining characteristic of a software platform is the presence of a runtime environment.
+**A _platform_ provides a runtime environment for applications.** A platform is often bundled with various libraries, tools, frameworks, and technologies in addition to a runtime environment, but the defining characteristic of a software platform is the presence of a runtime environment.
 
 <box>
 
