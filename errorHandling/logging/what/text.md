@@ -8,7 +8,7 @@
 
 **_Logging_ is the deliberate recording of certain information during a program execution for future reference.** Logs are typically written to a log file, but it is also possible to log information in other ways %%e.g., into a database or a remote server%%.
 
-**_Logging_ can be useful for troubleshooting problems**. A good logging system records some system information regularly. When bad things happen to a system %%e.g. an unanticipated failure%%, their associated log files may provide indications of what went wrong and actions can then be taken to prevent it from happening again.
+**_Logging_ can be useful for troubleshooting problems**. A good logging system records some system information regularly. When problems occur in a system %%e.g., an unanticipated failure%%, the associated log files may indicate what went wrong, and actions can then be taken to prevent it from happening again.
 
 <div v-closeable alt="blackbox photo">
 
