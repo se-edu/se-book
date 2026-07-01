@@ -26,7 +26,7 @@ Eclipse is an IDE framework that can be used to create IDEs for different progra
 
 </box>
 
-**Some frameworks provide a complete implementation of a _default_ behavior which makes them immediately usable.**
+**Some frameworks provide a complete implementation of a _default_ behavior, which makes them immediately usable.**
 
 <box>
 
