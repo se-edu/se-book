@@ -6,7 +6,7 @@
 
 <div id="body">
 
-**It is recommended that assertions be used liberally in the code.** Their impact on performance is low, and worth the additional safety they provide.
+**It is recommended that assertions be used liberally in the code.** Their impact on performance is low and worth the additional safety they provide.
 
 **Do not use assertions to do _work_** because assertions can be disabled. If assertions are disabled, your program will stop working when assertions are not enabled.
 
