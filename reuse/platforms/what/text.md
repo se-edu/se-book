@@ -10,7 +10,7 @@
 
 <box>
 
-{{ icon_example }} Technically, an operating system can be called a platform. For example, Windows PC is a platform for desktop applications while iOS is a platform for mobile applications.
+{{ icon_example }} Technically, an operating system can be called a platform. For example, a Windows PC is a platform for desktop applications, while iOS is a platform for mobile applications.
 
 </box>
 
