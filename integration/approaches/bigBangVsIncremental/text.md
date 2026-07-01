@@ -10,7 +10,7 @@
 
 <box type="wrong">
 
-Big-bang is not recommended because it will uncover too many problems at the same time which could make debugging and bug-fixing more complex than when problems are uncovered incrementally.
+Big-bang integration is not recommended because it can uncover too many problems at the same time, which can make debugging and bug-fixing more complex than when problems are uncovered incrementally.
 
 </box>
 
