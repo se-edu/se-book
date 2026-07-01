@@ -31,7 +31,7 @@ Notes:
 * The single instance of the singleton class is maintained by a `private` class-level variable.
 * Access to this object is provided by a `public` class-level operation `getInstance()` which instantiates a single copy of the singleton class when it is executed for the first time. Subsequent calls to this operation return the single instance of the class.
 
-If `Logic` was not a Singleton class, a `Logic` object can be created as follows:
+If `Logic` were not a Singleton class, a `Logic` object could be created as follows:
 ```java{.no-line-numbers}
 Logic m = new Logic();
 ```

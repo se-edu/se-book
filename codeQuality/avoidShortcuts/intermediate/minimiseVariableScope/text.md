@@ -6,7 +6,7 @@
 
 <div id="body">
 
-**Minimize global variables**. Global variables may be the most convenient way to pass information around, but they do create implicit links between code segments that use the global variable. Avoid them as much as possible.
+**Minimize global variables**. Global variables may be the most convenient way to pass information around, but they create implicit links between code segments that use the global variable. Avoid them as much as possible.
 
 **Define variables in the least possible scope**. For example, if the variable is used only within the `if` block of the conditional statement, it should be declared inside that `if` block.
 

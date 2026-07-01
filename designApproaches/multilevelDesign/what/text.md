@@ -20,7 +20,7 @@ In a smaller system, the design of the entire system can be shown in one place.
 
 </div>
 
-**The design of bigger systems needs to be done/shown at multiple levels.**
+**The design of bigger systems needs to be created and shown at multiple levels.**
 
 <div v-closeable alt="multi-level design example">
 
@@ -30,7 +30,7 @@ In a smaller system, the design of the entire system can be shown in one place.
 
 <pic eager src="https://se-education.org/addressbook-level3/images/ArchitectureDiagram.png" width="300" />
 
-Here are examples of lower level designs of some components of the same software:
+Here are examples of lower-level designs of some components of the same software:
 
 <tabs>
   <tab header="UI">

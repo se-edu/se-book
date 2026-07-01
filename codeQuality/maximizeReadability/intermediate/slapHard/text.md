@@ -35,7 +35,7 @@ displayResult();
 **Also ensure that the code is written at the highest level of abstraction possible**.
 <box>
 
-{{bad}} (all statements are at a low levels of abstraction)
+{{bad}} (all statements are at low levels of abstraction)
 ```java
 low-level statement A1
 low-level statement A2
