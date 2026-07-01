@@ -2,13 +2,13 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{ icon_outcome }} Can explain what is software design</span>
+<span id="outcomes">{{ icon_outcome }} Can explain what software design is</span>
 
 <div id="body">
 
 <box type="definition" seamless>
 
-Design is the creative process of transforming the problem into a solution; the solution is also called design. <sub>-- :book: _Software Engineering Theory and Practice_,  Shari Lawrence; Atlee, Joanne M. Pfleeger</sub>
+Design is the creative process of transforming the problem into a solution; the solution is also called design. <sub>-- :book: _Software Engineering Theory and Practice_, Shari Lawrence Pfleeger; Joanne M. Atlee</sub>
 </box>
 
 **Software design has two main aspects:**

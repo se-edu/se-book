@@ -18,7 +18,7 @@ A library is a collection of modular code that is general and can be used by oth
 </div>
 <div class="alt-python">
 
-{{ icon_example }} built-in modules you get with Python (such as `csv`, `random`, `sys`, etc.) are libraries that are provided in the default Python distribution. Classes such as `list`, `str`, `dict` are built-in library classes that you get with Python.
+{{ icon_example }} Built-in modules you get with Python (such as `csv`, `random`, `sys`, etc.) are libraries that are provided in the default Python distribution. Classes such as `list`, `str`, `dict` are built-in library classes that you get with Python.
 
 {{ icon_example }} [Colorama](https://pypi.python.org/pypi/colorama) is a Python library that can be used for colorizing text in a CLI.
 

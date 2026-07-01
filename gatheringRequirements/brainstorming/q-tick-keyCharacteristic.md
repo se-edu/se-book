@@ -1,6 +1,6 @@
 <panel header="{{ icon_Q_A }} Characteristic of brainstorming">
 
-What is the key characteristic about brainstorming?
+What is the key characteristic of brainstorming?
 
 - ( ) a. There should be at least 5 participants.
 - ( ) b. All ideas are welcome. There are no _bad_ ideas.

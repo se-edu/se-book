@@ -37,7 +37,7 @@ This HelloWorld Java program defines one method named main: `public static void 
 
 {{ similar }} Some similarities:
 
-* Java programs consists of <trigger for="pop:helloWorld-statement">statements</trigger>, grouped <tooltip content="A _method_ is a named sequence of statements">methods</tooltip>, which are then grouped into classes.
+* Java programs consist of <trigger for="pop:helloWorld-statement">statements</trigger>, grouped <tooltip content="A _method_ is a named sequence of statements">methods</tooltip>, which are then grouped into classes.
 * Java is “case-sensitive”, which means `SYSTEM` is different from `System`.
 * `public` is an _access modifier_ that indicates the method is accessible from outside this class. Similarly, `private` access modifier indicates that a method/attribute is not accessible outside the class.
 * `static` indicates this method is defined as a class-level member. Do not worry if you don’t know what that means. It will be explained later.
@@ -58,10 +58,10 @@ A statement is a line of code that performs a basic operation. In the HelloWorld
 
 {{ different }} Some differences:
 
-* Java use the term _method_ instead of _function_. In particular, Java doesn’t have  stand-alone functions. Every method should belong to a class. The `main` method will not work unless it is inside the `HelloWorld` class.
+* Java uses the term _method_ instead of _function_. In particular, Java doesn’t have  stand-alone functions. Every method should belong to a class. The `main` method will not work unless it is inside the `HelloWorld` class.
 * A Java class definition does not end with a semicolon, but most Java statements do.
 * In _most_ cases (i.e., there are exceptions), the name of the class has to match the name of the file it is in, so this class has to be in a file named `HelloWorld.java`.
-* There is no need for the HelloWorld code to have something like `#include <iostream>`. The library files needed by the HelloWorld code is available by default without having to "include" them explicitly.
+* There is no need for the HelloWorld code to have something like `#include <iostream>`. The library files needed by the HelloWorld code are available by default without having to "include" them explicitly.
 * There is no need to `return 0` at the end of the main method to indicate the execution was successful. It is considered as a successful execution unless an error is signalled specifically.
 
 </div>

@@ -10,7 +10,7 @@
 <include src="../../../common/definitions.md#def-dynamic-binding" trim />
 </box>
 
-**<trigger trigger="click" for="modal:dynamicAndStatic-overriding">Overridden methods</trigger> are resolved using dynamic binding, and therefore resolves to the implementation in the actual type of the object.**
+**<trigger trigger="click" for="modal:dynamicAndStatic-overriding">Overridden methods</trigger> are resolved using dynamic binding, and therefore resolve to the implementation in the object's actual type.**
 
 <modal large header="Textbook {{ icon_embedding }}" id="modal:dynamicAndStatic-overriding">
   <include src="../overriding/unit-inElsewhere-asFlat.md" boilerplate/>

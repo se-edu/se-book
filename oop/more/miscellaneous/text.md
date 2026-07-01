@@ -16,7 +16,7 @@
 
 Overloading is used to indicate that multiple operations do similar things but take different parameters. Overloaded methods have the same method name but different method signatures and possibly different return types.
 
-Overriding is when a sub-class redefines an operation using the same method name and the same type signature. Overridden methods have the same name, same method signature, and same return type.
+Overriding is when a subclass redefines an operation using the same method name and the same type signature. Overridden methods have the same name, same method signature, and same return type.
 
 </div>
 

@@ -6,13 +6,13 @@
 
 <div id="body">
 
-**In terms of timing and frequency, there are two general approaches to integration: _late and one-time_, _early and frequent_.**
+**In terms of timing and frequency, there are two general approaches to integration: _late and one-time_, and _early and frequent_.**
 
 **_Late and one-time_: wait till all components are completed and integrate all finished components near the end of the project.** 
 
 <box type="wrong">
  
-  This approach is not recommended because integration often causes many component incompatibilities (due to previous miscommunications and misunderstandings) to surface which can lead to delivery delays %%i.e., Late integration → incompatibilities found → major rework required → cannot meet the delivery date%%.
+  This approach is not recommended because integration often causes many component incompatibilities (due to previous miscommunications and misunderstandings) to surface, which can lead to delivery delays %%i.e., Late integration → incompatibilities found → major rework required → cannot meet the delivery date%%.
 
 </box>
 

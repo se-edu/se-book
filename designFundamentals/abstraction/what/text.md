@@ -16,7 +16,7 @@
 
 <box>
 
-{{ icon_example }} Within a certain software component, you might deal with a _user_ data type, while ignoring the details contained in the user data item such as _name_, and _date of birth_. These details have been ‘abstracted away’ as they do not affect the task of that software component.
+{{ icon_example }} Within a certain software component, you might deal with a _user_ data type, while ignoring the details contained in the user data item such as _name_ and _date of birth_. These details have been ‘abstracted away’ as they do not affect the task of that software component.
 
 </box>
 
@@ -24,7 +24,7 @@
 
 <box>
 
-{{ icon_example }} `print(“Hello”)` is an abstraction of the actual output mechanism within the computer.
+{{ icon_example }} `print("Hello")` is an abstraction of the actual output mechanism within the computer.
 
 </box>
 
@@ -45,7 +45,7 @@
 {{ icon_example }} Some more general examples of abstraction:
 
 * An OOP _class_ is an abstraction over related data and behaviors.
-* An _architecture_ is a higher-level abstraction of the design of a software.
+* An _architecture_ is a higher-level abstraction of the design of a software system.
 * Models (e.g., UML models) are abstractions of some aspect of reality.
 
 </box>

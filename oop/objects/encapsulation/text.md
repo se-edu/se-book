@@ -12,7 +12,7 @@
 
 **1. The _packaging_ aspect:** An object packages data and related behavior together into one self-contained unit.
 
-**2. The _information hiding_ aspect:** The data in an object is hidden from the outside world and are only accessible using the object's interface.
+**2. The _information hiding_ aspect:** The data in an object is hidden from the outside world and is only accessible using the object's interface.
 
 </div>
 

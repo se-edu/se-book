@@ -6,7 +6,7 @@
 
 <div id="body">
 
-**Sequence diagrams model the interactions between various entities in a system, in a specific scenario.** Modelling such scenarios is useful, for example, to verify the design of the internal interactions is able to provide the expected outcomes.
+**Sequence diagrams model the interactions between various entities in a system, in a specific scenario.** Modeling such scenarios is useful, for example, to verify the design of the internal interactions is able to provide the expected outcomes.
 
 <box>
 

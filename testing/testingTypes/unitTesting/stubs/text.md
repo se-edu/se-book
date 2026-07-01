@@ -68,7 +68,7 @@ void getName() {
 }
 ```
 
-However, this `logic` object being tested is making use of a `DataBaseStorage` object which means a bug in the `DatabaseStorage` class can affect the test. Therefore, this test is not testing `Logic` _in isolation from its dependencies_ and hence it is not a pure unit test.
+However, this `logic` object being tested is making use of a `DatabaseStorage` object which means a bug in the `DatabaseStorage` class can affect the test. Therefore, this test is not testing `Logic` _in isolation from its dependencies_ and hence it is not a pure unit test.
 
 Here is a stub class you can use in place of `DatabaseStorage`:
 ```java
@@ -97,7 +97,7 @@ void getName() {
 
 </box>
 
-In addition to Stubs, there are other type of replacements you can use during testing, e.g., _Mocks_, _Fakes_, _Dummies_, _Spies_.
+In addition to Stubs, there are other types of replacements you can use during testing, e.g., _Mocks_, _Fakes_, _Dummies_, _Spies_.
 
 </div>
 

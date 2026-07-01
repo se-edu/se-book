@@ -28,7 +28,7 @@ This section uses extracts from the {{ oracle }}, with some adaptations.
 * **Algorithms**: These are the methods that perform useful computations, such as _searching_ and _sorting_, on objects that implement collection interfaces. The algorithms are said to be polymorphic: that is, the same method can be used on many different implementations of the appropriate collection interface.<br>
   %%{{ icon_example }} Example: the `sort(List<E>)` method can sort a collection that implements the `List<E>` interface.%%
 
-{{ similar }} **A well-known example of collections frameworks is the C++ _Standard Template Library (STL)_**. {{ different }} Although both are collections frameworks and the syntax look similar, note that there are important philosophical and implementation differences between the two.
+{{ similar }} **A well-known example of collections frameworks is the C++ _Standard Template Library (STL)_**. {{ different }} Although both are collections frameworks and the syntax looks similar, note that there are important philosophical and implementation differences between the two.
 
 The following list describes the core collection interfaces:
 

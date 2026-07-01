@@ -80,7 +80,7 @@ The number of paths through this method is very large, as each possible length o
 1. enter -> `2` -> exit (if `names` is empty)
 1. enter -> `2` -> `3` -> exit (if `names` has one entry)
 1. enter -> `2` -> `3` ->  `2` -> `3` -> exit (if `names` has two entries)
-1 ...
+1. ...
 
 So, achieving 100% path coverage of this method will be extremely difficult.
 </box>

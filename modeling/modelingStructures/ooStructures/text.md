@@ -18,7 +18,7 @@ Note that these **object structures within the same software can change over tim
 
 <box>
 
-{{ icon_example }} Given below is how the object structure in the previous example could have looked like at a different time.
+{{ icon_example }} Given below is how the object structure in the previous example could have looked at a different time.
 <p><pic eager src="{{baseUrl}}/modeling/modelingStructures/ooStructures/images/objectsAdHoc2.png" width="500" />
 <p/>
 

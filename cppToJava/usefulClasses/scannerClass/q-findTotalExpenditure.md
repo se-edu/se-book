@@ -2,7 +2,7 @@
 
 Write a program to ask the user for a description of overseas expenses (presumably, the user has just returned from an overseas trip) and calculate the total in local currency.
 * The conversion rate from overseas currency to local currency : overseas `$1.0` = local `$1.70`
-* The user can describe expenses is in free form text, as one line. The program takes all amounts mentioned in the format `$amount` e.g., `$1.50`
+* The user can describe expenses in free form text, as one line. The program takes all amounts mentioned in the format `$amount` e.g., `$1.50`
 
 
 Here is one example output: {{ icon_output }}

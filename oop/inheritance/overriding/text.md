@@ -16,7 +16,7 @@
 -----------------|----------------------------|-----------
 `print()`        |`print()`                   | Yes
 `write(String)`  |`write(String)`             | Yes
-`read():String`  |`read(int):String`          | No. %%Reason: the two methods have different signatures; This is a case of <trigger trigger="click" for="modal:overriding-overloading"> _overloading_ </trigger> (rather than overriding).%%
+`read():String`  |`read(int):String`          | No. %%Reason: the two methods have different signatures; this is a case of <trigger trigger="click" for="modal:overriding-overloading"> _overloading_ </trigger> (rather than overriding).%%
 
 <modal large header="**Overloading**" id="modal:overriding-overloading">
   <include src="../overloading/unit-inElsewhere-asFlat.md" boilerplate/>

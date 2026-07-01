@@ -11,7 +11,7 @@ Understanding such workflows is important for the success of the software projec
 
 <box>
 
-Some examples in which a certain workflow is relevant to software project:
+Some examples in which a certain workflow is relevant to a software project:
 
 {{ icon_example }} A software that automates the work of an insurance company needs to take into account the workflow of processing an insurance claim.
 

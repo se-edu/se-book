@@ -1,4 +1,4 @@
-**==_Extensions_== are "add-on"s to the MSS that describe _exceptional/alternative flow of events_.** They describe variations of the scenario that can happen if certain things are not as expected by the MSS. Extensions appear below the MSS.
+**==_Extensions_== are "add-ons" to the MSS that describe _exceptional/alternative flows of events_.** They describe variations of the scenario that can happen if certain things are not as expected by the MSS. Extensions appear below the MSS.
 
 <box>
 
@@ -26,7 +26,7 @@ Extensions:
       Steps 3a1-3a2 are repeated until the data entered are correct.
       Use case resumes from step 4.
 
-  3b. User requests to effect the transfer in a future date.
+  3b. User requests to schedule the transfer for a future date.
       3b1. OBS requests for confirmation.
       3b2. User confirms future transfer.
       Use case ends.

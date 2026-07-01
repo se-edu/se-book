@@ -27,7 +27,7 @@ You can add more characteristics to the `{user role}` to provide more context to
 </div>
 </box>
 
-**You can write user stories at various levels**. High-level user stories, called ==_epics_== (or _themes_) cover bigger functionality. You can then break down these epics to multiple user stories of normal size.
+**You can write user stories at various levels**. High-level user stories, called ==_epics_== (or _themes_) cover bigger functionality. You can then break down these epics into multiple user stories of normal size.
 
 <box>
 <div class="text-monospace">
@@ -57,7 +57,7 @@ Conditions:
 </div>
 </box>
 
-**Other useful info that can be added to a user story** includes (but not limited to)
+**Other useful information that can be added to a user story** includes (but is not limited to):
 
 * Priority: how important the user story is
 * Size: the estimated effort to implement the user story

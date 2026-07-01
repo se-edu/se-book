@@ -6,7 +6,7 @@
 
 <div id="body">
 
-**The _transaction processing_ style divides the workload of the system down to a number of _transactions_ which are then given to a _dispatcher_ that controls the execution of each transaction.** Task queuing, ordering, undo etc. are handled by the dispatcher.
+**The _transaction processing_ style divides the workload of the system into a number of _transactions_ which are then given to a _dispatcher_ that controls the execution of each transaction.** Task queuing, ordering, undo etc. are handled by the dispatcher.
 
 <pic eager src="{{baseUrl}}/architecture/architecturalStyles/transactionProcessing/what/images/transactionProcessing.png" height="120" />
 

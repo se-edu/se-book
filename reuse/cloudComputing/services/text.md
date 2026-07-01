@@ -1,4 +1,4 @@
-<span id="title">Iaas, PaaS, and SaaS</span>
+<span id="title">IaaS, PaaS, and SaaS</span>
 
 <span id="prereqs"></span>
 

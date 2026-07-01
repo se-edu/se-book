@@ -18,7 +18,7 @@
 
 <box>
   
-{{ icon_example }} This example use case step refers to a behavior not externally visible (i.e., user is not meant to be aware of).
+{{ icon_example }} This example use case step refers to behavior that is not externally visible (i.e., the user is not meant to be aware of it).
 <div class="text-monospace">
 
 1. LMS ==saves the file into the cache== and indicates success.
@@ -40,7 +40,7 @@
 </div>
 </box>
 
-A use case description can show loops too.
+**A use case description can show loops too.**
 
 <box>
 

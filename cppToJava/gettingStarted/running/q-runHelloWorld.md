@@ -18,7 +18,7 @@ Ensure the installation is correct, as follows.
       ...
       ```
    1. Run the command `javac` and ensure it results in a help message.
-      If it outputs an error message such as `javac is not recognized as internal or external command`, you need to configure the `PATH` variable of your OS so that the OS know where your `javac` executable is.
+      If it outputs an error message such as `javac is not recognized as internal or external command`, you need to configure the `PATH` variable of your OS so that the OS knows where your `javac` executable is.
 
 **B. Write, compile and run a small Java program** %%(e.g., a HelloWorld program)%% on your computer. You can use any code editor to write the program but use the command prompt to compile and run the program. Here are suggested steps:
    1. Open notepad (or any other text editor)
@@ -31,7 +31,7 @@ Ensure the installation is correct, as follows.
           }
       }
       ```
-   1. Save the file in an empty folder as `HelloWorld.java` (ensure there the case match exactly and there is no `.txt` at the end).
+   1. Save the file in an empty folder as `HelloWorld.java` (ensure the case matches exactly and there is no `.txt` at the end).
    1. Open a command prompt, and navigate to the folder where you saved the file.
       ```{.no-line-numbers}
       c:> cd my-java-code

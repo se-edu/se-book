@@ -4,7 +4,7 @@ Choose the correct statements about agile processes.
 
 - [ ] a. They value working software over comprehensive documentation.
 - [ ] b. They value responding to change over following a plan.
-- [ ] c. They may not be suitable for some type of projects.
+- [ ] c. They may not be suitable for some types of projects.
 - [ ] d. XP and Scrum are agile processes.
 
 <panel type="seamless" header="{{ icon_A }} Answer" minimized>

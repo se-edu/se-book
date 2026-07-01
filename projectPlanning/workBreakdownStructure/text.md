@@ -10,7 +10,7 @@
 
 <box>
 
-{{ icon_example }} The high level tasks for a single iteration of a small project could look like the following:
+{{ icon_example }} The high-level tasks for a single iteration of a small project could look like the following:
 <div class="text-monospace">
 
 | Task ID | Task                         | Estimated Effort       | Prerequisite Task |

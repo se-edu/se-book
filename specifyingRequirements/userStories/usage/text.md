@@ -10,7 +10,7 @@
 
 > [User stories] strongly shift the focus from writing about features to discussing them. In fact, these discussions are more important than whatever text is written. <sub>[Mike Cohn, MountainGoat Software [:link:](https://www.mountaingoatsoftware.com/agile/user-stories)]</sub>
 
-**User stories differ from <popover content="e.g. a description of the requirements written in prose">traditional requirements specifications</popover> mainly in the level of detail.** User stories should only provide enough details to make a reasonably low risk estimate of how long the user story will take to implement. When the time comes to implement the user story, the developers will meet with the customer face-to-face  to work out a more detailed description of the requirements. %%[<trigger for="modal:xp-user-stories" trigger="click">more...</trigger>]%%
+**User stories differ from <popover content="e.g. a description of the requirements written in prose">traditional requirements specifications</popover> mainly in the level of detail.** User stories should only provide enough details to make a reasonably low risk estimate of how long the user story will take to implement. When the time comes to implement the user story, the developers will meet with the customer face-to-face to work out a more detailed description of the requirements. %%[<trigger for="modal:xp-user-stories" trigger="click">more...</trigger>]%%
 
 **User stories can capture <trigger trigger="click" for="modal:userStoriesUsage-nfr">non-functional requirements</trigger> too** because even NFRs must benefit some stakeholder.
 
@@ -36,7 +36,7 @@ Given their lightweight nature, **user stories are quite handy for recording req
 
 #### A recipe for brainstorming user stories
 
-Given below is a possible _recipe_ you can take when using user stories for early stages of requirement gathering.
+Given below is a possible _recipe_ you can use when writing user stories during the early stages of requirement gathering.
 
 ****Step 0:**** **Clear your mind of preconceived product ideas**
 
@@ -77,8 +77,8 @@ Think of the various scenarios your target user is likely to go through as she u
 
 
 **D. 100th use:** (Jean is an expert user)
-1. Jean launches the app and does ... and ... followed by ... as per her usual habit.
-1. Jean feels some of the data in the app are no longer needed. She wants to get rid of them to reduce clutter.
+1. Jean launches the app and does ... and ... followed by ... as usual.
+1. Jean feels some of the data in the app is no longer needed. She wants to get rid of it to reduce clutter.
 1.
 </blockquote>
 
@@ -88,7 +88,7 @@ More examples that might apply to some products:
 
 * Jean uses the app at the start of the day to ...
 * Jean uses the app before going to sleep to ...
-* Jean hasn't used the app for a while because she was on a three-month training programme. She is now back at work and wants to resume her daily use of the app.
+* Jean hasn't used the app for a while because she was on a three-month training program. She is now back at work and wants to resume her daily use of the app.
 * Jean moves to another company. Some of her clients come with her but some don't.
 * Jean starts freelancing in her spare time. She wants to keep her freelancing clients separate from her other clients.
 </blockquote>
@@ -100,7 +100,7 @@ Based on the scenarios, decide on the user stories you need to support. For exam
 
 <blockquote>
 
-* As a potential user exploring the app, I can see the app populated with sample data, so that I can easily see how the app will look like when it is in use.
+* As a potential user exploring the app, I can see the app populated with sample data, so that I can easily see how the app will look when it is in use.
 * As a user ready to start using the app, I can purge all current data, so that I can get rid of sample/experimental data I used for exploring the app.
 </blockquote>
 
@@ -124,7 +124,7 @@ To give another example, based on the scenario 'D. 100th use', you might have us
 * **Don't be biased by preconceived product ideas:**
   When you are at the stage of identifying user needs, clear your mind of ideas you have about what your end product will look like. That is, don't try to reverse-engineer a preconceived product idea into user stories.
 * **Don't discuss implementation details or whether you are actually going to implement it:**
-  When gathering requirements, your decision is whether the user's need is important enough for you to want to fulfil it. Implementation details can be discussed later. If a user story turns out to be too difficult to implement later, you can always omit it from the implementation plan. 
+  When gathering requirements, your decision is whether the user's need is important enough for you to want to fulfill it. Implementation details can be discussed later. If a user story turns out to be too difficult to implement later, you can always omit it from the implementation plan. 
 
 </box>
 
@@ -142,7 +142,7 @@ While user stories can be recorded on <tooltip content="e.g. index cards or stic
 
 <include src="../../../common/popOvers.md#xp" inline /> uses User stories to capture requirements.
 
-[This page](http://www.extremeprogramming.org/rules/userstories.html) in their website explains the difference between user stories and traditional requirements.
+[This page](http://www.extremeprogramming.org/rules/userstories.html) on their website explains the difference between user stories and traditional requirements.
 
 >One of the biggest misunderstandings with user stories is how they differ from traditional requirements specifications. The biggest difference is in the level of detail. User stories should only provide enough detail to make a reasonably low risk estimate of how long the story will take to implement. When the time comes to implement the story developers will go to the customer and receive a detailed description of the requirements face to face.
 

@@ -12,7 +12,7 @@ A video tutorial by well-known Java coach Venkat Subramaniam
 
 @[youtube](Ee5t_EGjv0A)
 
-<panel type="seamless" header="A a more detailed version covering similar grounds">
+<panel type="seamless" header="A more detailed version covering similar grounds">
 
 @[youtube](1OpAgZvYXLQ)
 

@@ -14,16 +14,16 @@
 
 **_Domain modeling_ is modeling the <tooltip content="the relevant information that needs to be examined to understand a problem">problem domain</tooltip>** i.e., to model how things actually work in the real world. Domain modeling is useful in understanding the problem domain, which is essential to the success of a project.
 
-**Domain modeling can be done using**,
+**Domain modeling can be done using:**
 
-* **a _domain-specific_ modeling notation** if such a notation exists (e.g., a modeling notation specific to the banking domain might have elements to represent loans, accounts, transactions etc.),
-* **or a general purpose modeling notation**, such as UML (e.g., you can use an activity diagram to model the workflow of processing a loan application),
-* **or even other general purpose notations** (e.g., you can use an organization chart to model the employee hierarchy of a company).
+* **a _domain-specific_ modeling notation** if such a notation exists (e.g., a modeling notation specific to the banking domain might have elements to represent loans, accounts, transactions, etc.),
+* **or a general-purpose modeling notation**, such as UML (e.g., you can use an activity diagram to model the workflow of processing a loan application),
+* **or even other general-purpose notations** (e.g., you can use an organization chart to model the employee hierarchy of a company).
 </box>
 
 When building an OOP system, it makes sense to build OOP models of the problem domain, given OOP aspires to emulate the objects in the real world.
 
-**The UML model that captures class structures in the problem domain are called _conceptual class diagrams_.** They are in fact a lighter version of class diagrams, and sometimes also called _OO domain models (OODMs)_. The latter name is somewhat misleading as conceptual class diagrams (CCDs) are actually only one type of domain models that can model an OOP problem domain.
+**The UML models that capture class structures in the problem domain are called _conceptual class diagrams_.** They are in fact a lighter version of class diagrams, and sometimes also called _OO domain models (OODMs)_. The latter name is somewhat misleading as conceptual class diagrams (CCDs) are actually only one type of domain model that can model an OOP problem domain.
 
 <box>
 
@@ -38,7 +38,7 @@ Description: The snakes and ladders game is played by two or more players using 
 
 **CCDs do not contain solution-specific classes** (i.e., classes that are used in the solution domain but do not exist in the problem domain). For example, a class called `DatabaseConnection` could appear in a class diagram but not usually in a CCD because `DatabaseConnection` is something related to a software solution but not an entity in the problem domain.
 
-**CCDs represents the class _structure_ of the problem domain** and not their behavior, just like class diagrams. To show behavior, use other diagrams such as sequence diagrams.
+**CCDs represent the class _structure_ of the problem domain** and not their behavior, just like class diagrams. To show behavior, use other diagrams such as sequence diagrams.
 
 **CCD notation is a subset of the class diagram notation (omits methods and navigability).**
 

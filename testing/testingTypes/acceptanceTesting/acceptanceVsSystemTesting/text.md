@@ -27,7 +27,7 @@ The requirement specification need not be the same as the system specification. 
 
 | Requirements specification | System specification |
 | :------------------------- | :------------------- |
-| limited to how the system behaves in normal working conditions | can also include details on how it will fail gracefully when pushed beyond limits, how to recover, etc. specification
+| limited to how the system behaves in normal working conditions | can also include details on how it will fail gracefully when pushed beyond limits, how to recover, etc. |
 | written in terms of problems that need to be solved (e.g., provide a method to locate an email quickly)| written in terms of how the system solves those problems (e.g., explain the email search feature) |
 | specifies the interface available for intended end-users | could contain additional APIs not available for end-users (for the use of developers/testers) |
 

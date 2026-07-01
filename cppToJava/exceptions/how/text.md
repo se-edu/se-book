@@ -13,7 +13,7 @@ The content below uses extracts from the {{ oracle }}, with some adaptations.
 
 <box>
 
-{{ icon_example }} The `writeList()` method below calls a method `process()` that can cause two type of exceptions. It uses a try-catch construct to deal with each exception.
+{{ icon_example }} The `writeList()` method below calls a method `process()` that can cause two types of exceptions. It uses a try-catch construct to deal with each exception.
 
 ```java
 public void writeList() {
