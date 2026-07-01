@@ -8,7 +8,7 @@
 
 Although both frameworks and libraries are reuse mechanisms, there are notable differences:
 
-* **Libraries are meant to be used ‘as is’ while frameworks are meant to be customized/extended.**
+* **Libraries are meant to be used ‘as is’, while frameworks are meant to be customized/extended.**
 %%e.g., writing plugins for Eclipse so that it can be used as an IDE for different languages (C++, PHP, etc.), adding modules and themes to Drupal, and adding test cases to JUnit%%.
 
 * **Your code calls the library code while the framework code calls your code.**
