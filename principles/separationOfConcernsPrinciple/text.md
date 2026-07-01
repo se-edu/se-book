@@ -34,20 +34,20 @@ A _concern_ in this context is a set of information that affects the code of a c
 
 <box>
 
-{{ icon_example }} The <trigger trigger="click" for="modal:soc-nTier">n-tier architecture</trigger> utilizes this principle. Each layer in the architecture has a well-defined functionality that has no functional overlap with each other.
+{{ icon_example }} The <trigger trigger="click" for="modal:soc-nTier">n-tier architecture</trigger> utilizes this principle. Each layer in the architecture has a well-defined functionality that has no functional overlap with the other layers.
 
 </box>
 
-<modal header="TextBook {{ icon_embedding }}" id="modal:soc-nTier">
+<modal header="Textbook {{ icon_embedding }}" id="modal:soc-nTier">
   <include src="../../architecture/architecturalStyles/nTier/what/unit-inElsewhere-asPanelBody.md" boilerplate/>
 </modal>
 
 **This principle should lead to higher <trigger trigger="click" for="soc-cohesion">cohesion</trigger> and lower <trigger trigger="click" for="soc-coupling">coupling</trigger>.**
 
-<modal header="TextBook {{ icon_embedding }}" id="soc-coupling">
+<modal header="Textbook {{ icon_embedding }}" id="soc-coupling">
   <include src="../../designFundamentals/coupling/what/unit-inElsewhere-asPanelBody.md" boilerplate/>
 </modal>
-<modal header="TextBook {{ icon_embedding }}" id="soc-cohesion">
+<modal header="Textbook {{ icon_embedding }}" id="soc-cohesion">
   <include src="../../designFundamentals/cohesion/what/unit-inElsewhere-asPanelBody.md" boilerplate/>
 </modal>
 

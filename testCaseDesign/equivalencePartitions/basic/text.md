@@ -46,7 +46,7 @@ An EP may not have adjacent values.
 
 <box>
 
-{{ icon_example }} Consider the method `isPrime(int i): boolean` that returns true if `i` is a prime number.
+{{ icon_example }} Consider the method `isPrime(int i): boolean` that returns `true` if `i` is a prime number.
 
 EPs for `i`:
 * prime numbers

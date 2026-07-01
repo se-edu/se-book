@@ -10,11 +10,11 @@
 <include src="../../common/definitions.md#def-prototyping" trim />
 </box>
 
-**Prototyping can uncover requirements, in particular, those related to _how users interact with the system_.** UI prototypes or _mock ups_ are often used in brainstorming sessions, or in meetings with the users to get quick feedback from them.
+**Prototyping can uncover requirements, in particular, those related to _how users interact with the system_.** UI prototypes or _mock-ups_ are often used in brainstorming sessions or in meetings with users to get quick feedback.
 
 <box>
 
-{{ icon_example }} A mock up (also called a _wireframe_ diagram) of a dialog box:
+{{ icon_example }} A mock-up (also called a _wireframe_ diagram) of a dialog box:
 
 <pic eager class="border" src="images/wireframeExample.png" /><br>
 <sub>%%[source: plantuml.com]%%</sub>

@@ -8,14 +8,14 @@
 
 **You can use models to analyze and design software before you start coding.**
 
-Suppose you are planning to implement a simple minesweeper game that has a text based UI and a GUI. Given below is a possible OOP design for the game.
+Suppose you are planning to implement a simple minesweeper game that has a text-based UI and a GUI. Given below is a possible OOP design for the game.
 
 <pic eager src="{{baseUrl}}/modeling/modelingASolution/introduction/images/textLogicMinefieldCell.png" height="50" />
 <p/>
 
 Before jumping into coding, you may want to find out things such as,
 
-* Is this class structure able to produce the behavior you want?
+* Can this class structure produce the behavior you want?
 * What API should each class have?
 * Do you need more classes?
 

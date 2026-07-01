@@ -16,7 +16,7 @@
 
 ##### Implementing association classes
 
-There is no special way to implement an association class. It can be implemented as a normal class that has variables to represent the endpoint of the association it represents.
+There is no special way to implement an association class. It can be implemented as a normal class that has variables to represent the endpoints of the association it represents.
 
 <box>
 

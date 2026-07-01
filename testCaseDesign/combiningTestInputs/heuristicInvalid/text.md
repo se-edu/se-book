@@ -11,7 +11,7 @@
 * Answer: No
 * Reason: Because it could have been (incorrectly) triggered by the other invalid unitPrice of `-1` in that test case, due to a bug in the code.
 
-Therefore, if that test case was intended to verify that the invalid fruitName `Dog` triggers the "invalid fruit" error message, it is better not to include the invalid unitPrice `-1` in that test case at the same time. If the invalid value `-1` needs to be tested, we should test it in a separate test case.
+Therefore, if that test case was intended to verify that the invalid fruitName `Dog` triggers the “invalid fruit” error message, it is better not to include the invalid unitPrice `-1` in that test case at the same time. If the invalid value `-1` needs to be tested, we should test it in a separate test case.
 
 After applying the above insight to our running example, you get the following test cases.
 
@@ -27,8 +27,8 @@ After applying the above insight to our running example, you get the following t
 | 2      | Banana     | 20         | Print oval label               |
 | 2.1    | Cherry     | VV         | Print square label             |
 | 3      | VV         | !!0!!      | Error message “invalid price”  |
-| ==4==  | VV         | ==!!-1!!== | Error message “invalid price"  |
-| ==4.1== | ==!!Dog!!== | VV       | Error message “invalid fruit"  |
+| ==4==  | VV         | ==!!-1!!== | Error message “invalid price”  |
+| ==4.1== | ==!!Dog!!== | VV       | Error message “invalid fruit”  |
 
 --VV/IV = Any Invalid or Valid Value VV = Any Valid Value--
 

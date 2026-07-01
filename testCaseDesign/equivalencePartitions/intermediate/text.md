@@ -6,7 +6,7 @@
 
 <div id="body">
 
-When deciding EPs of OOP methods, you need to identify the EPs of all data participants that can potentially influence the behaviour of the method, such as,
+When deciding EPs of OOP methods, you need to identify the EPs of all data participants that can potentially influence the behavior of the method, such as,
 
 * the target object of the method call
 * input parameters of the method call
@@ -20,7 +20,7 @@ When deciding EPs of OOP methods, you need to identify the EPs of all data parti
 * Returns `true` if the push operation was a success.
 * Throws
   * `MutabilityException` if the global flag `FREEZE==true`.
-  * `InvalidValueException` if `o` is null.
+  * `InvalidValueException` if `o` is `null`.
 
 EPs:
   * `DataStack` object: [full] [not full]
@@ -35,7 +35,7 @@ EPs:
 
 As `newGame()` does not have any parameters, the only obvious participant is the `Logic` object itself.
 
-Note that if the glass-box or the grey-box approach is used, other associated objects that are involved in the method might also be included as participants. For example, the `Minefield` object can be considered as another participant of the `newGame()` method. Here, the black-box approach is assumed.
+Note that if the glass-box or the gray-box approach is used, other associated objects that are involved in the method might also be included as participants. For example, the `Minefield` object can be considered as another participant of the `newGame()` method. Here, the black-box approach is assumed.
 
 Next, let us identify equivalence partitions for each participant. Will the `newGame()` method behave differently for different `Logic` objects? If yes, how will it differ? In this case, yes, it might behave differently based on the game state. Therefore, the equivalence partitions are:
 

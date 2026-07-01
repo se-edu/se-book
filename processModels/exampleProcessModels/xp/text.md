@@ -18,7 +18,7 @@ The following description was adapted from the [XP home page](http://www.extreme
 
 **XP aims to improve a software project in five essential ways: communication, simplicity, feedback, respect, and courage.** Extreme Programmers constantly communicate with their customers and fellow programmers. They keep their design simple and clean. They get feedback by testing their software starting on day one. Every small success deepens their respect for the unique contributions of each and every team member. With this foundation, Extreme Programmers are able to courageously respond to changing requirements and technology.
 
-**XP has a set of simple rules.** XP is a lot like a jig saw puzzle with many small pieces. Individually the pieces make no sense, but when combined together a complete picture can be seen. This flow chart shows how Extreme Programming's rules work together.
+**XP has a set of simple rules.** XP is a lot like a jigsaw puzzle with many small pieces. Individually the pieces make no sense, but when combined together a complete picture can be seen. This flow chart shows how Extreme Programming's rules work together.
 
 <pic eager src="{{baseUrl}}/processModels/exampleProcessModels/xp/images/diagram.png" height="200" />
 <p/>

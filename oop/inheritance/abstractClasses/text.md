@@ -10,11 +10,11 @@
 <include src="../../../common/definitions.md#def-abstractClass" trim />
 </box>
 
-**You can declare a class as _abstract_ when a class is merely a representation of commonalities among its subclasses** in which case it does not make sense to instantiate objects of that class.
+**You can declare a class as _abstract_ when a class is merely a representation of commonalities among its subclasses**, in which case it does not make sense to instantiate objects of that class.
 
 <box>
 
-{{ icon_example }} The `Animal` class that exists as a generalization of its subclasses `Cat`, `Dog`, `Horse`, `Tiger` etc. can be declared as abstract because it does not make sense to instantiate an `Animal` object.
+{{ icon_example }} The `Animal` class that exists as a generalization of its subclasses `Cat`, `Dog`, `Horse`, `Tiger`, etc. can be declared as abstract because it does not make sense to instantiate an `Animal` object.
 
 </box>
 

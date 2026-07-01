@@ -18,7 +18,7 @@
 
 <modal large header="Class diagrams" id="modal:modellingIntro-classDiagram">
 
-A _class diagram_ is a diagram drawn using the UML modelling notation.<br>
+A _class diagram_ is a diagram drawn using the UML modeling notation.<br>
 {{ icon_example }} An example class diagram:<br>
 
 <pic eager src="{{baseUrl}}/uml/classDiagrams/introduction/what/images/classDiagramExample1.png" width="600" />

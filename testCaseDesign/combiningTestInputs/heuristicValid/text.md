@@ -41,13 +41,13 @@ Suppose these are the test cases being considered.
 | 1      | Apple      | 1          | Print round label              |
 | 2      | Banana     | 20         | Print oval label               |
 | 3      | Cherry     | !!0!!      | Error message “invalid price”  |
-| 4      | !!Dog!!    | !!-1!!     | Error message “invalid fruit"  |
+| 4      | !!Dog!!    | !!-1!!     | Error message “invalid fruit”  |
 
 </box>
 
 It looks like the test cases were created using the _at least once_ strategy. After running these tests, can you confirm that the square-format label printing is done correctly?
 * Answer: No.
-* Reason: `Cherry` -- the only input that can produce a square-format label -- is in a negative test case which produces an error message instead of a label. If there is a bug in the code that prints labels in square-format, these tests cases will not trigger that bug.
+* Reason: `Cherry` -- the only input that can produce a square-format label -- is in a negative test case which produces an error message instead of a label. If there is a bug in the code that prints labels in square-format, these test cases will not trigger that bug.
 
 In this case, a useful heuristic to apply is **each valid input must appear at least once in a positive test case**. `Cherry` is a valid test input and you must ensure that it appears at least once in a positive test case. Here are the updated test cases after applying that heuristic.
 
@@ -61,7 +61,7 @@ In this case, a useful heuristic to apply is **each valid input must appear at l
 | 2      | Banana     | 20         | Print oval label               |
 | ==2.1== | ==Cherry==  | VV       | Print ==square== label         |
 | 3      | VV         | !!0!!      | Error message “invalid price”  |
-| 4      | !!Dog!!    | !!-1!!     | Error message “invalid fruit"  |
+| 4      | !!Dog!!    | !!-1!!     | Error message “invalid fruit”  |
 
 --VV/IV = Any Invalid or Valid Value VV = Any Valid Value--
 

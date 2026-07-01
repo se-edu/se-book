@@ -12,7 +12,7 @@
 * similar things that look different
 * different things that look similar
 * multiple statements in the same line
-* data flow anomalies such as, pre-assigning values to variables and modifying it without any use of the pre-assigned value
+* data flow anomalies such as, pre-assigning values to variables and modifying them without any use of the pre-assigned value
 
 </div>
 

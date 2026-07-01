@@ -10,7 +10,7 @@
 
 <box>
 
-{{ icon_example }} The following code `PetShelter` keeps a list of `Cat` objects and make them `speak`. The code will not work with any other type, for example, `Dog` objects.
+{{ icon_example }} The following code `PetShelter` keeps a list of `Cat` objects and makes them `speak`. The code will not work with any other type, for example, `Dog` objects.
 
 ```java
 public class PetShelter {
@@ -48,7 +48,7 @@ public class Cat {
 </panel>
 </box>
 
-This **strong-typing can lead to unnecessary verbosity** caused by repetitive similar code that do similar things with different object types.
+This **strong-typing can lead to unnecessary verbosity** caused by repetitive similar code that does similar things with different object types.
 
 <box>
 
@@ -101,7 +101,7 @@ A better way is to **take advantage of polymorphism to write code that targets a
 
 <box>
 
-{{ icon_example }} The `PetShelter2` uses one data structure to keep both types of animals and one loop to make them speak. The code targets the `Animal` superclass (assuming `Cat` and `Dog` inherits from the `Animal` class) instead of repeating the code for each animal type.
+{{ icon_example }} The `PetShelter2` uses one data structure to keep both types of animals and one loop to make them speak. The code targets the `Animal` superclass (assuming `Cat` and `Dog` inherit from the `Animal` class) instead of repeating the code for each animal type.
 
 ```java
 public class PetShelter2 {

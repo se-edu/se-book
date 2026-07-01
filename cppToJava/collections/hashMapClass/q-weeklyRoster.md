@@ -1,8 +1,8 @@
 <panel type="dark" header="###  <small><small>{{ icon_important }} [Key Exercise] weekly roster</small></small>" expanded >
 
-The class given below keeps track of how many people signup to attend an event on each day of the week. Add the missing methods so that it produces the output given.
+The class given below keeps track of how many people sign up to attend an event on each day of the week. Add the missing methods so that it produces the output given.
 
-{{ icon_tip }} Use an `HashMap` to store the number of entries for each day.
+{{ icon_tip }} Use a `HashMap` to store the number of entries for each day.
 
 ```java
 public class Main {

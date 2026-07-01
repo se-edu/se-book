@@ -30,7 +30,7 @@ pageNav: 3
 
 <div id="def-acceptance-testing">
 
-**_Acceptance testing_ (aka _User Acceptance Testing (UAT)_: test the system to ensure it meets the user requirements.**
+**_Acceptance testing_ (aka _User Acceptance Testing (UAT)_): test the system to ensure it meets the user requirements.**
 
 </div>
 
@@ -229,7 +229,7 @@ Also known as
 
 <div id="def-prototyping">
 
-**Prototype**: A prototype is a _mock up, a scaled down version, or a partial system constructed_
+**Prototype**: A prototype is a _mock-up, a scaled-down version, or a partial system constructed_
 
 *	to get users’ feedback.
 *	to validate a technical concept (a "proof-of-concept" prototype).
@@ -294,7 +294,7 @@ Also known as
 
 <div id="def-stakeholder">
 
-**Stakeholder**: An individual or an organization that is involved or potentially affected by the software project. e.g., users, sponsors, developers, interest groups, government agencies, etc.
+**Stakeholder**: An individual or an organization that is involved in or potentially affected by the software project. Examples include users, sponsors, developers, interest groups, government agencies, etc.
 
 </div>
 
@@ -332,7 +332,7 @@ Also known as
 
 <div id="def-testing">
 
-**Testing**: Operating a system or component under specified conditions, observing or recording the results, and making an evaluation of some aspect of the system or component.  –- source: IEEE
+**Testing**: Operating a system or component under specified conditions, observing or recording the results, and making an evaluation of some aspect of the system or component.  -- source: IEEE
 
 </div>
 

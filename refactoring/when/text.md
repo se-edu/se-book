@@ -12,7 +12,7 @@
 > First, a smell is by definition something that's quick to spot. Second, smells don't always indicate a problem.<br>
 > --adapted from [https://martinfowler.com/bliki/CodeSmell.html](https://martinfowler.com/bliki/CodeSmell.html)
 
-An example (from the same source as above) is the code smell _data class_ i.e., a class with all data and no behavior. When you encounter the such a class, you can explore if refactoring it to move the corresponding behavior into that class is appropriate. Some more examples:
+An example (from the same source as above) is the code smell _data class_ i.e., a class with all data and no behavior. When you encounter such a class, you can explore if refactoring it to move the corresponding behavior into that class is appropriate. Some more examples:
 * [Long Method](https://refactoring.guru/smells/long-method)
 * [Large Class](https://refactoring.guru/smells/large-class)
 * [Primitive Obsession](https://refactoring.guru/smells/primitive-obsession)

@@ -81,17 +81,17 @@ public class IntPairTest {
 * Note how each test method is marked with a `@Test` annotation.
 * Tests use `assertEquals(expected, actual)` methods (provided by JUnit) to compare the expected output with the actual output. If they do not match, the test will fail.<br>
   JUnit comes with other similar methods such as `assertNull`, `assertNotNull`, `assertTrue`, `assertFalse` etc. [[more ...](https://junit.org/junit5/docs/current/api/org.junit.jupiter.api/org/junit/jupiter/api/Assertions.html)]
-* Java code normally use camelCase for method names e.g., `testStringConversion` but when writing test methods, sometimes another convention is used:<br>
+* Java code normally uses camelCase for method names e.g., `testStringConversion` but when writing test methods, sometimes another convention is used:<br>
   `unitBeingTested_descriptionOfTestInputs_expectedOutcome`<br>
   e.g., `intDivision_zeroDivisor_exceptionThrown`
 * There are [several ways to verify the code throws the correct exception](https://howtodoinjava.com/junit5/expected-exception-example/). The second test method in the example above shows one of the simpler methods. If the exception is thrown, it will be caught and further verified inside the `catch` block. But if it is not thrown as expected, the test will reach `fail()` line and will fail as a result.
 
 
-**What to test for when writing tests?** While _test case design techniques_ is a separate topic altogether, it should be noted that the goal of these tests is to catch bugs in the code. Therefore, test using inputs that can trigger a potentially buggy path in the code. Another way to approach this is, to write tests such that if a future developer modified the method to unintentionally introduce a bug into it, at least one of the test should fail (thus alerting that developer to the mistake immediately).
+**What to test for when writing tests?** While _test case design techniques_ are a separate topic altogether, it should be noted that the goal of these tests is to catch bugs in the code. Therefore, test using inputs that can trigger a potentially buggy path in the code. Another way to approach this is, to write tests such that if a future developer modified the method to unintentionally introduce a bug into it, at least one of the tests should fail (thus alerting that developer to the mistake immediately).
 
 <box>
 
-{{ icon_example }} In the example above, the `IntPairTest` class tests the `IntPair#intDivision(int, int)` method using several inputs, some even seemingly attempting to 'trick' the method into producing a wrong result. If the method still produces the correct output for such 'tricky' inputs (as well as 'normal' outputs), we can have a higher confidence on the method being correctly implemented.<br>
+{{ icon_example }} In the example above, the `IntPairTest` class tests the `IntPair#intDivision(int, int)` method using several inputs, some even seemingly attempting to 'trick' the method into producing a wrong result. If the method still produces the correct output for such 'tricky' inputs (as well as 'normal' outputs), we can have a higher confidence in the method being correctly implemented.<br>
  However, also note that the current test cases do not (but probably should) test for the inputs (`0, 0`), to confirm that it throws the expected exception.
 
 </box>

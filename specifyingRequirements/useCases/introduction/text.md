@@ -37,7 +37,7 @@ Extensions:
       Steps 3a1-3a2 are repeated until the data entered are correct.
       Use case resumes from step 4.
 
-  3b. User requests to effect the transfer in a future date.
+  3b. User requests to schedule the transfer for a future date.
       3b1. OBS requests for confirmation.
       3b2. User confirms future transfer.
       Use case ends.

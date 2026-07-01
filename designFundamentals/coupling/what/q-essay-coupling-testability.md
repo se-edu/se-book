@@ -4,7 +4,7 @@ Discuss the relationship between coupling and <tooltip content="a measure of how
 
 <panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
-Coupling decreases testability because if the <tooltip content="Software Under Test">SUT</tooltip> is coupled to many other components, it becomes difficult to test the SUT in isolation of its dependencies.
+Coupling decreases testability because if the <tooltip content="Software Under Test">SUT</tooltip> is coupled to many other components, it becomes difficult to test the SUT in isolation from its dependencies.
 
 </panel>
 </panel>

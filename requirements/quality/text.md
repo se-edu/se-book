@@ -19,7 +19,7 @@ Here are some characteristics of well-defined requirements <trigger for="pop:zie
 * Necessary
 * Implementation-free (i.e., abstract)
 
-Besides these criteria for individual requirements, the set of requirements as a whole should be
+Besides these criteria for individual requirements, the set of requirements as a whole should be:
 
 * Consistent
 * Non-redundant

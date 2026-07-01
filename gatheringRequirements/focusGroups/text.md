@@ -12,7 +12,7 @@
 <sub>[[source](http://www.hanscom.af.mil/News/Article-Display/Article/380048/caring-for-people-forum-identifies-issues/)]</sub>
 </div><p/>
 
-**Focus groups are a kind of informal interview within an interactive group setting.** A group of people (e.g. potential users, beta testers) are asked about their understanding of a specific issue, process, product, advertisement, etc.
+**Focus groups are a kind of informal interview within an interactive group setting.** A group of people (e.g. potential users, beta testers) is asked about their understanding of a specific issue, process, product, advertisement, etc.
 
 <panel type="seamless"  class="non-printable">
   <span slot="header">{{ icon_video }}<md>%%: How do focus groups work? - Hector Lanz%%</md> {{ icon_extra }}</span>

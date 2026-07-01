@@ -21,12 +21,12 @@ class FooTest {
     
     @Test
     void write_emptyInput_exceptionThrown() {
-        // a unit tests for Foo#write(String) method
+        // a unit test for Foo#write(String) method
     }  
     
     @Test
     void write_normalInput_writtenCorrectly() {
-        // another unit tests for Foo#write(String) method
+        // another unit test for Foo#write(String) method
     }
 }
 ```

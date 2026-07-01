@@ -14,7 +14,7 @@ A common approach is to group requirements into priority categories. Note that a
 
 {{ icon_example }} An example scheme for categorizing requirements:
 
-* `Essential`: The product must have this requirement fulfilled or else it does not get user acceptance.
+* `Essential`: The product must fulfill this requirement; otherwise, users will not accept it.
 * `Typical`: Most similar systems have this feature although the product can survive without it.
 * `Novel`: New features that could differentiate this product from the rest.
 
@@ -30,9 +30,9 @@ A common approach is to group requirements into priority categories. Note that a
 
 <box>
 
-{{ icon_example }} The requirement given below is for a Calendar application. Stakeholders of the software (e.g. product designers) might decide the following requirement is not in the scope of the software.
+{{ icon_example }} The requirement given below is for a Calendar application. Stakeholders of the software (e.g. product designers) might decide the following requirement is outside the software's scope.
 
->The software records the actual time taken by each task and show the difference between the _actual_ and _scheduled_ time for the task.
+>The software records the actual time taken by each task and shows the difference between the _actual_ and _scheduled_ time for the task.
 
 </box>
 

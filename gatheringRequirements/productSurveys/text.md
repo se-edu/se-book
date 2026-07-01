@@ -6,7 +6,7 @@
 
 <div id="body">
 
-**Studying existing products can unearth shortcomings of existing solutions that can be addressed by a new product.** Product manuals and other forms of documentation of an existing system can tell us how the existing solutions work.
+**Studying existing products can unearth shortcomings that a new product can address.** Product manuals and other forms of documentation can tell us how existing solutions work.
 
 <box>
 

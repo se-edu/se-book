@@ -16,13 +16,13 @@
 * `colorBlue`: number of times blue is used
 * `hexForRed`: hex value for color red
 
-This is misleading because `colorBlue` is named similar to `colorWhite` and `colorBlack` but has a different purpose while `hexForRed` is named differently but has a very similar purpose to the first two variables. The following is better:
+This is misleading because `colorBlue` is named similarly to `colorWhite` and `colorBlack` but has a different purpose while `hexForRed` is named differently but has a very similar purpose to the first two variables. The following is better:
 * `hexForBlack` `hexForWhite` `hexForRed`
 * `blueColorCount`
 
 </box>
 
-Avoid misleading or ambiguous names (e.g., those with multiple meanings), similar sounding names, hard-to-pronounce ones (e.g., avoid ambiguities like "is that a lowercase L, capital I or number 1?", or "is that number 0 or letter O?"), almost similar names.
+Avoid misleading or ambiguous names (e.g., those with multiple meanings), similar-sounding names, hard-to-pronounce ones (e.g., avoid ambiguities like "is that a lowercase L, capital I or number 1?", or "is that number 0 or letter O?"), almost similar names.
 
 <box>
 
@@ -31,8 +31,8 @@ Avoid misleading or ambiguous names (e.g., those with multiple meanings), simila
 |`phase0`  |`phaseZero`  |  Is that zero or letter O? |
 |`rwrLgtDirn`  |`rowerLegitDirection`  |  Hard to pronounce |
 |`right` `left` `wrong`  |`rightDirection` `leftDirection` `wrongResponse`  |  `right` is for 'correct' or 'opposite of 'left'? |
-|`redBooks` `readBooks`  |`redColorBooks` `booksRead` |  `red` and `read` (past tense) sounds the same |
-|`FiletMignon`  |`egg` |  If the requirement is just a name of a food, `egg` is a much easier to type/say choice than `FiletMignon` |
+|`redBooks` `readBooks`  |`redColorBooks` `booksRead` |  `red` and `read` (past tense) sound the same |
+|`FiletMignon`  |`egg` |  If the requirement is just a name of a food, `egg` is a much easier choice to type/say than `FiletMignon` |
 
 </box>
 

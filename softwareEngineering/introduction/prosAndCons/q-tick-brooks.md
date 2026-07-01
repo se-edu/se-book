@@ -1,4 +1,4 @@
-<panel header="{{ icon_Q_A }} Which one of these is not included in Brook’s list of ‘Woes of the Craft’?">
+<panel header="{{ icon_Q_A }} Which one of these is not included in Brooks’s list of ‘Woes of the Craft’?">
 
 - [ ] a. Need for perfection when developing software
 - [ ] b. Requiring some amount of tedious, painstaking labor

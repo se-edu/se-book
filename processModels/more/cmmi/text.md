@@ -8,7 +8,7 @@
 
 <box type="definition" seamless>
 
-CMMI (Capability Maturity Model Integration) is a process improvement approach defined by Software Engineering Institute at Carnegie Melon University. CMMI provides organizations with the essential elements of effective processes, which will improve their performance. <sub>-- adapted from [http://www.sei.cmu.edu/cmmi/](http://www.sei.cmu.edu/cmmi/)</sub>
+CMMI (Capability Maturity Model Integration) is a process improvement approach defined by the Software Engineering Institute at Carnegie Mellon University. CMMI provides organizations with the essential elements of effective processes, which will improve their performance. <sub>-- adapted from [http://www.sei.cmu.edu/cmmi/](http://www.sei.cmu.edu/cmmi/)</sub>
 </box>
 
 **CMMI defines five maturity levels for a process and provides criteria to determine if the process of an organization is at a certain maturity level.** The diagram below [taken from Wikipedia] gives an overview of the five levels.

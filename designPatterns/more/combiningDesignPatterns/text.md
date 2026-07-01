@@ -23,7 +23,7 @@
 
 SIS can be accessed using multiple terminals. Shop assistants use their own terminals to access SIS, while the shop manager’s terminal continuously displays a list of all items in the store. In the future, it is expected that suppliers of items use their own applications to connect to SIS to get real-time information about the current stock status. User authentication is not required for the current version, but may be required in the future.
 
-A step by step explanation of the design is given below. Note that this is one out of many possible designs. Design patterns are also applied where appropriate.
+A step-by-step explanation of the design is given below. Note that this is one out of many possible designs. Design patterns are also applied where appropriate.
 
 A `StockItem` can be an Appliance or an Accessory.
 
@@ -35,7 +35,7 @@ To track that each `Accessory` is associated with the correct `Appliance`, consi
 <pic eager src="{{baseUrl}}/designPatterns/more/combiningDesignPatterns/images/alternativeOne.png" height="120" />
 <p/>
 
-The third one seems more appropriate (the second one is suitable if accessories can have accessories). Next, consider between keeping a list of `Appliances`, and a list of `StockItems`.  Which is more appropriate?
+The third one seems more appropriate (the second one is suitable if accessories can have accessories). Next, choose between keeping a list of `Appliances` and a list of `StockItems`.  Which is more appropriate?
 
 <pic eager src="{{baseUrl}}/designPatterns/more/combiningDesignPatterns/images/alternativeTwo.png" height="100" />
 <p/>
@@ -55,7 +55,7 @@ Next, apply the façade pattern to shield the SIS internals from the UI.
 <pic eager src="{{baseUrl}}/designPatterns/more/combiningDesignPatterns/images/withFacade.png" height="200" />
 <p/>
 
-As UI consists of multiple views, the  MVC pattern is applied here.
+As UI consists of multiple views, the MVC pattern is applied here.
 
 <pic eager src="{{baseUrl}}/designPatterns/more/combiningDesignPatterns/images/withMVC.png" height="270" />
 <p/>
