@@ -26,7 +26,7 @@ However, most big projects use specialized build tools to automate complex build
 
 <box>
 
-{{ icon_example }} Maven and Gradle, in addition to managing the build process, can play the role of dependency management tools too.
+{{ icon_example }} Maven and Gradle, in addition to managing the build process, can also serve as dependency management tools.
 
 </box>
 
