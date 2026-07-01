@@ -8,7 +8,7 @@
 
 **In terms of timing and frequency, there are two general approaches to integration: _late and one-time_, and _early and frequent_.**
 
-**_Late and one-time_: wait till all components are completed and integrate all finished components near the end of the project.** 
+**_Late and one-time_: wait until all components are completed and integrate all finished components near the end of the project.** 
 
 <box type="wrong">
  
