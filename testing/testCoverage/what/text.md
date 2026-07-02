@@ -86,7 +86,7 @@ So, achieving 100% path coverage of this method will be extremely difficult.
 </box>
 
 * **Entry/exit coverage** measures coverage in terms of possible _calls to_ and _exits_ from the operations in the SUT.<br>
-  _Entry points_ refer to all places from which the method is called from the rest of the code i.e., all places where the control is handed over to the method in concern.<br>
+  _Entry points_ refer to all places from which the method is called by the rest of the code i.e., all places where control is handed over to the method in question.<br>
   _Exit points_ refer to points at which the control is returned to the caller e.g., return statements, throwing of exceptions.
 
 </div>
