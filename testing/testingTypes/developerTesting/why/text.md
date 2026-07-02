@@ -15,7 +15,7 @@
 
 **Therefore, it is better to do early testing**, as hinted by the popular rule of thumb given below, also illustrated by the graph below it.
 
-> The earlier a bug is found, the easier and cheaper to have it fixed.
+> The earlier a bug is found, the easier and cheaper it is to fix.
 
 <pic eager src="{{baseUrl}}/testing/testingTypes/developerTesting/why/images/diagram.png" height="180" />
 <p/>
