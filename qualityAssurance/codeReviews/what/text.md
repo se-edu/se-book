@@ -16,7 +16,7 @@ Reviews can be done in various forms. Some examples are:
 
 * **In <trigger trigger="click" for="modal:codeReview-pairProgramming">pair programming</trigger>**
 
-  * As pair programming involves two programmers working on the same code at the same time, there is an implicit review of the code by the other member of the pair.
+  * Because pair programming involves two programmers working on the same code at the same time, there is an implicit review of the code by the other member of the pair.
 
 
 <modal large header="Pair Programming" id="modal:codeReview-pairProgramming">
