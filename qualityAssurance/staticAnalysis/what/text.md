@@ -14,7 +14,7 @@
 
 The term _static_ in static analysis refers to the fact that the code is analyzed without executing the code. **In contrast, _dynamic analysis_ requires the code to be executed to gather additional information about the code**, e.g., performance characteristics.
 
-**Higher-end static analysis tools (static analyzers) can perform more complex analysis such as locating potential bugs**, memory leaks, inefficient code structures, etc.
+**Higher-end static analysis tools (static analyzers) can perform more complex analysis such as locating potential bugs, memory leaks, and inefficient code structures.**
 
 <box>
 
