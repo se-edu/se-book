@@ -8,7 +8,7 @@
 
 **Code review is the systematic examination of code with the intention of finding where the code can be improved.**
 
-Reviews can be done in various forms. Some examples below:
+Reviews can be done in various forms. Some examples are:
 
 * **Pull Request reviews**
 
