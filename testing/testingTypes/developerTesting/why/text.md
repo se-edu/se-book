@@ -20,7 +20,7 @@
 <pic eager src="{{baseUrl}}/testing/testingTypes/developerTesting/why/images/diagram.png" height="180" />
 <p/>
 
-Such early testing software is usually, and often by necessity, done by the developers themselves i.e., developer testing.
+Such early testing of software is usually, and often by necessity, done by the developers themselves i.e., developer testing.
 
 </div>
 
