@@ -18,7 +18,7 @@ The term _static_ in static analysis refers to the fact that the code is analyze
 
 <box>
 
-{{ icon_example }} Some example static analyzers for Java: [CheckStyle](http://checkstyle.sourceforge.net/), [PMD](https://pmd.github.io/), [FindBugs](http://findbugs.sourceforge.net/)
+{{ icon_example }} Some examples of static analyzers for Java: [CheckStyle](http://checkstyle.sourceforge.net/), [PMD](https://pmd.github.io/), [FindBugs](http://findbugs.sourceforge.net/)
 </box>
 
 **_Linters_ are a subset of static analyzers** that specifically aim to locate areas where the code can be made 'cleaner'.
