@@ -10,7 +10,7 @@ If a software product has a GUI (Graphical User Interface) component, all produc
 
 * Most GUIs can support a large number of different operations, many of which can be performed in any arbitrary order.
 * GUI operations are more difficult to automate than API testing. Reliably automating GUI operations and automatically verifying whether the GUI behaves as expected is harder than calling an operation and comparing its return value with an expected value. Therefore, automated regression testing of GUIs is rather difficult.
-* The appearance of a GUI (and sometimes even behavior) can be different across platforms and even environments. For example, a GUI can behave differently based on whether it is minimized or maximized, in focus or out of focus, and in a high resolution display or a low resolution display.
+* The appearance of a GUI (and sometimes even behavior) can be different across platforms and even environments. For example, a GUI can behave differently based on whether it is minimized or maximized, in focus or out of focus, and on a high-resolution display or a low-resolution display.
 
 <pic eager src="{{baseUrl}}/testing/testAutomation/testingGuis/images/diagram.png" height="120" />
 <p/>
