@@ -371,7 +371,7 @@ Requirements for this increment:
 
 * **Minimal**: Set up Gradle so that you can build and run Duke using Gradle.
 * **Recommended**: Be able to run JUnit tests using Gradle (this can only be done after you've reached the `A-JUnit` increment).
-* **Stretch Goal**: Use gradle to automate more things in your project, as you progress through the project.
+* **Stretch goal**: Use Gradle to automate more things in your project, as you progress through the project.
 
 </div><hr>
 <div id="A-CI">
