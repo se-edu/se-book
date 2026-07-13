@@ -487,7 +487,7 @@ Choose a unique personality for Duke, and tweak the following aspects to go with
 
 Write more JUnit tests, to test nearly all code that _can_ be tested automatically.
 
-You may omit code that are hard to test automatically e.g., GUI functionality (test those manually instead).
+You may omit code that is hard to test automatically e.g., GUI functionality (test those manually instead).
 
 This can include more manual testing as well e.g., testing on different OSes, different screen resolution, different OS language settings (English vs Chinese)
 
