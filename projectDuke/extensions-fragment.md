@@ -198,7 +198,7 @@ You can get some inspiration from how the class structure of the [addressbook-le
 Add JUnit tests to test the behavior of the code.
 
 * **Minimal**: Use JUnit to test ==at least two non-trivial methods==, from two different classes (if you have multiple classes),<br>
-  and, ensure they are ==tested reasonably well== (i.e., the test code should try to catch most potential bugs in the target methods).
+  and ensure they are ==tested reasonably well== (i.e., the test code should try to catch most potential bugs in the target methods).
 * **Stretch goal**: Use JUnit to test all non-trivial public methods of all classes.
 
 Refer to the [_JUnit tutorial_ @se-edu/guides](https://se-education.org/guides/tutorials/junit.html) to find how to use JUnit (in the context of this project).
