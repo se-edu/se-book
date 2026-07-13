@@ -305,7 +305,7 @@ Use the `assert` feature (not JUnit assertions) to document important assumption
 
 Package the app as an executable JAR file so that it can be distributed easily.
 
-You can assume **the user will run the jar file in the following way only**:
+You can assume **the user will run the JAR file in the following way only**:
 1. Copy the jar file into an empty folder.
 1. Open a command window in that folder.
 1. Run the command `java -jar "{filename}.jar"` e.g., `java -jar "Duke.jar"` (i.e., run the command in the same folder as the jar file).
