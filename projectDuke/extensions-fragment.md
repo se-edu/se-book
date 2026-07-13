@@ -251,7 +251,7 @@ Do not convert `src`, `main`, `java` into packages. For example, the following i
 </box>
 
 * **Minimal**: put all classes in one package e.g., `duke`
-* **Stretch goal**: divide into multiple packages as the number of classes increase e.g., `duke.task`, `duke.command`
+* **Stretch goal**: divide into multiple packages as the number of classes increases e.g., `duke.task`, `duke.command`
 </div><hr>
 <div id="A-JavaDoc">
 <include boilerplate src="dukeExtensionTitle.md" var-extId="A-JavaDoc"
