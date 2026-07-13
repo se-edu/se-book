@@ -188,7 +188,7 @@ You can get some inspiration from how the class structure of the [addressbook-le
 
 **Common mistake:** Trying to do the entire change in one shot.{.text-danger}
 
-**Recommended:** Make one small code change at a time, while ensuring the code works after each step.<br> Example: identify one bit of functionality that is best put in the `Storage` class → move only that functionality to a new class `Storage` → Test the code to ensure everything is working → Look for the next piece of functionality to move to `Storage` class, and so on.
+**Recommended:** Make one small code change at a time, while ensuring the code works after each step.<br> Example: identify one bit of functionality that is best put in the `Storage` class → move only that functionality to a new class `Storage` → Test the code to ensure everything is working → Look for the next piece of functionality to move to the `Storage` class, and so on.
 </box>
 </div><hr>
 <div id="A-JUnit">
