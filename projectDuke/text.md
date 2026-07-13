@@ -319,7 +319,7 @@ You are strongly encouraged to use your own wording for the error messages, rath
 <include boilerplate src="dukeNestedFragment.md" var-target="A-Exceptions" var-name="Extension: `A-Exceptions`" />
 <p/>
 
-* **Minimal**: handle at least the two types of errors shown in the example above.
+* **Minimal**: Handle at least the two types of errors shown in the example above.
 * **Typical**:
   * Handle all possible errors in the current version.
   * As you evolve the chatbot, continue to handle errors related to the new features added.
