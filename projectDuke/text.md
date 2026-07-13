@@ -147,7 +147,7 @@ bye
 
 <box type="tip" seamless>
 
-**You are strongly encouraged to customize the chatbot**: In addition to the command/display formats, you can even customize the personality of the chatbot to make your chatbot unique.
+**You are strongly encouraged to customize the chatbot**: In addition to the command/display formats, you can even customize its personality to make your chatbot unique.
 </box>
 
 </div><hr><!-- ================================================================================================ -->
