@@ -109,7 +109,7 @@ Expectations:
 <include boilerplate src="dukeExtensionTitle.md" var-extId="A-Collections"
          var-extHeading="Use Java Collections classes"/>
 
-Use Java Collections classes for storing data. For example, you can use an [`ArrayList<Task>`](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/ArrayList.html) to store the tasks. They offer many advantages (e.g., dynamic sizing, easy to find/add/delete items),  over using a primitive data structure such as a normal array.
+Use Java Collections classes for storing data. For example, you can use an [`ArrayList<Task>`](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/ArrayList.html) to store the tasks. They offer many advantages (e.g., dynamic sizing, easy to find/add/delete items)  over using a primitive data structure such as a normal array.
 </div><hr>
 <div id="A-MoreOOP">
 <include boilerplate src="dukeExtensionTitle.md" var-extId="A-MoreOOP"
