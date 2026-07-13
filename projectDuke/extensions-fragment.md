@@ -115,7 +115,7 @@ Use Java Collections classes for storing data. For example, you can use an [`Arr
 <include boilerplate src="dukeExtensionTitle.md" var-extId="A-MoreOOP"
          var-extHeading="Make the code more OOP"/>
 
-Gradually (i.e., in small steps) extract out closely related code as classes.
+Gradually (i.e., in small steps) extract closely related code as classes.
 
 * **Minimal**: Extract the following classes:
   * `Ui`: deals with interactions with the user
