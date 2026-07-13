@@ -463,7 +463,7 @@ Improve the GUI to make it more _polished_. Some examples:
 * Allow resizing of the Window, and ensure the content resizes appropriately as the Window changes size.
 * Profile pictures: If your GUI shows profile pictures, you can tweak the way the picture is shown (e.g., crop as a circle or a square with rounded corners). In fact, an easy tweak is to use a picture with a transparent background so that it blends nicely with the background.<br>
   Given that the participants of the conversation are fixed (i.e., you and the chatbot), do you even need big profile pictures?
-* Focus more on tweaks that actually _improve_ the user experience (UX). Some changes %%(e.g., profile pictures, background graphics)%% can be eye catching but can even degrade the UX if not done right %%(e.g., it can make the text harder to read)%%
+* Focus more on tweaks that actually _improve_ the user experience (UX). Some changes %%(e.g., profile pictures, background graphics)%% can be eye-catching but can even degrade the UX if not done right %%(e.g., it can make the text harder to read)%%
 
 {{ icon_tip }} You can take inspiration from [these past projects](https://nus-cs2103-ay2526s1.github.io/website/admin/ip-showcase.html). If you adopt any ideas from them, don't forget to give credit to the original author.
 
