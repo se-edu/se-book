@@ -362,7 +362,7 @@ merge add-gradle-support id: "Merge branch ..."
 
 * Go to the [_Gradle tutorial_ @SE-EDU](https://se-education.org/guides/tutorials/gradle.html).{text="Step 2."}
   * If you are new to Gradle, read the _Basics_ section to get an overview of Gradle.{texts="['2a.','2b.', '2c.']"}
-  * Next, follow the [==_scenario 2_== of the _Adding Gradle to the project_ section](https://se-education.org/guides/tutorials/gradle.html#:~:text=click%20it.-,Scenario%202,-%3A%20You%20are), to add Gradle to your project.
+  * Next, follow [==_scenario 2_== of the _Adding Gradle to the project_ section](https://se-education.org/guides/tutorials/gradle.html#:~:text=click%20it.-,Scenario%202,-%3A%20You%20are), to add Gradle to your project.
   * Read the rest of the tutorial to find how to use Gradle to build, run, test etc.
 
 <p/>
