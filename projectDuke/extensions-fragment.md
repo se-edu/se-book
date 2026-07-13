@@ -325,7 +325,7 @@ Refer to the tutorial [_Working with JAR files_ @SE-EDU/guides](https://se-educa
 
 <box type="info" seamless>
 
-**If your project is being revision controlled using Git/GitHub**,<br>
+**If your project is being revision-controlled using Git/GitHub**,<br>
 
 * <span class="text-danger">do not commit the JAR file created</span>. Reason: We don't normally commit generated binary files into the repository.
 
