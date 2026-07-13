@@ -189,7 +189,7 @@ bye
 ```
 
 * There is no need to save the data to the hard disk.
-* Assume there will be no more than 100 tasks. If you wish, you may use a fixed size array (e.g., `String[100]`) to store the items.
+* Assume there will be no more than 100 tasks. If you wish, you may use a fixed-size array (e.g., `String[100]`) to store the items.
 </div><hr><!-- ================================================================================================ -->
 <div id="Level-3">
 
