@@ -265,7 +265,7 @@ Add JavaDoc comments to the code.
 <include boilerplate src="dukeExtensionTitle.md" var-extId="A-CodingStandard"
          var-extHeading="Tweak the code to comply with a coding standard"/>
 
-Tweak the code to comply with a given coding standard. From this point onward, ensure any new code added are compliant with the given coding standard.
+Tweak the code to comply with a given coding standard. From this point onward, ensure any new code added is compliant with the given coding standard.
 
 <box type="tip" seamless>
 
