@@ -236,7 +236,7 @@ Add support for tracking three types of tasks:
 
 1. **ToDos**: tasks without any date/time attached to it %%e.g., _visit new theme park_%%
 2. **Deadlines**: tasks that need to be done before a specific date/time %%e.g., _submit report by 11/10/2019 5pm_%%
-3. **Events**: tasks that start at a specific date/time and ends at a specific date/time<br>
+3. **Events**: tasks that start at a specific date/time and end at a specific date/time<br>
    %%e.g., (a) _team project meeting 2/10/2019 2-4pm_ (b) _orientation week  4/10/2019 to 11/10/2019_%%
 
 Example:
