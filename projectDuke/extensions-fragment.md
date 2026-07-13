@@ -514,7 +514,7 @@ Use AI tools (e.g., GitHub Copilot, ChatGPT, Claude, Cursor etc.) to enhance you
 * tweak an existing feature to make it more useful to the user.
 * add or improve documentation, tests.
 
-You can refer the [se-edu guide on AI-Assisted Coding](https://se-education.org/guides/tutorials/aiAssistedCoding.html) for further resources.
+You can refer to the [se-edu guide on AI-Assisted Coding](https://se-education.org/guides/tutorials/aiAssistedCoding.html) for further resources.
 
 </div>
 
