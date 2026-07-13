@@ -312,7 +312,7 @@ You can assume **the user will run the jar file in the following way only**:
 
 <box type="info" seamless>
 
-The double quotes around the filename in the `java -jar "{filename}.jar"` are not normally needed, but they are needed if the filename contains special characters such as spaces or `[`.
+The double quotes around the filename in the `java -jar "{filename}.jar"` command are not normally needed, but they are needed if the filename contains special characters such as spaces or `[`.
 </box>
 
 <box type="info" icon=":fas-question:" seamless>
