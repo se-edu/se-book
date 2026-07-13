@@ -489,7 +489,7 @@ Write more JUnit tests, to test nearly all code that _can_ be tested automatical
 
 You may omit code that is hard to test automatically e.g., GUI functionality (test those manually instead).
 
-This can include more manual testing as well e.g., testing on different OSes, different screen resolution, different OS language settings (English vs Chinese)
+This can include more manual testing as well e.g., testing on different OSes, different screen resolutions, different OS language settings (English vs Chinese)
 
 </div>
 <div id="A-MoreErrorHandling">
