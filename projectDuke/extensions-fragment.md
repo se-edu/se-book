@@ -457,7 +457,7 @@ Release the product to be used by potential users. %%e.g., you can make it avail
 
 Improve the GUI to make it more _polished_. Some examples:
 * Tweak the GUI to match the asymmetric nature of the conversation: As the conversation is between the user and the app (not between two humans), it is asymmetric in nature. Accordingly, it makes sense not to display both sides of the conversation in the same visual format. {{ numbers_roman }}
-* Highlight errors e.g., when the user types a wrong command, the error should be shown in a different format to catch ther user's attention.
+* Highlight errors e.g., when the user types a wrong command, the error should be shown in a different format to catch the user's attention.
 * Tweak padding, fonts, colors, alignments to make the GUI more pleasing to look at.<br>
   Given the app is likely to take only a small portion of the screen, and the bot replies can contain a lot of text, try to optimize for space (e.g., avoid wasting display space that simply shows the background graphics).
 * Allow resizing of the Window, and ensure the content resize appropriately as the Window changes size.
