@@ -318,7 +318,7 @@ The double quotes around the filename in the `java -jar "{filename}.jar"` comman
 <box type="info" icon=":fas-question:" seamless>
 
 FAQ: Can we double-click the jar file to run it?<br>
-A: Yes, that usually works too, being able to do so is not a requirement here. Instead, the `java -jar` command is the recommended way to run the jar file.
+A: Yes, that usually works too, but being able to do so is not a requirement here. Instead, the `java -jar` command is the recommended way to run the jar file.
 </box>
 
 Refer to the tutorial [_Working with JAR files_ @SE-EDU/guides](https://se-education.org/guides/tutorials/jar.html) to find how to create JAR files (in the context of this project).
