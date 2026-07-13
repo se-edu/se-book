@@ -277,9 +277,9 @@ SE-EDU guides on configuring the code style in IDEs: [Intellij IDEA](https://se-
 <include boilerplate src="dukeExtensionTitle.md" var-extId="A-CheckStyle"
          var-extHeading="Use CheckStyle"/>
 
-Use checkStyle to detect coding style violations.
+Use Checkstyle to detect coding style violations.
 
-Refer the tutorial [_Using Checkstyle_ @SE-EDU/guides](https://se-education.org/guides/tutorials/checkstyle.html) to learn how to use Checkstyle.
+Refer to the tutorial [_Using Checkstyle_ @SE-EDU/guides](https://se-education.org/guides/tutorials/checkstyle.html) to learn how to use Checkstyle.
 <p/>
 
 
@@ -289,7 +289,7 @@ Refer the tutorial [_Using Checkstyle_ @SE-EDU/guides](https://se-education.org/
 <include boilerplate src="dukeExtensionTitle.md" var-extId="A-CodeQuality"
          var-extHeading="Improve code quality"/>
 
-Critically examines the code and refactor to improve the code quality where necessary.
+Critically examine the code and refactor to improve the code quality where necessary.
 
 {{ icon_important_big_red }} When adding this increment, follow closely the 'Code Quality' topics you have learned so far, rather than merely follow your own intuition about code quality.
 </div><hr>
@@ -297,7 +297,7 @@ Critically examines the code and refactor to improve the code quality where nece
 <include boilerplate src="dukeExtensionTitle.md" var-extId="A-Assertions"
          var-extHeading="Use Assertions"/>
 
-Use `assert` feature (not JUnit assertions) to document important assumptions that should hold at various points in the code.
+Use the `assert` feature (not JUnit assertions) to document important assumptions that should hold at various points in the code.
 </div><hr>
 <div id="A-Jar">
 <include boilerplate src="dukeExtensionTitle.md" var-extId="A-Jar"
@@ -312,7 +312,7 @@ You can assume **the user will run the jar file in the following way only**:
 
 <box type="info" seamless>
 
-The double quotes around the filename in the `java -jar "{filename}.jar"` is not normally needed, but it is needed if the filename contains special characters such as spaces or `[`.
+The double quotes around the filename in the `java -jar "{filename}.jar"` are not normally needed, but they are needed if the filename contains special characters such as spaces or `[`.
 </box>
 
 <box type="info" icon=":fas-question:" seamless>
@@ -380,11 +380,11 @@ Requirements for this increment:
 
 Use GitHub Actions to set up Continuous Integration (CI).
 
-The workflow specified by [this `.yml` file](https://github.com/se-edu/duke/blob/full-template/.github/workflows/gradle.yml) is a good candidate for this project. The last three segments are related to I/O redirection tests; can be deleted if not applicable to your project.
+The workflow specified by [this `.yml` file](https://github.com/se-edu/duke/blob/full-template/.github/workflows/gradle.yml) is a good candidate for this project. The last three segments are related to I/O redirection tests; they can be deleted if not applicable to your project.
 
 Refer to the [_Using GitHub Actions_ @SE-EDU/guides](https://se-education.org/guides/tutorials/githubActions.html) to learn how to use that `.yml` file to set up GitHub actions.
 
-Also note that pushing a GitHub Actions related file to GitHub requires you to authenticate using a <tooltip content="Personal Access Token">PAT</tooltip> that has `workflow` permissions (because you are modifying a workflow of your repo). If you are using Sourcetree, you can refer to [_Sourcetree Guide_ @SE-EDU/guides](https://se-education.org/guides/tutorials/sourcetree.html) to learn how to connect Sourcetree with GitHub using a PAT.
+Also note that pushing a GitHub Actions-related file to GitHub requires you to authenticate using a <tooltip content="Personal Access Token">PAT</tooltip> that has `workflow` permissions (because you are modifying a workflow of your repo). If you are using Sourcetree, you can refer to [_Sourcetree Guide_ @SE-EDU/guides](https://se-education.org/guides/tutorials/sourcetree.html) to learn how to connect Sourcetree with GitHub using a PAT.
 
 </div><hr>
 <div id="A-Enums">
@@ -397,7 +397,7 @@ Use Java `enum`s, if applicable.
 <include boilerplate src="dukeExtensionTitle.md" var-extId="A-Varargs"
          var-extHeading="Use var-args"/>
 
-Use Java varargs feature, if applicable.
+Use Java varargs, if applicable.
 </div><hr>
 <div id="A-Lambdas">
 <include boilerplate src="dukeExtensionTitle.md" var-extId="A-Lambdas"
