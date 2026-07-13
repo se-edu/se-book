@@ -157,7 +157,7 @@ bye
 
 ### Level 2. Add, List
 
-Add the ability to store whatever text entered by the user and display them back to the user when requested.
+Add the ability to store whatever text is entered by the user and display it back to the user when requested.
 
 Example:
 ```{.no-line-numbers}
