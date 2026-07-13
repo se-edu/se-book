@@ -177,7 +177,7 @@ public class Duke {
 
 <box type="info" seamless>
 
-Your class names may differ from the ones given above. The design can differ too, if you can justify your design is a good OOP design (there is no one _correct_ design solution for most design problems, after all).
+Your class names may differ from the ones given above. The design can differ too, if you can justify that your design is a good OOP design (there is no one _correct_ design solution for most design problems, after all).
 </box>
 
 <box type="tip" seamless>
