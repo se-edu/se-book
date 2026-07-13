@@ -460,7 +460,7 @@ Improve the GUI to make it more _polished_. Some examples:
 * Highlight errors e.g., when the user types a wrong command, the error should be shown in a different format to catch the user's attention.
 * Tweak padding, fonts, colors, alignments to make the GUI more pleasing to look at.<br>
   Given the app is likely to take only a small portion of the screen, and the bot replies can contain a lot of text, try to optimize for space (e.g., avoid wasting display space that simply shows the background graphics).
-* Allow resizing of the Window, and ensure the content resize appropriately as the Window changes size.
+* Allow resizing of the Window, and ensure the content resizes appropriately as the Window changes size.
 * Profile pictures: If your GUI shows profile pictures, you can tweak the way the picture is shown (e.g., crop as a circle or a square with rounded corners). In fact, an easy tweak is to use a picture with a transparent background so that it blends nicely with the background.<br>
   Given that the participants of the conversation are fixed (i.e., you and the chatbot), do you even need big profile pictures?
 * Focus more on tweaks that actually _improves_ the user experience (UX). Some changes %%(e.g., profile pictures, background graphics)%% can be eye catching but can even degrade the UX if not done right %%(e.g., it can make the text harder to read)%%
