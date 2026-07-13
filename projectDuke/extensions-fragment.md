@@ -212,7 +212,7 @@ Refer to the [_JUnit tutorial_ @se-edu/guides](https://se-education.org/guides/t
 <include boilerplate src="dukeExtensionTitle.md" var-extId="A-Packages"
          var-extHeading="Divide classes into packages"/>
 
-Organize the classes into suitable java packages.
+Organize the classes into suitable Java packages.
 
 <box type="warning" seamless>
 
