@@ -118,7 +118,7 @@ ____________________________________________________________
 
 ### Level 1. Echo
 
-Improve the _skeletal_ version of Duke so that it echos commands entered by the user, and exits when the user types the command `bye`.
+Improve the _skeletal_ version of Duke so that it echoes commands entered by the user, and exits when the user types the command `bye`.
 <br>
 Example:
 ```{.no-line-numbers}
