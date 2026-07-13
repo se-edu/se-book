@@ -95,7 +95,7 @@ Use the input/output redirection technique to semi-automate the testing of Duke.
 
 Notes:
 
-* A tutorial of this technique is [here](https://se-education.org/guides/tutorials/textUiTesting.html).
+* A tutorial on this technique is [here](https://se-education.org/guides/tutorials/textUiTesting.html).
 * The required scripts are provided in the Duke repo (see the `text-ui-test` folder).
 
 Expectations:
