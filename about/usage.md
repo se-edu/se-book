@@ -12,7 +12,7 @@ pageNav: 3
 
 ### Browser compatibility{.text-white .bg-secondary .p-2}
 
-Most of this will work on most mainstream Browsers, although some pages might not work well in small-screen devices.
+Most of this will work on most mainstream browsers, although some pages might not work well on small-screen devices.
 
 </div>
 <div id="layers">
