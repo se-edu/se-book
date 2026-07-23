@@ -53,6 +53,7 @@ pageNav: 3
 # SECTION: IMPLEMENTATION
 
 <include src="../ides/print.md#main" />
+<include src="../debugging/print.md#main" />
 <include src="../codeQuality/print.md#main" />
 <include src="../refactoring/print.md#main" />
 <include src="../documentation/print.md#main" />

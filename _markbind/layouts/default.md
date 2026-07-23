@@ -40,6 +40,7 @@
   * [Design approaches]({{baseUrl}}/designApproaches/index.html)
 * **Implementation**
   * [IDEs]({{baseUrl}}/ides/index.html)
+  * [Debugging]({{baseUrl}}/debugging/index.html)
   * [Code quality]({{baseUrl}}/codeQuality/index.html)
   * [Refactoring]({{baseUrl}}/refactoring/index.html)
   * [Documentation]({{baseUrl}}/documentation/index.html)

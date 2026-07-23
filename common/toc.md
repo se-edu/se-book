@@ -15,6 +15,7 @@
   * [Design Approaches](#design-approaches)
 * [**SECTION: IMPLEMENTATION**](#section-implementation) 
   * [IDEs](#ides)
+  * [Debugging](#debugging)
   * [Code Quality](#code-quality)
   * [Refactoring](#refactoring)
   * [Documentation](#documentation)

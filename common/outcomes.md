@@ -161,6 +161,14 @@ pageNav: 3
 <include src="../ides/introduction/what/unit-inParent-asOutcome.md" boilerplate />
 <include src="../ides/debugging/what/unit-inParent-asOutcome.md" boilerplate />
 
+### Debugging
+
+<include src="../debugging/what/unit-inParent-asOutcome.md" boilerplate />
+<include src="../debugging/how/unit-inParent-asOutcome.md" boilerplate />
+<include src="../debugging/fixing/unit-inParent-asOutcome.md" boilerplate />
+<include src="../debugging/tools/unit-inParent-asOutcome.md" boilerplate />
+<include src="../debugging/advanced/unit-inParent-asOutcome.md" boilerplate />
+
 ### Code quality
 
 <include src="../codeQuality/introduction/basic/unit-inParent-asOutcome.md" boilerplate />
