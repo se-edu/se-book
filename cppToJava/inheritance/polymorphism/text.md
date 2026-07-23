@@ -10,7 +10,7 @@
 
 <box>
 
-{{ icon_example }} The following code `PetShelter` keeps a list of `Cat` objects and makes them `speak`. The code will not work with any other type, for example, `Dog` objects.
+{{ icon_example }} The following `PetShelter` code keeps a list of `Cat` objects and makes them `speak`. The code will not work with any other type, for example, `Dog` objects.
 
 ```java
 public class PetShelter {

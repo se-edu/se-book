@@ -11,7 +11,7 @@
 <box>
 <div class="text-monospace">
 
-As a user, I can login to the system ~~so that I can access my data~~
+As a user, I can log in to the system ~~so that I can access my data~~
 </div>
 </box>
 

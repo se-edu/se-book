@@ -6,7 +6,7 @@
 
 <div id="body">
 
-**_Association Role_ are used to indicate the role played by the classes in the association.**
+**_Association Role_s are used to indicate the role played by the classes in the association.**
 
 <pic eager src="{{baseUrl}}/uml/classDiagrams/associations/roles/images/notation.png" height="60" />
 

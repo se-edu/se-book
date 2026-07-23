@@ -14,7 +14,7 @@ Association multiplicities and the default value can be shown as part of the att
 
 <box>
 
-{{ icon_example }} The diagram below depicts a multi-player _Square Game_ being played on a board comprising of 100 squares. Each of the squares may be occupied with any number of pieces, each belonging to a certain player.
+{{ icon_example }} The diagram below depicts a multi-player _Square Game_ being played on a board comprising 100 squares. Each of the squares may be occupied with any number of pieces, each belonging to a certain player.
 
 A `Piece` may or may not be on a `Square`.  Note how that association can be replaced by an `isOn` attribute of the `Piece` class. The `isOn` attribute can either be `null` or hold a reference to a `Square` object, matching the `0..1` multiplicity of the association it replaces. The default value is `null`.
 

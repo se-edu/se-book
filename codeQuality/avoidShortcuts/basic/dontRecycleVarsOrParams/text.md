@@ -6,7 +6,7 @@
 
 <div id="body">
 
-* **Use one variable for one purpose.** Do not reuse a variable for a different purpose other than its intended one, just because the data type is the same.
+* **Use one variable for one purpose.** Do not reuse a variable for a purpose other than its intended one, just because the data type is the same.
 * **Do not _reuse_ formal parameters as local variables** inside the method.
 
 <box>

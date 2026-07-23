@@ -28,7 +28,7 @@ This interaction adds the following methods to the `Logic` class:
 * `markCellAt(int x, int y)`
 * `getGameState(): GAME_STATE (GAME_STATE: READY, IN_PLAY, WON, LOST, …)`
 
-And it adds the following operation to Logic API:
+And it adds the following operation to the Logic API:
 
 * `getAppearanceOfCellAt(int,int): CELL_APPEARANCE (CELL_APPEARANCE: HIDDEN, ZERO, ONE, TWO, THREE, …, MARKED, INCORRECTLY_MARKED, INCORRECTLY_CLEARED)`
 

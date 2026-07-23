@@ -10,7 +10,7 @@
 
 <box>
 
-{{ icon_example }} An assertion can be used to express something like _when the execution comes to this point, the variable `v` cannot be null_.
+{{ icon_example }} An assertion can be used to express something like: _when execution reaches this point, the variable `v` cannot be null_.
 
 </box>
 

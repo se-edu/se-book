@@ -10,7 +10,7 @@
 
 > [User stories] strongly shift the focus from writing about features to discussing them. In fact, these discussions are more important than whatever text is written. <sub>[Mike Cohn, MountainGoat Software [:link:](https://www.mountaingoatsoftware.com/agile/user-stories)]</sub>
 
-**User stories differ from <popover content="e.g. a description of the requirements written in prose">traditional requirements specifications</popover> mainly in the level of detail.** User stories should only provide enough details to make a reasonably low risk estimate of how long the user story will take to implement. When the time comes to implement the user story, the developers will meet with the customer face-to-face to work out a more detailed description of the requirements. %%[<trigger for="modal:xp-user-stories" trigger="click">more...</trigger>]%%
+**User stories differ from <popover content="e.g. a description of the requirements written in prose">traditional requirements specifications</popover> mainly in the level of detail.** User stories should only provide enough details to make a reasonably low-risk estimate of how long the user story will take to implement. When the time comes to implement the user story, the developers will meet with the customer face-to-face to work out a more detailed description of the requirements. %%[<trigger for="modal:xp-user-stories" trigger="click">more...</trigger>]%%
 
 **User stories can capture <trigger trigger="click" for="modal:userStoriesUsage-nfr">non-functional requirements</trigger> too** because even NFRs must benefit some stakeholder.
 

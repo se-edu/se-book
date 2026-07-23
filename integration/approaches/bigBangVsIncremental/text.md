@@ -6,7 +6,7 @@
 
 <div id="body">
 
-**_Big-bang integration_: integrate all (or too many) components at the same time.** More generally, integrating too many changes at the same time.
+**_Big-bang integration_: integrate all (or too many) components at the same time.** More generally, it means integrating too many changes at the same time.
 
 <box type="wrong">
 

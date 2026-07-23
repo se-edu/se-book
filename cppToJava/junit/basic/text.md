@@ -84,7 +84,7 @@ public class IntPairTest {
 * Java code normally uses camelCase for method names e.g., `testStringConversion` but when writing test methods, sometimes another convention is used:<br>
   `unitBeingTested_descriptionOfTestInputs_expectedOutcome`<br>
   e.g., `intDivision_zeroDivisor_exceptionThrown`
-* There are [several ways to verify the code throws the correct exception](https://howtodoinjava.com/junit5/expected-exception-example/). The second test method in the example above shows one of the simpler methods. If the exception is thrown, it will be caught and further verified inside the `catch` block. But if it is not thrown as expected, the test will reach `fail()` line and will fail as a result.
+* There are [several ways to verify the code throws the correct exception](https://howtodoinjava.com/junit5/expected-exception-example/). The second test method in the example above shows one of the simpler methods. If the exception is thrown, it will be caught and further verified inside the `catch` block. But if it is not thrown as expected, the test will reach the `fail()` line and will fail as a result.
 
 
 **What to test for when writing tests?** While _test case design techniques_ are a separate topic altogether, it should be noted that the goal of these tests is to catch bugs in the code. Therefore, test using inputs that can trigger a potentially buggy path in the code. Another way to approach this is, to write tests such that if a future developer modified the method to unintentionally introduce a bug into it, at least one of the tests should fail (thus alerting that developer to the mistake immediately).

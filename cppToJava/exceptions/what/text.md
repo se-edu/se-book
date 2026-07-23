@@ -10,7 +10,7 @@ Given below is an extract from the {{ oracle }}, with some adaptations.
 
 <div class="indented">
 
-**There are three basic categories of exceptions In Java:**
+**There are three basic categories of exceptions in Java:**
 
 * **==_Checked_ exceptions==: exceptional conditions that a well-written application should anticipate and recover from.** All exceptions are checked exceptions, except for `Error`, `RuntimeException`, and their subclasses.
 

@@ -10,7 +10,7 @@
 
 * **Maintenance is harder** because a change in one module could cause changes in other modules coupled to it (i.e., a ripple effect).
 * **Integration is harder** because multiple components coupled with each other have to be integrated at the same time.
-* **Testing and reuse of the module is harder** due to its dependence on other modules.
+* **Testing and reuse of the module are harder** due to its dependence on other modules.
 
 <box>
 

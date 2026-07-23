@@ -14,7 +14,7 @@
 
 * Add an item to an empty collection.
 * Add an item when there is one item in the collection.
-* Add an item when there are 2, 3, .... n items in the collection.
+* Add an item when there are 2, 3, ..., n items in the collection.
 * Add an item that has an English, a French, a Spanish, ... word.
 * Add an item that is the same as an existing item.
 * Add an item immediately after adding another item.
