@@ -86,6 +86,9 @@ title: "Book - Software Engineering for Self-Directed Learners"
 * [Quality assurance]({{baseUrl}}/qualityAssurance/) 
   [{{icon_print}}]({{baseUrl}}/qualityAssurance/print.html)
 
+* [Secure software engineering]({{baseUrl}}/security/)
+  [{{icon_print}}]({{baseUrl}}/security/print.html)
+
 * [Testing]({{baseUrl}}/testing/)
   [{{icon_print}}]({{baseUrl}}/testing/print.html)
   

@@ -51,6 +51,7 @@
   * [Quality assurance]({{baseUrl}}/qualityAssurance/index.html)
   * [Testing]({{baseUrl}}/testing/index.html)
   * [Test case design]({{baseUrl}}/testCaseDesign/index.html)
+  * [Secure software engineering]({{baseUrl}}/security/index.html)
 * **Project management**
   * [Project planning]({{baseUrl}}/projectPlanning/index.html)
   * [Teamwork]({{baseUrl}}/teamwork/index.html)

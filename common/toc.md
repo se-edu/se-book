@@ -24,6 +24,7 @@
   * [Reuse](#reuse)
 * [**SECTION: QUALITY ASSURANCE**](#section-quality-assurance) 
   * [Quality Assurance](#quality-assurance)
+  * [Secure Software Engineering](#secure-software-engineering)
   * [Testing](#testing)
   * [Test Case Design](#test-case-design)
 * [**SECTION: PROJECT MANAGEMENT**](#section-project-management) 

@@ -279,6 +279,16 @@ pageNav: 3
 <include src="../qualityAssurance/staticAnalysis/what/unit-inParent-asOutcome.md" boilerplate />
 <include src="../qualityAssurance/formalVerification/what/unit-inParent-asOutcome.md" boilerplate />
 
+### Secure software engineering
+
+<include src="../security/intro/unit-inParent-asOutcome.md" boilerplate />
+<include src="../security/what/unit-inParent-asOutcome.md" boilerplate />
+<include src="../security/why/unit-inParent-asOutcome.md" boilerplate />
+<include src="../security/how/unit-inParent-asOutcome.md" boilerplate />
+<include src="../security/when/unit-inParent-asOutcome.md" boilerplate />
+<include src="../security/ai/unit-inParent-asOutcome.md" boilerplate />
+<include src="../security/wrapUp/unit-inParent-asOutcome.md" boilerplate />
+
 ### Testing
 
 <include src="../testing/introduction/what/unit-inParent-asOutcome.md" boilerplate />

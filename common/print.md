@@ -66,6 +66,7 @@ pageNav: 3
 # SECTION: QUALITY ASSURANCE
 
 <include src="../qualityAssurance/print.md#main" />
+<include src="../security/print.md#main" />
 <include src="../testing/print.md#main" />
 <include src="../testCaseDesign/print.md#main" />
 
