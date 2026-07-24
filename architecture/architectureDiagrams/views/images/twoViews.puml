@@ -1,0 +1,29 @@
+@startuml
+skinparam backgroundColor transparent
+skinparam shadowing false
+skinparam defaultTextAlignment center
+skinparam rectangle {
+  BackgroundColor #FDFDFD
+  BorderColor #333333
+  roundCorner 8
+}
+skinparam node {
+  BackgroundColor #F2F6FF
+  BorderColor #333333
+}
+frame "Logical view" {
+  rectangle "Ui" as ui
+  rectangle "Logic" as logic
+  rectangle "Model" as model
+  rectangle "Storage" as storage
+  ui --> logic
+  logic --> model
+  logic --> storage
+  storage --> model
+}
+frame "Deployment view" {
+  node "User's computer" {
+    rectangle "Task manager\n(one running program)" as app
+  }
+}
+@enduml

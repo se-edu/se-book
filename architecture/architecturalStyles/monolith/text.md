@@ -1,4 +1,4 @@
-<span id="title">Layered architectural style</span>
+<span id="title">Monolithic architectural style</span>
 
 <div id="body">
 

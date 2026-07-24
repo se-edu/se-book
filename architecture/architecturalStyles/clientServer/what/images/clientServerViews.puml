@@ -1,0 +1,50 @@
+@startuml
+skinparam backgroundColor transparent
+skinparam shadowing false
+skinparam defaultTextAlignment center
+skinparam rectangle {
+  BackgroundColor #FDFDFD
+  BorderColor #333333
+  roundCorner 8
+}
+skinparam node {
+  BackgroundColor #F2F6FF
+  BorderColor #333333
+}
+skinparam database {
+  BackgroundColor #FDFDFD
+  BorderColor #333333
+}
+skinparam package {
+  BackgroundColor transparent
+  BorderColor #888888
+}
+frame "Logical view" {
+  rectangle "Ui" as ui
+  rectangle "Logic" as logic
+  rectangle "Model" as model
+  rectangle "RemoteStorage" as rs
+  ui --> logic
+  logic --> model
+  logic --> rs
+  package "Server" {
+    rectangle "Request handler" as rh
+    database "Shared data" as db
+    rh --> db
+  }
+  rs --> rh : sends requests to
+}
+frame "Deployment view" {
+  node "User A's computer" {
+    rectangle "Client" as ca
+  }
+  node "User B's computer" {
+    rectangle "Client " as cb
+  }
+  node "Server computer" {
+    rectangle "Server" as sp
+  }
+  ca --> sp : request /\nresponse
+  cb --> sp : request /\nresponse
+}
+@enduml

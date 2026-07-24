@@ -1,4 +1,4 @@
-<span id="title">Service-oriented architectural style</span>
+<span id="title">Services and microservices</span>
 
 <div id="body">
 
