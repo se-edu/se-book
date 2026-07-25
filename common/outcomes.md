@@ -122,7 +122,7 @@ pageNav: 3
 <include src="../architecture/architectureDiagrams/reading/unit-inParent-asOutcome.md" boilerplate />
 <include src="../architecture/architectureDiagrams/drawing/unit-inParent-asOutcome.md" boilerplate />
 <include src="../architecture/architecturalStyles/introduction/what/unit-inParent-asOutcome.md" boilerplate />
-<include src="../architecture/architecturalStyles/nTier/what/unit-inParent-asOutcome.md" boilerplate />
+<include src="../architecture/architecturalStyles/layered/what/unit-inParent-asOutcome.md" boilerplate />
 <include src="../architecture/architecturalStyles/clientServer/what/unit-inParent-asOutcome.md" boilerplate />
 <include src="../architecture/architecturalStyles/transactionProcessing/what/unit-inParent-asOutcome.md" boilerplate />
 <include src="../architecture/architecturalStyles/serviceOriented/what/unit-inParent-asOutcome.md" boilerplate />

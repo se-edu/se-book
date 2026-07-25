@@ -34,12 +34,12 @@ A _concern_ in this context is a set of information that affects the code of a c
 
 <box>
 
-{{ icon_example }} The <trigger trigger="click" for="modal:soc-nTier">n-tier architecture</trigger> utilizes this principle. Each layer in the architecture has a well-defined functionality that has no functional overlap with the other layers.
+{{ icon_example }} The <trigger trigger="click" for="modal:soc-layered">n-tier architecture</trigger> utilizes this principle. Each layer in the architecture has a well-defined functionality that has no functional overlap with the other layers.
 
 </box>
 
-<modal header="Textbook {{ icon_embedding }}" id="modal:soc-nTier">
-  <include src="../../architecture/architecturalStyles/nTier/what/unit-inElsewhere-asPanelBody.md" boilerplate/>
+<modal header="Textbook {{ icon_embedding }}" id="modal:soc-layered">
+  <include src="../../architecture/architecturalStyles/layered/what/unit-inElsewhere-asPanelBody.md" boilerplate/>
 </modal>
 
 **This principle should lead to higher <trigger trigger="click" for="soc-cohesion">cohesion</trigger> and lower <trigger trigger="click" for="soc-coupling">coupling</trigger>.**

@@ -8,7 +8,7 @@
 
 **In the layered style, the software is divided into layers whose dependencies all point one way — downward.** Higher layers use services provided by lower ones; lower layers know nothing about the layers above.
 
-<pic eager src="{{baseUrl}}/architecture/architecturalStyles/nTier/what/images/nTier.png" height="150" />
+<pic eager src="{{baseUrl}}/architecture/architecturalStyles/layered/what/images/layered.png" height="150" />
 
 **The use of this style differs in how strict the layer separation is.** In _strict_ (or _closed_) layering, a layer may use only the layer immediately below it. In the more common _relaxed_ form, a layer may use any lower layer, skipping intermediate ones. **What both share, and what actually matters, is that dependencies never point back up.** Because a lower layer depends on nothing above it, you can understand, test, and replace it on its own.
 
@@ -22,7 +22,7 @@ The moment `Storage` calls back into `Ui` to show an error dialog, that property
 <box>
 
 {{ label_example }} Operating systems and network communication software are the classic examples of layering.<br>
-<pic eager src="{{baseUrl}}/architecture/architecturalStyles/nTier/what/images/nTierExamples.png" height="150" />
+<pic eager src="{{baseUrl}}/architecture/architecturalStyles/layered/what/images/layeredExamples.png" height="150" />
 
 </box>
 

@@ -31,7 +31,7 @@ title: "Software Architecture [Printable]"
 
 ### Layered Architectural Style
 
-<include src="architecturalStyles/nTier/what/unit-inParent-asFlat-print.md" boilerplate />
+<include src="architecturalStyles/layered/what/unit-inParent-asFlat-print.md" boilerplate />
 
 ### Monolithic Architectural Style
 
