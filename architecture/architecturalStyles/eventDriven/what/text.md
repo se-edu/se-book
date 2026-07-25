@@ -12,7 +12,7 @@
 
 <pic eager src="{{baseUrl}}/architecture/architecturalStyles/eventDriven/what/images/eventDriven.png" width="450" />
 
-%%Notation used in this diagram and the next: a dashed arrow is the path along which events travel, each oval is one event, and the small red arrows show events in flight along that path.%%
+%%Notation used in this diagram and the next: a dashed arrow is the path along which events travel, each oval is one event, and the small red arrows show their direction of travel.%%
 
 **If you have written a graphical user interface, you have written event-driven code.** A button does not contain the logic that runs after a click; the UI framework delivers the click event to whatever handler registered for it. You never wrote code asking "has the button been pressed yet?"
 
