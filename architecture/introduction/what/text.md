@@ -37,7 +37,7 @@
 {{ label_example }} Deciding that persistent data belongs in a separate `Storage` component is architecture. Deciding that `Storage` uses one class per file format is detailed design.
 
 **The boundary is not absolute.** An internal choice becomes architecturally significant when it strongly affects the rest of the system.<br>
-{{ label_example }} A change to the data representation to make the application able to handle a million invoices can be architecturally significant, affecting more than the internals of `Storage` component.
+{{ label_example }} A change to the data representation to make the application able to handle a million invoices can be architecturally significant, affecting more than the internals of the `Storage` component.
 
 
 **Every software system has an architecture, even when nobody designed one deliberately.** An unplanned program still has parts and dependencies; they are simply accidental, undocumented, and usually tangled. **The value of deciding an architecture on purpose is that the team shares one, understands it, and can reason about it.**
