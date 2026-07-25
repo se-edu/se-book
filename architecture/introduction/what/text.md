@@ -33,7 +33,7 @@
 **An architecture description deliberately leaves out most of what is inside each part.** It does not say how many classes are in `Logic`, which one validates a user command, or which collection holds the invoices. Those are detailed design decisions.
 
 
-**Architecture and detailed design differ mainly in scale.**<br>
+**Architecture and detailed design differ in how far a decision reaches, not merely in how big it is.** An architectural decision constrains what the other parts can do, shapes the qualities the system can achieve, and is expensive to reverse once the rest of the system is built on it.<br>
 {{ label_example }} Deciding that persistent data belongs in a separate `Storage` component is architecture. Deciding that `Storage` uses one class per file format is detailed design.
 
 **The boundary is not absolute.** An internal choice becomes architecturally significant when it strongly affects the rest of the system.<br>
