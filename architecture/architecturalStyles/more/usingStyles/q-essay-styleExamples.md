@@ -16,7 +16,7 @@ Explain how each of the following styles could help design this game.
 1. **Event-driven** – Inside each client, mouse clicks are local GUI events. Across the system, "cell X was cleared by player Y" is an event the server publishes to every connected client, so clients need not repeatedly ask for updates.
 1. **Client-server** – Essential here: the clients are the game UI on each player's computer, and the server holds the one authoritative minefield and scoring rules. The players must share one minefield, and no player's computer can be trusted to hold it.
 
-**The hard part is what distribution introduces, not what the style names.** When two players click the same cell at nearly the same moment, the server must define what counts as "first" and ensure each cell is awarded only once — and it cannot rely on arrival order alone, because network delay means requests need not arrive in the order they were clicked.
+**The hard part is what distribution introduces, not what the style names.** When two players click the same cell at nearly the same moment, the server must ensure the cell is awarded only once, and it must state explicitly what counts as "first". It may settle on the first valid request it receives, or the first it processes — but it cannot recover who clicked first in real time, because network delay means requests need not arrive in the order they were clicked. **"First" is a fairness policy the designers have to choose, not a fact the server can discover.**
 
 <pic eager src="{{baseUrl}}/architecture/architecturalStyles/more/usingStyles/images/minesweeperExample.png" height="300" />
 <p/>
