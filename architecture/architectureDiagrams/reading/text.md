@@ -15,7 +15,7 @@
 1. **What is each part responsible for?** Names, labels, and nearby text should make this clear.
 1. **What do the relationships mean?** Follow each arrow's direction, and check the legend for what an arrow means.
 
-**A single diagram need not explain the whole architecture, but it must communicate its chosen view without ambiguity.** If you cannot answer those four questions from the diagram and its caption, the diagram is incomplete — a useful thing to notice when reviewing a teammate's work.
+**A single diagram need not explain the whole architecture, but it must communicate its chosen view without ambiguity.** Judge it against its stated purpose and the documentation it ships with: if the four questions cannot be answered from the diagram, its caption, and the text around it, something is missing — a useful thing to notice when reviewing a teammate's work.
 
 <div v-closeable alt="architecture diagram examples" id="architecture-diagram-examples">
 
