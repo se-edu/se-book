@@ -19,9 +19,6 @@
 <box type="warning" seamless>
 
 **"Transaction" means two different things.** The transaction-processing _style_ is about accepting and reliably processing discrete units of work. A _database transaction_ is about a group of database operations that must all succeed or all fail together. The ideas are related, but the shared word causes confusion.
-
-Publish-subscribe and message-oriented styles are covered under the event-driven style.
-
 </box>
 
 </div>

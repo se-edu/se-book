@@ -1,10 +1,11 @@
+{% from "common/macros.njk" import show_aspect %}
 <span id="title">What</span>
-
 <span id="prereqs"></span>
-
 <span id="outcomes">{{ icon_outcome }} Can explain services, and can contrast microservices with a modular monolith</span>
 
 <div id="body">
+
+{{ show_aspect("This style is defined by the roles parts play, and where they run.") }}
 
 **A service exposes a published interface that other software can use over a network.** Callers depend on the agreement, not on the service's programming language or internal implementation, so a service written in one language can be used by a program written in another.
 
@@ -12,7 +13,7 @@
 
 <box>
 
-{{ icon_example }} Suppose one company provides a service for browsing and buying merchandise, and a bank provides a service for charging its credit cards. A third party can build an online bookshop that combines them — letting customers buy books and pay by card — even though all three systems are built on different platforms.
+{{ label_example }} Suppose one company provides a service for browsing and buying merchandise, and a bank provides a service for charging its credit cards. A third party can build an online bookshop that combines them — letting customers buy books and pay by card — even though all three systems are built on different platforms.
 
 </box>
 
@@ -37,7 +38,12 @@
 
 <box type="info" seamless>
 
-**Related deployment terms.** A _container_ packages a program with the runtime, libraries, and configuration it needs, so it behaves the same on a laptop and on a server — which is what makes "independently deployable" practical. _Serverless computing_ lets you deploy a function rather than a program, with the provider running it in response to an event and charging only for the time it runs. Both help _deploy_ services, but they are deployment approaches, not architectural styles, and neither is required for microservices.
+**Related deployment terms:**
+
+* **A _container_ packages a program with the runtime, libraries, and configuration it needs**, so it behaves the same on a laptop and on a server — which is what makes "independently deployable" practical.
+* **_Serverless computing_ lets you deploy a function rather than a program**, with the provider running it in response to an event and charging only for the time it runs.
+
+Both help _deploy_ services, but they are deployment approaches, not architectural styles, and neither is required for microservices.
 
 </box>
 

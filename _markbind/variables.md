@@ -60,6 +60,9 @@
 <variable id="icon_windows"><md>:fab-windows:</md></variable>
 <variable id="icon_x"><md>:fas-times:</md></variable>
 <variable id="icon_x_red"><span style="color:red">{{ icon_x | safe }}</span></variable>
+
+<variable id="label_example"><span class="badge bg-info-subtle text-secondary">{{ icon_example }} Example </span></variable>
+
 <variable id="indented_arrow">&nbsp;&nbsp;&nbsp;&nbsp; ++↳++</variable>
 <variable id="bad"><span style="color: red"><md>**:fas-thumbs-down: Bad**</md></span></variable>
 <variable id="good"><span style="color: green"><md>**:fas-thumbs-up: Good**</md></span></variable>

@@ -1,11 +1,15 @@
 <panel header="{{ icon_Q_A }} Which component changes?">
 
-A task manager has components `Ui`, `Logic`, `Model`, and `Storage`, with `Ui` depending on `Logic`, and `Logic` depending on `Model` and `Storage`. For each change, name the component(s) where most of the work should fall, and why.
+An invoice manager has components `Ui`, `Logic`, `Model`, and `Storage`, with `Ui` depending on `Logic`, and `Logic` depending on `Model` and `Storage`.
 
-1. Tasks are saved to a database instead of a file.
-1. A new command for postponing a task is added.
-1. Tasks are displayed as cards instead of rows.
-1. Every task gains an optional "priority" field that users can set and see.
+<puml src="../what/images/architecture.puml" height="300" />
+
+For each change, name the component(s) where most of the work should fall, and why.
+
+1. Invoices are saved to a database instead of a file.
+1. A new command for postponing an invoice is added.
+1. Invoices are displayed as cards instead of rows.
+1. Every invoice gains an optional "priority" field that users can set and see.
 
 <panel type="seamless" header="{{ icon_A }} Answer" minimized>
 

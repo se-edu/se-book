@@ -6,14 +6,17 @@
 
 <div id="body">
 
-**Most real applications combine several styles at once**, because each style answers a different question. The task manager is a **modular monolith**, **layered** internally, with an **event-driven** user interface; once tasks are shared through a server, it is also a **client** in a client-server system. All of those are true at the same time.
+**Most real applications combine several styles at once**, because each style addresses a different aspect.<br>
+{{ label_example }} The invoice manager is a **modular monolith**, **layered** internally, with an **event-driven** user interface; once invoices are shared through a server, it is also a **client** in a client-server system. All of those are true at the same time.
 
 **When describing your own architecture, name the styles that apply and say what each is doing.** "A modular monolith, layered internally, with an event-driven UI" tells a reader far more than any single label.
 
-**Three questions drive most architecture decisions at this level:**
+**Every style trades benefits for costs, and the costs are the part beginners skip.** Layering makes change easier to contain but adds indirection. Distribution lets users share data but adds latency and partial failures. A style is not a badge of quality; its value depends on the problem. Whenever you meet a new style, look for what it costs before deciding you want it.
+
+**Three questions drive most architecture decisions:**
 
 1. **Which changes and quality attributes matter most here?** Separate the parts that the important, likely changes fall along.
-1. **Can the important parts be understood and tested on their own?** If testing task handling requires launching a window, two components are more entangled than the diagram claims.
+1. **Can the important parts be understood and tested on their own?** Testing the component that deals with data storage should not need launching the UI component.
 1. **What new complexity does each boundary add?** Every boundary costs an interface to maintain and something to explain; a boundary that crosses a network also adds a class of failures that did not exist before.
 
 **The first two pull toward more separation; the third pulls toward less. Architecture is choosing where to stop.**
@@ -30,10 +33,9 @@
 
 <box>
 
-{{ icon_example }} Each step below is a response to a requirement, not an upgrade. **Moving right buys specific capabilities and adds specific costs** — a team that moves right without a requirement pushing them has bought the costs and none of the benefits.
+{{ label_example }} Each step below is a response to a requirement, not an upgrade. **Moving right buys specific capabilities and adds specific costs** — a team that moves right without a requirement pushing them has bought the costs and none of the benefits.
 
 <puml src="images/architectureProgression.puml" height="360" />
-
 </box>
 
 </div>
