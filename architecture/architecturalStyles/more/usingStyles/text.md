@@ -15,7 +15,7 @@
 
 **Three questions drive most architecture decisions:**
 
-1. **Which changes and quality attributes matter most here?** Separate the parts that the important, likely changes fall along.
+1. **Which changes and quality attributes matter most here?** Choose boundaries that contain the important, likely changes.
 1. **Can the important parts be understood and tested on their own?** Testing the component that deals with data storage should not need launching the UI component.
 1. **What new complexity does each boundary add?** Every boundary costs an interface to maintain and something to explain; a boundary that crosses a network also adds a class of failures that did not exist before.
 
