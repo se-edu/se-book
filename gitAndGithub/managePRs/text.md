@@ -1,14 +1,9 @@
 {% from "common/macros.njk" import show_gm_lesson_link with context %}
-
-<span id="title">Merging PRs</span>
-<span id="prereqs"></span>
-<span id="outcomes">{{ icon_outcome }} Can review and merge PRs on GitHub</span>
+{% set lesson_name = "prsMerge" %}
+{% set lesson_title = "T9L3. Merging Pull Requests" %}
+<span id="title">{{ lesson_title }}</span>
 
 <div id="body">
 
-See {{ show_gm_lesson_link("prsMerge", "T9L3. Merging Pull Requests") }}
-
-</div>
-
-<div id="extras">
+See {{ show_gm_lesson_link(lesson_name, lesson_title) }}
 </div>
