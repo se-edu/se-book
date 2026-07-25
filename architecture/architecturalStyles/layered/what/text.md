@@ -10,7 +10,7 @@
 
 <pic eager src="{{baseUrl}}/architecture/architecturalStyles/layered/what/images/layered.png" height="150" />
 
-**The use of this style differs in how strict the layer separation is.** In _strict_ (or _closed_) layering, a layer may use only the layer immediately below it. In the more common _relaxed_ form, a layer may use any lower layer, skipping intermediate ones. **What both share, and what actually matters, is that dependencies never point back up.** Because a lower layer depends on nothing above it, you can understand, test, and replace it on its own. The moment `Storage` calls back into `Ui` to show an error dialog, that property is lost and the two must be understood together.
+**Layered designs differ in how strictly they enforce the separation.** In _strict_ (or _closed_) layering, a layer may use only the layer immediately below it. In the more common _relaxed_ form, a layer may use any lower layer, skipping intermediate ones. **What both share, and what actually matters, is that dependencies never point back up.** Because a lower layer depends on nothing above it, you can understand, test, and replace it on its own. The moment `Storage` calls back into `Ui` to show an error dialog, that property is lost and the two must be understood together.
 
 <box>
 
