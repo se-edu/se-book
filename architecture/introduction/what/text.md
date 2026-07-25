@@ -54,7 +54,7 @@ _The software architecture of a program or computing system is the structure or 
 <sub>-- _Software Architecture in Practice (2nd edition)_, Bass, Clements, and Kazman</sub>
 </box>
 
-Given above is a definition usually quoted in the literature. "Externally visible properties" means what <tooltip content="e.g., `Storage`">a software element of the architecture</tooltip> promises to do, not how it does it.
+The definition above is widely quoted in the literature. "Externally visible properties" means what <tooltip content="e.g., `Storage`">a software element of the architecture</tooltip> promises to do, not how it does it.
 </div>
 
 <div id="extras">
