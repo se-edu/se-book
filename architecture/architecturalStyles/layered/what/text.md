@@ -4,7 +4,7 @@
 <span id="outcomes">{{ icon_outcome }} Can identify the layered architectural style, and can distinguish layers from tiers</span>
 
 <div id="body">
-{{ show_aspect("This style is defined based on how the code inside a program is organized.") }}
+{{ show_aspect("This style focuses on how the code inside a program is organized.") }}
 
 **In the layered style, the software is divided into layers whose dependencies all point one way — downward.** Higher layers use services provided by lower ones; lower layers know nothing about the layers above.
 

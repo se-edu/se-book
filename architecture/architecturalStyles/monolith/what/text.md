@@ -6,7 +6,7 @@
 
 <div id="body">
 
-{{ show_aspect("This style is defined based on how the system is packaged and deployed.") }}
+{{ show_aspect("This style focuses on how the system is packaged and deployed.") }}
 
 **A monolith is a system deployed as a single unit.** You build one artifact and release it as a whole. A typical desktop application is a monolith, as is a great deal of successful commercial software.
 

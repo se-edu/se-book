@@ -9,7 +9,7 @@
 
 <div id="body">
 
-{{ show_aspect("he roles parts play, and where they run") }}
+{{ show_aspect("This style focuses on which parts request capabilities and which parts provide them.") }}
 
 **In the client-server style, a _server_ provides a capability or data, and one or more _clients_ use it.**
 

@@ -5,7 +5,7 @@
 
 <div id="body">
 
-{{ show_aspect("This style is defined by the roles parts play, and where they run.") }}
+{{ show_aspect("This style focuses on exposing and composing capabilities through published network interfaces.") }}
 
 **A service exposes a published interface that other software can use over a network.** Callers depend on the agreement, not on the service's programming language or internal implementation, so a service written in one language can be used by a program written in another.
 
