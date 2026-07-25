@@ -36,11 +36,12 @@
   </tab>
 </tabs>
 
+Try the four questions on both. They organize their boxes differently, use different shapes, and label their arrows differently, yet both are legitimate. For each one, work out which of the four questions the diagram answers by itself, and which stay ambiguous until you read the documentation around it — real diagrams often leave some of the four to the accompanying text.
 </box>
 
 </div>
 
-**Try the four questions on both.** They organize their boxes differently, use different shapes, and label their arrows differently, yet both are legitimate. For each one, work out which of the four questions the diagram answers by itself, and which stay ambiguous until you read the documentation around it — **real diagrams often leave some of the four to the accompanying text.** Notice too that each carries supporting parts a teaching example omits — a component that starts the application, a component of shared utilities — and their dependencies do not form a tidy chain. **That gap between a clean teaching diagram and a real one is normal.**
+
 
 </div>
 

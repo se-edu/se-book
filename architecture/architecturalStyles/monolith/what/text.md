@@ -17,7 +17,7 @@
 
 **"Monolith" is not a synonym for "badly structured."** This is the most common misunderstanding. The word describes _how the system is deployed_, not _how well it is organized_. A tangled ball of mud and a disciplined modular monolith share a deployment shape but differ enormously inside; what separates them is whether the internal components and dependencies are real.
 
-**The modular monolith is usually the sensible starting point for one team building one product.** It keeps building, testing, and debugging simple while still encouraging clear responsibilities. [Combining and choosing styles]({{baseUrl}}/architecture/architecturalStyles/more/usingStyles) returns to this recommendation once you have seen the distributed alternatives.
+**The modular monolith is usually the sensible starting point for one team building one product.** It keeps building, testing, and debugging simple while still encouraging clear responsibilities.
 
 </div>
 

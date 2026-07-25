@@ -8,7 +8,7 @@
 
 {{ show_aspect("This style focuses on what triggers work, and how notifications flow.") }}
 
-**In the event-driven style, work is triggered by events rather than by direct calls.** An _event_ is a notable occurrence, such as a button being clicked, a timer expiring, or a download finishing. The component that detects it is the _emitter_; components that react are _consumers_.
+**In the event-driven style, work is triggered by <popover content="An _event_ is a notable occurrence, such as a button being clicked, a timer expiring, or a download finishing.">events</popover> rather than by direct calls.**  The component that detects it is the _emitter_; components that react are _consumers_.
 
 <pic eager src="{{baseUrl}}/architecture/architecturalStyles/eventDriven/what/images/eventDriven.png" width="450" />
 

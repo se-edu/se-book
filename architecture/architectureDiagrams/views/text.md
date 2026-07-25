@@ -18,7 +18,7 @@
 
 </box>
 
-That deployment view in the example looks trivial, which is exactly the point. Right now all the interesting structure is logical. When several users need to share invoices, a server is added (see [Client-server architectural style]({{baseUrl}}/architecture/architecturalStyles/clientServer)), and then _both_ views change — the deployment view dramatically, the logical view in a smaller but real way.
+That deployment view in the example looks trivial, which is exactly the point. Right now all the interesting structure is logical. When a server is added to let several users share invoices, _both_ views change — the deployment view dramatically, the logical view in a smaller but real way.
 
 **Keeping the views separate prevents a common confusion.**<br>
 {{ label_example }} "This system has four components" and "this system runs on four computers" are entirely different statements, and one diagram that blurs them will mislead everyone who reads it.
