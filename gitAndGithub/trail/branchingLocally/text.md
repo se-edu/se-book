@@ -1,25 +1,9 @@
-{% from "common/macros.njk" import trail, show_gm_tour_link, show_tour_title, show_tour_link with context %}
-{% set tour = trail.branchingLocally %}
-<frontmatter>
-title: "{{ tour.title }}"
-pageNav: 4
-</frontmatter>
-
-<span id="outcomes">{{ icon_outcome }} Can use Git branches in a local repo.</span>
-<span id="title">{{ tour.title }}</span>
-
-<span class="d-none" id="destination">To make use of multiple timelines of work in a local repository.</span>
-
-<span class="d-none" id="motivation">At times, you need to do multiple parallel changes to files %%(e.g., to try two alternative implementations of the same feature)%%.</span>
-
-<span class="d-none" id="achievements">Now you can create, maintain, and merge multiple parallel branches in a local repo. This tour covered only the basic use of Git branches. More advanced usage will be covered in other tours.</span>
-
-<span id="next">{{ show_tour_link(trail.syncingBranches) }}</span>
+{% from "common/macros.njk" import show_gm_tour_link %}
+{% set tour_name = "branchingLocally" %}
+{% set tour_title = "Tour 6: Branching Locally" %}
+<span id="title">{{ tour_title }}</span>
 
 <div id="body">
 
-See {{ show_gm_tour_link("branchingLocally", "Tour 6: Branching Locally") }}
-</div>
-
-<div id="extras">
+See {{ show_gm_tour_link(tour_name, tour_title) }}
 </div>

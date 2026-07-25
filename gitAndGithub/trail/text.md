@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import show_tour_overview, trail with context %}
+{% from "common/macros.njk" import show_tour_link, trail with context %}
 
 <span id="title">&nbsp;</span>
 
@@ -36,7 +36,7 @@ We've packaged our Git (and GitHub) lessons as 'Learning Trail' which is divided
 ## Tours
 
 {% for tour_id, tour in trail %}
-{{ show_tour_overview(tour) }}
+* {{ show_tour_link(tour) }}
 {% endfor %}
 
 </div>
