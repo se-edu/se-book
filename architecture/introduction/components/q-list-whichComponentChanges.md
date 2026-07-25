@@ -1,6 +1,6 @@
 <panel header="{{ icon_Q_A }} Which component changes?">
 
-An invoice manager has components `Ui`, `Logic`, `Model`, and `Storage`, with `Ui` depending on `Logic`, and `Logic` depending on `Model` and `Storage`.
+An invoice manager has components `Ui`, `Logic`, `Model`, and `Storage`, with `Ui` depending on `Logic`, `Logic` depending on `Model` and `Storage`, and `Storage` depending on `Model`.
 
 <puml src="../what/images/architecture.puml" height="300" />
 
