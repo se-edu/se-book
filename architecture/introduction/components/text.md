@@ -29,7 +29,7 @@
 {{ label_example }} In a Java project a component is often a package (or group of packages) plus a type declaring what it offers:
 
 <tree>
-{{ icon_folder }} src/main/java/taskmanager/
+{{ icon_folder }} src/main/java/invoicemanager/
   {{ icon_folder }} ui/
   {{ icon_folder }} logic/
   {{ icon_folder }} model/

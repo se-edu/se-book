@@ -22,7 +22,7 @@
 
 {{ label_example }} Suppose several users need to edit the same set of invoices from their own desktop applications. Local files no longer suffice, because each installation would hold a different copy, and no installation can reach another's hard disk.
 
-Adding a server changes _both_ views of the task manager. The logical view gains a client-side component that talks to the server and a server-side component that answers; the deployment view gains a whole extra tier.
+Adding a server changes _both_ views of the invoice manager. The logical view gains a client-side component that talks to the server and a server-side component that answers; the deployment view gains a whole extra tier.
 
 <puml src="images/clientServerViews.puml" height="360" />
 

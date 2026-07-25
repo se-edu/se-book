@@ -21,7 +21,7 @@
 
 <box>
 
-{{ icon_example }} Here are two real architecture diagrams, from actual projects, drawn by different teams in different notations. They describe systems unrelated to the task-manager example, which is exactly the situation you face when you join an unfamiliar project.
+{{ icon_example }} Here are two real architecture diagrams, from actual projects, drawn by different teams in different notations. They describe systems unrelated to the invoice-manager example, which is exactly the situation you face when you join an unfamiliar project.
 
 <tabs>
   <tab header="TEAMMATES">

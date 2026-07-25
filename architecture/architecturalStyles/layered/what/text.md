@@ -14,7 +14,7 @@
 
 <box>
 
-{{ label_example }} The task manager follows relaxed layering: `Ui` depends on `Logic`; `Logic` depends on `Model` and `Storage`. It is not a tidy four-level stack, though — `Model` and `Storage` are not successive levels above one another, but two lower-level components that `Logic` uses. Real systems usually look like this rather than like a clean pile.
+{{ label_example }} The invoice manager follows relaxed layering: `Ui` depends on `Logic`; `Logic` depends on `Model` and `Storage`. It is not a tidy four-level stack, though — `Model` and `Storage` are not successive levels above one another, but two lower-level components that `Logic` uses. Real systems usually look like this rather than like a clean pile.
 
 The moment `Storage` calls back into `Ui` to show an error dialog, that property is gone and the two must be understood together
 </box>
