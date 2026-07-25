@@ -1,6 +1,6 @@
 <panel header="{{ icon_Q_A }} Statements about architecture">
 
-Choose the correct statement.
+Choose the correct statements.
 
 - [ ] a. The architecture of a system should be simple enough for all team members to understand it.
 - [ ] b. The architecture is primarily a high-level design of the system.
