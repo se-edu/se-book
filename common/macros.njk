@@ -7,16 +7,7 @@
 {%- macro label(style, text) %}<span class="badge bg-{{ style }} text-{{ 'dark' if style in ['warning', 'light'] else 'white' }}">{{ text }}</span>{% endmacro -%}
 <!-- ============================================================ -->
 
-{% macro dropdown(text) %}<span class="btn btn-light border">{{ text }} :octicon-triangle-down:</span>{% endmacro %}
-<!-- ============================================================ -->
-
 {% macro button_green(text) %}<span class="btn btn-success ps-1 pe-1 pb-0 pt-0">{{ text }}</span>{% endmacro %}
-<!-- ============================================================ -->
-
-{% macro button_light(text) %}<span class="btn btn-light ps-1 pe-1 pb-0 pt-0 border">{{ text }}</span>{% endmacro %}
-<!-- ============================================================ -->
-
-{% macro sub_numbers(p) %}{{ '{' }} texts="['{{ p }}.1)','{{ p }}.2)','{{ p }}.3)','{{ p }}.4)']" {{ '}' }}{% endmacro %}
 <!-- ============================================================ -->
 
 {% macro show_output(indent_level='') %}
@@ -148,10 +139,6 @@
   compareBranches: {lesson: trail.branchingLocally.lessons.merge, title: "Comparing Branches"},
   squashMerge: {lesson: trail.branchingLocally.lessons.merge, title: "Doing a Squash Merge"}
 } %}
-<!-- ============================================================ -->
-
-{% macro button_green(text) %}<span class="btn btn-success ps-1 pe-1 pb-0 pt-0">{{ text }}</span>{% endmacro %}
-{% macro button_light(text) %}<span class="btn btn-light ps-1 pe-1 pb-0 pt-0 border">{{ text }}</span>{% endmacro %}
 <!-- ============================================================ -->
 
 {% macro show_tour_title(text) %}<div class="text-white bg-success p-1" style="border-top-left-radius: 15px; border-top-right-radius: 15px;"><span class="h2"><span class="text-light"><md>:fas-map-marker-alt:</md></span> {{ text }}</span></div>{% endmacro %}
@@ -480,15 +467,6 @@ The sandbox will be set up inside the `gitmastery-exercises/{{ identifier }}` fo
 {% endmacro %}
 <!-- ============================================================ -->
 
-{% macro show_troubleshooting() %}
-<panel type="seamless" header="%%**:fas-screwdriver-wrench: Troubleshooting tips ...** (click to expand)%%">
-
-{{ caller() }}
-</panel>
-
-{% endmacro %}
-<!-- ============================================================ -->
-
 {% macro show_lesson_intro() %}
 <div class="non-printable">
 <div class="border border-success pt-0 ps-1 pb-1 pe-1 border-bottom-0 rounded-top" style="background-color: #e6fff2">
@@ -518,18 +496,6 @@ The sandbox will be set up inside the `gitmastery-exercises/{{ identifier }}` fo
 {% set lesson_title = lesson_data.title %}
 &nbsp;&nbsp; <a href="{{ direct_link }}" target="_blank">:glyphicon-new-window:</a> **[{{ lesson_title }}]({{ trial_link if is_outside_tour else '' }}{{'' if is_outside_tour else ('#' + slugify(lesson_title)) }})** covers that part.
 </div>
-{% endmacro %}
-<!-- ============================================================ -->
-
-{% macro show_lesson(lesson_data) %}
-<panel type="seamless" popup-url="{{ baseUrl }}/{{ lesson_data.path }}/" expanded>
-<div slot="header" class="card-title">
-
-#### <span class="text-success">{{ lesson_data.title }}</span>
-</div>
-
-<include src="{{ baseUrl }}/{{ lesson_data.path }}/unit-inElsewhere-asPanelBody.md" boilerplate />
-</panel>
 {% endmacro %}
 <!-- ============================================================ -->
 
@@ -583,17 +549,6 @@ The sandbox will be set up inside the `gitmastery-exercises/{{ identifier }}` fo
 **What's next**: <include src="{{ tour_folder }}/text.md#next" trim inline/>
 
 </div>
-{% endmacro %}
-<!-- ============================================================ -->
-
-{% macro show_tour(tour) %}
-{{ show_tour_intro(tour) }}
-
-{% for lesson_name, lesson_data in tour.lessons %}
-{{ show_lesson(lesson_data) }}
-{% endfor %}
-
-{{ show_tour_outro(tour) }}
 {% endmacro %}
 <!-- ============================================================ -->
 

@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import trail, show_gm_tour_link, show_tour_title, show_tour, show_tour_link with context %}
+{% from "common/macros.njk" import trail, show_gm_tour_link, show_tour_title, show_tour_link with context %}
 {% set tour = trail.syncingBranches %}
 <frontmatter>
 title: "{{ tour.title }}"
