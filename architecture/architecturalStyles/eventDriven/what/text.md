@@ -12,6 +12,8 @@
 
 <pic eager src="{{baseUrl}}/architecture/architecturalStyles/eventDriven/what/images/eventDriven.png" width="450" />
 
+%%Notation used in this diagram and the next: a dashed arrow is the path along which events travel, each oval is one event, and the small red arrows show events in flight along that path.%%
+
 **If you have written a graphical user interface, you have written event-driven code.** A button does not contain the logic that runs after a click; the UI framework delivers the click event to whatever handler registered for it. You never wrote code asking "has the button been pressed yet?"
 
 <box>
@@ -19,6 +21,8 @@
 {{ label_example }} When the 'button clicked' event occurs in a GUI, that event can be transmitted to components interested in reacting to it. Similarly, events detected at a printer port can be transmitted to components related to operating the printer. The same event can be sent to multiple consumers too.
 
 <pic eager src="{{baseUrl}}/architecture/architecturalStyles/eventDriven/what/images/eventDrivenExamples.png" width="450" />
+
+%%Same notation as the previous diagram; the two kinds of event are keyed at the bottom of this one.%%
 
 </box>
 
