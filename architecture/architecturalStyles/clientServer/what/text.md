@@ -16,7 +16,7 @@
 <pic eager src="{{baseUrl}}/architecture/architecturalStyles/clientServer/what/images/clientServer.png" height="120" />
 <p/>
 
-**Client-server is what you reach for when several copies of a program must share the same data.** The fix is to give the shared data a home of its own. A separate program — the server — becomes the authoritative owner of the invoices. Each desktop application becomes a client, sending a _request_ such as "add this invoice" and receiving a _response_ from the server.<br>
+**Sharing data among several installations is the most common reason to reach for client-server, but it is not the only one** — clients also use a server for centralized computation, authentication, or coordination. In the shared-data case, the fix is to give the shared data a home of its own: a separate program — the server — becomes the authoritative owner of the invoices, and each desktop application becomes a client, sending a _request_ such as "add this invoice" and receiving a _response_ from the server.<br>
 
 <box>
 
