@@ -18,7 +18,7 @@
 * Let several developers work at once: Clear component boundaries reduce how often two people must edit the same file.
 </box>
 
-**Architecture does not restrain the spread of _every_ change.** That is not necessarily an architectural failure: some change genuinely cross several responsibilities.<br>
+**Architecture does not restrain the spread of _every_ change.** That is not necessarily an architectural failure: some changes genuinely cross several responsibilities.<br>
 {{ label_example }} Adding a new property to every invoice can touch the interface, the rules, the model, and the storage format.
 
 **Architecture also shapes the system's quality attributes** — the properties that decide whether the software is good enough for its purpose. Common quality attributes include:
