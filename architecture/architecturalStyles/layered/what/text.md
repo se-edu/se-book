@@ -10,13 +10,11 @@
 
 <pic eager src="{{baseUrl}}/architecture/architecturalStyles/layered/what/images/layered.png" height="150" />
 
-**The use of this style differs in how strict the layer separation is.** In _strict_ (or _closed_) layering, a layer may use only the layer immediately below it. In the more common _relaxed_ form, a layer may use any lower layer, skipping intermediate ones. **What both share, and what actually matters, is that dependencies never point back up.** Because a lower layer depends on nothing above it, you can understand, test, and replace it on its own.
+**The use of this style differs in how strict the layer separation is.** In _strict_ (or _closed_) layering, a layer may use only the layer immediately below it. In the more common _relaxed_ form, a layer may use any lower layer, skipping intermediate ones. **What both share, and what actually matters, is that dependencies never point back up.** Because a lower layer depends on nothing above it, you can understand, test, and replace it on its own. The moment `Storage` calls back into `Ui` to show an error dialog, that property is lost and the two must be understood together.
 
 <box>
 
-{{ label_example }} The invoice manager follows relaxed layering: `Ui` depends on `Logic`; `Logic` depends on `Model` and `Storage`. It is not a tidy four-level stack, though — `Model` and `Storage` are not successive levels above one another, but two lower-level components that `Logic` uses. Real systems usually look like this rather than like a clean pile.
-
-The moment `Storage` calls back into `Ui` to show an error dialog, that property is gone and the two must be understood together
+{{ label_example }} The invoice manager follows relaxed layering. Ordered by dependency, its layers run `Ui` → `Logic` → `Storage` → `Model`: `Ui` depends on `Logic`, `Logic` depends on `Storage`, and `Storage` depends on `Model` because it reads and writes invoice objects. `Logic` also depends on `Model` directly, skipping over `Storage` — **which is precisely what the relaxed form allows and the strict form forbids.** Real systems usually look like this rather than like a clean pile.
 </box>
 
 <box>
