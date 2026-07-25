@@ -33,7 +33,7 @@ Adding a server changes _both_ views of the invoice manager. The logical view ga
 * a client-side component that sends requests;
 * a server-side component that receives and handles them;
 * an agreed request and response format, so both sides read messages the same way; and
-* handling for timeouts, failures, and version mismatches, which local component never needed.
+* handling for timeouts, failures, and version mismatches — concerns that the purely local design did not have.
 
 **A good interface limits the impact of moving to a client-server architecture but does not avoid it entirely.**<br>
 {{ label_example }} Because `Logic` depended on what `Storage` promised rather than on a specific implementation, a `RemoteStorage` that honors the same interface may spare `Logic` any change at all — a real payoff from the earlier separation. But the system as a whole has gained communication components that someone must build and maintain.
