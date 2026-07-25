@@ -24,15 +24,16 @@ frame "Logical view" {
   rectangle "Logic" as logic
   rectangle "Model" as model
   rectangle "RemoteStorage" as rs
-  ui --> logic
-  logic --> model
-  logic --> rs
+  ui ..> logic
+  logic ..> model
+  logic ..> rs
+  rs ..> model
   package "Server" {
     rectangle "Request handler" as rh
     database "Shared data" as db
-    rh --> db
+    rh ..> db
   }
-  rs --> rh : sends requests to
+  rs ..> rh
 }
 frame "Deployment view" {
   node "User A's computer" {
@@ -47,4 +48,8 @@ frame "Deployment view" {
   ca --> sp : request /\nresponse
   cb --> sp : request /\nresponse
 }
+legend bottom
+  ..> : <b>depends on</b> <i>(logical view)</i>
+  --> : <b>sends messages to</b> <i>(deployment view)</i>
+endlegend
 @enduml
