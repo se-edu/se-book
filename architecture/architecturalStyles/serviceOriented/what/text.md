@@ -28,7 +28,7 @@
 | Deployment | One unit, released together | Many units, each released on its own |
 | Communication | Mostly calls within one process | Requests or messages across a network |
 | Data ownership | Enforced by discipline, often over one store | Enforced by separation; each service keeps its own store |
-| When a part fails | Usually affects the whole unit | The rest keeps running, but failures can cascade |
+| When a part fails | Usually affects the whole unit | Others can keep running, but only if built to tolerate the failure |
 | Testing and debugging | Build and inspect one thing | Start and coordinate many |
 | Best fit | One team releasing one product | Several teams needing independent releases |
 
