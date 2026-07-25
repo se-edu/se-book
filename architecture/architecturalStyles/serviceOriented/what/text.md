@@ -40,7 +40,7 @@
 
 **Related deployment terms:**
 
-* **A _container_ packages a program with the runtime, libraries, and configuration it needs**, so it behaves the same on a laptop and on a server — which is what makes "independently deployable" practical.
+* **A _container_ packages a program with the runtime, libraries, and configuration it needs**, so that environment travels with it from a laptop to a server — which is what makes "independently deployable" practical.
 * **_Serverless computing_ lets you deploy a function rather than a program**, with the provider running it in response to an event and charging only for the time it runs.
 
 Both help _deploy_ services, but they are deployment approaches, not architectural styles, and neither is required for microservices.
