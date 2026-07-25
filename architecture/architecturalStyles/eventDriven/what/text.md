@@ -35,7 +35,7 @@
 
 **Distributed event-driven systems often use publish-subscribe communication.** An emitter publishes an event to a _message broker_, which delivers it to whichever components have subscribed. The emitter need not know which consumers exist, and one event can reach any number of them.
 
-**The trade is decoupling in exchange for traceability.** A new consumer can subscribe without the emitter changing at all — but the list of consumers still exists (the framework or broker holds it), it is just no longer visible where the event is raised.<br>
+**You gain decoupling and give up traceability.** A new consumer can subscribe without the emitter changing at all — but the list of consumers still exists (the framework or broker holds it), it is just no longer visible where the event is raised.<br>
 {{ label_example }} To answer "what happens when an invoice is deleted?" you may have to find several handlers, and no single place in the code tells you.
 
 </div>
