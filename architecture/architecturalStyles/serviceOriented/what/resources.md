@@ -1,2 +1,2 @@
-* [**Microservices vs SOA Comparison**](https://www.devteam.space/blog/microservices-vs-soa-comparison/) -- an article by Jamie Maguire
+* [**Microservices**](https://martinfowler.com/articles/microservices.html) -- an article by James Lewis and Martin Fowler that defines the microservice style and contrasts it with both monoliths and earlier SOA
 
