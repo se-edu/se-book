@@ -44,7 +44,7 @@
 **A dependency arrow describes reliance, not necessarily a method call.** Whether that reliance is a method call, a message, or a network request is exactly what the legend must tell you.<br>
 {{ label_example }} If a diagram shows `Logic` depends on `Storage` and its legend says an arrow means _depends on_, then some code in `Logic` relies on what `Storage` offers, and no code in `Storage` relies on `Logic`.
 
-**Depending on the interface rather than a specific implementation is what makes a component replaceable.** Such replacing is possible only if the replacement honors the same behavior, including its failure behavior — matching method names is not enough.<br>
+**Depending on the interface rather than a specific implementation is what makes a component replaceable.** Such a replacement works only if it honors the same behavior, including its failure behavior — matching method names is not enough.<br>
  {{ label_example }} If `Logic` relies on the `Storage` agreement rather than on `JsonStorage` directly, a `DatabaseStorage` can take its place with few changes elsewhere.
 </div>
 
