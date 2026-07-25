@@ -11,7 +11,7 @@
 | Style | Central idea | Familiar example |
 |-------|--------------|------------------|
 | Pipes-and-filters | Data flows through a sequence of steps, each transforming it and passing it on. | A shell pipeline: `cat file \| grep error \| sort` |
-| Broker | A middleman locates the right service and routes requests, so callers need not know who will answer. | A service registry that lets one service find another without hard-coding its address |
+| Broker | A middleman locates the right service and routes requests, so callers need not know who will answer. | An API gateway that picks the right backend service for each request and forwards it |
 | Peer-to-peer | Each participant acts as both client and server, so work flows directly between peers rather than through a central server. | BitTorrent |
 | Plug-in (microkernel) | A minimal core provides essentials; optional features are added as separately written plug-ins. | IDE plug-ins, browser extensions |
 | Transaction processing | Discrete requests are accepted and processed reliably, often at high volume. | Bank terminals submitting transactions to a central system |
