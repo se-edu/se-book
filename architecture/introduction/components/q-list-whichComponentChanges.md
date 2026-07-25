@@ -13,7 +13,7 @@ For each change, name the component(s) where most of the work should fall, and w
 
 <panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
-1. `Storage` mainly — the others asked it to save and never knew the format, assuming its interface still fits.
+1. `Storage` mainly — the others ask it to save and do not know the format, assuming its interface still fits.
 1. `Logic` mainly, plus `Model` if postponing needs new state. `Ui` and `Storage` need not change if the command is typed as text.
 1. `Ui` only.
 1. All four — the field must be entered (`Ui`), validated (`Logic`), held (`Model`), and saved (`Storage`).
