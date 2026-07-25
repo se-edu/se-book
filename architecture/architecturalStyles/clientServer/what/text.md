@@ -42,7 +42,7 @@ Adding a server changes _both_ views of the invoice manager. In the logical view
 
 **A network boundary adds costs that local calls never had:**
 
-* **Requests take longer.** A method call inside a program takes microseconds; a network request takes milliseconds at best, and users feel it.
+* **Requests take far longer, and less predictably.** A method call inside a program is orders of magnitude faster than a request that crosses a network, and unlike a local call, a network request takes a different amount of time on each attempt. Users notice both.
 * **Failures can be partial.** A timeout does not reveal whether the server failed _before_ or _after_ doing the work. Retrying carelessly can perform the operation twice.
 * **Versions must stay compatible.** A new server may still receive requests from an old client.
 * **Security becomes prominent.** The server must decide who may read or change the shared data.
