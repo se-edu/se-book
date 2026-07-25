@@ -17,7 +17,7 @@
 * what happens when an operation succeeds or fails; and
 * for a component reached over a network, the format and protocol of the messages.
 
-{{ label_example }} `Storage` might offer `saveInvoices(tasks)` and `readInvoices()`, _and_ specify that a corrupt file causes a particular error rather than a crash.
+{{ label_example }} `Storage` might offer `saveInvoices(invoices)` and `readInvoices()`, _and_ specify that a corrupt file causes a particular error rather than a crash.
 
 **A dependency exists when one component relies on another to do its job.** Dependencies have a direction, and that direction matters more than almost anything else in an architecture.<br>
 {{ label_example }} `Logic` depends on `Storage`, because it cannot save without it. `Storage` does not depend on `Logic`: it can be compiled, tested, and understood without knowing that commands exist.
