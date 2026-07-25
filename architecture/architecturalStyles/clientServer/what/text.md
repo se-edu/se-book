@@ -22,13 +22,13 @@
 
 {{ label_example }} Suppose several users need to edit the same set of invoices from their own desktop applications. Local files no longer suffice, because each installation would hold a different copy, and no installation can reach another's hard disk.
 
-Adding a server changes _both_ views of the invoice manager. The logical view gains a client-side component that talks to the server and a server-side component that answers; the deployment view gains a whole extra tier.
+Adding a server changes _both_ views of the invoice manager. In the logical view, `RemoteStorage` now depends on a request handler that owns the shared data; in the deployment view, client and server become separately deployed parts that exchange messages over a network.
 
 <puml src="images/clientServerViews.puml" height="360" />
 
 </box>
 
-**Adding a server changes more than the location of data storage** (or whatever the part that needs to be shared between the clients). A real split adds parts to the logical architecture too.
+**Adding a server changes more than the location of data storage** (or whatever else the clients need to share). A real split adds architectural elements and concerns:
 
 * a client-side component that sends requests;
 * a server-side component that receives and handles them;
