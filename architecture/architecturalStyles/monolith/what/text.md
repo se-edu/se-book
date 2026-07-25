@@ -13,7 +13,7 @@
 **Being one deployable unit does not mean one running process.** A monolith may be launched as several processes, or run as many identical copies behind a load balancer — but they are all copies of the same thing, released together.
 
 **A modular monolith is a single deployable unit organized internally into well-defined components.** It is still one artifact, but inside it the parts have clear responsibilities, clear interfaces, and disciplined dependencies.<br>
-{{ label_example }} A invoice manager with `Ui`, `Logic`, `Model`, and `Storage` shipped as one program is a modular monolith.
+{{ label_example }} An invoice manager with `Ui`, `Logic`, `Model`, and `Storage` shipped as one program is a modular monolith.
 
 **"Monolith" is not a synonym for "badly structured."** This is the most common misunderstanding. The word describes _how the system is deployed_, not _how well it is organized_. A tangled ball of mud and a disciplined modular monolith share a deployment shape but differ enormously inside; what separates them is whether the internal components and dependencies are real.
 
