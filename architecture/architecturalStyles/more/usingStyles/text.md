@@ -11,11 +11,11 @@
 
 **When describing your own architecture, name the styles that apply and say what each is doing.** "A modular monolith, layered internally, with an event-driven UI" tells a reader far more than any single label.
 
-**Every style trades benefits for costs, and the costs are the part beginners skip.** Layering makes change easier to contain but adds indirection. Distribution lets users share data but adds latency and partial failures. A style is not a badge of quality; its value depends on the problem. Whenever you meet a new style, look for what it costs before deciding you want it.
+**Every style trades benefits for costs, and the costs are the part beginners skip.** Layering limits how far a change spreads but adds indirection. Distribution lets users share data but adds latency and partial failures. A style is not a badge of quality; its value depends on the problem. Whenever you meet a new style, look for what it costs before deciding you want it.
 
 **Three questions drive most architecture decisions:**
 
-1. **Which changes and quality attributes matter most here?** Choose boundaries that contain the important, likely changes.
+1. **Which changes and quality attributes matter most here?** Choose boundaries that keep the important, likely changes inside one component.
 1. **Can the important parts be understood and tested on their own?** Testing the component that deals with data storage should not need launching the UI component.
 1. **What new complexity does each boundary add?** Every boundary costs an interface to maintain and something to explain; a boundary that crosses a network also adds a class of failures that did not exist before.
 

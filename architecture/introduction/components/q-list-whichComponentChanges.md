@@ -18,7 +18,7 @@ For each change, name the component(s) where most of the work should fall, and w
 1. `Ui` only.
 1. All four — the field must be entered (`Ui`), validated (`Logic`), held (`Model`), and saved (`Storage`).
 
-**A good architecture contains many kinds of change, but not every kind:** a change that genuinely crosses every responsibility will touch every component.
+**A good architecture limits the spread of many kinds of change, but not every kind:** a change that genuinely crosses every responsibility will touch every component.
 
 </panel>
 </panel>

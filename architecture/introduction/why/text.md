@@ -29,7 +29,7 @@
 * **Security** — how well it protects data and resists misuse
 * **Deployability** — how easily a new version reaches users
 
-**Quality attributes often conflict, and that is the central difficulty of architecture.** Splitting a system across machines can allow independent scaling while making it slower and adding network failures. Adding component boundaries can make change easier to contain while adding interfaces that developers must learn and maintain.
+**Quality attributes often conflict, and that is the central difficulty of architecture.** Splitting a system across machines can allow independent scaling while making it slower and adding network failures. Adding component boundaries can limit how far a change spreads while adding interfaces that developers must learn and maintain.
 
 **There is no architecture that is best on every attribute** — only one that fits the qualities and likely changes that matter for the system being built.
 
