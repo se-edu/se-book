@@ -1,0 +1,41 @@
+@startuml
+skinparam backgroundColor transparent
+skinparam shadowing false
+skinparam defaultTextAlignment center
+skinparam rectangle {
+  BackgroundColor #FDFDFD
+  BorderColor #333333
+  roundCorner 8
+}
+skinparam node {
+  BackgroundColor #F2F6FF
+  BorderColor #333333
+}
+skinparam database {
+  BackgroundColor #FDFDFD
+  BorderColor #333333
+}
+frame "Modular monolith: one deployed unit" {
+  node "Invoice manager" as mono {
+    rectangle "Reporting" as a3
+    rectangle "Invoicing" as a1
+    rectangle "Payments" as a2
+    database "One shared\ndata store" as adb
+  }
+  a3 ..> a1
+  a1 ..> a2
+}
+frame "Microservices: three deployed units" {
+  node "Reporting service" as s3 {
+    database "Its own\ndata store" as db3
+  }
+  node "Invoicing service" as s1 {
+    database "Its own\ndata store" as db1
+  }
+  node "Payment service" as s2 {
+    database "Its own\ndata store" as db2
+  }
+  s3 --> s1
+  s1 --> s2
+}
+@enduml

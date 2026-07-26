@@ -15,6 +15,10 @@
 
 {{ label_example }} Suppose one company provides a service for browsing and buying merchandise, and a bank provides a service for charging its credit cards. A third party can build an online bookshop that combines them — letting customers buy books and pay by card — even though all three systems are built on different platforms.
 
+<puml src="images/composingServices.puml" width="420" />
+
+%%Each arrow is a call over a network, through a published interface. Three owners, three platforms: the bookshop depends on what each service promises, not on how that service is built.%%
+
 </box>
 
 **Early SOA was strongly associated with _XML web services_ and the SOAP standard; modern services usually exchange much simpler messages, most often JSON over ordinary HTTP.** The architectural idea — published, network-accessible, platform-independent interfaces — does not depend on the message format.
@@ -22,6 +26,10 @@
 **The microservice style builds one product as a collection of independently deployable services**, each focused on a capability and usually owning the data behind its interface. **_Micro_ does not prescribe a line count:** independent deployability around a focused responsibility matters far more than physical size. A payment service may be substantial and still be a microservice, if it can be released without redeploying anything else.
 
 **Microservices are best understood by contrast with the modular monolith.** Both organize a system into components with clear responsibilities; the difference is where the boundaries fall.
+
+<puml src="images/monolithVsMicroservices.puml" height="380" />
+
+%%In this diagram, a dashed arrow is a direct call inside one program, and a solid arrow is a request that crosses a network. The same three responsibilities appear on both sides; only the boundaries move. Both sides divide the work by capability rather than by layer, and each service on the right is still layered inside.%%
 
 | Concern | Modular monolith | Microservices |
 |---------|------------------|---------------|

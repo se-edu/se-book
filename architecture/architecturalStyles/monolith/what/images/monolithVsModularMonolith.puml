@@ -1,0 +1,40 @@
+@startuml
+skinparam backgroundColor transparent
+skinparam shadowing false
+skinparam defaultTextAlignment center
+skinparam rectangle {
+  BackgroundColor #FDFDFD
+  BorderColor #333333
+  roundCorner 8
+}
+skinparam node {
+  BackgroundColor #F2F6FF
+  BorderColor #333333
+}
+frame "Monolith, tangled inside" {
+  node "Invoice manager\n<i>(one deployed unit)</i>" as m1 {
+    rectangle "Invoices +\nscreens" as t1
+    rectangle "Reports +\nfiles" as t2
+    rectangle "Payments +\nrules" as t3
+    rectangle "Shared\nhelpers" as t4
+    t1 ..> t2
+    t2 ..> t1
+    t2 ..> t3
+    t3 ..> t1
+    t1 ..> t4
+    t4 ..> t3
+  }
+}
+frame "Modular monolith" {
+  node "Invoice manager\n<i>(one deployed unit)</i>" as m2 {
+    rectangle "Ui" as ui
+    rectangle "Logic" as logic
+    rectangle "Storage" as storage
+    rectangle "Model" as model
+    ui ..> logic
+    logic ..> storage
+    logic ..> model
+    storage ..> model
+  }
+}
+@enduml
