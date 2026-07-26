@@ -17,13 +17,18 @@
 
 **Software architecture is the set of significant decisions about a system's overall organization.** It identifies the major parts, their responsibilities, how they interact, and how they are deployed.
 
+<div class="d-none">
+<!-- generate once and reuse -->
+<puml src="{{ baseUrl }}/architecture/introduction/what/images/architecture.puml" width="128" name="architecture" />
+</div>
+
 <box>
 
 {{ label_example }} Consider a desktop invoice-management application in which users create invoices, set due dates, and mark invoices as paid. A possible architecture has four parts:
 
 <div id="invoice-manager-architecture" >
 
-<puml src="{{ baseUrl }}/architecture/introduction/what/images/architecture.puml" width="128" />
+<pic src="{{ baseUrl }}/architecture/introduction/what/images/architecture.png" width="128" />
 
 <small>%%Each arrow in the diagram is a dependency: the part at the tail needs the part at the head.%%</small>
 
