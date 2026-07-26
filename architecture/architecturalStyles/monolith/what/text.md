@@ -20,7 +20,7 @@ An invoice manager with `Ui`, `Logic`, `Model`, and `Storage` shipped as one pro
 **"Monolith" is not a synonym for "badly structured."** This is the most common misunderstanding. The word describes _how the system is deployed_, not _how well it is organized_. A tangled ball of mud and a disciplined modular monolith share a deployment shape but differ enormously inside; what separates them is whether the internal components and dependencies are real.
 <box>
 
-<puml src="images/monolithVsModularMonolith.puml" width="627" />
+<puml src="images/monolithVsModularMonolith.puml" width="550" />
 
 <small>%%Each arrow is a dependency. Both are monoliths — one deployed unit each, identical from the outside. What differs is inside: on the left, responsibilities are mixed and dependencies point both ways; on the right, each component has one job and the dependencies run one way.%%</small>
 </box>

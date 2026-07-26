@@ -14,7 +14,7 @@
 {% call show_example() %}
 The same invoice manager, but two views of the architecture:
 
-<puml src="images/twoViews.puml" width="449" />
+<puml src="images/twoViews.puml" width="400" />
 
 <small>%%Each arrow in the logical view is a dependency. The deployment view has no arrows because all four parts run inside one program on one computer.%%</small>
 {% endcall %}

@@ -8,18 +8,15 @@
 
 **In the layered style, the software is divided into layers whose dependencies all point one way — downward.** Higher layers use services provided by lower ones; lower layers know nothing about the layers above.
 
-<pic eager src="{{baseUrl}}/architecture/architecturalStyles/layered/what/images/layered.png" height="150" />
+<pic eager src="{{baseUrl}}/architecture/architecturalStyles/layered/what/images/layered.svg" width="450" />
 
 **Layered designs differ in how strictly they enforce the separation.** In _strict_ (or _closed_) layering, a layer may use only the layer immediately below it. In the more common _relaxed_ form, a layer may use any lower layer, skipping intermediate ones. **What both share, and what actually matters, is that dependencies never point back up.** Because a lower layer depends on nothing above it, you can understand, test, and replace it on its own. The moment `Storage` calls back into `Ui` to show an error dialog, that property is lost and the two must be understood together.
 
 {% call show_example() %}
-The invoice manager follows relaxed layering. Ordered by dependency, its layers run `Ui` → `Logic` → `Storage` → `Model`: `Ui` depends on `Logic`, `Logic` depends on `Storage`, and `Storage` depends on `Model` because it reads and writes invoice objects. `Logic` also depends on `Model` directly, skipping over `Storage` — **which is precisely what the relaxed form allows and the strict form forbids.** Real systems usually look like this rather than like a clean pile.
-{% endcall %}
+The invoice manager follows relaxed layering, as `Logic` depends on `Storage` as well as `Model`. Operating systems and network communication software are the classic examples of layering.
 
-{% call show_example() %}
-Operating systems and network communication software are the classic examples of layering.
+<pic src="{{ baseUrl }}/architecture/introduction/what/images/architecture.png" /><pic eager src="{{baseUrl}}/architecture/architecturalStyles/layered/what/images/layeredExamples.svg" width="230" />
 
-<pic eager src="{{baseUrl}}/architecture/architecturalStyles/layered/what/images/layeredExamples.png" height="150" />
 {% endcall %}
 
 **Layers are not tiers.** A _layer_ is a logical division inside the software; a _tier_ is a part that is deployed separately. The two are often confused, partly because the term _n-tier_ is frequently used to mean _layered_.

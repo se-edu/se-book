@@ -26,7 +26,7 @@ Suppose one company provides a service for browsing and buying merchandise, and 
 **Microservices are best understood by contrast with the modular monolith.** Both organize a system into components with clear responsibilities; the difference is where the boundaries fall.
 <box>
 
-<puml src="images/monolithVsMicroservices.puml" width="872" />
+<puml src="images/monolithVsMicroservices.puml" width="600" />
 
 <small>%%In this diagram, a dashed arrow is a direct call inside one program, and a solid arrow is a request that crosses a network. The same three responsibilities appear on both sides; only the boundaries move. Both sides divide the work by capability rather than by layer, and each service on the right is still layered inside.%%</small>
 </box>
