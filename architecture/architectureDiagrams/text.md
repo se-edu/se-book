@@ -2,8 +2,8 @@
 
 <div id="body">
 
-<include src="reading/unit-inParent-asPanel.md" boilerplate />
 <include src="views/unit-inParent-asPanel.md" boilerplate />
+<include src="reading/unit-inParent-asPanel.md" boilerplate />
 <include src="drawing/unit-inParent-asPanel.md" boilerplate />
 
 </div>
