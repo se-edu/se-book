@@ -10,18 +10,20 @@
 
 **In the event-driven style, work is triggered by <popover content="An _event_ is a notable occurrence, such as a button being clicked, a timer expiring, or a download finishing.">events</popover> rather than by direct calls.**  The component that raises an event is the _emitter_; the components that react to it are _consumers_.
 
-<pic eager src="{{baseUrl}}/architecture/architecturalStyles/eventDriven/what/images/eventDriven.png" width="450" />
+<box>
 
-%%Notation used in this diagram and the next: a dashed arrow is the path along which events travel, each oval is one event, and the small red arrows show their direction of travel.%%
+<pic eager src="{{baseUrl}}/architecture/architecturalStyles/eventDriven/what/images/eventDriven.svg" width="550" />
+
+<small>%%Notation used in this diagram and the next: a dashed arrow is the path along which events travel, each oval is one event, and the small red arrows show their direction of travel.%%</small>
+</box>
 
 **If you have written a graphical user interface, you have written event-driven code.** A button does not contain the logic that runs after a click; the UI framework delivers the click event to whatever handler registered for it. You never wrote code asking "has the button been pressed yet?"
 
 {% call show_example() %}
 When the 'button clicked' event occurs in a GUI, that event can be transmitted to components interested in reacting to it. Similarly, events detected at a printer port can be transmitted to components related to operating the printer. The same event can be sent to multiple consumers too.
 
-<pic eager src="{{baseUrl}}/architecture/architecturalStyles/eventDriven/what/images/eventDrivenExamples.png" width="450" />
-
-%%Same notation as the previous diagram; the two kinds of event are keyed at the bottom of this one.%%
+<pic eager src="{{baseUrl}}/architecture/architecturalStyles/eventDriven/what/images/eventDrivenExamples.svg" width="550" /><br>
+<small>%%Same notation as the previous diagram; the two kinds of event are keyed at the bottom of this one.%%</small>
 {% endcall %}
 
 **Event delivery has two separate dimensions:**
