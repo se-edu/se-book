@@ -53,7 +53,7 @@ Adding a server changes _both_ views of the invoice manager. In the logical view
 
 {{ label_example }} Client-server is extremely common — online games, email, collaborative applications, and web applications all use it, though it is in no way limited to browser-based software.
 
-<pic eager src="{{baseUrl}}/architecture/architecturalStyles/clientServer/what/images/clientServerExamples.png" height="200" />
+<pic eager src="{{baseUrl}}/architecture/architecturalStyles/clientServer/what/images/clientServerExamples.svg" height="200" />
 
 </box>
 
