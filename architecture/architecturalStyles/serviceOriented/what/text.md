@@ -48,8 +48,12 @@ Suppose one company provides a service for browsing and buying merchandise, and 
 
 **Related deployment terms:**
 
-* **A _container_ packages a program with the runtime, libraries, and configuration it needs**, so that environment travels with it from a laptop to a server — which is what makes "independently deployable" practical.
-* **_Serverless computing_ lets you deploy code without provisioning or managing the servers that run it.** In the most common model you deploy a single function, the provider runs it in response to an event, and you are billed for execution rather than for a server kept running.
+* **A _container_ packages a program with the runtime, libraries, and configuration it needs**, so that environment travels with it from a laptop to a server — which is what makes "independently deployable" practical.<br>
+  %%e.g., a payment service needs a particular Python version and a set of libraries. Shipped as a container image, it carries all of that with it: the machine running it needs only a container runtime, and the service behaves the same on a developer's laptop as on the deployment server.<br>
+  **Docker is a well-known tool for building and running containers, and Kubernetes is widely used to run many containers across a cluster of machines.**%%
+* **_Serverless computing_ lets you deploy code without provisioning or managing the servers that run it.** In the most common model you deploy a single function, the provider runs it in response to an event, and you are billed for execution rather than for a server kept running.<br>
+  %%e.g., a function that generates a thumbnail whenever a user uploads a photo. You deploy just that function, the provider runs a copy of it for each upload, and on a day with no uploads nothing is running and nothing is billed.<br>
+  **AWS Lambda, Azure Functions, and Google Cloud Functions are widely used services of this kind.**%%
 
 Both help _deploy_ services, but they are deployment approaches, not architectural styles, and neither is required for microservices.
 
