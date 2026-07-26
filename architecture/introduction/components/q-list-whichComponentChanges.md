@@ -1,8 +1,10 @@
 <panel header="{{ icon_Q_A }} Which component changes?">
 
-An invoice manager has components `Ui`, `Logic`, `Model`, and `Storage`, with `Ui` depending on `Logic`, `Logic` depending on `Model` and `Storage`, and `Storage` depending on `Model`.
+Consider the following architecture of a desktop invoice-manager software that you encountered earlier.
+<box type="info" no-icon seamless>
 
-<puml src="../what/images/architecture.puml" height="300" />
+<include src="{{ baseUrl }}/architecture/introduction/what/text.md#invoice-manager-architecture" />
+</box>
 
 For each change, name the component(s) where most of the work should fall, and why.
 

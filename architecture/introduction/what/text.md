@@ -21,13 +21,17 @@
 
 {{ label_example }} Consider a desktop invoice-management application in which users create invoices, set due dates, and mark invoices as paid. A possible architecture has four parts:
 
-<puml src="images/architecture.puml" height="300" />
+<div id="invoice-manager-architecture" >
+
+<puml src="{{ baseUrl }}/architecture/introduction/what/images/architecture.puml" width="128" />
+
+<small>%%Each arrow in the diagram is a dependency: the part at the tail needs the part at the head.%%</small>
 
 * `Ui`: displays information and receives user input
 * `Logic`: interprets user actions and carries out operations
 * `Model`: represents invoices and other data while the program runs
 * `Storage`: reads data from and writes it to persistent storage
-
+</div>
 </box>
 
 **An architecture description deliberately leaves out most of what is inside each part.** It does not say how many classes are in `Logic`, which one validates a user command, or which collection holds the invoices. Those are detailed design decisions.

@@ -35,7 +35,9 @@
 
 {{ label_example }} Each step below is a response to a requirement, not an upgrade. **Moving down buys specific capabilities and adds specific costs** — a team that moves down without a requirement pushing them has bought the costs and none of the benefits.
 
-<puml src="images/architectureProgression.puml" height="360" />
+<puml src="images/architectureProgression.puml" width="238" />
+
+<small>%%Each arrow is a step from one architecture to the next, labeled with the requirement that drives it. Some styles carry forward and others are replaced, at different scopes.%%</small>
 </box>
 
 </div>

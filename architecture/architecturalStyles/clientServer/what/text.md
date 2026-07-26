@@ -24,7 +24,9 @@
 
 Adding a server changes _both_ views of the invoice manager. In the logical view, `RemoteStorage` now depends on a request handler that owns the shared data; in the deployment view, client and server become separately deployed parts that exchange messages over a network.
 
-<puml src="images/clientServerViews.puml" height="360" />
+<puml src="images/clientServerViews.puml" width="921" />
+
+<small>%%In the logical view, each arrow is a dependency. In the deployment view, each arrow is a message sent between separately deployed parts.%%</small>
 
 </box>
 
