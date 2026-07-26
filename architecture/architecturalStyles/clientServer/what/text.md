@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import show_aspect %}
+{% from "common/macros.njk" import show_aspect, show_example %}
 
 <span id="title">What</span>
 
@@ -18,17 +18,15 @@
 
 **Sharing data among several installations is the most common reason to reach for client-server, but it is not the only one** — clients also use a server for centralized computation, authentication, or coordination. In the shared-data case, the fix is to give the shared data a home of its own: a separate program — the server — becomes the authoritative owner of the invoices, and each desktop application becomes a client, sending a _request_ such as "add this invoice" and receiving a _response_ from the server.<br>
 
-<box>
-
-{{ label_example }} Suppose several users need to edit the same set of invoices from their own desktop applications. Local files no longer suffice, because each installation would hold a different copy, and no installation can reach another's hard disk.
+{% call show_example() %}
+Suppose several users need to edit the same set of invoices from their own desktop applications. Local files no longer suffice, because each installation would hold a different copy, and no installation can reach another's hard disk.
 
 Adding a server changes _both_ views of the invoice manager. In the logical view, `RemoteStorage` now depends on a request handler that owns the shared data; in the deployment view, client and server become separately deployed parts that exchange messages over a network.
 
 <puml src="images/clientServerViews.puml" width="921" />
 
 <small>%%In the logical view, each arrow is a dependency. In the deployment view, each arrow is a message sent between separately deployed parts.%%</small>
-
-</box>
+{% endcall %}
 
 **Adding a server changes more than the location of data storage** (or whatever else the clients need to share). A real split adds architectural elements and concerns:
 
@@ -37,8 +35,10 @@ Adding a server changes _both_ views of the invoice manager. In the logical view
 * an agreed request and response format, so both sides read messages the same way; and
 * handling for timeouts, failures, and version mismatches — concerns that the purely local design did not have.
 
-**A good interface limits the impact of moving to a client-server architecture but does not avoid it entirely.**<br>
-{{ label_example }} Because `Logic` depended on what `Storage` promised rather than on a specific implementation, a `RemoteStorage` that honors the same interface may spare `Logic` any change at all — a real payoff from the earlier separation. But the system as a whole has gained communication components that someone must build and maintain.
+**A good interface limits the impact of moving to a client-server architecture but does not avoid it entirely.**
+{% call show_example() %}
+Because `Logic` depended on what `Storage` promised rather than on a specific implementation, a `RemoteStorage` that honors the same interface may spare `Logic` any change at all — a real payoff from the earlier separation. But the system as a whole has gained communication components that someone must build and maintain.
+{% endcall %}
 
 **This is also where tiers appear.** The client program is one tier and the server another — a tier being a separately deployed part, not necessarily one physical machine.
 
@@ -49,13 +49,11 @@ Adding a server changes _both_ views of the invoice manager. In the logical view
 * **Versions must stay compatible.** A new server may still receive requests from an old client.
 * **Security becomes prominent.** The server must decide who may read or change the shared data.
 
-<box>
-
-{{ label_example }} Client-server is extremely common — online games, email, collaborative applications, and web applications all use it, though it is in no way limited to browser-based software.
+{% call show_example() %}
+Client-server is extremely common — online games, email, collaborative applications, and web applications all use it, though it is in no way limited to browser-based software.
 
 <pic eager src="{{baseUrl}}/architecture/architecturalStyles/clientServer/what/images/clientServerExamples.svg" height="200" />
-
-</box>
+{% endcall %}
 
 </div>
 

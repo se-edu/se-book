@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_example %}
 <span id="title">Combining and choosing styles</span>
 
 <span id="prereqs"></span>
@@ -6,8 +7,10 @@
 
 <div id="body">
 
-**Most real applications combine several styles at once**, because each style addresses a different aspect.<br>
-{{ label_example }} The invoice manager is a **modular monolith**, **layered** internally, with an **event-driven** user interface; once invoices are shared through a server, it is also a **client** in a client-server system. All of those are true at the same time.
+**Most real applications combine several styles at once**, because each style addresses a different aspect.
+{% call show_example() %}
+The invoice manager is a **modular monolith**, **layered** internally, with an **event-driven** user interface; once invoices are shared through a server, it is also a **client** in a client-server system. All of those are true at the same time.
+{% endcall %}
 
 **When describing your own architecture, name the styles that apply and say what each is doing.** "A modular monolith, layered internally, with an event-driven UI" tells a reader far more than any single label.
 
@@ -31,14 +34,13 @@
 
 **For one team building one product, a modular monolith is a strong default.** One deployable program, clear internal components, one-way dependencies. **Add a network boundary only when a concrete requirement justifies its latency, failure modes, security work, and operational cost.**
 
-<box>
-
-{{ label_example }} Each step below is a response to a requirement, not an upgrade. **Moving down buys specific capabilities and adds specific costs** — a team that moves down without a requirement pushing them has bought the costs and none of the benefits.
+{% call show_example() %}
+Each step below is a response to a requirement, not an upgrade. **Moving down buys specific capabilities and adds specific costs** — a team that moves down without a requirement pushing them has bought the costs and none of the benefits.
 
 <puml src="images/architectureProgression.puml" width="238" />
 
 <small>%%Each arrow is a step from one architecture to the next, labeled with the requirement that drives it. Some styles carry forward and others are replaced, at different scopes.%%</small>
-</box>
+{% endcall %}
 
 </div>
 

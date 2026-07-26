@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import show_aspect %}
+{% from "common/macros.njk" import show_aspect, show_example %}
 <span id="title">What</span>
 <span id="prereqs"></span>
 <span id="outcomes">{{ icon_outcome }} Can explain services, and can contrast microservices with a modular monolith</span>
@@ -11,15 +11,13 @@
 
 **The _service-oriented architecture_ (SOA) style organizes a system around such network-accessible services**, often to connect capabilities owned by different applications or organizations.
 
-<box>
-
-{{ label_example }} Suppose one company provides a service for browsing and buying merchandise, and a bank provides a service for charging its credit cards. A third party can build an online bookshop that combines them — letting customers buy books and pay by card — even though all three systems are built on different platforms.
+{% call show_example() %}
+Suppose one company provides a service for browsing and buying merchandise, and a bank provides a service for charging its credit cards. A third party can build an online bookshop that combines them — letting customers buy books and pay by card — even though all three systems are built on different platforms.
 
 <puml src="images/composingServices.puml" width="383" />
 
 <small>%%Each arrow is a call over a network, through a published interface. Three owners, three platforms: the bookshop depends on what each service promises, not on how that service is built.%%</small>
-
-</box>
+{% endcall %}
 
 **Early SOA was strongly associated with _XML web services_ and the SOAP standard; modern services usually exchange much simpler messages, most often JSON over ordinary HTTP.** The architectural idea — published, network-accessible, platform-independent interfaces — does not depend on the message format.
 

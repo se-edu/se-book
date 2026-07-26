@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_example %}
 <span id="title">Different views of one system</span>
 
 <span id="prereqs"></span>
@@ -10,20 +11,20 @@
 1. **A logical view shows the major parts and which parts depend on which.** It says nothing about where any of it runs.
 1. **A deployment view shows where the parts actually run.** For the desktop invoice manager the deployment view is almost boring: all four parts run inside one program, on the user's computer.
 
-<box>
-
-{{ label_example }} The same invoice manager, but two views of the architecture:
+{% call show_example() %}
+The same invoice manager, but two views of the architecture:
 
 <puml src="images/twoViews.puml" width="449" />
 
 <small>%%Each arrow in the logical view is a dependency. The deployment view has no arrows because all four parts run inside one program on one computer.%%</small>
-
-</box>
+{% endcall %}
 
 That deployment view in the example looks trivial, which is exactly the point. Right now all the interesting structure is logical. When a server is added to let several users share invoices, _both_ views change — the deployment view dramatically, the logical view in a smaller but real way.
 
-**Keeping the views separate prevents a common confusion.**<br>
-{{ label_example }} "This system has four components" and "this system runs on four computers" are entirely different statements, and one diagram that blurs them will mislead everyone who reads it.
+**Keeping the views separate prevents a common confusion.**
+{% call show_example() %}
+"This system has four components" and "this system runs on four computers" are entirely different statements, and one diagram that blurs them will mislead everyone who reads it.
+{% endcall %}
 
 <box type="info" seamless>
 

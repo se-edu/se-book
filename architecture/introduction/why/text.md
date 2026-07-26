@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_example %}
 <span id="title">Why</span>
 
 <span id="prereqs"></span>
@@ -8,18 +9,19 @@
 
 **A useful architecture limits how far many changes spread through the system.**
 
-<box>
-
-{{ label_example }} Consider the following changes to an invoice manager application:
+{% call show_example() %}
+Consider the following changes to an invoice manager application:
 
 * Store invoices in a database instead of a file: The main change should stay inside `Storage`, as long as its existing interface can still express what is needed.
 * Add a command-line interface alongside the graphical one: Most new code belongs in `Ui`; both interfaces can drive the same `Logic`.
 * Test invoice operations without launching a window: Because `Logic` does not depend on `Ui`, tests can call it directly.
 * Let several developers work at once: Clear component boundaries reduce how often two people must edit the same file.
-</box>
+{% endcall %}
 
-**Architecture does not restrain the spread of _every_ change.** That is not necessarily an architectural failure: some changes genuinely cross several responsibilities.<br>
-{{ label_example }} Adding a new property to every invoice can touch the interface, the rules, the model, and the storage format.
+**Architecture does not restrain the spread of _every_ change.** That is not necessarily an architectural failure: some changes genuinely cross several responsibilities.
+{% call show_example() %}
+Adding a new property to every invoice can touch the interface, the rules, the model, and the storage format.
+{% endcall %}
 
 **Architecture also shapes the system's quality attributes** — the properties that decide whether the software is good enough for its purpose. Common quality attributes include:
 
