@@ -259,14 +259,14 @@ Client-side validation can improve usability, but it is not a security boundary 
 This query construction is unsafe:
 
 ```text
-query = "SELECT * FROM registrations WHERE event_id = " + eventId
+query = "SELECT student_name, email FROM registrations WHERE event_id = " + eventId
 database.execute(query)
 ```
 
 Use an API that sends the instruction and the data separately:
 
 ```text
-query = "SELECT * FROM registrations WHERE event_id = ?"
+query = "SELECT student_name, email FROM registrations WHERE event_id = ?"
 database.execute(query, [eventId])
 ```
 {% endcall %}
