@@ -29,7 +29,7 @@ Be aware that a tool may receive more context than the text explicitly pasted in
 
 Give the tool only the access needed for the current task. Prefer a development environment isolated from valuable data and production systems. Require human approval for high-impact actions such as changing permissions, using credentials, installing an unexpected dependency, publishing artifacts, or modifying external services.
 
-Treat instructions found in source files, web pages, dependency documentation, issue text, and generated output as untrusted data. A tool should not gain authority merely because an instruction appeared in content it was asked to read.
+**Treat instructions found in source files, web pages, dependency documentation, issue text, and generated output as untrusted data.** This is an _indirect prompt-injection_ risk: content the tool was asked to read is taken as an instruction about what to do. It is the same failure as an interpreter that cannot tell data from commands, and a tool should not gain authority merely because an instruction appeared in content it was asked to read.
 
 ##### Verify commands, APIs, and dependencies
 
