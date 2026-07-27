@@ -86,10 +86,20 @@ STRIDE is one optional checklist for teams that want named categories. It can he
 
 Estimate likelihood by considering whether the feature is reachable, whether exploitation requires special access, and how easily the attack can be repeated or automated. Estimate impact by considering the sensitivity and amount of affected data, the privileges at risk, the number of people affected, whether the damage is reversible, and how long a service could be unavailable.
 
+**Combine the two ratings using a rule the team agrees in advance**, so that two people analyzing the same threat reach the same answer:
+
+| Likelihood ↓ / Impact → | Low | Medium | High |
+|---|---|---|---|
+| **High** | Medium | High | High |
+| **Medium** | Low | Medium | High |
+| **Low** | Low | Low | Medium |
+
+The table is a starting point, not an answer. A team may override a cell, but it should record why.
+
 {% call show_example() %}
 Three event-system threats, rated on that scale with the assumption behind each rating recorded:
 
-| Threat | Likelihood | Impact | Priority | Response |
+| Threat | Likelihood | Impact | Risk | Response |
 |---|---|---|---|---|
 | A student changes an identifier to read another event's attendee list | High: reachable by anyone signed in, and trivial to repeat | Medium: names and email addresses for one event | High | Check ownership on every request |
 | A compromised organizer account grants organizer rights to others | Low: requires an account compromise first | High: privileges spread, and the change is hard to notice | Medium | Log privilege changes and allow them to be revoked |
