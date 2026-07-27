@@ -8,7 +8,7 @@
 
 ##### Summary
 
-**Security protects assets and stakeholders from intentional misuse and harm.** A security mindset questions assumptions and considers what someone could do when trust is misplaced.
+**Security protects assets and stakeholders from misuse and harm, whether deliberate or accidental.** Analysis assumes the deliberate case because it is the harder one, but accidents need attention of their own. A security mindset questions assumptions and considers what someone could do when trust is misplaced.
 
 **Secure software engineering is risk management, not a promise of perfection.** Identify assets, stakeholders, trust boundaries, threats, and risks; then select controls whose benefits justify their costs.
 
