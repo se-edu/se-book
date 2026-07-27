@@ -368,7 +368,7 @@ Focus review on security-sensitive boundaries such as:
 
 Ask the author to explain the security rule and how the code enforces it. Code that no reviewer can explain is not ready merely because it looks polished.
 
-**Turn important threat statements into negative tests and abuse cases.**
+**Turn important threat statements into negative tests and misuse cases.**
 {% call show_example() %}
 If a requirement says only an event's organizer can see its attendees, test the correct organizer, an unrelated organizer, an attendee, an anonymous user, and a revoked organizer.
 {% endcall %}

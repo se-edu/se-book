@@ -12,7 +12,7 @@
 | Requirements | Identify sensitive assets and state important security requirements and misuse cases. |
 | Design | Draw trust boundaries, perform lightweight threat modeling, minimize privileges and exposed interfaces, and choose established mechanisms. |
 | Implementation | Validate untrusted data, encode output for its context, enforce authorization, protect secrets, use safe APIs, and review dependencies. |
-| Code review and testing | Review security-sensitive paths and test abuse cases, trust boundaries, and permissions. |
+| Code review and testing | Review security-sensitive paths and test misuse cases, trust boundaries, and permissions. |
 | Integration and release | Check dependencies and secrets, use secure configuration and defaults, and remove development credentials and diagnostics. |
 | Operation and maintenance | Monitor important failures, update relevant components, remove unused access, and prepare to contain and recover from incidents. |
 

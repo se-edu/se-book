@@ -76,6 +76,8 @@ The following terms let a team discuss security precisely:
 * **{{ show_term("Authorization") }}: deciding whether that identity may perform a specific action on a specific resource.**<br>
   {{ label_example }} %%Checking that this student owns the registration they asked to see.%%
 * **{{ show_term("Risk") }}: combines the likelihood of a threat with the seriousness of its impact.**
+* **{{ show_term("Misuse case") }}: a short scenario describing how someone could deliberately use the system to cause harm.**<br>
+  {{ label_example }} %%A student changes an event identifier to download another event's list.%%
 
 These terms describe different parts of one situation. A valuable database is not a vulnerability. A possible theft is not an attack until someone attempts it. A control can reduce risk without eliminating it.
 
