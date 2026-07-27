@@ -112,7 +112,7 @@ Do not spend most of the security budget on an exciting but implausible attack w
 </panel>
 <panel header="###### 5. Choose controls" expanded>
 
-**Prefer controls that prevent a problem, while preparing to detect, contain, and recover from failures that prevention misses.**
+**Prefer controls that prevent a problem, while preparing to detect, contain, and recover from failures that prevention misses.** Prefer, too, a control people can use correctly: one that is routinely worked around protects nothing.
 
 {% call show_example() %}
 For an attendee list, controls might include:
