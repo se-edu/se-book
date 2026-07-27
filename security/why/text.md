@@ -36,14 +36,7 @@ The engineer who writes a small part of the program may not see these consequenc
 A team may secure the main web page but forget an older API, an import feature, an administrator script, or a default account. The forgotten path can be enough.
 {% endcall %}
 
-This asymmetry motivates several practices covered later:
-
-* reduce the number of exposed features and dependencies;
-* apply authorization checks consistently;
-* use secure defaults;
-* place more than one control around important assets;
-* monitor for important failures; and
-* keep software and its dependencies maintained.
+That asymmetry is why security work concentrates on reducing the number of paths, covering each of them consistently, and putting more than one control around anything that matters.
 
 ##### Security includes people and processes
 
