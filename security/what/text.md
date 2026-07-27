@@ -11,7 +11,7 @@ Software now handles personal information, money, communication, transportation,
 
 This textbook focuses on a small set of ideas that apply broadly. It does not attempt to teach every kind of attack. Instead, it develops one reusable method.
 
-**Software security is the protection of a system and its stakeholders from intentional misuse and harm.** A conventional defect might be triggered accidentally. In contrast, a security weakness may be deliberately searched for and exploited by someone who can choose the inputs, actions, timing, and sequence most favorable to an attack. Software security is about the latter. This difference changes how engineers must think.
+**Software security is the protection of a system and its stakeholders from misuse and harm, whether deliberate or accidental.** A conventional defect might be triggered accidentally. In contrast, a security weakness may be deliberately searched for and exploited by someone who can choose the inputs, actions, timing, and sequence most favorable to an attack. **Security analysis assumes that deliberate case**, because a system that withstands a chosen worst case also withstands an accidental one. This difference changes how engineers must think.
 
 {% call show_example() %}
 We will use a university event-registration system as the running example throughout the related topics of this textbook. Students can view events and register themselves. Organizers can create events and view attendee lists. The system stores names, email addresses, registrations, and organizer privileges.
