@@ -327,6 +327,8 @@ function getAttendees(request, session):
 
     return only the attendee fields this organizer needs
 ```
+
+Distinguishing *not found* from *not permitted* is safe here, because any student may see that an event exists. When the existence of the resource is itself sensitive, such as one student's registration, return the same response for both and record the difference only in the server's own logs.
 {% endcall %}
 
 Authorization belongs on the trusted side. A disabled button, hidden menu item, or client-side route guard is a usability feature, not sufficient protection.
