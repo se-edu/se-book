@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_example with context %}
 <span id="prereqs"></span>
 
 <span id="outcomes">{{ icon_outcome }} Can fix a defect properly</span>
@@ -20,9 +21,8 @@
 * **Remove your temporary probes** — stray prints, leftover breakpoints, commented-out experiments. Assertions and logging you added deliberately to stay are not temporary probes; keep those.
 * **Commit the fix on its own**, apart from unrelated cleanup, so that the history stays bisectable for the next bug.
 
-<box>
-
-{{ icon_example }} The cart example, end to end:
+{% call show_example() %}
+The cart example, end to end:
 
 1. _Establish the expectation_: computing a total must not change the cart's contents.
 1. _Track_: filed as "cart empties itself after the total is shown".
@@ -31,8 +31,7 @@
 1. _Localize_: `size()` is 3 before the call and 0 after, so the boundary lies inside `computeTotal()`.
 1. _Explain_: stepping in shows that `pending` and `items` are the same object, so `remove(0)` is emptying the cart's own list.
 1. _Fix and verify_: `getItems()` returns `List.copyOf(items)`; the test now passes, the rest of the suite still passes, and that test stays behind as the regression test.
-
-</box>
+{% endcall %}
 
 ##### Making bugs easier to find
 

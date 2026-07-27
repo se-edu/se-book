@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_example, show_term with context %}
 <span id="prereqs"></span>
 
 <span id="outcomes">{{ icon_outcome }} Can explain debugging</span>
@@ -12,14 +13,17 @@ This chapter draws substantially on [The Debugging Book](https://www.debuggingbo
 
 </box>
 
-**_Debugging_ is the process of finding the cause of a known problem in a program, and fixing it.** It starts _after_ you know something is wrong; finding that a problem exists is the job of testing. The hard part is the diagnosis, not the correction — once you understand why a program misbehaves, the fix is often a single character.
+**{{ show_term("Debugging") }} is the process of finding the cause of a known problem in a program, and fixing it.** It starts _after_ you know something is wrong; finding that a problem exists is the job of testing. The hard part is the diagnosis, not the correction — once you understand why a program misbehaves, the fix is often a single character.
 
 To debug well, distinguish four things that beginners tend to lump together as 'the bug':
 
-* **A _mistake_ is the human act that started it all** e.g., you misremembered that list indices start at `1`.
-* **A _defect_ is the resulting error in the code.** This is what most people mean by 'a bug' e.g., a loop that starts counting from the wrong index.
-* **An _infection_ is the resulting error in the program state at run time.** When the defective line executes, some variable now holds a wrong value.
-* **A _failure_ is the externally visible wrong behavior** e.g., a total shown to the user that is too small, or a crash.
+* **A {{ show_term("mistake") }} is the human (or AI) act that started it all.**<br>
+  {{ label_example }} %%You misremembered that list indices start at `1`.%%
+* **A {{ show_term("defect") }} is the resulting error in the code.** This is what most people mean by 'a bug'.<br>
+  {{ label_example }} %%A loop that starts counting from the wrong index.%%
+* **An {{ show_term("infection") }} is the resulting error in the program state at run time.** When the defective line executes, some variable now holds a wrong value.
+* **A {{ show_term("failure") }} is the externally visible wrong behavior.**<br>
+  {{ label_example }} %%A total shown to the user that is too small, or a crash.%%
 
 **These four form a chain, and each link can be far from the next:**
 
@@ -32,9 +36,8 @@ mistake → defect → infection → infection → ... → failure
 
 **Before hunting for a defective line, make sure you can state what the correct behavior is and why.** Often the real disagreement is about the requirement, not the code, and skipping this step means searching code that was right all along. Note too that the chain assumes the fault lies in code — the common case, but not the only one. A failure can equally originate in configuration, in data left by an earlier version, in a dependency, in the deployment, or in a requirement that was wrong to begin with; sometimes the program is right and the _test_ is wrong. Locating 'the defect' means locating whatever has to change.
 
-<box>
-
-{{ icon_example }} A _running example_, used throughout this chapter. A shopping cart prints the correct total, but then appears empty.
+{% call show_example() %}
+A _running example_, used throughout this chapter. A shopping cart prints the correct total, but then appears empty.
 
 ```java
 class Cart {
@@ -65,14 +68,17 @@ class Cart {
 * _Failure_: the next attempt to display the cart shows nothing.
 
 A debugger stopped at the failure would be pointing at the display code, which is correct.
-
-</box>
+{% endcall %}
 
 ##### Why debugging is hard
 
 **Debugging consumes a large share of real development effort**, often more than writing the code did. Beginners tend to read time spent debugging as evidence that they are bad at programming. It is not; debugging is a distinct and learnable engineering skill.
 
-Three things make it hard. First, the distance between defect and failure: the crash site is not the crime scene, so the instinct to study the code around the error message is often the least productive move available. Second, you cannot inspect everything — a running program holds an enormous amount of state, changing at every step, and choosing which small part to look at is most of the skill. Third, **your mental model of the code is exactly the thing that is wrong**: had you understood it correctly you would not have written the defect, so re-reading with the same assumptions reproduces the same blind spot. Hence debugging must be driven by evidence from the running program, not by reasoning alone.
+**Three things make it hard:**
+
+* **First, the distance between defect and failure**: the crash site is not the crime scene, so the instinct to study the code around the error message is often the least productive move available.
+* **Second, you cannot inspect everything** — a running program holds an enormous amount of state, changing at every step, and choosing which small part to look at is most of the skill.
+* **Third, your mental model of the code is exactly the thing that is wrong**: had you understood it correctly you would not have written the defect, so re-reading with the same assumptions reproduces the same blind spot. Hence debugging must be driven by evidence from the running program, not by reasoning alone.
 
 **Debugging time is therefore not proportional to the size of the fix.** A one-character correction can cost an afternoon. The cost lives in the search, and every technique in this chapter aims at making that search cheaper.
 
@@ -83,7 +89,8 @@ Three things make it hard. First, the distance between defect and failure: the c
 * {{ bad }} **_Stare and hope_** — reading the code and waiting for the bug to reveal itself. This inspects the code but not the state, using the mental model that wrote the defect. Fine as a 30-second first try; a poor plan for the next two hours.
 * {{ bad }} **_Shotgun debugging_** — changing whatever looks suspicious and re-running to see whether it helped. Each run teaches you nothing: a change that does not fix the problem has neither confirmed nor eliminated any explanation, and unrelated edits accumulate.
 * {{ bad }} **_Debugging into existence_** — mutating the code until the symptom disappears. The symptom often vanishes because a second defect cancels the first, leaving two bugs and a harder problem later.
-* {{ bad }} **Fixing the symptom instead of the cause** e.g., special-casing the input that fails, or wrapping the crash in an empty `catch` block. The failure goes away and the defect stays.
+* {{ bad }} **Fixing the symptom instead of the cause.** The failure goes away and the defect stays.<br>
+  {{ label_example }} %%Special-casing the input that fails, or wrapping the crash in an empty `catch` block.%%
 * {{ bad }} **Keeping no record of what you tried.** Without notes you will re-test explanations you already eliminated, lose your place when interrupted, and be unable to hand the problem over.
 
 Temporary print statements deserve a more careful verdict than a blanket ban. They are costly as a default habit — an edit-build-run cycle per question, edits that can introduce fresh defects, output that swamps the signal, leftovers that reach production — but **printing is not the problem; printing _without a hypothesis_ is**, which is shotgun debugging in another form. A few prints chosen to answer a specific question are legitimate, and in production, embedded, or concurrent settings they are sometimes the only tool available.

@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_example, show_term with context %}
 <span id="prereqs"></span>
 
 <span id="outcomes">{{ icon_outcome }} Can debug systematically</span>
@@ -34,9 +35,8 @@
 
 **Keep a debugging log.** One line per hypothesis, prediction, observation, and conclusion sounds bureaucratic, but it pays for itself within about twenty minutes on any non-trivial bug: it stops you re-testing rejected explanations, survives interruptions, and is what you hand over when the bug becomes someone else's.
 
-<box>
-
-{{ icon_example }} A debugging log for the cart example from the _What_ unit, in which `computeTotal()` empties the very list that `getItems()` handed it:
+{% call show_example() %}
+A debugging log for the cart example from the _What_ unit, in which `computeTotal()` empties the very list that `getItems()` handed it:
 
 | # | Hypothesis | Prediction | Observation | Conclusion |
 |---|---|---|---|---|
@@ -45,8 +45,7 @@
 | 3 | `pending` and `items` are the same object | the two identities match when stepping into the loop | same object | Supported — cause found |
 
 Rejecting hypothesis 1 is what suggested hypothesis 2.
-
-</box>
+{% endcall %}
 
 **_Rubber duck debugging_ — explaining your code line by line to an inanimate object — works for a real reason.** Articulating what each line does forces you to state assumptions you had taken for granted, and the wrong one tends to announce itself mid-sentence. A patient friend, a written explanation, or an AI chat window serves as well. Knowing when to stop for the day helps too: debugging is unusually sensitive to fatigue, because the whole activity consists of holding a model of the program in your head.
 
@@ -70,11 +69,9 @@ Reproducing means recreating everything the failure depends on, usually more tha
 
 Simplify the code path too, not just the data: strip away unrelated features, configuration, and calls until only the failing core remains. A failure that survives is far easier to reason about; one that does not has told you something about what it depends on.
 
-<box>
-
-{{ icon_example }} A 500-line configuration file makes the app crash at startup. Halving gets nowhere: neither half crashes, because the failure needs one setting from each. Removing settings one at a time from the full file isolates the pair — a `theme` entry and a `locale` entry, each harmless alone. Every trial file must keep the required header, or the app rejects it for an unrelated reason and the experiment tells you nothing.
-
-</box>
+{% call show_example() %}
+A 500-line configuration file makes the app crash at startup. Halving gets nowhere: neither half crashes, because the failure needs one setting from each. Removing settings one at a time from the full file isolates the pair — a `theme` entry and a `locale` entry, each harmless alone. Every trial file must keep the required header, or the app rejects it for an unrelated reason and the experiment tells you nothing.
+{% endcall %}
 
 **A good bug report is a reproduction that someone else can run.** The work of reproducing and simplifying _is_ the content of the report — which is why producing a minimal example so often solves the problem before it is filed. When you cannot reproduce a failure, report the evidence you do have %%logs, stack traces, the conditions under which it appeared%% rather than nothing.
 
@@ -83,9 +80,10 @@ Simplify the code path too, not just the data: strip away unrelated features, co
 **The goal of localization is to find the earliest point at which the program state is wrong**: before it the state is correct, after it the state is infected, and the cause sits at the boundary.
 
 * **Binary search along the execution is the highest-value technique here.** Pick a point roughly halfway through the suspect region, pause, and ask one question: is the state already wrong? If yes, look earlier; if no, look later. Each check roughly halves the region still under suspicion.
-* **Reason backwards from the wrong value.** Ask which statements could have produced it, then which produced _their_ inputs. Following data and control dependencies backwards is called _slicing_.
+* **Reason backwards from the wrong value.** Ask which statements could have produced it, then which produced _their_ inputs. Following data and control dependencies backwards is called {{ show_term("slicing") }}.
 * **Binary search over versions, when the code used to work.** If it passed last week, the cause is in one of the commits since — bisect the history rather than the code. `git bisect` automates this, and works best with small, self-contained commits; one you cannot build or test must be skipped, leaving several candidates rather than one.
-* **Swap components to test a suspect in isolation** e.g., replace your comparator with a trivially correct one. If the failure survives the swap, that component is exonerated.
+* **Swap components to test a suspect in isolation.** If the failure survives the swap, that component is exonerated.<br>
+  {{ label_example }} %%Replace your comparator with a trivially correct one.%%
 * **Prioritize your suspects sensibly**: recently changed code before long-stable code, your code before library code, library code before the compiler or the operating system. This is a starting bias rather than a rule.
 
 **Change one thing at a time, and know in advance what each run will tell you.** If you cannot say what the two possible outcomes would mean before you press run, you are not yet running an experiment.

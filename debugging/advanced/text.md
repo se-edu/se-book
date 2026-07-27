@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="prereqs"></span>
 
 <span id="outcomes">{{ icon_outcome }} Can recognize hard-to-debug situations</span>
@@ -14,13 +15,13 @@ Nothing in the earlier units depends on this one. It extends the techniques in _
 
 ##### Going further with the basic techniques
 
-**_Delta debugging_ automates the reduction described in _How_**, systematically removing parts of the input and keeping whichever reduction still fails. It handles the cases where plain halving does not, at a cost: in the worst case it needs on the order of n² tests. Note the wider point — a mechanical procedure can replace intuition for this step entirely.
+**{{ show_term("Delta debugging") }} automates the reduction described in _How_**, systematically removing parts of the input and keeping whichever reduction still fails. It handles the cases where plain halving does not, at a cost: in the worst case it needs on the order of n² tests. Note the wider point — a mechanical procedure can replace intuition for this step entirely.
 
 **The boundary model of localization describes the simple, deterministic case.** It blurs when the defect is an _omission_ %%nothing wrong happens; something right merely fails to%%, when two references alias the same object, when threads interleave, or when the bad state came from outside the program. Treat the boundary as what you are looking for, not as something guaranteed to exist at one identifiable point.
 
 **Two further debugger commands are worth knowing once the basics are comfortable.** _Force step into_ enters library code that _step into_ normally skips. _Reset frame_ (or _drop frame_) pops the current call so you can re-enter a method you stepped past — but it restores only the execution point and local variables. Anything the method already did to fields, static state, files, or console output stays done, so it is not a way of going back in time.
 
-**_Tracing_ records the execution automatically** — every line executed, or every change to a chosen variable — for examination afterwards. It is the right probe when the failure is too fast to watch, or happens in a run you cannot sit through interactively.
+**{{ show_term("Tracing") }} records the execution automatically** — every line executed, or every change to a chosen variable — for examination afterwards. It is the right probe when the failure is too fast to watch, or happens in a run you cannot sit through interactively.
 
 <box>
 
@@ -32,7 +33,7 @@ A widely used mnemonic for the debugging process is **TRAFFIC** — Track, Repro
 
 **Some defects resist all of the above — recognize them as a category rather than conclude you are bad at debugging.**
 
-* **_Heisenbugs_ change or vanish when you try to observe them.** Adding a print, attaching a debugger, or compiling with different settings perturbs timing or memory layout enough to hide the problem.
+* **A {{ show_term("Heisenbug") }} changes or vanishes when you try to observe it.** Adding a print, attaching a debugger, or compiling with different settings perturbs timing or memory layout enough to hide the problem.
 * **Concurrency bugs are non-deterministic by nature.** Race conditions and deadlocks often cannot be reproduced on demand, and breakpoints alter the thread interleaving, so the debugger itself can make them disappear. Reason about the code, and log with thread identifiers.
 * **Some failures occur only in production**, under real data volumes, real configuration, and real users. With no way to attach a debugger, logging and telemetry are the entire toolkit.
 * **Performance problems are defects too** whenever the system misses a stated response-time or resource requirement — they just cannot be located by stepping. Profile rather than debug, and measure before optimizing: intuitions about where the time goes are usually wrong.

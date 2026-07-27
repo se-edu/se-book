@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="prereqs"></span>
 
 <span id="outcomes">{{ icon_outcome }} Can use a debugger</span>
@@ -6,7 +7,7 @@
 
 <div id="body">
 
-**Every way of looking inside a running program is a _probe_** — a means of answering one specific question about its state. The useful question is never "print statements or debugger?" but "what is the cheapest probe that answers _this_ question?" Some probes come out once the bug is found; others are meant to stay.
+**Every way of looking inside a running program is a {{ show_term("probe") }}** — a means of answering one specific question about its state. The useful question is never "print statements or debugger?" but "what is the cheapest probe that answers _this_ question?" Some probes come out once the bug is found; others are meant to stay.
 
 * **Print statements are the cheapest to start with and the most expensive to iterate with.** They need no setup, work in any environment, and survive across process and machine boundaries — but every new question costs an edit-build-run cycle, and the output has to be cleaned up afterwards.
 * **Logging is the disciplined, permanent form of printing.** Leveled and filterable, log statements can stay in the code — so they are still there when the failure happens on a user's machine at 3am, where no debugger can reach. (→ _Logging_, in the Error Handling chapter.)
@@ -22,7 +23,8 @@ As a rough guide: reproducible and local → debugger; needs to survive into pro
 **Breakpoints determine where the program pauses.**
 
 * A **line breakpoint** pauses when execution reaches a given line.
-* A **conditional breakpoint** pauses only when a condition holds e.g., `i == 4137`. This makes debugging the 4137th iteration of a loop feasible at all, and it is the feature beginners most often do not know exists.
+* A **conditional breakpoint** pauses only when a condition holds. This makes debugging the 4137th iteration of a loop feasible at all, and it is the feature beginners most often do not know exists.<br>
+  {{ label_example }} %%Pausing only when `i == 4137`.%%
 * An **exception breakpoint** pauses at the moment an exception is thrown, before the stack unwinds and discards the state you need.
 * A **field watchpoint** pauses when a field's value changes rather than at a location — the right tool for "what is setting this to `null`?". In Java, only fields can be watched this way, not local variables.
 * **Disable breakpoints rather than deleting them**, so that a debugging session can be paused and resumed.
@@ -54,11 +56,14 @@ The top of the trace is where the failure surfaced, but the cause is often furth
 | `NullPointerException` | Something expected to be initialized never was, or a method returned `null` unnoticed |
 | `IndexOutOfBoundsException` | An off-by-one, or an index computed from stale size information |
 | `ClassCastException` | An object is not the type assumed, often after an unchecked cast |
-| `ConcurrentModificationException` | A collection was modified while being iterated over — usually in a single thread e.g., removing from a list inside a for-each loop over that list |
+| `ConcurrentModificationException` | A collection was modified while being iterated over, usually in a single thread {{ label_example }} %%removing from a list inside a for-each loop over that list%% |
 | `StackOverflowError` | Recursion with a missing or unreachable base case |
 | `NumberFormatException` | Unvalidated input being parsed as a number |
 
-**Recent Java versions name the expression that was `null`** e.g., `Cannot invoke "Person.getName()" because "p" is null`. That pinpoints the null — usually a large step forward — though why it was null may lie elsewhere. (→ _Exceptions_, in the Error Handling chapter.)
+**Recent Java versions name the expression that was `null`.**<br>
+{{ label_example }} %%`Cannot invoke "Person.getName()" because "p" is null`%%
+
+That pinpoints the null — usually a large step forward — though why it was null may lie elsewhere. (→ _Exceptions_, in the Error Handling chapter.)
 
 </div>
 
