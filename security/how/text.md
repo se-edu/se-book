@@ -64,7 +64,16 @@ For the attendee list:
 * Can a large number of requests make the feature unavailable?
 {% endcall %}
 
-STRIDE is one optional checklist for teams that want named categories: spoofing, tampering, repudiation, information disclosure, denial of service, and elevation of privilege. It can help prompt questions, but it is not necessary for a useful threat model.
+STRIDE is one optional checklist for teams that want named categories. It can help prompt questions, but it is not necessary for a useful threat model.
+
+| Category | The question it prompts | In the event system |
+|---|---|---|
+| Spoofing | Can someone claim to be another user or service? | Signing in as an organizer with a stolen password |
+| Tampering | Can someone change data or code they should not? | Editing a registration record through an unprotected endpoint |
+| Repudiation | Can someone deny having acted, with no record to contradict them? | Deleting an event with nothing recorded about who did it |
+| Information disclosure | Can someone read what they should not? | Reading another event's attendee list |
+| Denial of service | Can someone make the service unusable? | Flooding registration during a popular sign-up period |
+| Elevation of privilege | Can someone gain rights they were never granted? | A student making themselves an organizer |
 </panel>
 <panel header="###### 4. Estimate and prioritize risks" expanded>
 
