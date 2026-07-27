@@ -120,7 +120,7 @@ For an attendee list, controls might include:
 * checking the requester's permission before returning attendee data;
 * returning only fields the organizer needs;
 * recording access to sensitive lists;
-* limiting unusually frequent requests; and
+* limiting unusually frequent requests, which protects availability; and
 * allowing organizer access to be revoked.
 {% endcall %}
 
@@ -219,7 +219,7 @@ A second control limits or reveals the damage when the first is missing, misconf
 If the check that answers "is this user an organizer of this event?" fails or times out, the attendee list request should be refused rather than served.
 {% endcall %}
 
-When the system cannot establish that an action is permitted, denial is the safer outcome.
+When the system cannot establish that an action is permitted, denial is the safer outcome. Denying on failure trades availability for the other two goals, so the check you fail closed on needs availability attention of its own.
 </panel>
 
 <panel header="###### P6: Use established security mechanisms" expanded>
@@ -390,7 +390,7 @@ Ask the author to explain the security rule and how the code enforces it. Code t
 If a requirement says only an event's organizer can see its attendees, test the correct organizer, an unrelated organizer, an attendee, an anonymous user, and a revoked organizer.
 {% endcall %}
 
-Also test boundaries such as empty input, maximum lengths, unexpected encodings, repeated requests, missing resources, and surprising operation orders. The aim is to challenge the assumptions on which the control depends, not merely to generate many random tests.
+Also test boundaries such as empty input, maximum lengths, unexpected encodings, repeated requests, missing resources, and surprising operation orders. Maximum lengths and repeated requests are availability tests: they ask what one caller can consume. The aim is to challenge the assumptions on which the control depends, not merely to generate many random tests.
 
 Compilers, linters, static analysis, secret scanning, dependency analysis, and dynamic testing can catch different kinds of weakness. **A clean scan does not prove that software is secure.** It means only that the tool did not report a problem within the checks it performed.
 
