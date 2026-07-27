@@ -280,7 +280,6 @@ pageNav: 3
 
 ### Secure software engineering
 
-<include src="../security/intro/unit-inParent-asOutcome.md" boilerplate />
 <include src="../security/what/unit-inParent-asOutcome.md" boilerplate />
 <include src="../security/why/unit-inParent-asOutcome.md" boilerplate />
 <include src="../security/how/unit-inParent-asOutcome.md" boilerplate />
