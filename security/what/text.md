@@ -87,7 +87,7 @@ These terms describe different parts of one situation. A valuable database is no
 **Perfect security is not achievable; secure engineering is risk management.** A useful security claim must say what is being protected, from whom, under what assumptions, and to what degree.
 
 {% call show_example() %}
-Encrypting a database can reduce the harm caused by someone stealing a backup. It cannot protect attendee data from an organizer who is legitimately permitted to view it. A rate limit can make an automated denial-of-service attack more expensive, but a sufficiently large attack may still overwhelm the system.
+Encrypting database backups, with keys held separately, can reduce the harm caused by someone stealing one. It cannot protect attendee data from an organizer who is legitimately permitted to view it. A rate limit can make an automated denial-of-service attack more expensive, but a sufficiently large attack may still overwhelm the system.
 {% endcall %}
 
 **Security also has costs.** A control can consume development time, reduce performance, make a system harder to use, or create new failure modes. The goal is not to add every possible control. It is to identify important risks and choose controls whose benefits justify their costs.
