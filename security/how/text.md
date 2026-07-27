@@ -131,9 +131,9 @@ An event organizer needs access to their own event's attendee list, not every ev
 Smaller privileges reduce both the chance of misuse and the damage caused by a compromised component.
 </panel>
 
-<panel header="###### P2: Deny unless access has been allowed" expanded>
+<panel header="###### P2: Deny by default" expanded>
 
-**A _secure default_ denies access unless a rule explicitly permits it.** When a new action, role, or resource is added, it should begin inaccessible rather than accidentally available to everyone.
+**_Deny by default_ means access is refused unless a rule explicitly permits it.** When a new action, role, or resource is added, it should begin inaccessible rather than accidentally available to everyone.
 
 {% call show_example() %}
 Prefer:
@@ -149,6 +149,8 @@ over a growing collection of special cases that attempt to identify everyone who
 {% endcall %}
 
 An allow rule is usually easier to review than an incomplete list of forbidden cases.
+
+**Deny by default is the access-control case of a wider principle, _secure by default_: a system should be safe in the configuration it ships with.** The rest of that principle covers everything an installation starts with, such as no default accounts or passwords, debug and diagnostic interfaces turned off, network exposure limited to what is needed, and data retained no longer than necessary.
 </panel>
 
 <panel header="###### P3: Expose less" expanded>
