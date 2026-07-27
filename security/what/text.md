@@ -65,7 +65,7 @@ The following terms let a team discuss security precisely:
   {{ label_example }} %%Students, organizers, system operators, and the university are stakeholders in the event system.%%
 * **{{ show_term("Threat") }}: a possible way an asset could be harmed.**<br>
   {{ label_example }} %%A student reading another student's registration is a threat to confidentiality.%%
-* **{{ show_term("Vulnerability") }}: a weakness that makes a threat possible.**<br>
+* **{{ show_term("Vulnerability") }}: a weakness that allows a threat to be realized.**<br>
   {{ label_example }} %%Failing to check which student owns a registration is a vulnerability.%%
 * **{{ show_term("Attack") }}: an attempt to exploit a vulnerability.**<br>
   {{ label_example }} %%Changing a registration identifier in a request to retrieve someone else's record is an attack.%%
