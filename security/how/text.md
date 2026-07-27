@@ -319,7 +319,9 @@ Use the deployment environment's supported mechanism for protected configuration
 
 **Do not collect or return sensitive data merely because it is convenient.** Select only the attendee fields needed by the feature, restrict who can access them, and remove them when there is no longer a reason to retain them.
 
-**Passwords require specialized handling.** Never store plaintext passwords or protect them using reversible encryption. Prefer an established authentication provider. If the system must store password verifiers itself, use a vetted password-hashing facility designed for that purpose, together with its current recommended configuration. Do not invent a password-storage scheme.
+**Passwords require specialized handling.** Never store plaintext passwords or protect them using reversible encryption. Prefer an established authentication provider.
+
+If the system must store password verifiers itself, meaning the values it keeps in order to check a password without storing the password, use a vetted password-hashing facility designed for that purpose, together with its current recommended configuration. **Such facilities are deliberately expensive to compute and salt each password separately**, because the threat is an attacker who has already stolen the stored values and can then guess offline, in parallel, as fast as hardware allows. An ordinary fast hash such as SHA-256 is unsuitable for that reason. Argon2id, scrypt, bcrypt, and PBKDF2 are the usual choices, and the [OWASP Password Storage Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html) tracks which to prefer and with what parameters. Do not invent a password-storage scheme.
 
 **Errors should help legitimate users without teaching an attacker about the system.** Avoid returning stack traces, queries, filesystem paths, credentials, or private records. Keep detailed diagnostics in appropriately protected logs, and remember that logs themselves can contain sensitive data.
 
