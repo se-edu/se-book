@@ -48,8 +48,9 @@ registration server - - - - -> email service
 registration database
 ```
 
-The dashed lines mark where trust changes. Everything arriving from
-above a line has to be checked below it.
+Each marked line is a place where trust changes. Data or control
+crossing one, in either direction, has to be treated according to the
+trust level on the receiving side.
 {% endcall %}
 
 Do not label the entire "inside" of a system as trusted without thought. A database can contain malicious text entered earlier by a user. A partner service can be unavailable or compromised. A configuration file can be edited by someone with different privileges. **Trust should be earned at each boundary, not inherited forever from where data was first seen.**
