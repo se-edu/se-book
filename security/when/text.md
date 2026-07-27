@@ -36,7 +36,13 @@ The table is a timing guide. Apply the threat-modeling, implementation, and veri
 
 **Contain the harm before treating a security problem as an ordinary bug.** Depending on the situation, containment might mean disabling a vulnerable feature, revoking an exposed credential, restricting access, or taking an affected service temporarily offline.
 
-Preserve useful evidence, notify the appropriate project owner, correct the cause, check for related weaknesses, verify the fix, and recover normal service carefully. Do not publicize details that would make exploitation easier before the people responsible have had a reasonable chance to act.
+**Stop exploring once you believe you have found a real problem.** Probing further can cause additional damage and makes the record harder to interpret afterwards.
+
+**Preserve what someone will need in order to understand it:** the time, what you did, and the smallest reproduction that demonstrates the problem. Do not copy out the sensitive data you were able to reach, because that spreads the exposure you are reporting.
+
+**Report through a private channel rather than a public one.** Use the project's security contact or reporting process where one exists, and course staff otherwise. If nobody acknowledges the report, escalate to a named fallback instead of waiting indefinitely or raising it in public.
+
+Then correct the cause, check for related weaknesses, verify the fix, and recover normal service carefully. **Withholding details until the people responsible have had a reasonable chance to act is called _coordinated disclosure_**, and many projects publish a policy describing how they expect it to work.
 
 Beginning engineers are not expected to lead a major incident response alone. They are expected to recognize that a suspected security problem needs prompt, careful escalation rather than casual discussion in a public issue.
 
