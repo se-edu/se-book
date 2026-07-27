@@ -20,7 +20,7 @@ The table is a timing guide. Apply the threat-modeling, implementation, and veri
 
 **State security needs as testable properties rather than vague wishes.**
 {% call show_example() %}
-"The system must be secure" gives the team no direction. "Only an event's organizers can view its attendee list" identifies the asset, permitted actors, and protected action. A corresponding misuse case is "a student changes an event identifier to download another event's list."
+"The system must be secure" gives the team no direction. "Only an event's organizers can view its attendee list" names the asset (the attendee list), the property to preserve (confidentiality), and who must not be able to reach it (anyone who is not an organizer of that event). A corresponding misuse case is "a student changes an event identifier to download another event's list."
 {% endcall %}
 
 **Revisit the security analysis whenever an important assumption changes.** Common triggers include:
