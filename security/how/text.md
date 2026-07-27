@@ -90,7 +90,7 @@ For an attendee list, controls might include:
 
 One control can address several threats, and one threat may need several controls.
 </panel>
-<panel header="###### 6. Choose controls" expanded>
+<panel header="###### 6. Verify controls and record assumptions" expanded>
 
 **A control is only a claim until it has been reviewed or tested.** Verify the paths an attacker would try, not only the intended path.
 
