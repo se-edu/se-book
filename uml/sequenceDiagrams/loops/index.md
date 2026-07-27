@@ -1,5 +1,5 @@
 <frontmatter>
-title: "UML: Sequence Diagrams: Loops"
+title: "UML: Sequence diagrams: Loops"
 </frontmatter>
 
 <include src="unit-inPage-asFlat.md" boilerplate />

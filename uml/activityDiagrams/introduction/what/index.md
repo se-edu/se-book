@@ -1,5 +1,5 @@
 <frontmatter>
-title: "UML: Activity Diagrams: Introduction: What"
+title: "UML: Activity diagrams: Introduction: What"
 </frontmatter>
 
 <include src="unit-inPage-asFlat.md" boilerplate />

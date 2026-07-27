@@ -1,5 +1,5 @@
 <frontmatter>
-title: "Java: Streams - Basic"
+title: "Java: Streams - basic"
 </frontmatter>
 
 <include src="unit-inPage-asFlat.md" boilerplate />

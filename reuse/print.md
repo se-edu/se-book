@@ -35,7 +35,7 @@ title: "Reuse [Printable]"
 
 <include src="platforms/what/unit-inParent-asFlat-print.md" boilerplate />
 
-## Cloud Computing
+## Cloud computing
 
 <include src="cloudComputing/what/unit-inParent-asFlat-print.md" boilerplate />
 <include src="cloudComputing/services/unit-inParent-asFlat-print.md" boilerplate />

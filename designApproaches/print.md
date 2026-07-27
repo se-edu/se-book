@@ -4,7 +4,7 @@
 
 <div id="main">
 
-## Design Approaches
+## Design approaches
 
 <include src="../designApproaches/multilevelDesign/what/unit-inParent-asFlat-print.md" boilerplate />
 <include src="../designApproaches/topDownBottomUp/what/unit-inParent-asFlat-print.md" boilerplate />

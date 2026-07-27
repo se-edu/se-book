@@ -1,5 +1,5 @@
 <frontmatter>
-title: "Software Design Fundamentals [Printable]"
+title: "Design Fundamentals [Printable]"
 </frontmatter>
 
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">

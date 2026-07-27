@@ -1,5 +1,5 @@
 <frontmatter>
-title: "Testing Types: Regression Testing: What"
+title: "Testing Types: Regression testing: What"
 </frontmatter>
 
 <include src="unit-inPage-asFlat.md" boilerplate />

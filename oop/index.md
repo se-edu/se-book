@@ -1,5 +1,5 @@
 <frontmatter>
-title: "Object Oriented Programming"
+title: "Object-Oriented Programming"
 pageNav: 3
 </frontmatter>
 

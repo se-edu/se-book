@@ -1,5 +1,5 @@
 <frontmatter>
-title: "Modeling: Modeling Structures: Object Oriented Structures"
+title: "Modeling: Modeling structures: Object oriented structures"
 </frontmatter>
 
 <include src="unit-inPage-asFlat.md" boilerplate />

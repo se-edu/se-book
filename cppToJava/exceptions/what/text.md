@@ -1,4 +1,4 @@
-<span id="title">What are Exceptions?</span>
+<span id="title">What are exceptions?</span>
 
 <span id="prereqs"></span>
 

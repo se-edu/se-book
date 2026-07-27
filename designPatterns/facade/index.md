@@ -1,5 +1,5 @@
 <frontmatter>
-title: "Software Design Patterns: Facade"
+title: "Design Patterns: Facade"
 </frontmatter>
 
 <include src="container-inPage-asFlat.md" boilerplate />

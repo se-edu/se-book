@@ -1,5 +1,5 @@
 <frontmatter>
-title: "Modeling: Modeling Structures: Package Diagrams"
+title: "Modeling: Modeling structures: Package diagrams"
 </frontmatter>
 
 <include src="unit-inPage-asFlat.md" boilerplate />

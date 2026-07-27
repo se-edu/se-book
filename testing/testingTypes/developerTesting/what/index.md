@@ -1,5 +1,5 @@
 <frontmatter>
-title: "Testing Types: Developer Testing: What"
+title: "Testing Types: Developer testing: What"
 </frontmatter>
 
 <include src="unit-inPage-asFlat.md" boilerplate />

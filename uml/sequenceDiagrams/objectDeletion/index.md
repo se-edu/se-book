@@ -1,5 +1,5 @@
 <frontmatter>
-title: "UML: Sequence Diagrams: Object Deletion"
+title: "UML: Sequence diagrams: Object deletion"
 </frontmatter>
 
 <include src="unit-inPage-asFlat.md" boilerplate />

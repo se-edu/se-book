@@ -1,5 +1,5 @@
 <frontmatter>
-title: "Testing: Dependency Injection: What"
+title: "Testing: Dependency injection: What"
 </frontmatter>
 
 <include src="unit-inPage-asFlat.md" boilerplate />

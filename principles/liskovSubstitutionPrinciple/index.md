@@ -1,5 +1,5 @@
 <frontmatter>
-title: "Principles: Liskov Substitution Principle"
+title: "Principles: Liskov substitution principle"
 </frontmatter>
 
 <include src="unit-inPage-asFlat.md" boilerplate />

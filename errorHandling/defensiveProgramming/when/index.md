@@ -1,5 +1,5 @@
 <frontmatter>
-title: "Error Handling: Defensive Programming: When"
+title: "Error Handling: Defensive programming: When"
 </frontmatter>
 
 <include src="unit-inPage-asFlat.md" boilerplate />

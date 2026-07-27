@@ -1,5 +1,5 @@
 <frontmatter>
-title: "UML: Sequence Diagrams: Parallel Paths"
+title: "UML: Sequence diagrams: Parallel paths"
 </frontmatter>
 
 <include src="unit-inPage-asFlat.md" boilerplate />

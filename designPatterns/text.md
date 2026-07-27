@@ -1,4 +1,4 @@
-<span id="title">Software design patterns</span>
+<span id="title">Design Patterns</span>
 
 <div id="body">
 

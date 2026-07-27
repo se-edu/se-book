@@ -15,17 +15,17 @@ title: "Specifying Requirements [Printable]"
 
 <include src="prose/what/unit-inParent-asFlat-print.md" boilerplate />
 
-## Feature List
+## Feature list
 
 <include src="featureList/what/unit-inParent-asFlat-print.md" boilerplate />
 
-## User Stories
+## User stories
 
 <include src="userStories/introduction/unit-inParent-asFlat-print.md" boilerplate />
 <include src="userStories/details/unit-inParent-asFlat-print.md" boilerplate />
 <include src="userStories/usage/unit-inParent-asFlat-print.md" boilerplate />
 
-## Use Cases
+## Use cases
 
 <include src="useCases/introduction/unit-inParent-asFlat-print.md" boilerplate />
 <include src="useCases/identifying/unit-inParent-asFlat-print.md" boilerplate />
@@ -36,7 +36,7 @@ title: "Specifying Requirements [Printable]"
 
 <include src="glossary/what/unit-inParent-asFlat-print.md" boilerplate />
 
-## Supplementary Requirements
+## Supplementary requirements
 
 <include src="supplementaryRequirements/what/unit-inParent-asFlat-print.md" boilerplate />
 

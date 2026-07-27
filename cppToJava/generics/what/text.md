@@ -1,4 +1,4 @@
-<span id="title">What are Generics?</span>
+<span id="title">What are generics?</span>
 
 <span id="prereqs"></span>
 

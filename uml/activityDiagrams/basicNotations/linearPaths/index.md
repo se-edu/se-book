@@ -1,5 +1,5 @@
 <frontmatter>
-title: "UML: Activity Diagrams: Basic Notation: Linear Paths"
+title: "UML: Activity diagrams: Basic notation: Linear paths"
 </frontmatter>
 
 <include src="unit-inPage-asFlat.md" boilerplate />

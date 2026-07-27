@@ -1,5 +1,5 @@
 <frontmatter>
-title: "UML: Class Diagrams: Introduction: What"
+title: "UML: Class diagrams: Introduction: What"
 </frontmatter>
 
 <include src="unit-inPage-asFlat.md" boilerplate />

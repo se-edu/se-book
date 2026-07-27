@@ -1,4 +1,4 @@
-<span id="title">Customizing UML Elements</span>
+<span id="title">Customizing UML elements</span>
 
 <span id="prereqs"></span>
 

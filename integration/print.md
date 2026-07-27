@@ -21,7 +21,7 @@ title: "Integration [Printable]"
 <include src="approaches/bigBangVsIncremental/unit-inParent-asFlat-print.md" boilerplate />
 <include src="approaches/topDownVsBottomUp/unit-inParent-asFlat-print.md" boilerplate />
 
-## Build Automation
+## Build automation
 
 <include src="buildAutomation/what/unit-inParent-asFlat-print.md" boilerplate />
 <include src="buildAutomation/continuousIntegrationDeployment/unit-inParent-asFlat-print.md" boilerplate />

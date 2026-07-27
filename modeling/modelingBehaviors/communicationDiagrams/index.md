@@ -1,5 +1,5 @@
 <frontmatter>
-title: "Modeling: Modeling Behaviors: Communication Diagrams"
+title: "Modeling: Modeling behaviors: Communication diagrams"
 </frontmatter>
 
 <include src="unit-inPage-asFlat.md" boilerplate />

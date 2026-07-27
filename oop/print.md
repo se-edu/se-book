@@ -1,5 +1,5 @@
 <frontmatter>
-title: "Object Oriented Programming [Printable]"
+title: "Object-Oriented Programming [Printable]"
 </frontmatter>
 
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">

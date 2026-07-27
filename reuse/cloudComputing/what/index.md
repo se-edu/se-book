@@ -1,5 +1,5 @@
 <frontmatter>
-title: "Reuse: Cloud Computing: What"
+title: "Reuse: Cloud computing: What"
 </frontmatter>
 
 <include src="unit-inPage-asFlat.md" boilerplate />

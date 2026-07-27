@@ -1,5 +1,5 @@
 <frontmatter>
-title: "Testing: Testing Types: Integration Testing"
+title: "Testing: Testing types: Integration testing"
 </frontmatter>
 
 <include src="container-inPage-asFlat.md" boilerplate />

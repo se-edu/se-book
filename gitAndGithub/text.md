@@ -1,4 +1,4 @@
-<span id="title">Revision Control (Using Git & GitHub)</span>
+<span id="title">Revision Control (Using Git and GitHub)</span>
 
 <div id="body">
 

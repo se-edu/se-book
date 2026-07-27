@@ -1,4 +1,4 @@
-<span id="title">Gathering requirements</span>
+<span id="title">Gathering Requirements</span>
 
 <div id="body">
 

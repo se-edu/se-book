@@ -1,5 +1,5 @@
 <frontmatter>
-title: "Requirements: Non-Functional Requirements"
+title: "Requirements: Non-functional requirements"
 </frontmatter>
 
 <include src="unit-inPage-asFlat.md" boilerplate />

@@ -1,5 +1,5 @@
 <frontmatter>
-title: "Testing: Testing Types: Dogfooding"
+title: "Testing: Testing types: Dogfooding"
 </frontmatter>
 
 <include src="container-inPage-asFlat.md" boilerplate />

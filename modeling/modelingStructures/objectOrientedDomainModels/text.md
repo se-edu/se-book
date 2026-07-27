@@ -1,4 +1,4 @@
-<span id="title">Conceptual Class Diagrams (aka OODMs)</span>
+<span id="title">Conceptual class diagrams (aka OODMs)</span>
 
 <span id="prereqs"></span>
 

@@ -1,4 +1,4 @@
-<span id="title">Design fundamentals</span>
+<span id="title">Design Fundamentals</span>
 
 <div id="body">
 

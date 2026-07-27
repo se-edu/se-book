@@ -1,4 +1,4 @@
-<span id="title">Design approaches</span>
+<span id="title">Design Approaches</span>
 
 <div id="body">
 

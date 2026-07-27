@@ -1,5 +1,5 @@
 <frontmatter>
-title: "UML: Sequence Diagrams: Self Invocation"
+title: "UML: Sequence diagrams: Self invocation"
 </frontmatter>
 
 <include src="unit-inPage-asFlat.md" boilerplate />

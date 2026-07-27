@@ -1,5 +1,5 @@
 <frontmatter>
-title: "Java: Use Enums"
+title: "Java: Use enums"
 </frontmatter>
 
 <include src="unit-inPage-asFlat.md" boilerplate />

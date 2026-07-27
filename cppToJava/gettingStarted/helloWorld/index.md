@@ -1,5 +1,5 @@
 <frontmatter>
-title: "C++ to Java: Getting Started: HelloWorld"
+title: "C++ to Java: Getting started: HelloWorld"
 </frontmatter>
 
 <include src="unit-inPage-asFlat.md" boilerplate />

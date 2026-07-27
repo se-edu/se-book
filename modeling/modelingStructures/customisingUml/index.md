@@ -1,5 +1,5 @@
 <frontmatter>
-title: "Modeling: Modeling Structures: Customising UML Elements"
+title: "Modeling: Modeling structures: Customizing UML elements"
 </frontmatter>
 
 <include src="unit-inPage-asFlat.md" boilerplate />

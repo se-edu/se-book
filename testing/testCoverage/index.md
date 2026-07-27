@@ -1,5 +1,5 @@
 <frontmatter>
-title: "Testing: Test Coverage"
+title: "Testing: Test coverage"
 </frontmatter>
 
 <include src="container-inPage-asFlat.md" boilerplate />

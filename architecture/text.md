@@ -1,4 +1,4 @@
-<span id="title">Software architecture</span>
+<span id="title">Software Architecture</span>
 
 <div id="body">
 

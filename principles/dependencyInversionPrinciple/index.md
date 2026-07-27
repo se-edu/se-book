@@ -1,5 +1,5 @@
 <frontmatter>
-title: "Principles: Dependency Inversion Principle"
+title: "Principles: Dependency inversion principle"
 </frontmatter>
 
 <include src="unit-inPage-asFlat.md" boilerplate />

@@ -1,5 +1,5 @@
 <frontmatter>
-title: "Architectural Styles: Event-Driven Architectural Style: What"
+title: "Architectural Styles: Event-driven architectural style: What"
 </frontmatter>
 
 <include src="unit-inPage-asFlat.md" boilerplate />

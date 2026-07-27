@@ -1,5 +1,5 @@
 <frontmatter>
-title: "UML: Sequence Diagrams: Object Creation"
+title: "UML: Sequence diagrams: Object creation"
 </frontmatter>
 
 <include src="unit-inPage-asFlat.md" boilerplate />

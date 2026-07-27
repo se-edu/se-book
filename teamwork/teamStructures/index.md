@@ -1,5 +1,5 @@
 <frontmatter>
-title: "Teamwork: Team Structures"
+title: "Teamwork: Team structures"
 </frontmatter>
 
 <include src="unit-inPage-asFlat.md" boilerplate />

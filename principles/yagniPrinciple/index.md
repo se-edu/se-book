@@ -1,5 +1,5 @@
 <frontmatter>
-title: "Principles: YAGNI Principle"
+title: "Principles: YAGNI principle"
 </frontmatter>
 
 <include src="unit-inPage-asFlat.md" boilerplate />

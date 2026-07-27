@@ -17,7 +17,7 @@ title: "Modeling [Printable]"
 <include src="introduction/how/unit-inParent-asFlat-print.md" boilerplate />
 <include src="introduction/umlModels/unit-inParent-asFlat-print.md" boilerplate />
 
-## Modeling Structures
+## Modeling structures
 
 <include src="modelingStructures/classDiagramsBasic/unit-inParent-asFlat-print.md" boilerplate />
 <include src="modelingStructures/classDiagramsIntermediate/unit-inParent-asFlat-print.md" boilerplate />
@@ -29,7 +29,7 @@ title: "Modeling [Printable]"
 <include src="modelingStructures/packageDiagrams/unit-inParent-asFlat-print.md" boilerplate />
 <include src="modelingStructures/compositeStructureDiagrams/unit-inParent-asFlat-print.md" boilerplate />
 
-## Modeling Behaviors
+## Modeling behaviors
 
 <include src="modelingBehaviors/activityDiagrams/unit-inParent-asFlat-print.md" boilerplate />
 <include src="modelingBehaviors/sequenceDiagramsBasic/unit-inParent-asFlat-print.md" boilerplate />
@@ -41,7 +41,7 @@ title: "Modeling [Printable]"
 <include src="modelingBehaviors/communicationDiagrams/unit-inParent-asFlat-print.md" boilerplate />
 <include src="modelingBehaviors/stateMachineDiagrams/unit-inParent-asFlat-print.md" boilerplate />
 
-## Modeling a Solution
+## Modeling a solution
 
 <include src="modelingASolution/introduction/unit-inParent-asFlat-print.md" boilerplate />
 <include src="modelingASolution/basic/unit-inParent-asFlat-print.md" boilerplate />

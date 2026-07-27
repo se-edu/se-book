@@ -1,5 +1,5 @@
 <frontmatter>
-title: "Modeling: Modeling Behaviors: Use Case Diagrams"
+title: "Modeling: Modeling behaviors: Use case diagrams"
 </frontmatter>
 
 <include src="unit-inPage-asFlat.md" boilerplate />

@@ -1,5 +1,5 @@
 <frontmatter>
-title: "Modeling: Modeling Structures"
+title: "Modeling: Modeling structures"
 </frontmatter>
 
 <include src="container-inPage-asFlat.md" boilerplate />

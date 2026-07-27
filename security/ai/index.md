@@ -1,5 +1,5 @@
 <frontmatter>
-title: "Secure Software Engineering: AI Coding Tools"
+title: "Secure Software Engineering: AI coding tools"
 </frontmatter>
 
 <include src="unit-inPage-asFlat.md" boilerplate />

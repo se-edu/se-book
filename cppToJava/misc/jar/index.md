@@ -1,5 +1,5 @@
 <frontmatter>
-title: "C++ to Java: Miscellaneous Topics: Constants"
+title: "C++ to Java: Miscellaneous topics: Constants"
 footer: footer.md
 </frontmatter>
 

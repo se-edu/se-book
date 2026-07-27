@@ -1,5 +1,5 @@
 <frontmatter>
-title: "Software Design Patterns [Printable]"
+title: "Design Patterns [Printable]"
 </frontmatter>
 
 <link rel="stylesheet" href="{{baseUrl}}/css/textbook.css">
@@ -9,36 +9,36 @@ title: "Software Design Patterns [Printable]"
 
 <div id="main">
 
-# Software Design Patterns
+# Design Patterns
 
 ## Introduction
 
 <include src="introduction/what/unit-inParent-asFlat-print.md" boilerplate />
 <include src="introduction/format/unit-inParent-asFlat-print.md" boilerplate />
 
-## Singleton Pattern
+## Singleton pattern
 
 <include src="singleton/what/unit-inParent-asFlat-print.md" boilerplate />
 <include src="singleton/implementation/unit-inParent-asFlat-print.md" boilerplate />
 <include src="singleton/evaluation/unit-inParent-asFlat-print.md" boilerplate />
 
-## Abstraction Occurrence Pattern
+## Abstraction occurrence pattern
 
 <include src="abstractionOccurrence/what/unit-inParent-asFlat-print.md" boilerplate />
 
-## Facade Pattern
+## Facade pattern
 
 <include src="facade/what/unit-inParent-asFlat-print.md" boilerplate />
 
-## Command Pattern
+## Command pattern
 
 <include src="command/what/unit-inParent-asFlat-print.md" boilerplate />
 
-## Model View Controller (MVC) Pattern
+## Model view controller (MVC) pattern
 
 <include src="modelViewController/what/unit-inParent-asFlat-print.md" boilerplate />
 
-## Observer Pattern
+## Observer pattern
 
 <include src="observer/what/unit-inParent-asFlat-print.md" boilerplate />
 

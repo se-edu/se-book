@@ -1,5 +1,5 @@
 <frontmatter>
-title: "Software Design Patterns"
+title: "Design Patterns"
 pageNav: 3
 </frontmatter>
 

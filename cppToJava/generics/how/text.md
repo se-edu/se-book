@@ -1,4 +1,4 @@
-<span id="title">How to use Generics</span>
+<span id="title">How to use generics</span>
 
 <span id="prereqs"></span>
 

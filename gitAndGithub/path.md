@@ -1,1 +1,1 @@
-Tools → Git and GitHub →
+Tools → Revision Control (Using Git and GitHub) →

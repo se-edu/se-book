@@ -1,5 +1,5 @@
 <frontmatter>
-title: "Documentation: Document Minimally, but Sufficiently: How"
+title: "Documentation: Document minimally, but sufficiently: How"
 </frontmatter>
 
 <include src="unit-inPage-asFlat.md" boilerplate />

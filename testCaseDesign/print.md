@@ -17,18 +17,18 @@ title: "Test Case Design [Printable]"
 <include src="introduction/positiveVsNegative/unit-inParent-asFlat-print.md" boilerplate />
 <include src="introduction/blackVsGlass/unit-inParent-asFlat-print.md" boilerplate />
 
-## Equivalence Partitions
+## Equivalence partitions
 
 <include src="equivalencePartitions/what/unit-inParent-asFlat-print.md" boilerplate />
 <include src="equivalencePartitions/basic/unit-inParent-asFlat-print.md" boilerplate />
 <include src="equivalencePartitions/intermediate/unit-inParent-asFlat-print.md" boilerplate />
 
-## Boundary Value Analysis
+## Boundary value analysis
 
 <include src="boundaryValueAnalysis/what/unit-inParent-asFlat-print.md" boilerplate />
 <include src="boundaryValueAnalysis/how/unit-inParent-asFlat-print.md" boilerplate />
 
-## Combining Test Inputs
+## Combining test inputs
 
 <include src="combiningTestInputs/why/unit-inParent-asFlat-print.md" boilerplate />
 <include src="combiningTestInputs/combinationStrategies/unit-inParent-asFlat-print.md" boilerplate />

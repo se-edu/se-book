@@ -1,5 +1,5 @@
 <frontmatter>
-title: "Test Case Design: Equivalence Partitions: Intermediate"
+title: "Test Case Design: Equivalence partitions: Intermediate"
 </frontmatter>
 
 <include src="unit-inPage-asFlat.md" boilerplate />

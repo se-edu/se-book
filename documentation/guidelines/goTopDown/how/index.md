@@ -1,5 +1,5 @@
 <frontmatter>
-title: "Documentation: Go Top-down, Not Bottom-up: How"
+title: "Documentation: Go top-down, not bottom-up: How"
 </frontmatter>
 
 <include src="unit-inPage-asFlat.md" boilerplate />

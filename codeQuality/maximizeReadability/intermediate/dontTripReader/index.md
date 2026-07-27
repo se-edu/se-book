@@ -1,5 +1,5 @@
 <frontmatter>
-title: "Coding Best Practices: [Practice] Do Not 'Trip Up' the Reader"
+title: "Coding Best Practices: [Practice] Do not 'trip up' the reader"
 </frontmatter>
 
 <include src="unit-inPage-asFlat.md" boilerplate />

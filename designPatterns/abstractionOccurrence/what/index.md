@@ -1,5 +1,5 @@
 <frontmatter>
-title: "Software Design Patterns: Abstraction Occurrence: What"
+title: "Design Patterns: Abstraction occurrence: What"
 </frontmatter>
 
 <include src="unit-inPage-asFlat.md" boilerplate />

@@ -1,4 +1,4 @@
-<span id="title">Build Automation</span>
+<span id="title">Build automation</span>
 
 <div id="body">
 

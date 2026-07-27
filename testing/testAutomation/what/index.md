@@ -1,5 +1,5 @@
 <frontmatter>
-title: "Testing: Test Automation: What"
+title: "Testing: Test automation: What"
 </frontmatter>
 
 <include src="unit-inPage-asFlat.md" boilerplate />

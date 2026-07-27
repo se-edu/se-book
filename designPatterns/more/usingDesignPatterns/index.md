@@ -1,5 +1,5 @@
 <frontmatter>
-title: "Software Design Patterns: More: Using Design Patterns"
+title: "Design Patterns: More: Using design patterns"
 </frontmatter>
 
 <include src="unit-inPage-asFlat.md" boilerplate />

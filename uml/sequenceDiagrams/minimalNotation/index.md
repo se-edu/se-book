@@ -1,5 +1,5 @@
 <frontmatter>
-title: "UML: Sequence Diagrams: Minimal Notation"
+title: "UML: Sequence diagrams: Minimal notation"
 </frontmatter>
 
 <include src="unit-inPage-asFlat.md" boilerplate />

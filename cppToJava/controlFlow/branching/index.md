@@ -1,5 +1,5 @@
 <frontmatter>
-title: "C++ to Java: Control Flow: Branching"
+title: "C++ to Java: Control flow: Branching"
 </frontmatter>
 
 <include src="unit-inPage-asFlat.md" boilerplate />

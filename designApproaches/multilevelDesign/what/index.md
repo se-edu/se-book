@@ -1,5 +1,5 @@
 <frontmatter>
-title: "Design Approaches: Multi-Level Design"
+title: "Design Approaches: Multi-level design"
 </frontmatter>
 
 <include src="unit-inPage-asFlat.md" boilerplate />

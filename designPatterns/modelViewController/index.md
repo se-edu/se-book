@@ -1,5 +1,5 @@
 <frontmatter>
-title: "Software Design Patterns: Model View Controller"
+title: "Design Patterns: Model view controller"
 </frontmatter>
 
 <include src="container-inPage-asFlat.md" boilerplate />

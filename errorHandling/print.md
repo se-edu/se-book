@@ -32,7 +32,7 @@ title: "Error Handling [Printable]"
 <include src="logging/what/unit-inParent-asFlat-print.md" boilerplate />
 <include src="logging/how/unit-inParent-asFlat-print.md" boilerplate />
 
-## Defensive Programming
+## Defensive programming
 
 <include src="defensiveProgramming/what/unit-inParent-asFlat-print.md" boilerplate />
 <include src="defensiveProgramming/compulsoryAssociations/unit-inParent-asFlat-print.md" boilerplate />
@@ -40,7 +40,7 @@ title: "Error Handling [Printable]"
 <include src="defensiveProgramming/referentialIntegrity/unit-inParent-asFlat-print.md" boilerplate />
 <include src="defensiveProgramming/when/unit-inParent-asFlat-print.md" boilerplate />
 
-## Design-by-Contract Approach
+## Design-by-contract approach
 
 <include src="designByContract/what/unit-inParent-asFlat-print.md" boilerplate />
 

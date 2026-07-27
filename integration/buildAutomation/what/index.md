@@ -1,5 +1,5 @@
 <frontmatter>
-title: "Integration: Build Automation: What"
+title: "Integration: Build automation: What"
 </frontmatter>
 
 <include src="unit-inPage-asFlat.md" boilerplate />

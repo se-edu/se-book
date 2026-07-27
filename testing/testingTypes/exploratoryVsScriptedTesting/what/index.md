@@ -1,5 +1,5 @@
 <frontmatter>
-title: "Testing Types: Exploratory vs Scripted Testing: What"
+title: "Testing Types: Exploratory vs scripted testing: What"
 </frontmatter>
 
 <include src="unit-inPage-asFlat.md" boilerplate />

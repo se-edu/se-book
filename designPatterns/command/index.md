@@ -1,5 +1,5 @@
 <frontmatter>
-title: "Software Design Patterns: Command"
+title: "Design Patterns: Command"
 </frontmatter>
 
 <include src="container-inPage-asFlat.md" boilerplate />

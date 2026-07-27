@@ -17,18 +17,18 @@ title: "Documentation [Printable]"
 
 ## Guidelines
 
-### Guideline: Go Top-down, Not Bottom-up
+### Guideline: Go top-down, not bottom-up
 
 <include src="guidelines/goTopDown/what/unit-inParent-asFlat-print.md" boilerplate />
 <include src="guidelines/goTopDown/why/unit-inParent-asFlat-print.md" boilerplate />
 <include src="guidelines/goTopDown/how/unit-inParent-asFlat-print.md" boilerplate />
 
-### Guideline: Aim for Comprehensibility
+### Guideline: Aim for comprehensibility
 
 <include src="guidelines/aimForComprehensibility/what/unit-inParent-asFlat-print.md" boilerplate />
 <include src="guidelines/aimForComprehensibility/how/unit-inParent-asFlat-print.md" boilerplate />
 
-### Guideline: Document Minimally, but Sufficiently
+### Guideline: Document minimally, but sufficiently
 
 <include src="guidelines/documentMinimally/what/unit-inParent-asFlat-print.md" boilerplate />
 <include src="guidelines/documentMinimally/how/unit-inParent-asFlat-print.md" boilerplate />

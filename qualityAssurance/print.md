@@ -16,15 +16,15 @@ title: "Quality Assurance [Printable]"
 <include src="introduction/what/unit-inParent-asFlat-print.md" boilerplate />
 <include src="introduction/validationVsVerification/unit-inParent-asFlat-print.md" boilerplate />
 
-## Code Reviews
+## Code reviews
 
 <include src="codeReviews/what/unit-inParent-asFlat-print.md" boilerplate />
 
-## Static Analysis
+## Static analysis
 
 <include src="staticAnalysis/what/unit-inParent-asFlat-print.md" boilerplate />
 
-## Formal Verification
+## Formal verification
 
 <include src="formalVerification/what/unit-inParent-asFlat-print.md" boilerplate />
 

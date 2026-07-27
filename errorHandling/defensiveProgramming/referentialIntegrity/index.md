@@ -1,5 +1,5 @@
 <frontmatter>
-title: "Error Handling: Defensive Programming: Enforcing Referential Integrity"
+title: "Error Handling: Defensive programming: Enforcing referential integrity"
 </frontmatter>
 
 <include src="unit-inPage-asFlat.md" boilerplate />

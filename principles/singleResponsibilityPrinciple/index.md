@@ -1,5 +1,5 @@
 <frontmatter>
-title: "Principles: Single Responsibility Principle"
+title: "Principles: Single responsibility principle"
 </frontmatter>
 
 <include src="unit-inPage-asFlat.md" boilerplate />

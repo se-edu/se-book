@@ -1,5 +1,5 @@
 <frontmatter>
-title: "Software Design Fundamentals"
+title: "Design Fundamentals"
 pageNav: 3
 </frontmatter>
 

@@ -11,7 +11,7 @@ title: "UML [Printable]"
 
 # UML
 
-## Class Diagrams
+## Class diagrams
 
 ### Introduction
 
@@ -29,7 +29,7 @@ title: "UML [Printable]"
 <include src="classDiagrams/associations/labels/unit-inParent-asFlat-print.md" boilerplate />
 <include src="classDiagrams/associations/multiplicity/unit-inParent-asFlat-print.md" boilerplate />
 
-### Associations as Attributes
+### Associations as attributes
 
 <include src="classDiagrams/associationsAsAttributes/what/unit-inParent-asFlat-print.md" boilerplate />
 
@@ -37,11 +37,11 @@ title: "UML [Printable]"
 
 <include src="classDiagrams/enumerations/what/unit-inParent-asFlat-print.md" boilerplate />
 
-### Class-Level Members
+### Class-level members
 
 <include src="classDiagrams/classLevelMembers/what/unit-inParent-asFlat-print.md" boilerplate />
 
-### Association Classes
+### Association classes
 
 <include src="classDiagrams/associationClasses/what/unit-inParent-asFlat-print.md" boilerplate />
 
@@ -53,7 +53,7 @@ title: "UML [Printable]"
 
 <include src="classDiagrams/aggregation/what/unit-inParent-asFlat-print.md" boilerplate />
 
-### Class Inheritance
+### Class inheritance
 
 <include src="classDiagrams/classInheritance/what/unit-inParent-asFlat-print.md" boilerplate />
 
@@ -61,17 +61,17 @@ title: "UML [Printable]"
 
 <include src="classDiagrams/interfaces/what/unit-inParent-asFlat-print.md" boilerplate />
 
-### Abstract Classes
+### Abstract classes
 
 <include src="classDiagrams/abstractClasses/what/unit-inParent-asFlat-print.md" boilerplate />
 
-## Object Diagrams
+## Object diagrams
 
 <include src="objectDiagrams/introduction/unit-inParent-asFlat-print.md" boilerplate />
 <include src="objectDiagrams/objects/unit-inParent-asFlat-print.md" boilerplate />
 <include src="objectDiagrams/associations/unit-inParent-asFlat-print.md" boilerplate />
 
-## Sequence Diagrams
+## Sequence diagrams
 
 <include src="sequenceDiagrams/introduction/unit-inParent-asFlat-print.md" boilerplate />
 <include src="sequenceDiagrams/basic/unit-inParent-asFlat-print.md" boilerplate />
@@ -85,13 +85,13 @@ title: "UML [Printable]"
 <include src="sequenceDiagrams/referenceFrames/unit-inParent-asFlat-print.md" boilerplate />
 <include src="sequenceDiagrams/minimalNotation/unit-inParent-asFlat-print.md" boilerplate />
 
-## Activity Diagrams
+## Activity diagrams
 
 ### Introduction
 
 <include src="activityDiagrams/introduction/what/unit-inParent-asFlat-print.md" boilerplate />
 
-### Basic Notations
+### Basic notations
 
 <include src="activityDiagrams/basicNotations/linearPaths/unit-inParent-asFlat-print.md" boilerplate />
 <include src="activityDiagrams/basicNotations/alternatePaths/unit-inParent-asFlat-print.md" boilerplate />

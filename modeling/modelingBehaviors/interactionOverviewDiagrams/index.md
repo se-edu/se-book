@@ -1,5 +1,5 @@
 <frontmatter>
-title: "Modeling: Modeling Behaviors: Interaction Overview Diagrams"
+title: "Modeling: Modeling behaviors: Interaction overview diagrams"
 </frontmatter>
 
 <include src="unit-inPage-asFlat.md" boilerplate />

@@ -1,5 +1,5 @@
 <frontmatter>
-title: "Modeling: Modeling Structures: Component Diagrams"
+title: "Modeling: Modeling structures: Component diagrams"
 </frontmatter>
 
 <include src="unit-inPage-asFlat.md" boilerplate />

@@ -18,7 +18,7 @@ title: "SDLC Process Models [Printable]"
 <include src="introduction/iterativeModels/unit-inParent-asFlat-print.md" boilerplate />
 <include src="introduction/agileModels/unit-inParent-asFlat-print.md" boilerplate />
 
-## Example Process Models
+## Example process models
 
 <include src="exampleProcessModels/xp/unit-inParent-asFlat-print.md" boilerplate />
 <include src="exampleProcessModels/scrum/unit-inParent-asFlat-print.md" boilerplate />
