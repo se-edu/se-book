@@ -46,7 +46,7 @@ The value `eventId` identifies the requested event. However, `isOrganizer` is me
 * **_Confidentiality_ asks who is allowed to see the information.**<br>
   {{ label_example }} %%An attendee's email address should not be disclosed to another student without a valid reason and permission.%% { text="C" t-size="15px" t-class="badge rounded-pill my-1 bg-info-subtle text-dark font-monospace" }
 
-* **_Integrity_ asks who is allowed to create, change, or delete information and behavior.**<br>
+* **_Integrity_ asks whether information and behavior have remained correct, complete, and free from improper change or destruction.** Authorization is one control used to preserve it.<br>
   {{ label_example }} %%A student should not be able to cancel another student's registration or grant themselves organizer privileges.%% { text="I" t-size="15px" t-class="badge rounded-pill my-1 bg-info-subtle text-dark font-monospace" }
 
 * **_Availability_ asks whether authorized users can obtain the service when they need it.**<br>
