@@ -34,17 +34,17 @@ The table is a timing guide. Apply the threat-modeling, implementation, and veri
 
 ##### When a security problem is discovered
 
-**Contain the harm before treating a security problem as an ordinary bug.** Depending on the situation, containment might mean disabling a vulnerable feature, revoking an exposed credential, restricting access, or taking an affected service temporarily offline.
+**What to do first depends on whose system it is.** In a system your team owns, contain the harm before treating the problem as an ordinary bug. In someone else's, report it first and contain only what you are authorized to touch. Beginning engineers are not expected to lead a major incident response alone; they are expected to recognize that a suspected security problem needs prompt, careful escalation rather than casual discussion in a public issue.
+
+Depending on the situation, containment might mean disabling a vulnerable feature, revoking an exposed credential, restricting access, or taking an affected service temporarily offline.
 
 **Stop exploring once you believe you have found a real problem.** Probing further can cause additional damage and makes the record harder to interpret afterwards.
 
-**Preserve what someone will need in order to understand it:** the time, what you did, and the smallest reproduction that demonstrates the problem. Do not copy out the sensitive data you were able to reach, because that spreads the exposure you are reporting.
+**Preserve what someone will need in order to understand it:** the time, what you did, and the smallest reproduction that demonstrates the problem. Capture the reproduction before revoking or disabling anything, where you can do both, because containing the harm can destroy the record of it. Do not copy out the sensitive data you were able to reach, because that spreads the exposure you are reporting.
 
 **Report through a private channel rather than a public one.** Use the project's security contact or reporting process where one exists, and course staff otherwise. If nobody acknowledges the report, work down a fallback order instead of waiting indefinitely or raising it in public: the project's documented security policy, then its maintainers or the repository owner, then the hosting platform's own vulnerability reporting mechanism. For coursework, course staff are the fallback.
 
 Then correct the cause, check for related weaknesses, verify the fix, and recover normal service carefully. **Withholding details until the people responsible have had a reasonable chance to act is called _coordinated disclosure_**, and many projects publish a policy describing how they expect it to work.
-
-Beginning engineers are not expected to lead a major incident response alone. They are expected to recognize that a suspected security problem needs prompt, careful escalation rather than casual discussion in a public issue.
 
 </div>
 
