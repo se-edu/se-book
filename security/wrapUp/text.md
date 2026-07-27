@@ -31,6 +31,7 @@ Before accepting a security-relevant change, ask:
 - [ ] Are secrets, credentials, sensitive data, errors, and logs handled safely?
 - [ ] Did the change add or alter a dependency, permission, interface, trust boundary, or configuration?
 - [ ] Which misuse, boundary, and cross-user cases have been reviewed and tested?
+- [ ] What risk remains after this change, who accepted it, and what would trigger revisiting it?
 - [ ] If an AI tool contributed, were its inputs, permissions, commands, dependencies, and full output checked?
 - [ ] Can I explain and take responsibility for the accepted change?
 

@@ -125,6 +125,8 @@ For an attendee list, controls might include:
 {% endcall %}
 
 One control can address several threats, and one threat may need several controls.
+
+**Not every risk gets a control.** A risk can be _reduced_ with a control, _removed_ by dropping the feature or the data that creates it, or _accepted_ as a cost of doing the useful thing. Accepting is a legitimate decision, but only when it is recorded with its reason, the person who owns it, and when it will be looked at again. An unrecorded acceptance is indistinguishable from an oversight.
 </panel>
 <panel header="###### 6. Verify controls and record assumptions" expanded>
 
@@ -134,7 +136,7 @@ One control can address several threats, and one threat may need several control
 For the attendee list, the correct organizer is the least informative case to test. The cases that decide whether the control works are the ones it is supposed to refuse.
 {% endcall %}
 
-Record the assumptions on which the controls depend. Keep the threat model near the design or feature it describes so that it can be revisited when the system or those assumptions change.
+Record the assumptions on which the controls depend. **Re-rate the risk with the controls in place**, using the same matrix, and record what remains and who accepts it. Keep the threat model near the design or feature it describes so that it can be revisited when the system or those assumptions change.
 </panel>
 
 <p/>
