@@ -17,10 +17,7 @@ Consider a registration page that correctly displays registration `381` to its o
 If changing the address to `/registrations/382` reveals another student's record, the feature works according to its happy path but has broken access control. The server checked that the requester was signed in; it did not check that the requester was authorized to view that particular record.
 {% endcall %}
 
-**Authentication and authorization answer different questions.**
-
-* _Authentication_ establishes an identity: "Who is making this request?"
-* _Authorization_ decides whether that identity may perform a specific action on a specific resource: "May this user view this registration?"
+**Authentication and authorization answer different questions:** authentication establishes who is making a request, and authorization decides whether that identity may perform this particular action on this particular resource.
 
 A user can be correctly authenticated and still be unauthorized. In most systems, authorization must be checked for every protected action, not just when the user first signs in.
 

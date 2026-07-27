@@ -71,6 +71,10 @@ The following terms let a team discuss security precisely:
   {{ label_example }} %%Changing a registration identifier in a request to retrieve someone else's record is an attack.%%
 * **{{ show_term("Control") }} or {{ show_term("Mitigation") }}: reduces the likelihood or impact of a threat.**<br>
   {{ label_example }} %%Checking ownership before returning a registration is a control.%%
+* **{{ show_term("Authentication") }}: establishing which identity is making a request.**<br>
+  {{ label_example }} %%Signing in as a particular student.%%
+* **{{ show_term("Authorization") }}: deciding whether that identity may perform a specific action on a specific resource.**<br>
+  {{ label_example }} %%Checking that this student owns the registration they asked to see.%%
 * **{{ show_term("Risk") }}: combines the likelihood of a threat with the seriousness of its impact.**
 
 These terms describe different parts of one situation. A valuable database is not a vulnerability. A possible theft is not an attack until someone attempts it. A control can reduce risk without eliminating it.
