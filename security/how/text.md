@@ -95,7 +95,7 @@ One control can address several threats, and one threat may need several control
 **A control is only a claim until it has been reviewed or tested.** Verify the paths an attacker would try, not only the intended path.
 
 {% call show_example() %}
-For the attendee list, test the correct organizer as well as an anonymous user, an attendee, an unrelated organizer, a malformed event identifier, and a user whose access has been revoked.
+For the attendee list, the correct organizer is the least informative case to test. The cases that decide whether the control works are the ones it is supposed to refuse.
 {% endcall %}
 
 Record the assumptions on which the controls depend. Keep the threat model near the design or feature it describes so that it can be revisited when the system or those assumptions change.
@@ -114,6 +114,10 @@ Record the assumptions on which the controls depend. Keep the threat model near 
 
 This statement is more useful than "the attendee list must be secure" because it can guide both design and testing.
 </box>
+
+<p/>
+
+**The last two steps carry most of the work, so the rest of this topic expands them.** Sections B to F cover how to choose and implement controls; section G covers how to verify them.
 
 ---------------------------------------------------------------------
 
