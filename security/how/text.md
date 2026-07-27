@@ -123,7 +123,7 @@ This statement is more useful than "the attendee list must be secure" because it
 
 ##### B. Apply secure design principles
 
-Apply the following core three design principles:
+Apply the following six design principles:
 
 <panel header="###### P1: Give only the permissions that are needed" expanded>
 
@@ -163,14 +163,37 @@ An allow rule is usually easier to review than an incomplete list of forbidden c
 
 Every extra part has a maintenance cost even if it currently appears harmless. A feature that does not exist does not need to be configured, patched, monitored, or defended.
 </panel>
+
+<panel header="###### P4: Put more than one control around important assets" expanded>
+
+**_Defense in depth_ means protecting an important asset with several independent controls, so that one failure is not enough.**
+{% call show_example() %}
+An attendee list can be protected by an application permission check, by database permissions that let the reporting account read only the rows it needs, and by access logging that makes unusual reads visible.
+{% endcall %}
+
+A second control limits the damage when the first is missing, misconfigured, or bypassed.
+</panel>
+
+<panel header="###### P5: Fail securely" expanded>
+
+**When something goes wrong, the failure should deny rather than allow.** An error should not grant access, skip validation, or reveal sensitive internals.
+{% call show_example() %}
+If the check that answers "is this user an organizer of this event?" fails or times out, the attendee list request should be refused rather than served.
+{% endcall %}
+
+When the system cannot establish that an action is permitted, denial is the safer outcome.
+</panel>
+
+<panel header="###### P6: Use established security mechanisms" expanded>
+
+**Authentication, password storage, encryption, and session management are easy to get subtly wrong, so prefer mechanisms many people have already reviewed and attacked.**
+{% call show_example() %}
+Use the platform's session facility rather than inventing a scheme that stores a user identifier in a cookie and trusts it on the next request.
+{% endcall %}
+
+Prefer maintained platform facilities and well-reviewed libraries over inventing a scheme.
+</panel>
 <p/>
-
-
-The following related principles are useful too:
-
-* **Use _defense in depth_ around important assets.** For example, combine an application permission check with restricted database permissions and useful access logging. A second control can limit damage if the first fails.
-* **Fail securely.** An error should not grant access, skip validation, or reveal sensitive internals. When the system is unsure whether an action is permitted, denial is usually safer than permission.
-* **Use established security mechanisms.** Authentication, password storage, encryption, and session management are easy to get subtly wrong. Prefer maintained platform facilities and well-reviewed libraries over inventing a scheme.
 
 ---------------------------------------------------------------------
 
