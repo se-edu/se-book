@@ -341,7 +341,7 @@ Before adding a dependency, ask:
 * What other packages and permissions will it add?
 * Can the team monitor and update it?
 
-Keep the dependency set small, record versions in the normal way for the ecosystem, and respond to security advisories according to actual exposure and impact. Do not blindly update everything without testing, but do not leave a known relevant vulnerability unassessed.
+Keep the dependency set small. **Commit the ecosystem's lock file**, so the exact resolved versions, including the transitive ones nobody chose deliberately, are recorded and reproducible. **Check those resolved versions against published advisories using a maintained scanner**, rather than against the version numbers written by hand in the build file. When an advisory matches, judge it by actual exposure: whether your code reaches the vulnerable path at all, and what the impact would be if it did. Test before updating, and when an update has to wait, record the decision, who owns it, and when it will be looked at again. Do not blindly update everything without testing, but do not leave a known relevant vulnerability unassessed.
 
 ---------------------------------------------------------------------
 
