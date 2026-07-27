@@ -72,6 +72,18 @@ STRIDE is one optional checklist for teams that want named categories: spoofing,
 
 Estimate likelihood by considering whether the feature is reachable, whether exploitation requires special access, and how easily the attack can be repeated or automated. Estimate impact by considering the sensitivity and amount of affected data, the privileges at risk, the number of people affected, whether the damage is reversible, and how long a service could be unavailable.
 
+{% call show_example() %}
+Three event-system threats, rated on that scale with the assumption behind each rating recorded:
+
+| Threat | Likelihood | Impact | Priority | Response |
+|---|---|---|---|---|
+| A student changes an identifier to read another event's attendee list | High: reachable by anyone signed in, and trivial to repeat | Medium: names and email addresses for one event | High | Check ownership on every request |
+| A compromised organizer account grants organizer rights to others | Low: requires an account compromise first | High: privileges spread, and the change is hard to notice | Medium | Log privilege changes and allow them to be revoked |
+| Automated sign-ups flood registration during a popular event | Medium: needs no account, and is easy to script | Medium: service lost during the window that matters, but recoverable | Medium | Limit how often one source can attempt registration |
+
+The first threat is rated highest even though its impact is not the largest, because it needs no special access and can be repeated at will.
+{% endcall %}
+
 Do not spend most of the security budget on an exciting but implausible attack while ignoring ordinary permission checks and exposed credentials.
 </panel>
 <panel header="###### 5. Choose controls" expanded>
