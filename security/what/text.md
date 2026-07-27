@@ -101,6 +101,8 @@ You do not need to memorize a catalog of vulnerabilities, but a few common label
 * **{{  show_term("Cross-site scripting (XSS)") }} occurs when a web application causes untrusted content to execute as a script in another user's browser.**
 * **_Vulnerable or outdated components_ expose a system to known weaknesses in reused software.**
 
+**Each label has a matching engineering practice, and this chapter covers all four:** enforcing authorization on every protected action, keeping untrusted data separate from commands, encoding output for the context it is placed into, and treating dependencies as part of the product.
+
 The [OWASP Top 10](https://owasp.org/www-project-top-ten/) is a widely used awareness list for web-application risks. It is a useful pointer for further study, but it is not a complete model of software security and should not replace thinking about the specific system in front of you.
 
 </div>
