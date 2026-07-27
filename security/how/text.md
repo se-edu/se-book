@@ -29,7 +29,7 @@ For the event system, assets include attendee details, registration records, org
 </panel>
 <panel header="###### 2. Sketch the system and its trust boundaries" expanded>
 
-**A _trust boundary_ is a place where data or control passes between parts with different levels of trust.** Examples include a browser calling a server, a server reading an uploaded file, an application querying a database, and a build process downloading a dependency.
+**A {{ show_term("trust boundary") }} is a place where data or control passes between parts with different levels of trust.** Examples include a browser calling a server, a server reading an uploaded file, an application querying a database, and a build process downloading a dependency.
 
 {% call show_example() %}
 A simple sketch of the event system is enough:
