@@ -1,7 +1,6 @@
+{% from "common/macros.njk" import show_example, show_term with context %}
 <span id="prereqs"></span>
-
 <span id="outcomes">{{ icon_outcome }} Can integrate security into the software lifecycle</span>
-
 <span id="title">When</span>
 
 <div id="body">
@@ -17,9 +16,12 @@
 | Integration and release | Check dependencies and secrets, use secure configuration and defaults, and remove development credentials and diagnostics. |
 | Operation and maintenance | Monitor important failures, update relevant components, remove unused access, and prepare to contain and recover from incidents. |
 
-The table is a timing guide. The threat-modeling, implementation, and verification practices in the previous unit explain how to perform these actions. Apply them while the relevant decisions are still easy to change, and continue maintaining the controls after release.
+The table is a timing guide. Apply the threat-modeling, implementation, and verification practices while the relevant decisions are still easy to change, and continue maintaining the controls after release.
 
-**State security needs as testable properties rather than vague wishes.** "The system must be secure" gives the team no direction. "Only an event's organizers can view its attendee list" identifies the asset, permitted actors, and protected action. A corresponding misuse case is "a student changes an event identifier to download another event's list."
+**State security needs as testable properties rather than vague wishes.**
+{% call show_example() %}
+"The system must be secure" gives the team no direction. "Only an event's organizers can view its attendee list" identifies the asset, permitted actors, and protected action. A corresponding misuse case is "a student changes an event identifier to download another event's list."
+{% endcall %}
 
 **Revisit the security analysis whenever an important assumption changes.** Common triggers include:
 

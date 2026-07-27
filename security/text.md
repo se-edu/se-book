@@ -2,7 +2,6 @@
 
 <div id="body">
 
-<include src="intro/unit-inParent-asPanel.md" boilerplate />
 <include src="what/unit-inParent-asPanel.md" boilerplate />
 <include src="why/unit-inParent-asPanel.md" boilerplate />
 <include src="how/unit-inParent-asPanel.md" boilerplate />

@@ -24,15 +24,15 @@
 
 Before accepting a security-relevant change, ask:
 
-* **What assets and stakeholders could this change affect?**
-* **Where does untrusted data or a less-trusted actor cross a boundary?**
-* **Who is authenticated, and is each protected action authorized?**
-* **Could data become executable code, a command, a query, or active content in an output?**
-* **Are secrets, credentials, sensitive data, errors, and logs handled safely?**
-* **Did the change add or alter a dependency, permission, interface, trust boundary, or configuration?**
-* **Which misuse, boundary, and cross-user cases have been reviewed and tested?**
-* **If an AI tool contributed, were its inputs, permissions, commands, dependencies, and full output checked?**
-* **Can I explain and take responsibility for the accepted change?**
+- [ ] What assets and stakeholders could this change affect?
+- [ ] Where does untrusted data or a less-trusted actor cross a boundary?
+- [ ] Who is authenticated, and is each protected action authorized?
+- [ ] Could data become executable code, a command, a query, or active content in an output?
+- [ ] Are secrets, credentials, sensitive data, errors, and logs handled safely?
+- [ ] Did the change add or alter a dependency, permission, interface, trust boundary, or configuration?
+- [ ] Which misuse, boundary, and cross-user cases have been reviewed and tested?
+- [ ] If an AI tool contributed, were its inputs, permissions, commands, dependencies, and full output checked?
+- [ ] Can I explain and take responsibility for the accepted change?
 
 ##### Further reading
 

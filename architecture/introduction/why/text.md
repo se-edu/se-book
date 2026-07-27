@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import show_example %}
+{% from "common/macros.njk" import show_example with context %}
 <span id="title">Why</span>
 
 <span id="prereqs"></span>

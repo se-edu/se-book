@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_example with context %}
 <span id="prereqs"></span>
 
 <span id="outcomes">{{ icon_outcome }} Can use AI coding tools without delegating security responsibility</span>
@@ -61,19 +62,20 @@ If a generated patch is too large to understand, split it into smaller changes o
 
 Treat each suggestion as a hypothesis. Check it against the actual requirements, code, environment, and authoritative documentation. Asking the same tool to declare its own code secure is not an independent review.
 
-##### Running example
 
-Suppose an AI assistant produces an attendee-list endpoint and a test for the correct organizer. As with the `isOrganizer` flag in the _What_ unit, the generated endpoint accepts an `organizerId` from the request and treats that client-supplied value as proof of authority.
+{% call show_example() %}
+Suppose an AI assistant produces an attendee-list endpoint for the event system and a test for the correct organizer. The generated endpoint accepts an `organizerId` from the request and treats that client-supplied value as proof of authority.
 
 A security-minded review should:
 
-1. **Replace the untrusted `organizerId` claim with authenticated identity, then check that the user organizes the requested event.**
-1. **Return only the attendee fields the feature needs.**
-1. **Add tests for an attendee, an unrelated organizer, an anonymous request, a changed event identifier, and revoked access.**
-1. **Check every suggested dependency and remove it if the platform already provides the capability.**
-1. **Accept the change only when the engineer can explain the final authorization rule and its tests.**
+1. Replace the untrusted `organizerId` claim with authenticated identity, then check that the user organizes the requested event.
+1. Return only the attendee fields the feature needs.
+1. Add tests for an attendee, an unrelated organizer, an anonymous request, a changed event identifier, and revoked access.
+1. Check every suggested dependency and remove it if the platform already provides the capability.
+1. Accept the change only when the engineer can explain the final authorization rule and its tests.
 
 The same review would be required if a teammate wrote the code. AI changes the speed and source of the draft, not the security standard applied to the result.
+{% endcall %}
 
 </div>
 
