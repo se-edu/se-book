@@ -299,7 +299,7 @@ page.setText(event.name)       // preferred for plain text
 
 **The attack this prevents is _cross-site scripting_ (XSS):** content supplied by one user is executed as a script in another user's browser.
 
-HTML text, HTML attributes, URLs, scripts, styles, and other destinations have different encoding rules. Prefer framework features that encode safely by default, and avoid raw-output features unless the content has a trusted origin and a clear reason to contain markup.
+HTML text, HTML attributes, URLs, scripts, styles, and other destinations have different encoding rules. Prefer framework features that encode safely by default, and avoid raw-output features unless the content comes from a source the system itself controls. An authenticated user is not such a source: the organizer in the example above was signed in. **When a feature genuinely requires user-authored markup, neither plain encoding nor raw output will do:** run the content through a maintained HTML sanitizer that keeps a known set of tags and attributes and discards the rest.
 
 **Input validation does not replace output encoding.** A valid event name can legitimately contain characters with special meaning in HTML. Parameterized queries do not replace output encoding either; the two controls protect different boundaries.
 
