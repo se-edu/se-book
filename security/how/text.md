@@ -38,13 +38,18 @@ A simple sketch of the event system is enough:
 student's browser
         |
         | untrusted request
+= = = = | = = = = = = = = = = = = = = = = = =  trust boundary
         v
-registration server -----> email service
-        |
-        | database query
+registration server - - - - -> email service
+        |                  (boundary: another
+        | database query     organization's service)
+= = = = | = = = = = = = = = = = = = = = = = =  trust boundary
         v
 registration database
 ```
+
+The dashed lines mark where trust changes. Everything arriving from
+above a line has to be checked below it.
 {% endcall %}
 
 Do not label the entire "inside" of a system as trusted without thought. A database can contain malicious text entered earlier by a user. A partner service can be unavailable or compromised. A configuration file can be edited by someone with different privileges. **Trust should be earned at each boundary, not inherited forever from where data was first seen.**
