@@ -40,7 +40,7 @@ The table is a timing guide. Apply the threat-modeling, implementation, and veri
 
 **Preserve what someone will need in order to understand it:** the time, what you did, and the smallest reproduction that demonstrates the problem. Do not copy out the sensitive data you were able to reach, because that spreads the exposure you are reporting.
 
-**Report through a private channel rather than a public one.** Use the project's security contact or reporting process where one exists, and course staff otherwise. If nobody acknowledges the report, escalate to a named fallback instead of waiting indefinitely or raising it in public.
+**Report through a private channel rather than a public one.** Use the project's security contact or reporting process where one exists, and course staff otherwise. If nobody acknowledges the report, work down a fallback order instead of waiting indefinitely or raising it in public: the project's documented security policy, then its maintainers or the repository owner, then the hosting platform's own vulnerability reporting mechanism. For coursework, course staff are the fallback.
 
 Then correct the cause, check for related weaknesses, verify the fix, and recover normal service carefully. **Withholding details until the people responsible have had a reasonable chance to act is called _coordinated disclosure_**, and many projects publish a policy describing how they expect it to work.
 
