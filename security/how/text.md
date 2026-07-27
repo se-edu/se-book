@@ -247,7 +247,7 @@ External data includes more than text typed into a form. Requests, file uploads,
 An event identifier might need to be a positive integer referring to an existing event. An event name might need a reasonable maximum length. A start time might need to precede an end time.
 {% endcall %}
 
-Prefer an _allowlist_ that describes acceptable data over a list of known-bad strings. Attackers can often express the same harmful meaning in forms a denylist did not anticipate.
+Prefer an _allowlist_, which describes acceptable data, over a _denylist_ of known-bad strings. Attackers can often express the same harmful meaning in forms a denylist did not anticipate: a rule that rejects `<script` is bypassed by `<ScRiPt`, by `<img onerror=...>`, and by encoded forms the browser decodes only after the check has run.
 
 Client-side validation can improve usability, but it is not a security boundary because a client can be modified or bypassed. **Validation that protects server-side assets must also occur on the trusted side of the boundary.**
 
