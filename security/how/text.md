@@ -87,7 +87,7 @@ STRIDE is one optional checklist for teams that want named categories. It can he
 
 Estimate likelihood by considering whether the feature is reachable, whether exploitation requires special access, and how easily the attack can be repeated or automated. Estimate impact by considering the sensitivity and amount of affected data, the privileges at risk, the number of people affected, whether the damage is reversible, and how long a service could be unavailable.
 
-**Combine the two ratings using a rule the team agrees in advance**, so that two people analyzing the same threat reach the same answer:
+**Combine the two ratings using a rule the team agrees on in advance**, so that two people analyzing the same threat reach the same answer:
 
 | Likelihood ↓ / Impact → | Low | Medium | High |
 |---|---|---|---|
