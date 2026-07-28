@@ -3,7 +3,7 @@
 
 <span id="outcomes">{{ icon_outcome }} Can use AI coding tools without delegating security responsibility</span>
 
-<span id="title">AI coding tools</span>
+<span id="title">Securing AI-assisted code</span>
 
 <div id="body">
 
