@@ -13,7 +13,7 @@
 1. **_Reproduce_** — make the failure happen on demand.
 1. **_Automate and simplify_** — turn the reproduction into a one-command test, and reduce it to the smallest case that still fails.
 1. **_Find origins_** — list the places where the state could first have gone wrong.
-1. **_Focus_** — pick the most likely of them, and state what it predicts.
+1. **_Focus_** — pick the most likely origin, and state what it predicts.
 1. **_Isolate_** — run the check that decides, and conclude.
 1. **_Correct_** — fix the cause, confirm it, and guard against recurrence.
 
