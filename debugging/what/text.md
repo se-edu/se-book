@@ -88,7 +88,7 @@ A debugger stopped at the failure would be pointing at the display code, which i
 
 * {{ bad }} **_Stare and hope_** — reading the code and waiting for the bug to reveal itself. This inspects the code but not the state, using the mental model that wrote the defect. Fine as a 30-second first try; a poor plan for the next two hours.
 * {{ bad }} **_Shotgun debugging_** — changing whatever looks suspicious and re-running to see whether it helped. Each run teaches you nothing: a change that does not fix the problem has neither confirmed nor eliminated any explanation, and unrelated edits accumulate.
-* {{ bad }} **_Debugging into existence_** — mutating the code until the symptom disappears. The symptom often vanishes because a second defect cancels the first, leaving two bugs and a harder problem later.
+* {{ bad }} **_Debugging into existence_** — mutating the code until the symptom disappears. The symptom often vanishes because a second defect cancels the first, leaving two bugs and a harder problem later. The difference from shotgun debugging is the stopping rule: here you stop when the symptom goes away, having never identified a cause.
 * {{ bad }} **Fixing the symptom instead of the cause.** The failure goes away and the defect stays.<br>
   {{ label_example }} %%Special-casing the input that fails, or wrapping the crash in an empty `catch` block.%%
 * {{ bad }} **Keeping no record of what you tried.** Without notes you will re-test explanations you already eliminated, lose your place when interrupted, and be unable to hand the problem over.
