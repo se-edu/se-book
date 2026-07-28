@@ -44,7 +44,7 @@ As a rough guide:
 
 **The inspection views tell you what state the program is in.**
 
-* **The call stack shows how execution reached this point**, and selecting any frame reveals that method's variables. As the _What_ unit noted, the cause is often several frames above where the program stopped.
+* **The call stack shows how execution reached this point**, and selecting any frame reveals that method's variables. The cause is often several frames above where the program stopped.
 * **The variables view shows the values currently in scope**, and _watches_ track a chosen expression as you step.
 * **_Evaluate expression_ runs arbitrary code at the paused point**, turning passive inspection into a live experiment: you can test a hypothesis without editing or restarting. One caution — evaluating really does run the code, so calling a method that mutates state, or setting a variable by hand, changes the program you are observing.
 
@@ -70,7 +70,7 @@ Two habits are worth forming:
 
 <box type="tip" seamless>
 
-**AI assistants are useful for some parts of debugging and unreliable for others.** They are good at explaining unfamiliar error messages, proposing candidate hypotheses, and serving as an always-available rubber duck. They are unreliable at diagnosing a defect they cannot run, and will produce confident, fluent, incorrect explanations. The discipline of _How_ is what makes them safe: treat any suggestion as a hypothesis, insist it be falsifiable, and verify it against the running program yourself.
+**AI assistants are useful for some parts of debugging and unreliable for others.** They are good at explaining unfamiliar error messages, proposing candidate hypotheses, and serving as an always-available rubber duck. They are unreliable at diagnosing a defect they cannot run, and will produce confident, fluent, incorrect explanations. A systematic method is what makes them safe: treat any suggestion as a hypothesis, insist it be falsifiable, and verify it against the running program yourself.
 </box>
 
 ##### Reading stack traces

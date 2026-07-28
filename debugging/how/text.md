@@ -143,7 +143,7 @@ Binary search along the execution, on a run too long to watch: a 10,000-row impo
 * **Use the static checks you already have** — compiler warnings, IDE inspections, linters, `@Override`, generics, `final`. A defect caught here costs no debugging at all.
 * **Log at component boundaries**, so a failure reported from the field arrives with its context attached.
 
-Each of these shortens the distance between defect and failure — the quantity the _What_ unit identified as the root of the difficulty.
+Each of these shortens the distance between defect and failure, which is the root of the difficulty.
 
 </box>
 

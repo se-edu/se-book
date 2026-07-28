@@ -28,7 +28,7 @@ The cart example, end to end:
 1. _Track_: computing a total must not change the cart's contents; filed as "cart empties itself after the total is shown".
 1. _Reproduce_: adding three items and then calling `computeTotal()` empties the cart every time.
 1. _Automate and simplify_: a test that adds items, calls `computeTotal()`, then asserts on `getItems().size()`. One item is enough to fail, so the test uses one.
-1. _Find origins_, _Focus_, _Isolate_: the only statement that could empty `items` is the loop in `computeTotal()`, and `size()` dropping from 3 to 0 across the call — with `pending` and `items` confirmed to be the same object — settles it. (The debugging log in _How_ works these three steps hypothesis by hypothesis.)
+1. _Find origins_, _Focus_, _Isolate_: the only statement that could empty `items` is the loop in `computeTotal()`, and `size()` dropping from 3 to 0 across the call — with `pending` and `items` confirmed to be the same object — settles it.
 1. _Correct_: both `getItems()` returning a copy and `computeTotal()` iterating without mutating would remove the failure, so the real question is which contract to treat as authoritative. `getItems()` is an accessor, and an accessor that hands back live internal state makes every caller a potential mutator — so that is the one to change, and it returns `List.copyOf(items)`. Check the relatives while you are there: any other getter on the class that returns an internal collection has the same problem. The test now passes, the rest of the suite still passes, that test stays behind as the regression test, and the breakpoints used while isolating come out.
 {% endcall %}
 
