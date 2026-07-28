@@ -62,8 +62,10 @@ class Cart {
 }
 ```
 
+Take the cart's intended contracts to be these: computing a total must not change the cart, and `getItems()` lets callers read the items without owning the list.
+
 * _Mistake_: the programmer assumed `getItems()` hands back a copy.
-* _Defect_: `getItems()` returns the internal list itself, which `computeTotal()` then empties.
+* _Defect_: `getItems()` hands out the live internal list, which `computeTotal()` then empties — breaking both contracts at once.
 * _Infection_: after `computeTotal()` returns, the cart's own `items` list is empty.
 * _Failure_: the next attempt to display the cart shows nothing.
 
