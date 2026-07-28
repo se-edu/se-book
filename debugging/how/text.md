@@ -22,7 +22,7 @@
 **The initials spell TRAFFIC**, a widely used mnemonic for the debugging process %%due to Andreas Zeller%%.
 </box>
 
-**Treat this as a map rather than a mandatory order.** Steps 4 to 6 form a loop that turns several times before it lands on the cause, and the earlier steps reorder freely: simplifying often finds the origin for free, and a failed isolation sends you back for a better reproduction.
+**Treat this as a map rather than a mandatory order.** Steps 4 to 6 form a loop that turns several times before it lands on the cause, and you can reorder the earlier steps freely: simplifying often finds the origin for free, and a failed isolation sends you back for a better reproduction.
 
 **The most common mistake is jumping straight to step 7.** Starting at 'correct' and working backwards is how shotgun debugging happens. This unit covers steps 1 to 6; step 7 is covered separately.
 
