@@ -62,7 +62,7 @@ Rejecting hypothesis 1 is what suggested hypothesis 2.
 
 ##### 1. Track
 
-**Debugging starts with being able to state what the correct behavior is, and why.** Without that you have nothing to compare the program against, and you risk searching code that was right all along. State the expectation in the form you will eventually test it: for this input, that exact result.
+**Debugging starts with being able to state what the correct behavior is, and why.** Without that you have nothing to compare the program against, and you risk searching code that was right all along. State the expectation in the form the test will eventually take: for this input, that exact result.
 
 **Record the problem somewhere durable, so it survives an interruption** — an issue tracker entry for anything beyond a few minutes of work, a note beside you for the rest. A useful record holds the expected behavior, the actual behavior, the conditions under which you saw it, the steps to reproduce it, and the smallest failing case you have. This is not the same thing as a debugging log: the record holds the problem — expected behavior, actual behavior, conditions, smallest failing case — while the log holds the investigation, one line per hypothesis and what it settled.
 
