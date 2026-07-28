@@ -31,29 +31,6 @@ Nothing in the earlier units depends on this one. It extends the techniques in _
 * **Performance problems are bugs too** whenever the system misses a stated response-time or resource requirement — they just cannot be located by stepping. Profile rather than debug, and measure before optimizing: intuitions about where the time goes are usually wrong.
 * **Bugs in code you did not write are usually bugs in your use of it.** Build a minimal case demonstrating the misbehavior; the exercise generally exposes your own mistake, and if it does not, you have exactly what the library's issue tracker will ask for.
 
-##### Debugging in a team
-
-**A bug that is not written down is a bug that gets forgotten**, which is what issue trackers exist to prevent.
-
-Keep a running list of incidental bugs noticed while debugging something else; writing them down takes seconds and prevents the costlier alternative of abandoning the current investigation to chase a new one. Note too that bugs tend to cluster — in recently changed code, in frequently changed code, and in the most complex modules — which is useful when deciding where to concentrate reviews and testing. Treat this as a starting bias rather than a rule.
-
-##### Quick reference: common situations
-
-**Some symptoms suggest a standard first move.** Treat these as starting points rather than diagnoses.
-
-| Symptom | Often means | Reasonable first move |
-|---|---|---|
-| `NullPointerException` | Something was never initialized, or a method returned `null` unnoticed | Read the message to see which expression was null, then ask why |
-| Program hangs | A loop that never ends, a deadlock, blocking I/O, or an operation far slower than expected | Pause with the debugger and read the call stack of each thread |
-| `StackOverflowError` | Recursion without a reachable base case | Read the repeating cycle in the trace |
-| Wrong output, no crash | Anything — the hardest and most common case | Binary-search the execution for the first point where the state is wrong |
-| Off-by-one results | Boundary handling | Test with the smallest inputs: 0, 1, and 2 elements |
-| Passes tests, fails in the app | Environment, configuration, or leftover state | Compare the two environments before touching code |
-| Fails only on the second run | State persisted or not reset between runs | Look for static fields and files written by the first run |
-| Fails only on a teammate's machine | Locale, file paths, line endings, timezone, versions | Compare environments, not code |
-| Worked yesterday | A recent change | Bisect the history before reading any code |
-| Fails only sometimes | See _Hard cases_ above | Work on making it more frequent or more observable first |
-
 </div>
 
 <div id="extras">

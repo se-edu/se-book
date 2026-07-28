@@ -26,7 +26,7 @@
 
 **The most common mistake is jumping straight to step 7.** Starting at 'correct' and working backwards is how shotgun debugging happens. This unit covers steps 1 to 6; step 7 is covered in _Fixing_.
 
-<box type="info" seamless>
+<box type="info" light>
 
 ##### SIDEBAR: Scientific debugging {.text-info}
 
@@ -38,8 +38,6 @@
 1. **_Predict_** %%step 5%% — state what you would observe if the hypothesis were true, and if it were false.
 1. **_Experiment_** %%step 6%% — run the smallest probe that distinguishes those outcomes: a breakpoint, an assertion, a targeted print.
 1. **_Conclude_** %%step 6%% — reject the hypothesis, or record it as _supported so far_. The asymmetry matters: a result that matches your prediction does not prove your explanation is the only one that fits, whereas one that does not is decisive.
-
-**A good hypothesis can be proven wrong, and a good experiment leads somewhere different depending on its outcome.** If you already know what you will see, the run teaches you nothing.
 
 **Keep a debugging log.** One line per hypothesis, prediction, observation, and conclusion sounds bureaucratic, but it pays for itself within about twenty minutes on any non-trivial bug: it stops you re-testing rejected explanations, survives interruptions, and is what you hand over when the bug becomes someone else's.
 
@@ -126,9 +124,9 @@ A 500-line configuration file makes the app crash at startup. Halving gets nowhe
 * **Change one thing at a time**, or the outcome will not tell you which change produced it.
 * **Record the conclusion, then start the next turn of the loop** from the narrowed region — or, once the boundary is a single statement you can explain, from a cause you are ready to correct.
 
-<box type="info" seamless>
+<box type="success" light>
 
-**SIDEBAR: Making bugs easier to find** {.text-info}
+**SIDEBAR: Making bugs easier to find** {.text-success}
 
 **The cheapest bug to debug is the one that announces itself**, and most of what makes code debuggable is decided long before the bug exists.
 
