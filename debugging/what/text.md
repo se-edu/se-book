@@ -72,7 +72,7 @@ A debugger stopped at the failure would be pointing at the display code, which i
 
 ##### Why debugging is hard
 
-**Debugging consumes a large share of real development effort**, often more than writing the code did. Beginners tend to read time spent debugging as evidence that they are bad at programming. It is not; debugging is a distinct and learnable engineering skill.
+**Debugging consumes a large share of real development effort**, and a single stubborn defect routinely costs more than writing the code it hides in. Beginners tend to read time spent debugging as evidence that they are bad at programming. It is not; debugging is a distinct and learnable engineering skill.
 
 **Three things make it hard:**
 
