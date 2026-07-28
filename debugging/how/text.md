@@ -132,7 +132,7 @@ Binary search along the execution, on a run too long to watch: a 10,000-row impo
 
 <box type="success" light>
 
-**SIDEBAR: Making bugs easier to find** {.text-success}
+##### SIDEBAR: Making bugs easier to find {.text-success}
 
 **The cheapest bug to debug is the one that announces itself**, and most of what makes code debuggable is decided long before the bug exists.
 
