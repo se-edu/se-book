@@ -13,7 +13,7 @@ Nothing in the earlier units depends on this one. It extends the techniques in _
 
 ##### Going further with the basic techniques
 
-**{{ show_term("Delta debugging") }} automates the simplification of the failing case**, systematically removing parts of the input and keeping whichever reduction still fails. It handles the cases where plain halving does not, at a cost: in the worst case it needs on the order of n² tests. It still needs two things from you: a reliable test for whether a reduction still fails, and reductions that leave the input valid — the required header in the config example of _How_ is exactly such a constraint. Note the wider point — a mechanical procedure can replace intuition for this step.
+**{{ show_term("Delta debugging") }} automates the simplification of the failing case**, systematically removing parts of the input and keeping whichever reduction still fails. It handles the cases where plain halving does not, at a cost: in the worst case it needs on the order of n² tests. It still needs two things from you: a reliable test for whether a reduction still fails, and reductions that leave the input valid — a config file whose required header must survive every reduction is exactly such a constraint. Note the wider point — a mechanical procedure can replace intuition for this step.
 
 **The idea of a single boundary where the state first goes wrong describes the simple, deterministic case.** It blurs when the defect is an _omission_ %%nothing wrong happens; something right merely fails to%%, when two references alias the same object, when threads interleave, or when the bad state came from outside the program. Treat the boundary as what you are looking for, not as something guaranteed to exist at one identifiable point.
 
