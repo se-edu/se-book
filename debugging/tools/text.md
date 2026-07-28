@@ -33,7 +33,7 @@ As a rough guide:
 * A **{{ show_term("conditional breakpoint") }}** pauses only when a condition holds. This makes debugging the 4137th iteration of a loop feasible at all, and it is the feature beginners most often do not know exists.<br>
   {{ label_example }} %%Pausing only when `i == 4137`.%%
 * An **{{ show_term("exception breakpoint") }}** pauses at the moment an exception is thrown, before the stack unwinds and discards the state you need.
-* A **{{ show_term("field watchpoint") }}** pauses when a field's value changes rather than at a location — the right tool for "what is setting this to `null`?".
+* A **{{ show_term("field watchpoint") }}** pauses when a field's value changes rather than at a location — the right tool for "what is setting this to `null`?"
 
 <box type="tip" seamless>
 
