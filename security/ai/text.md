@@ -33,7 +33,7 @@ Give the tool only the access needed for the current task. Prefer a development 
 
 ##### Verify commands, APIs, and dependencies
 
-**Do not execute a generated command or install a generated dependency until you understand why it is needed and what it can affect.** Confirm names and APIs against authoritative documentation. A plausible package name may be mistaken, malicious, or unrelated to the intended project.
+**Do not execute a generated command or install a generated dependency until you understand why it is needed and what it can affect.** Confirm names and APIs against authoritative documentation. A plausible package name may be wrong, malicious, or unrelated to the intended project.
 
 Inspect changes to configuration, build scripts, lock files, permissions, and automated workflows with the same suspicion as application code. A two-line source change can cause a package manager or deployment system to execute much more code elsewhere.
 
