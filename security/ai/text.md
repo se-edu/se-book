@@ -29,7 +29,7 @@ Be aware that a tool may receive more context than the text explicitly pasted in
 
 Give the tool only the access needed for the current task. Prefer a development environment isolated from valuable data and production systems. Require human approval for high-impact actions such as changing permissions, using credentials, installing an unexpected dependency, publishing artifacts, or modifying external services.
 
-**Treat instructions found in source files, web pages, dependency documentation, issue text, and generated output as untrusted data.** This is an _indirect prompt-injection_ risk: content the tool was asked to read is taken as an instruction about what to do. It is the same confusion between data and instructions that parameterized queries prevent, but without the clean fix: no interface separates the two for a model the way a query parameter does for a database. That is why the controls above are architectural. A tool should not gain authority merely because an instruction appeared in content it was asked to read.
+**Treat instructions found in source files, web pages, dependency documentation, issue text, and generated output as untrusted data.** This is an _indirect prompt-injection_ risk: content the tool was asked to read is taken as an instruction about what to do. It is the same confusion between data and instructions that parameterized queries prevent. But there is no clean fix here: no interface separates the two for a model the way a query parameter does for a database. That is why the controls above are architectural. A tool should not gain authority merely because an instruction appeared in content it was asked to read.
 
 ##### Verify commands, APIs, and dependencies
 
