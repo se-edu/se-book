@@ -29,8 +29,8 @@ The cart example, end to end:
 1. _Reproduce_: adding three items and then calling `computeTotal()` empties the cart every time.
 1. _Automate and simplify_: a test that adds items, calls `computeTotal()`, then asserts on `getItems().size()`. One item is enough to fail, so the test uses one.
 1. _Find origins_: the wrong state is an emptied `items` list, so the candidates are every statement that could remove from it.
-1. _Focus_: `size()` is 3 before `computeTotal()` and 0 after, so the loop inside it is the prime suspect — and if that loop is guilty, its `pending` list must be the same object as `items`.
-1. _Isolate_: stepping in confirms the two identities match, so `remove(0)` is emptying the cart's own list.
+1. _Focus_: the loop in `computeTotal()` is the prime suspect, because it is the only code that removes from a list — and if it is guilty, its `pending` list must be the same object as `items`.
+1. _Isolate_: `size()` is 3 before `computeTotal()` and 0 after; stepping in then confirms the two identities match, so `remove(0)` is emptying the cart's own list.
 1. _Correct_: `getItems()` returns `List.copyOf(items)`; the test now passes, the rest of the suite still passes, and that test stays behind as the regression test.
 {% endcall %}
 
