@@ -220,7 +220,7 @@ A second control limits or reveals the damage when the first is missing, misconf
 If the check that answers "is this user an organizer of this event?" fails or times out, the attendee list request should be refused rather than served.
 {% endcall %}
 
-When the system cannot establish that an action is permitted, denial is the safer outcome. Denying on failure trades availability for the other two goals, so a check that denies when it fails needs availability attention of its own.
+Denying on failure trades availability for the other two goals, so a check that denies when it fails needs availability attention of its own.
 </panel>
 
 <panel header="###### P6: Use established security mechanisms" expanded>
