@@ -69,13 +69,13 @@ The following terms let a team discuss security precisely:
   {{ label_example }} %%Failing to check which student owns a registration is a vulnerability.%%
 * **{{ show_term("Attack") }}: an attempt to exploit a vulnerability.**<br>
   {{ label_example }} %%Changing a registration identifier in a request to retrieve someone else's record is an attack.%%
-* **{{ show_term("Control") }} or {{ show_term("Mitigation") }}: reduces the likelihood or impact of a threat.**<br>
+* **{{ show_term("Control") }} or {{ show_term("Mitigation") }}: something that reduces the likelihood or impact of a threat.**<br>
   {{ label_example }} %%Checking ownership before returning a registration is a control.%%
 * **{{ show_term("Authentication") }}: establishing which identity is making a request.**<br>
   {{ label_example }} %%Signing in as a particular student.%%
 * **{{ show_term("Authorization") }}: deciding whether that identity may perform a specific action on a specific resource.**<br>
   {{ label_example }} %%Checking that this student owns the registration they asked to see.%%
-* **{{ show_term("Risk") }}: combines the likelihood of a threat with the seriousness of its impact.**
+* **{{ show_term("Risk") }}: the likelihood of a threat combined with the seriousness of its impact.**
 * **{{ show_term("Misuse case") }}: a short scenario describing how someone could deliberately use the system to cause harm.**<br>
   {{ label_example }} %%A student changes an event identifier to download another event's list.%%
 
