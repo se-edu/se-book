@@ -7,7 +7,7 @@
 
 <div id="body">
 
-**Do not settle on a fix until you can explain the whole failure.** Temporary changes made as experiments are fine, but a change you intend to keep needs a causal account behind it, and if any of the observed behavior remains unaccounted for, the diagnosis is incomplete. The strongest check is to predict, before making the change, exactly what will be different afterwards, then verify that prediction. A fix that works for reasons you cannot state will come back.
+**Do not settle on a fix until you can explain the whole failure.** Temporary changes made as experiments are fine, but a change you intend to keep needs a causal account that explains every observed behavior. The strongest check is to predict, before making the change, exactly what will be different afterwards, then verify that prediction. A fix that works for reasons you cannot state will come back.
 
 **Fix the cause, not the infection and not the failure.** Special-casing the failing input or clamping a bad value removes the symptom and leaves the cause. It also helps to ask whether you have a coding error or a design error: a coding error is a defect — the code does not do what you intended — whereas a design error means the intention itself was wrong. The second cannot be repaired at the site of the failure — patching there breeds special cases, and the real remedy is a design change. These are the two common cases, not the only ones: the cause can equally sit in configuration, data, a dependency, or the requirement, and then the correction belongs there.
 
