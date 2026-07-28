@@ -75,7 +75,7 @@ Two habits are worth forming:
 
 ##### Reading stack traces
 
-**A stack trace is a precise report of where a program failed and the call path that led there**, and beginners routinely scroll past it. Note its limit: the call path is exact, but how the program came to be in that state is not in the trace.
+**A stack trace is a precise report of where a program failed and the call path that led there** — yet beginners routinely scroll past it. Note its limit: the call path is exact, but how the program came to be in that state is not in the trace.
 
 Read it in this order:
 
