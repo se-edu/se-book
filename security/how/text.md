@@ -193,7 +193,7 @@ over a growing collection of special cases that attempt to identify everyone who
 
 An allow rule is usually easier to review than an incomplete list of forbidden cases.
 
-**Deny by default is the access-control case of a wider principle, _secure by default_: a system should be safe in the configuration it ships with.** The rest of that principle covers everything an installation starts with, such as no default accounts or passwords, debug and diagnostic interfaces turned off, network exposure limited to what is needed, and data retained no longer than necessary.
+**Deny by default is the access-control case of a wider principle, _secure by default_: a system should be safe in the configuration it ships with.** The rest of that principle covers an installation's initial state: no default accounts or passwords, debug and diagnostic interfaces turned off, network exposure limited to what is needed, and data retained no longer than necessary.
 </panel>
 
 <panel header="###### P3: Expose less" expanded>
