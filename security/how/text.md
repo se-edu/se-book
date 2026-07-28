@@ -227,7 +227,7 @@ Denying on failure trades availability for the other two goals, so a check that 
 
 **Authentication, password storage, encryption, and session management are easy to get subtly wrong, so prefer mechanisms many people have already reviewed and attacked.**
 {% call show_example() %}
-Use the authentication and session support your stack already maintains, such as Spring Security for Java, Django's authentication system for Python, or a maintained session middleware for Node.js. Inventing a scheme that stores a user identifier in a cookie and trusts it on the next request is the common alternative, and it fails because that cookie is under the client's control and carries nothing the server can verify.
+Use the authentication and session support your stack already maintains, such as Spring Security for Java, Django's authentication system for Python, or a maintained session middleware for Node.js. The common alternative is to invent a scheme that stores a user identifier in a cookie and trusts it on the next request. It fails because that cookie is under the client's control and carries nothing the server can verify.
 {% endcall %}
 </panel>
 <p/>
