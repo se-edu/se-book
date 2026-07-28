@@ -101,7 +101,7 @@ A 500-line configuration file makes the app crash at startup. Halving gets nowhe
 
 ##### 4. Find origins
 
-**An origin is a place where the state could first have gone wrong**: before it the state is correct, after it the state is infected, and the cause sits at that boundary. This step aims at a list of candidate origins rather than a single answer — a search that begins with one suspect usually ends by confirming it wrongly.
+**An origin is a place where the state could first have gone wrong**: before it the state is correct, after it the state is infected, and the cause sits at that boundary. This step aims at a list of candidate origins rather than a single answer — a search that begins with one suspect usually ends by wrongly confirming that suspect.
 
 * **Reason backwards from the wrong value.** Ask which statements could have produced it, then which produced _their_ inputs. Following data and control dependencies backwards is called {{ show_term("backward slicing") }} — it narrows the candidates rather than pinpointing them, since a slice reliably contains every statement that could be responsible, usually along with some that could not.
 * **Explain the code aloud, line by line.** _Rubber duck debugging_ — explaining it to an inanimate object — works for a real reason: articulating what each line does forces you to state assumptions you had taken for granted, and the wrong one tends to announce itself mid-sentence. A patient friend, a written explanation, or an AI chat window works too — provided you do the explaining and verify anything it suggests against the running program; the value is in articulating the code, not in the reply you get back.
