@@ -37,7 +37,7 @@
   {{ label_example }} %%"Something's wrong with the list" is not a hypothesis; "`items` is empty by the time `computeTotal()` returns" is.%%
 1. **_Predict_** %%step 5%% — state what you would observe if the hypothesis were true, and if it were false.
 1. **_Experiment_** %%step 6%% — run the smallest probe that distinguishes those outcomes: a breakpoint, an assertion, a targeted print.
-1. **_Conclude_** %%step 6%% — reject the hypothesis, or record it as _supported so far_. The asymmetry matters: a result that matches your prediction does not prove your explanation is the only one that fits, whereas one that does not is decisive.
+1. **_Conclude_** %%step 6%% — reject the hypothesis, or record it as _supported so far_. The asymmetry matters: a result that matches your prediction does not prove your explanation is the only one that fits, whereas one that does not is decisive. You stop not when an observation matches, but when your explanation accounts for the whole failure — every symptom you saw, not only the one you probed.
 
 **Keep a debugging log.** One line per hypothesis, prediction, observation, and conclusion sounds bureaucratic, but it pays for itself within about twenty minutes on any non-trivial bug: it stops you re-testing rejected explanations, survives interruptions, and is what you hand over when the bug becomes someone else's.
 
@@ -48,7 +48,7 @@ A debugging log for the cart example, in which `computeTotal()` empties the very
 |---|---|---|---|---|
 | 1 | `add()` never stored the items | `items.size() == 0` right after adding | `size() == 3` | Rejected |
 | 2 | Something empties the list during `computeTotal()` | `size()` drops from 3 to 0 across the call | 3 before, 0 after | Supported — narrowed to that method |
-| 3 | `pending` and `items` are the same object | the two identities match when stepping into the loop | same object | Supported — cause found |
+| 3 | `pending` and `items` are the same object | the two identities match when stepping into the loop | same object | Supported — and it accounts for the whole failure: correct total, then an empty cart |
 
 Rejecting hypothesis 1 is what suggested hypothesis 2.
 {% endcall %}
