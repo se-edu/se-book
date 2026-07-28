@@ -1,6 +1,6 @@
 {% from "common/macros.njk" import show_term with context %}
 <span id="prereqs"></span>
-<span id="outcomes">{{ icon_outcome }} Can recognize hard-to-debug situations</span>
+<span id="outcomes">{{ icon_outcome }} Can recognize situations where the basic debugging techniques fall short, and knows what to reach for instead</span>
 <span id="title">Advanced</span>
 
 <div id="body">
