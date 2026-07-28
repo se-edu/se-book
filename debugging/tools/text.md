@@ -64,7 +64,7 @@ A field watchpoint on `items` would not have helped here: `items` is assigned on
 
 Two habits are worth forming:
 
-1. Set your first breakpoint _before_ the suspected region rather than at the failure, so you can watch the state go wrong
+1. Set your first breakpoint _before_ the suspected region rather than at the failure, so you can watch the state go wrong.
 1. Remember that a debugger reports only _what_ the state is. The _why_ still comes from the hypothesis loop.
 </box>
 
