@@ -127,7 +127,7 @@ For an attendee list, controls might include:
 
 One control can address several threats, and one threat may need several controls.
 
-**Not every risk gets a control.** A risk can be _reduced_ with a control, _removed_ by dropping the feature or the data that creates it, or _accepted_ as a cost of doing the useful thing. Accepting is a legitimate decision, but only when it is recorded with its reason, the person who owns it, and when it will be looked at again. An unrecorded acceptance is indistinguishable from an oversight.
+**Not every risk gets a control.** A risk can be _reduced_ with a control, _removed_ by dropping the feature or the data that creates it, or _accepted_ as a cost of doing the useful thing. Accepting is a legitimate decision, but only when it is recorded with its reason, its owner, and the date when it will be reconsidered. An unrecorded acceptance is indistinguishable from an oversight.
 </panel>
 <panel header="###### 6. Verify controls and record assumptions" expanded>
 
