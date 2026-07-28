@@ -68,7 +68,7 @@ Rejecting hypothesis 1 is what suggested hypothesis 2.
 
 <box type="tip" seamless>
 
-**Sometimes the fault is in the test**, not in the code under investigation: the test may hold its own defect, or its expectation may be wrong. Worth considering early, because it is easy to lose hours to.
+**Sometimes the fault is in the test**, not in the code under investigation: the test may hold its own defect, or its expectation may be wrong. Worth considering early, because it is easy to lose hours to a test that was wrong all along.
 </box>
 
 ##### 2. Reproduce
