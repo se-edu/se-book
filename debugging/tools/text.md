@@ -25,7 +25,7 @@ As a rough guide:
 
 ##### Using a debugger
 
-**A debugger lets you pause a running program and inspect and control it from the inside, without modifying its code.** That last part is what makes it different in kind from printing: asking one more question costs seconds rather than another edit-build-run cycle.
+**A debugger lets you pause a running program, then inspect and control it from the inside, without modifying its code.** That last part is what makes it different in kind from printing: asking one more question costs seconds rather than another edit-build-run cycle.
 
 **Breakpoints determine where the program pauses.**
 
