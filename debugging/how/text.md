@@ -119,7 +119,7 @@ A 500-line configuration file makes the app crash at startup. Halving gets nowhe
 
 * **Binary search along the execution is the highest-value technique here.** Pick a point roughly halfway through the suspect region, pause, and ask one question: is the state already wrong? If yes, look earlier; if no, look later. Each check roughly halves the region still under suspicion.
 * **Binary search over versions, when the code used to work.** If it passed last week, the cause is in one of the commits since — bisect the history rather than the code. `git bisect` automates this, and works best with small, self-contained commits; one you cannot build or test must be skipped, leaving several candidates rather than one.
-* **Swap a suspect component for one you trust.** If the failure survives the swap, that component is exonerated.<br>
+* **Swap a suspect component for one you trust.** If the failure survives the swap, that component is very likely not responsible.<br>
   {{ label_example }} %%Replace your comparator with a trivially correct one.%%
 * **Change one thing at a time**, or the outcome will not tell you which change produced it.
 * **Record the conclusion, then start the next turn of the loop** from the narrowed region — or, once the boundary is a single statement you can explain, from a cause you are ready to correct.
