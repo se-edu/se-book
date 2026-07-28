@@ -83,7 +83,7 @@ Reproducing means recreating everything the failure depends on, usually more tha
 
 ##### 3. Automate and simplify
 
-**Automate the reproduction as a test case as early as you can.** Turning "launch the app and perform these six steps" into a one-second command is what makes the hypothesis loop affordable — you will run it dozens of times before you are done — and it becomes the regression test once you have a fix.
+**Automate the reproduction as a test case as early as you can.** Turning "launch the app and perform these six steps" into a one-second command is what makes the hypothesis loop affordable, and it becomes the regression test once you have a fix. You will run it dozens of times before you are done.
 
 **The smaller the failing case, the smaller the search space** — every element you can remove while the failure persists eliminates a whole category of possible causes.
 
