@@ -70,7 +70,7 @@ Two habits are worth forming:
 
 <box type="tip" seamless>
 
-**AI assistants are useful for some parts of debugging and unreliable for others.** They are good at explaining unfamiliar error messages, proposing candidate hypotheses, and serving as an always-available rubber duck. They are unreliable at diagnosing a defect they cannot run, and will produce confident, fluent, incorrect explanations. A systematic method is what makes them safe: treat any suggestion as a hypothesis, insist it be falsifiable, and verify it against the running program yourself.
+**AI assistants are useful for some parts of debugging and unreliable for others.** They are good at explaining unfamiliar error messages, proposing candidate hypotheses, and serving as an always-available rubber duck. They are unreliable at diagnosing a defect in code they cannot run, and will produce confident, fluent, incorrect explanations. A systematic method is what makes them safe: treat any suggestion as a hypothesis, insist it be falsifiable, and verify it against the running program yourself.
 </box>
 
 ##### Reading stack traces
