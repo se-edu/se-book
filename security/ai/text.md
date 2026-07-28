@@ -42,7 +42,7 @@ Inspect changes to configuration, build scripts, lock files, permissions, and au
 Apply the following process to AI-assisted changes:
 
 1. **Constrain the task.** State the requirement, security properties, trust boundaries, allowed dependencies, and relevant misuse cases.
-1. **Inspect the entire change.** Read every line of source, configuration, build script, and test. For generated metadata such as a lock file, do not read it line by line; scan it for what should not be there, such as an unfamiliar package, a new install script, a changed registry, or a changed checksum.
+1. **Inspect the entire change.** Read every line of source, configuration, build script, and test. For generated metadata such as a lock file, do not read it line by line; scan it for what should not be there: an unfamiliar package, a new install script, a changed registry, or a changed checksum.
 1. **Trace untrusted data and protected actions.** Identify where inputs originate, how they are validated, where they are interpreted or rendered, and where authorization is enforced.
 1. **Test adversarial cases.** Add negative tests, boundary values, unexpected sequences, and cross-user permission tests rather than accepting only generated happy-path tests.
 1. **Use independent checks.** Run the project's tests and relevant static, secret, and dependency checks. Seek human review for high-impact changes.
