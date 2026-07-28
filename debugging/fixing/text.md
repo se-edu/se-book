@@ -31,7 +31,7 @@ The cart example, end to end:
 1. _Find origins_: the wrong state is an emptied `items` list, so the candidates are every statement that could remove from it.
 1. _Focus_: the loop in `computeTotal()` is the prime suspect, because it is the only code that removes from a list — and if it is guilty, its `pending` list must be the same object as `items`.
 1. _Isolate_: `size()` is 3 before `computeTotal()` and 0 after; stepping in then confirms the two identities match, so `remove(0)` is emptying the cart's own list.
-1. _Correct_: `getItems()` returns `List.copyOf(items)`; the test now passes, the rest of the suite still passes, and that test stays behind as the regression test.
+1. _Correct_: both `getItems()` returning a copy and `computeTotal()` iterating without mutating would remove the failure, so the real question is which contract to treat as authoritative. `getItems()` is an accessor, and an accessor that hands back live internal state makes every caller a potential mutator — so that is the one to change, and it returns `List.copyOf(items)`. Check the relatives while you are there: any other getter on the class that returns an internal collection has the same problem. The test now passes, the rest of the suite still passes, that test stays behind as the regression test, and the breakpoints used while isolating come out.
 {% endcall %}
 
 </div>
