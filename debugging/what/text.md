@@ -13,7 +13,7 @@ The debugging topics of this textbook draw substantially on [The Debugging Book]
 
 </box>
 
-**{{ show_term("Debugging") }} is the process of finding the cause of a known problem in a program, and fixing it.** It starts _after_ you know something is wrong; finding that a problem exists is the job of testing. The hard part is usually the diagnosis rather than the correction: once you understand why a program misbehaves, the edit itself is often a single character — though choosing *which* edit is a decision in its own right.
+**{{ show_term("Debugging") }} is the process of finding the cause of a known problem in a program, and fixing it.** It starts _after_ you know something is wrong — whether a test, a user, or monitoring exposed it; finding that the problem exists is a separate activity. The hard part is usually the diagnosis rather than the correction: once you understand why a program misbehaves, the edit itself is often a single character — though choosing *which* edit is a decision in its own right.
 
 To debug well, distinguish four things that beginners tend to lump together as 'the bug':
 
