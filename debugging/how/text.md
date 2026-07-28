@@ -103,7 +103,7 @@ A 500-line configuration file makes the app crash at startup. Halving gets nowhe
 
 **An origin is a place where the state could first have gone wrong**: before it the state is correct, after it the state is infected, and the cause sits at that boundary. This step aims at a list of candidate origins rather than a single answer — a search that begins with one suspect usually ends by confirming it wrongly.
 
-* **Reason backwards from the wrong value.** Ask which statements could have produced it, then which produced _their_ inputs. Following data and control dependencies backwards is called {{ show_term("slicing") }}, and what it yields is exactly the set of statements that could be responsible.
+* **Reason backwards from the wrong value.** Ask which statements could have produced it, then which produced _their_ inputs. Following data and control dependencies backwards is called {{ show_term("backward slicing") }} — it narrows the candidates rather than pinpointing them, since a slice reliably contains every statement that could be responsible, usually along with some that could not.
 * **Explain the code aloud, line by line.** _Rubber duck debugging_ — explaining it to an inanimate object — works for a real reason: articulating what each line does forces you to state assumptions you had taken for granted, and the wrong one tends to announce itself mid-sentence. A patient friend, a written explanation, or an AI chat window serves as well as (and even better than) a rubber duck.
 * **Read the evidence you already have** before generating candidates from the code alone. An exception message names the expression that failed, a stack trace names the calls that led there, and a diff names what changed recently.
 
