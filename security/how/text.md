@@ -58,7 +58,7 @@ Do not label the entire "inside" of a system as trusted without thought. A datab
 <panel header="###### 3. Identify plausible threats" expanded>
 
 
-**Ask how each important asset could be read, changed, impersonated, exhausted, or bypassed by someone who should not be able to do so.** Consider both outsiders and legitimate users exceeding their authority.
+**Ask how each important asset could be read, changed, or exhausted, and how the identities and checks that protect it could be impersonated or bypassed, by someone who should not be able to do so.** Consider both outsiders and legitimate users exceeding their authority.
 
 {% call show_example() %}
 For the attendee list:
