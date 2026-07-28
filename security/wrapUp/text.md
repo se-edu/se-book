@@ -12,7 +12,7 @@
 
 **Secure software engineering is risk management, not a promise of perfection.** Identify assets, stakeholders, trust boundaries, threats, and risks; then select controls whose benefits justify their costs.
 
-**Use a small set of durable principles.** Grant least privilege, deny by default, minimize attack surface, handle untrusted data at every boundary, enforce authorization on the trusted side, protect secrets and sensitive data, keep one caller from consuming the service, and treat dependencies as part of the product.
+**Use a small set of durable principles.** Grant least privilege, deny by default, minimize attack surface, handle untrusted data at every boundary, enforce authorization on the trusted side, protect secrets and sensitive data, keep one caller from consuming the resources others need, and treat dependencies as part of the product.
 
 **Verify security properties with reasoning, review, misuse cases, and several layers of automated checks.** A passing happy path or clean scan does not prove security.
 
