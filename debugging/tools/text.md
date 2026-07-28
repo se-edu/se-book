@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import show_term with context %}
+{% from "common/macros.njk" import show_example, show_term with context %}
 <span id="prereqs"></span>
 
 <span id="outcomes">{{ icon_outcome }} Can use a debugger</span>
@@ -47,6 +47,18 @@ As a rough guide:
 * **The call stack shows how execution reached this point**, and selecting any frame reveals that method's variables. As the _What_ unit noted, the cause is often several frames above where the program stopped.
 * **The variables view shows the values currently in scope**, and _watches_ track a chosen expression as you step.
 * **_Evaluate expression_ runs arbitrary code at the paused point**, turning passive inspection into a live experiment: you can test a hypothesis without editing or restarting. One caution — evaluating really does run the code, so calling a method that mutates state, or setting a variable by hand, changes the program you are observing.
+
+{% call show_example() %}
+One session on the cart example, from the first breakpoint to the diagnosis:
+
+1. Set a _line breakpoint_ on `total += pending.remove(0).price();`, then run the code that adds three items and calls `computeTotal()`.
+1. At the first pause the _variables view_ shows `pending` holding all three items, and nothing yet looks wrong.
+1. _Evaluate expression_ on `pending == items` answers `true`. That single evaluation is the diagnosis — the list being emptied is the cart's own — and it cost no edit, no rebuild, and no re-run.
+1. The _call stack_ shows `computeTotal()` called from the display code, so the frame the failure will surface in is not the frame the defect is in.
+1. Resume, and watch `items.size()` fall in the variables view as the loop runs.
+
+A field watchpoint on `items` would not have helped here: `items` is assigned once, where it is declared, so the watchpoint fires at construction and never for `remove(0)`. A watchpoint catches a field being reassigned, not the object it already points at being modified.
+{% endcall %}
 
 <box type="tip" seamless>
 
