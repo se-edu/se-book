@@ -207,7 +207,7 @@ Every extra part has a maintenance cost even if it currently appears harmless. A
 
 **_Defense in depth_ means protecting an important asset with several independent controls, so that one failure is not enough.**
 {% call show_example() %}
-An attendee list can be protected by an application permission check, by database permissions that let the reporting account read only the rows it needs, and by access logging that lets an unusual read be noticed when someone reviews it.
+An attendee list can be protected by an application permission check, by database permissions that let the reporting account read only the rows it needs, and by access logging that lets a reviewer notice an unusual read.
 {% endcall %}
 
 A second control limits or reveals the damage when the first is missing, misconfigured, or bypassed.
