@@ -13,7 +13,7 @@
 
 **AI-generated code must earn its place in the codebase through understanding, review, and verification.** Fluent output can compile and pass happy-path tests while omitting authorization, mishandling errors, using an unsafe API, exposing a secret, inventing a dependency, or relying on an assumption that is false in the actual system.
 
-The risk is not that all generated code is insecure. Human-written code can contain the same weaknesses. The risk is _automation bias_: polished and confident output can feel more trustworthy than the available evidence justifies. In [one controlled study](https://arxiv.org/abs/2211.03622), students and professionals writing a set of security-related programming tasks produced less secure solutions when they had access to an AI assistant, and were at the same time more confident that their solutions were secure.
+The risk is not that all generated code is insecure. Human-written code can contain the same weaknesses. The risk is _automation bias_: polished and confident output can feel more trustworthy than the available evidence justifies. In [one controlled study](https://arxiv.org/abs/2211.03622), students and professionals completing a set of security-related programming tasks produced less secure solutions when they had access to an AI assistant, and were at the same time more confident that their solutions were secure.
 
 **Do not use fluency, speed, compilation, or generated tests as evidence of security.** Evidence comes from understanding the change, checking its assumptions, and independently exercising the relevant security properties.
 
