@@ -87,10 +87,10 @@ The top of the trace is where the failure surfaced, but the cause is often furth
 
 | Exception | Usually means |
 |---|---|
-| `NullPointerException` | Something expected to be initialized never was, or a method returned `null` unnoticed |
+| `NullPointerException` | Something never initialized, or a method returning `null` unnoticed |
 | `IndexOutOfBoundsException` | An off-by-one, or an index computed from stale size information |
-| `ClassCastException` | An object is not the type assumed, often after an unchecked cast |
-| `ConcurrentModificationException` | A collection was modified while being iterated over, usually in a single thread {{ label_example }} %%removing from a list inside a for-each loop over that list%% |
+| `ClassCastException` | An object that is not the type assumed, often after an unchecked cast |
+| `ConcurrentModificationException` | A collection modified while being iterated over, usually in a single thread {{ label_example }} %%removing from a list inside a for-each loop over that list%% |
 | `StackOverflowError` | Recursion with a missing or unreachable base case |
 | `NumberFormatException` | Unvalidated input being parsed as a number |
 
