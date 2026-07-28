@@ -16,7 +16,7 @@ This textbook focuses on a small set of ideas that apply broadly. It does not at
 {% call show_example() %}
 We will use a university event-registration system as the running example throughout the related topics of this textbook. Students can view events and register themselves. Organizers can create events and view attendee lists. The system stores names, email addresses, registrations, and organizer privileges.
 
-Testing this event registration system for whether an ordinary user can register for an event is necessary, but it is not enough. We must also ask whether one student can view another student's registration, whether a non-organizer can obtain an attendee list, and whether an attacker can submit enough costly requests to make registration unavailable to everyone else.
+Testing whether an ordinary user can register for an event is necessary, but it is not enough. We must also ask whether one student can view another student's registration, whether a non-organizer can obtain an attendee list, and whether an attacker can submit enough costly requests to make registration unavailable to everyone else.
 {% endcall %}
 
 ##### The security mindset
