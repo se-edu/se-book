@@ -17,15 +17,20 @@
 1. **_Isolate_** — run the check that decides, and conclude.
 1. **_Correct_** — fix the cause, confirm it, and guard against recurrence.
 
+<box type="tip" seamless>
+
 **The initials spell TRAFFIC**, a widely used mnemonic for the debugging process %%due to Andreas Zeller%%.
+</box>
 
 **Treat this as a map rather than a mandatory order.** Steps 4 to 6 form a loop that turns several times before it lands on the cause, and the earlier steps reorder freely: simplifying often finds the origin for free, and a failed isolation sends you back for a better reproduction.
 
 **The most common mistake is jumping straight to step 7.** Starting at 'correct' and working backwards is how shotgun debugging happens. This unit covers steps 1 to 6; step 7 is covered in _Fixing_.
 
-##### Scientific debugging
+<box type="info" seamless>
 
-**Steps 2 to 6 are the scientific method applied to a program**: you have an unexplained phenomenon, you propose an explanation, and you test it. Applying it deliberately is what separates systematic debugging from guesswork; every technique that follows exists to make one turn of this loop cheaper.
+##### SIDEBAR: Scientific debugging {.text-info}
+
+**Steps 2 to 6 of TRAFFIC are the _scientific method_ applied to a program**: you have an unexplained phenomenon, you propose an explanation, and you test it. Applying it deliberately is what separates systematic debugging from guesswork; every technique that follows exists to make one turn of this loop cheaper.
 
 1. **_Observe_** %%steps 2 and 3%% — collect what you know: the input, the expected result, the actual result, and any state already inspected. Facts only; no guesses yet.
 1. **_Hypothesize_** %%steps 4 and 5%% — propose a specific, falsifiable explanation.<br>
@@ -50,9 +55,14 @@ A debugging log for the cart example, in which `computeTotal()` empties the very
 Rejecting hypothesis 1 is what suggested hypothesis 2.
 {% endcall %}
 
-**Knowing when to stop for the day is part of the method too.** Debugging is unusually sensitive to fatigue, because the whole activity consists of holding a model of the program in your head.
+</box>
 
-##### Track
+<box type="tip" seamless>
+
+**Know when to stop for the day:** Debugging is unusually sensitive to fatigue, because the whole activity consists of holding a model of the program in your head.
+</box>
+
+##### 1. Track
 
 **Debugging starts with being able to state what the correct behavior is, and why.** Without that you have nothing to compare the program against, and you risk searching code that was right all along. State the expectation in the form you will eventually test it: for this input, that exact result.
 
@@ -63,7 +73,7 @@ Rejecting hypothesis 1 is what suggested hypothesis 2.
 **Sometimes the defect is in the test**, not in the code: the program is right and the expectation is wrong. Worth considering early, because it is easy to lose hours to.
 </box>
 
-##### Reproduce
+##### 2. Reproduce
 
 **A reliable reproduction is the most valuable thing you can have**, because it makes every experiment cheap and is the only way to confirm afterwards that the fix worked.
 
@@ -71,7 +81,7 @@ Reproducing means recreating everything the failure depends on, usually more tha
 
 **When you cannot reproduce a failure you can still investigate it**, but the work changes character. Instead of running experiments you mine the evidence left behind: stack traces, logs, crash dumps, thread dumps, and the differences between runs that failed and runs that did not. The immediate goal becomes making the failure more observable or more frequent — logging around the suspected area, tightening assertions, or finding the extra ingredient that decides between the two outcomes. Reproducibility is not all-or-nothing: moving a bug from 'once a week' to 'one run in five' is real progress.
 
-##### Automate and simplify
+##### 3. Automate and simplify
 
 **Automate the reproduction as a test case as early as you can.** Turning "launch the app and perform these six steps" into a one-second command is what makes the hypothesis loop affordable — you will run it dozens of times before you are done — and it becomes the regression test once you have a fix.
 
@@ -89,7 +99,7 @@ A 500-line configuration file makes the app crash at startup. Halving gets nowhe
 
 **A good bug report is a reproduction that someone else can run.** The work of reproducing and simplifying _is_ the content of the report — which is why producing a minimal example so often solves the problem before it is filed. When you cannot reproduce a failure, report the evidence you do have %%logs, stack traces, the conditions under which it appeared%% rather than nothing.
 
-##### Find origins
+##### 4. Find origins
 
 **An origin is a place where the state could first have gone wrong**: before it the state is correct, after it the state is infected, and the cause sits at that boundary. This step aims at a list of candidate origins rather than a single answer — a search that begins with one suspect usually ends by confirming it wrongly.
 
@@ -97,7 +107,7 @@ A 500-line configuration file makes the app crash at startup. Halving gets nowhe
 * **Explain the code aloud, line by line.** _Rubber duck debugging_ — explaining it to an inanimate object — works for a real reason: articulating what each line does forces you to state assumptions you had taken for granted, and the wrong one tends to announce itself mid-sentence. A patient friend, a written explanation, or an AI chat window serves as well as (and even better than) a rubber duck.
 * **Read the evidence you already have** before generating candidates from the code alone. An exception message names the expression that failed, a stack trace names the calls that led there, and a diff names what changed recently.
 
-##### Focus
+##### 5. Focus
 
 **Candidate origins are not equally likely, and the order you check them in decides how long the search takes.**
 
@@ -105,7 +115,7 @@ A 500-line configuration file makes the app crash at startup. Halving gets nowhe
 * **Turn the chosen origin into a prediction before you check it.** State what you would observe if it is guilty and what you would observe if it is innocent; if you cannot say what the two outcomes would mean before you press run, you are not yet running an experiment.
 * **Where two candidates both fit the evidence, look for the check that separates them**, rather than one that merely agrees with your favorite.
 
-##### Isolate
+##### 6. Isolate
 
 **Isolating means running one check, discarding the part of the search space it rules out, and repeating** until the boundary narrows to a single statement.
 
@@ -118,7 +128,7 @@ A 500-line configuration file makes the app crash at startup. Halving gets nowhe
 
 <box type="info" seamless>
 
-**Sidebar: Making bugs easier to find** {.text-info}
+**SIDEBAR: Making bugs easier to find** {.text-info}
 
 **The cheapest bug to debug is the one that announces itself**, and most of what makes code debuggable is decided long before the bug exists.
 
