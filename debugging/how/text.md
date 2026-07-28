@@ -124,7 +124,7 @@ A 500-line configuration file makes the app crash at startup. Halving gets nowhe
 * **Swap a suspect component for one you trust.** If the failure survives the swap, that component is very likely not responsible.<br>
   {{ label_example }} %%Replace your comparator with a trivially correct one.%%
 * **Change one thing at a time**, or the outcome will not tell you which change produced it.
-* **Record the conclusion, then start the next turn of the loop** from the narrowed region — or, once the boundary is a single statement you can explain, from a cause you are ready to correct.
+* **Record the conclusion, then start the next turn of the loop** from the narrowed region — or, once the boundary is a single statement you can explain, move on to correcting the cause.
 
 {% call show_example() %}
 Binary search along the execution, on a run too long to watch: a 10,000-row import produces the right running total at the start and the wrong one at the end, and nothing in between is visible. Pause at row 5,000 and ask one question — is the total already wrong? If it is, the cause lies in the first half, so pause next at row 2,500; if it is not, pause at row 7,500. Fourteen such checks reduce 10,000 rows to one, and none of them requires understanding the code — only the ability to say whether the state is already wrong.
