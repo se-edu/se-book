@@ -11,7 +11,7 @@
 
 * **Print statements are the cheapest to start with and the most expensive to iterate with.** They need no setup, work in any environment, and survive across process and machine boundaries — but every new question costs an edit-build-run cycle, and the output has to be cleaned up afterwards.
 * **Logging is the disciplined, permanent form of printing.** Leveled and filterable, log statements can stay in the code — so they are still there when the failure happens on a user's machine at 3am, where no debugger can reach.
-* **Assertions are probes that check themselves.** Rather than printing a value for you to examine, an assertion states what it should be and fails immediately when it is not, turning a silent infection into a loud, located failure.
+* **Assertions are probes that check themselves.** Rather than printing a value for you to examine, an assertion states what it should be and fails immediately when it is not, turning a silent infection into a loud, located failure. If you use Java's `assert` statement, enable assertions in your run configuration (`-ea`) or it will do nothing; test-framework assertions are separate and always run.
 * **A debugger asks questions interactively, without changing the code at all.**
 
 <box type="tip" seamless>
