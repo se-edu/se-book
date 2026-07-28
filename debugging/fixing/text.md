@@ -25,13 +25,13 @@
 {% call show_example() %}
 The cart example, end to end:
 
-1. _Establish the expectation_: computing a total must not change the cart's contents.
-1. _Track_: filed as "cart empties itself after the total is shown".
-1. _Reproduce_: a test that adds three items, calls `computeTotal()`, then asserts `getItems().size() == 3`. It fails.
-1. _Simplify_: one item is enough to fail, so the test uses one.
-1. _Localize_: `size()` is 3 before the call and 0 after, so the boundary lies inside `computeTotal()`.
-1. _Explain_: stepping in shows that `pending` and `items` are the same object, so `remove(0)` is emptying the cart's own list.
-1. _Fix and verify_: `getItems()` returns `List.copyOf(items)`; the test now passes, the rest of the suite still passes, and that test stays behind as the regression test.
+1. _Track_: computing a total must not change the cart's contents; filed as "cart empties itself after the total is shown".
+1. _Reproduce_: adding three items and then calling `computeTotal()` empties the cart every time.
+1. _Automate and simplify_: a test that adds items, calls `computeTotal()`, then asserts on `getItems().size()`. One item is enough to fail, so the test uses one.
+1. _Find origins_: the wrong state is an emptied `items` list, so the candidates are every statement that could remove from it.
+1. _Focus_: `size()` is 3 before `computeTotal()` and 0 after, so the loop inside it is the prime suspect — and if that loop is guilty, its `pending` list must be the same object as `items`.
+1. _Isolate_: stepping in confirms the two identities match, so `remove(0)` is emptying the cart's own list.
+1. _Correct_: `getItems()` returns `List.copyOf(items)`; the test now passes, the rest of the suite still passes, and that test stays behind as the regression test.
 {% endcall %}
 
 </div>
