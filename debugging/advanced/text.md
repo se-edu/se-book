@@ -1,8 +1,6 @@
 {% from "common/macros.njk" import show_term with context %}
 <span id="prereqs"></span>
-
 <span id="outcomes">{{ icon_outcome }} Can recognize hard-to-debug situations</span>
-
 <span id="title">Advanced</span>
 
 <div id="body">
@@ -15,15 +13,15 @@ Nothing in the earlier units depends on this one. It extends the techniques in _
 
 ##### Going further with the basic techniques
 
-**{{ show_term("Delta debugging") }} automates the reduction described in _How_**, systematically removing parts of the input and keeping whichever reduction still fails. It handles the cases where plain halving does not, at a cost: in the worst case it needs on the order of n² tests. Note the wider point — a mechanical procedure can replace intuition for this step entirely.
+**{{ show_term("Delta debugging") }} automates the narrowing the search space for the bug**, systematically removing parts of the input and keeping whichever reduction still fails. It handles the cases where plain halving does not, at a cost: in the worst case it needs on the order of n² tests. Note the wider point — a mechanical procedure can replace intuition for this step entirely.
 
 **The boundary model of localization describes the simple, deterministic case.** It blurs when the defect is an _omission_ %%nothing wrong happens; something right merely fails to%%, when two references alias the same object, when threads interleave, or when the bad state came from outside the program. Treat the boundary as what you are looking for, not as something guaranteed to exist at one identifiable point.
 
-**Two further debugger commands are worth knowing once the basics are comfortable.** _Force step into_ enters library code that _step into_ normally skips. _Reset frame_ (or _drop frame_) pops the current call so you can re-enter a method you stepped past — but it restores only the execution point and local variables. Anything the method already did to fields, static state, files, or console output stays done, so it is not a way of going back in time.
+**Two further debugger commands are worth knowing once the basics are comfortable.** {{ show_term("Force step into") }} enters library code that _step into_ normally skips. {{ show_term("Reset frame") }} (or {{ show_term("Drop frame") }}) pops the current call so you can re-enter a method you stepped past — but it restores only the execution point and local variables. Anything the method already did to fields, static state, files, or console output stays done, so it is not a way of going back in time.ime.
 
 **{{ show_term("Tracing") }} records the execution automatically** — every line executed, or every change to a chosen variable — for examination afterwards. It is the right probe when the failure is too fast to watch, or happens in a run you cannot sit through interactively.
 
-<box>
+<box type="info" seamless>
 
 A widely used mnemonic for the debugging process is **TRAFFIC** — Track, Reproduce, Automate, Find origins, Focus, Isolate, Correct.
 
@@ -38,15 +36,12 @@ A widely used mnemonic for the debugging process is **TRAFFIC** — Track, Repro
 * **Some failures occur only in production**, under real data volumes, real configuration, and real users. With no way to attach a debugger, logging and telemetry are the entire toolkit.
 * **Performance problems are defects too** whenever the system misses a stated response-time or resource requirement — they just cannot be located by stepping. Profile rather than debug, and measure before optimizing: intuitions about where the time goes are usually wrong.
 * **Bugs in code you did not write are usually bugs in your use of it.** Build a minimal case demonstrating the misbehavior; the exercise generally exposes your own mistake, and if it does not, you have exactly what the library's issue tracker will ask for.
-* **Sometimes the defect is in the test**, not in the code: the program is right and the expectation is wrong. Worth considering early, because it is easy to lose hours to.
 
 ##### Debugging in a team
 
 **A bug that is not written down is a bug that gets forgotten**, which is what issue trackers exist to prevent. A useful record contains the expected and actual behavior, the steps to reproduce, the environment, and the smallest failing case you found.
 
 Keep a running list of incidental bugs noticed while debugging something else; writing them down takes seconds and prevents the costlier alternative of abandoning the current investigation to chase a new one. Note too that bugs cluster — in recently changed code, in frequently changed code, and in the most complex modules — which is useful when deciding where to concentrate reviews and testing.
-
-**AI assistants are useful for some parts of debugging and unreliable for others.** They are good at explaining unfamiliar error messages, proposing candidate hypotheses, and serving as an always-available rubber duck. They are unreliable at diagnosing a defect they cannot run, and will produce confident, fluent, incorrect explanations. The discipline of _How_ is what makes them safe: treat any suggestion as a hypothesis, insist it be falsifiable, and verify it against the running program yourself.
 
 ##### Quick reference: common situations
 

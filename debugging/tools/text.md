@@ -7,14 +7,21 @@
 
 <div id="body">
 
-**Every way of looking inside a running program is a {{ show_term("probe") }}** — a means of answering one specific question about its state. The useful question is never "print statements or debugger?" but "what is the cheapest probe that answers _this_ question?" Some probes come out once the bug is found; others are meant to stay.
+**Every way of looking inside a running program is a {{ show_term("probe") }}** — a means of answering one specific question about its state. The useful question is never "print statements or debugger?" but "what is the cheapest probe that answers _this_ question?" Some probes come out once the bug is found %%(e.g., a breakpoint or a temporary print statement)%%; others are meant to stay %%(e.g., a permanent log statement added at a component boundary)%%.
 
 * **Print statements are the cheapest to start with and the most expensive to iterate with.** They need no setup, work in any environment, and survive across process and machine boundaries — but every new question costs an edit-build-run cycle, and the output has to be cleaned up afterwards.
-* **Logging is the disciplined, permanent form of printing.** Leveled and filterable, log statements can stay in the code — so they are still there when the failure happens on a user's machine at 3am, where no debugger can reach. (→ _Logging_, in the Error Handling chapter.)
-* **Assertions are probes that check themselves.** Rather than printing a value for you to examine, an assertion states what it should be and fails immediately when it is not, turning a silent infection into a loud, located failure. (→ _Assertions_, in the Error Handling chapter.)
+* **Logging is the disciplined, permanent form of printing.** Leveled and filterable, log statements can stay in the code — so they are still there when the failure happens on a user's machine at 3am, where no debugger can reach.
+* **Assertions are probes that check themselves.** Rather than printing a value for you to examine, an assertion states what it should be and fails immediately when it is not, turning a silent infection into a loud, located failure.
 * **A debugger asks questions interactively, without changing the code at all.**
 
-As a rough guide: reproducible and local → debugger; needs to survive into production → logging; want to catch the problem at its origin → assertions.
+<box type="tip" seamless>
+
+As a rough guide:
+
+* reproducible and local → debugger
+* needs to survive into production → logging
+* want to catch the problem at its origin → assertions
+</box>
 
 ##### Using a debugger
 
@@ -22,14 +29,18 @@ As a rough guide: reproducible and local → debugger; needs to survive into pro
 
 **Breakpoints determine where the program pauses.**
 
-* A **line breakpoint** pauses when execution reaches a given line.
-* A **conditional breakpoint** pauses only when a condition holds. This makes debugging the 4137th iteration of a loop feasible at all, and it is the feature beginners most often do not know exists.<br>
+* A **{{ show_term("line breakpoint") }}** pauses when execution reaches a given line.
+* A **{{ show_term("conditional breakpoint") }}** pauses only when a condition holds. This makes debugging the 4137th iteration of a loop feasible at all, and it is the feature beginners most often do not know exists.<br>
   {{ label_example }} %%Pausing only when `i == 4137`.%%
-* An **exception breakpoint** pauses at the moment an exception is thrown, before the stack unwinds and discards the state you need.
-* A **field watchpoint** pauses when a field's value changes rather than at a location — the right tool for "what is setting this to `null`?". In Java, only fields can be watched this way, not local variables.
-* **Disable breakpoints rather than deleting them**, so that a debugging session can be paused and resumed.
+* An **{{ show_term("exception breakpoint") }}** pauses at the moment an exception is thrown, before the stack unwinds and discards the state you need.
+* A **{{ show_term("field watchpoint") }}** pauses when a field's value changes rather than at a location — the right tool for "what is setting this to `null`?".
 
-**Stepping commands determine how execution advances.** _Step over_ runs the next line, including any call it makes, as one step. _Step into_ enters the method being called. _Step out_ finishes the current method and pauses at its caller. _Run to cursor_ continues to a chosen line.
+<box type="tip" seamless>
+
+**Disable breakpoints rather than deleting them**, so that a debugging session can be paused and resumed.
+</box>
+
+**Stepping commands determine how execution advances.** {{ show_term("step over") }} runs the next line, including any call it makes, as one step. {{ show_term("step into") }} enters the method being called. {{ show_term("step out") }} finishes the current method and pauses at its caller. {{ show_term("run to cursor") }} continues to a chosen line.
 
 **The inspection views tell you what state the program is in.**
 
@@ -37,11 +48,19 @@ As a rough guide: reproducible and local → debugger; needs to survive into pro
 * **The variables view shows the values currently in scope**, and _watches_ track a chosen expression as you step.
 * **_Evaluate expression_ runs arbitrary code at the paused point**, turning passive inspection into a live experiment: you can test a hypothesis without editing or restarting. One caution — evaluating really does run the code, so calling a method that mutates state, or setting a variable by hand, changes the program you are observing.
 
+<box type="tip" seamless>
+
 Two habits are worth forming: set your first breakpoint _before_ the suspected region rather than at the failure, so you can watch the state go wrong; and remember that a debugger reports only _what_ the state is. The _why_ still comes from the hypothesis loop.
+</box>
+
+<box type="tip" seamless>
+
+**AI assistants are useful for some parts of debugging and unreliable for others.** They are good at explaining unfamiliar error messages, proposing candidate hypotheses, and serving as an always-available rubber duck. They are unreliable at diagnosing a defect they cannot run, and will produce confident, fluent, incorrect explanations. The discipline of _How_ is what makes them safe: treat any suggestion as a hypothesis, insist it be falsifiable, and verify it against the running program yourself.
+</box>
 
 ##### Reading stack traces
 
-**A stack trace is a free and precise report of where a program failed and the call path that led there**, and beginners routinely scroll past it. Note its limit: the call path is exact, but how the program came to be in that state is not in the trace.
+**A stack trace is a precise report of where a program failed and the call path that led there**, and beginners routinely scroll past it. Note its limit: the call path is exact, but how the program came to be in that state is not in the trace.
 
 Read it in this order:
 
@@ -60,10 +79,6 @@ The top of the trace is where the failure surfaced, but the cause is often furth
 | `StackOverflowError` | Recursion with a missing or unreachable base case |
 | `NumberFormatException` | Unvalidated input being parsed as a number |
 
-**Recent Java versions name the expression that was `null`.**<br>
-{{ label_example }} %%`Cannot invoke "Person.getName()" because "p" is null`%%
-
-That pinpoints the null — usually a large step forward — though why it was null may lie elsewhere. (→ _Exceptions_, in the Error Handling chapter.)
 
 </div>
 

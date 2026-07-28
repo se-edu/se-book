@@ -26,17 +26,23 @@
 **The inner loop of steps 3 to 6 is the scientific method**: you have an unexplained phenomenon, you propose an explanation, and you test it. Applying it deliberately is what separates systematic debugging from guesswork; every technique that follows exists to make one turn of this loop cheaper.
 
 1. **_Observe_** — collect what you know: the input, the expected result, the actual result, and any state already inspected. Facts only; no guesses yet.
-1. **_Hypothesize_** — propose a specific, falsifiable explanation. "Something's wrong with the list" is not a hypothesis; "`items` is empty by the time `computeTotal()` returns" is.
+1. **_Hypothesize_** — propose a specific, falsifiable explanation.<br>
+  {{ label_example }} %%"Something's wrong with the list" is not a hypothesis; "`items` is empty by the time `computeTotal()` returns" is.%%
 1. **_Predict_** — state what you would observe if the hypothesis were true, and if it were false.
 1. **_Experiment_** — run the smallest probe that distinguishes those outcomes: a breakpoint, an assertion, a targeted print.
 1. **_Conclude_** — reject the hypothesis, or record it as _supported so far_. The asymmetry matters: a result that matches your prediction does not prove your explanation is the only one that fits, whereas one that does not is decisive.
 
 **A good hypothesis can be proven wrong, and a good experiment leads somewhere different depending on its outcome.** If you already know what you will see, the run teaches you nothing. Where two rival explanations both fit, look for the experiment that separates them rather than one that merely agrees with your favorite.
 
+<box type="tip" seamless>
+
+**Sometimes the defect is in the test**, not in the code: the program is right and the expectation is wrong. Worth considering early, because it is easy to lose hours to.
+</box>
+
 **Keep a debugging log.** One line per hypothesis, prediction, observation, and conclusion sounds bureaucratic, but it pays for itself within about twenty minutes on any non-trivial bug: it stops you re-testing rejected explanations, survives interruptions, and is what you hand over when the bug becomes someone else's.
 
 {% call show_example() %}
-A debugging log for the cart example from the _What_ unit, in which `computeTotal()` empties the very list that `getItems()` handed it:
+A debugging log for the cart example, in which `computeTotal()` empties the very list that `getItems()` handed it:
 
 | # | Hypothesis | Prediction | Observation | Conclusion |
 |---|---|---|---|---|
@@ -47,7 +53,7 @@ A debugging log for the cart example from the _What_ unit, in which `computeTota
 Rejecting hypothesis 1 is what suggested hypothesis 2.
 {% endcall %}
 
-**_Rubber duck debugging_ — explaining your code line by line to an inanimate object — works for a real reason.** Articulating what each line does forces you to state assumptions you had taken for granted, and the wrong one tends to announce itself mid-sentence. A patient friend, a written explanation, or an AI chat window serves as well. Knowing when to stop for the day helps too: debugging is unusually sensitive to fatigue, because the whole activity consists of holding a model of the program in your head.
+**_Rubber duck debugging_ — explaining your code line by line to an inanimate object — works for a real reason.** Articulating what each line does forces you to state assumptions you had taken for granted, and the wrong one tends to announce itself mid-sentence. A patient friend, a written explanation, or an AI chat window serves as well (and even better) than a rubber duck. Knowing when to stop for the day helps too: debugging is unusually sensitive to fatigue, because the whole activity consists of holding a model of the program in your head.
 
 ##### Reproducing the failure
 
@@ -87,6 +93,23 @@ A 500-line configuration file makes the app crash at startup. Halving gets nowhe
 * **Prioritize your suspects sensibly**: recently changed code before long-stable code, your code before library code, library code before the compiler or the operating system. This is a starting bias rather than a rule.
 
 **Change one thing at a time, and know in advance what each run will tell you.** If you cannot say what the two possible outcomes would mean before you press run, you are not yet running an experiment.
+
+<box type="info" seamless>
+
+**Sidebar: Making bugs easier to find** {.text-info}
+
+**The cheapest bug to debug is the one that announces itself**, and most of what makes code debuggable is decided long before the bug exists.
+
+* **Fail fast.** Check preconditions and invariants on entry to a method, so an infection surfaces at its origin instead of ten frames later. (related: _defensive programming_, _assertions_)
+* **Keep scopes small.** A variable visible across three lines has only three lines as the search space for the bug; a field visible across a class has the whole class.
+* **Prefer immutability.** A value that cannot change cannot be changed wrongly, which removes an entire category of "what modified this?" investigations %%— including the one in the cart example%%.
+* **Develop incrementally, testing as you go.** When only twenty lines are new, the defect is almost certainly in those twenty lines. This is a high-value habit often abandoned under time pressure.
+* **Use the static checks you already have** — compiler warnings, IDE inspections, linters, `@Override`, generics, `final`. A defect caught here costs no debugging at all.
+* **Log at component boundaries**, so a failure reported from the field arrives with its context attached.
+
+Each of these shortens the distance between defect and failure — the quantity the _What_ unit identified as the root of the difficulty.
+
+</box>
 
 </div>
 

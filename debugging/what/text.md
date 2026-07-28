@@ -93,7 +93,7 @@ A debugger stopped at the failure would be pointing at the display code, which i
   {{ label_example }} %%Special-casing the input that fails, or wrapping the crash in an empty `catch` block.%%
 * {{ bad }} **Keeping no record of what you tried.** Without notes you will re-test explanations you already eliminated, lose your place when interrupted, and be unable to hand the problem over.
 
-Temporary print statements deserve a more careful verdict than a blanket ban. They are costly as a default habit — an edit-build-run cycle per question, edits that can introduce fresh defects, output that swamps the signal, leftovers that reach production — but **printing is not the problem; printing _without a hypothesis_ is**, which is shotgun debugging in another form. A few prints chosen to answer a specific question are legitimate, and in production, embedded, or concurrent settings they are sometimes the only tool available.
+**Adding temporary print statements to aid debugging is not necessariy bad; doing so _without a hypothesis_ is**, which is shotgun debugging in another form. A few prints chosen to answer a specific question are legitimate, and in production, embedded, or concurrent settings they are sometimes the only tool available. Costs of this technique include edits that can introduce fresh defects, output that swamps the output, leftovers that reach production.
 
 **What these have in common is that they produce activity without producing information.** A productive debugging step is one that rules something out.
 
