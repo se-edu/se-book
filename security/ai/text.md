@@ -21,7 +21,7 @@ The risk is not that all generated code is insecure. Human-written code can cont
 
 **Do not give a coding tool information it is not authorized to receive.** Follow the project's rules and the tool's approved configuration. Do not paste secrets, private keys, personal data, confidential logs, or proprietary source into an unapproved service.
 
-Be aware that a tool may receive more context than the text explicitly pasted into its prompt. Depending on its capabilities and configuration, it may read nearby files, terminal output, version-control history, issue descriptions, connected services, and environment variables. Inspect and restrict that access when sensitive information is present.
+A tool may receive more context than the text explicitly pasted into its prompt. Depending on its capabilities and configuration, it may read nearby files, terminal output, version-control history, issue descriptions, connected services, and environment variables. Inspect and restrict that access when sensitive information is present.
 
 ##### Limit what an acting tool can do
 
