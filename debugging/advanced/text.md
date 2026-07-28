@@ -7,7 +7,7 @@
 
 <box type="info" seamless>
 
-Nothing in the earlier units depends on this one. It extends the techniques in _How_ and _Tools_, and describes situations you will eventually meet but need not master now.
+Nothing in the earlier units depends on this one. It extends the basic techniques, and describes situations you will eventually meet but need not master now.
 
 </box>
 
