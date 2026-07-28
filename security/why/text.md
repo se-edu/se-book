@@ -25,7 +25,7 @@ A user can be correctly authenticated and still be unauthorized. In most systems
 
 **A security failure can harm people who never chose to accept the risk.** Exposed personal data can lead to harassment or fraud. Altered records can cause financial or academic consequences. An unavailable service can exclude users from something time-sensitive. Compromised software can also be used to attack other systems.
 
-The engineer who writes a small part of the program may not see these consequences directly. Nevertheless, small implementation choices can have system-wide effects. A missing permission check, leaked credential, or unsafe library call can bypass otherwise sound requirements, design, and testing.
+The engineer who writes a small part of the program may not see these consequences directly. Nevertheless, a missing permission check, leaked credential, or unsafe library call can bypass otherwise sound requirements, design, and testing.
 
 **Security problems also become more expensive after release.** Correcting one line of code may be the easy part. The response may also require investigating what happened, recovering data, revoking credentials, updating dependencies, deploying urgently, notifying affected people, and rebuilding trust.
 
