@@ -19,7 +19,7 @@ Nothing in the earlier units depends on this one. It extends the techniques in _
 
 **Two further debugger commands are worth knowing once the basics are comfortable.** {{ show_term("Force step into") }} enters library code that _step into_ normally skips. {{ show_term("Reset frame") }} (or {{ show_term("Drop frame") }}) pops the current call so you can re-enter a method you stepped past — but it restores only the execution point and local variables. Anything the method already did to fields, static state, files, or console output stays done, so it is not a way of going back in time.
 
-**{{ show_term("Tracing") }} records the execution automatically** — every line executed, or every change to a chosen variable — for examination afterwards. It is the right probe when the failure is too fast to watch, or happens in a run you cannot sit through interactively.
+**{{ show_term("Tracing") }} records the execution automatically** — every line executed, or every change to a chosen variable — for examination afterwards. It is the right probe when the failure is too fast to watch, or happens in a run you cannot sit through interactively — at the cost of volume, and of slowing the program enough to disturb the timing-sensitive failures described below.
 
 ##### Hard cases
 
