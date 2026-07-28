@@ -30,9 +30,9 @@
 
 ##### SIDEBAR: Scientific debugging {.text-info}
 
-**Steps 2 to 6 of TRAFFIC are the _scientific method_ applied to a program**: you have an unexplained phenomenon, you propose an explanation, and you test it. Applying it deliberately is what separates systematic debugging from guesswork; every technique that follows exists to make one turn of this loop cheaper.
+**Steps 1 to 6 of TRAFFIC are the _scientific method_ applied to a program**: you have an unexplained phenomenon, you propose an explanation, and you test it. Applying it deliberately is what separates systematic debugging from guesswork; every technique that follows exists to make one turn of this loop cheaper.
 
-1. **_Observe_** %%steps 2 and 3%% — collect what you know: the input, the expected result, the actual result, and any state already inspected. Facts only; no guesses yet.
+1. **_Observe_** %%steps 1 to 3%% — collect what you know: the input, the expected result, the actual result, and any state already inspected. Facts only; no guesses yet.
 1. **_Hypothesize_** %%steps 4 and 5%% — propose a specific, falsifiable explanation.<br>
   {{ label_example }} %%"Something's wrong with the list" is not a hypothesis; "`items` is empty by the time `computeTotal()` returns" is.%%
 1. **_Predict_** %%step 5%% — state what you would observe if the hypothesis were true, and if it were false.
