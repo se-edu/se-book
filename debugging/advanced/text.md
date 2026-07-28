@@ -28,7 +28,7 @@ Nothing in the earlier units depends on this one. It extends the techniques in _
 * **A {{ show_term("Heisenbug") }} changes or vanishes when you try to observe it.** Adding a print, attaching a debugger, or compiling with different settings perturbs timing or memory layout enough to hide the problem.
 * **Concurrency bugs are non-deterministic by nature.** Race conditions and deadlocks often cannot be reproduced on demand, and breakpoints alter the thread interleaving, so the debugger itself can make them disappear. Reason about the code, and log with thread identifiers.
 * **Some failures occur only in production**, under real data volumes, real configuration, and real users. With no way to attach a debugger, logging and telemetry are the entire toolkit.
-* **Performance problems are defects too** whenever the system misses a stated response-time or resource requirement — they just cannot be located by stepping. Profile rather than debug, and measure before optimizing: intuitions about where the time goes are usually wrong.
+* **Performance problems are bugs too** whenever the system misses a stated response-time or resource requirement — they just cannot be located by stepping. Profile rather than debug, and measure before optimizing: intuitions about where the time goes are usually wrong.
 * **Bugs in code you did not write are usually bugs in your use of it.** Build a minimal case demonstrating the misbehavior; the exercise generally exposes your own mistake, and if it does not, you have exactly what the library's issue tracker will ask for.
 
 ##### Debugging in a team
