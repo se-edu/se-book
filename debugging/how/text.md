@@ -75,11 +75,11 @@ Rejecting hypothesis 1 is what suggested hypothesis 2.
 
 ##### 2. Reproduce
 
-**A reliable reproduction is the most valuable thing you can have**, because it makes every experiment cheap and is the only way to confirm afterwards that the fix worked.
+**A reliable reproduction is the most valuable thing you can have**, because it makes every experiment cheap and is the surest way to confirm afterwards that the fix worked.
 
 Reproducing means recreating everything the failure depends on, usually more than the input alone: the input data, the program version, the environment and configuration %%operating system, locale, file paths, settings%%, the sequence of actions in order, and the starting state such as leftovers from a previous run.
 
-**When you cannot reproduce a failure you can still investigate it**, but the work changes character. Instead of running experiments you mine the evidence left behind: stack traces, logs, crash dumps, thread dumps, and the differences between runs that failed and runs that did not. The immediate goal becomes making the failure more observable or more frequent — logging around the suspected area, tightening assertions, or finding the extra ingredient that decides between the two outcomes. Reproducibility is not all-or-nothing: moving a bug from 'once a week' to 'one run in five' is real progress.
+**When you cannot reproduce a failure you can still investigate it**, but the work changes character. Instead of running experiments you mine the evidence left behind: stack traces, logs, crash dumps, thread dumps, and the differences between runs that failed and runs that did not. The immediate goal becomes making the failure more observable or more frequent — logging around the suspected area, tightening assertions, or finding the extra ingredient that decides between the two outcomes. Reproducibility is not all-or-nothing: moving a bug from 'once a week' to 'one run in five' is real progress. Without a reproduction you also confirm the fix differently: test the mechanism you believe was wrong, then watch for recurrence over a period long enough to mean something.
 
 ##### 3. Automate and simplify
 
