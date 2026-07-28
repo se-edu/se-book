@@ -236,7 +236,7 @@ Use the authentication and session support your stack already maintains, such as
 
 ##### C. Handle untrusted data safely
 
-External data includes more than text typed into a form. Requests, file uploads, command-line arguments, environment variables, configuration, database records, messages, dependency metadata, and responses from other services can all cross trust boundaries.
+Untrusted data includes more than text typed into a form. Requests, file uploads, command-line arguments, environment variables, configuration, database records, messages, dependency metadata, and responses from other services can all cross trust boundaries.
 
 **Untrusted data creates three separate responsibilities:** validate it for its intended use when it enters, keep it separate from instructions wherever it reaches an interpreter, and encode it for each output context it is placed into.
 
