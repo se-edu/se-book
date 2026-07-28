@@ -131,7 +131,7 @@ A 500-line configuration file makes the app crash at startup. Halving gets nowhe
 **The cheapest bug to debug is the one that announces itself**, and most of what makes code debuggable is decided long before the bug exists.
 
 * **Fail fast.** Check preconditions and invariants on entry to a method, so an infection surfaces close to its origin instead of ten frames later. (related: _defensive programming_, _assertions_)
-* **Keep scopes small.** A variable visible across three lines has only three lines as the search space for the bug; a field visible across a class has the whole class.
+* **Keep scopes small.** A variable visible across three lines has only three lines that could have changed it; a field visible across a class has the whole class.
 * **Prefer immutability.** A value that cannot change cannot be changed wrongly, which removes an entire category of "what modified this?" investigations %%— including the one in the cart example%%.
 * **Develop incrementally, testing as you go.** When only twenty lines are new, the defect is almost certainly in those twenty lines. This is a high-value habit often abandoned under time pressure.
 * **Use the static checks you already have** — compiler warnings, IDE inspections, linters, `@Override`, generics, `final`. A defect caught here costs no debugging at all.
