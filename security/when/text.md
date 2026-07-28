@@ -40,7 +40,7 @@ Depending on the situation, containment might mean disabling a vulnerable featur
 
 **Stop exploring once you believe you have found a real problem.** Probing further can cause additional damage and makes the record harder to interpret afterwards.
 
-**Preserve what someone will need in order to understand it:** the time, what you did, and the smallest reproduction that demonstrates the problem. Capture the reproduction before revoking or disabling anything, when capturing and containing are both possible, because containing the harm can destroy the record of it. Do not copy out the sensitive data you were able to reach, because that spreads the exposure you are reporting.
+**Preserve what someone will need in order to understand the problem:** the time, what you did, and the smallest reproduction that demonstrates it. Capture the reproduction before revoking or disabling anything, when capturing and containing are both possible, because containing the harm can destroy the record of it. Do not copy out the sensitive data you were able to reach, because that spreads the exposure you are reporting.
 
 **Report through a private channel rather than a public one.** Use the project's security contact or reporting process where one exists, and course staff otherwise. If nobody acknowledges the report, follow this fallback order rather than wait indefinitely or raise it in public: the project's documented security policy, then its maintainers or the repository owner, then the hosting platform's own vulnerability reporting mechanism. For coursework, course staff are the fallback.
 
