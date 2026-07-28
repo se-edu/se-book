@@ -23,7 +23,7 @@ Nothing in the earlier units depends on this one. It extends the techniques in _
 
 ##### Hard cases
 
-**Some defects resist all of the above — recognize them as a category rather than conclude you are bad at debugging.**
+**Some defects resist all of the above. They form recognizable categories, each with its own approach.**
 
 * **A {{ show_term("Heisenbug") }} changes or vanishes when you try to observe it.** Adding a print, attaching a debugger, or compiling with different settings perturbs timing or memory layout enough to hide the problem.
 * **Concurrency bugs are timing- and schedule-dependent.** Race conditions and deadlocks often cannot be reproduced on demand, and breakpoints alter the thread interleaving, so the debugger itself can make them disappear. Reason about the code, and log with thread identifiers.
