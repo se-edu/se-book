@@ -38,7 +38,7 @@ The table is a timing guide. Apply the threat-modeling, implementation, and veri
 
 Depending on the situation, containment might mean disabling a vulnerable feature, revoking an exposed credential, restricting access, or taking an affected service temporarily offline.
 
-**Stop exploring once you believe you have found a real problem.** Probing further can cause additional damage and makes the record harder to interpret afterwards.
+**Stop exploring once you believe you have found a real problem.** Probing further can cause additional damage, and it makes the record harder to interpret afterwards.
 
 **Preserve what someone will need in order to understand the problem:** the time, what you did, and the smallest reproduction that demonstrates it. Capture the reproduction before revoking or disabling anything, when capturing and containing are both possible, because containing the harm can destroy the record of it. Do not copy out the sensitive data you were able to reach, because that spreads the exposure you are reporting.
 
