@@ -8,7 +8,7 @@
 
 Refer to these se-edu guides:
 
-* [**Intellij IDEA: Productivity shortcuts**](https://se-education.org/guides/tutorials/intellijProductivityShortcuts.html)
+* [**IntelliJ IDEA: Productivity shortcuts**](https://se-education.org/guides/tutorials/intellijProductivityShortcuts.html)
 
 </div>
 

@@ -9,7 +9,7 @@
 
 Refer to these se-edu guides:
 
-* [**Intellij IDEA: Debugging**](https://se-education.org/guides/tutorials/intellijDebugger.html)
+* [**IntelliJ IDEA: Debugging**](https://se-education.org/guides/tutorials/intellijDebugger.html)
 * [**VS Code: Debugging**](https://se-education.org/guides/tutorials/vscDebugger.html)
 
 </div>

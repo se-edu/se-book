@@ -269,7 +269,7 @@ Tweak the code to comply with a given coding standard. From this point onward, e
 
 <box type="tip" seamless>
 
-SE-EDU guides on configuring the code style in IDEs: [Intellij IDEA](https://se-education.org/guides/tutorials/intellijCodeStyle.html) | [VS Code](https://se-education.org/guides/tutorials/vscCodeStyle.html)
+SE-EDU guides on configuring the code style in IDEs: [IntelliJ IDEA](https://se-education.org/guides/tutorials/intellijCodeStyle.html) | [VS Code](https://se-education.org/guides/tutorials/vscCodeStyle.html)
 </box>
 
 </div><hr>

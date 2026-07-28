@@ -1,1 +1,1 @@
-* [[guide@se-edu] Intellij IDEA: Using the debugger](https://se-education.org/guides/tutorials/intellijDebugger.html)
+* [[guide@se-edu] IntelliJ IDEA: Using the debugger](https://se-education.org/guides/tutorials/intellijDebugger.html)

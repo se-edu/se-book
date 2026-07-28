@@ -8,7 +8,7 @@
 
 Refer to these se-edu guides:
 
-* [**Intellij IDEA: Refactoring**](https://se-education.org/guides/tutorials/intellijRefactoring.html)
+* [**IntelliJ IDEA: Refactoring**](https://se-education.org/guides/tutorials/intellijRefactoring.html)
 
 </div>
 
