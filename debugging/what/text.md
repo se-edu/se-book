@@ -78,9 +78,9 @@ A debugger stopped at the failure would be pointing at the display code, which i
 
 **Three things make it hard:**
 
-* **First, the distance between defect and failure**: the crash site is not the crime scene, so the instinct to study the code around the error message is often the least productive move available.
-* **Second, you cannot inspect everything** — a running program holds an enormous amount of state, changing at every step, and choosing which small part to look at is most of the skill.
-* **Third, your mental model of the code is exactly the thing that is wrong**: had you understood it correctly you would not have written the defect, so re-reading with the same assumptions reproduces the same blind spot. Hence debugging must be driven by evidence from the running program, not by reasoning alone.
+* **The distance between defect and failure**: the crash site is not the crime scene, so the instinct to study the code around the error message is often the least productive move available.
+* **You cannot inspect everything** — a running program holds an enormous amount of state, changing at every step, and choosing which small part to look at is most of the skill.
+* **Your mental model of the code is exactly the thing that is wrong**: had you understood it correctly you would not have written the defect, so re-reading with the same assumptions reproduces the same blind spot. Hence debugging must be driven by evidence from the running program, not by reasoning alone.
 
 **Debugging time is therefore not proportional to the size of the fix.** A one-character correction can cost an afternoon. The cost lives in the search, and every debugging technique aims at making that search cheaper.
 
