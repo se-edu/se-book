@@ -75,7 +75,7 @@ Rejecting hypothesis 1 is what suggested hypothesis 2.
 
 **A reliable reproduction is the most valuable thing you can have**, because it makes every experiment cheap and is the surest way to confirm afterwards that the fix worked.
 
-Reproducing means recreating everything the failure depends on, usually more than the input alone: the input data, the program version, the environment and configuration %%operating system, locale, file paths, settings%%, the sequence of actions in order, and the starting state such as leftovers from a previous run.
+Reproducing means recreating everything the failure depends on, usually more than the input alone: the input data, the program version, the environment and configuration %%operating system, locale, file paths, settings%%, the sequence of actions, and the starting state, such as leftovers from a previous run.
 
 **Build the reproduction deliberately rather than waiting for the failure to recur.** Pin every source of nondeterminism you control — the random seed, the clock and time zone, iteration order, the number of threads. Script the sequence of actions instead of performing it by hand, so it is identical every time. Reset to a known starting state before each attempt, so a leftover from the previous run cannot decide the outcome. And record the environment values from the run that failed, so you can restore them rather than guess at them.
 
