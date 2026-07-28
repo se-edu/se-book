@@ -75,7 +75,8 @@ The following terms let a team discuss security precisely:
   {{ label_example }} %%Signing in as a particular student.%%
 * **{{ show_term("Authorization") }}: deciding whether that identity may perform a specific action on a specific resource.**<br>
   {{ label_example }} %%Checking that this student owns the registration they asked to see.%%
-* **{{ show_term("Risk") }}: the likelihood of a threat combined with the seriousness of its impact.**
+* **{{ show_term("Risk") }}: the likelihood of a threat combined with the seriousness of its impact.**<br>
+  {{ label_example }} %%A student reading another student's registration is a high risk: it is easy to attempt and it exposes personal data.%%
 * **{{ show_term("Misuse case") }}: a short scenario describing how someone could deliberately use the system to cause harm.**<br>
   {{ label_example }} %%A student changes an event identifier to download another event's list.%%
 
