@@ -33,7 +33,7 @@ Nothing in the earlier units depends on this one. It extends the techniques in _
 
 ##### Debugging in a team
 
-**A bug that is not written down is a bug that gets forgotten**, which is what issue trackers exist to prevent. A useful record contains the expected and actual behavior, the steps to reproduce, the environment, and the smallest failing case you found.
+**A bug that is not written down is a bug that gets forgotten**, which is what issue trackers exist to prevent.
 
 Keep a running list of incidental bugs noticed while debugging something else; writing them down takes seconds and prevents the costlier alternative of abandoning the current investigation to chase a new one. Note too that bugs cluster — in recently changed code, in frequently changed code, and in the most complex modules — which is useful when deciding where to concentrate reviews and testing.
 
