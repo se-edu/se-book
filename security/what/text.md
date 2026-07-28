@@ -9,7 +9,7 @@ Software now handles personal information, money, communication, transportation,
 
 **Security is therefore part of software engineering, not a specialist activity added after the software is finished.** Every software engineer needs enough security knowledge to recognize common risks, make safer design and implementation decisions, and know when expert help is needed.
 
-This textbook focuses on a small set of ideas that apply broadly. It does not attempt to teach every kind of attack. Instead, it develops one reusable method.
+This textbook does not attempt to teach every kind of attack. Instead, it develops one reusable method that applies broadly.
 
 **Software security is the protection of a system and its stakeholders from misuse and harm, whether deliberate or accidental.** A conventional defect might be triggered accidentally. In contrast, a security weakness may be deliberately searched for and exploited by someone who can choose the inputs, actions, timing, and sequence most favorable to an attack. **Security analysis assumes that deliberate case**, because an attacker exercises a feature far harder than an accident usually does. **Accidental causes still need attention of their own**, because a misconfiguration, an operator mistake, or a corrupted record may never resemble an attack.
 
