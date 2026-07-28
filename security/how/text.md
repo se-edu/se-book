@@ -391,7 +391,7 @@ Ask the author to explain the security rule and how the code enforces it. Code t
 If a requirement says only an event's organizer can see its attendees, test the correct organizer, an unrelated organizer, an attendee, an anonymous user, and a revoked organizer.
 {% endcall %}
 
-Also test boundaries such as empty input, maximum lengths, unexpected encodings, repeated requests, missing resources, and surprising operation orders. Maximum lengths and repeated requests are availability tests: they ask what one caller can consume. The aim is to challenge the assumptions on which the control depends, not merely to generate many random tests.
+Also test boundaries such as empty input, maximum lengths, unexpected encodings, repeated requests, missing resources, and operations performed in a surprising order. Maximum lengths and repeated requests are availability tests: they ask what one caller can consume. The aim is to challenge the assumptions on which the control depends, not merely to generate many random tests.
 
 Compilers, linters, static analysis, secret scanning, dependency analysis, and dynamic testing can catch different kinds of weakness. **A clean scan does not prove that software is secure.** It means only that the tool did not report a problem within the checks it performed.
 
