@@ -9,7 +9,7 @@
 
 <box type="info" seamless>
 
-This chapter draws substantially on [The Debugging Book](https://www.debuggingbook.org/) by Andreas Zeller et al., in particular its terminology of defects, infections, and failures, and its treatment of debugging as an application of the scientific method. Further material was adapted from the debugging readings of [MIT 6.102](https://web.mit.edu/6.102/www/sp26/classes/13-debugging/), [UC Berkeley CS61B](https://sp23.datastructur.es/materials/guides/intellij/debugging/), [Stanford CS107](https://web.stanford.edu/class/archive/cs/cs107/cs107.1262/resources/debugging.html), [UW CSE 332](https://courses.cs.washington.edu/courses/cse332/20sp/handouts/debugging.pdf), and [CMU 15-213](https://www.cs.cmu.edu/afs/cs/academic/class/15213-s25/www/lectures/08-design-debugging.pdf).
+These debugging units draw substantially on [The Debugging Book](https://www.debuggingbook.org/) by Andreas Zeller et al., in particular its terminology of defects, infections, and failures, and its treatment of debugging as an application of the scientific method. Further material was adapted from the debugging readings of [MIT 6.102](https://web.mit.edu/6.102/www/sp26/classes/13-debugging/), [UC Berkeley CS61B](https://sp23.datastructur.es/materials/guides/intellij/debugging/), [Stanford CS107](https://web.stanford.edu/class/archive/cs/cs107/cs107.1262/resources/debugging.html), [UW CSE 332](https://courses.cs.washington.edu/courses/cse332/20sp/handouts/debugging.pdf), and [CMU 15-213](https://www.cs.cmu.edu/afs/cs/academic/class/15213-s25/www/lectures/08-design-debugging.pdf).
 
 </box>
 
@@ -37,7 +37,7 @@ mistake → defect → infection → infection → ... → failure
 **Before hunting for a defective line, make sure you can state what the correct behavior is and why.** Often the real disagreement is about the requirement, not the code, and skipping this step means searching code that was right all along. Note too that the chain assumes the fault lies in code — the common case, but not the only one. A failure can equally originate in configuration, in data left by an earlier version, in a dependency, in the deployment, or in a requirement that was wrong to begin with; sometimes the program is right and the _test_ is wrong. Locating 'the defect' means locating whatever has to change.
 
 {% call show_example() %}
-A _running example_, used throughout this chapter. A shopping cart prints the correct total, but then appears empty.
+A _running example_, reused in the units that follow. A shopping cart prints the correct total, but then appears empty.
 
 ```java
 class Cart {
@@ -80,7 +80,7 @@ A debugger stopped at the failure would be pointing at the display code, which i
 * **Second, you cannot inspect everything** — a running program holds an enormous amount of state, changing at every step, and choosing which small part to look at is most of the skill.
 * **Third, your mental model of the code is exactly the thing that is wrong**: had you understood it correctly you would not have written the defect, so re-reading with the same assumptions reproduces the same blind spot. Hence debugging must be driven by evidence from the running program, not by reasoning alone.
 
-**Debugging time is therefore not proportional to the size of the fix.** A one-character correction can cost an afternoon. The cost lives in the search, and every technique in this chapter aims at making that search cheaper.
+**Debugging time is therefore not proportional to the size of the fix.** A one-character correction can cost an afternoon. The cost lives in the search, and every technique that follows aims at making that search cheaper.
 
 ##### How not to debug
 
