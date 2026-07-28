@@ -13,19 +13,13 @@ Nothing in the earlier units depends on this one. It extends the techniques in _
 
 ##### Going further with the basic techniques
 
-**{{ show_term("Delta debugging") }} automates the narrowing the search space for the bug**, systematically removing parts of the input and keeping whichever reduction still fails. It handles the cases where plain halving does not, at a cost: in the worst case it needs on the order of n² tests. Note the wider point — a mechanical procedure can replace intuition for this step entirely.
+**{{ show_term("Delta debugging") }} automates the simplification of the failing case**, systematically removing parts of the input and keeping whichever reduction still fails. It handles the cases where plain halving does not, at a cost: in the worst case it needs on the order of n² tests. Note the wider point — a mechanical procedure can replace intuition for this step entirely.
 
-**The boundary model of localization describes the simple, deterministic case.** It blurs when the defect is an _omission_ %%nothing wrong happens; something right merely fails to%%, when two references alias the same object, when threads interleave, or when the bad state came from outside the program. Treat the boundary as what you are looking for, not as something guaranteed to exist at one identifiable point.
+**The idea of a single boundary where the state first goes wrong describes the simple, deterministic case.** It blurs when the defect is an _omission_ %%nothing wrong happens; something right merely fails to%%, when two references alias the same object, when threads interleave, or when the bad state came from outside the program. Treat the boundary as what you are looking for, not as something guaranteed to exist at one identifiable point.
 
-**Two further debugger commands are worth knowing once the basics are comfortable.** {{ show_term("Force step into") }} enters library code that _step into_ normally skips. {{ show_term("Reset frame") }} (or {{ show_term("Drop frame") }}) pops the current call so you can re-enter a method you stepped past — but it restores only the execution point and local variables. Anything the method already did to fields, static state, files, or console output stays done, so it is not a way of going back in time.ime.
+**Two further debugger commands are worth knowing once the basics are comfortable.** {{ show_term("Force step into") }} enters library code that _step into_ normally skips. {{ show_term("Reset frame") }} (or {{ show_term("Drop frame") }}) pops the current call so you can re-enter a method you stepped past — but it restores only the execution point and local variables. Anything the method already did to fields, static state, files, or console output stays done, so it is not a way of going back in time.
 
 **{{ show_term("Tracing") }} records the execution automatically** — every line executed, or every change to a chosen variable — for examination afterwards. It is the right probe when the failure is too fast to watch, or happens in a run you cannot sit through interactively.
-
-<box type="info" seamless>
-
-A widely used mnemonic for the debugging process is **TRAFFIC** — Track, Reproduce, Automate, Find origins, Focus, Isolate, Correct.
-
-</box>
 
 ##### Hard cases
 
