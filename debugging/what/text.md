@@ -95,7 +95,7 @@ A debugger stopped at the failure would be pointing at the display code, which i
   {{ label_example }} %%Special-casing the input that fails, or wrapping the crash in an empty `catch` block.%%
 * {{ bad }} **Keeping no record of what you tried.** Without notes you will re-test explanations you already eliminated, lose your place when interrupted, and be unable to hand the problem over.
 
-**Adding temporary print statements to aid debugging is not necessariy bad; doing so _without a hypothesis_ is**, which is shotgun debugging in another form. A few prints chosen to answer a specific question are legitimate, and in production, embedded, or concurrent settings they are sometimes the only tool available. Costs of this technique include edits that can introduce fresh defects, output that swamps the output, leftovers that reach production.
+**Adding temporary print statements is not necessarily bad; doing so _without a hypothesis_ is**, which is shotgun debugging in another form. A few prints chosen to answer a specific question are legitimate, and in production, embedded, or concurrent settings they are sometimes the only tool available.
 
 **What these have in common is that they produce activity without producing information.** A productive debugging step is one that rules something out.
 
