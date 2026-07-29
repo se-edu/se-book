@@ -83,12 +83,12 @@ User stories for a travel website (credit: Mike Cohn)
 * [Epic] As a user, I can cancel a reservation
   * As a premium site member, I can cancel a reservation up to the last minute
   * As a non-premium member, I can cancel up to 24 hours in advance
-  * As a member, I am emailed a conﬁrmation of any cancelled reservation
-* [Epic] As a frequent ﬂyer, I want to book a trip
-  * As a frequent ﬂyer, I want to book a trip using miles
-  * As a frequent ﬂyer, I want to rebook a trip I take often
-  * As a frequent ﬂyer, I want to request an upgrade
-  * As a frequent ﬂyer, I want to see if my upgrade cleared
+  * As a member, I am emailed a confirmation of any canceled reservation
+* [Epic] As a frequent flyer, I want to book a trip
+  * As a frequent flyer, I want to book a trip using miles
+  * As a frequent flyer, I want to rebook a trip I take often
+  * As a frequent flyer, I want to request an upgrade
+  * As a frequent flyer, I want to see if my upgrade cleared
 </div>
 
 </panel>
