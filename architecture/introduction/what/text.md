@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 {% from "common/macros.njk" import show_example with context %}
 <span id="title">What</span>
 
@@ -16,7 +17,7 @@
 * _How do the parts communicate?_
 * _Which qualities matter most — ease of change, speed, reliability, security?_
 
-**Software architecture is the set of significant decisions about a system's overall organization.** It identifies the major parts, their responsibilities, how they interact, and how they are deployed.
+**{{ show_term("Software architecture") }} is the set of significant decisions about a system's overall organization.** It identifies the major parts, their responsibilities, how they interact, and how they are deployed.
 
 <div class="d-none">
 <!-- generate once and reuse -->

@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 {% from "common/macros.njk" import show_example with context %}
 <span id="title">Different views of one system</span>
 
@@ -8,8 +9,8 @@
 <div id="body">
 
 **The same system can be drawn in more than one way, depending on what you want to show.** Here are two commonly used views:
-1. **A logical view shows the major parts and which parts depend on which.** It says nothing about where any of it runs.
-1. **A deployment view shows where the parts actually run.** For the desktop invoice manager the deployment view is almost boring: all four parts run inside one program, on the user's computer.
+1. **A {{ show_term("logical view") }} shows the major parts and which parts depend on which.** It says nothing about where any of it runs.
+1. **A {{ show_term("deployment view") }} shows where the parts actually run.** For the desktop invoice manager the deployment view is almost boring: all four parts run inside one program, on the user's computer.
 
 {% call show_example() %}
 The same invoice manager, but two views of the architecture:

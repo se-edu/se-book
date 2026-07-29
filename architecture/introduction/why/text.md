@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 {% from "common/macros.njk" import show_example with context %}
 <span id="title">Why</span>
 
@@ -23,7 +24,7 @@ Consider the following changes to an invoice manager application:
 Adding a new property to every invoice can touch the interface, the rules, the model, and the storage format.
 {% endcall %}
 
-**Architecture also shapes the system's quality attributes** — the properties that decide whether the software is good enough for its purpose. Common quality attributes include:
+**Architecture also shapes the system's {{ show_term("quality attributes") }}** — the properties that decide whether the software is good enough for its purpose. Common quality attributes include:
 
 * **Modifiability** — how easily it can be changed
 * **Performance** — how quickly it responds

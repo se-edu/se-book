@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 {% from "common/macros.njk" import show_aspect, show_example %}
 
 <span id="title">What</span>
@@ -8,7 +9,7 @@
 
 {{ show_aspect("This style focuses on what triggers work, and how notifications flow.") }}
 
-**In the event-driven style, work is triggered by <popover content="An _event_ is a notable occurrence, such as a button being clicked, a timer expiring, or a download finishing.">events</popover> rather than by direct calls.**  The component that raises an event is the _emitter_; the components that react to it are _consumers_.
+**In the {{ show_term("event-driven") }} style, work is triggered by {{ show_term("events", "An _event_ is a notable occurrence, such as a button being clicked, a timer expiring, or a download finishing.") }} rather than by direct calls.**  The component that raises an event is the {{ show_term("emitter") }}; the components that react to it are {{ show_term("consumers") }}.
 
 <box>
 
@@ -33,7 +34,7 @@ When the 'button clicked' event occurs in a GUI, that event can be transmitted t
 
 **Calling a design "event-driven" settles neither dimension.** A GUI button click is local, and it is not strictly synchronous either: the click is usually placed on a local event queue and handled shortly afterward by the interface thread. It is still fully event-driven.
 
-**Distributed event-driven systems often use publish-subscribe communication.** An emitter publishes an event to a _message broker_, which delivers it to whichever components have subscribed. The emitter need not know which consumers exist, and one event can reach any number of them.
+**Distributed event-driven systems often use {{ show_term("publish-subscribe") }} communication.** An emitter publishes an event to a {{ show_term("message broker") }}, which delivers it to whichever components have subscribed. The emitter need not know which consumers exist, and one event can reach any number of them.
 
 **You gain decoupling and give up traceability.** A new consumer can subscribe without the emitter changing at all — but the list of consumers still exists (the framework or broker holds it), it is just no longer visible where the event is raised.
 {% call show_example() %}

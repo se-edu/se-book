@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 {% from "common/macros.njk" import show_aspect, show_example %}
 <span id="title">What</span>
 <span id="prereqs"></span>
@@ -7,9 +8,9 @@
 
 {{ show_aspect("This style focuses on exposing and composing capabilities through published network interfaces.") }}
 
-**A service exposes a published interface that other software can use over a network.** Callers depend on the agreement, not on the service's programming language or internal implementation, so a service written in one language can be used by a program written in another.
+**A {{ show_term("service") }} exposes a published interface that other software can use over a network.** Callers depend on the agreement, not on the service's programming language or internal implementation, so a service written in one language can be used by a program written in another.
 
-**The _service-oriented architecture_ (SOA) style organizes a system around such network-accessible services**, often to connect capabilities owned by different applications or organizations.
+**The {{ show_term("service-oriented architecture") }} (SOA) style organizes a system around such network-accessible services**, often to connect capabilities owned by different applications or organizations.
 
 {% call show_example() %}
 Suppose one company provides a service for browsing and buying merchandise, and a bank provides a service for charging its credit cards. A third party can build an online bookshop that combines them — letting customers buy books and pay by card — even though all three systems are built on different platforms.
@@ -21,7 +22,7 @@ Suppose one company provides a service for browsing and buying merchandise, and 
 
 **Early SOA was strongly associated with _XML web services_ and the SOAP standard; modern services usually exchange much simpler messages, most often JSON over ordinary HTTP.** The architectural idea — published, network-accessible, platform-independent interfaces — does not depend on the message format.
 
-**The microservice style builds one product as a collection of independently deployable services**, each focused on a capability and usually owning the data behind its interface. **_Micro_ does not prescribe a line count:** independent deployability around a focused responsibility matters far more than physical size. A payment service may be substantial and still be a microservice, if it can be released without redeploying anything else.
+**The {{ show_term("microservice") }} style builds one product as a collection of independently deployable services**, each focused on a capability and usually owning the data behind its interface. **_Micro_ does not prescribe a line count:** independent deployability around a focused responsibility matters far more than physical size. A payment service may be substantial and still be a microservice, if it can be released without redeploying anything else.
 
 **Microservices are best understood by contrast with the modular monolith.** Both organize a system into components with clear responsibilities; the difference is where the boundaries fall.
 <box>
@@ -48,10 +49,10 @@ Suppose one company provides a service for browsing and buying merchandise, and 
 
 **Related deployment terms:**
 
-* **A _container_ packages a program with the runtime, libraries, and configuration it needs**, so that environment travels with it from a laptop to a server — which is what makes "independently deployable" practical.<br>
+* **A {{ show_term("container") }} packages a program with the runtime, libraries, and configuration it needs**, so that environment travels with it from a laptop to a server — which is what makes "independently deployable" practical.<br>
   %%e.g., a payment service needs a particular Python version and a set of libraries. Shipped as a container image, it carries all of that with it: the machine running it needs only a container runtime, and the service behaves the same on a developer's laptop as on the deployment server.<br>
   **Docker is a well-known tool for building and running containers, and Kubernetes is widely used to run many containers across a cluster of machines.**%%
-* **_Serverless computing_ lets you deploy code without provisioning or managing the servers that run it.** In the most common model you deploy a single function, the provider runs it in response to an event, and you are billed for execution rather than for a server kept running.<br>
+* **{{ show_term("Serverless computing") }} lets you deploy code without provisioning or managing the servers that run it.** In the most common model you deploy a single function, the provider runs it in response to an event, and you are billed for execution rather than for a server kept running.<br>
   %%e.g., a function that generates a thumbnail whenever a user uploads a photo. You deploy just that function, the provider runs a copy of it for each upload, and on a day with no uploads nothing is running and nothing is billed.<br>
   **AWS Lambda, Azure Functions, and Google Cloud Functions are widely used services of this kind.**%%
 

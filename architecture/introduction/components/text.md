@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 {% from "common/macros.njk" import show_example with context %}
 <span id="title">Components, interfaces, and dependencies</span>
 
@@ -9,12 +10,12 @@
 
 **Three words do most of the work in architecture descriptions: components, interfaces, dependencies.**
 
-**A component is a major part of the system with one coherent responsibility.**
+**A {{ show_term("component") }} is a major part of the system with one coherent responsibility.**
 {% call show_example() %}
 `Storage`'s work concerns persistent data. A single `Invoice` class is too small to be an architectural component.
 {% endcall %}
 
-**An interface is the agreement stating how the rest of the system may use a component.** It is more than a list of operations. A complete interface also covers:
+**An {{ show_term("interface") }} is the agreement stating how the rest of the system may use a component.** It is more than a list of operations. A complete interface also covers:
 
 * the data each operation accepts and returns;
 * what happens when an operation succeeds or fails; and
@@ -24,7 +25,7 @@
 `Storage` might offer `saveInvoices(invoices)` and `readInvoices()`, _and_ specify that a corrupt file causes a particular error rather than a crash.
 {% endcall %}
 
-**A dependency exists when one component relies on another to do its job.** Dependencies have a direction, and that direction matters more than almost anything else in an architecture.
+**A {{ show_term("dependency") }} exists when one component relies on another to do its job.** Dependencies have a direction, and that direction matters more than almost anything else in an architecture.
 {% call show_example() %}
 `Logic` depends on `Storage`, because it cannot save without it. `Storage` does not depend on `Logic`: it can be compiled, tested, and understood without knowing that commands exist.
 {% endcall %}

@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 {% from "common/macros.njk" import show_aspect, show_example %}
 
 <span id="title">What</span>
@@ -11,7 +12,7 @@
 
 {{ show_aspect("This style focuses on which parts request capabilities and which parts provide them.") }}
 
-**In the client-server style, a _server_ provides a capability or data, and one or more _clients_ use it.**
+**In the {{ show_term("client-server") }} style, a _server_ provides a capability or data, and one or more _clients_ use it.**
 
 <pic eager src="{{baseUrl}}/architecture/architecturalStyles/clientServer/what/images/clientServer.svg" height="120" />
 <p/>
@@ -40,7 +41,7 @@ Adding a server changes _both_ views of the invoice manager. In the logical view
 Because `Logic` depended on what `Storage` promised rather than on a specific implementation, a `RemoteStorage` that honors the same interface may spare `Logic` any change at all — a real payoff from the earlier separation. But the system as a whole has gained communication components that someone must build and maintain.
 {% endcall %}
 
-**This is also where tiers appear.** The client program is one tier and the server another — a tier being a separately deployed part, not necessarily one physical machine.
+**This is also where tiers appear.** The client program is one tier and the server another — a {{ show_term("tier") }} being a separately deployed part, not necessarily one physical machine.
 
 **A network boundary adds costs that local calls never had:**
 

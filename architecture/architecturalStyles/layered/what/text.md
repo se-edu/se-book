@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 {% from "common/macros.njk" import show_aspect, show_example %}
 <span id="title">What</span>
 <span id="prereqs"></span>
@@ -6,7 +7,7 @@
 <div id="body">
 {{ show_aspect("This style focuses on how the code inside a program is organized.") }}
 
-**In the layered style, the software is divided into layers whose dependencies all point one way — downward.** Higher layers use services provided by lower ones; lower layers know nothing about the layers above.
+**In the {{ show_term("layered") }} style, the software is divided into layers whose dependencies all point one way — downward.** Higher layers use services provided by lower ones; lower layers know nothing about the layers above.
 
 <pic eager src="{{baseUrl}}/architecture/architecturalStyles/layered/what/images/layered.svg" width="450" />
 
