@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import show_term with context %}
+{% from "common/macros.njk" import show_example, show_term with context %}
 <span id="title">Aggregation</span>
 
 <span id="prereqs"></span>
@@ -7,21 +7,15 @@
 
 <div id="body">
 
-**{{ show_term("Aggregation") }} represents a _container-contained_ relationship.** It is a weaker relationship than composition.
-
-<box>
-
-{{ icon_example }} `SportsClub` can act as a _container_ for `Person` objects who are members of the club. `Person` objects can survive without a `SportsClub` object.
-
-</box>
+**{{ show_term("Aggregation") }} represents a _container-contained_ relationship.** It is a weaker relationship than composition.<br>
+{{ label_example }} %%`SportsClub` can act as a _container_ for `Person` objects who are members of the club. `Person` objects can survive without a `SportsClub` object.%%
 
 #####  Implementing aggregation
 
 Implementation is similar to that of composition except the _containee_ object can exist even after the _container_ object is deleted.
 
-<box>
-
-{{ icon_example }} In the code below, there is an aggregation association between the `Team` class and the `Person` class in that a `Team` contains a `Person` object who is the leader of the team.
+{% call show_example() %}
+In the code below, there is an aggregation association between the `Team` class and the `Person` class in that a `Team` contains a `Person` object who is the leader of the team.
 
 <div class="alt-java">
 
@@ -47,8 +41,7 @@ class Team:
     self.__leader = person
 ```
 </div>
-
-</box>
+{% endcall %}
 
 </div>
 

@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import show_term with context %}
+{% from "common/macros.njk" import show_example, show_term with context %}
 <span id="title">Enumerations</span>
 
 <span id="prereqs"></span>
@@ -9,13 +9,11 @@
 
 **An {{ show_term("Enumeration") }} is a fixed set of values that can be considered as a data type.** An enumeration is often useful when using a regular data type such as `int` or `String` would allow invalid values to be assigned to a variable.
 
-<box>
-
-{{ icon_example }} Suppose you want a variable called `priority` to store the priority of something. There are only three priority levels: high, medium, and low. You can declare the variable `priority` as of type `int` and use only values `2`, `1`, and `0` to indicate the three priority levels. However, this opens the possibility of an invalid value such as `9` being assigned to it. But if you define an enumeration type called `Priority` that has three values `HIGH`, `MEDIUM` and `LOW` only, a variable of type `Priority` will never be assigned an invalid value because the compiler is able to catch such an error.
+{% call show_example() %}
+Suppose you want a variable called `priority` to store the priority of something. There are only three priority levels: high, medium, and low. You can declare the variable `priority` as of type `int` and use only values `2`, `1`, and `0` to indicate the three priority levels. However, this opens the possibility of an invalid value such as `9` being assigned to it. But if you define an enumeration type called `Priority` that has three values `HIGH`, `MEDIUM` and `LOW` only, a variable of type `Priority` will never be assigned an invalid value because the compiler is able to catch such an error.
 
 `Priority`: `HIGH`, `MEDIUM`, `LOW`
-
-</box>
+{% endcall %}
 
 </div>
 

@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import show_term with context %}
+{% from "common/macros.njk" import show_example, show_term with context %}
 <span id="title">What</span>
 
 <span id="prereqs"></span>
@@ -28,16 +28,14 @@ The relationship between the components can be observed in the diagram below. Ty
 <pic eager src="{{baseUrl}}/designPatterns/modelViewController/what/images/classDiagram.png" width="400" />
 <p/>
 
-<box>
-
-{{ icon_example }} Given below is a concrete example of MVC applied to a student management system. In this scenario, the user is retrieving the data of a student.
+{% call show_example() %}
+MVC applied to a student management system. In this scenario, the user is retrieving the data of a student.
 
 <pic eager src="{{baseUrl}}/designPatterns/modelViewController/what/images/sequenceDiagram.png" width="500" />
 <p/>
 
 In the diagram above, when the user clicks on a button using the UI, the ‘click’ event is caught and handled by the `UiController`. The `ref` frame indicates that the interactions within that frame have been extracted out to another separate sequence diagram.
-
-</box>
+{% endcall %}
 
 Note that in a simple UI where there’s only one view, _Controller_ and _View_ can be combined as one class.
 

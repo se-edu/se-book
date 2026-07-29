@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import show_term with context %}
+{% from "common/macros.njk" import show_example, show_term with context %}
 <span id="title">What</span>
 
 <span id="prereqs"></span>
@@ -13,14 +13,12 @@
 * **Integration is harder** because multiple components coupled with each other have to be integrated at the same time.
 * **Testing and reuse of the module are harder** due to its dependence on other modules.
 
-<box>
-
-{{ icon_example }} In the example below, design `A` appears to have more coupling between the components than design `B`.
+{% call show_example() %}
+Design `A` appears to have more coupling between the components than design `B`.
 
 <pic eager src="{{baseUrl}}/designFundamentals/coupling/what/images/playerPuzzleManager.png" height="220" />
 <p/>
-
-</box>
+{% endcall %}
 </div>
 <div id="extras">
 <include src="exercisesPanel.md" boilerplate/>

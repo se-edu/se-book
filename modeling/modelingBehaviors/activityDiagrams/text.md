@@ -8,16 +8,9 @@
 <div id="body">
 
 **Software projects often involve {{ show_term("workflows") }}.** Workflows define the <tooltip content="a connected sequence of steps">flow</tooltip> in which a process or a set of tasks is executed.
-Understanding such workflows is important for the success of the software project.
-
-<box>
-
-Some examples in which a certain workflow is relevant to a software project:
-
-{{ icon_example }} A software that automates the work of an insurance company needs to take into account the workflow of processing an insurance claim.
-
-{{ icon_example }} The algorithm of a piece of code represents the workflow (i.e., the execution flow) of the code.
-</box>
+Understanding such workflows is important for the success of the software project.<br>
+{{ label_example }} %%A software that automates the work of an insurance company needs to take into account the workflow of processing an insurance claim.%%<br>
+{{ label_example }} %%The algorithm of a piece of code represents the workflow (i.e., the execution flow) of the code.%%
 
 
 {% macro print_sensitive_panels(panel_state="") %}

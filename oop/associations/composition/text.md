@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import show_term with context %}
+{% from "common/macros.njk" import show_example, show_term with context %}
 <span id="prereqs"></span>
 
 <span id="outcomes">{{ icon_outcome }} Can explain the meaning of composition</span>
@@ -7,37 +7,28 @@
 
 <div id="body">
 
-**A {{ show_term("composition") }} is an association that represents a strong _whole-part_ relationship.**
-
-<box>
-
-{{ icon_example }} A `Board` (used for playing board games) consists of `Square` objects.
-
-</box>
+**A {{ show_term("composition") }} is an association that represents a strong _whole-part_ relationship.**<br>
+{{ label_example }} %%A `Board` (used for playing board games) consists of `Square` objects.%%
 
 **Composition implies**:
 
 1. **when the _whole_ is destroyed, _parts_ are destroyed too** i.e., the _part_ cannot exist without being attached to a _whole_.
 1. **there cannot be cyclical links**.
 
-<box>
-
-{{ icon_example }} The ‘sub-folder’ association between `Folder` objects is a composition type association. Consider the case where `Folder` object `subF` is a sub-folder of `Folder` object `F`. In this case,
+{% call show_example() %}
+The ‘sub-folder’ association between `Folder` objects is a composition type association. Consider the case where `Folder` object `subF` is a sub-folder of `Folder` object `F`. In this case,
 
 1. if `F` is deleted, `subF` will be deleted with it.
 1. `F` cannot be a sub-folder of `subF` (i.e., no cyclical 'sub-folder' association between the two objects).
-
-</box>
+{% endcall %}
 
 **Whether a relationship is a composition can depend on the context**.
 
-<box>
-
-{{ icon_example }} Is the relationship between `Email` and `EmailSubject` composition? That is, is the email subject _part_ of an email to the extent that an email subject cannot exist without an email?
+{% call show_example() %}
+Is the relationship between `Email` and `EmailSubject` composition? That is, is the email subject _part_ of an email to the extent that an email subject cannot exist without an email?
 * When modeling an application that sends emails, the answer is 'yes'.
-* When modeling an application that gathers analytics about email traffic, the answer may be 'no' %%(e.g., the application might collect just the email subjects for text analysis)%%.
-
-</box>
+* When modeling an application that gathers analytics about email traffic, the answer may be 'no' (e.g., the application might collect just the email subjects for text analysis).
+{% endcall %}
 
 **A common use of composition is when parts of a big class are carved out as smaller classes** to make the internal design easier to manage. In such cases, the classes extracted out still act as _parts_ of the bigger class and the outside world has no business knowing about them.
 
@@ -45,14 +36,12 @@
 
 **Identifying and keeping track of composition relationships in the design has benefits** such as helping to maintain the data integrity of the system. For example, when you know that a certain relationship is a composition, you can take extra care in your implementation to ensure that when the _whole_ object is deleted, all its _parts_ are deleted too.
 
-
 ##### Implementing composition
 
 **Composition is implemented using a normal variable.** If correctly implemented, the ‘part’ object will be deleted when the ‘whole’ object is deleted. Ideally, the ‘part’ object may not even be visible to clients of the ‘whole’ object.
 
-<box>
-
-{{ icon_example }} Here is one way to implement the composition between `Email` and `Subject`:
+{% call show_example() %}
+One way to implement the composition between `Email` and `Subject`, in which the `Email` has a composition type relationship with the `Subject` class, in the sense that the subject is part of the email:
 <div class="alt-java">
 
 ```java
@@ -72,11 +61,7 @@ class Email:
     self.__subject = Subject()
 ```
 </div>
-
-{{ icon_example }} In this code, the `Email` has a composition type relationship with the `Subject` class, in the sense that the subject is part of the email.
-
-</box>
-
+{% endcall %}
 
 </div>
 

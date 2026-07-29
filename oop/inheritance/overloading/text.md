@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import show_term with context %}
+{% from "common/macros.njk" import show_example, show_term with context %}
 <span id="title">Overloading</span>
 
 <span id="prereqs"></span>
@@ -13,14 +13,12 @@
 <include src="../../../common/definitions.md#def-type-signature" trim />
 </box>
 
-<box>
-
-{{ icon_example }} In the case below, the `calculate` method is overloaded because the two methods have the same name but different type signatures `(String)` and `(int)`.
+{% call show_example() %}
+In the case below, the `calculate` method is overloaded because the two methods have the same name but different type signatures `(String)` and `(int)`.
 
 * `calculate(String): void`
 * `calculate(int): void`
-</box>
-
+{% endcall %}
 
 </div>
 

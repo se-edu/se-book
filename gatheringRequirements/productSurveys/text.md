@@ -6,12 +6,8 @@
 
 <div id="body">
 
-**Studying existing products can unearth shortcomings that a new product can address.** Product manuals and other forms of documentation can tell us how existing solutions work.
-
-<box>
-
-{{ icon_example }} When developing a game for a mobile device, a look at a similar PC game can give insight into the kind of features and interactions the mobile game can offer.
-</box>
+**Studying existing products can unearth shortcomings that a new product can address.** Product manuals and other forms of documentation can tell us how existing solutions work.<br>
+{{ label_example }} %%When developing a game for a mobile device, a look at a similar PC game can give insight into the kind of features and interactions the mobile game can offer.%%
 </div>
 
 <div id="extras">

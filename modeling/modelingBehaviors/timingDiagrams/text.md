@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import show_term with context %}
+{% from "common/macros.njk" import show_example, show_term with context %}
 <span id="title">Timing diagrams</span>
 
 <span id="prereqs"></span>
@@ -9,16 +9,14 @@
 
 **A {{ show_term("timing diagram") }} focuses on timing constraints.**
 
-<box>
-
-{{ icon_example }} Here is an example timing diagram:
+{% call show_example() %}
+A timing diagram showing how long each state may last:
 
 <pic eager src="{{baseUrl}}/modeling/modelingBehaviors/timingDiagrams/images/diagram.png" height="280" />
 <br>
 
 <sub>Adapted from: _UML Distilled_ by Martin Fowler</sub>
-
-</box>
+{% endcall %}
 
 </div>
 

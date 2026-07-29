@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_example with context %}
 <span id="title">Multi-level design</span>
 
 <span id="prereqs"></span>
@@ -10,13 +11,11 @@ In a smaller system, the design of the entire system can be shown in one place.
 
 <div v-closeable alt="single-level design example">
 
-<box>
-
-{{ icon_example }} This class diagram of [se-edu/addressbook-level2](https://se-education.org/addressbook-level2) depicts the design of the entire software.
+{% call show_example() %}
+This class diagram of [se-edu/addressbook-level2](https://se-education.org/addressbook-level2) depicts the design of the entire software.
 
 <pic eager src="https://se-education.org/addressbook-level2/images/mainClassDiagram.png" width="600" />
-
-</box>
+{% endcall %}
 
 </div>
 
@@ -24,13 +23,12 @@ In a smaller system, the design of the entire system can be shown in one place.
 
 <div v-closeable alt="multi-level design example">
 
-<box>
-
-{{ icon_example }} This architecture diagram of [se-edu/addressbook-level3](https://se-education.org/addressbook-level3) depicts the high-level design of the software.
+{% call show_example() %}
+This architecture diagram of [se-edu/addressbook-level3](https://se-education.org/addressbook-level3) depicts the high-level design of the software.
 
 <pic eager src="https://se-education.org/addressbook-level3/images/ArchitectureDiagram.png" width="300" />
 
-Here are examples of lower-level designs of some components of the same software:
+Lower-level designs of some components of the same software:
 
 <tabs>
   <tab header="UI">
@@ -49,8 +47,7 @@ Here are examples of lower-level designs of some components of the same software
 
   </tab>
 </tabs>
-
-</box>
+{% endcall %}
 
 </div>
 

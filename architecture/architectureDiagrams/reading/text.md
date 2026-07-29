@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_example with context %}
 <span id="title">Reading</span>
 
 <span id="prereqs"><panel src="../../introduction/what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Design → Architecture → Introduction → What%%" popup-url="{{ baseUrl }}/architecture/introduction/what" /></span>
@@ -19,9 +20,8 @@
 
 <div v-closeable alt="architecture diagram examples" id="architecture-diagram-examples">
 
-<box>
-
-{{ icon_example }} Here are two real architecture diagrams, from actual projects, drawn by different teams in different notations. They describe systems unrelated to the invoice-manager example, which is exactly the situation you face when you join an unfamiliar project.
+{% call show_example() %}
+Here are two real architecture diagrams, from actual projects, drawn by different teams in different notations. They describe systems unrelated to the invoice-manager example, which is exactly the situation you face when you join an unfamiliar project.
 
 <tabs>
   <tab header="TEAMMATES">
@@ -37,7 +37,7 @@
 </tabs>
 
 Try the four questions on both. They organize their boxes differently, use different shapes, and label their arrows differently, yet both are legitimate. For each one, work out which of the four questions the diagram answers by itself, and which stay ambiguous until you read the documentation around it — real diagrams often leave some of the four to the accompanying text.
-</box>
+{% endcall %}
 
 </div>
 

@@ -62,6 +62,7 @@
 <variable id="icon_x_red"><span style="color:red">{{ icon_x | safe }}</span></variable>
 
 <variable id="label_example"><span class="badge bg-light text-secondary">{{ icon_example }} Example </span></variable>
+<variable id="label_examples"><span class="badge bg-light text-secondary">{{ icon_example }} Examples </span></variable>
 
 <variable id="indented_arrow">&nbsp;&nbsp;&nbsp;&nbsp; ++↳++</variable>
 <variable id="bad"><span style="color: red"><md>**:fas-thumbs-down: Bad**</md></span></variable>

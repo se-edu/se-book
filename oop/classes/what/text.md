@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import show_term with context %}
+{% from "common/macros.njk" import show_example, show_term with context %}
 <span id="title">What</span>
 
 <span id="prereqs"></span>
@@ -13,9 +13,8 @@
 
 **A {{ show_term("class") }} contains instructions for creating a specific kind of objects**. It turns out sometimes multiple objects keep the same type of data and have the same behavior because they are of the _same kind_. Instructions for creating a 'kind' (or ‘class’) of objects can be done once and those same instructions can be used to {{ show_term("instantiate", "i.e., create instances of") }} objects of that kind. We call such instructions a _Class_.
 
-<box>
-
-{{ icon_example }} Classes and objects in an example scenario
+{% call show_example() %}
+Classes and objects in an example scenario:
 
 Consider the example of writing an OOP program to calculate the average age of Adam, Beth, Charlie, and Daisy.
 
@@ -29,9 +28,7 @@ Class | Objects
 `AgeList` | an object to represent the age list
 `Calculator` | an object to do the calculations
 `Main` | an object to represent you (i.e., the one who manages the whole operation)
-
-</box>
-
+{% endcall %}
 
 </div>
 

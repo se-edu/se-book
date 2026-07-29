@@ -1,11 +1,10 @@
-{% from "common/macros.njk" import show_term with context %}
+{% from "common/macros.njk" import show_example, show_term with context %}
 <link rel="stylesheet" href="{{baseUrl}}/css/common.css">
 
 **A use case can {{ show_term("include") }} another use case.** !!Underlined text!! is used to show an inclusion of a use case.
 
-<box>
-
-{{ icon_example }} This use case includes two other use cases, one in step 1 and one in step 2.
+{% call show_example() %}
+This use case includes two other use cases, one in step 1 and one in step 2.
 
 <div class="text-monospace">
 
@@ -18,7 +17,7 @@
   1. Staff views the survey results.<br>
      Use case ends.
 </div>
-</box>
+{% endcall %}
 
 Inclusions are useful,
 * when you don't want to clutter a use case with too many low-level steps.

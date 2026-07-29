@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import show_term with context %}
+{% from "common/macros.njk" import show_example, show_term with context %}
 <span id="title">What</span>
 
 <span id="prereqs"></span>
@@ -11,14 +11,12 @@
 <include src="../../../common/definitions.md#def-glossary" trim />
 </box>
 
-<box>
-
-{{ icon_example }} Here is a partial glossary from a variant of the _Snakes and Ladders_ game:
+{% call show_example() %}
+A partial glossary from a variant of the _Snakes and Ladders_ game:
 
 * Conditional square: A square that requires a specific face value which a player has to throw before his/her piece can leave the square.
 * Normal square: A square that does not have any conditions, snakes, or ladders in it.
-
-</box>
+{% endcall %}
 
 Specifying a term in the {{ show_term("glossary") }} is useful in the following cases:
 

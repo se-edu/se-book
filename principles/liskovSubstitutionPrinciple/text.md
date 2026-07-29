@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import show_term with context %}
+{% from "common/macros.njk" import show_example, show_term with context %}
 <span id="title">Liskov substitution principle</span>
 
 <span id="prereqs"></span>
@@ -34,7 +34,11 @@ In the above scenario,
 * The `Admin` class follows LSP because it fulfills `Payroll`’s expectation of `Staff` objects (i.e., it works for all positive values). Substituting `Admin` objects for `Staff` objects will not break the `Payroll` class functionality.
 * The `Academic` class violates LSP because it will not work for percent values over `100` as expected by the `Payroll` class. Substituting `Academic` objects for `Staff` objects can potentially break the `Payroll` class functionality.
 
-<panel type="seamless" header="%%Another example%%">
+<panel type="seamless">
+<div slot="header">
+
+%%Another {{ label_example }}%%
+</div>
 
 {{ icon_example }} The `Rectangle#resize()` method can take any integers for `height` and `width`. This contract is violated by the subclass `Square#resize()` because it does not accept a `height` that is different from the `width`.
 

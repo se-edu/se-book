@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_example with context %}
 <span id="title">What</span>
 
 <span id="prereqs"></span>
@@ -10,9 +11,8 @@
 <include src="../../../common/definitions.md#def-feature-list" trim />
 </box>
 
-<box>
-
-{{ icon_example }} A sample feature list from a simple Minesweeper game %%(only a brief description has been provided to save space)%%:
+{% call show_example() %}
+A sample feature list from a simple Minesweeper game %%(only a brief description has been provided to save space)%%:
 
 1. Basic play – Single player play.
 2. Difficulty levels
@@ -21,8 +21,7 @@
 3. Versus play – Two players can play against each other.
 4. Timer – Additional fixed time restriction on the player.
 5. ...
-
-</box>
+{% endcall %}
 
 </div>
 

@@ -1,9 +1,10 @@
-{% from "common/macros.njk" import show_term with context %}
+{% from "common/macros.njk" import show_example, show_term with context %}
 <link rel="stylesheet" href="{{baseUrl}}/css/common.css">
 
 **{{ show_term("Guarantees") }} specify what the use case promises to give us at the end of its operation.**
 
-<box>
+{% call show_example() %}
+A use case with guarantees:
 <div class="text-monospace">
 
 Software System: Online Banking System<br>
@@ -19,6 +20,6 @@ MSS:
 1. OBS requests for details for the transfer.<br>
    ...
 </div>
-</box>
+{% endcall %}
 
 <p/>

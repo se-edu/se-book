@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_example with context %}
 <span id="title">Class diagrams - basic </span>
 
 <span id="outcomes">{{ icon_outcome }} Can use basic-level class diagrams</span>
@@ -28,13 +29,11 @@
 
 The most basic class diagram is a bunch of classes with some solid lines among them to represent associations, such as this one.
 
-<box>
-
-{{ icon_example }} An example class diagram showing associations between classes.
+{% call show_example() %}
+A class diagram showing associations between classes.
 <p/><pic eager src="{{baseUrl}}/modeling/modelingStructures/classDiagramsBasic/images/ageListCalculatorPersonMinimal.png" width="450" />
 <p/>
-
-</box>
+{% endcall %}
 
 In addition, **associations can show additional decorations such as _association labels_, _association roles_, _multiplicity_ and _navigability_** to add more information to a class diagram.
 
@@ -49,13 +48,11 @@ In addition, **associations can show additional decorations such as _association
 
 {{ print_sensitive_panels("expanded") }}
 
-<box>
-
-{{ icon_example }} Here is the same class diagram shown earlier but with some additional information included:
+{% call show_example() %}
+Here is the same class diagram shown earlier but with some additional information included:
 <p/><pic eager src="{{baseUrl}}/modeling/modelingStructures/classDiagramsBasic/images/ageListCalculatorPerson.png" width="450" />
 <p/>
-
-</box>
+{% endcall %}
 
 
 </div>

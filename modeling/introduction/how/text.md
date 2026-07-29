@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import show_term with context %}
+{% from "common/macros.njk" import show_example, show_term with context %}
 <span id="title">How</span>
 
 <span id="prereqs"></span>
@@ -9,16 +9,14 @@
 
 **In software development, models are useful in several ways:**
 
-**a) To analyze a complex entity related to software development.**
+**a) To analyze a complex entity related to software development**, such as the {{ show_term("problem domain", "i.e., the environment in which the software is expected to solve a problem") }} the software has to operate in.
 
-<box>
+{% call show_example() %}
+Using models for analysis:
 
-{{ icon_example }} Some examples of using models for analysis:
-
-1. Models of the {{ show_term("problem domain", "i.e., the environment in which the software is expected to solve a problem") }} can be built to aid the understanding of the problem to be solved.
+1. Models of the problem domain can be built to aid the understanding of the problem to be solved.
 2. When planning a software solution, models can be created to figure out how the solution is to be built. An <trigger trigger="click" for="modal:modelingIntro-archiDiagrams">architecture diagram</trigger> is such a model.
-
-</box>
+{% endcall %}
 
 <modal large header="Architecture Diagrams" id="modal:modelingIntro-archiDiagrams">
 
@@ -29,27 +27,23 @@ An _architecture diagram_ depicts the high-level design of a software.
 
 **b) To communicate information among stakeholders.**  Models can be used as a visual aid in discussions and documentation.
 
-<box>
-
-{{ icon_example }} Some examples of using models to communicate:
+{% call show_example() %}
+Using models to communicate:
 
 1. You can use an _architecture diagram_ to explain the high-level design of the software to developers.
 2. A business analyst can use a _use case diagram_ to explain to the customer the functionality of the system.
 3. A _class diagram_ can be reverse-engineered from code so as to help explain the design of a component to a new developer.
-
-</box>
+{% endcall %}
 
 
 **c) As a blueprint for creating software.** Models can be used as instructions for building software.
 
-<box>
-
-{{ icon_example }} Some examples of using models as blueprints:
+{% call show_example() %}
+Using models as blueprints:
 
 1. A senior developer draws a class diagram to propose a design for an OOP software and passes it to a junior programmer to implement.
 2. A software tool allows users to draw UML models using its interface and the tool automatically generates the code based on the model.
-
-</box>
+{% endcall %}
 
 <box>
 

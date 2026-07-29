@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import show_term with context %}
+{% from "common/macros.njk" import show_example, show_term with context %}
 <span id="title">Identifying</span>
 
 <span id="prereqs"></span>
@@ -15,66 +15,68 @@ A use case is an interaction between a system and its {{ show_term("actors") }}.
 <include src="../../../common/definitions.md#def-actor" trim />
 </box>
 
-<box>
-
-{{ icon_example }} Some example actors for a Learning Management System:
+{% call show_example() %}
+Some actors for a Learning Management System:
 <div class="text-monospace">
 
 * Actors: Guest, Student, Staff, Admin, <tooltip content="an exam management system">ExamSys</tooltip>, <tooltip content="a library management system">LibSys</tooltip>.
 </div>
-</box>
+{% endcall %}
 
 **A use case can involve multiple actors.**
 
-<box>
+{% call show_example() %}
+A use case involving two actors:
 <div class="text-monospace">
 
 * Software System: LearnSys
 * Use case: UC01 Conduct Survey
 * Actors: ==Staff, Student==
 </div>
-</box>
+{% endcall %}
 
 **An actor can be involved in many use cases.**
 
-<box>
+{% call show_example() %}
+One actor taking part in several use cases:
 <div class="text-monospace">
 
 * Software System: LearnSys
 * Actor: Staff
 * Use cases: ==UC01 Conduct Survey, UC02 Set Up Course Schedule, UC03 Email Class, ...==
 </div>
-</box>
+{% endcall %}
 
 **A single person/system can play many roles.**
 
-<box>
+{% call show_example() %}
+One person playing several roles:
 <div class="text-monospace">
 
 * Software System: LearnSys
 * Person: ==a student==
 * Actors (or Roles): Student, Guest, Tutor
 </div>
-</box>
+{% endcall %}
 
 **Many persons/systems can play a single role.**
 
-<box>
+{% call show_example() %}
+Several kinds of persons playing one role:
 <div class="text-monospace">
 
 * Software System: LearnSys
 * Actor (or role): Student
 * Persons that can play this role: ==undergraduate student, graduate student, a staff member doing a part-time course, exchange student==
 </div>
-</box>
+{% endcall %}
 
 <!-- TODO: {some guidance on identifying actors and use cases} -->
 
 **Use cases can be specified at _various levels of detail_.**
 
-<box>
-
-{{ icon_example }} Consider the three use cases given below. Clearly, (a) is at a higher level than (b) and (b) is at a higher level than (c).
+{% call show_example() %}
+Consider the three use cases given below. Clearly, (a) is at a higher level than (b) and (b) is at a higher level than (c).
 <div class="text-monospace">
 
 * System: LearnSys
@@ -83,7 +85,7 @@ A use case is an interaction between a system and its {{ show_term("actors") }}.
   b. Take the survey<br>
   c. Answer survey question
 </div>
-</box>
+{% endcall %}
 
 
 {{ icon_tip }} While modeling user-system interactions,

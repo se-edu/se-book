@@ -1,9 +1,10 @@
-{% from "common/macros.njk" import show_term with context %}
+{% from "common/macros.njk" import show_example, show_term with context %}
 <link rel="stylesheet" href="{{baseUrl}}/css/common.css">
 
 **{{ show_term("Preconditions") }} specify the state you expect the system to be in before the use case starts.**
 
-<box>
+{% call show_example() %}
+A use case with a precondition:
 <div class="text-monospace">
 
 Software System: Online Banking System<br>
@@ -15,6 +16,6 @@ MSS:
 1. OBS requests for details for the transfer.<br>
    ...
 </div>
-</box>
+{% endcall %}
 
 <p/>

@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_example with context %}
 <span id="title">How</span>
 
 <span id="prereqs"><panel src="../what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Design → Design Fundamentals → Coupling → What%%" popup-url="{{ baseUrl }}/designFundamentals/coupling/what" /></span>
@@ -8,9 +9,8 @@
 
 **X is _coupled_ to Y if X depends on Y such that some changes to Y ==may== require corresponding changes in X**.
 
-<box>
-
-{{ icon_example }} If the `Foo` class calls the method `Bar#read()`, `Foo` is coupled to `Bar` because a change to `Bar` can (but does not always) require a change in the `Foo` class %%e.g., if the signature of `Bar#read()` is changed, `Foo` needs to change as well, but a change to the `Bar#write()` method may not require a change in the `Foo` class because `Foo` does not call `Bar#write()`%%.
+{% call show_example() %}
+If the `Foo` class calls the method `Bar#read()`, `Foo` is coupled to `Bar` because a change to `Bar` can (but does not always) require a change in the `Foo` class %%e.g., if the signature of `Bar#read()` is changed, `Foo` needs to change as well, but a change to the `Bar#write()` method may not require a change in the `Foo` class because `Foo` does not call `Bar#write()`%%.
 
 <panel type="seamless" header="%%code for the above example%%">
 
@@ -32,13 +32,10 @@ class Bar {
 }
 ```
 </panel>
+{% endcall %}
 
-</box>
-
-
-<box>
-
-{{ icon_example }} Some examples of coupling: `A` is coupled to `B` if:
+{% call show_example() %}
+`A` is coupled to `B` if:
 
 * `A` has access to the internal structure of `B` (this results in a very high level of coupling)
 * `A` and `B` depend on the same global variable
@@ -46,8 +43,7 @@ class Bar {
 * `A` receives an object of `B` as a parameter or a return value
 * `A` inherits from `B`
 * `A` and `B` are required to follow the same data format or communication protocol
-
-</box>
+{% endcall %}
 
 
 </div>

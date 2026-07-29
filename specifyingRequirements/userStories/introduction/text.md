@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import show_term with context %}
+{% from "common/macros.njk" import show_example, show_term with context %}
 <span id="prereqs"></span>
 
 <span id="outcomes">{{ icon_outcome }} Can write simple user stories</span>
@@ -17,18 +17,15 @@ A common format for writing {{ show_term("user stories") }} is:
 <include src="../../../common/definitions.md#def-user-story-format" trim />
 </box>
 
-<box>
-
-{{ icon_example }} Examples (from a _Learning Management System_):
+{% call show_example() %}
+User stories from a _Learning Management System_:
 <div class="text-monospace">
 
 1. %%As a%% student, %%I can%% download files uploaded by lecturers, %%so that%% I can get my own copy of the files
 2. %%As a%% lecturer, %%I can%% create discussion forums, %%so that%% students can discuss things online
 3. %%As a%% tutor, %%I can%% print attendance sheets, %%so that%% I can take attendance during the class
 </div>
-</box>
-
-<p/>
+{% endcall %}
 
 **You can write user stories using a physical medium or a digital tool**. For example, you can use index cards or sticky notes, and arrange them on walls or tables. Alternatively, you can use software (e.g., [GitHub Project Boards](https://help.github.com/articles/about-project-boards/), Trello, Google Docs, ...) to manage user stories digitally.
 

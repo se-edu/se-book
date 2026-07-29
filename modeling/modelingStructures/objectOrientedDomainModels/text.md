@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import show_term with context %}
+{% from "common/macros.njk" import show_example, show_term with context %}
 <span id="title">Conceptual class diagrams (aka OODMs)</span>
 
 <span id="prereqs"></span>
@@ -26,16 +26,14 @@ When building an OOP system, it makes sense to build OOP models of the problem d
 
 **The UML models that capture class structures in the problem domain are called {{ show_term("conceptual class diagrams") }}.** They are in fact a lighter version of class diagrams, and sometimes also called _OO domain models (OODMs)_. The latter name is somewhat misleading as conceptual class diagrams (CCDs) are actually only one type of domain model that can model an OOP problem domain.
 
-<box>
-
-{{ icon_example }} The CCD of a snakes and ladders game is given below.
+{% call show_example() %}
+The CCD of a snakes and ladders game is given below.
 
 Description: The snakes and ladders game is played by two or more players using a board and a die. The board has 100 squares marked 1 to 100. Each player owns one piece. Players take turns to throw the die and advance their piece by the number of squares they earned from the die throw. The board has a number of snakes. If a player’s piece lands on a square with a snake head, the piece is automatically moved to the square containing the snake’s tail. Similarly, a piece can automatically move from a ladder foot to the ladder top. The player whose piece is the first to reach the 100th square wins.
 
 <pic eager src="{{baseUrl}}/modeling/modelingStructures/objectOrientedDomainModels/images/diagram.png" height="420" />
 <p/>
-
-</box>
+{% endcall %}
 
 **CCDs do not contain solution-specific classes** (i.e., classes that are used in the solution domain but do not exist in the problem domain). For example, a class called `DatabaseConnection` could appear in a class diagram but not usually in a CCD because `DatabaseConnection` is something related to a software solution but not an entity in the problem domain.
 

@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_example with context %}
 <span id="title">Combining design patterns</span>
 
 <span id="prereqs"></span>
@@ -8,9 +9,8 @@
 
 **Design patterns are usually embedded in a larger design and sometimes applied in combination with other design patterns.**
 
-<box>
-
-{{ icon_example }} Let us look at a case study that shows how design patterns are used in the design of a class structure for a Stock Inventory System (SIS) for a shop. The shop sells appliances and accessories for the appliances. SIS simply stores information about each item in the store.
+{% call show_example() %}
+Let us look at a case study that shows how design patterns are used in the design of a class structure for a Stock Inventory System (SIS) for a shop. The shop sells appliances and accessories for the appliances. SIS simply stores information about each item in the store.
 
 **Use Cases**:
 
@@ -66,8 +66,7 @@ Some views need to be updated when the data changes; apply the Observer pattern 
 <p/>
 
 In addition, the Singleton pattern can be applied to the façade class.
-
-</box>
+{% endcall %}
 
 </div>
 

@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import show_term with context %}
+{% from "common/macros.njk" import show_example, show_term with context %}
 <span id="title">Prototyping</span>
 
 <span id="prereqs"></span>
@@ -11,16 +11,14 @@
 <include src="../../common/definitions.md#def-prototyping" trim />
 </box>
 
-**{{ show_term("Prototyping") }} can uncover requirements, in particular, those related to _how users interact with the system_.** UI prototypes or {{ show_term("mock-ups") }} are often used in brainstorming sessions or in meetings with users to get quick feedback.
+**{{ show_term("Prototyping") }} can uncover requirements, in particular, those related to _how users interact with the system_.** UI prototypes or {{ show_term("mock-ups") }}, also called {{ show_term("wireframe") }} diagrams, are often used in brainstorming sessions or in meetings with users to get quick feedback.
 
-<box>
-
-{{ icon_example }} A mock-up (also called a {{ show_term("wireframe") }} diagram) of a dialog box:
+{% call show_example() %}
+A mock-up of a dialog box:
 
 <pic eager class="border" src="images/wireframeExample.png" /><br>
 <sub>%%[source: plantuml.com]%%</sub>
-</box>
-<p/>
+{% endcall %}
 
 {{ icon_tip }} Prototyping can be used for _discovering_ as well as _specifying_ requirements %%e.g. a UI prototype can serve as a specification of what to build%%.
 

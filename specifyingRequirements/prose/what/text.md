@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import show_term with context %}
+{% from "common/macros.njk" import show_example, show_term with context %}
 <span id="title">What</span>
 
 <span id="prereqs"></span>
@@ -9,13 +9,11 @@
 
 **A textual description (i.e., {{ show_term("prose") }}) can be used to describe requirements.** Prose is especially useful when describing abstract ideas such as the vision of a product.
 
-<box>
-
-{{ icon_example }} The product vision of the [TEAMMATES Project](https://github.com/TEAMMATES/teammates) given below is described using prose.
+{% call show_example() %}
+The product vision of the [TEAMMATES Project](https://github.com/TEAMMATES/teammates), described using prose:
 
 >TEAMMATES aims to become **the biggest student project in the world** (_biggest_ here refers to 'many contributors, many users, large codebase, evolving over a long period'). Furthermore, it aims to serve as a training tool for Software Engineering students who want to learn SE skills in the context of **a non-trivial real software product**.
-
-</box>
+{% endcall %}
 
 {{ icon_important_big_red }} Avoid using lengthy prose to describe requirements; they can be hard to follow.
 

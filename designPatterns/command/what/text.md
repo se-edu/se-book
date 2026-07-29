@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_example with context %}
 <span id="title">What</span>
 
 <span id="prereqs"></span>
@@ -8,26 +9,24 @@
 
 **Context**
 
-A system is required to execute a number of commands, each doing a different task. For example, a system might have to support `Sort`, `List`, `Reset` commands.
+A system is required to execute a number of commands, each doing a different task.<br>
+{{ label_example }} %%A system might have to support `Sort`, `List`, `Reset` commands.%%
 
 **Problem**
 
-It is preferable that some part of the code executes these commands without having to know each command type. %%e.g., there can be a `CommandQueue` object that is responsible for queuing commands and executing them without knowledge of what each command does.%%
+It is preferable that some part of the code executes these commands without having to know each command type.<br>
+{{ label_example }} %%There can be a `CommandQueue` object that is responsible for queuing commands and executing them without knowledge of what each command does.%%
 
 **Solution**
 
 The essential element of this pattern is to have a general `<<Command>>` object that can be passed around, stored, executed, etc without knowing the type of command (i.e., via polymorphism).
 
-Let us examine an example application of the pattern first:
-
-<box>
-
-{{ icon_example }} In the example solution below, the `CommandCreator` creates `List`, `Sort`, and `Reset Command` objects and adds them to the `CommandQueue` object. The `CommandQueue` object treats them all as `Command` objects and performs the execute/undo operation on each of them without knowledge of the specific `Command` type. When executed, each `Command` object will access the `DataStore` object to carry out its task. The `Command` class can also be an abstract class or an interface.
+{% call show_example() %}
+In the solution below, the `CommandCreator` creates `List`, `Sort`, and `Reset Command` objects and adds them to the `CommandQueue` object. The `CommandQueue` object treats them all as `Command` objects and performs the execute/undo operation on each of them without knowledge of the specific `Command` type. When executed, each `Command` object will access the `DataStore` object to carry out its task. The `Command` class can also be an abstract class or an interface.
 
 <pic eager src="{{baseUrl}}/designPatterns/command/what/images/commandCreator.png" height="150" />
 <p/>
-
-</box>
+{% endcall %}
 
 The general form of the solution is as follows.
 

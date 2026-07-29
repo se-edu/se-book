@@ -7,15 +7,20 @@
 
 <div id="body">
 
-Some examples of different coupling types:
+Coupling comes in several types:
 
-* **{{ show_term("Content coupling") }}**: one module modifies or relies on the internal workings of another module %%e.g., accessing local data of another module%% 
-* **{{ show_term("Common/Global coupling") }}**: two modules share the same global data 
-* **{{ show_term("Control coupling") }}**: one module controls the flow of another by passing it information on what to do %%e.g., passing a flag%%
-* **{{ show_term("Data coupling") }}**: one module shares data with another module %%e.g., via passing parameters%%
-* **{{ show_term("External coupling") }}**: two modules share an externally imposed convention %%e.g., data formats, communication protocols, device interfaces%%. 
+* **{{ show_term("Content coupling") }}**: one module modifies or relies on the internal workings of another module<br>
+  {{ label_example }} %%Accessing local data of another module.%%
+* **{{ show_term("Common/Global coupling") }}**: two modules share the same global data
+* **{{ show_term("Control coupling") }}**: one module controls the flow of another by passing it information on what to do<br>
+  {{ label_example }} %%Passing a flag.%%
+* **{{ show_term("Data coupling") }}**: one module shares data with another module<br>
+  {{ label_example }} %%Passing parameters.%%
+* **{{ show_term("External coupling") }}**: two modules share an externally imposed convention<br>
+  {{ label_example }} %%Data formats, communication protocols, device interfaces.%%
 * **{{ show_term("Subclass coupling") }}**: a class inherits from another class. Note that a child class is coupled to the parent class but not the other way around.
-* **{{ show_term("Temporal coupling") }}**: two actions are bundled together just because they happen to occur at the same time %%e.g. extracting a contiguous block of code as a method although the code block contains statements unrelated to each other%%
+* **{{ show_term("Temporal coupling") }}**: two actions are bundled together just because they happen to occur at the same time<br>
+  {{ label_example }} %%Extracting a contiguous block of code as a method although the code block contains statements unrelated to each other.%%
 
 </div>
 

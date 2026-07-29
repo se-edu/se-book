@@ -6,13 +6,8 @@
 
 <div id="body">
 
-**Design patterns provide a high-level vocabulary to talk about design.**
-
-<box>
-
-{{ icon_example }} Someone can say 'apply Observer pattern here' instead of having to describe the mechanics of the solution in detail.
-
-</box>
+**Design patterns provide a high-level vocabulary to talk about design.**<br>
+{{ label_example }} %%Someone can say 'apply Observer pattern here' instead of having to describe the mechanics of the solution in detail.%%
 
 **Knowing more patterns is a way to become more ‘experienced’.** Aim to learn at least the context and the problem of patterns %%so that when you encounter those problems you know where to look for a solution%%. 
 

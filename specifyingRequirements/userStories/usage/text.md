@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import show_term with context %}
+{% from "common/macros.njk" import show_example, show_term with context %}
 <span id="title">Usage</span>
 
 <span id="prereqs"></span>
@@ -19,15 +19,13 @@
   <include src="../../../requirements/nonFunctionalRequirements/unit-inElsewhere-asFlat.md" boilerplate/>
 </modal>
 
-<box>
-
-{{ icon_example }} An example of an NFR captured as a user story:
+{% call show_example() %}
+An NFR captured as a user story:
 
 As a/an ___, | I want to ___, | so that ___.
 -------------|----------------|-------------
 impatient user | to be able to experience reasonable response time from the website while up to 1000 concurrent users are using it | I can use the app even when the traffic is at the maximum expected level
-
-</box>
+{% endcall %}
 
 <div id="usageTips">
 

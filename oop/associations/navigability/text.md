@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import show_term with context %}
+{% from "common/macros.njk" import show_example, show_term with context %}
 <span id="title">Navigability</span>
 
 <span id="prereqs"></span>
@@ -15,10 +15,8 @@ When two classes are linked by an association, it does not necessarily mean both
 * **Bidirectional**: `b` will have a reference to `r` and `r` will have a reference to `b` i.e., the two objects will be pointing to each other for the same single instance of the association.
 
 Note that two <tooltip content="i.e., an association with unidirectional navigability">unidirectional associations </tooltip> in opposite directions do not add up to a single bidirectional association.
-<box>
-
-{{ icon_example }} In the code below, there is a bidirectional association between the `Person` class and the `Cat` class i.e., if `Person` `p` is the owner of the `Cat` `c`, it will result in `p` and `c` having references to each other.
-
+{% call show_example() %}
+In the code below, there is a bidirectional association between the `Person` class and the `Cat` class i.e., if `Person` `p` is the owner of the `Cat` `c`, it will result in `p` and `c` having references to each other.
 
 <div class="alt-java">
 
@@ -41,7 +39,6 @@ class Person:
 
   def __init__(self):
     self.pet = None  # a Cat object
-
 
 class Cat:
 
@@ -74,16 +71,13 @@ class Person:
   def __init__(self):
     self.pet = None  # a Cat object
 
-
 class Cat:
 
   def __init__(self):
     self.breeder = None  # a Person object
 ```
 </div>
-
-
-</box>
+{% endcall %}
 </div>
 
 <div id="extras">

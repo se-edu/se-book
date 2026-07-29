@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import show_term with context %}
+{% from "common/macros.njk" import show_example, show_term with context %}
 <span id="title">What</span>
 
 <span id="prereqs"></span>
@@ -7,22 +7,20 @@
 
 <div id="body">
 
-**A {{ show_term("model") }} is a representation of something else.**
-
-<box>
-
-{{ icon_example }} A <trigger trigger="click" for="modal:modellingIntro-classDiagram">class diagram</trigger> is a model that represents a software design.
+**A {{ show_term("model") }} is a representation of something else.**<br>
+{{ label_example }} %%A <trigger trigger="click" for="modal:modellingIntro-classDiagram">class diagram</trigger> is a model that represents a software design.%%
 
 <!-- TODO: give non-software examples -->
 
-</box>
-
 <modal large header="Class diagrams" id="modal:modellingIntro-classDiagram">
 
-A _class diagram_ is a diagram drawn using the UML modeling notation.<br>
-{{ icon_example }} An example class diagram:<br>
+A _class diagram_ is a diagram drawn using the UML modeling notation.
+
+{% call show_example() %}
+A class diagram drawn for a small design:
 
 <pic eager src="{{baseUrl}}/uml/classDiagrams/introduction/what/images/classDiagramExample1.png" width="600" />
+{% endcall %}
 
 </modal>
 
@@ -32,19 +30,10 @@ A _class diagram_ is a diagram drawn using the UML modeling notation.<br>
   <include src="../../../designFundamentals/abstraction/what/unit-inElsewhere-asFlat.md" boilerplate/>
 </modal>
 
-<box>
+{{ label_example }} %%A class diagram captures the structure of the software design but not the behavior.%%
 
-{{ icon_example }} A class diagram captures the structure of the software design but not the behavior.
-
-</box>
-
-**Multiple models of the same entity may be needed to capture it fully.**
-
-<box>
-
-{{ icon_example }} In addition to a class diagram (or even multiple class diagrams), a number of other diagrams may be needed to capture various interesting aspects of the software.
-
-</box>
+**Multiple models of the same entity may be needed to capture it fully.**<br>
+{{ label_example }} %%In addition to a class diagram (or even multiple class diagrams), a number of other diagrams may be needed to capture various interesting aspects of the software.%%
 
 </div>
 

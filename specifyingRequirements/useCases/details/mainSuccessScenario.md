@@ -1,11 +1,10 @@
-{% from "common/macros.njk" import show_term with context %}
+{% from "common/macros.njk" import show_example, show_term with context %}
 <link rel="stylesheet" href="{{baseUrl}}/css/common.css">
 
 **The {{ show_term("Main Success Scenario (MSS)") }} describes the most straightforward interaction for a given use case, which assumes that nothing goes wrong.** This is also called the _Basic Course of Action_ or the _Main Flow of Events_ of a use case. 
 
-<box>
-
-{{ icon_example }} Note how the MSS in the example below assumes that all entered details are correct and ignores problems such as timeouts and network outages. %%For example, the MSS does not tell us what happens if the user enters incorrect data.%%
+{% call show_example() %}
+Note how the MSS below assumes that all entered details are correct and ignores problems such as timeouts and network outages. %%It does not tell us what happens if the user enters incorrect data.%%
 
 <div class="text-monospace">
 
@@ -21,6 +20,4 @@ MSS:
 
 Use case ends.
 </div>
-
-
-</box>
+{% endcall %}

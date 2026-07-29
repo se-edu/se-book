@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import show_term with context %}
+{% from "common/macros.njk" import show_example, show_term with context %}
 <span id="title">Substitutability</span>
 
 <span id="prereqs"><panel src="../../../oop/inheritance/what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Paradigms → Object Oriented Programming → Inheritance → What%%" popup-url="{{ baseUrl }}/oop/inheritance/what" /></span>
@@ -9,8 +9,8 @@
 
 **Every instance of a subclass is an instance of the superclass, but not vice versa.** As a result, inheritance allows {{ show_term("substitutability") }}: the ability to substitute a child class object where a parent class object is expected.
 
-<box>
-
+{% call show_example() %}
+Consider the `Staff` hierarchy below.
 <puml>
 @startuml
 skinparam classAttributeIconSize 0
@@ -29,7 +29,7 @@ hide AdminStaff fields
 @enduml
 </puml>
 
-{{ icon_example }} An `AcademicStaff` is an instance of a `Staff`, but a `Staff` is not necessarily an instance of an `AcademicStaff`. That is, wherever an object of the superclass is expected, it can be substituted by an object of any of its subclasses.
+An `AcademicStaff` is an instance of a `Staff`, but a `Staff` is not necessarily an instance of an `AcademicStaff`. That is, wherever an object of the superclass is expected, it can be substituted by an object of any of its subclasses.
 
 The following code is valid because an `AcademicStaff` object is substitutable as a `Staff` object.
 
@@ -44,7 +44,7 @@ Staff staff;
 ...
 AcademicStaff academicStaff = staff; // Not OK
 ```
-</box>
+{% endcall %}
 
 </div>
 

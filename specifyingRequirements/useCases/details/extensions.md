@@ -1,9 +1,8 @@
-{% from "common/macros.njk" import show_term with context %}
+{% from "common/macros.njk" import show_example, show_term with context %}
 **{{ show_term("Extensions") }} are "add-ons" to the MSS that describe _exceptional/alternative flows of events_.** They describe variations of the scenario that can happen if certain things are not as expected by the MSS. Extensions appear below the MSS.
 
-<box>
-
-{{ icon_example }} This example adds some extensions to the use case in the previous example.
+{% call show_example() %}
+Some extensions added to the use case in the previous example:
 
 <pre>
 System: Online Banking System (OBS)
@@ -42,7 +41,7 @@ Extensions:
       *b2. OBS informs the User of the cancellation.
       Use case ends.
 </pre>
-</box>
+{% endcall %}
 
 Note that the numbering style is not a universal rule but a widely used convention. Based on that convention,
 * either of the extensions marked `3a.` and `3b.` can happen just after step `3` of the MSS.

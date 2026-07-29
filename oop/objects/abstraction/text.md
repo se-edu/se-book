@@ -11,13 +11,8 @@ The concept of **_Objects_ in OOP is an <trigger trigger="click" for="modal:obje
 
 <modal large header="Definition: Abstraction" id="modal:objectsAsAbstractions-abstraction">
   <include src="../../../common/definitions.md#def-abstraction"/>
-</modal>
-
-<box>
-
-{{ icon_example }} You can deal with a `Person` object that represents the person Adam and query the object for Adam's age instead of dealing with details such as Adam’s date of birth (DoB), in what format the DoB is stored, the algorithm used to calculate the age from the DoB, etc.
-
-</box>
+</modal><br>
+{{ label_example }} %%You can deal with a `Person` object that represents the person Adam and query the object for Adam's age instead of dealing with details such as Adam’s date of birth (DoB), in what format the DoB is stored, the algorithm used to calculate the age from the DoB, etc.%%
 
 </div>
 

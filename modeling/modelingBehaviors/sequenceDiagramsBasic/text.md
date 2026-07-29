@@ -8,14 +8,8 @@
 
 **Sequence diagrams model the interactions between various entities in a system, in a specific scenario.** Modeling such scenarios is useful, for example, to verify the design of the internal interactions is able to provide the expected outcomes.
 
-<box>
-
-Some examples where a sequence diagram can be used:
-
-{{ icon_example }} To model how components of a system interact with each other to respond to a user action.
-
-{{ icon_example }} To model how objects inside a component interact with each other to respond to a method call it received from another component.
-</box>
+{{ label_example }} %%Modeling how components of a system interact with each other to respond to a user action.%%<br>
+{{ label_example }} %%Modeling how objects inside a component interact with each other to respond to a method call it received from another component.%%
 
 {% macro print_sensitive_panels(panel_state="") %}
 <panel type="seamless" src="../../../uml/sequenceDiagrams/introduction/unit-inElsewhere-asFlat.md#main" boilerplate header="{{ icon_prereq }} UML {{ icon_embedding }} Sequence Diagrams → Introduction" alt="{{ icon_prereq }} UML/SequenceDiagrams" {{ panel_state }} />

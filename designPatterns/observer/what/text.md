@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_example with context %}
 <span id="title">What</span>
 
 <span id="prereqs"></span>
@@ -11,9 +12,8 @@
 
 An object (possibly more than one) is interested in being notified when a change happens to another object. That is, some objects want to ‘observe’ another object.
 
-<box>
-
-{{ icon_example }} Consider this scenario from a student management system where the user is adding a new student to the system.
+{% call show_example() %}
+Consider this scenario from a student management system where the user is adding a new student to the system.
 
 <pic eager src="{{baseUrl}}/designPatterns/observer/what/images/sequenceDiagram.png" height="330" />
 <p/>
@@ -29,8 +29,7 @@ When a student is added to the database using `NewStudentUi` shown above, both `
 <p/>
 
 However, the `StudentList` object has no knowledge about `StudentListUi` and `StudentStatsUi` (note the direction of the navigability) and has no way to inform those objects. This is an example of the type of problem addressed by the Observer pattern.
-
-</box>
+{% endcall %}
 
 **Problem**
 
@@ -43,9 +42,8 @@ Force the communication through an interface known to both parties.
 <pic eager src="{{baseUrl}}/designPatterns/observer/what/images/studentListObserver.png" height="160" />
 <p/>
 
-<box>
-
-{{ icon_example }} Here is the Observer pattern applied to the student management system.
+{% call show_example() %}
+Here is the Observer pattern applied to the student management system.
 
 **During the initialization of the system,**
 
@@ -94,8 +92,7 @@ Force the communication through an interface known to both parties.
    }
    ```
    Note that `StudentList` is unaware of the exact nature of the two UIs but still manages to communicate with them via an intermediary.
-
-</box>
+{% endcall %}
 
 Here is the generic description of the observer pattern:
 
@@ -106,11 +103,7 @@ Here is the generic description of the observer pattern:
 * The `<<Observable>>` maintains a list of `<<Observer>>` objects. The `addObserver(Observer)` operation adds a new `<<Observer>>` to the list of `<<Observer>>`s.
 * Whenever there is a change in the `<<Observable>>`, the `notifyObservers()` operation calls the `update()` operation of all `<<Observer>>`s in the list.
 
-<box>
-
-{{ icon_example }} In a GUI application, how is the Controller notified when the “save” button is clicked? UI frameworks such as JavaFX have built-in support for the Observer pattern.
-
-</box>
+{{ label_example }} %%In a GUI application, how is the Controller notified when the “save” button is clicked? UI frameworks such as JavaFX have built-in support for the Observer pattern.%%
 
 </div>
 

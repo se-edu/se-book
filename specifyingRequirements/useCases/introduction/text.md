@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import show_term with context %}
+{% from "common/macros.njk" import show_example, show_term with context %}
 <span id="title">Introduction</span>
 
 <span id="prereqs"></span>
@@ -13,9 +13,8 @@
 
 **A {{ show_term("use case") }} describes an _interaction between the user and the system_ for a _specific functionality_ of the system.**
 
-<box>
-
-<panel header="{{ icon_example }} Example 1: 'transfer money' use case for an online banking system" type="seamless" expanded>
+{% call show_example() %}
+A 'transfer money' use case for an online banking system:
 <pre>
 System: Online Banking System (OBS)
 Use case: UC23 - Transfer Money
@@ -48,9 +47,14 @@ Extensions:
       *a2. User confirms the cancellation.
       Use case ends.
 </pre>
-</panel>
+{% endcall %}
 
-<panel header="%%{{ icon_example }} Example 2: 'upload file' use case of an LMS%%" type="seamless">
+<panel type="seamless">
+<div slot="header">
+
+%%Another {{ label_example }}: 'upload file' use case of an LMS%%
+</div>
+
 <div class="text-monospace">
 
 * System: A Learning Management System (LMS)
@@ -63,8 +67,6 @@ Extensions:
 
 </div>
 </panel>
-
-</box>
 
 <box background-color="white" border-color="white">
 

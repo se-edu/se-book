@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import show_term with context %}
+{% from "common/macros.njk" import show_example, show_term with context %}
 <span id="title">Composite structure diagrams</span>
 
 <span id="prereqs"></span>
@@ -9,16 +9,14 @@
 
 **A {{ show_term("composite structure diagram") }} hierarchically decomposes a class into its internal structure.**
 
-<box>
-
-{{ icon_example }} Here is an example composite structure diagram:
+{% call show_example() %}
+A composite structure diagram for a car:
 
 <pic eager src="{{baseUrl}}/modeling/modelingStructures/compositeStructureDiagrams/images/diagram.png" height="150" />
 <br>
 
 <sub>source:[https://commons.wikimedia.org](https://en.wikipedia.org/wiki/Composite_structure_diagram)</sub>
-
-</box>
+{% endcall %}
 </div>
 
 <div id="extras">

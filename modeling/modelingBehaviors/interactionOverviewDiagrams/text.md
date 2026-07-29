@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import show_term with context %}
+{% from "common/macros.njk" import show_example, show_term with context %}
 <span id="title">Interaction overview diagrams</span>
 
 <span id="prereqs"></span>
@@ -9,16 +9,14 @@
 
 **{{ show_term("Interaction overview diagrams") }} are a combination of activity diagrams and sequence diagrams**.
 
-<box>
-
-{{ icon_example }} An example:
+{% call show_example() %}
+An interaction overview diagram combining activity and sequence notation:
 
 <pic eager src="{{baseUrl}}/modeling/modelingBehaviors/interactionOverviewDiagrams/images/diagram.png" height="420" />
 <p/>
 
 <sub>source: [https://commons.wikimedia.org](https://en.wikipedia.org/wiki/Interaction_overview_diagram)</sub>
-
-</box>
+{% endcall %}
 
 </div>
 
