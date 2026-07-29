@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="prereqs"></span>
 
 <span id="outcomes">{{ icon_outcome }} Can design reasonable quality APIs</span>
@@ -37,7 +38,7 @@ More details can be included to increase the precision of the method definitions
 * **Preconditions**: None
 * **Postconditions**:	A new minefield is created. Game state is READY.
 
-Preconditions are the conditions that must be true before calling this operation. Postconditions describe the system after the operation is complete. Note that postconditions do not say what happens during the operation. Here is another example:
+{{ show_term("Preconditions") }} are the conditions that must be true before calling this operation. {{ show_term("Postconditions") }} describe the system after the operation is complete. Note that postconditions do not say what happens during the operation. Here is another example:
 
 * **Operation**: _clearCellAt(int x, int y): void_
 * **Description**: Records the cell at x, y as cleared.

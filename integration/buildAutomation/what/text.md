@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">What</span>
 
 <span id="prereqs"></span>
@@ -6,7 +7,7 @@
 
 <div id="body">
 
-**Build automation tools automate the steps of the build process, usually by means of build scripts.**
+**{{ show_term("Build automation tools") }} automate the steps of the build process, usually by means of build scripts.**
 
 In a non-trivial project, building a product from its source code can be a complex multistep process. %%For example, it can include steps such as: pull code from the revision control system, compile, link, run automated tests, automatically update release documents (e.g., build number), package into a distributable, push to a repository, deploy to a server, delete temporary files created during building/testing, email developers of the new build, and so on. Furthermore, this build process can be done ‘on demand’, scheduled (e.g., every day at midnight), or triggered by various events (e.g., triggered by a code push to the revision control system).%%
 
@@ -22,7 +23,7 @@ However, most big projects use specialized build tools to automate complex build
 
 </box>
 
-**Some build tools also serve as _dependency management tools_**. Modern software projects often depend on third-party libraries that evolve constantly. That means developers need to download the correct version of the required libraries and update them regularly. Therefore, dependency management is an important part of build automation. Dependency management tools can automate that aspect of a project.
+**Some build tools also serve as {{ show_term("dependency management tools") }}**. Modern software projects often depend on third-party libraries that evolve constantly. That means developers need to download the correct version of the required libraries and update them regularly. Therefore, dependency management is an important part of build automation. Dependency management tools can automate that aspect of a project.
 
 <box>
 

@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">What</span>
 
 <span id="prereqs"></span>
@@ -6,7 +7,7 @@
 
 <div id="body">
 
-**A defensive programmer codes under the assumption "if you leave room for things to go wrong, they _will_ go wrong".** Therefore, a defensive programmer proactively tries to eliminate any room for things to go wrong.
+**A {{ show_term("defensive programmer") }} codes under the assumption "if you leave room for things to go wrong, they _will_ go wrong".** Therefore, a defensive programmer proactively tries to eliminate any room for things to go wrong.
 
 <box>
 

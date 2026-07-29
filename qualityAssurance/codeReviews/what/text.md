@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">What</span>
 
 <span id="prereqs"></span>
@@ -6,7 +7,7 @@
 
 <div id="body">
 
-**Code review is the systematic examination of code with the intention of finding where the code can be improved.**
+**{{ show_term("Code review") }} is the systematic examination of code with the intention of finding where the code can be improved.**
 
 Reviews can be done in various forms. Some examples are:
 
@@ -14,7 +15,7 @@ Reviews can be done in various forms. Some examples are:
 
   * Project management platforms such as GitHub and BitBucket allow new code to be proposed as _Pull Requests_ and provide the ability for others to review the code in the PR.
 
-* **In <trigger trigger="click" for="modal:codeReview-pairProgramming">pair programming</trigger>**
+* **In <trigger trigger="click" for="modal:codeReview-pairProgramming">{{ show_term("pair programming") }}</trigger>**
 
   * Because pair programming involves two programmers working on the same code at the same time, there is an implicit review of the code by the other member of the pair.
 
@@ -35,7 +36,7 @@ Reviews can be done in various forms. Some examples are:
 
 </modal>
 
-* **Formal inspections**
+* **{{ show_term("Formal inspections") }}**
 
   * Inspections involve a group of people systematically examining project artifacts to discover defects. Members of the inspection team play various roles during the process, such as:
 

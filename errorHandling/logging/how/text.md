@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">How</span>
 
 <span id="prereqs"></span>
@@ -23,7 +24,7 @@ Next, create a `Logger`:
 private static Logger logger = Logger.getLogger("Foo");
 ```
 
-Now, you can use the `Logger` object to log information. Note the use of a <popover content="`INFO`, `WARNING` etc.">logging level</popover> for each message. When running the code, the logging level can be set to `WARNING` so that log messages specified as having `INFO` level (which is a lower level than `WARNING`) will not be written to the log file at all.
+Now, you can use the `Logger` object to log information. Note the use of a {{ show_term("logging level", "`INFO`, `WARNING` etc.") }} for each message. When running the code, the logging level can be set to `WARNING` so that log messages specified as having `INFO` level (which is a lower level than `WARNING`) will not be written to the log file at all.
 
 ```java
 // log a message at INFO level

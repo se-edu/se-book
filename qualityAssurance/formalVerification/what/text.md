@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">What</span>
 
 <span id="prereqs"></span>
@@ -6,7 +7,7 @@
 
 <div id="body">
 
-**Formal verification uses mathematical techniques to prove the correctness of a program.**
+**{{ show_term("Formal verification") }} uses mathematical techniques to prove the correctness of a program.**
 
 <panel type="seamless" header="{{ icon_video }} An introduction to Formal Methods" class="non-printable">
 

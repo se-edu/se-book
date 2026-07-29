@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">Late and one time versus early and frequent</span>
 
 <span id="prereqs"><panel src="../../introduction/what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Implementation → Integration → Introduction → What%%" popup-url="{{ baseUrl }}/integration/introduction/what" /></span>
@@ -8,7 +9,7 @@
 
 **In terms of timing and frequency, there are two general approaches to integration: _late and one-time_, and _early and frequent_.**
 
-**_Late and one-time_: wait until all components are completed and integrate all finished components near the end of the project.** 
+**{{ show_term("Late and one-time") }}: wait until all components are completed and integrate all finished components near the end of the project.** 
 
 <box type="wrong">
  
@@ -16,11 +17,11 @@
 
 </box>
 
-**_Early and frequent_: integrate early and evolve each part in parallel, in small steps, re-integrating frequently.** 
+**{{ show_term("Early and frequent") }}: integrate early and evolve each part in parallel, in small steps, re-integrating frequently.** 
 
 <box>
 
-{{ icon_example }} A _<tooltip content="it has all the high-level components needed for the first version in their minimal form, compiles, and runs but may not produce any useful output yet">walking skeleton</tooltip>_ can be written first. This can be done by one developer, possibly the one in charge of integration. After that, all developers can flesh out the skeleton in parallel, adding one feature at a time. After each feature is done, simply integrate the new code into the main system.
+{{ icon_example }} A {{ show_term("walking skeleton", "it has all the high-level components needed for the first version in their minimal form, compiles, and runs but may not produce any useful output yet") }} can be written first. This can be done by one developer, possibly the one in charge of integration. After that, all developers can flesh out the skeleton in parallel, adding one feature at a time. After each feature is done, simply integrate the new code into the main system.
 
 </box>
 

@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">Top-down versus bottom-up integration</span>
 
 <span id="prereqs"><panel src="../bigBangVsIncremental/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Implementation → Integration → Approaches → Big-Bang Vs Incremental%%" popup-url="{{ baseUrl }}/integration/approaches/bigBangVsIncremental" /></span>
@@ -11,7 +12,7 @@
 
 **Based on the order in which components are integrated, incremental integration can be done in three ways.**
 
-**_Top-down_ integration: higher-level components are integrated before bringing in the lower-level components.** One advantage of this approach is that higher-level problems can be discovered early. One disadvantage is that this requires the use of <trigger for="pop:topdown-stub">stubs</trigger> in place of lower-level components until the real lower-level components are integrated into the system. Otherwise, higher-level components cannot function as they depend on lower-level ones.
+**{{ show_term("Top-down") }} integration: higher-level components are integrated before bringing in the lower-level components.** One advantage of this approach is that higher-level problems can be discovered early. One disadvantage is that this requires the use of <trigger for="pop:topdown-stub">{{ show_term("stubs") }}</trigger> in place of lower-level components until the real lower-level components are integrated into the system. Otherwise, higher-level components cannot function as they depend on lower-level ones.
 
 <popover id="pop:topdown-stub" header="{{icon_preview}}" placement="top">
   <div slot="content">
@@ -19,9 +20,9 @@
   </div>
 </popover>
 
-**_Bottom-up_ integration: the reverse of top-down integration.** Note that when integrating lower-level components, <tooltip content="additional code written to provide inputs to a component via an API">drivers</tooltip> may be needed to test the integrated components %%because the UI may not be integrated yet%%, just as top-down integration needs stubs.
+**{{ show_term("Bottom-up") }} integration: the reverse of top-down integration.** Note that when integrating lower-level components, {{ show_term("drivers", "additional code written to provide inputs to a component via an API") }} may be needed to test the integrated components %%because the UI may not be integrated yet%%, just as top-down integration needs stubs.
 
-**_Sandwich_ integration: a mix of the top-down and bottom-up approaches.** The idea is to do both top-down and bottom-up so that they 'meet' in the middle.
+**{{ show_term("Sandwich") }} integration: a mix of the top-down and bottom-up approaches.** The idea is to do both top-down and bottom-up so that they 'meet' in the middle.
 
 </div>
 

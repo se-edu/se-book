@@ -25,7 +25,6 @@
 /integration/
 /reuse/
 /qualityAssurance/
-/security/
 /testing/
 /testCaseDesign/
 /security/

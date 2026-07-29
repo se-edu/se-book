@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">What</span>
 
 <span id="prereqs"></span>
@@ -6,7 +7,7 @@
 
 <div id="body">
 
-**Exceptions are used to deal with _'unusual' but not entirely unexpected_ situations** that the program might encounter at runtime.
+**{{ show_term("Exceptions") }} are used to deal with _'unusual' but not entirely unexpected_ situations** that the program might encounter at runtime.
 
 <box type="definition" seamless>
 <include src="../../../common/definitions.md#def-exception" trim />

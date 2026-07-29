@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">What</span>
 
 <span id="prereqs"></span>
@@ -10,18 +11,18 @@
 <include src="../../../common/definitions.md#def-static-analysis" trim />
 </box>
 
-**Static analysis of code can find useful information such as unused variables**, unhandled exceptions, style errors, and statistics. Most modern IDEs come with some inbuilt static analysis capabilities. For example, an IDE can highlight unused variables as you type the code into the editor.
+**{{ show_term("Static analysis") }} of code can find useful information such as unused variables**, unhandled exceptions, style errors, and statistics. Most modern IDEs come with some inbuilt static analysis capabilities. For example, an IDE can highlight unused variables as you type the code into the editor.
 
-The term _static_ in static analysis refers to the fact that the code is analyzed without executing the code. **In contrast, _dynamic analysis_ requires the code to be executed to gather additional information about the code**, e.g., performance characteristics.
+The term _static_ in static analysis refers to the fact that the code is analyzed without executing the code. **In contrast, {{ show_term("dynamic analysis") }} requires the code to be executed to gather additional information about the code**, e.g., performance characteristics.
 
-**Higher-end static analysis tools (static analyzers) can perform more complex analysis such as locating potential bugs, memory leaks, and inefficient code structures.**
+**Higher-end static analysis tools ({{ show_term("static analyzers") }}) can perform more complex analysis such as locating potential bugs, memory leaks, and inefficient code structures.**
 
 <box>
 
 {{ icon_example }} Some examples of static analyzers for Java: [CheckStyle](http://checkstyle.sourceforge.net/), [PMD](https://pmd.github.io/), [FindBugs](http://findbugs.sourceforge.net/)
 </box>
 
-**_Linters_ are a subset of static analyzers** that specifically aim to locate areas where the code can be made 'cleaner'.
+**{{ show_term("Linters") }} are a subset of static analyzers** that specifically aim to locate areas where the code can be made 'cleaner'.
 
 </div>
 

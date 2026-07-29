@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">What</span>
 
 <span id="prereqs"></span>
@@ -6,7 +7,7 @@
 
 <div id="body">
 
-A library is a collection of modular code that is general and can be used by other programs.
+A {{ show_term("library") }} is a collection of modular code that is general and can be used by other programs.
 
 <box>
 

@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">What</span>
 
 <span id="prereqs"></span>
@@ -6,7 +7,7 @@
 
 <div id="body">
 
-**An _Application Programming Interface (API)_ specifies the interface through which other programs can interact with a software component.** It is a contract between the component and its clients.
+**An {{ show_term("Application Programming Interface (API)") }} specifies the interface through which other programs can interact with a software component.** It is a contract between the component and its clients.
 
 <box>
 

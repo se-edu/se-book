@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="prereqs"></span>
 
 <span id="outcomes">{{ icon_outcome }} Can explain refactoring</span>
@@ -6,7 +7,7 @@
 
 <div id="body">
 
-**The process of restructuring code in small steps without modifying its external behavior is called _refactoring_.** Refactoring is needed because the first version of the code you write may not be of production quality. It is OK to first concentrate on making the code work, rather than worry over the quality of the code, as long as you improve the quality later.
+**The process of restructuring code in small steps without modifying its external behavior is called {{ show_term("refactoring") }}.** Refactoring is needed because the first version of the code you write may not be of production quality. It is OK to first concentrate on making the code work, rather than worry over the quality of the code, as long as you improve the quality later.
 
 * **Refactoring is not rewriting**: Discarding poorly written code entirely and rewriting it from scratch is not refactoring because refactoring needs to be done in small steps.
 * **Refactoring is not bug fixing**: By definition, refactoring is different from bug fixing or any other modification that alters the external behavior (e.g., adding a feature) of the component concerned.

@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">What</span>
 
 <span id="prereqs"></span>
@@ -16,7 +17,7 @@ IDEs for different programming languages are similar in how they support editing
 
 </box>
 
-**A _software framework_ is a reusable implementation of software (or part thereof) that provides _generic_ functionality that can be selectively customized to produce a _specific_ application.**
+**A {{ show_term("software framework") }} is a reusable implementation of software (or part thereof) that provides _generic_ functionality that can be selectively customized to produce a _specific_ application.**
 
 <box>
 

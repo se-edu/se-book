@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">What</span>
 
 <span id="prereqs"></span>
@@ -8,7 +9,7 @@
 
 **Developer-to-developer documentation can be in one of two forms:**
 
-1. **Documentation for _developer-as-user_**: Software components are written by developers and reused by other developers, which means there is a need to document how such components are to be used. Such documentation can take several forms:
+1. **Documentation for {{ show_term("developer-as-user") }}**: Software components are written by developers and reused by other developers, which means there is a need to document how such components are to be used. Such documentation can take several forms:
    * API documentation: APIs expose functionality in small, independent, easy-to-use chunks, each of which can be documented systematically.
    * Tutorial-style instructional documentation: In addition to explaining functions/methods independently, some higher-level explanations of how to use an API can be useful.
 
@@ -29,7 +30,7 @@
 
 </box>
 
-2. **Documentation for _developer-as-maintainer_**: There is a need to document how a system or a component is designed, implemented and tested so that other developers can maintain and evolve the code. Writing documentation of this type is harder because of the need to explain complex internal details. However, given that readers of this type of documentation usually have access to the source code itself, only _some_ information needs to be included in the documentation, as code (and code comments) can also serve as a complementary source of information.
+2. **Documentation for {{ show_term("developer-as-maintainer") }}**: There is a need to document how a system or a component is designed, implemented and tested so that other developers can maintain and evolve the code. Writing documentation of this type is harder because of the need to explain complex internal details. However, given that readers of this type of documentation usually have access to the source code itself, only _some_ information needs to be included in the documentation, as code (and code comments) can also serve as a complementary source of information.
 
 <box>
 

@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="prereqs"></span>
 
 <span id="outcomes">{{ icon_outcome }} Can decide when to apply a given refactoring</span>
@@ -6,7 +7,7 @@
 
 <div id="body">
 
-**One way to identify refactoring opportunities is by _code smells_.**
+**One way to identify refactoring opportunities is by {{ show_term("code smells") }}.**
 
 > A _code smell_ is a surface indication that usually corresponds to a deeper problem in the system.
 > First, a smell is by definition something that's quick to spot. Second, smells don't always indicate a problem.<br>
@@ -19,7 +20,7 @@ An example (from the same source as above) is the code smell _data class_, i.e.,
 * [Temporary Field](https://refactoring.guru/smells/temporary-field)
 * [Shotgun Surgery](https://refactoring.guru/smells/shotgun-surgery)
 
-**Periodic refactoring is a good way to pay off the _technical debt_** a codebase has accumulated.
+**Periodic refactoring is a good way to pay off the {{ show_term("technical debt") }}** a codebase has accumulated.
 
 > Software systems are prone to the build up of **cruft** - deficiencies in internal quality that make it harder than it would ideally be to modify and extend the system further. Technical Debt is a metaphor, coined by Ward Cunningham, that frames how to think about dealing with this cruft, thinking of it like a financial debt. The extra effort that it takes to add new features is the interest paid on the debt.<br>
 > --[https://martinfowler.com/bliki/TechnicalDebt.html](https://martinfowler.com/bliki/TechnicalDebt.html)

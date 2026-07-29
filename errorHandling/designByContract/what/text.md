@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="prereqs"></span>
 
 <span id="outcomes">{{ icon_outcome }} Can explain the Design-by-Contract approach</span>
@@ -6,7 +7,7 @@
 
 <div id="body">
 
-**<tooltip content="term was coined by Bertrand Meyer">Design by contract (DbC)</tooltip> is an approach for designing software that requires defining formal, precise, and verifiable interface specifications for software components.**
+**{{ show_term("Design by contract (DbC)", "term was coined by Bertrand Meyer") }} is an approach for designing software that requires defining formal, precise, and verifiable interface specifications for software components.**
 
 Suppose an operation is implemented with the behavior specified precisely in the API (preconditions, postconditions, exceptions, etc.). When following the defensive approach, the code should first check if the preconditions have been met. Typically, exceptions are thrown if preconditions are violated. In contrast, the _Design-by-Contract (DbC)_ approach to coding assumes that it is the responsibility of the caller to ensure all preconditions are met. The operation will honor the contract only if the preconditions have been met. If any of them have not been met, the behavior of the operation is "unspecified".
 

@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">Big-bang versus incremental integration</span>
 
 <span id="prereqs"></span>
@@ -6,7 +7,7 @@
 
 <div id="body">
 
-**_Big-bang integration_: integrate all (or too many) components at the same time.** More generally, it means integrating too many changes at the same time.
+**{{ show_term("Big-bang integration") }}: integrate all (or too many) components at the same time.** More generally, it means integrating too many changes at the same time.
 
 <box type="wrong">
 
@@ -14,7 +15,7 @@ Big-bang integration is not recommended because it can uncover too many problems
 
 </box>
 
-**_Incremental integration_: integrate a few components at a time.** More generally, integrating changes gradually. This approach is better than big-bang integration because it surfaces integration problems in a more manageable way.
+**{{ show_term("Incremental integration") }}: integrate a few components at a time.** More generally, integrating changes gradually. This approach is better than big-bang integration because it surfaces integration problems in a more manageable way.
 
 </div>
 

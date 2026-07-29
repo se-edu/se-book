@@ -7,7 +7,7 @@
 
 <div id="body">
 
-**Software projects often involve {{ show_term("workflows") }}.** Workflows define the <tooltip content="a connected sequence of steps"></tooltip>flow in which a process or a set of tasks is executed.
+**Software projects often involve {{ show_term("workflows") }}.** Workflows define the <tooltip content="a connected sequence of steps">flow</tooltip> in which a process or a set of tasks is executed.
 Understanding such workflows is important for the success of the software project.
 
 <box>
