@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">Communication diagrams</span>
 
 <span id="prereqs"></span>
@@ -6,7 +7,7 @@
 
 <div id="body">
 
-**_Communication diagrams_ are like sequence diagrams but emphasize the data links between the various participants in the interaction rather than the sequence of interactions.**
+**{{ show_term("Communication diagrams") }} are like sequence diagrams but emphasize the data links between the various participants in the interaction rather than the sequence of interactions.**
 
 <box>
 

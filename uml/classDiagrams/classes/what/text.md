@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">What</span>
 
 <span id="prereqs"></span>
@@ -85,7 +86,7 @@ class Table:
 
 </box>
 
-**The _visibility_ of attributes and operations is used to indicate the level of access allowed for each attribute or operation.** The types of visibility and their exact meanings depend on the programming language used. Here are some common visibilities and how they are indicated in a class diagram:
+**The {{ show_term("visibility") }} of attributes and operations is used to indicate the level of access allowed for each attribute or operation.** The types of visibility and their exact meanings depend on the programming language used. Here are some common visibilities and how they are indicated in a class diagram:
 
 * `+` : public
 * `-` : private

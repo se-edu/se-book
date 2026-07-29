@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">What</span>
 
 <span id="prereqs"></span>
@@ -10,9 +11,9 @@
 <include src="../../../common/definitions.md#def-abstraction" trim />
 </box>
 
-**The guiding principle of abstraction is that only details that are relevant to the current perspective or the task at hand need to be considered.** As most programs are written to solve complex problems involving large amounts of intricate details, it is impossible to deal with all these details at the same time. That is where abstraction can help.
+**The guiding principle of {{ show_term("abstraction") }} is that only details that are relevant to the current perspective or the task at hand need to be considered.** As most programs are written to solve complex problems involving large amounts of intricate details, it is impossible to deal with all these details at the same time. That is where abstraction can help.
 
-**==_Data abstraction_==: abstracting away the lower level data items and thinking in terms of bigger entities**
+**{{ show_term("Data abstraction") }}: abstracting away the lower level data items and thinking in terms of bigger entities**
 
 <box>
 
@@ -20,7 +21,7 @@
 
 </box>
 
-**==_Control abstraction_==: abstracting away details of the actual control flow to focus on tasks at a higher level**
+**{{ show_term("Control abstraction") }}: abstracting away details of the actual control flow to focus on tasks at a higher level**
 
 <box>
 

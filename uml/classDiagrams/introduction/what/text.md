@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">What</span>
 
 <span id="prereqs"></span>
@@ -6,7 +7,7 @@
 
 <div id="body">
 
-**UML _class diagrams_ describe the structure (but not the behavior) of an OOP solution.** These are possibly the most often used diagrams in the industry and are an indispensable tool for an OO programmer.
+**UML {{ show_term("class diagrams") }} describe the structure (but not the behavior) of an OOP solution.** These are possibly the most often used diagrams in the industry and are an indispensable tool for an OO programmer.
 
 <box>
 

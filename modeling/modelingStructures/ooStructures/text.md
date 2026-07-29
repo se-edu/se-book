@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">OO structures</span>
 
 <span id="outcomes">{{ icon_outcome }} Can explain structure modeling of OO solutions</span>
@@ -24,7 +25,7 @@ Note that these **object structures within the same software can change over tim
 
 </box>
 
-However, object structures do not change at random; they change based on a set of rules set by the designer of that software. Those **rules that object structures need to follow can be illustrated as a _class structure_** %%i.e., a structure that exists among the relevant classes%%.
+However, object structures do not change at random; they change based on a set of rules set by the designer of that software. Those **rules that object structures need to follow can be illustrated as a {{ show_term("class structure") }}** %%i.e., a structure that exists among the relevant classes%%.
 
 <box>
 

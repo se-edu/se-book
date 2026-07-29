@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">What</span>
 
 <span id="prereqs"></span>
@@ -6,7 +7,7 @@
 
 <div id="body">
 
-**_Coupling_ is a measure of the degree of _dependence_** between components, classes, methods, etc. Low coupling indicates that a component is less dependent on other components. **High coupling (aka _tight_ coupling or _strong_ coupling) is discouraged** due to the following disadvantages:
+**{{ show_term("Coupling") }} is a measure of the degree of _dependence_** between components, classes, methods, etc. Low coupling indicates that a component is less dependent on other components. **High coupling (aka _tight_ coupling or _strong_ coupling) is discouraged** due to the following disadvantages:
 
 * **Maintenance is harder** because a change in one module could cause changes in other modules coupled to it (i.e., a ripple effect).
 * **Integration is harder** because multiple components coupled with each other have to be integrated at the same time.

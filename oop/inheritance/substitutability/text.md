@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">Substitutability</span>
 
 <span id="prereqs"><panel src="../../../oop/inheritance/what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Paradigms → Object Oriented Programming → Inheritance → What%%" popup-url="{{ baseUrl }}/oop/inheritance/what" /></span>
@@ -6,7 +7,7 @@
 
 <div id="body">
 
-**Every instance of a subclass is an instance of the superclass, but not vice versa.** As a result, inheritance allows _substitutability_: the ability to substitute a child class object where a parent class object is expected.
+**Every instance of a subclass is an instance of the superclass, but not vice versa.** As a result, inheritance allows {{ show_term("substitutability") }}: the ability to substitute a child class object where a parent class object is expected.
 
 <box>
 

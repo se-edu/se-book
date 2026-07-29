@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">Conceptual class diagrams (aka OODMs)</span>
 
 <span id="prereqs"></span>
@@ -12,7 +13,7 @@
 
 **Sidebar: Domain Modeling**{.text-info}
 
-**_Domain modeling_ is modeling the <tooltip content="the relevant information that needs to be examined to understand a problem">problem domain</tooltip>** i.e., to model how things actually work in the real world. Domain modeling is useful in understanding the problem domain, which is essential to the success of a project.
+**{{ show_term("Domain modeling") }} is modeling the <tooltip content="the relevant information that needs to be examined to understand a problem">problem domain</tooltip>** i.e., to model how things actually work in the real world. Domain modeling is useful in understanding the problem domain, which is essential to the success of a project.
 
 **Domain modeling can be done using:**
 
@@ -23,7 +24,7 @@
 
 When building an OOP system, it makes sense to build OOP models of the problem domain, given OOP aspires to emulate the objects in the real world.
 
-**The UML models that capture class structures in the problem domain are called _conceptual class diagrams_.** They are in fact a lighter version of class diagrams, and sometimes also called _OO domain models (OODMs)_. The latter name is somewhat misleading as conceptual class diagrams (CCDs) are actually only one type of domain model that can model an OOP problem domain.
+**The UML models that capture class structures in the problem domain are called {{ show_term("conceptual class diagrams") }}.** They are in fact a lighter version of class diagrams, and sometimes also called _OO domain models (OODMs)_. The latter name is somewhat misleading as conceptual class diagrams (CCDs) are actually only one type of domain model that can model an OOP problem domain.
 
 <box>
 

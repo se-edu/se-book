@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">What</span>
 
 <span id="prereqs"></span>
@@ -6,7 +7,7 @@
 
 <div id="body">
 
-**_Cohesion_ is a measure of how strongly related and focused the various responsibilities of a component are.** A highly cohesive component keeps related functionalities together while keeping out all other unrelated things.
+**{{ show_term("Cohesion") }} is a measure of how strongly related and focused the various responsibilities of a component are.** A highly cohesive component keeps related functionalities together while keeping out all other unrelated things.
 
 **Higher cohesion is better.** Disadvantages of low cohesion (aka _weak_ cohesion):
 * Lowers the understandability of modules as it is difficult to express module functionalities at a higher level.

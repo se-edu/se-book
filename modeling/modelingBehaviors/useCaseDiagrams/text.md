@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="prereqs"></span>
 
 <span id="outcomes">{{ icon_outcome }} Can explain use case diagrams</span>
@@ -6,7 +7,7 @@
 
 <div id="body">
 
-**Use case diagrams model the mapping between _features_ of a system and its user _roles_** i.e., which user roles can perform which tasks using the software.
+**{{ show_term("Use case diagrams") }} model the mapping between _features_ of a system and its user _roles_** i.e., which user roles can perform which tasks using the software.
 
 <box>
 

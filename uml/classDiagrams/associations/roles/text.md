@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">Roles</span>
 
 <span id="prereqs"></span>
@@ -6,7 +7,7 @@
 
 <div id="body">
 
-**_Association Role_s are used to indicate the role played by the classes in the association.**
+**{{ show_term("Association Role") }}s are used to indicate the role played by the classes in the association.**
 
 <pic eager src="{{baseUrl}}/uml/classDiagrams/associations/roles/images/notation.png" height="60" />
 

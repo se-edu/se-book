@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">Deployment diagrams</span>
 
 <span id="prereqs"></span>
@@ -6,7 +7,7 @@
 
 <div id="body">
 
-**A _deployment diagram_ shows a system's physical layout, revealing which pieces of software run on which pieces of hardware.**
+**A {{ show_term("deployment diagram") }} shows a system's physical layout, revealing which pieces of software run on which pieces of hardware.**
 
 <box>
 

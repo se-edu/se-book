@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">Labels</span>
 
 <span id="prereqs"></span>
@@ -6,7 +7,7 @@
 
 <div id="body">
 
-**_Association labels_ describe the meaning of the association.** The arrow head indicates the direction in which the label is to be read.
+**{{ show_term("Association labels") }} describe the meaning of the association.** The arrow head indicates the direction in which the label is to be read.
 
 <pic eager src="{{baseUrl}}/uml/classDiagrams/associations/labels/images/notation.png" width="400" />
 

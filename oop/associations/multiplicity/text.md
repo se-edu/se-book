@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">Multiplicity</span>
 
 <span id="prereqs"></span>
@@ -6,7 +7,7 @@
 
 <div id="body">
 
-**_Multiplicity_ is the aspect of an OOP solution that dictates how many objects take part in each association.**
+**{{ show_term("Multiplicity") }} is the aspect of an OOP solution that dictates how many objects take part in each association.**
 
 <box>
 

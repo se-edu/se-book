@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">Aggregation</span>
 
 <span id="prereqs"></span>
@@ -6,7 +7,7 @@
 
 <div id="body">
 
-**_Aggregation_ represents a _container-contained_ relationship.** It is a weaker relationship than composition.
+**{{ show_term("Aggregation") }} represents a _container-contained_ relationship.** It is a weaker relationship than composition.
 
 <box>
 

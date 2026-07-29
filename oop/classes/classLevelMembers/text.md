@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">Class-level members</span>
 
 <span id="prereqs"></span>
@@ -14,7 +15,7 @@ While all objects of a class have the same attributes, each object has its own c
 
 </box>
 
-However, some attributes are not suitable to be maintained by individual objects. Instead, they should be maintained centrally, shared by all objects of the class. They are like ‘global variables’ but attached to a specific class. Such **variables whose value is shared by all instances of a class are called ==_class-level attributes_==**.
+However, some attributes are not suitable to be maintained by individual objects. Instead, they should be maintained centrally, shared by all objects of the class. They are like ‘global variables’ but attached to a specific class. Such **variables whose value is shared by all instances of a class are called {{ show_term("class-level attributes") }}**.
 
 <box>
 
@@ -30,7 +31,7 @@ Similarly, when a normal method is being called, a message is being sent to the 
 
 </box>
 
-However, there can be methods related to a specific class but not suitable for sending messages to a specific object of that class. Such **methods that are called using the class instead of a specific instance are called ==_class-level methods_==**.
+However, there can be methods related to a specific class but not suitable for sending messages to a specific object of that class. Such **methods that are called using the class instead of a specific instance are called {{ show_term("class-level methods") }}**.
 
 <box>
 
@@ -38,7 +39,7 @@ However, there can be methods related to a specific class but not suitable for s
 
 </box>
 
-**Class-level attributes and methods are collectively called ==_class-level members_==** (also called _static members_ sometimes because some programming languages use the keyword `static` to identify class-level members). **They are to be accessed using the class name rather than an instance of the class**.
+**Class-level attributes and methods are collectively called {{ show_term("class-level members") }}** (also called _static members_ sometimes because some programming languages use the keyword `static` to identify class-level members). **They are to be accessed using the class name rather than an instance of the class**.
 
 
 </div>

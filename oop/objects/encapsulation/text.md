@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">Encapsulation of objects</span>
 
 <span id="prereqs"></span>
@@ -8,11 +9,11 @@
 
 > Encapsulation protects an implementation from unintended actions and from inadvertent access.<br> <sub>-- [Object-Oriented Programming with Objective-C](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/OOP_ObjC/), Apple </sub>
 
-**An object is an _encapsulation_ of some data and related behavior in terms of two aspects:**
+**An object is an {{ show_term("encapsulation") }} of some data and related behavior in terms of two aspects:**
 
 **1. The _packaging_ aspect:** An object packages data and related behavior together into one self-contained unit.
 
-**2. The _information hiding_ aspect:** The data in an object is hidden from the outside world and is only accessible using the object's interface.
+**2. The {{ show_term("information hiding") }} aspect:** The data in an object is hidden from the outside world and is only accessible using the object's interface.
 
 </div>
 

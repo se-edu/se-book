@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">Introduction</span>
 
 <span id="prereqs"></span>
@@ -6,7 +7,7 @@
 
 <div id="body">
 
-**A UML sequence diagram _captures the interactions between multiple entities for a given scenario._**
+**A UML {{ show_term("sequence diagram") }} _captures the interactions between multiple entities for a given scenario._**
 
 <box>
 

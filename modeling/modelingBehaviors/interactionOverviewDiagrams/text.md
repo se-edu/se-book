@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">Interaction overview diagrams</span>
 
 <span id="prereqs"></span>
@@ -6,7 +7,7 @@
 
 <div id="body">
 
-**_Interaction overview_ diagrams are a combination of activity diagrams and sequence diagrams**.
+**{{ show_term("Interaction overview diagrams") }} are a combination of activity diagrams and sequence diagrams**.
 
 <box>
 

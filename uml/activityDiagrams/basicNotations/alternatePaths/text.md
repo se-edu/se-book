@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">Alternate paths</span>
 
 <span id="prereqs"></span>
@@ -6,9 +7,9 @@
 
 <div id="body">
 
-**A _branch node_ shows the start of alternate paths.** Each control flow exiting a branch node has a _guard condition_: a boolean condition that should be true for execution to take that path. **_Exactly one_ of the guard conditions should be true** at any given branch node.
+**A {{ show_term("branch node") }} shows the start of alternate paths.** Each control flow exiting a branch node has a {{ show_term("guard condition") }}: a boolean condition that should be true for execution to take that path. **_Exactly one_ of the guard conditions should be true** at any given branch node.
 
-**A _merge node_ shows the end of alternate paths.**
+**A {{ show_term("merge node") }} shows the end of alternate paths.**
 
 Both branch nodes and merge nodes are ==diamond shapes==. Guard conditions must be in ==square brackets==.
 

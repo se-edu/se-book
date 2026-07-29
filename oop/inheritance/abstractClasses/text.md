@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">Abstract classes and methods</span>
 
 <span id="prereqs"></span>
@@ -10,7 +11,7 @@
 <include src="../../../common/definitions.md#def-abstractClass" trim />
 </box>
 
-**You can declare a class as _abstract_ when a class is merely a representation of commonalities among its subclasses**, in which case it does not make sense to instantiate objects of that class.
+**You can declare a class as {{ show_term("abstract") }} when a class is merely a representation of commonalities among its subclasses**, in which case it does not make sense to instantiate objects of that class.
 
 <box>
 
@@ -28,7 +29,7 @@
 
 </box>
 
-**A class that has an abstract method becomes an abstract class** because the class definition is incomplete (due to the missing method body) and it is not possible to create objects using an incomplete class definition.
+**A class that has an {{ show_term("abstract method") }} becomes an abstract class** because the class definition is incomplete (due to the missing method body) and it is not possible to create objects using an incomplete class definition.
 
 </div>
 

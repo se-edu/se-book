@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="prereqs"></span>
 
 <span id="outcomes">{{ icon_outcome }} Can explain dynamic and static binding</span>
@@ -10,7 +11,7 @@
 <include src="../../../common/definitions.md#def-dynamic-binding" trim />
 </box>
 
-**<trigger trigger="click" for="modal:dynamicAndStatic-overriding">Overridden methods</trigger> are resolved using dynamic binding, and therefore resolve to the implementation in the object's actual type.**
+**<trigger trigger="click" for="modal:dynamicAndStatic-overriding">Overridden methods</trigger> are resolved using {{ show_term("dynamic binding") }}, and therefore resolve to the implementation in the object's actual type.**
 
 <modal large header="Textbook {{ icon_embedding }}" id="modal:dynamicAndStatic-overriding">
   <include src="../overriding/unit-inElsewhere-asFlat.md" boilerplate/>
@@ -35,7 +36,7 @@ However, at runtime `s` can receive an object of any subclass of `Staff`. That m
 <include src="../../../common/definitions.md#def-static-binding" trim />
 </box>
 
-**In contrast, <trigger trigger="click" for="modal:dynamicAndStatic-overloading">overloaded</trigger> methods are resolved using static binding.**
+**In contrast, <trigger trigger="click" for="modal:dynamicAndStatic-overloading">overloaded</trigger> methods are resolved using {{ show_term("static binding") }}.**
 
 <modal large header="Textbook {{ icon_embedding }}" id="modal:dynamicAndStatic-overloading">
   <include src="../overloading/unit-inElsewhere-asFlat.md" boilerplate/>

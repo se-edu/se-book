@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">What</span>
 
 <span id="prereqs"></span>
@@ -6,7 +7,7 @@
 
 <div id="body">
 
-**An _object_ in Object-Oriented Programming (OOP) has _state_ and _behavior_, similar to objects in the real world.**
+**An {{ show_term("object") }} in Object-Oriented Programming (OOP) has _state_ and _behavior_, similar to objects in the real world.**
 
 > Every object has both state (data) and behavior (operations on data). In that, they’re not much different
 > from ordinary physical objects. It’s easy to see how a mechanical device, such as a pocket watch or a piano,

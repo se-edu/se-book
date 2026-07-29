@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">Composite structure diagrams</span>
 
 <span id="prereqs"></span>
@@ -6,7 +7,7 @@
 
 <div id="body">
 
-**A _composite structure diagram_ hierarchically decomposes a class into its internal structure.**
+**A {{ show_term("composite structure diagram") }} hierarchically decomposes a class into its internal structure.**
 
 <box>
 

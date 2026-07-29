@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">Basic</span>
 
 <span id="prereqs"></span>
@@ -6,7 +7,7 @@
 
 <div id="body">
 
-Objects in an OO solution need to be connected to each other to form a network so that they can interact with each other. Such **connections between objects are called _associations_.**
+Objects in an OO solution need to be connected to each other to form a network so that they can interact with each other. Such **connections between objects are called {{ show_term("associations") }}.**
 
 <box>
 

@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">What</span>
 
 <span id="prereqs"></span>
@@ -10,7 +11,7 @@
 <include src="../../../common/definitions.md#def-polymorphism" trim />
 </box>
 
-**_Polymorphism_ allows you to write code targeting superclass objects, use that code on subclass objects, and achieve possibly different results based on the actual class of the object.**
+**{{ show_term("Polymorphism") }} allows you to write code targeting superclass objects, use that code on subclass objects, and achieve possibly different results based on the actual class of the object.**
 
 <box>
 

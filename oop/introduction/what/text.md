@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">What</span>
 
 <span id="prereqs"></span>
@@ -6,7 +7,7 @@
 
 <div id="body">
 
-**Object-Oriented Programming (OOP) is a _programming paradigm_.** A programming paradigm guides programmers to analyze programming problems, and structure programming solutions, in a specific way.
+**{{ show_term("Object-Oriented Programming (OOP)") }} is a {{ show_term("programming paradigm") }}.** A programming paradigm guides programmers to analyze programming problems, and structure programming solutions, in a specific way.
 
 > Programming languages have traditionally divided the world into two parts—data and operations on data. Data is static and immutable, except as the operations may change it. The procedures and functions that operate on data have no lasting state of their own; they’re useful only in their ability to affect data.
 >

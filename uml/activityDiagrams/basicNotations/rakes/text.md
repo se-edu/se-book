@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">Rakes</span>
 
 <span id="prereqs"></span>
@@ -6,7 +7,7 @@
 
 <div id="body">
 
-**The rake notation is used to indicate that a part of the activity is given as a separate diagram.**
+**The {{ show_term("rake") }} notation is used to indicate that a part of the activity is given as a separate diagram.**
 
 <box>
 

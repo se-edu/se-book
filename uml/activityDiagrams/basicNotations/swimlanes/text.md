@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">Swimlanes</span>
 
 <span id="prereqs"></span>
@@ -6,7 +7,7 @@
 
 <div id="body">
 
-**It is possible to _partition_ an activity diagram to show who is doing which action. Such partitioned activity diagrams are sometime called _swimlane diagrams_.**
+**It is possible to _partition_ an activity diagram to show who is doing which action. Such partitioned activity diagrams are sometime called {{ show_term("swimlane diagrams") }}.**
 
 <box>
 

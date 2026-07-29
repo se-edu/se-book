@@ -18,6 +18,7 @@
 /designApproaches/
 /ides/
 /codeQuality/
+/debugging/
 /refactoring/
 /documentation/
 /errorHandling/
@@ -27,6 +28,7 @@
 /security/
 /testing/
 /testCaseDesign/
+/security/
 /processModels/
 /projectPlanning/
 /teamwork/

@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">Parallel paths</span>
 
 <span id="prereqs"></span>
@@ -6,9 +7,9 @@
 
 <div id="body">
 
-**_Fork_ nodes indicate the start of <tooltip content="parallel">concurrent</tooltip> flows of control.**
+**{{ show_term("Fork") }} nodes indicate the start of <tooltip content="parallel">concurrent</tooltip> flows of control.**
 
-**_Join_ nodes indicate the end of parallel paths.**
+**{{ show_term("Join") }} nodes indicate the end of parallel paths.**
 
 Both have the same notation: a bar.
 

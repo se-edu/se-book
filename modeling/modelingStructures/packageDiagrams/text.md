@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">Package diagrams</span>
 
 <span id="prereqs"></span>
@@ -6,7 +7,7 @@
 
 <div id="body">
 
-**A _package diagram_ shows packages and their dependencies.** A package is a grouping construct for grouping UML elements (classes, use cases, etc.).
+**A {{ show_term("package diagram") }} shows packages and their dependencies.** A package is a grouping construct for grouping UML elements (classes, use cases, etc.).
 
 <box>
 

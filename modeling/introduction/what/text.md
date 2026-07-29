@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">What</span>
 
 <span id="prereqs"></span>
@@ -6,7 +7,7 @@
 
 <div id="body">
 
-**A _model_ is a representation of something else.**
+**A {{ show_term("model") }} is a representation of something else.**
 
 <box>
 

@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">Overriding</span>
 
 <span id="prereqs"><panel src="../what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} OOP → Inheritance → What%%" popup-url="{{ baseUrl }}/oop/inheritance/what" /></span>
@@ -6,7 +7,7 @@
 
 <div id="body">
 
-**Method _overriding_ is when a subclass changes the behavior inherited from the parent class** by re-implementing the method. Overridden methods have the same name, the same type signature, and the same (or a subtype of the) return type.
+**Method {{ show_term("overriding") }} is when a subclass changes the behavior inherited from the parent class** by re-implementing the method. Overridden methods have the same name, the same type signature, and the same (or a subtype of the) return type.
 
 <box>
 

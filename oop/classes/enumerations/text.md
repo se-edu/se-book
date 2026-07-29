@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">Enumerations</span>
 
 <span id="prereqs"></span>
@@ -6,7 +7,7 @@
 
 <div id="body">
 
-**An _Enumeration_ is a fixed set of values that can be considered as a data type.** An enumeration is often useful when using a regular data type such as `int` or `String` would allow invalid values to be assigned to a variable.
+**An {{ show_term("Enumeration") }} is a fixed set of values that can be considered as a data type.** An enumeration is often useful when using a regular data type such as `int` or `String` would allow invalid values to be assigned to a variable.
 
 <box>
 

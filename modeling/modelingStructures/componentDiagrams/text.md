@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">Component diagrams</span>
 
 <span id="prereqs"></span>
@@ -6,7 +7,7 @@
 
 <div id="body">
 
-**A _component diagram_ is used to show how a system is divided into components and how they are connected to each other through interfaces.**
+**A {{ show_term("component diagram") }} is used to show how a system is divided into components and how they are connected to each other through interfaces.**
 
 <box>
 

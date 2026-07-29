@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">Association classes</span>
 
 <span id="prereqs"></span>
@@ -6,7 +7,7 @@
 
 <div id="body">
 
-**An _association class_ represents additional information about an association.** It is a normal class but plays a special role from a design point of view.
+**An {{ show_term("association class") }} represents additional information about an association.** It is a normal class but plays a special role from a design point of view.
 
 <box>
 

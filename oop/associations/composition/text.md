@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="prereqs"></span>
 
 <span id="outcomes">{{ icon_outcome }} Can explain the meaning of composition</span>
@@ -6,7 +7,7 @@
 
 <div id="body">
 
-**A composition is an association that represents a strong _whole-part_ relationship.**
+**A {{ show_term("composition") }} is an association that represents a strong _whole-part_ relationship.**
 
 <box>
 

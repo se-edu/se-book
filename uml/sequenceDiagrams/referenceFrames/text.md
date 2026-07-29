@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">Reference frames</span>
 
 <span id="prereqs"></span>
@@ -6,7 +7,7 @@
 
 <div id="body">
 
-**UML uses a _ref frame_ to allow a segment of the interaction to be omitted and shown as a separate sequence diagram.** Reference frames help you to break complicated sequence diagrams into multiple parts or simply to omit details you are not interested in showing.
+**UML uses a {{ show_term("ref frame") }} to allow a segment of the interaction to be omitted and shown as a separate sequence diagram.** Reference frames help you to break complicated sequence diagrams into multiple parts or simply to omit details you are not interested in showing.
 
 Notation:
 

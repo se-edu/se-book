@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">State machine diagrams</span>
 
 <span id="prereqs"></span>
@@ -6,7 +7,7 @@
 
 <div id="body">
 
-**A _State Machine Diagram_ models state-dependent behavior.**
+**A {{ show_term("State Machine Diagram") }} models state-dependent behavior.**
 
 <box>
 
@@ -18,7 +19,7 @@
 * If the CD tray is closed and the CD is not being played, it simply opens the CD tray.
 * If the CD tray is already in the process of closing (closed half-way), it waits until the CD tray is fully closed and opens it immediately afterwards.
 
-What this means is that the CD player’s response to pushing the “eject CD” button depends on what it was doing at the time of the event. More generally, the CD player’s response to the event received depends on its internal state. Such a behavior is called a _state-dependent behavior_.
+What this means is that the CD player’s response to pushing the “eject CD” button depends on what it was doing at the time of the event. More generally, the CD player’s response to the event received depends on its internal state. Such a behavior is called a {{ show_term("state-dependent behavior") }}.
 
 </box>
 

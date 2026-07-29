@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">Timing diagrams</span>
 
 <span id="prereqs"></span>
@@ -6,7 +7,7 @@
 
 <div id="body">
 
-**A _timing diagram_ focuses on timing constraints.**
+**A {{ show_term("timing diagram") }} focuses on timing constraints.**
 
 <box>
 

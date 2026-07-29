@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">What</span>
 
 <span id="prereqs"></span>
@@ -6,7 +7,7 @@
 
 <div id="body">
 
-**The OOP concept _Inheritance_ allows you to define a new class based on an existing class.**
+**The OOP concept {{ show_term("Inheritance") }} allows you to define a new class based on an existing class.**
 
 <box>
 
@@ -51,7 +52,7 @@
 
 </box>
 
-**_Multiple Inheritance_ is when a class inherits _directly_ from multiple classes.** Multiple inheritance among classes is allowed in some languages (e.g., Python, C++) but not in other languages (e.g., Java, C#).
+**{{ show_term("Multiple Inheritance") }} is when a class inherits _directly_ from multiple classes.** Multiple inheritance among classes is allowed in some languages (e.g., Python, C++) but not in other languages (e.g., Java, C#).
 
 <box>
 
