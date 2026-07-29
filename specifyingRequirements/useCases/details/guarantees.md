@@ -1,6 +1,7 @@
+{% from "common/macros.njk" import show_term with context %}
 <link rel="stylesheet" href="{{baseUrl}}/css/common.css">
 
-**==_Guarantees_== specify what the use case promises to give us at the end of its operation.**
+**{{ show_term("Guarantees") }} specify what the use case promises to give us at the end of its operation.**
 
 <box>
 <div class="text-monospace">

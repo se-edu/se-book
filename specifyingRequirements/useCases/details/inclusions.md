@@ -1,6 +1,7 @@
+{% from "common/macros.njk" import show_term with context %}
 <link rel="stylesheet" href="{{baseUrl}}/css/common.css">
 
-**A use case can ==include== another use case.** !!Underlined text!! is used to show an inclusion of a use case.
+**A use case can {{ show_term("include") }} another use case.** !!Underlined text!! is used to show an inclusion of a use case.
 
 <box>
 

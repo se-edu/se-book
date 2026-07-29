@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">Identifying</span>
 
 <span id="prereqs"></span>
@@ -6,7 +7,7 @@
 
 <div id="body">
 
-A use case is an interaction between a system and its _actors_.
+A use case is an interaction between a system and its {{ show_term("actors") }}.
 
 **Actors in Use Cases**
 

@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="prereqs"></span>
 
 <span id="outcomes">{{ icon_outcome }} Can write more detailed user stories</span>
@@ -27,7 +28,7 @@ You can add more characteristics to the `{user role}` to provide more context to
 </div>
 </box>
 
-**You can write user stories at various levels**. High-level user stories, called ==_epics_== (or _themes_) cover bigger functionality. You can then break down these epics into multiple user stories of normal size.
+**You can write user stories at various levels**. High-level user stories, called {{ show_term("epics") }} (or _themes_) cover bigger functionality. You can then break down these epics into multiple user stories of normal size.
 
 <box>
 <div class="text-monospace">
@@ -42,7 +43,7 @@ You can add more characteristics to the `{user role}` to provide more context to
 </div>
 </box>
 
-**You can add _conditions of satisfaction_ to a user story** to specify things that need to be true for the user story implementation to be accepted as ‘done’.
+**You can add {{ show_term("conditions of satisfaction") }} to a user story** to specify things that need to be true for the user story implementation to be accepted as ‘done’.
 
 <box>
 <div class="text-monospace">

@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">What</span>
 
 <span id="prereqs"></span>
@@ -19,7 +20,7 @@
 
 </box>
 
-Specifying a term in the glossary is useful in the following cases:
+Specifying a term in the {{ show_term("glossary") }} is useful in the following cases:
 
 * A domain-specific/technical term that may not be known to all stakeholders, to indicate its definition
 * When a term has multiple meanings, to indicate which of them is used in the project

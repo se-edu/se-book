@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">Non-functional requirements</span>
 
 <span id="prereqs"></span>
@@ -7,14 +8,14 @@
 <div id="body">
 
 Requirements can be divided into two in the following way:
-1. **_Functional requirements_ specify what the system should do.**
-2. **_Non-functional requirements_ specify the constraints under which the system is developed and operated.**
+1. **{{ show_term("Functional requirements") }} specify what the system should do.**
+2. **{{ show_term("Non-functional requirements") }} specify the constraints under which the system is developed and operated.**
 
 <box>
 
 {{ icon_example }} Some examples of non-functional requirement categories:
 
-* Data requirements, e.g., size, <tooltip content="how often data changes">volatility</tooltip>, <tooltip content="saving data permanently">persistence</tooltip>, etc.
+* Data requirements, e.g., size, {{ show_term("volatility", "how often data changes") }}, {{ show_term("persistence", "saving data permanently") }}, etc.
 * Environment requirements, e.g., the technical environment in which the system would operate or with which it needs to be compatible.
 * Accessibility, Capacity, Compliance with regulations, Documentation, Disaster recovery, Efficiency, Extensibility, Fault tolerance, Interoperability, Maintainability, Privacy, Portability, Quality, Reliability, Response time, Robustness, Scalability, Security, Stability, Testability, and more ...
 

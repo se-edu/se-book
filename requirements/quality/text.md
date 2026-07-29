@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">Quality of requirements</span>
 
 <span id="prereqs"></span>
@@ -15,7 +16,7 @@ Here are some characteristics of well-defined requirements <trigger for="pop:zie
 * Understandable
 * Feasible (realistic, possible)
 * Independent
-* <tooltip content="Not divisible any further">Atomic</tooltip>
+* {{ show_term("Atomic", "Not divisible any further") }}
 * Necessary
 * Implementation-free (i.e., abstract)
 

@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">Usage</span>
 
 <span id="prereqs"></span>
@@ -6,7 +7,7 @@
 
 <div id="body">
 
-**You can use actor generalization in use case diagrams** using a symbol similar to that of UML notation for inheritance.
+**You can use {{ show_term("actor generalization") }} in use case diagrams** using a symbol similar to that of UML notation for inheritance.
 
 <box>
 

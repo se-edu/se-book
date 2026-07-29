@@ -2,7 +2,7 @@
 
 <span id="outcomes">{{ icon_outcome }} Can step through a program using a debugger</span>
 
-<span id="title">Debugging: Basic</span>
+<span id="title">Debugging</span>
 
 <div id="main">
 <div id="body">

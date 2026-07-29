@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">Prioritizing requirements</span>
 
 <span id="prereqs"></span>
@@ -26,7 +27,7 @@ A common approach is to group requirements into priority categories. Note that a
 
 </box>
 
-**Some requirements can be discarded if they are considered ‘out of _<tooltip content="the extent to which the software features should go">scope</tooltip>_’.**
+**Some requirements can be discarded if they are considered ‘out of {{ show_term("scope", "the extent to which the software features should go") }}’.**
 
 <box>
 

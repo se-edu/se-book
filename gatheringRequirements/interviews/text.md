@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">Interviews</span>
 
 <span id="prereqs"></span>
@@ -6,7 +7,7 @@
 
 <div id="body">
 
-**Interviewing stakeholders and <trigger for="pop:interviews-domainExpert">domain experts</trigger> can produce useful information about project requirements.**
+**Interviewing stakeholders and <trigger for="pop:interviews-domainExpert">{{ show_term("domain experts") }}</trigger> can produce useful information about project requirements.**
 
 <popover id="pop:interviews-domainExpert" header="" placement="top">
   <div slot="content">

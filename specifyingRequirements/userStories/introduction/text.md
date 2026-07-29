@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="prereqs"></span>
 
 <span id="outcomes">{{ icon_outcome }} Can write simple user stories</span>
@@ -10,7 +11,7 @@
 <include src="../../../common/definitions.md#def-user-story" trim />
 </box>
 
-A common format for writing user stories is:
+A common format for writing {{ show_term("user stories") }} is:
 
 <box type="definition" seamless>
 <include src="../../../common/definitions.md#def-user-story-format" trim />

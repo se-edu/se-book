@@ -1,6 +1,7 @@
+{% from "common/macros.njk" import show_term with context %}
 <link rel="stylesheet" href="{{baseUrl}}/css/common.css">
 
-**==_Preconditions_== specify the state you expect the system to be in before the use case starts.**
+**{{ show_term("Preconditions") }} specify the state you expect the system to be in before the use case starts.**
 
 <box>
 <div class="text-monospace">

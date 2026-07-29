@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">What</span>
 
 <span id="prereqs"></span>
@@ -6,7 +7,7 @@
 
 <div id="body">
 
-**A textual description (i.e., _prose_) can be used to describe requirements.** Prose is especially useful when describing abstract ideas such as the vision of a product.
+**A textual description (i.e., {{ show_term("prose") }}) can be used to describe requirements.** Prose is especially useful when describing abstract ideas such as the vision of a product.
 
 <box>
 

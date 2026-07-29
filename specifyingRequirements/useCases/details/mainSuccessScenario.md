@@ -1,6 +1,7 @@
+{% from "common/macros.njk" import show_term with context %}
 <link rel="stylesheet" href="{{baseUrl}}/css/common.css">
 
-**The ==_Main Success Scenario (MSS)_== describes the most straightforward interaction for a given use case, which assumes that nothing goes wrong.** This is also called the _Basic Course of Action_ or the _Main Flow of Events_ of a use case. 
+**The {{ show_term("Main Success Scenario (MSS)") }} describes the most straightforward interaction for a given use case, which assumes that nothing goes wrong.** This is also called the _Basic Course of Action_ or the _Main Flow of Events_ of a use case. 
 
 <box>
 

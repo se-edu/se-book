@@ -1,4 +1,5 @@
-**==_Extensions_== are "add-ons" to the MSS that describe _exceptional/alternative flows of events_.** They describe variations of the scenario that can happen if certain things are not as expected by the MSS. Extensions appear below the MSS.
+{% from "common/macros.njk" import show_term with context %}
+**{{ show_term("Extensions") }} are "add-ons" to the MSS that describe _exceptional/alternative flows of events_.** They describe variations of the scenario that can happen if certain things are not as expected by the MSS. Extensions appear below the MSS.
 
 <box>
 

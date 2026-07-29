@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">Introduction</span>
 
 <span id="prereqs"></span>
@@ -6,15 +7,15 @@
 
 <div id="body">
 
-**A _software requirement_ specifies a need to be fulfilled by the software product.**
+**A {{ show_term("software requirement") }} specifies a need to be fulfilled by the software product.**
 
 **A software project may be one of two types:**
-* **a _brownfield_ project**, i.e., a project to replace or update an existing software product
-* **a _greenfield_ project**, i.e., a project to develop a new system from scratch
+* **a {{ show_term("brownfield") }} project**, i.e., a project to replace or update an existing software product
+* **a {{ show_term("greenfield") }} project**, i.e., a project to develop a new system from scratch
 
 In either case, requirements need to be gathered, analyzed, specified, and managed.
 
-**Requirements come from _stakeholders_.**
+**Requirements come from {{ show_term("stakeholders") }}.**
 
 <box type="definition" seamless>
 <include src="../../common/definitions.md#def-stakeholder" trim />

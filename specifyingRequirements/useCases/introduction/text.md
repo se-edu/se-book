@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">Introduction</span>
 
 <span id="prereqs"></span>
@@ -10,7 +11,7 @@
 <include src="../../../common/definitions.md#def-use-case" trim />
 </box>
 
-**A use case describes an _interaction between the user and the system_ for a _specific functionality_ of the system.**
+**A {{ show_term("use case") }} describes an _interaction between the user and the system_ for a _specific functionality_ of the system.**
 
 <box>
 
@@ -69,7 +70,7 @@ Extensions:
 
 <pic eager class="float-end ms-5" src="{{baseUrl}}/specifyingRequirements/useCases/introduction/images/ticketMachine.png" width="300" />
 
-**<trigger for="modal:uml" trigger="click">UML</trigger> includes a diagram type called use case diagrams that can illustrate use cases of a system visually**, providing a visual ‘table of contents’ of the use cases of a system.
+**<trigger for="modal:uml" trigger="click">{{ show_term("UML") }}</trigger> includes a diagram type called {{ show_term("use case diagrams") }} that can illustrate use cases of a system visually**, providing a visual ‘table of contents’ of the use cases of a system.
 
 In the example on the right, note how use cases are shown as ovals and user roles relevant to each use case are shown as stick figures connected to the corresponding ovals.
 
