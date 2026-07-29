@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_example with context %}
 <span id="title">How</span>
 
 <span id="prereqs"></span>
@@ -8,10 +9,10 @@
 
 **You should try to test both boundary values and non-boundary values.** Give priority to boundary values over non-boundary values. For example, pick one non-boundary value from each partition, or if you can afford more test cases, pick two non-boundary values (e.g., one just below the boundary, and one just above the boundary).
 
-<box>
-<div class="font-monospace small">
+{% call show_example() %}
+Some possible test values for various equivalence partitions:
 
-{{ icon_example }} Some examples:
+<div class="font-monospace small">
 
 <table class="table">
 <tbody>
@@ -90,7 +91,7 @@ Stack with: no elements, **one element**, two elements, **no empty spaces**, onl
 </table>
 
 </div>
-</box>
+{% endcall %}
 
 
 </div>

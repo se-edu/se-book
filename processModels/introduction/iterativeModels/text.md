@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import show_term with context %}
+{% from "common/macros.njk" import show_example, show_term with context %}
 <span id="title">Iterative models</span>
 
 <span id="prereqs"></span>
@@ -18,13 +18,12 @@
 * **In the {{ show_term("breadth-first") }} approach, an iteration evolves all major components and all functionality areas in parallel** %%i.e., most features and most <tooltip content="i.e., the parts the software is divided into e.g., user interface, back-end, database etc.">components</tooltip> will be updated in each iteration%%, producing a working product at the end of each iteration.
 * **In the {{ show_term("depth-first") }} approach, an iteration focuses on fleshing out only some components or some functionality area.** Accordingly, early depth-first iterations might not produce a working product.
 
-<box>
-
-{{ icon_example }} Taking a Minesweeper game as an example,
+{% call show_example() %}
+Taking a Minesweeper game as an example:
 
 * breadth-first iterations will deliver a fully playable version early. These early versions may have primitive functionality, for example, a rudimentary text-based UI, fixed board size, limited minefield layouts, etc. These functionalities (and corresponding components) will then be improved in later releases.
 * an early depth-first iteration could deliver the full user interface (UI) but with no game logic at all. Alternatively, an early iteration could focus on just the logic for generating initial layouts of the minefield. Neither will be a playable version of the game but both can be used to collect early feedback (about the UI, and the initial minefield layouts, respectively) which can then be used to guide later iterations.
-</box>
+{% endcall %}
 
 **A project can be done as a mixture of breadth-first and depth-first iterations** %%i.e., an iteration can contain some breadth-first work as well as some depth-first work, or, some iterations can be breadth-first while others are depth-first%%.
 

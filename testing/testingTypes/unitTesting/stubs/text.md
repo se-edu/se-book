@@ -1,17 +1,12 @@
-{% from "common/macros.njk" import show_term with context %}
+{% from "common/macros.njk" import show_example, show_term with context %}
 <span id="title">Stubs</span>
 
 <span id="outcomes">{{ icon_outcome }} Can use stubs to isolate an SUT from its dependencies</span>
 
 <div id="body">
 
-**A proper unit test requires the _unit_ to be tested ==in isolation==** so that bugs in the <tooltip content="other code the unit depends on">dependencies</tooltip> cannot influence the test %%i.e., bugs outside of the unit should not affect the unit tests%%.
-
-<box>
-
-{{ icon_example }} If a `Logic` class depends on a `Storage` class, unit testing the `Logic` class requires isolating the `Logic` class from the `Storage` class.
-
-</box>
+**A proper unit test requires the _unit_ to be tested ==in isolation==** so that bugs in the <tooltip content="other code the unit depends on">dependencies</tooltip> cannot influence the test %%i.e., bugs outside of the unit should not affect the unit tests%%.<br>
+{{ label_example }} %%If a `Logic` class depends on a `Storage` class, unit testing the `Logic` class requires isolating the `Logic` class from the `Storage` class.%%
 
 **{{ show_term("Stubs") }} can isolate the <popover content="Software Under Test (in this case, the _unit_ being tested)">SUT</popover> from its dependencies**.
 
@@ -20,9 +15,8 @@
 </box>
 
 
-<box>
-
-{{ icon_example }} Consider the code below:
+{% call show_example() %}
+Consider the code below:
 ```java
 class Logic {
     Storage s;
@@ -95,8 +89,7 @@ void getName() {
     assertEquals("Name: Adam", logic.getName(5));
 }
 ```
-
-</box>
+{% endcall %}
 
 In addition to Stubs, there are other types of replacements you can use during testing, e.g., _Mocks_, _Fakes_, _Dummies_, _Spies_.
 

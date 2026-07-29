@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_example with context %}
 <span id="prereqs"></span>
 
 <span id="outcomes">{{ icon_outcome }} Can explain dependency inversion principle (DIP)</span>
@@ -10,9 +11,8 @@
 <include src="../../common/definitions.md#def-dependency-inversion-principle" trim />
 </box>
 
-<box>
-
-{{ icon_example }}
+{% call show_example() %}
+Two designs for a `Payroll` class that pays an `Employee`:
 
 <pic eager src="{{baseUrl}}/principles/dependencyInversionPrinciple/images/payrollEmployee.png" height="130" />
 <p/>
@@ -20,8 +20,7 @@
 In design (a), the higher level class `Payroll` depends on the lower level class `Employee`, which is a violation of DIP. In design (b), both `Payroll` and `Employee` depend on the `Payee` interface (note that inheritance is a dependency).
 
 Design (b) is more flexible (and less coupled) because now the `Payroll` class need not change when the `Employee` class changes.
-
-</box>
+{% endcall %}
 
 </div>
 

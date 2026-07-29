@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_example with context %}
 <span id="title">Intermediate</span>
 
 <span id="prereqs"></span>
@@ -12,9 +13,8 @@ When deciding EPs of OOP methods, you need to identify the EPs of all data parti
 * input parameters of the method call
 * other data/objects accessed by the method such as global variables. This category may not be applicable if using the black box approach (because the test case designer using the black box approach will not know how the method is implemented).
 
-<box>
-
-{{ icon_example }} Consider this method in the `DataStack` class:
+{% call show_example() %}
+Consider this method in the `DataStack` class:
 `push(Object o): boolean`
 * Adds `o` to the top of the stack if the stack is not full.
 * Returns `true` if the push operation was a success.
@@ -26,12 +26,10 @@ EPs:
   * `DataStack` object: [full] [not full]
   * `o`: [null] [not null]
   * `FREEZE`: [true][false]
+{% endcall %}
 
-</box>
-
-<box>
-
-{{ icon_example }} Consider a simple Minesweeper app. What are the EPs for the `newGame()` method of the `Logic` component?
+{% call show_example() %}
+Consider a simple Minesweeper app. What are the EPs for the `newGame()` method of the `Logic` component?
 
 As `newGame()` does not have any parameters, the only obvious participant is the `Logic` object itself.
 
@@ -43,19 +41,16 @@ Next, let us identify equivalence partitions for each participant. Will the `new
 * `READY`: a new minefield has been created and the app is waiting for the player’s first move
 * `IN_PLAY`: the current minefield is already in use
 * `WON`, `LOST`: let us assume that `newGame()` behaves the same way for these two values
+{% endcall %}
 
-</box>
-
-<box>
-
-{{ icon_example }} Consider the `Logic` component of the Minesweeper application. What are the EPs for the `markCellAt(int x, int y)` method? The partitions in **bold** represent valid inputs.
+{% call show_example() %}
+Consider the `Logic` component of the Minesweeper application. What are the EPs for the `markCellAt(int x, int y)` method? The partitions in **bold** represent valid inputs.
 
 * `Logic`: PRE_GAME, **READY**, **IN_PLAY**, WON, LOST
 * `x`: [MIN_INT..-1] **[0..(W-1)]** [W..MAX_INT] %%(assuming a minefield size of WxH)%%
 * `y`: [MIN_INT..-1] **[0..(H-1)]** [H..MAX_INT]
 * `Cell` at `(x,y)`: **HIDDEN**, MARKED, CLEARED
-
-</box>
+{% endcall %}
 
 </div>
 

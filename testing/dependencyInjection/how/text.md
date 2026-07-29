@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_example with context %}
 <span id="title">How</span>
 
 <span id="prereqs"><panel src="../what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Quality Assurance → Testing → Dependency Injection → What%%" popup-url="{{ baseUrl }}/testing/dependencyInjection/what" /></span>
@@ -12,9 +13,8 @@
   <include src="../../testingTypes/unitTesting/stubs/unit-inElsewhere-asFlat.md" boilerplate/>
 </modal>
 
-<box>
-
-{{ icon_example }} Here is another example of using polymorphism to implement dependency injection:
+{% call show_example() %}
+Another use of polymorphism to implement dependency injection:
 
 Suppose you want to unit test `Payroll#totalSalary()` given below. The method depends on the `SalaryManager` object to calculate the return value. Note how the `setSalaryManager(SalaryManager)` can be used to inject a `SalaryManager` object to replace the current `SalaryManager` object.
 
@@ -82,7 +82,7 @@ class SalaryManagerStub extends SalaryManager {
     }
 }
 ```
-</box>
+{% endcall %}
 
 </div>
 

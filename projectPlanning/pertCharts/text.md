@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import show_term with context %}
+{% from "common/macros.njk" import show_example, show_term with context %}
 <span id="title">PERT charts</span>
 
 <span id="prereqs"></span>
@@ -12,14 +12,12 @@
 * Nodes or vertices capture the effort estimations of tasks, and
 * Arrows depict the precedence between tasks
 
-<box>
-
-{{ icon_example }} An example PERT chart for a simple software project
+{% call show_example() %}
+A PERT chart for a simple software project:
 
 <pic eager src="{{baseUrl}}/projectPlanning/pertCharts/images/pert.jpg" height="320" /><br>
 `md` = man days
-
-</box>
+{% endcall %}
 
 A PERT chart can help determine the following important information:
 

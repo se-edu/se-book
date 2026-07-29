@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import show_term with context %}
+{% from "common/macros.njk" import show_example, show_term with context %}
 <span id="title">Test automation using test drivers</span>
 
 <span id="prereqs"></span>
@@ -9,9 +9,8 @@
 
 **A {{ show_term("test driver") }} is the code that ‘drives’ the <tooltip content="Software Under Test">SUT</tooltip> for the purpose of testing** i.e., invoking the SUT with test inputs and verifying if the behavior is as expected.
 
-<box>
-
-{{ icon_example }} `PayrollTest` ‘drives’ the `Payroll` class by sending it test inputs and verifies if the output is as expected.
+{% call show_example() %}
+`PayrollTest` ‘drives’ the `Payroll` class by sending it test inputs and verifies if the output is as expected.
 
 ```java
 public class PayrollTest {
@@ -39,7 +38,7 @@ public class PayrollTest {
     }
 }
 ```
-</box>
+{% endcall %}
 
 </div>
 

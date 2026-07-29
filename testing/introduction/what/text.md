@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import show_term with context %}
+{% from "common/macros.njk" import show_example, show_term with context %}
 <span id="prereqs"></span>
 
 <span id="outcomes">{{ icon_outcome }} Can explain testing</span>
@@ -16,14 +16,12 @@
 
 **When testing, you execute a set of {{ show_term("test cases") }}.** A test case specifies how to perform a test. At a minimum, it specifies the input to the {{ show_term("software under test (SUT)") }} and the expected behavior.
 
-<box>
-
-{{ icon_example }} Example: A minimal test case for testing a browser:
+{% call show_example() %}
+A minimal test case for testing a browser:
 
 * **Input** – Start the browser using a blank page (vertical scrollbar disabled). Then, load `longfile.html` located in the `test data` folder.
 * **Expected behavior** – The scrollbar should be automatically enabled upon loading `longfile.html`.
-
-</box>
+{% endcall %}
 
 <panel type="seamless" class="non-printable">
 <span slot="header" class="card-title"><md>%%Other details a test case can contain ...%% {{ icon_extra }}</md></span>
@@ -45,13 +43,8 @@ For each test case you should do the following:
 2. Observe the actual output
 3. Compare actual output with the expected output
 
-**A test case {{ show_term("failure") }} is a mismatch between the expected behavior and the actual behavior. A failure indicates a potential {{ show_term("defect") }} (or a bug)** -- we say 'potential' because the error could be in the test case itself.
-
-<box>
-
-{{ icon_example }} Example: In the browser example above, a test case failure is implied if the scrollbar remains disabled after loading `longfile.html`. The defect/bug causing that failure could be an uninitialized variable.
-
-</box>
+**A test case {{ show_term("failure") }} is a mismatch between the expected behavior and the actual behavior. A failure indicates a potential {{ show_term("defect") }} (or a bug)** -- we say 'potential' because the error could be in the test case itself.<br>
+{{ label_example }} %%In the browser example above, a test case failure is implied if the scrollbar remains disabled after loading `longfile.html`. The defect/bug causing that failure could be an uninitialized variable.%%
 
 <panel type="seamless" class="non-printable">
 <span slot="header" class="card-title"><md>%%A deeper look at the definition of testing%% {{ icon_extra }}</md></span>

@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import show_term with context %}
+{% from "common/macros.njk" import show_example, show_term with context %}
 <span id="title">What</span>
 
 <span id="prereqs"></span>
@@ -9,9 +9,8 @@
 
 **Except for trivial <tooltip content="Software Under Test">SUTs</tooltip>, {{ show_term("exhaustive testing", "testing all possible cases") }} is not practical** because such testing often requires a massive/infinite number of test cases.
 
-<box>
-
-{{ icon_example }} Consider the test cases for adding a string object to a <tooltip content="Java: `ArrayList`,<br>Python: `list`">collection</tooltip>:
+{% call show_example() %}
+Consider the test cases for adding a string object to a <tooltip content="Java: `ArrayList`,<br>Python: `list`">collection</tooltip>:
 
 * Add an item to an empty collection.
 * Add an item when there is one item in the collection.
@@ -23,8 +22,7 @@
 * ...
 
 Exhaustive testing of this operation can take many more test cases.
-
-</box>
+{% endcall %}
 
 > Program testing can be used to show the presence of bugs, but never to show their absence!
 > <sub>--Edsger Dijkstra</sub>

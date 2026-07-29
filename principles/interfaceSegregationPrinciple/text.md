@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_example with context %}
 <span id="title">Interface segregation principle</span>
 
 <span id="prereqs"></span>
@@ -10,9 +11,8 @@
 <include src="../../common/definitions.md#def-interface-segregation-principle" trim />
 </box>
 
-<box>
-
-{{ icon_example }} The `Payroll` class should not depend on the `AdminStaff` class because it does not use the `arrangeMeeting()` method. Instead, it should depend on the `SalariedStaff` interface.
+{% call show_example() %}
+The `Payroll` class should not depend on the `AdminStaff` class because it does not use the `arrangeMeeting()` method. Instead, it should depend on the `SalariedStaff` interface.
 
 ```java{highlight-lines="2"}
 public class Payroll {
@@ -35,8 +35,7 @@ public class Payroll {
 
 <pic eager src="{{baseUrl}}/principles/interfaceSegregationPrinciple/images/payroll.png" height="200" />
 <p/>
-
-</box>
+{% endcall %}
 
 </div>
 

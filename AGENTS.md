@@ -74,6 +74,14 @@ Apply it as follows:
     surrounding prose; they are not where a term gets introduced. If an example
     needs a gloss for an incidental word, use a plain `<tooltip>`. If a term
     genuinely needs introducing, badge it in the prose the example serves.
+- **When removing a badge from inside an example, remove only the macro call.**
+  Do not rewrite the surrounding prose to host the term or its definition. If
+  the call carried a definition argument, keep that text exactly where it was,
+  as a plain `<tooltip>`: `{{ show_term("logging level", "`INFO`, `WARNING`
+  etc.") }}` becomes `` <tooltip content="`INFO`, `WARNING` etc.">logging
+  level</tooltip> ``. If it had no definition argument, the term simply becomes
+  plain text. Promoting the definition into a new or reworded prose claim
+  changes content that a formatting pass has no business changing.
 - **Drop italic emphasis at the badged occurrence.** Write
   `{{ show_term("brownfield") }}`, not `_{{ show_term("brownfield") }}_` or
   `{{ show_term("_brownfield_") }}`; the badge is the "new term" signal.
@@ -156,6 +164,12 @@ Apply the two forms as follows:
   `show_example()`.** It carries its own framing, and box-in-box reads as
   clutter. Inside a `<panel>` or a `<tab>` it is fine; those are
   progressive-disclosure containers, not framing.
+- **Never put `{{ label_example }}` inside an HTML attribute** such as
+  `<panel header="...">`. It expands to a `<span class="...">`, and the inner
+  quotes silently terminate the attribute, dropping the header and leaking
+  `badge bg-light` onto the element. Use `{{ icon_example }} Example` in an
+  attribute, or move the header into a `<div slot="header">` where the badge
+  works.
 - **A `<panel>` whose header is the example label stays a panel.** Converting
   it would lose the deliberate expand/collapse state. Where a unit shows one
   example by default and offers another behind a collapsed panel, make the

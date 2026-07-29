@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_example with context %}
 <span id="prereqs"></span>
 
 <span id="outcomes">{{ icon_outcome }} Can explain test automation tools</span>
@@ -8,9 +9,8 @@
 
 **JUnit is a tool for automated testing of Java programs.** Similar tools are available for other languages and for automating different types of testing.
 
-<box>
-
-{{ icon_example }} This is an automated test for a `Payroll` class, written using JUnit libraries.
+{% call show_example() %}
+An automated test for a `Payroll` class, written using JUnit libraries:
 
 ```java{start-from=16}
     // other test methods
@@ -30,7 +30,7 @@
         // more tests...
     }
 ```
-</box>
+{% endcall %}
 
 Most modern IDEs have integrated support for testing tools. The figure below shows the JUnit output when running some JUnit tests using the Eclipse IDE.
 

@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import show_term with context %}
+{% from "common/macros.njk" import show_example, show_term with context %}
 <span id="title">Issue trackers</span>
 
 <span id="prereqs"></span>
@@ -13,14 +13,12 @@ Keeping track of project tasks %%(who is doing what, which tasks are ongoing, wh
 
 <div v-closeable alt="Jira screenshot">
 
-<box>
-
-{{ icon_example }} A screenshot from the Jira Issue tracker software %%(Jira is part of the BitBucket project management tool suite)%%:
+{% call show_example() %}
+A screenshot from the Jira Issue tracker software %%(Jira is part of the BitBucket project management tool suite)%%:
 
 <pic eager src="{{baseUrl}}/projectPlanning/issueTrackers/images/xjira.png" height="350" />
 <p/>
-
-</box>
+{% endcall %}
 
 </div>
 

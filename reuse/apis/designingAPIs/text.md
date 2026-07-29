@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import show_example, show_term with context %}
+{% from "common/macros.njk" import show_example with context %}
 <span id="prereqs"></span>
 
 <span id="outcomes">{{ icon_outcome }} Can design reasonable quality APIs</span>
@@ -18,7 +18,7 @@ Another approach is to define the API up-front. Doing so allows us to develop th
 You can use UML _sequence diagrams_ to analyze the required interactions between components in order to discover the required API.
 
 {% call show_example() %}
-A sequence diagram for a Minesweeper game:
+Discovering the API of a Minesweeper game from a sequence diagram:
 
 <pic eager src="{{baseUrl}}/reuse/apis/designingAPIs/images/textLogic.png" height="500" />
 <p/>
@@ -29,19 +29,15 @@ As you analyze the interactions between components using sequence diagrams, you 
 * `getWidth:int`
 * `getHeight():int`
 * `getRemainingMineCount():int`
-{% endcall %}
 
-**More details can be included to increase the precision of the method definitions before coding.** Such precision is important to avoid misunderstandings between the developer of the class and developers of other classes that interact with the class. **{{ show_term("Preconditions") }} are the conditions that must be true before calling an operation, while {{ show_term("Postconditions") }} describe the system after the operation is complete.** Note that postconditions do not say what happens _during_ the operation.
-
-{% call show_example() %}
-Two operations of the Minesweeper game, specified precisely:
+More details can be included to increase the precision of the method definitions before coding. Such precision is important to avoid misunderstandings between the developer of the class and developers of other classes that interact with the class.
 
 * **Operation**: _newGame(): void_
 * **Description**: Generates a new _WxH_ minefield with _M_ mines. Any existing minefield will be overwritten.
 * **Preconditions**: None
 * **Postconditions**:	A new minefield is created. Game state is READY.
 
-<p/>
+Preconditions are the conditions that must be true before calling this operation. Postconditions describe the system after the operation is complete. Note that postconditions do not say what happens during the operation. Here is another example:
 
 * **Operation**: _clearCellAt(int x, int y): void_
 * **Description**: Records the cell at x, y as cleared.

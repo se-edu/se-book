@@ -7,13 +7,8 @@
 
 <div id="body">
 
-**{{ show_term("Boundary Value Analysis (BVA)") }} is a test case design heuristic that is based on the observation that bugs often result from incorrect handling of boundaries of equivalence partitions.** This is not surprising, as the end points of boundaries are often used in branching instructions, etc., where the programmer can make mistakes.
-
-<box>
-
-{{ icon_example }} The `markCellAt(int x, int y)` operation could contain code such as `if (x > 0 && x <= (W-1))` which involves the boundaries of x’s equivalence partitions.
-
-</box>
+**{{ show_term("Boundary Value Analysis (BVA)") }} is a test case design heuristic that is based on the observation that bugs often result from incorrect handling of boundaries of equivalence partitions.** This is not surprising, as the end points of boundaries are often used in branching instructions, etc., where the programmer can make mistakes.<br>
+{{ label_example }} %%The `markCellAt(int x, int y)` operation could contain code such as `if (x > 0 && x <= (W-1))` which involves the boundaries of x’s equivalence partitions.%%
 
 
 **BVA suggests that when picking test inputs from an equivalence partition, values near boundaries (i.e., {{ show_term("boundary values") }}) are more likely to find bugs.**

@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_example with context %}
 <span id="title">Automated testing of GUIs</span>
 
 <span id="prereqs"></span>
@@ -19,9 +20,9 @@ If a software product has a GUI (Graphical User Interface) component, all produc
 
 **There are testing tools that can automate GUI testing.**
 
-<box>
+{% call show_example() %}
+Some tools used for automated GUI testing:
 
-{{ icon_example }} Some tools used for automated GUI testing:
 * **TestFX** can do automated testing of JavaFX GUIs<br>
 * **Visual Studio** supports the ‘record replay’ type of GUI test automation.
 * [**Selenium**](http://seleniumhq.org/) can be used to automate testing of web application UIs<br>
@@ -33,9 +34,7 @@ If a software product has a GUI (Graphical User Interface) component, all produc
   @[youtube](ihst69Zq1xM)
 
   </panel>
-
-
-</box>
+{% endcall %}
 
 </div>
 

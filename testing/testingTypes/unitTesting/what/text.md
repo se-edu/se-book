@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import show_term with context %}
+{% from "common/macros.njk" import show_example, show_term with context %}
 <span id="title">What</span>
 
 <span id="prereqs"></span>
@@ -13,9 +13,8 @@
 
 In OOP code, it is common to write one or more {{ show_term("unit tests") }} for each public method of a class.
 
-<box>
-
-{{ icon_example }} Here are the code skeletons for a `Foo` class containing two methods and a `FooTest` class that contains unit tests for those two methods.
+{% call show_example() %}
+Code skeletons for a `Foo` class containing two methods and a `FooTest` class that contains unit tests for those two methods:
 
 <div class="alt-java">
   <include src="exampleTestCode-java.md" />
@@ -23,7 +22,7 @@ In OOP code, it is common to write one or more {{ show_term("unit tests") }} for
 <div class="alt-python">
   <include src="exampleTestCode-python.md" />
 </div>
-</box>
+{% endcall %}
 
 
 

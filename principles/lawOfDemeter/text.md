@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import show_term with context %}
+{% from "common/macros.njk" import show_example, show_term with context %}
 <span id="title">Law of Demeter</span>
 
 <span id="prereqs"></span>
@@ -18,9 +18,8 @@ More concretely, a method `m` of an object `O` should invoke only the methods of
 * Objects created/instantiated in `m` (directly or indirectly)
 * Objects from the <tooltip content="i.e., objects that are held by instance variables of `O`">direct association of `O`</tooltip>
 
-<box>
-
-{{ icon_example }} The following code fragment violates LoD because, while `b` is a ‘friend’ of `foo` (because it receives it as a parameter), `g` is a ‘friend of a friend’ (which should be considered a ‘stranger’), and `g.doSomething()` is analogous to ‘talking to a stranger’.
+{% call show_example() %}
+The following code fragment violates LoD because, while `b` is a ‘friend’ of `foo` (because it receives it as a parameter), `g` is a ‘friend of a friend’ (which should be considered a ‘stranger’), and `g.doSomething()` is analogous to ‘talking to a stranger’.
 
 ```java
 void foo(Bar b) {
@@ -28,16 +27,10 @@ void foo(Bar b) {
     g.doSomething();
 }
 ```
+{% endcall %}
 
-</box>
-
-**{{ show_term("LoD") }} aims to prevent objects from navigating the internal structures of other objects.**
-
-<box>
-
-{{ icon_example }} An analogy for LoD can be drawn from Facebook. If Facebook followed LoD, you would not be allowed to see posts of friends of friends, unless they are your friends as well. If Jake is your friend and Adam is Jake’s friend, you should not be allowed to see Adam’s posts unless Adam is a friend of yours as well.
-
-</box>
+**{{ show_term("LoD") }} aims to prevent objects from navigating the internal structures of other objects.**<br>
+{{ label_example }} %%An analogy for LoD can be drawn from Facebook. If Facebook followed LoD, you would not be allowed to see posts of friends of friends, unless they are your friends as well. If Jake is your friend and Adam is Jake’s friend, you should not be allowed to see Adam’s posts unless Adam is a friend of yours as well.%%
 
 </div>
 

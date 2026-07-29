@@ -17,9 +17,8 @@ LSP sounds the same as <trigger large trigger="click" for="modal:lsp-substitutab
   <include src="../../oop/inheritance/substitutability/unit-inElsewhere-asFlat.md" boilerplate/>
 </modal>
 
-<box>
-
-{{ icon_example }} Suppose the `Payroll` class depends on the `adjustMySalary(int percent)` method of the `Staff` class. Furthermore, the `Staff` class states that the `adjustMySalary` method will work for all positive percent values. Both the `Admin` and `Academic` classes override the `adjustMySalary` method.
+{% call show_example() %}
+Suppose the `Payroll` class depends on the `adjustMySalary(int percent)` method of the `Staff` class. Furthermore, the `Staff` class states that the `adjustMySalary` method will work for all positive percent values. Both the `Admin` and `Academic` classes override the `adjustMySalary` method.
 
 <pic eager src="{{baseUrl}}/principles/liskovSubstitutionPrinciple/images/payroll.png" height="200" />
 <p/>
@@ -40,7 +39,7 @@ In the above scenario,
 %%Another {{ label_example }}%%
 </div>
 
-{{ icon_example }} The `Rectangle#resize()` method can take any integers for `height` and `width`. This contract is violated by the subclass `Square#resize()` because it does not accept a `height` that is different from the `width`.
+The `Rectangle#resize()` method can take any integers for `height` and `width`. This contract is violated by the subclass `Square#resize()` because it does not accept a `height` that is different from the `width`.
 
 <pic eager src="{{baseUrl}}/principles/liskovSubstitutionPrinciple/images/rectangleSquare.png" height="120" />
 <p/>
@@ -75,8 +74,7 @@ void makeSameSize(Rectangle original, Rectangle toResize) {
 This code will fail if it is called as `makeSameSize(new Rectangle(12, 8), new Square(4, 4))`. That is, the `Square` class is not substitutable for the `Rectangle` class.
 
 </panel>
-
-</box>
+{% endcall %}
 
 </div>
 

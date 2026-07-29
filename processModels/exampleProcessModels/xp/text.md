@@ -24,7 +24,7 @@ The following description was adapted from the [XP home page](http://www.extreme
 <pic eager src="{{baseUrl}}/processModels/exampleProcessModels/xp/images/diagram.png" height="200" />
 <p/>
 
-</box type="tip">
+</box>
 
 **_Pair programming, CRC cards, project velocity_, and _standup meetings_ are some interesting topics related to XP.** Refer to [www.extremeprogramming.org](http://www.extremeprogramming.org) to find out more about XP.
 

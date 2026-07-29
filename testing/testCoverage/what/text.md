@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import show_term with context %}
+{% from "common/macros.njk" import show_example, show_term with context %}
 <span id="title">What</span>
 
 <span id="prereqs"></span>
@@ -16,9 +16,8 @@ Here are some examples of different coverage criteria:
 * **{{ show_term("Decision/branch coverage") }}**: based on the decision points exercised %%e.g., an `if` statement evaluated to both `true` and `false` with separate test cases during testing is considered 'covered'%%.
 * **{{ show_term("Condition coverage") }}**: each boolean sub-expression of a decision point is evaluated to both true and false at least once. Condition coverage is not the same as the decision coverage.
 
-<box>
-
-{{ icon_example }} `if(x > 2 && x < 44)` is considered one decision point but two conditions.
+{% call show_example() %}
+`if(x > 2 && x < 44)` is considered one decision point but two conditions.
 
 For 100% branch or decision coverage, two test cases are required:
 
@@ -32,14 +31,13 @@ For 100% condition coverage, three test cases are required:
   * `(x > 2) == false` : [e.g., `x == 0`]
 
 Note 1: A case where both conditions are `true` is needed because most execution environments use a _short-circuiting_ behavior for compound boolean expressions e.g., given an expression `c1 && c2`, `c2` will not be evaluated if `c1` is `false` (as the final result is going to be `false` anyway).
-</box>
+{% endcall %}
 
 
 * **{{ show_term("Path coverage") }}** measures coverage in terms of possible paths through a given part of the code executed. 100% path coverage means all possible paths have been executed. A commonly used notation for path analysis is called the {{ show_term("Control Flow Graph (CFG)") }}.
 
-<box>
-
-{{ icon_example }} Consider the following Java method.
+{% call show_example() %}
+Consider the following Java method.
 
 ```java
 void findRate(int input) {
@@ -62,11 +60,10 @@ It has 3 paths, as follows:
 1. enter -> `2` -> `5` -> `6`  -> `9` -> exit (can be triggered by input `8`)
 
 So, to achieve 100% path coverage, we need at least 3 test cases (e.g., `0`, `-5`, `8`).
-</box>
+{% endcall %}
 
-<box>
-
-{{ icon_example }} A loop can increase the path count greatly.
+{% call show_example() %}
+A loop can increase the path count greatly.
 
 ```java
 void sayHello(List<String> names) {
@@ -84,7 +81,7 @@ The number of paths through this method is very large, as each possible length o
 1. ...
 
 So, achieving 100% path coverage of this method will be extremely difficult.
-</box>
+{% endcall %}
 
 * **{{ show_term("Entry/exit coverage") }}** measures coverage in terms of possible _calls to_ and _exits_ from the operations in the SUT.<br>
   _Entry points_ refer to all places from which the method is called by the rest of the code i.e., all places where control is handed over to the method in question.<br>
