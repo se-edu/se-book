@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">SOLID principles</span>
 
 <span id="prereqs"></span>
@@ -6,7 +7,7 @@
 
 <div id="body">
 
-The five OOP principles given below are known as _SOLID Principles_ (an acronym made up of the first letter of each principle):
+The five OOP principles given below are known as {{ show_term("SOLID Principles") }} (an acronym made up of the first letter of each principle):
 
 <panel type="seamless" header="**S**ingle Responsibility Principle (SRP)">
   <include src="../../principles/singleResponsibilityPrinciple/unit-inElsewhere-asFlat.md" boilerplate />

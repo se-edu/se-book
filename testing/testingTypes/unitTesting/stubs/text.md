@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">Stubs</span>
 
 <span id="outcomes">{{ icon_outcome }} Can use stubs to isolate an SUT from its dependencies</span>
@@ -12,7 +13,7 @@
 
 </box>
 
-**_Stubs_ can isolate the <popover content="Software Under Test (in this case, the _unit_ being tested)">SUT</popover> from its dependencies**.
+**{{ show_term("Stubs") }} can isolate the <popover content="Software Under Test (in this case, the _unit_ being tested)">SUT</popover> from its dependencies**.
 
 <box type="definition" seamless>
 <include src="../../../../common/definitions.md#def-stub" trim />

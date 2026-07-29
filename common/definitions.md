@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <frontmatter>
 title: "Definitions"
 pageNav: 3
@@ -126,7 +127,7 @@ e.g., `createEmptyList`, `listOfIntegers`, `htmlText`, `dvdPlayer`. This book de
 
 <div id="def-dry-principle">
 
-**DRY (Don't Repeat Yourself) principle**: Every piece of knowledge must have a single, unambiguous, authoritative representation within a system. <sub>-- _The Pragmatic Programmer_, by Andy Hunt and Dave Thomas</sub>
+**{{ show_term("DRY") }} (Don't Repeat Yourself) principle**: Every piece of knowledge must have a single, unambiguous, authoritative representation within a system. <sub>-- _The Pragmatic Programmer_, by Andy Hunt and Dave Thomas</sub>
 
 </div>
 

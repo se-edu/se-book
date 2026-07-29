@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">Test automation using test drivers</span>
 
 <span id="prereqs"></span>
@@ -6,7 +7,7 @@
 
 <div id="body">
 
-**A test driver is the code that ‘drives’ the <tooltip content="Software Under Test">SUT</tooltip> for the purpose of testing** i.e., invoking the SUT with test inputs and verifying if the behavior is as expected.
+**A {{ show_term("test driver") }} is the code that ‘drives’ the <tooltip content="Software Under Test">SUT</tooltip> for the purpose of testing** i.e., invoking the SUT with test inputs and verifying if the behavior is as expected.
 
 <box>
 

@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">What</span>
 
 <span id="prereqs"></span>
@@ -10,7 +11,7 @@
 <include src="../../../../common/definitions.md#def-unit-testing" trim />
 </box>
 
-In OOP code, it is common to write one or more unit tests for each public method of a class.
+In OOP code, it is common to write one or more {{ show_term("unit tests") }} for each public method of a class.
 
 <box>
 

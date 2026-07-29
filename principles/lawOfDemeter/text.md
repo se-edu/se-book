@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">Law of Demeter</span>
 
 <span id="prereqs"></span>
@@ -30,7 +31,7 @@ void foo(Bar b) {
 
 </box>
 
-**LoD aims to prevent objects from navigating the internal structures of other objects.**
+**{{ show_term("LoD") }} aims to prevent objects from navigating the internal structures of other objects.**
 
 <box>
 

@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">XP</span>
 
 <span id="prereqs"></span>
@@ -10,7 +11,7 @@ The following description was adapted from the [XP home page](http://www.extreme
 
 <box>
 
-**Extreme Programming (XP) stresses customer satisfaction.** Instead of delivering everything you could possibly want on some date far in the future, this process delivers the software you need as you need it.
+**{{ show_term("Extreme Programming (XP)") }} stresses customer satisfaction.** Instead of delivering everything you could possibly want on some date far in the future, this process delivers the software you need as you need it.
 
 **XP aims to empower developers to confidently respond to changing customer requirements**, even late in the lifecycle.
 

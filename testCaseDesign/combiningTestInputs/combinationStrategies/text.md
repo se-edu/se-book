@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">Test input combination strategies</span>
 
 <span id="prereqs"></span>
@@ -24,7 +25,7 @@ Values to test:
 
 </box>
 
-**The _all combinations_ strategy generates test cases for each unique combination of test inputs.**
+**The {{ show_term("all combinations") }} strategy generates test cases for each unique combination of test inputs.**
 
 <box>
 
@@ -40,7 +41,7 @@ Values to test:
 
 </box>
 
-**The _at least once_ strategy includes each test input at least once.**
+**The {{ show_term("at least once") }} strategy includes each test input at least once.**
 
 <box>
 
@@ -56,7 +57,7 @@ VV/IV = Any Valid Value / Any Invalid Value
 
 </box>
 
-**The _all pairs_ strategy creates test cases so that for any given pair of inputs, all combinations between them are tested.** It is based on the observation that a bug is rarely the result of more than two interacting factors. The resulting number of test cases is lower than the _all combinations_ strategy, but higher than the _at least once_ approach.
+**The {{ show_term("all pairs") }} strategy creates test cases so that for any given pair of inputs, all combinations between them are tested.** It is based on the observation that a bug is rarely the result of more than two interacting factors. The resulting number of test cases is lower than the _all combinations_ strategy, but higher than the _at least once_ approach.
 
 <box>
 
@@ -119,7 +120,7 @@ A variation of this strategy is to test all pairs of inputs but only for inputs 
 
 </box>
 
-**The _random_ strategy generates test cases using one of the other strategies and then picks a subset randomly** (presumably because the original set of test cases is too big).
+**The {{ show_term("random") }} strategy generates test cases using one of the other strategies and then picks a subset randomly** (presumably because the original set of test cases is too big).
 
 **There are other strategies that can be used too.**
 

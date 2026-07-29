@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">Iterative models</span>
 
 <span id="prereqs"></span>
@@ -6,7 +7,7 @@
 
 <div id="body">
 
-**The iterative model advocates producing the software by going through several _iterations_.** Each of the iterations could potentially go through all the stages of the SDLC, from requirements gathering to deployment.
+**The {{ show_term("iterative model") }} advocates producing the software by going through several _iterations_.** Each of the iterations could potentially go through all the stages of the SDLC, from requirements gathering to deployment.
 
 <pic eager src="{{baseUrl}}/processModels/introduction/iterativeModels/images/diagram.png" width="600" />
 <p/>
@@ -14,8 +15,8 @@
 **Each iteration produces a new version of the product**, building upon the version produced in the previous iteration. Feedback from each iteration is factored into the subsequent iterations. For example, if an implementation task took longer than expected, the effort estimate for similar tasks in future iterations can be adjusted accordingly. Similarly, if a feature introduced in the current iteration was not well-received by target users, it can be removed or tweaked in the next iteration.
 
 **The iterative model can be done in a _breadth-first_ or _depth-first_ approach.**
-* **In the breadth-first approach, an iteration evolves all major components and all functionality areas in parallel** %%i.e., most features and most <tooltip content="i.e., the parts the software is divided into e.g., user interface, back-end, database etc.">components</tooltip> will be updated in each iteration%%, producing a working product at the end of each iteration.
-* **In the depth-first approach, an iteration focuses on fleshing out only some components or some functionality area.** Accordingly, early depth-first iterations might not produce a working product.
+* **In the {{ show_term("breadth-first") }} approach, an iteration evolves all major components and all functionality areas in parallel** %%i.e., most features and most <tooltip content="i.e., the parts the software is divided into e.g., user interface, back-end, database etc.">components</tooltip> will be updated in each iteration%%, producing a working product at the end of each iteration.
+* **In the {{ show_term("depth-first") }} approach, an iteration focuses on fleshing out only some components or some functionality area.** Accordingly, early depth-first iterations might not produce a working product.
 
 <box>
 

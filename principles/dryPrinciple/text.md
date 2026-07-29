@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">DRY principle</span>
 
 <span id="prereqs"></span>

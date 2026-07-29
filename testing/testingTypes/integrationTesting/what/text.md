@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">What</span>
 
 <span id="prereqs"><panel src="../../unitTesting/what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Quality Assurance → Testing → Unit Testing → What →%%" popup-url="{{ baseUrl }}/testing/testingTypes/unitTesting/what" /></span>
@@ -6,7 +7,7 @@
 
 <div id="body">
 
-**_Integration testing_: testing whether different parts of the software _work together_ (i.e., integrate) as expected.** Integration tests aim to discover bugs in the 'glue code' related to how components interact with each other. These bugs are often the result of misunderstanding what the parts are supposed to do vs what the parts are actually doing.
+**{{ show_term("Integration testing") }}: testing whether different parts of the software _work together_ (i.e., integrate) as expected.** Integration tests aim to discover bugs in the 'glue code' related to how components interact with each other. These bugs are often the result of misunderstanding what the parts are supposed to do vs what the parts are actually doing.
 
 <box>
 

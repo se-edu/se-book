@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">Positive versus negative test cases</span>
 
 <span id="prereqs"></span>
@@ -6,7 +7,7 @@
 
 <div id="body">
 
-**A _positive test case_ is when the test is designed to produce an expected/valid behavior. On the other hand, a _negative test case_ is designed to produce a behavior that indicates an invalid/unexpected situation, such as an error message.**
+**A {{ show_term("positive test case") }} is when the test is designed to produce an expected/valid behavior. On the other hand, a {{ show_term("negative test case") }} is designed to produce a behavior that indicates an invalid/unexpected situation, such as an error message.**
 
 <box>
 

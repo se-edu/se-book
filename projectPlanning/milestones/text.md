@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">Milestones</span>
 
 <span id="prereqs"></span>
@@ -6,7 +7,7 @@
 
 <div id="body">
 
-**A _milestone_ is the end of a stage which indicates significant progress.** You should take into account dependencies and priorities when deciding on the features to be delivered at a certain milestone.
+**A {{ show_term("milestone") }} is the end of a stage which indicates significant progress.** You should take into account dependencies and priorities when deciding on the features to be delivered at a certain milestone.
 
 <box>
 

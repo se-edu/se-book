@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">Unified process</span>
 
 <span id="prereqs"></span>
@@ -6,7 +7,7 @@
 
 <div id="body">
 
-The _unified process_ was developed by the Three Amigos - Ivar Jacobson, Grady Booch and James Rumbaugh (the creators of UML).
+The {{ show_term("unified process") }} was developed by the Three Amigos - Ivar Jacobson, Grady Booch and James Rumbaugh (the creators of UML).
 
 The unified process consists of four phases: _inception, elaboration, construction and transition_. The main purpose of each phase can be summarized as follows:
 

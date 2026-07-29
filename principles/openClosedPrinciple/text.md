@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">Open-closed principle</span>
 
 <span id="prereqs"></span>
@@ -6,7 +7,7 @@
 
 <div id="body">
 
-**The Open-Closed Principle aims to make a code entity easy to adapt and reuse without needing to modify the code entity itself.**
+**The {{ show_term("Open-Closed Principle") }} aims to make a code entity easy to adapt and reuse without needing to modify the code entity itself.**
 
 <box type="definition" seamless>
 <include src="../../common/definitions.md#def-open-closed-principle" trim />

@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">Work breakdown structure</span>
 
 <span id="prereqs"></span>
@@ -6,7 +7,7 @@
 
 <div id="body">
 
-**A _Work Breakdown Structure (WBS)_ depicts information about tasks and their details in terms of subtasks.** When managing projects, it is useful to divide the total work into smaller, well-defined units. Relatively complex tasks can be further split into subtasks. In complex projects, a WBS can also include prerequisite tasks and effort estimates for each task.
+**A {{ show_term("Work Breakdown Structure (WBS)") }} depicts information about tasks and their details in terms of subtasks.** When managing projects, it is useful to divide the total work into smaller, well-defined units. Relatively complex tasks can be further split into subtasks. In complex projects, a WBS can also include prerequisite tasks and effort estimates for each task.
 
 <box>
 
@@ -24,7 +25,7 @@
 </box>
 
 
-**The effort is traditionally measured in _man hour/day/month_** i.e., work that can be done by one person in one hour/day/month. The _Task ID_ is a label for easy reference to a task. Simple labeling is suitable for a small project, while a more informative labeling system can be adopted for bigger projects.
+**The effort is traditionally measured in {{ show_term("man hour/day/month") }}** i.e., work that can be done by one person in one hour/day/month. The _Task ID_ is a label for easy reference to a task. Simple labeling is suitable for a small project, while a more informative labeling system can be adopted for bigger projects.
 
 <box>
 

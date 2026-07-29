@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">What</span>
 
 <span id="prereqs"></span>
@@ -6,7 +7,7 @@
 
 <div id="body">
 
-**Except for trivial <tooltip content="Software Under Test">SUTs</tooltip>, <tooltip content="testing all possible cases">exhaustive testing</tooltip> is not practical** because such testing often requires a massive/infinite number of test cases.
+**Except for trivial <tooltip content="Software Under Test">SUTs</tooltip>, {{ show_term("exhaustive testing", "testing all possible cases") }} is not practical** because such testing often requires a massive/infinite number of test cases.
 
 <box>
 

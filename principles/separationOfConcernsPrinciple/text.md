@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">Separation of concerns principle</span>
 
 <span id="prereqs"></span>
@@ -10,7 +11,7 @@
 <include src="../../common/definitions.md#def-separation-concerns-principle" trim />
 </box>
 
-A _concern_ in this context is a set of information that affects the code of a computer program.
+A {{ show_term("concern") }} in this context is a set of information that affects the code of a computer program.
 
 <box>
 
@@ -22,7 +23,7 @@ A _concern_ in this context is a set of information that affects the code of a c
 
 </box>
 
-**Applying <tooltip content="Separation of Concerns">SoC</tooltip> reduces functional overlaps among code sections and also limits the ripple effect when changes are introduced to a specific part of the system.**
+**Applying {{ show_term("SoC", "Separation of Concerns") }} reduces functional overlaps among code sections and also limits the ripple effect when changes are introduced to a specific part of the system.**
 
 <box>
 

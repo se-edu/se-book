@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">Gantt charts</span>
 
 <span id="prereqs"></span>
@@ -6,7 +7,7 @@
 
 <div id="body">
 
-**A _Gantt chart_ is a 2-D bar-chart, drawn as _time vs tasks_** (represented by horizontal bars).
+**A {{ show_term("Gantt chart") }} is a 2-D bar-chart, drawn as _time vs tasks_** (represented by horizontal bars).
 
 <box>
 

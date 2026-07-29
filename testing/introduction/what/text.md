@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="prereqs"></span>
 
 <span id="outcomes">{{ icon_outcome }} Can explain testing</span>
@@ -13,7 +14,7 @@
 <pic eager src="{{baseUrl}}/testing/introduction/what/images/diagram.png" height="220" />
 <p/>
 
-**When testing, you execute a set of _test cases_.** A test case specifies how to perform a test. At a minimum, it specifies the input to the _software under test (SUT)_ and the expected behavior.
+**When testing, you execute a set of {{ show_term("test cases") }}.** A test case specifies how to perform a test. At a minimum, it specifies the input to the {{ show_term("software under test (SUT)") }} and the expected behavior.
 
 <box>
 
@@ -44,7 +45,7 @@ For each test case you should do the following:
 2. Observe the actual output
 3. Compare actual output with the expected output
 
-**A test case _failure_ is a mismatch between the expected behavior and the actual behavior. A failure indicates a potential _defect_ (or a bug)** -- we say 'potential' because the error could be in the test case itself.
+**A test case {{ show_term("failure") }} is a mismatch between the expected behavior and the actual behavior. A failure indicates a potential {{ show_term("defect") }} (or a bug)** -- we say 'potential' because the error could be in the test case itself.
 
 <box>
 

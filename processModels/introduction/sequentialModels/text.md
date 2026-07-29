@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">Sequential models</span>
 
 <span id="prereqs"></span>
@@ -6,7 +7,7 @@
 
 <div id="body">
 
-**The _sequential model_, also called the _waterfall_ model, views software development as a linear process**, in which the project is seen as progressing through the development stages. The name _waterfall_ stems from how the model is drawn to look like a waterfall (see below).
+**The {{ show_term("sequential model") }}, also called the _waterfall_ model, views software development as a linear process**, in which the project is seen as progressing through the development stages. The name _waterfall_ stems from how the model is drawn to look like a waterfall (see below).
 
 <pic eager src="{{baseUrl}}/processModels/introduction/sequentialModels/images/diagram.png" width="550" />
 <p/>

@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">Scrum</span>
 
 <span id="prereqs"></span>
@@ -10,16 +11,16 @@ This description of Scrum was adapted from Wikipedia [retrieved on 18/10/2011], 
 
 <box>
 
-**Scrum is a process skeleton that contains sets of practices and predefined roles. The main roles in Scrum are:**
-* **The Scrum Master**, who maintains the processes (typically in lieu of a project manager)
-* **The Product Owner**, who represents the stakeholders and the business
+**{{ show_term("Scrum") }} is a process skeleton that contains sets of practices and predefined roles. The main roles in Scrum are:**
+* **The {{ show_term("Scrum Master") }}**, who maintains the processes (typically in lieu of a project manager)
+* **The {{ show_term("Product Owner") }}**, who represents the stakeholders and the business
 * **The Team**, a cross-functional group who do the actual analysis, design, implementation, testing, etc.
 
-**A Scrum project is divided into iterations called Sprints.** A sprint is the basic unit of development in Scrum. Sprints tend to last between one week and one month, and are a time-boxed (i.e., restricted to a specific duration) effort of a constant length.
+**A Scrum project is divided into iterations called {{ show_term("Sprints") }}.** A sprint is the basic unit of development in Scrum. Sprints tend to last between one week and one month, and are a time-boxed (i.e., restricted to a specific duration) effort of a constant length.
 
 **Each sprint is preceded by a planning meeting**, where the tasks for the sprint are identified and an estimated commitment for the sprint goal is made, and followed by a review or retrospective meeting, where the progress is reviewed and lessons for the next sprint are identified.
 
-**During each sprint, the team creates a potentially deliverable product increment** (for example, working and tested software). The set of features that go into a sprint come from the product backlog, which is a prioritized set of high-level requirements of work to be done. Which backlog items go into the sprint is determined during the sprint planning meeting. During this meeting, the Product Owner informs the team of the items in the product backlog that he or she wants completed. The team then determines how much of this they can commit to complete during the next sprint, and records this in the sprint backlog. During a sprint, no one is allowed to change the sprint backlog, which means that the requirements are frozen for that sprint. Development is time-boxed such that the sprint must end on time; if requirements are not completed for any reason they are left out and returned to the product backlog. After a sprint is completed, the team demonstrates the use of the software.
+**During each sprint, the team creates a potentially deliverable product increment** (for example, working and tested software). The set of features that go into a sprint come from the {{ show_term("product backlog") }}, which is a prioritized set of high-level requirements of work to be done. Which backlog items go into the sprint is determined during the sprint planning meeting. During this meeting, the Product Owner informs the team of the items in the product backlog that he or she wants completed. The team then determines how much of this they can commit to complete during the next sprint, and records this in the sprint backlog. During a sprint, no one is allowed to change the sprint backlog, which means that the requirements are frozen for that sprint. Development is time-boxed such that the sprint must end on time; if requirements are not completed for any reason they are left out and returned to the product backlog. After a sprint is completed, the team demonstrates the use of the software.
 
 **Scrum enables the creation of self-organizing teams by encouraging co-location of all team members**, and verbal communication between all team members and disciplines in the project.
 
@@ -30,7 +31,7 @@ This description of Scrum was adapted from Wikipedia [retrieved on 18/10/2011], 
 
 </box>
 
-**_Daily Scrum_ is another key scrum practice**. The description below was adapted from [https://www.mountaingoatsoftware.com](https://www.mountaingoatsoftware.com/agile/scrum/meetings/daily-scrum) (emphasis added):
+**{{ show_term("Daily Scrum") }} is another key scrum practice**. The description below was adapted from [https://www.mountaingoatsoftware.com](https://www.mountaingoatsoftware.com/agile/scrum/meetings/daily-scrum) (emphasis added):
 
 <box>
 

@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">What</span>
 
 <span id="prereqs"></span>
@@ -6,14 +7,14 @@
 
 <div id="body">
 
-**_Test coverage_ is a metric used to measure the extent to which testing exercises the code** i.e., how much of the code is 'covered' by the tests.
+**{{ show_term("Test coverage") }} is a metric used to measure the extent to which testing exercises the code** i.e., how much of the code is 'covered' by the tests.
 
 Here are some examples of different coverage criteria:
 
-* **Function/method coverage**: based on functions executed %%e.g., testing executed 90 out of 100 functions%%.
-* **Statement coverage**: based on the number of lines of code executed %%e.g., testing executed 23k out of 25k LOC%%.
-* **Decision/branch coverage**: based on the decision points exercised %%e.g., an `if` statement evaluated to both `true` and `false` with separate test cases during testing is considered 'covered'%%.
-* **Condition coverage**: each boolean sub-expression of a decision point is evaluated to both true and false at least once. Condition coverage is not the same as the decision coverage.
+* **{{ show_term("Function/method coverage") }}**: based on functions executed %%e.g., testing executed 90 out of 100 functions%%.
+* **{{ show_term("Statement coverage") }}**: based on the number of lines of code executed %%e.g., testing executed 23k out of 25k LOC%%.
+* **{{ show_term("Decision/branch coverage") }}**: based on the decision points exercised %%e.g., an `if` statement evaluated to both `true` and `false` with separate test cases during testing is considered 'covered'%%.
+* **{{ show_term("Condition coverage") }}**: each boolean sub-expression of a decision point is evaluated to both true and false at least once. Condition coverage is not the same as the decision coverage.
 
 <box>
 
@@ -34,7 +35,7 @@ Note 1: A case where both conditions are `true` is needed because most execution
 </box>
 
 
-* **Path coverage** measures coverage in terms of possible paths through a given part of the code executed. 100% path coverage means all possible paths have been executed. A commonly used notation for path analysis is called the _Control Flow Graph (CFG)_.
+* **{{ show_term("Path coverage") }}** measures coverage in terms of possible paths through a given part of the code executed. 100% path coverage means all possible paths have been executed. A commonly used notation for path analysis is called the {{ show_term("Control Flow Graph (CFG)") }}.
 
 <box>
 
@@ -85,7 +86,7 @@ The number of paths through this method is very large, as each possible length o
 So, achieving 100% path coverage of this method will be extremely difficult.
 </box>
 
-* **Entry/exit coverage** measures coverage in terms of possible _calls to_ and _exits_ from the operations in the SUT.<br>
+* **{{ show_term("Entry/exit coverage") }}** measures coverage in terms of possible _calls to_ and _exits_ from the operations in the SUT.<br>
   _Entry points_ refer to all places from which the method is called by the rest of the code i.e., all places where control is handed over to the method in question.<br>
   _Exit points_ refer to points at which the control is returned to the caller e.g., return statements, throwing of exceptions.
 

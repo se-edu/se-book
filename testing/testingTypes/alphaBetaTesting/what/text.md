@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">What</span>
 
 <span id="prereqs"></span>
@@ -6,11 +7,11 @@
 
 <div id="body">
 
-**_Alpha testing_ is performed by the users, under controlled conditions set by the software development team.**
+**{{ show_term("Alpha testing") }} is performed by the users, under controlled conditions set by the software development team.**
 
-**_Beta testing_ is performed by a selected subset of target users of the system in their natural work setting.**
+**{{ show_term("Beta testing") }} is performed by a selected subset of target users of the system in their natural work setting.**
 
-An _open beta release_ is the release of not-yet-production-quality-but-almost-there software to the general population.  For example, Google’s Gmail was in 'beta' for many years before the label was finally removed.
+An {{ show_term("open beta release") }} is the release of not-yet-production-quality-but-almost-there software to the general population.  For example, Google’s Gmail was in 'beta' for many years before the label was finally removed.
 
 </div>
 

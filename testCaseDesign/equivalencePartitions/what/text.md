@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">What</span>
 
 <span id="prereqs"></span>
@@ -19,7 +20,7 @@ Consider the testing of the following operation.
 It is inefficient and impractical to test this method for all integer values `[-MIN_INT to MAX_INT]`.  Fortunately, there is no need to test all possible input values. For example, if the input value `233` fails to produce the correct result, the input `234` is likely to fail too; there is no need to test both.
 
 In general, **most SUTs do not treat each input in a unique way. Instead, they process all possible inputs in a small number of distinct ways.** That means a range of inputs is treated the same way inside the SUT.
-**_Equivalence partitioning (EP)_ is a test case design technique that uses the above observation to improve the E&E of testing.**
+**{{ show_term("Equivalence partitioning (EP)") }} is a test case design technique that uses the above observation to improve the E&E of testing.**
 
 <box type="definition" seamless>
 <include src="../../../common/definitions.md#def-equivalence-partition" trim />

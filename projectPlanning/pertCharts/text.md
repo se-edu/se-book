@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">PERT charts</span>
 
 <span id="prereqs"></span>
@@ -6,7 +7,7 @@
 
 <div id="body">
 
-**A PERT (Program Evaluation Review Technique) chart uses a graphical technique to show the order/sequence of tasks.** It is based on the simple idea of drawing a directed graph in which:
+**A {{ show_term("PERT (Program Evaluation Review Technique) chart") }} uses a graphical technique to show the order/sequence of tasks.** It is based on the simple idea of drawing a directed graph in which:
 
 * Nodes or vertices capture the effort estimations of tasks, and
 * Arrows depict the precedence between tasks
@@ -25,7 +26,7 @@ A PERT chart can help determine the following important information:
 * The order of tasks. %%In the example above, `Final Testing` cannot begin until all coding of individual subsystems has been completed.%%
 * Which tasks can be done concurrently. %%In the example above, the various subsystem designs can start independently once the `High level design` is completed.%%
 * The shortest possible completion time. %%In the example above, there is a path (indicated by the shaded boxes) from start to end that determines the shortest possible completion time.%%
-* The Critical Path. %%In the example above, the shaded path is also the critical path%%.
+* The {{ show_term("Critical Path") }}. %%In the example above, the shaded path is also the critical path%%.
 
 <box type="definition" seamless>
 

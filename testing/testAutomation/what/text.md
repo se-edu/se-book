@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="prereqs"></span>
 
 <span id="outcomes">{{ icon_outcome }} Can explain test automation</span>
@@ -9,7 +10,7 @@
 <tabs>
   <tab header="{{ icon_text }}">
 
-**An automated test case can be run programmatically and the result of the test case (pass or fail) is determined programmatically.** Compared to manual testing, automated testing reduces the effort required to run tests repeatedly and increases precision of testing (because manual testing is susceptible to human errors).
+**An {{ show_term("automated test case") }} can be run programmatically and the result of the test case (pass or fail) is determined programmatically.** Compared to manual testing, automated testing reduces the effort required to run tests repeatedly and increases precision of testing (because manual testing is susceptible to human errors).
 
   </tab>
   <tab header="{{ icon_video }}" class="d-print-none">

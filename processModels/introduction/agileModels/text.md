@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">Agile models</span>
 
 <span id="prereqs"></span>
@@ -6,7 +7,7 @@
 
 <div id="body">
 
-In 2001, a group of prominent software engineering practitioners met and brainstormed for an alternative to documentation-driven, heavyweight software development processes that were used in most large projects at the time. This resulted in something called the _agile manifesto_ (a vision statement of what they were looking to do).
+In 2001, a group of prominent software engineering practitioners met and brainstormed for an alternative to documentation-driven, heavyweight software development processes that were used in most large projects at the time. This resulted in something called the {{ show_term("agile manifesto") }} (a vision statement of what they were looking to do).
 
 >You are uncovering better ways of developing software by doing it and helping others do it.
 >
@@ -20,7 +21,7 @@ In 2001, a group of prominent software engineering practitioners met and brainst
 >That is, while there is value in the items on the right, you value the items on the left more.<br>
 ><sub>-- Extract from the [Agile Manifesto](http://agilemanifesto.org/)</sub>
 
-Subsequently, some of the signatories of the manifesto went on to create process models that try to follow it. These processes are collectively called agile processes. Some of the key features of agile approaches are:
+Subsequently, some of the signatories of the manifesto went on to create process models that try to follow it. These processes are collectively called {{ show_term("agile processes") }}. Some of the key features of agile approaches are:
 
 * Requirements are prioritized based on the needs of the user, are clarified regularly (at times almost on a daily basis) with the entire project team, and are factored into the development schedule as appropriate.
 * Instead of doing a very elaborate and detailed design and a project plan for the whole project, the team works based on a rough project plan and a high-level design that evolves as the project goes on.
