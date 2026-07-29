@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import show_term with context %}
+{% from "common/macros.njk" import show_example, show_term with context %}
 <span id="title">Make the happy path prominent</span>
 
 <span id="prereqs"></span>
@@ -9,9 +9,8 @@
 
 **The {{ show_term("happy path") }} should be clear and prominent in your code.** Restructure the code to make the happy path (i.e., the execution path taken when everything goes well) less-nested as much as possible. It is the ‘unusual’ cases that should be nested. Someone reading the code should not get distracted by alternative paths taken when error conditions happen. One technique that could help in this regard is the use of [guard clauses](http://wiki.c2.com/?GuardClause).
 
-<box>
-
-{{ icon_example }} The following example shows how guard clauses can be used to reduce the nesting of the happy path.
+{% call show_example() %}
+Guard clauses can reduce the nesting of the happy path.
 
 {{bad}}
 ```java{highlight-lines="3['start();'],4-6"}
@@ -52,13 +51,10 @@ exit();
 In contrast, the above code
 * deals with unusual conditions as soon as they are detected so that the reader doesn't have to remember them for long.
 * keeps the main path un-indented.
+{% endcall %}
 
-</box>
-
-<box>
-
-{{ icon_example }} The following pseudocode example shows how to reduce the nesting of the happy path inside a loop using a `continue` statement:
-
+{% call show_example() %}
+Reducing the nesting of the happy path inside a loop, using a `continue` statement:
 
 <table>
 <tbody>
@@ -94,8 +90,7 @@ statement E
 </tr>
 </tbody>
 </table>
-
-</box>
+{% endcall %}
 
 
 </div>

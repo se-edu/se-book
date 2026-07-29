@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_example with context %}
 <span id="title">Avoid deep nesting</span>
 
 <span id="prereqs"></span>
@@ -15,9 +16,8 @@
 <pic eager src="{{baseUrl}}/codeQuality/maximizeReadability/basic/avoidDeepNesting/images/arrowheadStyle.png" width="500" />
 <p/>
 
-<box>
-
-{{ icon_example }} A real code example:
+{% call show_example() %}
+A real code example:
 
 <div class="alt-java">
   <include src="../../introduction/example-java.md" />
@@ -25,8 +25,7 @@
 <div class="alt-python">
   <include src="../../introduction/example-python.md" />
 </div>
-
-</box>
+{% endcall %}
 
 </div>
 

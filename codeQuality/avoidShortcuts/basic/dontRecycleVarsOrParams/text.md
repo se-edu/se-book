@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_example with context %}
 <span id="title">Don't recycle variables or parameters</span>
 
 <span id="prereqs"></span>
@@ -9,7 +10,8 @@
 * **Use one variable for one purpose.** Do not reuse a variable for a purpose other than its intended one, just because the data type is the same.
 * **Do not _reuse_ formal parameters as local variables** inside the method.
 
-<box>
+{% call show_example() %}
+Reusing a parameter as a local variable, and the alternative:
 
 {{bad}}
 
@@ -53,8 +55,7 @@ def compute_rectangle_area(length, width):
 }
 ```
 </div>
-
-</box>
+{% endcall %}
 
 </div>
 

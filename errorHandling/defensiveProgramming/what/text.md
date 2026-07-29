@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import show_term with context %}
+{% from "common/macros.njk" import show_example, show_term with context %}
 <span id="title">What</span>
 
 <span id="prereqs"></span>
@@ -9,9 +9,8 @@
 
 **A {{ show_term("defensive programmer") }} codes under the assumption "if you leave room for things to go wrong, they _will_ go wrong".** Therefore, a defensive programmer proactively tries to eliminate any room for things to go wrong.
 
-<box>
-
-{{ icon_example }} Consider a method `MainApp#getConfig()` that returns a `Config` object containing configuration data. A typical implementation is given below:
+{% call show_example() %}
+Consider a method `MainApp#getConfig()` that returns a `Config` object containing configuration data. A typical implementation is given below:
 ```java
 class MainApp {
     Config config;
@@ -28,9 +27,8 @@ If the returned `Config` object is not meant to be modified, a defensive program
     Config getConfig() {
         return config.copy(); // return a defensive copy
     }
-``` 
-
-</box>
+```
+{% endcall %}
 
 </div>
 

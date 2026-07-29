@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_example with context %}
 <span id="title">Use nouns for things and verbs for actions</span>
 
 <span id="prereqs"></span>
@@ -10,19 +11,20 @@
 
 **Use nouns for classes/variables and verbs for methods/functions.**
 
-<box>
+{% call show_example() %}
+Naming a class and a method:
 
 Name for a | {{bad}}        | {{good}}
 -----------|-----------------|----------------
 Class      |`CheckLimit`     | `LimitChecker`
 Method     |`result()`       | `calculate()`
-
-</box>
+{% endcall %}
 
 
 **Distinguish clearly between single-valued and multi-valued variables.**
 
-<box>
+{% call show_example() %}
+Naming single-valued and multi-valued variables:
 
 <div class="alt-java">
 
@@ -40,8 +42,7 @@ name = 'Jim'
 names = ['Jim', 'Alice']
 ```
 </div>
-
-</box>
+{% endcall %}
 
 </div>
 

@@ -17,13 +17,10 @@
 
 </box>
 
-**{{ show_term("Early and frequent") }}: integrate early and evolve each part in parallel, in small steps, re-integrating frequently.** 
+**{{ show_term("Early and frequent") }}: integrate early and evolve each part in parallel, in small steps, re-integrating frequently.**
 
-<box>
-
-{{ icon_example }} A {{ show_term("walking skeleton", "it has all the high-level components needed for the first version in their minimal form, compiles, and runs but may not produce any useful output yet") }} can be written first. This can be done by one developer, possibly the one in charge of integration. After that, all developers can flesh out the skeleton in parallel, adding one feature at a time. After each feature is done, simply integrate the new code into the main system.
-
-</box>
+**A good way to start is to write a {{ show_term("walking skeleton") }}** -- a version that has all the high-level components needed for the first version in their minimal form, compiles, and runs, but may not produce any useful output yet.<br>
+{{ label_example }} %%One developer, possibly the one in charge of integration, writes the walking skeleton. After that, all developers flesh it out in parallel, adding one feature at a time, integrating each new feature into the main system as soon as it is done.%%
 
 </div>
 

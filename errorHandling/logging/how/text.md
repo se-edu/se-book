@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import show_term with context %}
+{% from "common/macros.njk" import show_example, show_term with context %}
 <span id="title">How</span>
 
 <span id="prereqs"></span>
@@ -7,11 +7,10 @@
 
 <div id="body">
 
-**Most programming environments come with logging systems that allow sophisticated forms of logging.** They have features such as the ability to enable and disable logging easily or to change the logging <tooltip content="how much information to record">intensity</tooltip>.
+**Most programming environments come with logging systems that allow sophisticated forms of logging.** They have features such as the ability to enable and disable logging easily, or to attach a {{ show_term("logging level") }} to each message so that only messages at or above a chosen level are recorded.
 
-<box>
-
-{{ icon_example }} This sample Java code uses Java’s default logging mechanism.
+{% call show_example() %}
+This sample Java code uses Java’s default logging mechanism.
 
 First, import the relevant Java package:
 ```java{.no-line-numbers}
@@ -24,7 +23,7 @@ Next, create a `Logger`:
 private static Logger logger = Logger.getLogger("Foo");
 ```
 
-Now, you can use the `Logger` object to log information. Note the use of a {{ show_term("logging level", "`INFO`, `WARNING` etc.") }} for each message. When running the code, the logging level can be set to `WARNING` so that log messages specified as having `INFO` level (which is a lower level than `WARNING`) will not be written to the log file at all.
+Now, you can use the `Logger` object to log information. Note the use of a logging level (`INFO`, `WARNING` etc.) for each message. When running the code, the logging level can be set to `WARNING` so that log messages specified as having `INFO` level (which is a lower level than `WARNING`) will not be written to the log file at all.
 
 ```java
 // log a message at INFO level
@@ -38,7 +37,7 @@ if (error) {
 // ...
 logger.log(Level.INFO, "end of processing");
 ```
-</box>
+{% endcall %}
 
 </div>
 

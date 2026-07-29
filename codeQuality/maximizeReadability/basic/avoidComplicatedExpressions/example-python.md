@@ -1,5 +1,3 @@
-<box>
-
 {{bad}}
 ```python
 return ((length < MAX_LENGTH) or (previous_size != length)) and (type_code == URGENT)
@@ -16,4 +14,3 @@ is_urgent = type_code == URGENT
 return is_valid_code and is_urgent
 ```
 
-</box>

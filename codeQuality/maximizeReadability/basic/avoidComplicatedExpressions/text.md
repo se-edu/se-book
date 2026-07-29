@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_example with context %}
 <span id="title">Avoid complicated expressions</span>
 
 <span id="prereqs"></span>
@@ -8,6 +9,9 @@
 
 **Avoid complicated expressions, especially those having many negations and nested parentheses.** If you must evaluate complicated expressions, have them done in steps (i.e., calculate some intermediate values first and use them to calculate the final value).
 
+{% call show_example() %}
+Evaluating a complicated expression in steps:
+
 <div class="alt-java">
 
 <include src="example-java.md" />
@@ -16,6 +20,7 @@
 
 <include src="example-python.md" />
 </div>
+{% endcall %}
 
 > {{ icon_quote_start }} The competent programmer is fully aware of the strictly limited size of his own skull; therefore he approaches the programming task in full humility, and among other things he avoids clever tricks like the plague. {{ icon_quote_end }} <sub>-- Edsger Dijkstra</sub>
 

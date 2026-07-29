@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_example with context %}
 <span id="title">Do not repeat the obvious</span>
 
 <span id="prereqs"></span>
@@ -8,7 +9,8 @@
 
 **Do not repeat in comments information that is already obvious from the code.** If the code is self-explanatory, a comment may not be needed.
 
-<box>
+{% call show_example() %}
+Comments that merely restate the code:
 
 <div class="alt-java">
 
@@ -32,7 +34,7 @@ x = x + 1
 trim_input()
 ```
 </div>
-</box>
+{% endcall %}
 
 </div>
 

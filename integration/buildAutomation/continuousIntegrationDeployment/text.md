@@ -9,13 +9,8 @@
 
 **An extreme application of build automation is called {{ show_term("continuous integration (CI)") }} in which integration, building, and testing happen automatically after each code change.**
 
-**A natural extension of CI is {{ show_term("continuous deployment (CD)") }}, where the changes are not only integrated continuously but also deployed to end users at the same time.**
-
-<box>
-
-{{ icon_example }} Some examples of CI/CD tools: [Travis](https://travis-ci.org/), [Jenkins](http://jenkins-ci.org), [Appveyor](https://www.appveyor.com), [CircleCI](https://circleci.com), [GitHub Actions](https://github.com/features/actions)
-
-</box>
+**A natural extension of CI is {{ show_term("continuous deployment (CD)") }}, where the changes are not only integrated continuously but also deployed to end users at the same time.**<br>
+{{ label_example }} %%Some CI/CD tools: [Travis](https://travis-ci.org/), [Jenkins](http://jenkins-ci.org), [Appveyor](https://www.appveyor.com), [CircleCI](https://circleci.com), [GitHub Actions](https://github.com/features/actions)%%
 
 </div>
 

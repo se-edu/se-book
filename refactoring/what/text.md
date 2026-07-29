@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import show_term with context %}
+{% from "common/macros.njk" import show_example, show_term with context %}
 <span id="prereqs"></span>
 
 <span id="outcomes">{{ icon_outcome }} Can explain refactoring</span>
@@ -29,8 +29,10 @@ Refactoring Name: **Consolidate Duplicate Conditional Fragments**
 Situation:  The same fragment of code is in all branches of a conditional expression.
 
 Method: Move it outside of the expression.
+</box>
 
-{{ icon_example }} Example:
+{% call show_example() %}
+Consolidating a duplicated fragment found in every branch:
 
 <div class="alt-java">
 
@@ -42,8 +44,7 @@ Method: Move it outside of the expression.
 <include src="example-consolidate-python.md" />
 
 </div>
-
-</box>
+{% endcall %}
 
 <box>
 
@@ -52,8 +53,10 @@ Refactoring Name:  **Extract Method**
 Situation:  You have a code fragment that can be grouped together.
 
 Method: Turn the fragment into a method whose name explains the purpose of the method.
+</box>
 
-{{ icon_example }} Example:
+{% call show_example() %}
+Extracting a group of statements into a named method:
 
 <div class="alt-java">
   <include src="example-extract-java.md" />
@@ -61,8 +64,7 @@ Method: Turn the fragment into a method whose name explains the purpose of the m
 <div class="alt-python">
   <include src="example-extract-python.md" />
 </div>
-
-</box>
+{% endcall %}
 
 
 {{ icon_tip }} Some IDEs have built-in support for basic refactorings, such as automatically renaming a variable/method/class in all places it has been used.

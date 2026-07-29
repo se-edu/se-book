@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import show_term with context %}
+{% from "common/macros.njk" import show_example, show_term with context %}
 <span id="prereqs"></span>
 
 <span id="outcomes">{{ icon_outcome }} Can design reasonable quality APIs</span>
@@ -15,38 +15,40 @@ One approach is to let the API emerge and evolve over time as you write code.
 
 Another approach is to define the API up-front. Doing so allows us to develop the components in parallel.
 
-You can use UML _sequence diagrams_ to analyze the required interactions between components in order to discover the required API. Given below is an example.
+You can use UML _sequence diagrams_ to analyze the required interactions between components in order to discover the required API.
 
-<box>
-
-{{ icon_example }} Example:
+{% call show_example() %}
+A sequence diagram for a Minesweeper game:
 
 <pic eager src="{{baseUrl}}/reuse/apis/designingAPIs/images/textLogic.png" height="500" />
 <p/>
 
-As you analyze the interactions between components using sequence diagrams, you discover the API of those components. For example, the diagram above tells us that the MSLogic component API should have the methods:
+As you analyze the interactions between components using sequence diagrams, you discover the API of those components. The diagram above tells us that the MSLogic component API should have the methods:
 
 * `new()`
 * `getWidth:int`
 * `getHeight():int`
 * `getRemainingMineCount():int`
+{% endcall %}
 
-More details can be included to increase the precision of the method definitions before coding. Such precision is important to avoid misunderstandings between the developer of the class and developers of other classes that interact with the class.
+**More details can be included to increase the precision of the method definitions before coding.** Such precision is important to avoid misunderstandings between the developer of the class and developers of other classes that interact with the class. **{{ show_term("Preconditions") }} are the conditions that must be true before calling an operation, while {{ show_term("Postconditions") }} describe the system after the operation is complete.** Note that postconditions do not say what happens _during_ the operation.
+
+{% call show_example() %}
+Two operations of the Minesweeper game, specified precisely:
 
 * **Operation**: _newGame(): void_
 * **Description**: Generates a new _WxH_ minefield with _M_ mines. Any existing minefield will be overwritten.
 * **Preconditions**: None
 * **Postconditions**:	A new minefield is created. Game state is READY.
 
-{{ show_term("Preconditions") }} are the conditions that must be true before calling this operation. {{ show_term("Postconditions") }} describe the system after the operation is complete. Note that postconditions do not say what happens during the operation. Here is another example:
+<p/>
 
 * **Operation**: _clearCellAt(int x, int y): void_
 * **Description**: Records the cell at x, y as cleared.
 * **Parameters**: x, y coordinates of the cell
 * **Preconditions**: game state is READY or IN_PLAY.  x and y are in 0..(H-1) and 0..(W-1), respectively.
 * **Postconditions**: Cell at x, y changes state to ZERO, ONE, TWO, THREE, …, EIGHT, or INCORRECTLY_CLEARED. Game state changes to IN_PLAY, WON or LOST as appropriate.
-
-</box>
+{% endcall %}
 
 </div>
 

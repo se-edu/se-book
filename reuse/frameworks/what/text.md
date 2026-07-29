@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import show_term with context %}
+{% from "common/macros.njk" import show_example, show_term with context %}
 <span id="title">What</span>
 
 <span id="prereqs"></span>
@@ -7,64 +7,27 @@
 
 <div id="body">
 
-**The overall structure and execution flow of a specific category of software systems can be very similar. This similarity is an opportunity for large-scale reuse.**
+**The overall structure and execution flow of a specific category of software systems can be very similar. This similarity is an opportunity for large-scale reuse.**<br>
+{{ label_example }} %%Running example: IDEs for different programming languages are similar in how they support editing code, organizing project files, debugging, etc.%%
 
-<box>
+**A {{ show_term("software framework") }} is a reusable implementation of software (or part thereof) that provides _generic_ functionality that can be selectively customized to produce a _specific_ application.**<br>
+{{ label_example }} %%Running example: Eclipse is an IDE framework that can be used to create IDEs for different programming languages.%%
 
-{{ icon_example }} Running example:
+**Some frameworks provide a complete implementation of a _default_ behavior, which makes them immediately usable.**<br>
+{{ label_example }} %%Running example: Eclipse is a fully functional Java IDE out-of-the-box.%%
 
-IDEs for different programming languages are similar in how they support editing code, organizing project files, debugging, etc.
+**A framework facilitates the adaptation and customization of some desired functionality.**<br>
+{{ label_example }} %%Running example: The Eclipse plugin system can be used to create an IDE for different programming languages while reusing most of the existing IDE features of Eclipse, e.g., https://marketplace.eclipse.org/content/pydev-python-ide-eclipse%%
 
-</box>
+Some frameworks cover only a specific component or an aspect.<br>
+{{ label_example }} %%JavaFX is a framework for creating Java GUIs. Tkinter is a GUI framework for Python.%%
 
-**A {{ show_term("software framework") }} is a reusable implementation of software (or part thereof) that provides _generic_ functionality that can be selectively customized to produce a _specific_ application.**
-
-<box>
-
-{{ icon_example }} Running example:
-
-Eclipse is an IDE framework that can be used to create IDEs for different programming languages.
-
-</box>
-
-**Some frameworks provide a complete implementation of a _default_ behavior, which makes them immediately usable.**
-
-<box>
-
-{{ icon_example }} Running example:
-
-Eclipse is a fully functional Java IDE out-of-the-box.
-
-</box>
-
-**A framework facilitates the adaptation and customization of some desired functionality.**
-
-<box>
-
-{{ icon_example }} Running example:
-
-The Eclipse plugin system can be used to create an IDE for different programming languages while reusing most of the existing IDE features of Eclipse.
-
-e.g., https://marketplace.eclipse.org/content/pydev-python-ide-eclipse
-
-</box>
-
-Some frameworks cover only a specific component or an aspect.
-
-<box>
-
-{{ icon_example }} JavaFX is a framework for creating Java GUIs. Tkinter is a GUI framework for Python.
-
-</box>
-
-<box>
-
-{{ icon_example }} More examples of frameworks
+{% call show_example() %}
+Frameworks that cover a specific area:
 
 * Frameworks for web-based applications: Drupal (PHP), Django (Python), Ruby on Rails (Ruby), Spring (Java)
 * Frameworks for testing: JUnit (Java), unittest (Python), Jest (JavaScript)
-
-</box>
+{% endcall %}
 
 </div>
 

@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_example with context %}
 <span id="title">How</span>
 
 <span id="prereqs"></span>
@@ -6,9 +7,8 @@
 
 <div id="body">
 
-<box>
-
-{{ icon_example }} To explain a system called `SystemFoo` with two sub-systems, `FrontEnd` and `BackEnd`, start by describing the system at the highest level of abstraction, and progressively drill down to lower-level details. An outline for such a description is given below.
+{% call show_example() %}
+To explain a system called `SystemFoo` with two sub-systems, `FrontEnd` and `BackEnd`, start by describing the system at the highest level of abstraction, and progressively drill down to lower-level details. An outline for such a description is given below.
 
 [First, explain what the system is, in a black-box fashion (no internal details, only the external view).]
 
@@ -39,8 +39,7 @@
 [At this point drill down to the details of the `BackEnd`.]
 
 >...
-
-</box>
+{% endcall %}
 
 </div>
 

@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_example with context %}
 <span id="title">Use name to explain</span>
 
 <span id="prereqs"></span>
@@ -8,35 +9,35 @@
 
 **A name is not just for differentiation; it should explain the named entity to the reader accurately and at a sufficient level of detail.**
 
-<box>
+{% call show_example() %}
+Names that explain, at a sufficient level of detail:
 
 | {{bad}}          |  {{good}}                     |
 | ----------------- |  ----------------------------- |
 |`processInput()`  (what 'process'?) |  `removeWhiteSpaceFromInput()` |
 |`flag`   |  `isValidInput` |
 |`temp`   |   |
-
-</box>
+{% endcall %}
 
 **If a name has multiple words, they should be in a sensible order.**
 
-<box>
+{% call show_example() %}
+Word order within a name:
 
 | {{bad}}        |  {{good}}       |
 | --------------- |  --------------- |
 |`bySizeOrder()`  |  `orderBySize()` |
-
-</box>
+{% endcall %}
 
 Imagine going to the doctor's and saying "My eye1 is swollen"! Don’t use numbers or case to distinguish names.
 
-<box>
+{% call show_example() %}
+Names distinguished only by a number or by case:
 
 | {{bad}}          | {{bad}}          | {{good}}                     |
 | ----------------- | ----------------- | ----------------------------- |
 |`value1`, `value2` | `value`, `Value`  | `originalValue`, `finalValue` |
-
-</box>
+{% endcall %}
 
 
 </div>

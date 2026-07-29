@@ -13,30 +13,21 @@
    * API documentation: APIs expose functionality in small, independent, easy-to-use chunks, each of which can be documented systematically.
    * Tutorial-style instructional documentation: In addition to explaining functions/methods independently, some higher-level explanations of how to use an API can be useful.
 
-<box>
-
 <div class="alt-java">
 
-* {{ icon_example }} Example of API Documentation: [String API]({{ java_api }}/java/lang/String.html).
-* {{ icon_example }} Example of tutorial-style documentation: [Java Internationalization Tutorial]({{ java_tutorial }}/i18n/index.html).
+{{ label_example }} %%API documentation: [String API]({{ java_api }}/java/lang/String.html)%%<br>
+{{ label_example }} %%Tutorial-style documentation: [Java Internationalization Tutorial]({{ java_tutorial }}/i18n/index.html)%%
 
 </div>
 <div class="alt-python">
 
-* {{ icon_example }} Example of API Documentation: [string API](https://docs.python.org/3/library/string.html).
-* {{ icon_example }} Example of tutorial-style documentation: [How to use Regular Expressions in Python](https://docs.python.org/3/howto/regex.html).
+{{ label_example }} %%API documentation: [string API](https://docs.python.org/3/library/string.html)%%<br>
+{{ label_example }} %%Tutorial-style documentation: [How to use Regular Expressions in Python](https://docs.python.org/3/howto/regex.html)%%
 
 </div>
 
-</box>
-
-2. **Documentation for {{ show_term("developer-as-maintainer") }}**: There is a need to document how a system or a component is designed, implemented and tested so that other developers can maintain and evolve the code. Writing documentation of this type is harder because of the need to explain complex internal details. However, given that readers of this type of documentation usually have access to the source code itself, only _some_ information needs to be included in the documentation, as code (and code comments) can also serve as a complementary source of information.
-
-<box>
-
-* {{ icon_example }} An example: [se-edu/addressbook-level4 Developer Guide](https://se-edu.github.io/addressbook-level4/DeveloperGuide.html#design).
-
-</box>
+2. **Documentation for {{ show_term("developer-as-maintainer") }}**: There is a need to document how a system or a component is designed, implemented and tested so that other developers can maintain and evolve the code. Writing documentation of this type is harder because of the need to explain complex internal details. However, given that readers of this type of documentation usually have access to the source code itself, only _some_ information needs to be included in the documentation, as code (and code comments) can also serve as a complementary source of information.<br>
+{{ label_example }} %%[se-edu/addressbook-level4 Developer Guide](https://se-edu.github.io/addressbook-level4/DeveloperGuide.html#design)%%
 
 Another view proposed by Daniele Procida in [this article](https://www.divio.com/blog/documentation/) is as follows:
 

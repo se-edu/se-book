@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_example with context %}
 <span id="title">How</span>
 
 <span id="prereqs"></span>
@@ -8,25 +9,18 @@
 
 Use the `assert` keyword to define assertions.
 
-<box>
-
-{{ icon_example }} This assertion will fail with the message `x should be 0` if `x` is not 0 at this point.
+{% call show_example() %}
+This assertion will fail with the message `x should be 0` if `x` is not 0 at this point.
 
 ```java
 x = getX();
 assert x == 0 : "x should be 0";
 ...
 ```
+{% endcall %}
 
-</box>
-
-**Assertions can be disabled without modifying the code.**
-
-<box>
-
-{{ icon_example }} `java -enableassertions HelloWorld` (or `java -ea HelloWorld`) will run `HelloWorld` with assertions enabled while `java -disableassertions HelloWorld` will run it without verifying assertions.
-
-</box>
+**Assertions can be disabled without modifying the code.**<br>
+{{ label_example }} %%`java -enableassertions HelloWorld` (or `java -ea HelloWorld`) will run `HelloWorld` with assertions enabled while `java -disableassertions HelloWorld` will run it without verifying assertions.%%
 
 
 <box type="important">

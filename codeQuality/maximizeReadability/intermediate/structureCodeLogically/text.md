@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_example with context %}
 <span id="title">Structure code logically</span>
 
 <span id="prereqs"></span>
@@ -10,7 +11,8 @@
 
 Sometimes, the correctness of your code does not depend on the order in which you perform certain intermediary steps. Nevertheless, this order may affect the clarity of the story you are trying to tell. Choose the order that makes the story most readable.
 
-<box>
+{% call show_example() %}
+Grouping related statements, in an order that tells the story:
 
 <table>
 <tbody>
@@ -47,8 +49,7 @@ statement C2
 </tr>
 </tbody>
 </table>
-
-</box>
+{% endcall %}
 
 </div>
 

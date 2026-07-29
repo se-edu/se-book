@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_example with context %}
 <span id="title">Enforcing compulsory associations</span>
 
 <span id="prereqs"><panel src="../what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Implementation → Error Handling → Defensive Programming → What%%" popup-url="{{ baseUrl }}/errorHandling/defensiveProgramming/what" /></span>
@@ -6,11 +7,8 @@
 
 <div id="body">
 
+{% call show_example() %}
 Consider two classes, `Account` and `Guarantor`, with an association as shown in the following diagram:
-
-<box>
-
-{{ icon_example }} Example:
 
 <pic eager src="{{baseUrl}}/errorHandling/defensiveProgramming/compulsoryAssociations/images/accountGuarantor.png" height="50" />
 <p/>
@@ -57,8 +55,7 @@ class Account {
     // ...
 }
 ```
-
-</box>
+{% endcall %}
 
 </div>
 

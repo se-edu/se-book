@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_example with context %}
 <span id="title">When</span>
 
 <span id="prereqs"></span>
@@ -10,16 +11,14 @@
 
 **Do not use assertions to do _work_** because assertions can be disabled. If assertions are disabled, your program will stop working when assertions are not enabled.
 
-<box>
-
-{{ icon_example }} The code below will not invoke the `writeFile()` method when assertions are disabled. %%If that method is performing some work that is necessary for your program, your program will not work correctly when assertions are disabled.%%
+{% call show_example() %}
+The code below will not invoke the `writeFile()` method when assertions are disabled. %%If that method is performing some work that is necessary for your program, your program will not work correctly when assertions are disabled.%%
 
 ```java{.no-line-numbers}
 ...
 assert writeFile() : "File writing is supposed to return true";
 ```
-
-</box>
+{% endcall %}
 
 **Assertions are suitable for verifying assumptions about _Internal Invariants_, _Control-Flow Invariants_,
 _Preconditions_, _Postconditions_, and _Class Invariants_.** Refer to [Programming with Assertions (second half)](http://docs.oracle.com/javase/8/docs/technotes/guides/language/assert.html#usage) to learn more.

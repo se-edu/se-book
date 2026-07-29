@@ -1,5 +1,3 @@
-<box>
-
 {{bad}}
 ```java
 return ((length < MAX_LENGTH) || (previousSize != length))
@@ -17,4 +15,3 @@ boolean isUrgent = typeCode == URGENT;
 return isValidCode && isUrgent;
 ```
 
-</box>

@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_example with context %}
 <span id="title">Use the default branch</span>
 
 <span id="prereqs"></span>
@@ -10,7 +11,8 @@
 
 **Furthermore, use the `default` branch for the intended default action and not just to execute the last option.** If there is no default action, you can use the `default` branch to detect errors (i.e., if execution reached the `default` branch, raise a suitable error). This also applies to the final `else` of an `if-else` construct. That is, the final `else` should mean 'everything else', and not the final option. Do not use `else` when an `if` condition can be explicitly specified, unless there is absolutely no other possibility.
 
-<box>
+{% call show_example() %}
+A final `else` used as the last option, and used for 'everything else':
 
 <table>
 <tbody>
@@ -36,8 +38,7 @@ else error("incorrect input");
 </tr>
 </tbody>
 </table>
-
-</box>
+{% endcall %}
 </div>
 
 <div id="extras">

@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import show_term with context %}
+{% from "common/macros.njk" import show_example, show_term with context %}
 <span id="title">Avoid magic numbers</span>
 
 <span id="prereqs"></span>
@@ -9,7 +9,8 @@
 
 **Avoid {{ show_term("magic numbers") }}** in your code. When the code has a number that does not explain the meaning of the number, it is called a "magic number" (as in "the number appears as if by magic"). Using a {{ show_term("named constant", "e.g., `PI`") }} makes the code easier to understand because the name tells us more about the meaning of the number.
 
-<box>
+{% call show_example() %}
+Replacing magic numbers with named constants:
 
 <div class="alt-java">
 
@@ -21,12 +22,12 @@
 <include src="example-python.md" />
 
 </div>
-
-</box>
+{% endcall %}
 
 Similarly, you can have ‘magic’ values of other data types.
 
-<box>
+{% call show_example() %}
+A magic string:
 
 {{bad}}
 
@@ -44,8 +45,7 @@ return "Error 1432" # A magic string!
 ```
 
 </div>
-
-</box>
+{% endcall %}
 
 **Avoid any _magic literals_** in general, not just magic numbers.
 </div>

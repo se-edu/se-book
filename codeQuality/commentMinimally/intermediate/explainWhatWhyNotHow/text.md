@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_example with context %}
 <span id="title">Explain WHAT and WHY, not HOW</span>
 
 <span id="prereqs"></span>
@@ -10,9 +11,8 @@
 
 {{ icon_tick_green }} **WHAT: The specification of what the code is _supposed_ to do.** The reader can compare such comments to the implementation to verify if the implementation is correct.
 
-<box>
-
-{{ icon_example }} Example: This method is possibly buggy because the implementation does not seem to match the comment. In this case, the comment could help the reader to detect the bug.
+{% call show_example() %}
+This method is possibly buggy because the implementation does not seem to match the comment. In this case, the comment could help the reader to detect the bug.
 
 ```java
 /** Removes all spaces from the {@code input} */
@@ -20,26 +20,23 @@ void compact(String input) {
     input.trim();
 }
 ```
-</box>
+{% endcall %}
 
 {{ icon_tick_green }} **WHY: The rationale for the current implementation.**
 
-<box>
-
-{{ icon_example }} Example: Without this comment, the reader will not know the reason for calling this method.
+{% call show_example() %}
+Without this comment, the reader will not know the reason for calling this method.
 
 ```java
 // Remove spaces to comply with IE23.5 formatting rules
 compact(input);
 ```
-
-</box>
+{% endcall %}
 
 {{ icon_x_red }} **HOW: The explanation for how the code works.** This should already be apparent from the code, if the code is self-explanatory. Adding comments to explain the same thing is redundant.
 
-<box>
-
-{{ icon_example }} Example:
+{% call show_example() %}
+A comment explaining HOW, and the self-explanatory code that makes it unnecessary:
 
 {{bad}} %%Reason: Comment explains how the code works.%%
 ```java
@@ -53,8 +50,7 @@ return (left && right) || (input.size() == size);
 boolean isSameSize = (input.size() == size);
 return (isLeftEndCorrect && isRightEndCorrect) || isSameSize;
 ```
-
-</box>
+{% endcall %}
 
 
 

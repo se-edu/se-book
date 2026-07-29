@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_example with context %}
 <span id="title">Avoid misleading names</span>
 
 <span id="prereqs"></span>
@@ -8,9 +9,8 @@
 
 **Related things should be named similarly, while unrelated things should NOT.**
 
-<box>
-
-{{ icon_example }} Example: Consider these variables
+{% call show_example() %}
+Consider these variables:
 * `colorBlack`: hex value for color black
 * `colorWhite`: hex value for color white
 * `colorBlue`: number of times blue is used
@@ -19,12 +19,12 @@
 This is misleading because `colorBlue` is named similarly to `colorWhite` and `colorBlack` but has a different purpose while `hexForRed` is named differently but has a very similar purpose to the first two variables. The following is better:
 * `hexForBlack` `hexForWhite` `hexForRed`
 * `blueColorCount`
-
-</box>
+{% endcall %}
 
 Avoid misleading or ambiguous names (e.g., those with multiple meanings), similar-sounding names, hard-to-pronounce ones (e.g., avoid ambiguities like "is that a lowercase L, capital I or number 1?", or "is that number 0 or letter O?"), almost similar names.
 
-<box>
+{% call show_example() %}
+Names that are misleading, ambiguous, or hard to say:
 
 | {{bad}}        | {{good}}        |  Reason      |
 | --------------- | --------------- |  --------------- |
@@ -33,8 +33,7 @@ Avoid misleading or ambiguous names (e.g., those with multiple meanings), simila
 |`right` `left` `wrong`  |`rightDirection` `leftDirection` `wrongResponse`  |  `right` is for 'correct' or 'opposite of 'left'? |
 |`redBooks` `readBooks`  |`redColorBooks` `booksRead` |  `red` and `read` (past tense) sound the same |
 |`FiletMignon`  |`egg` |  If the requirement is just a name of a food, `egg` is a much easier choice to type/say than `FiletMignon` |
-
-</box>
+{% endcall %}
 
 
 </div>
