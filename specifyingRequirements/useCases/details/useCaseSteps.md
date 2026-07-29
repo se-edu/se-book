@@ -5,7 +5,7 @@
 
 {% call show_example() %}
 The main body of a use case:
-<div class="text-monospace">
+<div class="font-monospace small">
 
 1. Student requests to upload file
 2. LMS requests for the file location
@@ -18,7 +18,7 @@ The main body of a use case:
 
 {% call show_example() %}
 This use case step refers to behavior that is not externally visible (i.e., the user is not meant to be aware of it).
-<div class="text-monospace">
+<div class="font-monospace small">
 
 1. LMS ==saves the file into the cache== and indicates success.
 </div>
@@ -42,7 +42,7 @@ The first step below is not a good use case step because it contains UI-specific
 
 {% call show_example() %}
 How you can show a loop:
-<div class="text-monospace">
+<div class="font-monospace small">
 
 Software System: SquareGame<br>
 Use case:  <popover content="Each use case can be given a unique identification for easier cross reference."> UC02 </popover>  - Play a Game<br>

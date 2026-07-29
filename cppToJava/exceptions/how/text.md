@@ -36,7 +36,7 @@ public void writeList() {
 Some possible outputs:
 No exceptions {{ icon_output }} | `IOException` {{ icon_output }} | `IndexOutOfBoundsException` {{ icon_output }}
 --------------------------------|---------------------------------|-----------------------------------------------
-<span class="text-monospace">starting method<br>starting process<br>finishing process<br>finishing method</span> | <span class="text-monospace">starting method<br>starting process<br>~~finishing process~~<br>==caught IOE==<br>finishing method </span>| <span class="text-monospace">starting method<br>starting process<br>~~finishing process~~<br>==caught IOOBE==<br>finishing method</span>
+<span class="font-monospace small">starting method<br>starting process<br>finishing process<br>finishing method</span> | <span class="font-monospace small">starting method<br>starting process<br>~~finishing process~~<br>==caught IOE==<br>finishing method </span>| <span class="font-monospace small">starting method<br>starting process<br>~~finishing process~~<br>==caught IOOBE==<br>finishing method</span>
 
 
 </box>
@@ -69,7 +69,7 @@ public void writeList() {
 Some possible outputs:
 No exceptions {{ icon_output }} | `IOException` {{ icon_output }} | `IndexOutOfBoundsException` {{ icon_output }}
 --------------------------------|---------------------------------|-----------------------------------------------
-<span class="text-monospace">starting method<br>starting process<br>finishing process<br>==cleaning up==<br>finishing method</span> | <span class="text-monospace">starting method<br>starting process<br>~~finishing process~~<br>caught IOE<br>==cleaning up==<br>finishing method </span>| <span class="text-monospace">starting method<br>starting process<br>~~finishing process~~<br>caught IOOBE<br>==cleaning up==<br>finishing method</span>
+<span class="font-monospace small">starting method<br>starting process<br>finishing process<br>==cleaning up==<br>finishing method</span> | <span class="font-monospace small">starting method<br>starting process<br>~~finishing process~~<br>caught IOE<br>==cleaning up==<br>finishing method </span>| <span class="font-monospace small">starting method<br>starting process<br>~~finishing process~~<br>caught IOOBE<br>==cleaning up==<br>finishing method</span>
 
 </box>
 
@@ -111,7 +111,7 @@ public void writeList() throws IOException, IndexOutOfBoundsException {
     Some possible outputs:
 No exceptions {{ icon_output }} | `IOException` {{ icon_output }} | `IndexOutOfBoundsException` {{ icon_output }}
 --------------------------------|---------------------------------|-----------------------------------------------
-<span class="text-monospace">starting method<br>finishing method</span> | <span class="text-monospace">starting method<br>~~finishing method~~</span>| <span class="text-monospace">starting method<br>~~finishing method~~</span>
+<span class="font-monospace small">starting method<br>finishing method</span> | <span class="font-monospace small">starting method<br>~~finishing method~~</span>| <span class="font-monospace small">starting method<br>~~finishing method~~</span>
 
 </box>
 

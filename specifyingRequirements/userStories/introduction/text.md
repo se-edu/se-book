@@ -19,7 +19,7 @@ A common format for writing {{ show_term("user stories") }} is:
 
 {% call show_example() %}
 User stories from a _Learning Management System_:
-<div class="text-monospace">
+<div class="font-monospace small">
 
 1. %%As a%% student, %%I can%% download files uploaded by lecturers, %%so that%% I can get my own copy of the files
 2. %%As a%% lecturer, %%I can%% create discussion forums, %%so that%% students can discuss things online

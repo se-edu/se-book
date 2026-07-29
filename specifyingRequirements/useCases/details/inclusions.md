@@ -6,7 +6,7 @@
 {% call show_example() %}
 This use case includes two other use cases, one in step 1 and one in step 2.
 
-<div class="text-monospace">
+<div class="font-monospace small">
 
 * Software System: LearnSys
 * Use case:  UC01 - Conduct Survey

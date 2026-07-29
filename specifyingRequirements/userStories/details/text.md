@@ -11,7 +11,7 @@
 
 {% call show_example() %}
 A user story with the benefit omitted:
-<div class="text-monospace">
+<div class="font-monospace small">
 
 As a user, I can log in to the system ~~so that I can access my data~~
 </div>
@@ -23,7 +23,7 @@ You can add more characteristics to the `{user role}` to provide more context to
 
 {% call show_example() %}
 User stories that add characteristics to the user role:
-<div class="text-monospace">
+<div class="font-monospace small">
 
 * As a ==forgetful== user, I can view a password hint, so that I can recall my password.
 * As an ==expert== user, I can tweak the underlying formatting tags of the document, so that I can format the document exactly as I need.
@@ -34,7 +34,7 @@ User stories that add characteristics to the user role:
 
 {% call show_example() %}
 An epic broken down into normal-sized user stories:
-<div class="text-monospace">
+<div class="font-monospace small">
 
 [Epic] As a lecturer, I can monitor student participation levels
 * As a lecturer, I can view the forum post count of each student<br>
@@ -50,7 +50,7 @@ An epic broken down into normal-sized user stories:
 
 {% call show_example() %}
 A user story with conditions of satisfaction:
-<div class="text-monospace">
+<div class="font-monospace small">
 
 _As a_ lecturer, _I can_ view the forum post count of each student _so that_ I can identify the activity level of students in the forum.
 

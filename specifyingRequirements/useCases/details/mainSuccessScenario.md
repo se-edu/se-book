@@ -6,7 +6,7 @@
 {% call show_example() %}
 Note how the MSS below assumes that all entered details are correct and ignores problems such as timeouts and network outages. %%It does not tell us what happens if the user enters incorrect data.%%
 
-<div class="text-monospace">
+<div class="font-monospace small">
 
 System: Online Banking System (OBS)<br>
 Use case: UC23 - Transfer Money<br>

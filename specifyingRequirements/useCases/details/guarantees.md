@@ -5,7 +5,7 @@
 
 {% call show_example() %}
 A use case with guarantees:
-<div class="text-monospace">
+<div class="font-monospace small">
 
 Software System: Online Banking System<br>
 Use case: UC23 - Transfer Money<br>

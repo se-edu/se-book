@@ -17,7 +17,7 @@ A use case is an interaction between a system and its {{ show_term("actors") }}.
 
 {% call show_example() %}
 Some actors for a Learning Management System:
-<div class="text-monospace">
+<div class="font-monospace small">
 
 * Actors: Guest, Student, Staff, Admin, <tooltip content="an exam management system">ExamSys</tooltip>, <tooltip content="a library management system">LibSys</tooltip>.
 </div>
@@ -27,7 +27,7 @@ Some actors for a Learning Management System:
 
 {% call show_example() %}
 A use case involving two actors:
-<div class="text-monospace">
+<div class="font-monospace small">
 
 * Software System: LearnSys
 * Use case: UC01 Conduct Survey
@@ -39,7 +39,7 @@ A use case involving two actors:
 
 {% call show_example() %}
 One actor taking part in several use cases:
-<div class="text-monospace">
+<div class="font-monospace small">
 
 * Software System: LearnSys
 * Actor: Staff
@@ -51,7 +51,7 @@ One actor taking part in several use cases:
 
 {% call show_example() %}
 One person playing several roles:
-<div class="text-monospace">
+<div class="font-monospace small">
 
 * Software System: LearnSys
 * Person: ==a student==
@@ -63,7 +63,7 @@ One person playing several roles:
 
 {% call show_example() %}
 Several kinds of persons playing one role:
-<div class="text-monospace">
+<div class="font-monospace small">
 
 * Software System: LearnSys
 * Actor (or role): Student
@@ -77,7 +77,7 @@ Several kinds of persons playing one role:
 
 {% call show_example() %}
 Consider the three use cases given below. Clearly, (a) is at a higher level than (b) and (b) is at a higher level than (c).
-<div class="text-monospace">
+<div class="font-monospace small">
 
 * System: LearnSys
 * Use cases:<br>

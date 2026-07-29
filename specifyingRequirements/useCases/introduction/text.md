@@ -55,7 +55,7 @@ Extensions:
 %%Another {{ label_example }}: 'upload file' use case of an LMS%%
 </div>
 
-<div class="text-monospace">
+<div class="font-monospace small">
 
 * System: A Learning Management System (LMS)
 * Actor: Student

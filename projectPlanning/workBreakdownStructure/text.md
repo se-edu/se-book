@@ -12,7 +12,7 @@
 <box>
 
 {{ icon_example }} The high-level tasks for a single iteration of a small project could look like the following:
-<div class="text-monospace">
+<div class="font-monospace small">
 
 | Task ID | Task                         | Estimated Effort       | Prerequisite Task |
 | ------- | ---------------------------- | ---------------------- | ----------------- |
@@ -30,7 +30,7 @@
 <box>
 
 {{ icon_example }} An example WBS for a game development project.
- <div class="text-monospace">
+ <div class="font-monospace small">
  <table class="table">
  <tbody>
    <tr>
@@ -114,7 +114,7 @@
 <box>
 
 {{ icon_example }} Some examples of ill-defined tasks and their better-defined counterparts:
-<div class="text-monospace">
+<div class="font-monospace small">
 
 | {{ bad }} | <span class="text-success">{{ icon_like }} Better </span>
 | ------- | ----------------------------
