@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">SLAP hard</span>
 
 <span id="prereqs"></span>
@@ -7,7 +8,7 @@
 <div id="body">
 
 **Avoid having multiple levels of <trigger trigger="click" for="modal:slap-abstraction">abstraction</trigger> within a code fragment.**
-Note: The book _The Productive Programmer_ (by Neal Ford) calls this the _Single Level of Abstraction Principle_ (SLAP) %%while the book _Clean Code_ (by Robert C. Martin) calls this _One Level of Abstraction per Function_%%.
+Note: The book _The Productive Programmer_ (by Neal Ford) calls this the {{ show_term("Single Level of Abstraction Principle") }} (SLAP) %%while the book _Clean Code_ (by Robert C. Martin) calls this _One Level of Abstraction per Function_%%.
 
 <box>
 

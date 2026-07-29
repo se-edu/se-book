@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">Write to the reader</span>
 
 <span id="prereqs"></span>
@@ -6,7 +7,7 @@
 
 <div id="body">
 
-**Write comments targeting other programmers reading the code.** Do not write comments as if they are private notes to yourself. One type of comment that is almost always useful is the _header comment_ that you write for a class or an operation to explain its purpose.
+**Write comments targeting other programmers reading the code.** Do not write comments as if they are private notes to yourself. One type of comment that is almost always useful is the {{ show_term("header comment") }} that you write for a class or an operation to explain its purpose.
 
 <box>
 

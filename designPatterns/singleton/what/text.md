@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">What</span>
 
 <span id="prereqs"></span>
@@ -8,7 +9,7 @@
 
 **Context**
 
-Certain classes should have no more than just one instance (e.g. the main controller class of the system). These single instances are commonly known as _singletons_.
+Certain classes should have no more than just one instance (e.g. the main controller class of the system). These single instances are commonly known as {{ show_term("singletons") }}.
 
 **Problem**
 

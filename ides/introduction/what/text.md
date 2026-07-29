@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="prereqs"></span>
 
 <span id="outcomes">{{ icon_outcome }} Can explain IDEs</span>
@@ -6,7 +7,7 @@
 
 <div id="body">
 
-**Professional software engineers often write code using _Integrated Development Environments (IDEs)_. IDEs support most development-related work within the same tool** (hence, the term _integrated_).
+**Professional software engineers often write code using {{ show_term("Integrated Development Environments (IDEs)") }}. IDEs support most development-related work within the same tool** (hence, the term _integrated_).
 
 An IDE generally consists of:
 

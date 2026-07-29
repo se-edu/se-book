@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">What</span>
 
 <span id="prereqs"></span>
@@ -25,7 +26,7 @@ Access to the component should be allowed without exposing its internal details.
 
 **Solution**
 
-Include a <tooltip content="a French word that means 'front of a building'">Façade</tooltip> class that sits between the component internals and users of the component such that all access to the component happens through the Facade class.
+Include a {{ show_term("Façade", "a French word that means 'front of a building'") }} class that sits between the component internals and users of the component such that all access to the component happens through the Facade class.
 
 <box>
 

@@ -1,3 +1,4 @@
+{% from "common/macros.njk" import show_term with context %}
 <span id="title">Design patterns versus design principles</span>
 
 <span id="prereqs"></span>
@@ -6,7 +7,7 @@
 
 <div id="body">
 
-**Design _principles_ have varying degrees of formality – rules, opinions, rules of thumb, observations, and axioms.** Compared to design patterns, principles are **more general**, have **wider applicability**, with correspondingly **greater overlap** among them.
+**{{ show_term("Design principles") }} have varying degrees of formality – rules, opinions, rules of thumb, observations, and axioms.** Compared to design patterns, principles are **more general**, have **wider applicability**, with correspondingly **greater overlap** among them.
 
 </div>
 
