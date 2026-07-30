@@ -7,7 +7,7 @@
 
 Software now handles personal information, money, communication, transportation, education, health, and many other parts of daily life. A defect in such software can do more than inconvenience a user: it can expose information, allow unauthorized actions, or make an important service unavailable.
 
-**Security is therefore part of software engineering, not a specialist activity added after the software is finished.** Every software engineer needs enough security knowledge to recognize common risks, make safer design and implementation decisions, and know when expert help is needed.
+**Security is therefore part of software engineering, not a specialist activity added after the software is finished; this approach is called {{ show_term("secure by design") }}.** Every software engineer needs enough security knowledge to recognize common risks, make safer design and implementation decisions, and know when expert help is needed.
 
 This textbook does not attempt to teach every kind of attack. Instead, it develops one reusable method that applies broadly.
 
