@@ -72,7 +72,7 @@
 <variable id="oracle"><small><span style="opacity: 0.5"><span class="badge bg-secondary">-- Java Tutorial</span></span></small></variable>
 <variable id="similar"><span style="opacity: 0.5"> <span class="badge rounded-pill bg-success"><md>:fas-equals:</md></span></span></variable>
 
-<variable id="java_version">9</variable>
+<variable id="java_version">25</variable>
 <variable id="java_api">https://docs.oracle.com/javase/{{ java_version }}/docs/api</variable>
 <variable id="java_tutorial">https://docs.oracle.com/javase/tutorial</variable>
 

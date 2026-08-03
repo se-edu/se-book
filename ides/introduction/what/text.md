@@ -23,9 +23,7 @@ Examples of popular IDEs:
 * Python: PyCharm
 * Multiple languages: VS Code
 
-Some web-based IDEs have appeared in recent years too, e.g., Amazon's [Cloud9 IDE](https://aws.amazon.com/cloud9/).
-
-Some experienced developers, in particular those with a UNIX background, prefer lightweight yet powerful text editors with scripting capabilities (e.g., [Emacs](http://www.gnu.org/software/emacs/)) over heavier IDEs.
+Some experienced developers, in particular those with a UNIX background, prefer lightweight yet powerful text editors with scripting capabilities (e.g., [Vim](https://www.vim.org) or [NeoVim](https://neovim.io)) over heavier IDEs.
 
 </div>
 

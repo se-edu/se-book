@@ -20,13 +20,13 @@ This section uses extracts from the {{ oracle }}, with some adaptations.
 **The collections framework is a unified architecture for representing and manipulating collections.** It contains the following:
 
 * **Interfaces**: These are abstract data types that represent collections. Interfaces allow collections to be manipulated independently of the details of their representation.<br>
-  %%{{ icon_example }} Example: the `List<E>` interface can be used to manipulate list-like collections which may be implemented in different ways such as `ArrayList<E>` or `LinkedList<E>`.%%<br>
+  {{ label_example }} %%The `List<E>` interface can be used to manipulate list-like collections which may be implemented in different ways such as `ArrayList<E>` or `LinkedList<E>`.%%<br>
 
 * **Implementations**: These are the concrete implementations of the collection interfaces. In essence, they are reusable data structures.<br>
-  %%{{ icon_example }} Example: the `ArrayList<E>` class implements the `List<E>` interface while the `HashMap<K, V>` class implements the `Map<K, V>` interface.%%<br>
+  {{ label_example }} %%The `ArrayList<E>` class implements the `List<E>` interface while the `HashMap<K, V>` class implements the `Map<K, V>` interface.%%<br>
 
 * **Algorithms**: These are the methods that perform useful computations, such as _searching_ and _sorting_, on objects that implement collection interfaces. The algorithms are said to be polymorphic: that is, the same method can be used on many different implementations of the appropriate collection interface.<br>
-  %%{{ icon_example }} Example: the `sort(List<E>)` method can sort a collection that implements the `List<E>` interface.%%
+  {{ label_example }} %%The `sort(List<E>)` method can sort a collection that implements the `List<E>` interface.%%
 
 {{ similar }} **A well-known example of collections frameworks is the C++ _Standard Template Library (STL)_**. {{ different }} Although both are collections frameworks and the syntax looks similar, note that there are important philosophical and implementation differences between the two.
 

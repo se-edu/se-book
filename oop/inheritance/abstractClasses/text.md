@@ -11,12 +11,13 @@
 <include src="../../../common/definitions.md#def-abstractClass" trim />
 </box>
 
-**You can declare a class as {{ show_term("abstract") }} when a class is merely a representation of commonalities among its subclasses**, in which case it does not make sense to instantiate objects of that class.<br>
+**You can declare a class as an {{ show_term("abstract class") }} when it is merely a representation of commonalities among its subclasses**, in which case it does not make sense to instantiate objects of that class.<br>
 {{ label_example }} %%The `Animal` class that exists as a generalization of its subclasses `Cat`, `Dog`, `Horse`, `Tiger`, etc. can be declared as abstract because it does not make sense to instantiate an `Animal` object.%%
 
 <box type="definition" seamless>
 <include src="../../../common/definitions.md#def-abstractMethod" trim />
 </box><br>
+
 {{ label_example }} %%The `move` method of the `Animal` class is likely to be an abstract method as it is not possible to implement a `move` method at the `Animal` class level to fit all subclasses because each animal type can move in a different way.%%
 
 **A class that has an {{ show_term("abstract method") }} becomes an abstract class** because the class definition is incomplete (due to the missing method body) and it is not possible to create objects using an incomplete class definition.
