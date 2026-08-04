@@ -33,4 +33,3 @@
 /teamwork/
 /principles/
 /cppToJava/
-/projectDuke/
