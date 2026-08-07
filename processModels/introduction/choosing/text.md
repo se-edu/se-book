@@ -21,7 +21,7 @@
 {% call show_example() %}
 Two projects, two defensible answers:
 
-* Software controlling a car's braking system: the requirements are prescribed by safety regulations, changes after release are extremely expensive, and evidence for each stage has to be produced anyway. A largely sequential approach fits.
+* Software controlling a car's braking system: the requirements are prescribed by safety regulations, changes after release are extremely expensive, and evidence for each stage has to be produced anyway. A largely sequential approach fits -- though a regulated project can equally run iteratively, producing the required evidence at each iteration.
 * A new feature for a social media app: nobody knows yet which version users will prefer, and shipping a change costs little. Short iterations with real users fit.
 {% endcall %}
 
