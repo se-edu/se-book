@@ -29,6 +29,8 @@ The methods represented at that meeting, and later approaches built on the same 
 
 **There are a number of agile processes in the development world today. _eXtreme Programming (XP)_ and _Scrum_ are two of the well-known ones.**
 
+**Agile approaches depend on conditions that are not always present**: a customer available to give feedback continuously, and the ability to ship a change cheaply. Where those are missing -- a fixed-price contract with a signed-off scope, or software that must be certified before release -- an agile approach costs more than it returns.
+
 </div>
 
 <div id="extras">
