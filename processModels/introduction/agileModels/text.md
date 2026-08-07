@@ -21,11 +21,11 @@
 >That is, while there is value in the items on the right, we value the items on the left more.<br>
 ><sub>-- Extract from the [Agile Manifesto](http://agilemanifesto.org/)</sub>
 
-The methods represented at that meeting, and later approaches built on the same values, are collectively called {{ show_term("agile processes") }}. Some of the key features of agile approaches are:
+**The methods represented at that meeting, and later approaches built on the same values, are collectively called {{ show_term("agile processes") }}.** Some of the key features of agile approaches are:
 
-* Requirements are prioritized by user need, clarified with the whole team regularly (sometimes daily), and folded into the development schedule as they change.
-* Instead of a detailed design and a full project plan up front, the team works from a rough plan and a high-level design that evolves as the work goes on.
-* The team shares responsibility for delivering the product, and reports progress openly to each other and to the user.
+* **Requirements are prioritized by user need**, clarified with the whole team regularly (sometimes daily), and folded into the development schedule as they change.
+* **Planning and design stay light and keep evolving.** Instead of a detailed design and a full project plan up front, the team works from a rough plan and a high-level design that evolves as the work goes on.
+* **The team shares responsibility for delivering the product**, and reports progress openly to each other and to the user.
 
 **Many agile processes are in use today. _eXtreme Programming (XP)_ and _Scrum_ are two well-known ones.**
 

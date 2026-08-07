@@ -7,9 +7,9 @@
 
 <div id="body">
 
-The {{ show_term("unified process") }} was developed by the Three Amigos - Ivar Jacobson, Grady Booch and James Rumbaugh (the creators of UML).
+**The {{ show_term("unified process") }} was developed by the Three Amigos** - Ivar Jacobson, Grady Booch and James Rumbaugh (the creators of UML).
 
-The unified process consists of four phases: _inception, elaboration, construction and transition_. The main purpose of each phase can be summarized as follows:
+**The unified process consists of four phases: _inception, elaboration, construction and transition_.** The main purpose of each phase can be summarized as follows:
 
 <table class="table">
 <tbody>
