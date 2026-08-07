@@ -35,6 +35,8 @@ Taking a Minesweeper game as an example:
 
 **Whichever shape the iterations take, an early one is a chance to find out you were wrong while changing course is still cheap.** That makes the assumptions whose failure would cost the most -- an unproven technology, an unfamiliar user need, a performance target nobody has hit yet -- worth putting into an early iteration rather than a late one.
 
+**Producing a candidate implementation has become much cheaper than it used to be; deciding what to build and confirming that the result is correct have not.** Within an iteration, that shifts the effort away from writing code and toward specifying and verifying. **It also makes short iterations and disposable early versions easier to justify**, because less is lost when one is thrown away. **What it does not do is reduce the value of being precise about what is wanted**: a vague requirement that once produced a question from a teammate now produces a confident and plausible implementation of the wrong thing, and it produces it quickly.
+
 </div>
 
 <div id="extras">
