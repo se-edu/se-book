@@ -3,7 +3,7 @@
 Choose the correct statements about the sequential and iterative process models.
 
 - [ ] a. The sequential model organizes the project based on activities.
-- [ ] b. The iterative and incremental model organizes the project based on functionality.
+- [ ] b. The iterative model organizes the project into bounded cycles rather than by activity.
 - [ ] c. The iterative model can be breadth-first or depth-first.
 - [ ] d. The iterative model is always better than the sequential model.
 - [ ] e. Compared to the sequential model, the iterative model is better at adapting to changing requirements.
