@@ -27,10 +27,10 @@ The following description was adapted from the [XP home page](http://www.extreme
 **What makes XP 'extreme' is not the practices it uses but how often it uses them.** Each one was already considered good; XP's move was to take it to the point where it happens continuously rather than in a scheduled phase:
 
 * releases are small and frequent, rather than saved up for a milestone;
-* code is integrated continuously, rather than merged near the end;
-* tests are written before the code they test, rather than after;
+* code is integrated continuously, rather than merged near the end ({{ show_term("continuous integration") }});
+* tests are written before the code they test, rather than after ({{ show_term("test-driven development") }});
 * the design is refactored constantly, rather than in a cleanup phase;
-* code is reviewed as it is written, by a second person at the same keyboard.
+* two programmers write the code together at one keyboard, so it is reviewed as it is written rather than in a scheduled review ({{ show_term("pair programming") }}).
 
 **That is the same argument iterative models make about the whole lifecycle**, applied to individual development practices instead: shorten the gap between doing something and finding out whether it worked.
 
