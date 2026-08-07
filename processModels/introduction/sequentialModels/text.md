@@ -12,13 +12,13 @@
 <pic eager src="{{baseUrl}}/processModels/introduction/sequentialModels/images/diagram.png" width="550" />
 <p/>
 
-**When one stage of the process is completed, it produces some {{ show_term("artifacts", "work products such as specifications, models, or test cases") }} to be used in the next stage**. For example, the requirements stage produces a comprehensive list of requirements, to be used in the design stage.
+**When one stage of the process is completed, it produces some {{ show_term("artifacts", "work products such as specifications, models, or test cases") }} to be used in the next stage**. For example, the requirements stage produces a comprehensive list of requirements to be used in the design stage.
 
 **A strict sequential model project moves only in the forward direction** i.e., each stage is completed before starting the next. For example, once the requirements stage is over, there is no provision for revising the requirements later. **In practice the model is often relaxed** to let a stage send work back to the one before it, although doing so means redoing work that was already treated as finished.
 
 **This model can work well for a project that solves a well-understood problem**, in which case the requirements can remain stable and the effort can be estimated accurately. Furthermore, as each stage has a well-defined outcome, progress is easy to track: it is visible from which stage the project is in. Progress *within* a long stage, which is where an overrun usually builds up, stays much harder to see.
 
-**However, real-world projects often tackle problems that are not well-understood at the beginning**, making them unsuitable for this model. For example, target users of a software product may not be able to state their requirements accurately at the start of the project, if they have not used a similar product before.
+**However, real-world projects often tackle problems that are not well-understood at the beginning**, which makes those projects unsuitable for this model. For example, target users of a software product may not be able to state their requirements accurately at the start of the project if they have not used a similar product before.
 
 **A second weakness is that feedback arrives late.** Each stage's output is checked mainly by the stage that follows it, so integration and contact with real users come near the end. A mistake made while gathering requirements or designing therefore tends to surface at the point where going back to completed work costs the most.
 

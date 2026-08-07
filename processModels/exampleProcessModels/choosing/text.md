@@ -7,7 +7,7 @@
 
 <div id="body">
 
-**No approach is best for every project; the choice depends on the project.** These questions are the ones that usually decide whether a project leans sequential or iterative:
+**No approach is best for every project; the choice depends on the project.** These questions usually decide whether a project leans sequential or iterative:
 
 * **How well is the problem understood at the start?** The less certain you are about what to build, the more you gain from delivering something early and learning from the response to it.
 * **How stable are the requirements likely to be?** Requirements that will keep moving are expensive to freeze into an early document.

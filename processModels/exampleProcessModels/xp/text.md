@@ -24,7 +24,7 @@ The following description was adapted from the [XP home page](http://www.extreme
 
 </box>
 
-**What makes XP 'extreme' is not the practices it uses but how often it uses them.** Each one was already considered good; XP's move was to take it to the point where it happens continuously rather than in a scheduled phase:
+**What makes XP 'extreme' is not the practices it uses but how often it uses them.** Each one was already considered good; XP pushes each to the point where it happens continuously rather than in a scheduled phase:
 
 * releases are small and frequent, rather than saved up for a milestone;
 * code is integrated continuously, rather than merged near the end ({{ show_term("continuous integration") }});

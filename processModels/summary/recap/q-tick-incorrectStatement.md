@@ -12,7 +12,7 @@ Choose the correct statements about the sequential and iterative process models.
 
 (a)(b)(c)~~(d)~~(e)
 
-Explanation: Both models have pros and cons. There is no definitive ‘better’ choice between the two. However, the iterative model works better in typical software projects than a purely sequential approach.
+Explanation: Both models have pros and cons. There is no definitive 'better' choice between the two. However, the iterative model works better in typical software projects than a purely sequential approach.
 
 </panel>
 </panel>

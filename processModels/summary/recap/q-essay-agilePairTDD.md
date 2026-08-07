@@ -14,11 +14,11 @@ Find out more about the following three topics and give at least three arguments
 
 * More focus on customer satisfaction.
 * Less chance of building the wrong product (because of frequent customer feedback).
-* Less resources wasted on bureaucracy, over-documenting, contract negotiations.
+* Fewer resources wasted on bureaucracy, over-documenting, contract negotiations.
 
 Arguments against agile processes (not necessarily true):
 
-* It is ‘just hacking’. Not very systematic. No discipline.
+* It is 'just hacking'. Not very systematic. No discipline.
 * It is hard to know in advance the exact final product.
 * It does not give enough attention to documentation.
 * Lack of management control (too much freedom given to developers).
@@ -29,12 +29,12 @@ Arguments against agile processes (not necessarily true):
 * It is good to have more than one person know about any piece of code.
 * It is a way to learn from each other.
 * It can be used to train new programmers.
-* Better discipline and better time management (e.g. less likely to play Farmville while working).
+* Better discipline and better time management (e.g. less likely to drift onto unrelated things while working).
 * Better morale due to more interactions with co-workers.
 
 Arguments against pair programming:
 
-* Increases the total man-hours required.
+* Increases the total person-hours required.
 * Personality clashes between pair-members.
 * Workspaces need to be adapted to suit two developers working at one computer.
 * If pairs are rotated, one needs to know more parts of the system than in solo programming.
@@ -48,8 +48,8 @@ Arguments against pair programming:
 
 Arguments against TDD (not necessarily true):
 
-* Since tests can be seen as ‘executable specifications’, programmers tend to neglect other forms of documentation.
-* Promotes ‘trial-and-error’ coding instead of making programmers think through their algorithms (i.e., ‘just keep hacking until all tests pass’).
+* Since tests can be seen as 'executable specifications', programmers tend to neglect other forms of documentation.
+* Promotes 'trial-and-error' coding instead of making programmers think through their algorithms (i.e., 'just keep hacking until all tests pass').
 * Gives a false sense of security. (What if you forgot to test certain scenarios?)
 * Not intuitive. Some programmers might resist adopting TDD.
 

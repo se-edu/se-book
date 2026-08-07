@@ -3,24 +3,24 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{ icon_outcome }} Can explain scrum</span>
+<span id="outcomes">{{ icon_outcome }} Can explain Scrum</span>
 
 <div id="body">
 
 **{{ show_term("Scrum") }} is a lightweight agile framework rather than a complete process.** It fixes a small set of roles, events, and artifacts, and leaves the team to fill in the rest with practices of its own choosing. The description below follows [the Scrum Guide](https://scrumguides.org/).
 
-**A Scrum team holds three accountabilities:**
+**A Scrum team has three accountabilities:**
 * **The {{ show_term("Product Owner") }}**, who represents the stakeholders and decides what the product needs next
 * **The {{ show_term("Scrum Master") }}**, who is accountable for the team using Scrum well
-* **The Developers**, a cross-functional group who do the actual analysis, design, implementation, testing, etc.
+* **The Developers**, a cross-functional group who do the analysis, design, implementation, and testing
 
 **A Scrum project is divided into short iterations called {{ show_term("Sprints") }}.** Sprints are time-boxed (i.e., restricted to a fixed duration) at one month or less, and every Sprint in a project has the same length. One to four weeks is the common choice.
 
 **A Sprint contains all the work done in it, together with all its events.** It opens with Sprint Planning, where the team selects the work and agrees on a {{ show_term("Sprint Goal") }}, and the Developers coordinate daily as the work proceeds. It ends with two distinct meetings: a {{ show_term("Sprint Review") }}, where the team and stakeholders inspect the Increment and decide what the product needs next, and a {{ show_term("Sprint Retrospective") }}, where the team inspects how it worked and chooses improvements. The next Sprint begins immediately after.
 
-**During each sprint, the team creates a potentially deliverable product increment** (for example, working and tested software). The work comes from the {{ show_term("product backlog") }}, a prioritized set of high-level requirements for the product as a whole. The items selected for the current sprint form the {{ show_term("sprint backlog") }}.
+**During each Sprint, the team creates a potentially deliverable {{ show_term("Increment") }}** (for example, working and tested software). The work comes from the {{ show_term("Product Backlog") }}, a prioritized set of high-level requirements for the product as a whole. The items selected for the current Sprint form the {{ show_term("Sprint Backlog") }}.
 
-**Within a sprint the sprint goal stays fixed, but the plan for reaching it does not.** The team updates the sprint backlog as it learns more, and can renegotiate the scope with the Product Owner as long as the sprint goal survives. The sprint must end on time; work that is not completed returns to the product backlog.
+**Within a Sprint the Sprint Goal stays fixed, but the plan for reaching it does not.** The team updates the Sprint Backlog as it learns more, and can renegotiate the scope with the Product Owner as long as the Sprint Goal survives. The Sprint must end on time; work that is not completed returns to the Product Backlog.
 
 **Scrum enables self-organizing teams**, which rely on frequent and direct communication among all team members and disciplines rather than on documents handed from one to the next.
 
@@ -29,8 +29,8 @@
 <pic eager src="{{baseUrl}}/processModels/exampleProcessModels/scrum/images/diagram.png" height="250" />
 <p/>
 
-**The {{ show_term("Daily Scrum") }} is a short daily meeting in which the developers synchronize their plans, surface whatever is blocking them, and decide what needs to be taken up separately.** It is not a problem-solving meeting.<br>
-{{ label_example }} %%A common way to run it is for each member to say what they did since the previous one, what they plan to do next, and what is in their way.%%
+**The {{ show_term("Daily Scrum") }} is a short daily meeting in which the Developers synchronize their plans, surface whatever is blocking them, and decide what needs to be taken up separately.** It is not a problem-solving meeting.<br>
+{{ label_example }} %%A common way to run it is for each member to say what they did since the previous Daily Scrum, what they plan to do next, and what is in their way.%%
 
 <panel type="seamless" header="{{ icon_video }} Intro to Scrum in Under 10 Minutes" class="non-printable">
 

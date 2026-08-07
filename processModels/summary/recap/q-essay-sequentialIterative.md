@@ -20,27 +20,27 @@ g) A hospital wants to replace the system its nurses use to record patient obser
 
 a) Quality of the final product:
 
-* Iterative: Frequent reworking can deteriorate the design. Frequent refactoring should be used to prevent this. Frequent customer feedback can help to improve the quality (i.e., quality as seen by the customer).
+* Iterative: Frequent reworking can degrade the design. Frequent refactoring should be used to prevent this. Frequent customer feedback can help to improve the quality (i.e., quality as seen by the customer).
 *	Sequential: Final quality depends on the quality of each phase. Any quality problems in any phase could result in a low quality product.
 
-b) Risk of overshooting the deadline.
+b) Risk of overshooting the deadline:
 
 * Iterative: Less risk. If the last iteration got delayed, we can always deliver the previous version. However, this does not guarantee that all features promised at the beginning will be delivered by the deadline.
 * Sequential: High risk. Any delay in any phase can result in overshooting the deadline with nothing to deliver.
 
-c) Total project cost.
+c) Total project cost:
 
 * Iterative: We can always stop before the project budget is exceeded. However, this does not guarantee that all features promised at the beginning will be delivered under the estimated cost.
 * Sequential: The sequential model requires us to carry on even if the budget is exceeded because there is no intermediate version to fall back on.
 
-Iterative reworking of existing artifacts could add to the cost. However, this is “cheaper” than finding at the end that we built the wrong product.
+Iterative reworking of existing artifacts could add to the cost. However, this is 'cheaper' than finding at the end that we built the wrong product.
 
-d) Customer satisfaction
+d) Customer satisfaction:
 
-* Iterative: The customer gets many opportunities to guide the product in the direction he/she wants. The customer gets to change requirements even in the middle of the product's development. Both of these can increase the probability of customer satisfaction.
+* Iterative: The customer gets many opportunities to guide the product in the direction they want. The customer gets to change requirements even in the middle of the product's development. Both of these can increase the probability of customer satisfaction.
 * Sequential: Customer satisfaction is guaranteed only if the product was delivered as promised and if the initial requirements proved to be accurate. However, the customer is not required to do the extra work of giving frequent feedback during the project's development.
 
-e) Monitoring project progress
+e) Monitoring the project progress:
 
 * Iterative: Hard to measure progress against a plan, as the plan itself keeps changing.
 * Sequential: Easier to measure progress against the plan, although this does not ensure eventual success.

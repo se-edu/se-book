@@ -27,7 +27,7 @@
 * **Planning and design stay light and keep evolving.** Instead of a detailed design and a full project plan up front, the team works from a rough plan and a high-level design that evolves as the work goes on.
 * **The team shares responsibility for delivering the product**, and reports progress openly to each other and to the user.
 
-**Many agile processes are in use today. _eXtreme Programming (XP)_ and _Scrum_ are two well-known ones.**
+**Many agile processes are in use today. _Extreme Programming (XP)_ and _Scrum_ are two well-known ones.**
 
 **Agile approaches depend on conditions that are not always present**: a customer available to give feedback continuously, and the ability to ship a change cheaply. Where those are missing -- a fixed-price contract with a signed-off scope, or software that must be certified before release -- an agile approach costs more than it returns.
 
