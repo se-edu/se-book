@@ -19,14 +19,22 @@ The following description was adapted from the [XP home page](http://www.extreme
 
 **XP aims to improve a software project in five essential ways: communication, simplicity, feedback, respect, and courage.** Extreme Programmers constantly communicate with their customers and fellow programmers. They keep their design simple and clean. They get feedback by testing their software starting on day one. Every small success deepens their respect for the unique contributions of each and every team member. With this foundation, Extreme Programmers are able to courageously respond to changing requirements and technology.
 
-**XP has a set of simple rules.** XP is a lot like a jigsaw puzzle with many small pieces. Individually the pieces make no sense, but when combined together a complete picture can be seen. This flow chart shows how Extreme Programming's rules work together.
-
 <pic eager src="{{baseUrl}}/processModels/exampleProcessModels/xp/images/diagram.png" height="200" />
 <p/>
 
 </box>
 
-**_Pair programming, CRC cards, project velocity_, and _standup meetings_ are some interesting topics related to XP.** Refer to [www.extremeprogramming.org](http://www.extremeprogramming.org) to find out more about XP.
+**What makes XP 'extreme' is not the practices it uses but how often it uses them.** Each one was already considered good; XP's move was to take it to the point where it happens continuously rather than in a scheduled phase:
+
+* releases are small and frequent, rather than saved up for a milestone;
+* code is integrated continuously, rather than merged near the end;
+* tests are written before the code they test, rather than after;
+* the design is refactored constantly, rather than in a cleanup phase;
+* code is reviewed as it is written, by a second person at the same keyboard.
+
+**That is the same argument iterative models make about the whole lifecycle**, applied to individual development practices instead: shorten the gap between doing something and finding out whether it worked.
+
+Several of these practices are covered in their own right elsewhere in this textbook.
 
 </div>
 
