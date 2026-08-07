@@ -3,16 +3,13 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{ icon_outcome }} Can explain CMMI</span>
+<span id="outcomes">{{ icon_outcome }} Can explain process improvement</span>
 
 <div id="body">
 
-<box type="definition" seamless>
+**A team's process is itself something that can be assessed and deliberately improved, rather than chosen once and left alone.** Frameworks exist for doing that assessment, and they matter most where a customer wants evidence that a supplier can be relied on before awarding it work.
 
-CMMI (Capability Maturity Model Integration) is a process improvement approach defined by the Software Engineering Institute at Carnegie Mellon University. CMMI provides organizations with the essential elements of effective processes, which will improve their performance. <sub>-- adapted from [http://www.sei.cmu.edu/cmmi/](http://www.sei.cmu.edu/cmmi/)</sub>
-</box>
-
-**{{ show_term("CMMI") }} defines five {{ show_term("maturity levels") }} for a process and provides criteria to determine if the process of an organization is at a certain maturity level.** The diagram below [taken from Wikipedia] gives an overview of the five levels.
+**{{ show_term("CMMI") }} (Capability Maturity Model Integration), defined by the Software Engineering Institute at Carnegie Mellon University, is the best known of them.** It defines five {{ show_term("maturity levels") }}, ranging from ad hoc to continuously improving, and criteria for determining which one an organization's process has reached.
 
 <pic eager src="{{baseUrl}}/processModels/more/cmmi/images/diagram.png" height="250" />
 <p/>
