@@ -283,7 +283,7 @@ Also known as
 
 <div id="def-se">
 
-**{{ show_term("Software engineering") }}** is the application of a systematic, disciplined, quantifiable approach to the development, operation, and maintenance of software <sub>-- IEEE Standard Glossary of Software Engineering Terminology</sub>
+**{{ show_term("Software engineering") }}** is the application of a systematic, disciplined, quantifiable approach to the development, operation, and maintenance of software. <sub>-- IEEE Standard Glossary of Software Engineering Terminology</sub>
 
 </div>
 
