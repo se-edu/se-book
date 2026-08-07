@@ -28,6 +28,7 @@ title: "SDLC Process Models [Printable]"
 ## More
 
 <include src="more/cmmi/unit-inParent-asFlat-print.md" boilerplate />
+<include src="more/continuousApproaches/unit-inParent-asFlat-print.md" boilerplate />
 
 </div>
 

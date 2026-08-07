@@ -360,6 +360,7 @@ pageNav: 3
 <include src="../processModels/exampleProcessModels/scrum/unit-inParent-asOutcome.md" boilerplate />
 <include src="../processModels/exampleProcessModels/unifiedProcess/unit-inParent-asOutcome.md" boilerplate />
 <include src="../processModels/more/cmmi/unit-inParent-asOutcome.md" boilerplate />
+<include src="../processModels/more/continuousApproaches/unit-inParent-asOutcome.md" boilerplate />
 <include src="../processModels/summary/recap/unit-inParent-asOutcome.md" boilerplate />
 
 ## Tools

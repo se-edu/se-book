@@ -35,7 +35,7 @@ Taking a Minesweeper game as an example:
 
 **A project can be done as a mixture of breadth-first and depth-first iterations** %%i.e., an iteration can contain some breadth-first work as well as some depth-first work, or, some iterations can be breadth-first while others are depth-first%%.
 
-**Whichever shape the iterations take, an early one is a chance to find out you were wrong while changing course is still cheap.** That makes the assumptions whose failure would cost the most -- an unproven technology, an unfamiliar user need, a performance target nobody has hit yet -- worth putting into an early iteration rather than a late one.
+**Whichever shape the iterations take, an early one is a chance to find out you were wrong while changing course is still cheap.** That makes the assumptions whose failure would cost the most -- an unproven technology, an unfamiliar user need, a performance target nobody has hit yet -- worth putting into an early iteration rather than a late one. Ordering iterations by risk in this way is the central idea of the {{ show_term("spiral model") }}.
 
 **As AI coding advances, producing a candidate implementation is becoming much cheaper than it used to be; deciding what to build and confirming that the result is correct have not.** Within an iteration, that shifts the effort away from writing code and toward specifying and verifying. **It does not reduce the value of being precise about what is wanted**: a vague requirement that once produced a question from a teammate now produces a confident implementation of the wrong thing, quickly.
 
