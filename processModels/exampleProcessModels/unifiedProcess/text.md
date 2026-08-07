@@ -91,7 +91,7 @@ The unified process consists of four phases: _inception, elaboration, constructi
 
 Given above is a visualization of a project done using the Unified process (source: Wikipedia). The four phases run from left to right and each vertical column is a single iteration; the shading shows how much effort a given workflow, such as ‘Requirements’ or ‘Analysis & Design’, takes up in that iteration.
 
-**Phases and iterations are two different things, which is why a project can be phased and iterative at the same time**: a phase says where the project is in its overall arc, while an iteration is one pass of work through several workflows.
+**Phases and iterations are two different things, which is why a project can be phased and iterative at the same time**: a phase says where the project is in its overall arc, while an iteration is one pass of work through several workflows. A phase is also not a development stage: each phase contains work from several stages.
 
 **Unified process is a flexible and customizable process model framework rather than a single fixed process.** For example, the number of iterations in each phase, definition of workflows, and the intensity of a given workflow in a given iteration can be adjusted according to the nature of the project. Therefore, the diagram above simply records a particular application of the UP rather than prescribes how the UP is to be applied. However, this record can be refined and reused for similar future projects.
 

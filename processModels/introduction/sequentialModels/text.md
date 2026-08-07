@@ -12,7 +12,7 @@
 <pic eager src="{{baseUrl}}/processModels/introduction/sequentialModels/images/diagram.png" width="550" />
 <p/>
 
-**When one stage of the process is completed, it produces some artifacts to be used in the next stage**. For example, the requirements stage produces a comprehensive list of requirements, to be used in the design phase.
+**When one stage of the process is completed, it produces some {{ show_term("artifacts", "work products such as specifications, models, or test cases") }} to be used in the next stage**. For example, the requirements stage produces a comprehensive list of requirements, to be used in the design stage.
 
 **A strict sequential model project moves only in the forward direction** i.e., each stage is completed before starting the next. For example, once the requirements stage is over, there is no provision for revising the requirements later. **In practice the model is often relaxed** to let a stage send work back to the one before it, although doing so means redoing work that was already treated as finished.
 
