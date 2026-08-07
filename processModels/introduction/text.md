@@ -6,6 +6,5 @@
 <include src="sequentialModels/unit-inParent-asPanel.md" boilerplate />
 <include src="iterativeModels/unit-inParent-asPanel.md" boilerplate />
 <include src="agileModels/unit-inParent-asPanel.md" boilerplate />
-<include src="choosing/unit-inParent-asPanel.md" boilerplate />
 
 </div>

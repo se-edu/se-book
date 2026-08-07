@@ -5,5 +5,6 @@
 <include src="xp/unit-inParent-asPanel.md" boilerplate />
 <include src="scrum/unit-inParent-asPanel.md" boilerplate />
 <include src="unifiedProcess/unit-inParent-asPanel.md" boilerplate />
+<include src="choosing/unit-inParent-asPanel.md" boilerplate />
 
 </div>

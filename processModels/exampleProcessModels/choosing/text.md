@@ -3,11 +3,11 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{ icon_outcome }} Can choose a process model to suit a project</span>
+<span id="outcomes">{{ icon_outcome }} Can choose a process approach to suit a project</span>
 
 <div id="body">
 
-**No process model is best for every project; the choice depends on the project.** These questions are the ones that usually decide it:
+**No approach is best for every project; the choice depends on the project.** These questions are the ones that usually decide whether a project leans sequential or iterative:
 
 * **How well is the problem understood at the start?** The less certain you are about what to build, the more you gain from delivering something early and learning from the response to it.
 * **How stable are the requirements likely to be?** Requirements that will keep moving are expensive to freeze into an early document.
