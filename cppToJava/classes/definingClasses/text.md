@@ -38,7 +38,7 @@ When a class is `public` %%(e.g., the `Time` class in the above example)%% it ca
 The syntax for <tooltip content="special methods that construct the object and initialize the instance variables">constructors</tooltip> is similar to that of other methods, except:
 * The name of the constructor is the same as the name of the class.
 * The keyword `static` is omitted.
-* Does not return anything. A constructor returns the created object by default.
+* A constructor does not return anything. A constructor returns the created object by default.
 
 When you invoke `new`, Java creates the object and calls your constructor to initialize the instance variables. When the constructor is done, it returns a reference to the new object.
 
@@ -120,7 +120,7 @@ public Time(int hour, int minute, int second) {
 
 ##### Instance methods
 
-**You can add methods to a class which can then be used from the objects of that class.** These _instance_ methods do not have the `static` keyword in their method signature. Instance methods can access attributes of the class.
+**You can add methods to a class, which can then be called on objects of that class.** These _instance_ methods do not have the `static` keyword in their method signature. Instance methods can access attributes of the class.
 
 <box>
 

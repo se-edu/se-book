@@ -34,7 +34,7 @@ Rectangle of area 12
 Circle of area 314
 Rectangle of area 16
 ```
-`Circle` class and `Rectangle` class is given below:
+The `Circle` class and the `Rectangle` class are given below:
 ```java
 public class Circle extends Shape {
 

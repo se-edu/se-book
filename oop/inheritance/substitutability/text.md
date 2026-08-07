@@ -31,7 +31,7 @@ hide AdminStaff fields
 
 An `AcademicStaff` is an instance of a `Staff`, but a `Staff` is not necessarily an instance of an `AcademicStaff`. That is, wherever an object of the superclass is expected, it can be substituted by an object of any of its subclasses.
 
-The following code is valid because an `AcademicStaff` object is substitutable as a `Staff` object.
+The following code is valid because an `AcademicStaff` object is substitutable for a `Staff` object.
 
 ```java
 Staff staff = new AcademicStaff(); // OK

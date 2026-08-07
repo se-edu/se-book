@@ -36,7 +36,7 @@ public class Bicycle {
 </box>
 
 
-**_Class variables_ are referenced by the class name itself**, as in `Bicycle.numberOfBicycles` This makes it clear that they are class variables.
+**_Class variables_ are referenced by the class name itself**, as in `Bicycle.numberOfBicycles`. This makes it clear that they are class variables.
 
 The Java programming language supports static methods as well as static variables. Static methods, which have the `static` modifier in their declarations, should be invoked with the class name, without the need for creating an instance of the class, as in `ClassName.methodName(args)`
 

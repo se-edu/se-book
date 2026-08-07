@@ -7,7 +7,7 @@
 
 <div id="body">
 
-**{{ show_term("Object-Oriented Programming (OOP)") }} is a {{ show_term("programming paradigm") }}.** A programming paradigm guides programmers to analyze programming problems, and structure programming solutions, in a specific way.
+**{{ show_term("Object-Oriented Programming (OOP)") }} is a {{ show_term("programming paradigm") }}.** A programming paradigm guides programmers to analyze programming problems and structure programming solutions in a specific way.
 
 > Programming languages have traditionally divided the world into two parts—data and operations on data. Data is static and immutable, except as the operations may change it. The procedures and functions that operate on data have no lasting state of their own; they’re useful only in their ability to affect data.
 >
@@ -28,7 +28,7 @@ Paradigm | Programming Languages
 [_Logic Programming_ paradigm](https://en.wikipedia.org/wiki/Logic_programming) | Prolog
 
 **Some programming languages support multiple paradigms.**<br>
-{{ label_example }} %%Java is primarily an OOP language but it supports limited forms of functional programming and it can be used to (although not recommended to) write procedural code, e.g., [se-edu/addressbook-level1](https://github.com/se-edu/addressbook-level1).%%<br>
+{{ label_example }} %%Java is primarily an OOP language, but it supports limited forms of functional programming and can be used to write procedural code (although this is not recommended), e.g., [se-edu/addressbook-level1](https://github.com/se-edu/addressbook-level1).%%<br>
 {{ label_example }} %%JavaScript and Python support functional, procedural, and OOP programming.%%
 
 </div>

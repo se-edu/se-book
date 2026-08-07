@@ -15,10 +15,10 @@
 
 **A superclass is said to be _more general_ than the subclass.** Conversely, a subclass is said to be more _specialized_ than the superclass.
 
-**Applying inheritance on a group of similar classes can result in the common parts among classes being extracted into more general classes.**<br>
+**Applying inheritance to a group of similar classes can result in the common parts of those classes being extracted into more general classes.**<br>
 {{ label_example }} %%`Man` and `Woman` behave the same way for certain things. However, the two classes cannot be simply replaced with a more general class `Person` because of the need to distinguish between `Man` and `Woman` for certain other things. A solution is to add the `Person` class as a superclass (to contain the code common to men and women) and let `Man` and `Woman` inherit from the `Person` class.%%
 
-**Inheritance implies the derived class can be considered as a _subtype_ of the base class (and the base class is a _super-type_ of the derived class), resulting in an _is a_ relationship.**
+**Inheritance implies that the derived class can be considered a _subtype_ of the base class (and the base class is a _supertype_ of the derived class), resulting in an _is-a_ relationship.**
 
 %%{{ icon_info }} Inheritance does not necessarily mean a subtype relationship exists. However, the two often go hand-in-hand. For simplicity, at this point let us assume inheritance implies a subtype relationship.%%
 

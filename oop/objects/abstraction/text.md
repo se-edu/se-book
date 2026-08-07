@@ -7,7 +7,7 @@
 
 <div id="body">
 
-The concept of **_Objects_ in OOP is an <trigger trigger="click" for="modal:objectsAsAbstractions-abstraction">{{ show_term("abstraction") }}</trigger> mechanism because it allows us to abstract away the lower level details and work with bigger granularity entities** i.e., ignore details of data formats and the method implementation details and work at the level of objects.
+The concept of **_Objects_ in OOP is an <trigger trigger="click" for="modal:objectsAsAbstractions-abstraction">{{ show_term("abstraction") }}</trigger> mechanism because it allows us to ignore lower-level details and work at the level of objects.** That is, we can ignore details such as data formats and method implementations.
 
 <modal large header="Definition: Abstraction" id="modal:objectsAsAbstractions-abstraction">
   <include src="../../../common/definitions.md#def-abstraction"/>

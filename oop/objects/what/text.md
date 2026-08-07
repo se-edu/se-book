@@ -26,7 +26,7 @@
 {% call show_example() %}
 A real world scenario viewed as a network of interacting objects:
 
-You are asked to find out the average age of a group of people Adam, Beth, Charlie, and Daisy. You take a piece of paper and pen, go to each person, ask for their age, and note it down. After collecting the age of all four, you enter it into a calculator to find the total. And then, use the same calculator to divide the total by four, to get the average age. This can be viewed as the objects `You`, `Pen`, `Paper`, `Calculator`, `Adam`, `Beth`, `Charlie`, and `Daisy` interacting to accomplish the end result of calculating the average age of the four persons. These objects can be considered as _connected_ in a certain _network_ of certain structure that dictates how these objects can interact. For example, the `You` object is connected to the `Pen` object, and hence `You` can use the `Pen` object to write.
+You are asked to find out the average age of a group of people: Adam, Beth, Charlie, and Daisy. You take a piece of paper and pen, go to each person, ask for their age, and note down each age. After collecting the ages of all four, you enter them into a calculator to find the total. You then use the same calculator to divide the total by four to get the average age. This can be viewed as the objects `You`, `Pen`, `Paper`, `Calculator`, `Adam`, `Beth`, `Charlie`, and `Daisy` interacting to accomplish the end result of calculating the average age of the four persons. These objects can be considered as _connected_ in a _network_ with a certain structure that dictates how they can interact. For example, the `You` object is connected to the `Pen` object, and hence `You` can use the `Pen` object to write.
 
 <!-- TODO {visual: real world scenario, objects and network marked} -->
 {% endcall %}
@@ -62,9 +62,9 @@ The state and behavior of our running example are as follows:
 
 **Every object has an _interface_ and an _implementation_.**
 
-Every real world object has,
-* an interface through which other objects can interact with it, and,
-* an implementation that supports the interface but may not be accessible to the other object.
+Every real-world object has,
+* an interface through which other objects can interact with it, and
+* an implementation that supports the interface but may not be accessible to the other objects.
 
 {% call show_example() %}
 The interface and implementation of some real-world objects in our example:

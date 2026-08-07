@@ -11,7 +11,7 @@
  1. **create the virtual world of the object network, and**
  2. **provide it with the inputs to produce the outcome you want.**
 
-**A {{ show_term("class") }} contains instructions for creating a specific kind of objects**. It turns out sometimes multiple objects keep the same type of data and have the same behavior because they are of the _same kind_. Instructions for creating a 'kind' (or ‘class’) of objects can be done once and those same instructions can be used to {{ show_term("instantiate", "i.e., create instances of") }} objects of that kind. We call such instructions a _Class_.
+**A {{ show_term("class") }} contains instructions for creating a specific kind of object**. Sometimes, multiple objects keep the same type of data and have the same behavior because they are of the _same kind_. Instructions for creating a 'kind' (or ‘class’) of object can be written once, and those same instructions can be used to {{ show_term("instantiate", "i.e., create instances of") }} objects of that kind. We call such instructions a _class_.
 
 {% call show_example() %}
 Classes and objects in an example scenario:
@@ -35,4 +35,3 @@ Class | Objects
 <div id="extras">
   <include src="exercisesPanel.md" boilerplate />
 </div>
-

@@ -28,7 +28,7 @@ As one method of the class is `abstract`, the class itself is `abstract`.
 
 </box>
 
-**An _abstract class_ is declared with the keyword `abstract`. Abstract classes can be used as reference type but cannot be instantiated.**
+**An _abstract class_ is declared with the keyword `abstract`. Abstract classes can be used as reference types but cannot be instantiated.**
 
 <box>
 

@@ -26,7 +26,7 @@ public class Circle {
 ```
 Update it as follows so that code given below produces the given output.
 * Add getter/setter methods for all three attributes
-* Update the setters and constructors such that if the radius supplied is negative, the code automatically set the radius to 0 instead.
+* Update the setters and constructors such that if the radius supplied is negative, the code automatically sets the radius to 0 instead.
 
 ```java
 public class Main {

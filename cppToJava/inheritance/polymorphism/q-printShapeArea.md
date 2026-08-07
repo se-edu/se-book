@@ -28,7 +28,7 @@ public class Main {
 314
 16
 ```
-`Circle` class and `Rectangle` class is given below but you'll need to add a parent class `Shape`.
+The `Circle` class and the `Rectangle` class are given below, but you'll need to add a parent class, `Shape`.
 ```java
 public class Circle extends Shape {
 

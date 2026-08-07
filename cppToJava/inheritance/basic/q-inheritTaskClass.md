@@ -1,6 +1,6 @@
 <panel type="dark" header="###  <small><small>{{ icon_important }} [Key Exercise] inherit the `Task` class</small></small>" expanded >
 
-Background: Suppose we are creating a software to manage various tasks a person has to do. Two types of such tasks are,
+Background: Suppose we are creating a software application to manage various tasks a person has to do. Two types of such tasks are,
 * _Todos_: i.e., things that need to be done some day %%e.g., 'Read the book Lord of the Rings'%%
 * _Deadlines_: i.e., things to be done by a specific date/time %%e.g., 'Read the text book by Nov 25th'%%
 
@@ -24,7 +24,7 @@ public class Task {
    * It should have an additional `boolean` field `isDone` to indicate whether the todo is done or not done.
    * It should have a `isDone()` method to access the `isDone` field and a `setDone(boolean)` method to set the `isDone` field.
 2. Write a `Deadline` class that inherits from the `Todo` class that you implemented in the previous step. It should have,
-   * an additional `String` field `by` to store the details of when the task to be done e.g., `Jan 25th 5pm`
+   * an additional `String` field `by` to store the details of when the task is to be done e.g., `Jan 25th 5pm`
    * a `getBy()` method to access the value of the `by` field, and a corresponding `setBy(String)` method.
    * a constructor of the form `Deadline(String description, String by)`
 

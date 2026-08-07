@@ -49,7 +49,7 @@ public class CarModelX implements DrivableVehicle {
 **An interface can be used as a type** e.g., `DrivableVehicle dv = new CarModelX();`{.java}.
 
 
-**Interfaces can inherit from other interfaces** using the `extends` keyword, similar to a class inheriting another.
+**Interfaces can inherit from other interfaces** using the `extends` keyword, similar to a class inheriting from another.
 
 <box>
 

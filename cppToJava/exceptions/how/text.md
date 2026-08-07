@@ -7,7 +7,7 @@
 <div id="body">
 The content below uses extracts from the {{ oracle }}, with some adaptations.
 
-**A program can catch exceptions by using a combination of the `try`, `catch` blocks.**
+**A program can catch exceptions by using a combination of `try` and `catch` blocks.**
 * The `try` block identifies a block of code in which an exception can occur.
 * The `catch` block identifies a block of code, known as an exception handler, that can handle a particular type of exception.
 
@@ -41,7 +41,7 @@ No exceptions {{ icon_output }} | `IOException` {{ icon_output }} | `IndexOutOfB
 
 </box>
 
-You can **use a `finally` block to specify code that is guaranteed to execute with or without the exception.** This is the right place to close files, recover resources, and otherwise clean up after the code enclosed in the `try` block.
+You can **use a `finally` block to specify code that is guaranteed to execute whether or not an exception occurs.** This is the right place to close files, recover resources, and otherwise clean up after the code enclosed in the `try` block.
 
 {{ icon_example }} The `writeList()` method below has a `finally` block:
 
@@ -95,7 +95,7 @@ In Java, **Checked exceptions are subject to the _Catch or Specify Requirement_*
 * A `try` statement that catches the exception. The `try` must provide a handler for the exception.
 * A method that specifies that it can throw the exception. The method must provide a `throws` clause that lists the exception.
 
-Unchecked exceptions are not required to follow to the _Catch or Specify Requirement_ but you can apply the requirement to them too.
+Unchecked exceptions are not required to follow the _Catch or Specify Requirement_, but you can apply the requirement to them too.
 
 <box>
 

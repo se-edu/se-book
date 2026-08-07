@@ -6,7 +6,7 @@ A) Choose the correct statements
 - [ ] b. OO guides us in how to structure the solution
 - [ ] c. OO is mainly an abstraction mechanism
 - [ ] d. OO is a programming language
-- [ ] e. OO is modeled after how the objects in real world work
+- [ ] e. OO is modeled after how the objects in the real world work
 
 B) Choose the correct statements
 

@@ -21,7 +21,7 @@ The excerpt below from the {{ oracle }} (with slight adaptations) explains how e
 
 </div>
 
-Advantages of exception handling in this way:
+Advantages of handling exceptions this way:
 * The ability to propagate error information through the call stack.
 * The separation of code that deals with 'unusual' situations from the code that does the 'usual' work.
 

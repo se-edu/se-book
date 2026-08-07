@@ -1,6 +1,6 @@
 <panel type="dark" header="###  <small><small>{{ icon_important }} [Key Exercise] print `Printable` items</small></small>" expanded >
 
-The `Main` class below passes a list of `Printable` objects (i.e., objects that implement the `Printable` interface) for another method to be printed.
+The `Main` class below passes a list of `Printable` objects (i.e., objects that implement the `Printable` interface) to another method for printing.
 
 ```java
 public class Main {

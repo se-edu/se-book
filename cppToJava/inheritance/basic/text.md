@@ -14,11 +14,11 @@ Given below is an extract from the {{ oracle }}, with slight adaptations.
 
 {{ similar }} **A subclass inherits all the members** (fields, methods, and nested classes) from its superclass. Constructors are not members, so they are not inherited by subclasses, but the constructor of the superclass can be invoked from the subclass.
 
-{{ different }} **Every class has one and only one direct superclass (_single inheritance_)**, except the `Object` class, which has no superclass, . In the absence of any other explicit superclass, every class is implicitly a subclass of `Object`. Classes can be derived from classes that are derived from classes that are derived from classes, and so on, and ultimately derived from the topmost class, `Object`. Such a class is said to be _descended_ from all the classes in the _inheritance chain_ stretching back to `Object`. Java does not support _multiple inheritance_ among classes.
+{{ different }} **Every class has one and only one direct superclass (_single inheritance_)**, except the `Object` class, which has no superclass. In the absence of any other explicit superclass, every class is implicitly a subclass of `Object`. Classes can be derived from classes that are derived from classes that are derived from classes, and so on, and ultimately derived from the topmost class, `Object`. Such a class is said to be _descended_ from all the classes in the _inheritance chain_ stretching back to `Object`. Java does not support _multiple inheritance_ among classes.
 
 {{ different }} **The `java.lang.Object` class defines and implements behavior common to all classes**—including the ones that you write. In the Java platform, many classes derive directly from `Object`, other classes derive from some of those classes, and so on, forming a single hierarchy of classes.
 
-**The keyword `extends` indicates one class inheriting from another.**
+**The keyword `extends` indicates that one class inherits from another.**
 
 <box>
 
