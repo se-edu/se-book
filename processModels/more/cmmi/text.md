@@ -3,7 +3,7 @@
 
 <span id="prereqs"></span>
 
-<span id="outcomes">{{ icon_outcome }} Can explain process improvement</span>
+<span id="outcomes">{{ icon_outcome }} Can explain what a process maturity model is</span>
 
 <div id="body">
 
