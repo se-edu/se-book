@@ -23,11 +23,11 @@
 
 The methods represented at that meeting, and later approaches built on the same values, are collectively called {{ show_term("agile processes") }}. Some of the key features of agile approaches are:
 
-* Requirements are prioritized based on the needs of the user, are clarified regularly (at times almost on a daily basis) with the entire project team, and are factored into the development schedule as appropriate.
-* Instead of doing a very elaborate and detailed design and a project plan for the whole project, the team works based on a rough project plan and a high-level design that evolves as the project goes on.
-* There is a strong emphasis on complete transparency and responsibility sharing among the team members. The team is responsible together for the delivery of the product. Team members are accountable, and regularly and openly share progress with each other and with the user.
+* Requirements are prioritized by user need, clarified with the whole team regularly (sometimes daily), and folded into the development schedule as they change.
+* Instead of a detailed design and a full project plan up front, the team works from a rough plan and a high-level design that evolves as the work goes on.
+* The team shares responsibility for delivering the product, and reports progress openly to each other and to the user.
 
-**There are a number of agile processes in the development world today. _eXtreme Programming (XP)_ and _Scrum_ are two of the well-known ones.**
+**Many agile processes are in use today. _eXtreme Programming (XP)_ and _Scrum_ are two well-known ones.**
 
 **Agile approaches depend on conditions that are not always present**: a customer available to give feedback continuously, and the ability to ship a change cheaply. Where those are missing -- a fixed-price contract with a signed-off scope, or software that must be certified before release -- an agile approach costs more than it returns.
 

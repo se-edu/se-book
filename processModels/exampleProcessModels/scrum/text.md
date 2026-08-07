@@ -14,17 +14,17 @@
 * **The {{ show_term("Scrum Master") }}**, who is accountable for the team using Scrum well
 * **The Developers**, a cross-functional group who do the actual analysis, design, implementation, testing, etc.
 
-**A Scrum project is divided into short iterations called {{ show_term("Sprints") }}.** A sprint is the basic unit of development in Scrum. Sprints are time-boxed (i.e., restricted to a fixed duration) at one month or less, and every Sprint in a project has the same length. One to four weeks is the common choice.
+**A Scrum project is divided into short iterations called {{ show_term("Sprints") }}.** Sprints are time-boxed (i.e., restricted to a fixed duration) at one month or less, and every Sprint in a project has the same length. One to four weeks is the common choice.
 
 **A Sprint contains all the work done in it, together with all its events.** It opens with Sprint Planning, where the team selects the work and agrees on a {{ show_term("Sprint Goal") }}, and the Developers coordinate daily as the work proceeds. It ends with two distinct meetings: a {{ show_term("Sprint Review") }}, where the team and stakeholders inspect the Increment and decide what the product needs next, and a {{ show_term("Sprint Retrospective") }}, where the team inspects how it worked and chooses improvements. The next Sprint begins immediately after.
 
 **During each sprint, the team creates a potentially deliverable product increment** (for example, working and tested software). The work comes from the {{ show_term("product backlog") }}, a prioritized set of high-level requirements for the product as a whole. The items selected for the current sprint form the {{ show_term("sprint backlog") }}.
 
-**Within a sprint the sprint goal stays fixed, but the plan for reaching it does not.** The team updates the sprint backlog as it learns more, and can renegotiate the scope with the Product Owner as long as the sprint goal survives. Development is time-boxed such that the sprint must end on time; work that is not completed returns to the product backlog.
+**Within a sprint the sprint goal stays fixed, but the plan for reaching it does not.** The team updates the sprint backlog as it learns more, and can renegotiate the scope with the Product Owner as long as the sprint goal survives. The sprint must end on time; work that is not completed returns to the product backlog.
 
-**Scrum enables the creation of self-organizing teams**, relying on frequent and direct communication between all team members and disciplines in the project rather than on documents handed from one to the next.
+**Scrum enables self-organizing teams**, which rely on frequent and direct communication among all team members and disciplines rather than on documents handed from one to the next.
 
-**A key principle of Scrum is its recognition that during a project the customers can change their minds about what they want and need** (often called requirements churn), and that unpredicted challenges cannot be easily addressed in a traditional predictive or planned manner. As such, Scrum adopts an empirical approach, accepting that the problem cannot be fully understood or defined, focusing instead on maximizing the team’s ability to deliver quickly and respond to emerging requirements.
+**Scrum assumes that customers will change their minds about what they want** (often called requirements churn) **and that unforeseen problems cannot be planned for in advance.** It therefore takes an empirical approach: instead of trying to define the problem fully up front, it maximizes the team's ability to deliver quickly and respond to requirements as they emerge.
 
 <pic eager src="{{baseUrl}}/processModels/exampleProcessModels/scrum/images/diagram.png" height="250" />
 <p/>
