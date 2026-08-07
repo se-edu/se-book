@@ -89,9 +89,11 @@ The unified process consists of four phases: _inception, elaboration, constructi
 <pic eager src="{{baseUrl}}/processModels/exampleProcessModels/unifiedProcess/images/diagram.png" height="280" />
 <p/>
 
-Given above is a visualization of a project done using the Unified process (source: Wikipedia). As the diagram shows, a phase can consist of several iterations. Each vertical column (labeled “I1”, “E1”, “E2”, “C1”, etc.) represents a single iteration. Each of the iterations consists of a set of ‘workflows’ such as ‘Business modeling’, ‘Requirements’, ‘Analysis & Design’, etc. The shaded region indicates the amount of resources and effort spent on a particular workflow in a particular iteration.
+Given above is a visualization of a project done using the Unified process (source: Wikipedia). The four phases run from left to right and each vertical column is a single iteration; the shading shows how much effort a given workflow, such as ‘Requirements’ or ‘Analysis & Design’, takes up in that iteration.
 
-**Unified process is a flexible and customizable process model framework rather than a single fixed process.** For example, the number of iterations in each phase, definition of workflows, and the intensity of a given workflow in a given iteration can be adjusted according to the nature of the project. Take the Construction Phase: to develop a simple system, one or two iterations would be sufficient. For a more complicated system, multiple iterations will be more helpful. Therefore, the diagram above simply records a particular application of the UP rather than prescribes how the UP is to be applied. However, this record can be refined and reused for similar future projects.
+**Phases and iterations are two different things, which is why a project can be phased and iterative at the same time**: a phase says where the project is in its overall arc, while an iteration is one pass of work through several workflows.
+
+**Unified process is a flexible and customizable process model framework rather than a single fixed process.** For example, the number of iterations in each phase, definition of workflows, and the intensity of a given workflow in a given iteration can be adjusted according to the nature of the project. Therefore, the diagram above simply records a particular application of the UP rather than prescribes how the UP is to be applied. However, this record can be refined and reused for similar future projects.
 
 </div>
 
