@@ -34,8 +34,6 @@ The following description was adapted from the [XP home page](http://www.extreme
 
 **That is the same argument iterative models make about the whole lifecycle**, applied to individual development practices instead: shorten the gap between doing something and finding out whether it worked.
 
-Several of these practices are covered in their own right elsewhere in this textbook.
-
 </div>
 
 <div id="extras">

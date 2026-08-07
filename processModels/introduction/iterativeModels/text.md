@@ -20,7 +20,7 @@
 * **In the {{ show_term("breadth-first") }} approach, an iteration evolves all major components and all functionality areas in parallel** %%i.e., most features and most <tooltip content="i.e., the parts the software is divided into e.g., user interface, back-end, database etc.">components</tooltip> will be updated in each iteration%%, producing a working product at the end of each iteration.
 * **In the {{ show_term("depth-first") }} approach, an iteration focuses on fleshing out only some components or some functionality area.** Accordingly, early depth-first iterations might not produce a working product.
 
-**A working product produced by an iteration is called an {{ show_term("increment") }}**, which is why a breadth-first iteration yields one and an early depth-first iteration may not. **An iteration is the cycle of work; the increment is what that cycle leaves behind.**
+**A working product produced by an iteration is called an {{ show_term("increment") }}**. As noted above, breadth-first iterations produces a product increment but early depth-first iterations might not.
 
 **An iteration is only worth its overhead if it ends in evidence.** Before starting one, decide what would show it succeeded -- a condition the result must satisfy, a test that must pass, or a demonstration to a target user -- and what decision the answer will drive. Without that, an iteration produces a new version and no new knowledge.
 
@@ -35,7 +35,7 @@ Taking a Minesweeper game as an example:
 
 **Whichever shape the iterations take, an early one is a chance to find out you were wrong while changing course is still cheap.** That makes the assumptions whose failure would cost the most -- an unproven technology, an unfamiliar user need, a performance target nobody has hit yet -- worth putting into an early iteration rather than a late one.
 
-**Producing a candidate implementation has become much cheaper than it used to be; deciding what to build and confirming that the result is correct have not.** Within an iteration, that shifts the effort away from writing code and toward specifying and verifying. **It does not reduce the value of being precise about what is wanted**: a vague requirement that once produced a question from a teammate now produces a confident implementation of the wrong thing, quickly.
+**As AI coding advances, producing a candidate implementation is becoming much cheaper than it used to be; deciding what to build and confirming that the result is correct have not.** Within an iteration, that shifts the effort away from writing code and toward specifying and verifying. **It does not reduce the value of being precise about what is wanted**: a vague requirement that once produced a question from a teammate now produces a confident implementation of the wrong thing, quickly.
 
 </div>
 
