@@ -31,6 +31,8 @@ Taking a Minesweeper game as an example:
 
 **A project can be done as a mixture of breadth-first and depth-first iterations** %%i.e., an iteration can contain some breadth-first work as well as some depth-first work, or, some iterations can be breadth-first while others are depth-first%%.
 
+**Whichever shape the iterations take, an early one is a chance to find out you were wrong while changing course is still cheap.** That makes the assumptions whose failure would cost the most -- an unproven technology, an unfamiliar user need, a performance target nobody has hit yet -- worth putting into an early iteration rather than a late one.
+
 </div>
 
 <div id="extras">
