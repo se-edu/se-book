@@ -16,7 +16,7 @@
 
 **A Scrum project is divided into iterations called {{ show_term("Sprints") }}.** A sprint is the basic unit of development in Scrum. Sprints tend to last between one week and one month, and are a time-boxed (i.e., restricted to a specific duration) effort of a constant length.
 
-**Each sprint is preceded by a planning meeting**, where the team selects the work for the sprint and agrees on a {{ show_term("sprint goal") }}, and followed by a review or retrospective meeting, where the progress is reviewed and lessons for the next sprint are identified.
+**A Sprint contains all the work done in it, together with all its events.** It opens with Sprint Planning, where the team selects the work and agrees on a {{ show_term("Sprint Goal") }}, and the Developers coordinate daily as the work proceeds. It ends with two distinct meetings: a {{ show_term("Sprint Review") }}, where the team and stakeholders inspect the Increment and decide what the product needs next, and a {{ show_term("Sprint Retrospective") }}, where the team inspects how it worked and chooses improvements. The next Sprint begins immediately after.
 
 **During each sprint, the team creates a potentially deliverable product increment** (for example, working and tested software). The work comes from the {{ show_term("product backlog") }}, a prioritized set of high-level requirements for the product as a whole. The items selected for the current sprint form the {{ show_term("sprint backlog") }}.
 
