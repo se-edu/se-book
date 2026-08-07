@@ -14,7 +14,7 @@
 * **The {{ show_term("Scrum Master") }}**, who is accountable for the team using Scrum well
 * **The Developers**, a cross-functional group who do the actual analysis, design, implementation, testing, etc.
 
-**A Scrum project is divided into iterations called {{ show_term("Sprints") }}.** A sprint is the basic unit of development in Scrum. Sprints tend to last between one week and one month, and are a time-boxed (i.e., restricted to a specific duration) effort of a constant length.
+**A Scrum project is divided into iterations called {{ show_term("Sprints") }}.** A sprint is the basic unit of development in Scrum. Sprints are time-boxed (i.e., restricted to a fixed duration) at one month or less, and every Sprint in a project has the same length. One to four weeks is the common choice.
 
 **A Sprint contains all the work done in it, together with all its events.** It opens with Sprint Planning, where the team selects the work and agrees on a {{ show_term("Sprint Goal") }}, and the Developers coordinate daily as the work proceeds. It ends with two distinct meetings: a {{ show_term("Sprint Review") }}, where the team and stakeholders inspect the Increment and decide what the product needs next, and a {{ show_term("Sprint Retrospective") }}, where the team inspects how it worked and chooses improvements. The next Sprint begins immediately after.
 
