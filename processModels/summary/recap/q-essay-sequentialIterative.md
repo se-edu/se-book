@@ -14,6 +14,8 @@ e) Monitoring the project progress.
 
 f) Suitability for a school project.
 
+g) A hospital wants to replace the system its nurses use to record patient observations. The nurses can describe their current routine but cannot say what they would want from a new screen until they have used one. The hospital's regulator requires a record of what was built and why. Would you take a broadly sequential or a broadly iterative approach? Name one way you would adapt the approach you chose, and give two reasons drawn from the situation.
+
 <panel type="seamless" header="{{ icon_A }} Answer" minimized>
 
 a) Quality of the final product:
@@ -54,6 +56,12 @@ Reasons to use iterative:
 Sequential:
 
 * Can save time because we minimize rework.
+
+g) There is no single right answer; what matters is whether the reasons come from the situation.
+
+An iterative approach is the easier one to defend. The nurses cannot state what they want until they have used something, so requirements will only become clear through feedback on early versions -- exactly the case a sequential approach handles badly. Getting a screen in front of them early is the fastest way to find out what the routine actually needs.
+
+The regulator's requirement is not a reason to abandon that. It is a reason to adapt it: produce and keep the records the regulator wants at each iteration, rather than treating documentation as something a sequential project does and an iterative one skips. Other defensible adaptations include a longer first iteration to establish the parts of the system that clinical safety depends on, or a sequential stage for those parts and iterative work for the rest.
 
 </panel>
 </panel>
