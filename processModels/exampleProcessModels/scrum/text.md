@@ -7,14 +7,14 @@
 
 <div id="body">
 
-**{{ show_term("Scrum") }} is a lightweight framework rather than a complete process.** It fixes a small set of roles, events, and artifacts, and leaves the team to fill in the rest with practices of its own choosing. The description below follows [the Scrum Guide](https://scrumguides.org/).
+**{{ show_term("Scrum") }} is a lightweight agile framework rather than a complete process.** It fixes a small set of roles, events, and artifacts, and leaves the team to fill in the rest with practices of its own choosing. The description below follows [the Scrum Guide](https://scrumguides.org/).
 
 **A Scrum team holds three accountabilities:**
 * **The {{ show_term("Product Owner") }}**, who represents the stakeholders and decides what the product needs next
 * **The {{ show_term("Scrum Master") }}**, who is accountable for the team using Scrum well
 * **The Developers**, a cross-functional group who do the actual analysis, design, implementation, testing, etc.
 
-**A Scrum project is divided into iterations called {{ show_term("Sprints") }}.** A sprint is the basic unit of development in Scrum. Sprints are time-boxed (i.e., restricted to a fixed duration) at one month or less, and every Sprint in a project has the same length. One to four weeks is the common choice.
+**A Scrum project is divided into short iterations called {{ show_term("Sprints") }}.** A sprint is the basic unit of development in Scrum. Sprints are time-boxed (i.e., restricted to a fixed duration) at one month or less, and every Sprint in a project has the same length. One to four weeks is the common choice.
 
 **A Sprint contains all the work done in it, together with all its events.** It opens with Sprint Planning, where the team selects the work and agrees on a {{ show_term("Sprint Goal") }}, and the Developers coordinate daily as the work proceeds. It ends with two distinct meetings: a {{ show_term("Sprint Review") }}, where the team and stakeholders inspect the Increment and decide what the product needs next, and a {{ show_term("Sprint Retrospective") }}, where the team inspects how it worked and chooses improvements. The next Sprint begins immediately after.
 
