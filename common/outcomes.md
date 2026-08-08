@@ -47,6 +47,7 @@ pageNav: 3
 <include src="../specifyingRequirements/useCases/usage/unit-inParent-asOutcome.md" boilerplate />
 <include src="../specifyingRequirements/glossary/what/unit-inParent-asOutcome.md" boilerplate />
 <include src="../specifyingRequirements/supplementaryRequirements/what/unit-inParent-asOutcome.md" boilerplate />
+<include src="../specifyingRequirements/requirementsDocument/what/unit-inParent-asOutcome.md" boilerplate />
 
 ## Design
 

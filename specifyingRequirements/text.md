@@ -8,5 +8,6 @@
 <include src="useCases/container-inParent-asPanel.md" boilerplate />
 <include src="glossary/container-inParent-asPanel.md" boilerplate />
 <include src="supplementaryRequirements/container-inParent-asPanel.md" boilerplate />
+<include src="requirementsDocument/container-inParent-asPanel.md" boilerplate />
 
 </div>

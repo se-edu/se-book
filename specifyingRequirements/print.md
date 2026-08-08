@@ -40,6 +40,10 @@ title: "Specifying Requirements [Printable]"
 
 <include src="supplementaryRequirements/what/unit-inParent-asFlat-print.md" boilerplate />
 
+## Requirements documents
+
+<include src="requirementsDocument/what/unit-inParent-asFlat-print.md" boilerplate />
+
 </div>
 
 </div>
