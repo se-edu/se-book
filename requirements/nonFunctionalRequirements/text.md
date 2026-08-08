@@ -18,20 +18,17 @@ Some categories of non-functional requirements:
 
 * Data requirements, e.g., size, <tooltip content="how often data changes">volatility</tooltip>, <tooltip content="saving data permanently">persistence</tooltip>, etc.
 * Environment requirements, e.g., the technical environment in which the system would operate or with which it needs to be compatible.
-* Accessibility, Capacity, Compliance with regulations, Documentation, Disaster recovery, Efficiency, Extensibility, Fault tolerance, Interoperability, Maintainability, Privacy, Portability, Quality, Reliability, Response time, Robustness, Scalability, Security, Stability, Testability, and more ...
+* Performance, Security, Usability, Interoperability, Maintainability, Compliance with regulations, and more ...
 {% endcall %}
 
 {% call show_example() %}
 Some concrete NFRs, drawn from various projects:
 
 * Business/domain rules: the size of the minefield cannot be smaller than five.
-* Constraints: the system should be backward compatible with data produced by earlier versions of the system; system testers are available only during the last month of the project; the total project cost should not exceed $1.5 million.
-* Technical requirements: the system should work on both 32-bit and 64-bit environments.
+* Constraints: system testers are available only during the last month of the project.
 * Performance requirements: the system should respond within two seconds.
 * Quality requirements: the system should be usable by a novice who has never carried out an online purchase.
 * Process requirements: the project is expected to adhere to a schedule that delivers a feature set every month.
-* Notes about project scope: the product is not required to handle the printing of reports.
-* Any other noteworthy points: the game should not use images deemed offensive to those injured in real mine clearing activities.
 {% endcall %}
 
 You may have to spend extra effort identifying NFRs as early as possible because:
