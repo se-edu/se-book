@@ -33,4 +33,5 @@ Each format earns its place by doing a different job:
 </div>
 
 <div id="extras">
+<include src="exercisesPanel.md" boilerplate/>
 </div>
