@@ -9,5 +9,6 @@
 <include src="focusGroups/unit-inParent-asPanel.md" boilerplate />
 <include src="prototyping/unit-inParent-asPanel.md" boilerplate />
 <include src="productSurveys/unit-inParent-asPanel.md" boilerplate />
+<include src="validation/unit-inParent-asPanel.md" boilerplate />
 
 </div>

@@ -32,6 +32,7 @@ pageNav: 3
 <include src="../gatheringRequirements/focusGroups/unit-inParent-asOutcome.md" boilerplate />
 <include src="../gatheringRequirements/prototyping/unit-inParent-asOutcome.md" boilerplate />
 <include src="../gatheringRequirements/productSurveys/unit-inParent-asOutcome.md" boilerplate />
+<include src="../gatheringRequirements/validation/unit-inParent-asOutcome.md" boilerplate />
 
 ### Specifying
 

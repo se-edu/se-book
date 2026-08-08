@@ -18,6 +18,7 @@ title: "Gathering Requirements [Printable]"
 <include src="focusGroups/unit-inParent-asFlat-print.md" boilerplate />
 <include src="prototyping/unit-inParent-asFlat-print.md" boilerplate />
 <include src="productSurveys/unit-inParent-asFlat-print.md" boilerplate />
+<include src="validation/unit-inParent-asFlat-print.md" boilerplate />
 
 </div>
 
