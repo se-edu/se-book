@@ -7,9 +7,9 @@
 
 <div id="body">
 
-**Teams rarely keep the various requirements formats as separate artifacts; they package them into one document that says what is to be built.**
+**Teams package these formats in different ways: some collect them into a single document that says what is to be built, while others keep each format where it is most useful and write down only what needs agreeing.**
 
-**In product-led teams that document is usually called a {{ show_term("product requirements document") }} (PRD), or a product brief.** It typically carries the product's purpose, who it is for, the scope and the priorities within it, the stories or use cases that matter most, and the quality constraints the product has to meet.
+**Where there is such a document, product-led teams usually call it a {{ show_term("product requirements document") }} (PRD), or a product brief.** It typically carries the product's purpose, who it is for, the scope and the priorities within it, the stories or use cases that matter most, and the quality constraints the product has to meet.
 
 **A {{ show_term("software requirements specification") }} (SRS) is its more formal counterpart**, used where requirements have to be agreed precisely with a customer, audited, or contracted for. An SRS is heavier, more structured, and more stable than a PRD; the two are not interchangeable names for the same thing.
 
