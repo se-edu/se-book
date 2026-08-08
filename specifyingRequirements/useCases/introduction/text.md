@@ -14,7 +14,7 @@
 **A {{ show_term("use case") }} describes an _interaction between the user and the system_ for a _specific functionality_ of the system.**
 
 {% call show_example() %}
-A 'transfer money' use case for an online banking system:
+The main flow of a 'transfer money' use case for an online banking system:
 <pre>
 System: Online Banking System (OBS)
 Use case: UC23 - Transfer Money
@@ -27,25 +27,6 @@ MSS:
   5. User confirms.
   6. OBS transfers the money and displays the new account balance.
   Use case ends.
-</pre>
-
-<pre>
-Extensions:
-  3a. OBS detects an error in the entered data.
-      3a1. OBS requests for the correct data.
-      3a2. User enters new data.
-      Steps 3a1-3a2 are repeated until the data entered are correct.
-      Use case resumes from step 4.
-
-  3b. User requests to schedule the transfer for a future date.
-      3b1. OBS requests for confirmation.
-      3b2. User confirms future transfer.
-      Use case ends.
-
-  *a. At any time, User chooses to cancel the transfer.
-      *a1. OBS requests to confirm the cancellation.
-      *a2. User confirms the cancellation.
-      Use case ends.
 </pre>
 {% endcall %}
 
