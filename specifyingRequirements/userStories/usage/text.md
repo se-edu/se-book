@@ -120,8 +120,6 @@ To give another example, based on the scenario 'D. 100th use', you might have us
 * **Don't go into too much detail:**
   For example, consider this user story: `As a user, I want to see a list of tasks that need my attention most at the present time, so that I pay attention to them first.`<br>
   When discussing this user story, don't worry about what tasks should be considered 'needs my attention most at the present time'. Those details can be worked out later.
-* **Don't be biased by preconceived product ideas:**
-  When you are at the stage of identifying user needs, clear your mind of ideas you have about what your end product will look like. That is, don't try to reverse-engineer a preconceived product idea into user stories.
 * **Don't discuss implementation details or whether you are actually going to implement it:**
   When gathering requirements, your decision is whether the user's need is important enough for you to want to fulfill it. Implementation details can be discussed later. If a user story turns out to be too difficult to implement later, you can always omit it from the implementation plan. 
 
