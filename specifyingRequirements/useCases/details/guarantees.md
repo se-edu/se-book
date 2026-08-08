@@ -22,4 +22,6 @@ MSS:
 </div>
 {% endcall %}
 
+**Guarantees do for a use case what acceptance criteria do for a user story:** they state the observable result that decides whether the interaction did its job, so that 'done' does not have to be argued about afterwards.
+
 <p/>

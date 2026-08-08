@@ -62,6 +62,8 @@ Conditions:
 </div>
 {% endcall %}
 
+**These are more widely known as {{ show_term("acceptance criteria") }}.** Whatever they are called, they are the part of a story that states an _observable_ result, and therefore the part that survives when the conversation behind the story does not.
+
 **Other useful information that can be added to a user story** includes (but is not limited to):
 
 * Priority: how important the user story is
