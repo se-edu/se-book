@@ -21,6 +21,7 @@ pageNav: 3
 <include src="../requirements/nonFunctionalRequirements/unit-inParent-asOutcome.md" boilerplate />
 <include src="../requirements/prioritizing/unit-inParent-asOutcome.md" boilerplate />
 <include src="../requirements/quality/unit-inParent-asOutcome.md" boilerplate />
+<include src="../requirements/changing/unit-inParent-asOutcome.md" boilerplate />
 
 ### Gathering
 

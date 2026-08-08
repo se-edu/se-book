@@ -15,6 +15,7 @@ title: "Requirements [Printable]"
 <include src="nonFunctionalRequirements/unit-inParent-asFlat-print.md" boilerplate />
 <include src="prioritizing/unit-inParent-asFlat-print.md" boilerplate />
 <include src="quality/unit-inParent-asFlat-print.md" boilerplate />
+<include src="changing/unit-inParent-asFlat-print.md" boilerplate />
 
 </div>
 

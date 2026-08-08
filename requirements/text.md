@@ -6,5 +6,6 @@
 <include src="nonFunctionalRequirements/unit-inParent-asPanel.md" boilerplate />
 <include src="prioritizing/unit-inParent-asPanel.md" boilerplate />
 <include src="quality/unit-inParent-asPanel.md" boilerplate />
+<include src="changing/unit-inParent-asPanel.md" boilerplate />
 
 </div>
