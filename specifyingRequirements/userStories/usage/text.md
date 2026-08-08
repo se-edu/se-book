@@ -13,8 +13,8 @@
 
 **User stories differ from <popover content="e.g. a description of the requirements written in prose">traditional requirements specifications</popover> mainly in the level of detail.** User stories should only provide enough details to make a reasonably low-risk estimate of how long the user story will take to implement. When the time comes to implement the user story, the developers will meet with the customer face-to-face to work out a more detailed description of the requirements. %%[<trigger for="modal:xp-user-stories" trigger="click">more...</trigger>]%%
 
-**Leaving out detail on purpose relies on the implementer being someone who will notice what is missing and come back to ask.** When the work is handed instead to a new team member, to another team, or to an AI coding assistant, an unstated detail does not surface as a question; it gets filled in with a plausible guess, and the guess arrives faster than the question ever would.<br>
-{{ label_example }} %%'As a user, I can delete a task' leaves open whether deleting is recoverable. A developer who has sat in the discussion asks. Anyone else simply picks one, and the answer looks finished either way.%%
+**Leaving out detail on purpose relies on the implementer being able to come back and ask.** Where asking is slow or does not happen at all — work handed to another team across a time zone, or generated in a single pass by an AI coding assistant with no round of clarification — an unstated detail never surfaces as a question. It gets filled in with a plausible guess, and the guess arrives faster than the question ever would.<br>
+{{ label_example }} %%'As a user, I can delete a task' leaves open whether deleting is recoverable. Someone who can ask, asks. Someone working from the story alone picks one, and the answer looks finished either way.%%
 
 **The further the implementer sits from the conversation, the more of a story's meaning has to survive in writing** — which is the job the acceptance criteria are doing.
 
