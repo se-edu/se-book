@@ -39,7 +39,7 @@ pageNav: 3
   * [Damith C. Rajapakse](https://www.comp.nus.edu.sg/~damithch)
   * [Henry Chia](https://www.comp.nus.edu.sg/~hchia)
   * [Soo Yuen Jien](https://www.comp.nus.edu.sg/~sooyj)
-  
+* Generative AI tools such as Claude, Codex, and Gemini were used to create and refine some of the content, under the supervision of human authors.
 * [Rebekah Low](https://github.com/rebekahlow-jy): For programming the initial version of this book in [MarkBind](https://markbind.github.io/) format.
 
 </div>
