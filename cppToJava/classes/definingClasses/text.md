@@ -26,7 +26,7 @@ public class Time {
 ```
 </box>
 
-You can give a class any name you like. **The Java convention is to use <tooltip content="e.g., `MyHelloWord` rather than `myHelloWorld` or `myhelloword` or `my_hello_world`">PascalCase</tooltip> format for class names**.
+You can give a class any name you like. **The Java convention is to use <tooltip content="e.g., `MyHelloWorld` rather than `myHelloWorld` or `myhelloworld` or `my_hello_world`">PascalCase</tooltip> format for class names**.
 
 The code is <tooltip content="there are exceptions to this rule">usually</tooltip> placed in a file whose name matches the class %%e.g., the `Time` class should be in a file named `Time.java`%%.
 
