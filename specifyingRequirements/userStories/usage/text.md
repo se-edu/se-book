@@ -65,6 +65,8 @@ Decide the exact problem you are going to solve for the target user. It is also 
 
 Think of the various scenarios your target user is likely to go through as she uses your app. Following a chronological sequence as if you are telling a story might be helpful.
 
+**Together, the scenarios form a {{ show_term("user journey") }}: a chronological narrative of a persona's interaction with the product.** A user journey helps you discover needs that are easy to miss when thinking only about individual features. Use it to find user stories; it does not replace them.
+
 <blockquote>
 
 **A. First use:**
