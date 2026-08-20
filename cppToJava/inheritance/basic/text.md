@@ -114,7 +114,7 @@ Within `Subclass`, the simple name `printMethod()` refers to the one declared in
 
 ##### Subclass constructors
 
-**A subclass constructor can invoke the superclass constructor.** Invocation of a superclass constructor must be the first line in the subclass constructor.
+**A subclass constructor can invoke the superclass constructor.** In a subclass constructor, the superclass constructor must be invoked -- implicitly or explicitly -- before any statement reads instance state or uses `this` as a reference value, though fields declared in the subclass may be initialized prior to calling the superclass constructor.
 The syntax for calling a superclass constructor is `super()` %%(which invokes the no-argument constructor of the superclass)%% or `super(parameters)` %%(to invoke the superclass constructor with a matching parameter list)%%.
 
 <box>
