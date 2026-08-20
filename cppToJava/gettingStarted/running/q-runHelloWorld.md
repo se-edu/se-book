@@ -1,6 +1,6 @@
 <panel type="secondary" header="###  <small><small>{{ icon_important }} [Exercise] Run HelloWorld</small></small>" expanded >
 
-**A. Install Java** on your computer, if you haven't done so already. Java 17 is recommended.
+**A. Install Java** on your computer, if you haven't done so already. Java {{ java_version }} is recommended.
 
 <box type="tip" seamless>
 
@@ -10,10 +10,10 @@ Java installation guides for Windows/Mac/Linux can be found in [this se-edu/guid
 Ensure the installation is correct, as follows.
 
    1. Open a command prompt.
-   1. Run the command `java -version`. Confirm that the output indicates that you have Java 17. Sample output:
+   1. Run the command `java -version`. Confirm that the output indicates that you have Java {{ java_version }}. Sample output:
       ```{highlight-lines="1[14:27],2[14:16]" .no-line-numbers}
       C:\Users\john>java -version
-      java version "17._._" ...
+      java version "{{ java_version }}._._" ...
       ...
       ...
       ```
