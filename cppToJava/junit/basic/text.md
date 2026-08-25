@@ -50,10 +50,10 @@ public class IntPairTest {
 
     @Test
     public void intDivision_nonZeroDivisor_success() throws Exception {
-        // normal division results in an integer answer 2
+        // both normal and int division give 2
         assertEquals(2, new IntPair(4, 2).intDivision());
 
-        // normal division results in a decimal answer 1.9
+        // normal division gives 1.9 but int division should give 1
         assertEquals(1, new IntPair(19, 10).intDivision());
 
         // dividend is zero but divisor is not
@@ -74,6 +74,8 @@ public class IntPairTest {
     public void testStringConversion() {
         assertEquals("4,7", new IntPair(4, 7).toString());
     }
+
+    // more test cases
 }
 ```
 </box>
@@ -91,8 +93,8 @@ public class IntPairTest {
 
 <box>
 
-{{ icon_example }} In the example above, the `IntPairTest` class tests the `IntPair#intDivision(int, int)` method using several inputs, some even seemingly attempting to 'trick' the method into producing a wrong result. If the method still produces the correct output for such 'tricky' inputs (as well as 'normal' outputs), we can have a higher confidence in the method being correctly implemented.<br>
- However, also note that the current test cases do not (but probably should) test for the inputs (`0, 0`), to confirm that it throws the expected exception.
+{{ icon_example }} In the example above, the `IntPairTest` class tests the `IntPair#intDivision()` method using several test data configurations, some even seemingly attempting to 'trick' the method into producing a wrong result. If the method still produces the correct output for such 'tricky' inputs (as well as 'normal' outputs), we can have a higher confidence in the method being correctly implemented.<br>
+ Note that the test cases shown omit the test for the inputs (`0, 0`) that checks if it throws the expected exception.
 
 </box>
 </div>
