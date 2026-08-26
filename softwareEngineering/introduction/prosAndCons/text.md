@@ -40,6 +40,13 @@
 
 **One possible next step is {{ show_term("_AI-native_ software engineering") }}: designing the workflow for ongoing collaboration between humans and AI.** This approach goes further than adding an AI assistant to today's process. In {{ show_term("_AI-assisted_ software engineering") }}, AI works inside a process directed by humans. In {{ show_term("_agentic_ software engineering") }}, humans give AI tasks with several steps. In *AI-native* engineering, teams redesign the process itself. In this possible future, sometimes called [*SE 3.0*](https://doi.org/10.1145/3807901), engineers record goals, constraints, designs, and acceptance criteria in forms that AI agents can use. Agents plan changes, write code, run tests, and review one another's work. Humans set the direction, make difficult choices, and decide what is safe to release. Requirements, tests, architecture records, and security controls will then matter *more*, not less. They set the limits within which the agents work.
 
+<box>
+
+<pic eager src="{{baseUrl}}/softwareEngineering/introduction/prosAndCons/images/aiSeModes.svg" width="680"/>
+
+<small>%%A possible progression of SE through higher levels of AI use%%</small>
+</box>
+
 **Experts disagree about how far this change will go, so evaluate their predictions carefully.** Some predict the *end of programming*, with most software requested in natural language and generated when needed. Others point out that benchmarks leave out much of real software work, such as unclear goals, knowledge that has not been written down, and long-term maintenance. They also argue that a code change that passes its tests is not necessarily part of a dependable system. Checking whether AI evaluations reflect real software work is itself a software engineering problem.
 
 **As it becomes easier to give implementation work to AI, deciding, designing, checking, and taking responsibility become more valuable.** Someone must understand the users and the subject area. Someone must decide what should and should not be built, divide the work into clear parts, design a system that can be maintained, spot mistakes in code that looks correct, combine human and AI work, and take responsibility for the released system. AI can help with every one of these activities, but it cannot take responsibility for the result.
