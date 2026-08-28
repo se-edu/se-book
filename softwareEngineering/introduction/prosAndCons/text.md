@@ -42,9 +42,10 @@
 
 <box>
 
-<pic eager src="{{baseUrl}}/softwareEngineering/introduction/prosAndCons/images/aiSeModes.svg" width="680"/>
-
-<small>%%A possible progression of SE through higher levels of AI use%%</small>
+<div class="text-center">
+<pic eager src="{{baseUrl}}/softwareEngineering/introduction/prosAndCons/images/aiSeModes.svg" width="680"/><br>
+<md>--%%A possible progression of SE through higher levels of AI use%%--</md>
+</div>
 </box>
 
 **Experts disagree about how far this change will go, so evaluate their predictions carefully.** Some predict the *end of programming*, with most software requested in natural language and generated when needed. Others point out that benchmarks leave out much of real software work, such as unclear goals, knowledge that has not been written down, and long-term maintenance. They also argue that a code change that passes its tests is not necessarily part of a dependable system. Checking whether AI evaluations reflect real software work is itself a software engineering problem.

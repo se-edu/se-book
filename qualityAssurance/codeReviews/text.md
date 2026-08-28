@@ -1,4 +1,4 @@
-<span id="title">Code reviews</span>
+<span id="title">Code Reviews</span>
 
 <div id="body">
 

@@ -10,7 +10,7 @@
 <include src="../../../common/definitions.md#def-uml" trim />
 </box>
 
-The following diagram uses the class diagram notation to show the different types of UML diagrams.
+The following diagram shows different subtypes of UML diagrams.
 
 <box>
 
