@@ -32,9 +32,9 @@
 </div>
 <div class="indented-level1">
 
-{{ bad }} | {{ bad }} | {{ good }}
+#r#Redundant dependency arrow## | #r#Redundant dependency arrow## | #g#Dependency arrow adds useful information##
 ---|---|---
-<img src="images/incorrectDependencyWithAssociation.png" /><br>The association already implies dependency|<img src="images/incorrectDependencyWithInheritance.png" /><br>The inheritance already implies dependency | <img src="images/correctDependencyWithAssociation.png" /><br>The dependency is not implied by the association
+<img src="images/incorrectDependencyWithAssociation.png" /><br>The association already implies dependency. | <img src="images/incorrectDependencyWithInheritance.png" /><br>The inheritance already implies dependency. | <img src="images/correctDependencyWithAssociation.png" /><br>The arrow shows a dependency not already implied by the association.
 
 </div>
 
