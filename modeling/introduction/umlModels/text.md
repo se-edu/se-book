@@ -14,7 +14,7 @@ The following diagram shows different subtypes of UML diagrams.
 
 <box>
 
-<pic eager src="https://upload.wikimedia.org/wikipedia/commons/e/ed/UML_diagrams_overview.svg" width="800" /><br>
+<pic eager class="tbg" src="https://upload.wikimedia.org/wikipedia/commons/e/ed/UML_diagrams_overview.svg" width="800" /><br>
 <sub>source:[https://en.wikipedia.org/](https://en.wikipedia.org/wiki/Unified_Modeling_Language)</sub>
 </box>
 

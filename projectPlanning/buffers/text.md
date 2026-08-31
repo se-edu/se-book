@@ -9,7 +9,7 @@
 
 **A {{ show_term("buffer") }} is time set aside to absorb any unforeseen delays.** It is very important to include buffers in a software project schedule because effort/time estimations for software development are notoriously hard. However, **do not inflate task estimates to create hidden buffers**; have explicit buffers instead. %%Reason: With explicit buffers, it is easier to detect incorrect effort estimates which can serve as feedback to improve future effort estimates.%%
 
-<pic eager src="{{baseUrl}}/projectPlanning/buffers/images/schedule.png" height="120" />
+<pic eager class="tbg" src="{{baseUrl}}/projectPlanning/buffers/images/schedule.png" height="120" />
 
 </div>
 

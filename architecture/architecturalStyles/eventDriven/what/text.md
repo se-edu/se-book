@@ -13,7 +13,7 @@
 
 <box>
 
-<pic eager src="{{baseUrl}}/architecture/architecturalStyles/eventDriven/what/images/eventDriven.svg" width="549" />
+<pic eager class="tbg" src="{{baseUrl}}/architecture/architecturalStyles/eventDriven/what/images/eventDriven.svg" width="549" />
 
 <small>%%Notation used in this diagram and the next: a dashed arrow is the path along which events travel, each oval is one event, and the small red arrows show their direction of travel.%%</small>
 </box>
@@ -23,7 +23,7 @@
 {% call show_example() %}
 When the 'button clicked' event occurs in a GUI, that event can be transmitted to components interested in reacting to it. Similarly, events detected at a printer port can be transmitted to components related to operating the printer. The same event can be sent to multiple consumers too.
 
-<pic eager src="{{baseUrl}}/architecture/architecturalStyles/eventDriven/what/images/eventDrivenExamples.svg" width="549" /><br>
+<pic eager class="tbg" src="{{baseUrl}}/architecture/architecturalStyles/eventDriven/what/images/eventDrivenExamples.svg" width="549" /><br>
 <small>%%Same notation as the previous diagram; the two kinds of event are keyed at the bottom of this one.%%</small>
 {% endcall %}
 

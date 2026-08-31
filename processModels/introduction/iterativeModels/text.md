@@ -9,7 +9,7 @@
 
 **The {{ show_term("iterative model") }} advocates producing the software by going through several _iterations_.** Each iteration could go through all the stages of the SDLC, from requirements gathering to deployment.
 
-<pic eager src="{{baseUrl}}/processModels/introduction/iterativeModels/images/diagram.png" width="600" />
+<pic eager class="tbg" src="{{baseUrl}}/processModels/introduction/iterativeModels/images/diagram.png" width="600" />
 <p/>
 
 **Each iteration produces a new version of the product**, building upon the previous version. Feedback from each iteration is factored into the subsequent iterations. For example, if an implementation task took longer than expected, the effort estimate for similar tasks in future iterations can be adjusted. Similarly, if a feature introduced in the current iteration was not well-received by target users, it can be removed or tweaked in the next iteration.

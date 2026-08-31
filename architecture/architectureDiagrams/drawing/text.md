@@ -18,7 +18,7 @@ While architecture diagrams have no standard notation, follow these guidelines w
 {% call show_example() %}
 Consider the two architecture diagrams of the same software given below. Because `Diagram 2` uses double-headed arrows everywhere, the important fact that `GUI` has a genuinely bidirectional dependency with the `Logic` component is no longer visible — it looks like every other connection.
 
-<pic eager src="{{baseUrl}}/architecture/architectureDiagrams/drawing/images/tip.svg" width="576" />
+<pic eager class="tbg" src="{{baseUrl}}/architecture/architectureDiagrams/drawing/images/tip.svg" width="576" />
 {% endcall %}
 
 </div>

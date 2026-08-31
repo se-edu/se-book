@@ -27,7 +27,7 @@ Representing the objects mentioned previously as a single class would be problem
 {% call show_example() %}
 Consider the problem of representing books in a library. Assume that there could be multiple copies of the same title, bearing the same ISBN number, but different serial numbers.
 
-<pic eager src="{{baseUrl}}/designPatterns/abstractionOccurrence/what/images/book.png" height="200" />
+<pic eager class="tbg" src="{{baseUrl}}/designPatterns/abstractionOccurrence/what/images/book.png" height="200" />
 <p/>
 
 The above solution requires common information to be duplicated by all instances. This not only wastes storage space, but also creates a consistency problem. Suppose that after creating several copies of the same title, the librarian realized that the author's name was misspelled. To correct this mistake, the system needs to go through every copy of the same title to make the correction. Also, if a new copy of the title is added later on, the librarian (or the system) has to make sure that all information entered is the same as the existing copies to avoid inconsistency.
@@ -40,7 +40,7 @@ The above solution requires common information to be duplicated by all instances
 {% call show_example() %}
 Refer to the same Library example given above.
 
-<pic eager src="{{baseUrl}}/designPatterns/abstractionOccurrence/what/images/bookFriends.png" height="240" />
+<pic eager class="tbg" src="{{baseUrl}}/designPatterns/abstractionOccurrence/what/images/bookFriends.png" height="240" />
 <p/>
 
 The design above segregates the common and unique information into a class hierarchy. Each book title is represented by a separate class with common data (i.e., Name, Author, ISBN) hard-coded in the class itself. This solution is problematic because each book title is represented as a class, resulting in thousands of classes (one for each title). Every time the library buys new books, the source code of the system will have to be updated with new classes.
@@ -53,14 +53,14 @@ Let a copy of an entity (e.g. a copy of a book) be represented by two objects in
 {% call show_example() %}
 The pattern applied to the Library example:
 
-<pic eager src="{{baseUrl}}/designPatterns/abstractionOccurrence/what/images/bookTitleBookCopy.png" height="260" />
+<pic eager class="tbg" src="{{baseUrl}}/designPatterns/abstractionOccurrence/what/images/bookTitleBookCopy.png" height="260" />
 <p/>
 {% endcall %}
 
 {% call show_example() %}
 The same idea shown as a before-and-after transformation:
 
-<pic eager src="{{baseUrl}}/designPatterns/abstractionOccurrence/what/images/beforeAfter.png" height="370" />
+<pic eager class="tbg" src="{{baseUrl}}/designPatterns/abstractionOccurrence/what/images/beforeAfter.png" height="370" />
 <p/>
 {% endcall %}
 

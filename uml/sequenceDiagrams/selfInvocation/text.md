@@ -10,19 +10,19 @@
 
 Notation:
 
-<pic eager src="{{baseUrl}}/uml/sequenceDiagrams/selfInvocation/images/notation.png" width="200" />
+<pic eager class="tbg" src="{{baseUrl}}/uml/sequenceDiagrams/selfInvocation/images/notation.png" width="200" />
 <p/>
 
 <box>
 
 {{ icon_example }} The `markCellAt(...)` method of a `Logic` object is calling its own `updateState(...)` method.
 
-<pic eager src="{{baseUrl}}/uml/sequenceDiagrams/selfInvocation/images/logic.png" width="350" />
+<pic eager class="tbg" src="{{baseUrl}}/uml/sequenceDiagrams/selfInvocation/images/logic.png" width="350" />
 <p/>
 
 {{ icon_example }} In this variation, the `Book#write()` method is calling the `Chapter#getText()` method which in turn does a _call back_ by calling the `getAuthor()` method of the calling object.
 
-<pic eager src="{{baseUrl}}/uml/sequenceDiagrams/selfInvocation/images/callBack.png" width="350" />
+<pic eager class="tbg" src="{{baseUrl}}/uml/sequenceDiagrams/selfInvocation/images/callBack.png" width="350" />
 <p/>
 
 </box>

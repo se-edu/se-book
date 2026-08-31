@@ -10,14 +10,14 @@
 
 Notation:
 
-<pic eager src="{{baseUrl}}/uml/sequenceDiagrams/parallelPaths/images/notation.png" height="100" />
+<pic eager class="tbg" src="{{baseUrl}}/uml/sequenceDiagrams/parallelPaths/images/notation.png" height="100" />
 <p/>
 
 <box>
 
 {{ icon_example }} `Logic` is calling methods `CloudServer#poll()` and `LocalData#poll()` in parallel.
 
-<pic eager src="{{baseUrl}}/uml/sequenceDiagrams/parallelPaths/images/logicServerData.png" height="150" />
+<pic eager class="tbg" src="{{baseUrl}}/uml/sequenceDiagrams/parallelPaths/images/logicServerData.png" height="150" />
 <p/>
 
 

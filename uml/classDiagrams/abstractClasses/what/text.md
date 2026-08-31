@@ -8,14 +8,14 @@
 
 **You can use _italics_ or `{abstract}` (preferred) keyword to denote abstract classes/methods.**
 
-<pic eager src="{{baseUrl}}/uml/classDiagrams/abstractClasses/what/images/notation.png" height="110" />
+<pic eager class="tbg" src="{{baseUrl}}/uml/classDiagrams/abstractClasses/what/images/notation.png" height="110" />
 <p/>
 
 <box>
 
 {{ icon_example }} Example:
 
-<pic eager src="{{baseUrl}}/uml/classDiagrams/abstractClasses/what/images/staff.png" height="110" />
+<pic eager class="tbg" src="{{baseUrl}}/uml/classDiagrams/abstractClasses/what/images/staff.png" height="110" />
 <p/>
 
 </box>

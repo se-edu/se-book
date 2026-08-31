@@ -12,7 +12,7 @@
 {% call show_example() %}
 A communication diagram for an order-processing interaction:
 
-<pic eager src="{{baseUrl}}/modeling/modelingBehaviors/communicationDiagrams/images/diagram.png" height="300" />
+<pic eager class="tbg" src="{{baseUrl}}/modeling/modelingBehaviors/communicationDiagrams/images/diagram.png" height="300" />
 <br>
 
 <sub>Adapted from: _UML Distilled_ by Martin Fowler</sub>

@@ -11,7 +11,7 @@ An activity diagram (AD) captures an {{ show_term("activity") }} through the _ac
 * An {{ show_term("action") }} is a single step in an activity. It is shown as a rectangle with ==rounded corners==.
 * A {{ show_term("control flow") }} shows the flow of control from one action to the next. It is shown by drawing a line with an arrow-head to show the direction of the flow.
 
-<pic eager src="{{baseUrl}}/uml/activityDiagrams/basicNotations/linearPaths/images/notation.png" height="180" />
+<pic eager class="tbg" src="{{baseUrl}}/uml/activityDiagrams/basicNotations/linearPaths/images/notation.png" height="180" />
 
 Note the slight difference between the {{ show_term("start node") }} and the {{ show_term("end node") }} which represent the start and the end of the activity, respectively.
 
@@ -19,7 +19,7 @@ Note the slight difference between the {{ show_term("start node") }} and the {{ 
 
 {{ icon_example }} This activity diagram shows the action sequence of the activity _a passenger rides the bus_:
 
-<pic eager src="{{baseUrl}}/uml/activityDiagrams/basicNotations/linearPaths/images/example.png" width="450" />
+<pic eager class="tbg" src="{{baseUrl}}/uml/activityDiagrams/basicNotations/linearPaths/images/example.png" width="450" />
 
 </box>
 

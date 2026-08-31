@@ -10,14 +10,14 @@
 
 Notation:
 
-<pic eager src="{{baseUrl}}/uml/sequenceDiagrams/optionalPaths/images/notation.png" height="50" />
+<pic eager class="tbg" src="{{baseUrl}}/uml/sequenceDiagrams/optionalPaths/images/notation.png" height="50" />
 <p/>
 
 <box>
 
 {{ icon_example }} `Logic#markCellAt(...)` calls `Timer#start()` only if it is the first move of the player.
 
-<pic eager src="{{baseUrl}}/uml/sequenceDiagrams/optionalPaths/images/logicTimer.png" height="150" />
+<pic eager class="tbg" src="{{baseUrl}}/uml/sequenceDiagrams/optionalPaths/images/logicTimer.png" height="150" />
 <p/>
 
 </box>

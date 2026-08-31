@@ -14,7 +14,7 @@ Components need to access functionality deep inside other components.
 {% call show_example() %}
 The `UI` component of a `Library` system might want to access functionality of the `Book` class contained inside the `Logic` component.
 
-<pic eager src="{{baseUrl}}/designPatterns/facade/what/images/textBook.png" height="120" />
+<pic eager class="tbg" src="{{baseUrl}}/designPatterns/facade/what/images/textBook.png" height="120" />
 <p/>
 {% endcall %}
 
@@ -30,7 +30,7 @@ Include a {{ show_term("Façade", "a French word that means 'front of a building
 {% call show_example() %}
 The following class diagram applies the Facade pattern to the `Library System` example. The `LibraryLogic` class is the Facade class.
 
-<pic eager src="{{baseUrl}}/designPatterns/facade/what/images/textLibraryBook.png" height="120" />
+<pic eager class="tbg" src="{{baseUrl}}/designPatterns/facade/what/images/textLibraryBook.png" height="120" />
 <p/>
 {% endcall %}
 

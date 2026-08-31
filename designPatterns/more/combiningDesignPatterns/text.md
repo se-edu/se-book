@@ -27,32 +27,32 @@ A step-by-step explanation of the design is given below. Note that this is one o
 
 A `StockItem` can be an Appliance or an Accessory.
 
-<pic eager src="{{baseUrl}}/designPatterns/more/combiningDesignPatterns/images/stockItem.png" height="100" />
+<pic eager class="tbg" src="{{baseUrl}}/designPatterns/more/combiningDesignPatterns/images/stockItem.png" height="100" />
 <p/>
 
 To track that each `Accessory` is associated with the correct `Appliance`, consider the following alternative class structures.
 
-<pic eager src="{{baseUrl}}/designPatterns/more/combiningDesignPatterns/images/alternativeOne.png" height="120" />
+<pic eager class="tbg" src="{{baseUrl}}/designPatterns/more/combiningDesignPatterns/images/alternativeOne.png" height="120" />
 <p/>
 
 The third one seems more appropriate (the second one is suitable if accessories can have accessories). Next, compare keeping a list of `Appliances` with keeping a list of `StockItems`. Which is more appropriate?
 
-<pic eager src="{{baseUrl}}/designPatterns/more/combiningDesignPatterns/images/alternativeTwo.png" height="100" />
+<pic eager class="tbg" src="{{baseUrl}}/designPatterns/more/combiningDesignPatterns/images/alternativeTwo.png" height="100" />
 <p/>
 
 The latter seems more suitable because it can handle both appliances and accessories the same way. Next, an abstraction occurrence pattern is applied to keep track of `StockItems`.
 
-<pic eager src="{{baseUrl}}/designPatterns/more/combiningDesignPatterns/images/alternativeThree.png" height="100" />
+<pic eager class="tbg" src="{{baseUrl}}/designPatterns/more/combiningDesignPatterns/images/alternativeThree.png" height="100" />
 <p/>
 
 Note the inclusion of navigabilities. Here’s a sample object diagram based on the class model created thus far.
 
-<pic eager src="{{baseUrl}}/designPatterns/more/combiningDesignPatterns/images/stockItemListObjectDiagram.png" height="150" />
+<pic eager class="tbg" src="{{baseUrl}}/designPatterns/more/combiningDesignPatterns/images/stockItemListObjectDiagram.png" height="150" />
 <p/>
 
 Next, apply the façade pattern to shield the SIS internals from the UI.
 
-<pic eager src="{{baseUrl}}/designPatterns/more/combiningDesignPatterns/images/withFacade.png" height="200" />
+<pic eager class="tbg" src="{{baseUrl}}/designPatterns/more/combiningDesignPatterns/images/withFacade.png" height="200" />
 <p/>
 
 As the UI consists of multiple views, the MVC pattern is applied here.
@@ -62,7 +62,7 @@ As the UI consists of multiple views, the MVC pattern is applied here.
 
 Some views need to be updated when the data changes; apply the Observer pattern here.
 
-<pic eager src="{{baseUrl}}/designPatterns/more/combiningDesignPatterns/images/withObserver.png" height="270" />
+<pic eager class="tbg" src="{{baseUrl}}/designPatterns/more/combiningDesignPatterns/images/withObserver.png" height="270" />
 <p/>
 
 In addition, the Singleton pattern can be applied to the façade class.

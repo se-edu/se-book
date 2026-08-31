@@ -51,7 +51,7 @@ MSS:
 
 <box background-color="white" border-color="white">
 
-<pic eager class="float-end ms-5" src="{{baseUrl}}/specifyingRequirements/useCases/introduction/images/ticketMachine.png" width="300" />
+<pic eager class="float-end ms-5 tbg" src="{{baseUrl}}/specifyingRequirements/useCases/introduction/images/ticketMachine.png" width="300" />
 
 **<trigger for="modal:uml" trigger="click">{{ show_term("UML") }}</trigger> includes a diagram type called {{ show_term("use case diagrams") }} that can illustrate use cases of a system visually**, providing a visual ‘table of contents’ of the use cases of a system.
 

@@ -13,13 +13,13 @@
 
 Both branch nodes and merge nodes are ==diamond shapes==. Guard conditions must be in ==square brackets==.
 
-<pic eager src="{{baseUrl}}/uml/activityDiagrams/basicNotations/alternatePaths/images/notation.png" height="180" />
+<pic eager class="tbg" src="{{baseUrl}}/uml/activityDiagrams/basicNotations/alternatePaths/images/notation.png" height="180" />
 
 <box>
 
 {{ icon_example }} The AD below shows alternate paths involved in the workflow of the activity _shop for product_:
 
-<pic eager src="{{baseUrl}}/uml/activityDiagrams/basicNotations/alternatePaths/images/example.png" height="240" />
+<pic eager class="tbg" src="{{baseUrl}}/uml/activityDiagrams/basicNotations/alternatePaths/images/example.png" height="240" />
 <p/>
 
 </box>
@@ -33,7 +33,7 @@ Some acceptable simplifications (by convention):
 
 {{ icon_example }} The AD below illustrates the simplifications mentioned above:
 
-<pic eager src="{{baseUrl}}/uml/activityDiagrams/basicNotations/alternatePaths/images/simplifications.png" width="400" />
+<pic eager class="tbg" src="{{baseUrl}}/uml/activityDiagrams/basicNotations/alternatePaths/images/simplifications.png" width="400" />
 <p/>
 
 </box>

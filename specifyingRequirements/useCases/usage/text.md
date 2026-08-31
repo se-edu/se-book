@@ -12,7 +12,7 @@
 {% call show_example() %}
 Actor `Blogger` can do all the use cases the actor `Guest` can do, as a result of the actor generalization relationship given in the diagram.
 
-<pic eager src="{{baseUrl}}/specifyingRequirements/useCases/usage/images/actorGeneralisation.png" height="250" />
+<pic eager class="tbg" src="{{baseUrl}}/specifyingRequirements/useCases/usage/images/actorGeneralisation.png" height="250" />
 {% endcall %}
 
 {{ icon_tip }} Do not over-complicate use case diagrams by trying to include everything possible. A use case diagram is a brief summary of the use cases that is used as a starting point. Details of the use cases can be given in the use case descriptions.

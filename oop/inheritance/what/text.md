@@ -33,7 +33,7 @@ To continue the previous example,
 {% call show_example() %}
 Two inheritance hierarchies/trees are given below. %%Note that the triangle points to the parent class.%% Observe how the `Parrot` _is a_ `Bird` as well as an `Animal`.
 
-<pic eager src="{{baseUrl}}/oop/inheritance/what/images/inheritanceTreesExamples.png" width="500" />
+<pic eager class="tbg" src="{{baseUrl}}/oop/inheritance/what/images/inheritanceTreesExamples.png" width="500" />
 <p/>
 {% endcall %}
 
@@ -42,7 +42,7 @@ Two inheritance hierarchies/trees are given below. %%Note that the triangle poin
 {% call show_example() %}
 The `Honey` class inherits from the `Food` class _and_ the `Medicine` class %%because honey can be consumed as a food as well as a medicine (in some oriental medicine practices)%%. Similarly, a `Car` is a `Vehicle`, an `Asset`, and a `Liability`.
 
-<pic eager src="{{baseUrl}}/oop/inheritance/what/images/multipleInheritanceExamples.png" width="440" />
+<pic eager class="tbg" src="{{baseUrl}}/oop/inheritance/what/images/multipleInheritanceExamples.png" width="440" />
 {% endcall %}
 
 </div>

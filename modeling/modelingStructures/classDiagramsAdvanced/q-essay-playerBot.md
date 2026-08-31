@@ -46,7 +46,7 @@ ii. A `Human` object can _train_ a `TrainableBot` object. The `Lesson` class kee
 
 <panel header=":key: (a)">
 
-<pic eager src="{{baseUrl}}/modeling/modelingStructures/classDiagramsAdvanced/images/playerBotA.png" height="250" />
+<pic eager class="tbg" src="{{baseUrl}}/modeling/modelingStructures/classDiagramsAdvanced/images/playerBotA.png" height="250" />
 <p/>
 
 <p/>
@@ -54,7 +54,7 @@ ii. A `Human` object can _train_ a `TrainableBot` object. The `Lesson` class kee
 </panel>
 <panel header=":key: (b)">
 
-<pic eager src="{{baseUrl}}/modeling/modelingStructures/classDiagramsAdvanced/images/playerBotB.png" height="310" />
+<pic eager class="tbg" src="{{baseUrl}}/modeling/modelingStructures/classDiagramsAdvanced/images/playerBotB.png" height="310" />
 <p/>
 
 <p/>
@@ -62,7 +62,7 @@ ii. A `Human` object can _train_ a `TrainableBot` object. The `Lesson` class kee
 </panel>
 <panel header=":key: (c)">
 
-<pic eager src="{{baseUrl}}/modeling/modelingStructures/classDiagramsAdvanced/images/playerBotC.png" height="290" />
+<pic eager class="tbg" src="{{baseUrl}}/modeling/modelingStructures/classDiagramsAdvanced/images/playerBotC.png" height="290" />
 <p/>
 
 <p/>

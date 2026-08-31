@@ -9,13 +9,13 @@
 
 **{{ show_term("Association Role") }}s are used to indicate the role played by the classes in the association.**
 
-<pic eager src="{{baseUrl}}/uml/classDiagrams/associations/roles/images/notation.png" height="60" />
+<pic eager class="tbg" src="{{baseUrl}}/uml/classDiagrams/associations/roles/images/notation.png" height="60" />
 
 <box>
 
 {{ icon_example }} This association represents a marriage between a `Man` object and a `Woman` object. The respective roles played by objects of these two classes are `husband` and `wife`.
 
-<pic eager src="{{baseUrl}}/uml/classDiagrams/associations/roles/images/husbandWife.png" width="300" />
+<pic eager class="tbg" src="{{baseUrl}}/uml/classDiagrams/associations/roles/images/husbandWife.png" width="300" />
 <p/>
 
 Note how the variable names match closely with the association roles.
@@ -50,7 +50,7 @@ class Woman:
 
 {{ icon_example }} The role of `Student` objects in this association is `charges` %%(i.e., Admin is in charge of students)%%
 
-<pic eager src="{{baseUrl}}/uml/classDiagrams/associations/roles/images/adminStudent.png" height="70" />
+<pic eager class="tbg" src="{{baseUrl}}/uml/classDiagrams/associations/roles/images/adminStudent.png" height="70" />
 <p/>
 
 <div class="alt-java">
@@ -77,7 +77,7 @@ Association roles are optional to show. They are particularly useful for differe
 
 {{ icon_example }} In each the three associations between the `Flight` class and the `Airport` class given below, the `Airport` class plays a different role.
 
-<pic eager src="{{baseUrl}}/uml/classDiagrams/associations/roles/images/flightAirport.png" height="100" />
+<pic eager class="tbg" src="{{baseUrl}}/uml/classDiagrams/associations/roles/images/flightAirport.png" height="100" />
 <p/>
 
 </box>

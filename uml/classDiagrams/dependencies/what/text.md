@@ -8,13 +8,13 @@
 
 **UML uses a dashed arrow to show dependencies.**
 
-<pic eager src="{{baseUrl}}/uml/classDiagrams/dependencies/what/images/notation.png" width="350" />
+<pic eager class="tbg" src="{{baseUrl}}/uml/classDiagrams/dependencies/what/images/notation.png" width="350" />
 
 <box>
 
 {{ icon_example }} Two examples of dependencies:
 
-<pic eager src="{{baseUrl}}/uml/classDiagrams/dependencies/what/images/examples.png" width="450" />
+<pic eager class="tbg" src="{{baseUrl}}/uml/classDiagrams/dependencies/what/images/examples.png" width="450" />
 <p/>
 
 </box>

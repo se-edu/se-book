@@ -14,7 +14,7 @@
 
 **In the {{ show_term("client-server") }} style, a _server_ provides a capability or data, and one or more _clients_ use it.**
 
-<pic eager src="{{baseUrl}}/architecture/architecturalStyles/clientServer/what/images/clientServer.svg" width="181" />
+<pic eager class="tbg" src="{{baseUrl}}/architecture/architecturalStyles/clientServer/what/images/clientServer.svg" width="181" />
 <p/>
 
 **Sharing data among several installations is the most common reason to reach for client-server, but it is not the only one** — clients also use a server for centralized computation, authentication, or coordination. In the shared-data case, the fix is to give the shared data a home of its own: a separate program — the server — becomes the authoritative owner of the invoices, and each desktop application becomes a client, sending a _request_ such as "add this invoice" and receiving a _response_ from the server.<br>
@@ -53,7 +53,7 @@ Because `Logic` depended on what `Storage` promised rather than on a specific im
 {% call show_example() %}
 Client-server is extremely common — online games, email, collaborative applications, and web applications all use it, though it is in no way limited to browser-based software.
 
-<pic eager src="{{baseUrl}}/architecture/architecturalStyles/clientServer/what/images/clientServerExamples.svg" width="584" />
+<pic eager class="tbg" src="{{baseUrl}}/architecture/architecturalStyles/clientServer/what/images/clientServerExamples.svg" width="584" />
 {% endcall %}
 
 </div>

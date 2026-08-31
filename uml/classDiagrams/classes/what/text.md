@@ -9,7 +9,7 @@
 
 The basic UML notations used to represent a _class_:<br>
 
-<pic eager src="{{baseUrl}}/uml/classDiagrams/classes/what/images/basicNotation.png" height="130" />
+<pic eager class="tbg" src="{{baseUrl}}/uml/classDiagrams/classes/what/images/basicNotation.png" height="130" />
 <p/>
 
 <box>
@@ -178,7 +178,7 @@ class Table:
 
 **Generic classes can be shown as given below**. The notation format is shown on the left, followed by two examples.
 
-<pic eager src="images/generic.png" width="618"/>
+<pic eager class="tbg" src="images/generic.png" width="618"/>
 <p/>
 </div>
 

@@ -11,14 +11,14 @@
 
 Notation:
 
-<pic eager src="{{baseUrl}}/uml/sequenceDiagrams/objectDeletion/images/notation.png" height="100" />
+<pic eager class="tbg" src="{{baseUrl}}/uml/sequenceDiagrams/objectDeletion/images/notation.png" height="100" />
 <p/>
 
 <box>
 
 {{ icon_example }} Note how the below diagram shows the deletion of the `Minefield` object.
 
-<pic eager src="{{baseUrl}}/uml/sequenceDiagrams/objectDeletion/images/logicMinefield.png" height="120" />
+<pic eager class="tbg" src="{{baseUrl}}/uml/sequenceDiagrams/objectDeletion/images/logicMinefield.png" height="120" />
 <p/>
 
 </box>
@@ -37,7 +37,7 @@ class Chef {
 }
 ```
 
-<pic eager src="{{baseUrl}}/uml/sequenceDiagrams/objectDeletion/images/chefCookDish.png" width="300" />
+<pic eager class="tbg" src="{{baseUrl}}/uml/sequenceDiagrams/objectDeletion/images/chefCookDish.png" width="300" />
 <p/>
 
 </box>

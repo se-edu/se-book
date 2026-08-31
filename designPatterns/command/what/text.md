@@ -24,13 +24,13 @@ The essential element of this pattern is to have a general `<<Command>>` object 
 {% call show_example() %}
 In the solution below, the `CommandCreator` creates `List`, `Sort`, and `Reset Command` objects and adds them to the `CommandQueue` object. The `CommandQueue` object treats them all as `Command` objects and performs the execute/undo operation on each of them without knowledge of the specific `Command` type. When executed, each `Command` object will access the `DataStore` object to carry out its task. The `Command` class can also be an abstract class or an interface.
 
-<pic eager src="{{baseUrl}}/designPatterns/command/what/images/commandCreator.png" height="150" />
+<pic eager class="tbg" src="{{baseUrl}}/designPatterns/command/what/images/commandCreator.png" height="150" />
 <p/>
 {% endcall %}
 
 The general form of the solution is as follows.
 
-<pic eager src="{{baseUrl}}/designPatterns/command/what/images/clientInvoker.png" height="200" />
+<pic eager class="tbg" src="{{baseUrl}}/designPatterns/command/what/images/clientInvoker.png" height="200" />
 <p/>
 
 The `<<Client>>` creates a `<<ConcreteCommand>>` object and passes it to the `<<Invoker>>`. The `<<Invoker>>` object treats all commands as a general `<<Command>>` type. `<<Invoker>>` issues a request by calling `execute()` on the command. If a command is undoable, `<<ConcreteCommand>>` will store the state for undoing the command before invoking `execute()`. In addition, the `<<ConcreteCommand>>` object may have to be linked to any `<<Receiver>>` of the command (<tooltip content="the object the command will operate on, in case different commands operate on different objects">?</tooltip>) before it is passed to the `<<Invoker>>`. Note that an application of the command pattern does not have to follow the structure given above.

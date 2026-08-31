@@ -30,7 +30,7 @@ An SMD views the life-cycle of an object as consisting of a finite number of sta
 {% call show_example() %}
 An SMD for the Minesweeper game.
 
-<pic eager src="{{baseUrl}}/modeling/modelingBehaviors/stateMachineDiagrams/images/minesweeper.png" height="200" />
+<pic eager class="tbg" src="{{baseUrl}}/modeling/modelingBehaviors/stateMachineDiagrams/images/minesweeper.png" height="200" />
 <p/>
 {% endcall %}
 

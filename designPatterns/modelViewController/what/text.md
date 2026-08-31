@@ -25,13 +25,13 @@ Decouple data, presentation, and control logic of an application by separating t
 
 The relationship between the components can be observed in the diagram below. Typically, the UI is the combination of _View_ and _Controller_.
 
-<pic eager src="{{baseUrl}}/designPatterns/modelViewController/what/images/classDiagram.png" width="400" />
+<pic eager class="tbg" src="{{baseUrl}}/designPatterns/modelViewController/what/images/classDiagram.png" width="400" />
 <p/>
 
 {% call show_example() %}
 MVC applied to a student management system. In this scenario, the user is retrieving the data of a student.
 
-<pic eager src="{{baseUrl}}/designPatterns/modelViewController/what/images/sequenceDiagram.png" width="500" />
+<pic eager class="tbg" src="{{baseUrl}}/designPatterns/modelViewController/what/images/sequenceDiagram.png" width="500" />
 <p/>
 
 In the diagram above, when the user clicks on a button using the UI, the ‘click’ event is caught and handled by the `UiController`. The `ref` frame indicates that the interactions within that frame have been extracted out to another separate sequence diagram.

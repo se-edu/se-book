@@ -13,7 +13,7 @@ You can use the following layout for the diagram. Add more classes if needed.
 
 <p/>
 <panel type="seamless" header="Example CCD" minimized >
-  <pic eager src="{{ baseUrl }}/modeling/modelingStructures/objectOrientedDomainModels/images/diagram.png" width="700" />
+  <pic eager class="tbg" src="{{ baseUrl }}/modeling/modelingStructures/objectOrientedDomainModels/images/diagram.png" width="700" />
 </panel>
 <p/>
 

@@ -16,7 +16,7 @@
 {% call show_example() %}
 Design `A` appears to have more coupling between the components than design `B`.
 
-<pic eager src="{{baseUrl}}/designFundamentals/coupling/what/images/playerPuzzleManager.png" height="220" />
+<pic eager class="tbg" src="{{baseUrl}}/designFundamentals/coupling/what/images/playerPuzzleManager.png" height="220" />
 <p/>
 {% endcall %}
 </div>

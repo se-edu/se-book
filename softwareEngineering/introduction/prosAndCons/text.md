@@ -43,7 +43,7 @@
 <box>
 
 <div class="text-center">
-<pic eager src="{{baseUrl}}/softwareEngineering/introduction/prosAndCons/images/aiSeModes.svg" width="680"/><br>
+<pic eager class="tbg" src="{{baseUrl}}/softwareEngineering/introduction/prosAndCons/images/aiSeModes.svg" width="680"/><br>
 <md>--%%A possible progression of SE through higher levels of AI use%%--</md>
 </div>
 </box>

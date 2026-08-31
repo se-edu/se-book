@@ -13,7 +13,7 @@
 
 {{ icon_example }} An example object diagram:
 
-<pic eager src="{{baseUrl}}/modeling/modelingStructures/ooStructures/images/objectDiagram.png" height="120" />
+<pic eager class="tbg" src="{{baseUrl}}/modeling/modelingStructures/ooStructures/images/objectDiagram.png" height="120" />
 
 </box>
 

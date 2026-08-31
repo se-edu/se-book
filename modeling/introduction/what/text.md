@@ -19,7 +19,7 @@ A _class diagram_ is a diagram drawn using the UML modeling notation.
 {% call show_example() %}
 A class diagram drawn for a small design:
 
-<pic eager src="{{baseUrl}}/uml/classDiagrams/introduction/what/images/classDiagramExample1.png" width="600" />
+<pic eager class="tbg" src="{{baseUrl}}/uml/classDiagrams/introduction/what/images/classDiagramExample1.png" width="600" />
 {% endcall %}
 
 </modal>

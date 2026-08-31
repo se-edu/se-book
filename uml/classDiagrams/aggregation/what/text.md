@@ -10,13 +10,13 @@
 
 Notation:
 
-<pic eager src="{{baseUrl}}/uml/classDiagrams/aggregation/what/images/notation.png" height="45" />
+<pic eager class="tbg" src="{{baseUrl}}/uml/classDiagrams/aggregation/what/images/notation.png" height="45" />
 
 <box>
 
 {{ icon_example }} Example:
 
-<pic eager src="{{baseUrl}}/uml/classDiagrams/aggregation/what/images/clubPerson.png" height="85" />
+<pic eager class="tbg" src="{{baseUrl}}/uml/classDiagrams/aggregation/what/images/clubPerson.png" height="85" />
 <p/>
 
 </box>

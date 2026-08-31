@@ -8,13 +8,13 @@
 
 You should use a solid line to show an association between two classes.
 
-<pic eager src="{{baseUrl}}/uml/classDiagrams/associations/what/images/notation.png" width="300" />
+<pic eager class="tbg" src="{{baseUrl}}/uml/classDiagrams/associations/what/images/notation.png" width="300" />
 <p/>
 
 <box>
 
 {{ icon_example }} This example shows an association between the `Admin` class and the `Student` class:<br>
-<pic eager src="{{baseUrl}}/uml/classDiagrams/associations/what/images/example.png" width="300" />
+<pic eager class="tbg" src="{{baseUrl}}/uml/classDiagrams/associations/what/images/example.png" width="300" />
 
 
 </box>
