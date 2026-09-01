@@ -24,7 +24,6 @@ The basic UML notations used to represent a _class_:<br>
 @startuml
 skinparam classAttributeIconSize 0
 skinparam roundCorner 0
-skinparam backgroundcolor transparent
 skinparam shadowing false
 hide circle
 class Table {
@@ -115,7 +114,6 @@ Visibility | Java | Python
 @startuml
 skinparam classAttributeIconSize 0
 skinparam roundCorner 0
-skinparam backgroundcolor transparent
 skinparam shadowing false
 hide circle
 class Table {

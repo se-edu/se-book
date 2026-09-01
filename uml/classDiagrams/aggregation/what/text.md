@@ -11,7 +11,7 @@
 Notation:
 
 <pic eager class="tbg" src="{{baseUrl}}/uml/classDiagrams/aggregation/what/images/notation.png" height="45" />
-
+<p/>
 <box>
 
 {{ icon_example }} Example:

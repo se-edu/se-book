@@ -9,6 +9,7 @@
 Notation:
 
 <pic eager class="tbg" src="{{baseUrl}}/uml/classDiagrams/enumerations/what/images/notation.png" width="150" />
+<p/>
 
 <box>
 

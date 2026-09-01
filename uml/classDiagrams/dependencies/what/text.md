@@ -6,16 +6,18 @@
 
 <div id="body">
 
-**UML uses a dashed arrow to show dependencies.**
+**UML uses a dashed arrow to show dependencies.** A dashed arrow from class `A` to class `B` shows that class `A` _depends_ on class `B`.
 
 <pic eager class="tbg" src="{{baseUrl}}/uml/classDiagrams/dependencies/what/images/notation.png" width="350" />
+<p/>
 
 <box>
 
 {{ icon_example }} Two examples of dependencies:
 
-<pic eager class="tbg" src="{{baseUrl}}/uml/classDiagrams/dependencies/what/images/examples.png" width="450" />
-<p/>
+<pic eager class="tbg" src="{{baseUrl}}/uml/classDiagrams/dependencies/what/images/examples.png" width="450" /><br>
+The class `Foo` class depends on the `Bar` class.<br>
+The `ScoreBoard` class depends on the `Player` class.
 
 </box>
 
@@ -34,7 +36,7 @@
 
 #r#Redundant dependency arrow## | #r#Redundant dependency arrow## | #g#Dependency arrow adds useful information##
 ---|---|---
-<img src="images/incorrectDependencyWithAssociation.png" /><br>The association already implies dependency. | <img src="images/incorrectDependencyWithInheritance.png" /><br>The inheritance already implies dependency. | <img src="images/correctDependencyWithAssociation.png" /><br>The arrow shows a dependency not already implied by the association.
+<img src="images/incorrectDependencyWithAssociation.png" /><br>The association already implies dependency. | <img src="images/incorrectDependencyWithInheritance.png" /><br>The inheritance already implies dependency. | <img src="images/correctDependencyWithAssociation.png" /><br>The dependency arrow shows a dependency not already implied by the association.
 
 </div>
 

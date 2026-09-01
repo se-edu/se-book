@@ -8,7 +8,7 @@
 
 Notation:
 
-<pic eager src="{{baseUrl}}/uml/objectDiagrams/objects/images/notation.png" height="85" />
+<pic eager class="tbg" src="{{baseUrl}}/uml/objectDiagrams/objects/images/notation.png" height="85" />
 <p/>
 
 * The class name and object name are underlined e.g., <u>`car1:Car`</u>.
@@ -25,7 +25,7 @@ Notation:
 
 {{ icon_example }} Some example objects:
 
-<pic eager src="{{baseUrl}}/uml/objectDiagrams/objects/images/professorStudent.png" height="65" />
+<pic eager class="tbg" src="{{baseUrl}}/uml/objectDiagrams/objects/images/professorStudent.png" height="65" />
 <p/>
 
 </box>
