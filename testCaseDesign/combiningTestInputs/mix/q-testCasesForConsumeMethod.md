@@ -8,9 +8,9 @@ Apply heuristics for combining multiple test inputs to improve the E&E of the fo
 
    Test case |  food    |  drink
    --------- | -------- | --------
-   TC1{.text-dark} | bread{.text-success}   | water{.text-success}
-   TC2{.text-dark} | rice{.text-success}    | !!lava!!{.text-danger}
-   TC3{.text-dark} | !!rock!!{.text-danger} | !!acid!!{.text-danger}
+   TC1{.text-body-emphasis} | bread{.text-success}   | water{.text-success}
+   TC2{.text-body-emphasis} | rice{.text-success}    | !!lava!!{.text-danger}
+   TC3{.text-body-emphasis} | !!rock!!{.text-danger} | !!acid!!{.text-danger}
 
    </box>
 

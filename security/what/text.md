@@ -44,13 +44,13 @@ The value `eventId` identifies the requested event. However, `isOrganizer` is me
 **Three of these are security _properties_, together called the {{ show_term("CIA triad") }}.** Establishing that actions are performed by the right people is not a fourth property; it is a mechanism used to protect all three. **The triad gives three useful questions to ask:**
 
 * **_Confidentiality_ asks whether information has been disclosed only to those permitted to see it.**<br>
-  {{ label_example }} %%An attendee's email address should not be disclosed to another student without a valid reason and permission.%% { text="C" t-size="15px" t-class="badge rounded-pill my-1 bg-info-subtle text-dark font-monospace" }
+  {{ label_example }} %%An attendee's email address should not be disclosed to another student without a valid reason and permission.%% { text="C" t-size="15px" t-class="badge rounded-pill my-1 bg-term-highlight text-body-emphasis font-monospace" }
 
 * **_Integrity_ asks whether information and behavior have remained correct, complete, and free from improper change or destruction.**<br>
-  {{ label_example }} %%A student should not be able to cancel another student's registration or grant themselves organizer privileges.%% { text="I" t-size="15px" t-class="badge rounded-pill my-1 bg-info-subtle text-dark font-monospace" }
+  {{ label_example }} %%A student should not be able to cancel another student's registration or grant themselves organizer privileges.%% { text="I" t-size="15px" t-class="badge rounded-pill my-1 bg-term-highlight text-body-emphasis font-monospace" }
 
 * **_Availability_ asks whether authorized users can obtain the service when they need it.**<br>
-  {{ label_example }} %%The registration service should remain usable during a popular event's sign-up period.%% { text="A" t-size="15px" t-class="badge rounded-pill my-1 bg-info-subtle text-dark font-monospace" }
+  {{ label_example }} %%The registration service should remain usable during a popular event's sign-up period.%% { text="A" t-size="15px" t-class="badge rounded-pill my-1 bg-term-highlight text-body-emphasis font-monospace" }
 
 A single incident can affect more than one goal.<br>
 {{ label_example }} %%A compromised organizer account might expose attendee details, alter registrations, and delete events.%%

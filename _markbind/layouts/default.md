@@ -70,7 +70,7 @@
 </nav>
 <div id="content-wrapper" class="fixed-header-padding">
 
-# <span class="text-dark"><small>****Software Engineering for Self-Directed Learners »****</small></span>
+# <span class="text-body-emphasis"><small>****Software Engineering for Self-Directed Learners »****</small></span>
   {{ content }}
 </div>
 <nav id="page-nav" class="fixed-header-padding">

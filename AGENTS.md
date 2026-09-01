@@ -167,7 +167,7 @@ Apply the two forms as follows:
 - **Never put `{{ label_example }}` inside an HTML attribute** such as
   `<panel header="...">`. It expands to a `<span class="...">`, and the inner
   quotes silently terminate the attribute, dropping the header and leaking
-  `badge bg-light` onto the element. Use `{{ icon_example }} Example` in an
+  `badge bg-body-tertiary` onto the element. Use `{{ icon_example }} Example` in an
   attribute, or move the header into a `<div slot="header">` where the badge
   works.
 - **A `<panel>` whose header is the example label stays a panel.** Converting

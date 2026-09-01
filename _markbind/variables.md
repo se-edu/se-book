@@ -2,7 +2,7 @@
 
 
 <variable id="outcomes">
-<span class="badge bg-light text-dark"><md>%%<include src="text.md#outcomes" inline />%%</md></span><p/>
+<span class="badge bg-body-tertiary text-body-emphasis"><md>%%<include src="text.md#outcomes" inline />%%</md></span><p/>
 </variable>
 
 <variable id="bullet_checkbox">{ icon="far-square" }</variable>
@@ -61,8 +61,8 @@
 <variable id="icon_x"><md>:fas-times:</md></variable>
 <variable id="icon_x_red"><span style="color:red">{{ icon_x | safe }}</span></variable>
 
-<variable id="label_example"><span class="badge bg-light text-secondary">{{ icon_example }} Example </span></variable>
-<variable id="label_examples"><span class="badge bg-light text-secondary">{{ icon_example }} Examples </span></variable>
+<variable id="label_example"><span class="badge bg-body-tertiary text-secondary">{{ icon_example }} Example </span></variable>
+<variable id="label_examples"><span class="badge bg-body-tertiary text-secondary">{{ icon_example }} Examples </span></variable>
 
 <variable id="indented_arrow">&nbsp;&nbsp;&nbsp;&nbsp; ++↳++</variable>
 <variable id="bad"><span style="color: red"><md>**:fas-thumbs-down: Bad**</md></span></variable>
