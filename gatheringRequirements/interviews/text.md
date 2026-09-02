@@ -19,7 +19,7 @@
 1. **Open with something concrete rather than an abstract question.** _'What do you need?'_ invites a vague answer, or a feature request that hides the need behind it. Walking through a recent situation, a screen of the current system, or a prototype gets you specifics.
 1. **Ask what goes wrong today and what they do instead.** Workarounds are where unmet requirements hide: if someone keeps a private spreadsheet, the system is failing them in a way worth understanding.
 1. **Play the answer back in your own words before moving on.** It is very common for both sides to leave an interview believing they agreed, having understood different things.
-1. **Confirm your written notes with the interviewee afterwards.** They can correct what you misheard while they still remember what they said.
+1. **Confirm your written notes with the interviewee afterward.** They can correct what you misheard while they still remember what they said.
 
 {% call show_example() %}
 Part of an interview with a manager, for a system that handles leave applications:
