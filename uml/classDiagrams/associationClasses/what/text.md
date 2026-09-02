@@ -9,6 +9,7 @@
 Association classes are denoted as a connection to an association link using a dashed line as shown below.
 
 <pic eager class="tbg" src="{{baseUrl}}/uml/classDiagrams/associationClasses/what/images/notation.png" height="100" />
+<p/>
 
 <box>
 

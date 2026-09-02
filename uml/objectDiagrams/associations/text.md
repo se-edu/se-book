@@ -9,6 +9,7 @@
 A solid line indicates an association between two objects.
 
 <pic eager class="tbg" src="{{baseUrl}}/uml/objectDiagrams/associations/images/notation.png" width="300" />
+<p/>
 
 <box>
 
