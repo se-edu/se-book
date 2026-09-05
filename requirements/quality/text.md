@@ -20,7 +20,7 @@ Here are some characteristics of well-defined requirements <trigger for="pop:zie
 * Necessary
 * Implementation-free (i.e., abstract)
 
-**Two of these carry most of the weight: a requirement that is unambiguous and testable states an _observable_ result, so evidence can settle whether it has been met.** A requirement that states a judgment instead can only be settled by argument. To make one testable, say who is involved, what they are doing, and what result counts as success.
+**Two of these carry most of the weight: a requirement that is unambiguous and testable states an _observable_ result, so evidence can settle whether it has been met.**
 
 {% call show_example() %}
 Two requirements from the same project, one testable and one not:

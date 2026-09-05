@@ -71,6 +71,7 @@ Think of the various scenarios your target user is likely to go through as she u
 
 **A. First use:**
 1. Jean gets to know about ProductX. She downloads it and launches it to check out what it can do.
+1. To help Jean learn the app capabilities, the app greets Jean with a ...
 1. After playing around with the product for a bit, Jean wants to start using it for real.
 1. ...
 

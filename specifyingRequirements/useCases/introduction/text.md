@@ -49,7 +49,7 @@ MSS:
 </div>
 </panel>
 
-<box background-color="white" border-color="white">
+<box background-color="transparent" border-color="transparent">
 
 <pic eager class="float-end ms-5 tbg" src="{{baseUrl}}/specifyingRequirements/useCases/introduction/images/ticketMachine.png" width="300" />
 
