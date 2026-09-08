@@ -32,7 +32,7 @@ Notation:
 {{ icon_tip }} **'Unroll' chained/compound method calls before drawing sequence diagram.** Consider the Java statement `new Book().add(new Chapter());`{.java}. How do we show it as a sequence diagram? First, 'unroll' it into a simpler series of statements, which can then be drawn as a sequence diagram easily. For example, that statement is equivalent to the following:
 ```java{highlight-lines="2"}
 Book b = new Book();
-Chapter c = new Chapter();  // a is a temporary variable used for unrolling
+Chapter c = new Chapter();  // c is a temporary variable used for unrolling
 b.add(c);
 ```
 
@@ -43,7 +43,7 @@ hide footbox
 
 Participant "____" as u
 Participant "b:Book" as b
-Participant "b:Chapter" as c
+Participant "c:Chapter" as c
 
 create b
 u -> b
