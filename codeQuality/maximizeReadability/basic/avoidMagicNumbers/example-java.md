@@ -5,7 +5,7 @@
 
 {{bad}}
 ```java{.no-line-numbers}
-return 3.14236;
+return 3.14159;
 ...
 return 9;
 ```
@@ -15,7 +15,7 @@ return 9;
 
 {{good}}
 ```java{.no-line-numbers}
-static final double PI = 3.14236;
+static final double PI = 3.14159;
 static final int MAX_SIZE = 10;
 ...
 return PI;

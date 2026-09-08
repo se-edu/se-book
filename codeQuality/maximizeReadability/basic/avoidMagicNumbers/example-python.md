@@ -7,7 +7,7 @@ Note: Python does not have a way to make a variable a constant. However, you can
 
 {{bad}}
 ```python
-return 3.14236
+return 3.14159
 ...
 return 9
 ```
@@ -17,7 +17,7 @@ return 9
 
 {{good}}
 ```python
-PI = 3.14236
+PI = 3.14159
 MAX_SIZE = 10
 ...
 return PI
