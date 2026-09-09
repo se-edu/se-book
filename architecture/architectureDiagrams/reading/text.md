@@ -25,14 +25,16 @@ Here are two real architecture diagrams, from actual projects, drawn by differen
 
 <tabs>
   <tab header="TEAMMATES">
-
-<pic eager src="https://teammates.github.io/teammates/diagrams/highlevelArchitecture.png" width="700"/><br>
-
+<annotate src="https://teammates.github.io/teammates/diagrams/highlevelArchitecture.png">
+  <a-point x="10%" y="90%" x>--> dependencies</a-point>
+</annotate>
   </tab>
   <tab header="se-edu/addressbook-level3">
-
+<div class="tbg">
 <pic eager src="https://se-education.org/addressbook-level3/images/ArchitectureDiagram.png" width="300"/><br>
 
+<small>dashed arrows: dependencies<br>solid arrows: associations</small>
+</div>
   </tab>
 </tabs>
 

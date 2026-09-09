@@ -26,7 +26,12 @@ This class diagram of [se-edu/addressbook-level2](https://se-education.org/addre
 {% call show_example() %}
 This architecture diagram of [se-edu/addressbook-level3](https://se-education.org/addressbook-level3) depicts the high-level design of the software.
 
-<pic eager src="https://se-education.org/addressbook-level3/images/ArchitectureDiagram.png" width="300" />
+<div class="tbg">
+<pic eager src="https://se-education.org/addressbook-level3/images/ArchitectureDiagram.png" width="300"/><br>
+
+<small>dashed arrows: dependencies<br>solid arrows: associations</small>
+</div>
+
 
 Lower-level designs of some components of the same software:
 
