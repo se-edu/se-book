@@ -27,10 +27,10 @@ To debug well, distinguish four things that beginners tend to lump together as '
 
 **These four form a chain, and each link can be far from the next:**
 
-```
-mistake → defect → infection → infection → ... → failure
-          (code)   (state)      (state)          (behavior)
-```
+<box>
+
+<pic eager class="tbg" src="{{baseUrl}}/debugging/what/images/infectionChain.svg" width="690" />
+</box>
 
 **Debugging is therefore a search, not a lookup: you observe the failure but must fix the defect.** The infection spreads as the wrong value is passed on, stored in a field, or used to compute another wrong value, so where the program crashed is usually _not_ where the mistake was made. The chain also explains why bugs hide: a defect infects the state only when that line executes, and an infection becomes a failure only if it propagates out to something observable. A defect can sit in daily-executed code for months unnoticed.
 
