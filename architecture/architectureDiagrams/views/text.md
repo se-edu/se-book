@@ -29,6 +29,11 @@ In this example, all the interesting structure is in the logical view. If a serv
 
 **The {{ show_term("4+1 view model") }} extends the idea above by describing a system using five standard views.** Four cover the system's functionality, runtime processes, code organization, and deployment. The "+1" uses scenarios to show how the system works in specific situations.
 
+<box>
+
+<pic eager class="tbg" src="{{baseUrl}}/architecture/architectureDiagrams/views/images/fourPlusOne.svg" width="569" />
+</box>
+
 **The {{ show_term("C4 model") }} organizes diagrams of a system's static structure by level of detail.** Its four core levels zoom in from the system's surroundings to its code:
 
 1. **A system context diagram shows the system, its users, and the other systems it interacts with.**
