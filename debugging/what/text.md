@@ -13,15 +13,16 @@ The debugging topics of this textbook draw substantially on [The Debugging Book]
 
 </box>
 
-**{{ show_term("Debugging") }} is the process of finding the cause of a known problem in a program, and fixing it.** It starts _after_ you know something is wrong — whether a test, a user, or monitoring exposed it; finding that the problem exists is a separate activity. The hard part is usually the diagnosis rather than the correction: once you understand why a program misbehaves, the edit itself is often a single character — though choosing *which* edit is a decision in its own right.
+**{{ show_term("Debugging") }} is the process of finding the cause of a known problem in a program, and fixing it.** The hard part is usually the diagnosis rather than the correction.
 
-To debug well, distinguish four things that beginners tend to lump together as 'the bug':
+To debug well, we distinguish four things that we loosely refer to as the 'the bug':
 
 * **A {{ show_term("mistake") }} is the human (or AI) act that started it all.**<br>
   {{ label_example }} %%You misremembered that list indices start at `1`.%%
-* **A {{ show_term("defect") }} is the resulting error in the code.** This is what most people mean by 'a bug'.<br>
+* **A {{ show_term("defect") }} is the resulting error in the software.** This is what most people mean by 'a bug'. It is usually in the code, but it can also be in configuration, in data left by an earlier version, in a dependency, in the deployment, or in a requirement that was wrong to begin with.
+<br>
   {{ label_example }} %%A loop that starts counting from the wrong index.%%
-* **An {{ show_term("infection") }} is the resulting error in the program state at run time.** When the defective line executes, some variable now holds a wrong value.
+* **An {{ show_term("infection") }} is the resulting error in the program state at run time.** When the defective line executes, some variable now holds a wrong value. Infections can spread, for example, an 'infected' variable holding a wrong value can cause another varible to hold a wrong value in turn.
 * **A {{ show_term("failure") }} is the externally visible wrong behavior.**<br>
   {{ label_example }} %%A total shown to the user that is too small, or a crash.%%
 
@@ -32,9 +33,9 @@ To debug well, distinguish four things that beginners tend to lump together as '
 <pic eager class="tbg" src="{{baseUrl}}/debugging/what/images/infectionChain.svg" width="690" />
 </box>
 
-**Debugging is therefore a search, not a lookup: you observe the failure but must fix the defect.** The infection spreads as the wrong value is passed on, stored in a field, or used to compute another wrong value, so where the program crashed is usually _not_ where the mistake was made. The chain also explains why bugs hide: a defect infects the state only when that line executes, and an infection becomes a failure only if it propagates out to something observable. A defect can sit in daily-executed code for months unnoticed.
+A big part of debugging is the backward search for the defect by starting from the observed failure.
 
-**The chain assumes the fault lies in code — the common case, but not the only one.** A failure can equally originate in configuration, in data left by an earlier version, in a dependency, in the deployment, or in a requirement that was wrong to begin with. Sometimes the program is right while the _test_ is wrong — the test may hold its own defect, or the expectation it encodes may never have been correct. Only an error in the code is a _defect_; where the fault lies elsewhere, call it the _cause_. Either way the search is the same: locate whatever has to change.
+This chain also explains why bugs hide: a defect infects the state only when that line executes, and an infection becomes a failure only if it propagates out to something observable. So, a defect can sit in daily-executed code for months unnoticed.
 
 {% call show_example() %}
 A _running example_, reused throughout the related debugging topics of this textbook. A shopping cart prints the correct total, but then appears empty.
@@ -74,30 +75,25 @@ A debugger stopped at the failure would be pointing at the display code, which i
 
 ##### Why debugging is hard
 
-**Debugging consumes a large share of real development effort**, and a single stubborn defect routinely costs more than writing the code it hides in. Beginners tend to read time spent debugging as evidence that they are bad at programming. It is not; debugging is a distinct and learnable engineering skill.
+**Some things that make debugging hard:**
 
-**Three things make it hard:**
-
-* **The distance between defect and failure**: the crash site is not the crime scene, so the instinct to study the code around the error message is often the least productive move available.
-* **You cannot inspect everything** — a running program holds an enormous amount of state, changing at every step, and choosing which small part to look at is most of the skill.
-* **Your mental model of the code is exactly the thing that is wrong**: had you understood it correctly you would not have written the defect, so re-reading with the same assumptions reproduces the same blind spot. Hence debugging must be driven by evidence from the running program, not by reasoning alone.
-
-**Debugging time is therefore not proportional to the size of the fix.** A one-character correction can cost an afternoon. The cost lives in the search, and every debugging technique aims at making that search cheaper.
+* **The distance between defect and failure**: the crash site is not always the crime scene; so focusing on the code around the error message might not yield results.
+* **You cannot inspect everything** — a running program holds an enormous amount of state, changing at every step, and choosing which small part to look at is hard.
+* **Your mental model of the code is exactly the thing that is wrong**: if a wrong assumpution caused you to create the defect, debugging while holding the same wrong assumption can reproduce the same blind spot. This is why debugging must be driven by evidence from the running program, not by reasoning alone.
 
 ##### How not to debug
 
 **Most unproductive debugging comes from having no method, rather than from using the wrong tool.**
 
-* {{ bad }} **_Stare and hope_** — reading the code and waiting for the bug to reveal itself. This inspects the code but not the state, using the mental model that wrote the defect. Fine as a 30-second first try; a poor plan for the next two hours.
-* {{ bad }} **_Shotgun debugging_** — changing whatever looks suspicious and re-running to see whether it helped. Each run teaches you nothing: a change that does not fix the problem has neither confirmed nor eliminated any explanation, and unrelated edits accumulate.
-* {{ bad }} **_Debugging into existence_** — mutating the code until the symptom disappears. The symptom often vanishes because a second defect cancels the first, leaving two bugs and a harder problem later. The difference from shotgun debugging is the stopping rule: here you stop when the symptom goes away, having never identified a cause.
+* {{ bad }} **_Stare and hope_** — reading the code and waiting for the bug to reveal itself. This inspects the code but not the state. Fine as a 30-second first try; but a poor use of time for an extended attempt.
+* {{ bad }} **_Shotgun debugging_** — changing whatever looks suspicious and re-running to see whether it helped. Most such changes neither confirm nor eliminate any explanation, and unrelated edits accumulate.
 * {{ bad }} **Fixing the symptom instead of the cause.** The failure goes away and the defect stays.<br>
   {{ label_example }} %%Special-casing the input that fails, or wrapping the crash in an empty `catch` block.%%
 * {{ bad }} **Keeping no record of what you tried.** Without notes you will re-test explanations you already eliminated, lose your place when interrupted, and be unable to hand the problem over.
 
-**Adding temporary print statements is not necessarily bad; doing so _without a hypothesis_ is** — that is shotgun debugging in another form. A few prints chosen to answer a specific question are legitimate, and in production, embedded, or concurrent settings they are sometimes the only tool available.
-
 **What these have in common is that they produce activity without producing information.** A productive debugging step is one that rules something out.
+
+**Adding temporary print statements is not necessarily bad.** A few prints chosen to answer a specific question are legitimate, and in production, embedded, or concurrent settings they are sometimes the only tool available. However, this technique alone is not enough to tackle most non-trivial bugs.
 
 </div>
 

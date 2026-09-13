@@ -11,7 +11,7 @@
 
 * **Print statements are the cheapest to start with and the most expensive to iterate with.** They need no setup, work in any environment, and survive across process and machine boundaries — but every new question costs an edit-build-run cycle, each edit is a chance to introduce a fresh defect, and leftovers reach production if you forget them.
 * **Logging is the disciplined, permanent form of printing.** Leveled and filterable, log statements can stay in the code — so they are still there when the failure happens on a user's machine at 3 a.m., where no debugger can reach.
-* **Assertions are probes that check themselves.** Rather than printing a value for you to examine, an assertion states what it should be and fails immediately when it is not, turning a silent infection into a loud, located failure. If you use Java's `assert` statement, enable assertions in your run configuration (`-ea`) or it will do nothing; test-framework assertions are separate and always run.
+* **Assertions are probes that check themselves.** Rather than printing a value for you to examine, an assertion states what it should be and fails immediately when it is not, turning a silent infection into a loud, located failure. If you use Java's `assert` statement, enable assertions in your run configuration or it will do nothing; test-framework (e.g., JUnit) assertions are separate and always run during testing.
 * **A debugger asks questions interactively, without changing the code at all.**
 
 <box type="tip" seamless>
@@ -84,6 +84,8 @@ Read it in this order:
 1. **The chain of callers below it**, which shows how execution arrived there.
 
 The top of the trace is where the failure surfaced, but the cause is often further down, in whichever frame passed the bad value along. In wrapped exceptions, read the `Caused by:` chain from the bottom up.
+
+Some common Java exception and what they usually mean:
 
 | Exception | Usually means |
 |---|---|
