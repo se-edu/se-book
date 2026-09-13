@@ -14,28 +14,26 @@
 {{ icon_example }} Consider the code below.
 
 ```java
-class Machine {
+class Workflow {
 
-    Unit producePrototype() {
-        Unit prototype = new Unit();
-        for (int i = 0; i < 5; i++) {
-            prototype.stressTest();
+    Step executeStep() {
+        Step step = new Step();
+        if (step.isValid()) {
+            step.execute();
         }
-        return prototype;
+        return step;
     }
 }
 
-class Unit {
-
-    public void stressTest() {
-
+class Step {
+    public void execute() {
+        // ...
     }
 }
-
 ```
 Here is the sequence diagram to model the interactions for the method call `producePrototype()` on a `Machine` object.
 
-<pic eager class="tbg" src="{{baseUrl}}/uml/sequenceDiagrams/introduction/images/Machine.png" width="450" />
+<pic eager class="tbg" src="{{baseUrl}}/uml/sequenceDiagrams/introduction/images/workflow.svg" width="518" />
 <p/>
 
 </box>
