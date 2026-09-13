@@ -85,7 +85,7 @@ Read it in this order:
 
 The top of the trace is where the failure surfaced, but the cause is often further down, in whichever frame passed the bad value along. In wrapped exceptions, read the `Caused by:` chain from the bottom up.
 
-Some common Java exception and what they usually mean:
+Some common Java exceptions and what they usually mean:
 
 | Exception | Usually means |
 |---|---|

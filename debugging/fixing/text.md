@@ -11,7 +11,7 @@
 
 **Fix the cause, not the infection and not the failure.** Special-casing the failing input or clamping a bad value removes the symptom and leaves the cause. Also consider whether you have a coding error or a design error: a coding error is code that does not do what you intended -- whereas a design error means the intention itself was wrong. The real remedy for the latter is a design change, not a code fix.
 
-**Which change counts as 'the fix' is sometimes a genuine choice.** Making that choice consciously so that the fix does not degrade other aspects of the system (e.g., the design integrity).<br>
+**Which change counts as 'the fix' is sometimes a genuine choice.** Making that choice consciously helps ensure that the fix does not degrade other aspects of the system (e.g., its design integrity).<br>
 {{ label_example }} %%In the cart example you could make `getItems()` return a copy, or make `computeTotal()` iterate without mutating. Both remove the failure; they differ in which contract you treat as authoritative.%%
 
 **Once you have a candidate fix, finish the job:**

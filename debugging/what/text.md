@@ -15,14 +15,14 @@ The debugging topics of this textbook draw substantially on [The Debugging Book]
 
 **{{ show_term("Debugging") }} is the process of finding the cause of a known problem in a program, and fixing it.** The hard part is usually the diagnosis rather than the correction.
 
-To debug well, we distinguish four things that we loosely refer to as the 'the bug':
+To debug well, we distinguish four things that we loosely refer to as 'the bug':
 
 * **A {{ show_term("mistake") }} is the human (or AI) act that started it all.**<br>
   {{ label_example }} %%You misremembered that list indices start at `1`.%%
 * **A {{ show_term("defect") }} is the resulting error in the software.** This is what most people mean by 'a bug'. It is usually in the code, but it can also be in configuration, in data left by an earlier version, in a dependency, in the deployment, or in a requirement that was wrong to begin with.
 <br>
   {{ label_example }} %%A loop that starts counting from the wrong index.%%
-* **An {{ show_term("infection") }} is the resulting error in the program state at run time.** When the defective line executes, some variable now holds a wrong value. Infections can spread, for example, an 'infected' variable holding a wrong value can cause another varible to hold a wrong value in turn.
+* **An {{ show_term("infection") }} is the resulting error in the program state at run time.** When the defective line executes, some variable now holds a wrong value. Infections can spread; for example, an 'infected' variable holding a wrong value can cause another variable to hold a wrong value in turn.
 * **A {{ show_term("failure") }} is the externally visible wrong behavior.**<br>
   {{ label_example }} %%A total shown to the user that is too small, or a crash.%%
 
@@ -75,17 +75,17 @@ A debugger stopped at the failure would be pointing at the display code, which i
 
 ##### Why debugging is hard
 
-**Some things that make debugging hard:**
+**Some factors that make debugging hard are:**
 
 * **The distance between defect and failure**: the crash site is not always the crime scene; so focusing on the code around the error message might not yield results.
 * **You cannot inspect everything** — a running program holds an enormous amount of state, changing at every step, and choosing which small part to look at is hard.
-* **Your mental model of the code is exactly the thing that is wrong**: if a wrong assumpution caused you to create the defect, debugging while holding the same wrong assumption can reproduce the same blind spot. This is why debugging must be driven by evidence from the running program, not by reasoning alone.
+* **Your mental model of the code is exactly the thing that is wrong**: if a wrong assumption caused you to create the defect, debugging while holding the same wrong assumption can reproduce the same blind spot. This is why debugging must be driven by evidence from the running program, not by reasoning alone.
 
 ##### How not to debug
 
 **Most unproductive debugging comes from having no method, rather than from using the wrong tool.**
 
-* {{ bad }} **_Stare and hope_** — reading the code and waiting for the bug to reveal itself. This inspects the code but not the state. Fine as a 30-second first try; but a poor use of time for an extended attempt.
+* {{ bad }} **_Stare and hope_** — reading the code and waiting for the bug to reveal itself. This inspects the code but not the state. It is fine as a 30-second first try but a poor use of time for an extended attempt.
 * {{ bad }} **_Shotgun debugging_** — changing whatever looks suspicious and re-running to see whether it helped. Most such changes neither confirm nor eliminate any explanation, and unrelated edits accumulate.
 * {{ bad }} **Fixing the symptom instead of the cause.** The failure goes away and the defect stays.<br>
   {{ label_example }} %%Special-casing the input that fails, or wrapping the crash in an empty `catch` block.%%

@@ -37,7 +37,7 @@
 1. **_Experiment_** %%step 6%% -- run the smallest probe that distinguishes those outcomes: a breakpoint, an assertion, a targeted print.
 1. **_Conclude_** %%step 6%% -- reject the hypothesis, or record it as _supported so far_. A result that matches your prediction does not prove your hypothesis is the only one that fits, whereas one that does not is decisive. You stop not when an observation matches, but when your explanation accounts for the whole failure -- every symptom you saw, not only the one you probed.
 
-**Good record keeping is part of the scientific method**, for exmaple, keeping a debugging log, recording the hypothesis, prediction, observation, and conclusion.
+**Good record keeping is part of the scientific method.** For example, keep a debugging log that records the hypothesis, prediction, observation, and conclusion.
 
 {% call show_example() %}
 A debugging log for the cart example, in which `computeTotal()` empties the very list that `getItems()` handed it:
@@ -65,12 +65,12 @@ Rejecting hypothesis 1 is what suggested hypothesis 2.
 
 <box type="tip" seamless>
 
-**Sometimes the fault is in the test**, not in the code under investigation. Worth considering early, because it is easy to lose hours to a test that was wrong all along.
+**Sometimes the fault is in the test**, not in the code under investigation. It is worth considering early, because it is easy to lose hours to a test that was wrong all along.
 </box>
 
 ##### 2. Reproduce
 
-**A reliable reproduction makes every experiment cheap** and is a way to confirm afterwards that the fix worked. Reproducing means recreating everything the failure depends on e.g., the input data, the program version, the environment and configuration %%(i.e., operating system, locale, file paths, settings)%%, the sequence of actions, and the starting state, such as leftovers from a previous run.
+**A reliable reproduction makes every experiment cheap** and is a way to confirm afterwards that the fix worked. Reproducing means recreating everything the failure depends on, e.g., the input data, the program version, the environment and configuration %%(i.e., operating system, locale, file paths, settings)%%, the sequence of actions, and the starting state, such as leftovers from a previous run.
 
 **When you cannot reproduce a failure you can still investigate it**. Instead of running experiments you mine the evidence left behind: stack traces, logs, <tooltip content="a snapshot of the process's state at the moment it died">crash dumps</tooltip>, <tooltip content="what every thread was doing or waiting for">thread dumps</tooltip>, and the differences between runs that failed and runs that did not. The immediate goal becomes making the failure more observable or more frequent. Moving a bug from 'once a week' to 'one run in five' is real progress.
 
@@ -78,7 +78,7 @@ Rejecting hypothesis 1 is what suggested hypothesis 2.
 
 **Automate the reproduction as a test case as early as you can.** Turning "launch the app and perform these six steps" into a one-second command is what makes the hypothesis loop cheap, and it can become the regression test once you have a fix.
 
-**Why simplify? The smaller the failing case, the smaller the search space** -- every element you can remove while the failure persists eliminates a whole category of possible causes. Some directions you try:
+**Why simplify? The smaller the failing case, the smaller the search space** -- every element you can remove while the failure persists eliminates a whole category of possible causes. Some directions you can try:
 
 * **Shrink the input space**: Cut the input space in half, test each half, keep whichever still fails, repeat. When it works it is very cheap, and needs no insight into the code. But halving does not always work: sometimes neither half fails, because the failure needs two elements the halving separated.
 * **Simplify the code path**: Strip away unrelated features, configuration, and calls until only the failing core remains. Now you have less code to search for the defect.
@@ -92,7 +92,7 @@ A 500-line configuration file makes the app crash at startup. Halving gets nowhe
 **An origin is a place where the state could first have gone wrong**: before it the state is correct, after it the state is infected, and the cause sits at that boundary. This step often produces a list of candidate origins rather than a single answer. Some techniques you can follow:
 
 * **Reason backwards from the wrong value.** Ask which statements could have produced it, then which produced _their_ inputs. Following data and control dependencies backwards is called {{ show_term("backward slicing") }} — it narrows the candidates rather than pinpointing them, since a slice reliably contains every statement that could be responsible, usually along with some that could not.
-* **Explain the code to someone, line by line** (aka {{ show_term("rubber duck debugging") }}): explaining the code to a patient friend, a written explanation, to an AI, or even an inanimate object like a rubber duck — works for a real reason: articulating what each line does forces you to state assumptions you had taken for granted, and you often spot the wrong assumption mid-sentence %%("...then, that object is passed to ... wait, that doesn't sound right ... that object should not cross this layer!")%%.
+* **Explain the code to someone, line by line** (aka {{ show_term("rubber duck debugging") }}): explaining the code to a patient friend, in a written explanation, to an AI, or even to an inanimate object like a rubber duck works for a real reason: articulating what each line does forces you to state assumptions you had taken for granted, and you often spot the wrong assumption mid-sentence %%("...then, that object is passed to ... wait, that doesn't sound right ... that object should not cross this layer!")%%.
 * **Read the evidence you already have** before generating candidates from the code alone. An exception message names the expression that failed, a stack trace names the calls that led there, and a diff names what changed recently.
 
 ##### 5. Focus
@@ -100,7 +100,7 @@ A 500-line configuration file makes the app crash at startup. Halving gets nowhe
 **Candidate origins are not equally likely, and the order you check them in decides how long the search takes.**
 
 * **Prefer recently changed code to long-stable code, your code to library code, and library code to the compiler or the operating system.** This is a starting bias rather than a rule %%(i.e., it is possible for the bug to be in the library code or even the OS, although less likely)%%.
-* **Turn the chosen origin into a prediction before you check it.** State what you would observe if it is guilty and what you would observe if it is innocent. This makes your debugging more systematic, and helps you to narrow down the candiates faster.
+* **Turn the chosen origin into a prediction before you check it.** State what you would observe if it is guilty and what you would observe if it is innocent. This makes your debugging more systematic and helps you narrow down the candidates faster.
 
 ##### 6. Isolate
 
@@ -110,7 +110,7 @@ A 500-line configuration file makes the app crash at startup. Halving gets nowhe
 * **Binary search over versions can be used to find when the code used to work.** If it passed last week, the cause is in one of the commits since -- bisect the history rather than the code. `git bisect` automates this, and works best with small, self-contained commits. Martin Fowler calls this [Diff Debugging](https://martinfowler.com/bliki/DiffDebugging.html).
 * **Swap a suspect component for one you trust.** If the failure survives the swap, that component is very likely not responsible.
 * **Change one thing at a time**, or the outcome will not tell you which change produced it.
-* **Record the conclusion, then start the next turn of the loop** from the narrowed region -- until you find what needs to be fixed.
+* **Record the conclusion, then start the next turn of the loop** from the narrowed region until you find what needs to be fixed.
 
 {% call show_example() %}
 Binary search along the execution, on a run too long to watch: a 10,000-row import produces the right running total at the start and the wrong one at the end, and nothing in between is visible. Pause at row 5,000 and ask one question — is the total already wrong? If it is, the cause lies in the first half, so pause next at row 2,500; if it is not, pause at row 7,500. Fourteen such checks reduce 10,000 rows to one, and none of them requires understanding the code — only the ability to say whether the state is already wrong.
