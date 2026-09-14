@@ -16,12 +16,10 @@
 1. **What is each part responsible for?** Names, labels, and nearby text should make this clear.
 1. **What do the relationships mean?** Follow each arrow's direction, and check the legend for what an arrow means.
 
-**A single diagram need not explain the whole architecture, but it must communicate its chosen view without ambiguity.** Judge it against its stated purpose and the documentation it ships with: if the four questions cannot be answered from the diagram, its caption, and the text around it, something is missing — a useful thing to notice when reviewing a teammate's work.
-
 <div v-closeable alt="architecture diagram examples" id="architecture-diagram-examples">
 
 {% call show_example() %}
-Here are two real architecture diagrams, from actual projects, drawn by different teams in different notations. They describe systems unrelated to the invoice-manager example, which is exactly the situation you face when you join an unfamiliar project.
+Here are two real architecture diagrams, from actual projects, drawn by different teams in different notations.
 
 <tabs>
   <tab header="TEAMMATES">
@@ -38,7 +36,6 @@ Here are two real architecture diagrams, from actual projects, drawn by differen
   </tab>
 </tabs>
 
-Try the four questions on both. They organize their boxes differently, use different shapes, and label their arrows differently, yet both are legitimate. For each one, work out which of the four questions the diagram answers by itself, and which stay ambiguous until you read the documentation around it — real diagrams often leave some of the four to the accompanying text.
 {% endcall %}
 
 </div>

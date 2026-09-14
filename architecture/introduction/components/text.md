@@ -8,7 +8,7 @@
 
 <div id="body">
 
-**Three words do most of the work in architecture descriptions: components, interfaces, dependencies.**
+**Three concepts appear frequently in architecture descriptions: components, interfaces, dependencies.**
 
 **A {{ show_term("component") }} is a major part of the system with one coherent responsibility.**
 {% call show_example() %}
@@ -25,12 +25,12 @@
 `Storage` might offer `saveInvoices(invoices)` and `readInvoices()`, _and_ specify that a corrupt file causes a particular error rather than a crash.
 {% endcall %}
 
-**A {{ show_term("dependency") }} exists when one component relies on another to do its job.** Dependencies have a direction, and that direction matters more than almost anything else in an architecture.
+**A {{ show_term("dependency") }} exists when one component relies on another to do its job.** Dependencies have a direction.
 {% call show_example() %}
 `Logic` depends on `Storage`, because it cannot save without it. `Storage` does not depend on `Logic`: it can be compiled, tested, and understood without knowing that commands exist.
 {% endcall %}
 
-**A component is not a special programming construct.** There is no `component` keyword; a component is whatever unit of code the team agrees to treat as one part with one responsibility. It may be a separate library, a language-level module, or an entirely separate program reached over a network. Its agreed responsibility and interface make it a component, not its folder layout.
+**A component is not a special programming construct.** There is no `component` keyword; a component is whatever unit of code the team agrees to treat as one part with one responsibility. It may be a separate library, a language-level module, or an entirely separate program reached over a network.
 
 {% call show_example() %}
 In a Java project a component is often a package (or group of packages) plus a type declaring what it offers:
@@ -47,15 +47,7 @@ In a Java project a component is often a package (or group of packages) plus a t
 </tree>
 {% endcall %}
 
-**A dependency arrow describes reliance, not necessarily a method call.** Whether that reliance is a method call, a message, or a network request is exactly what the legend must tell you.
-{% call show_example() %}
-If a diagram shows `Logic` depends on `Storage` and its legend says an arrow means _depends on_, then some code in `Logic` relies on what `Storage` offers, and no code in `Storage` relies on `Logic`.
-{% endcall %}
-
-**Depending on the interface rather than a specific implementation is what makes a component replaceable.** Such a replacement works only if it honors the same behavior, including its failure behavior — matching method names is not enough.
-{% call show_example() %}
-If `Logic` relies on the `Storage` agreement rather than on `JsonStorage` directly, a `DatabaseStorage` can take its place with few changes elsewhere.
-{% endcall %}
+**A dependency arrow describes reliance, not necessarily a method call.** Whether that reliance is a method call, a message, or a network request is usually indicated in the <tooltip content="i.e., a description of which type of arrow/line indicates what">legend</tooltip>.
 </div>
 
 <div id="extras">
