@@ -7,13 +7,14 @@
 
 <div id="body">
 
-**Every way of looking inside a running program is a {{ show_term("probe") }}** — a means of answering one specific question about its state. The useful question is never "print statements or debugger?" but "what is the cheapest probe that answers _this_ question?" Some probes come out once the bug is found %%(e.g., a breakpoint or a temporary print statement)%%; others are meant to stay %%(e.g., a permanent log statement added at a component boundary)%%.
+**Every way of looking inside a running program is a {{ show_term("probe") }}** — a means of answering one specific question about its state. Here are some widely used probes:
 
-* **Print statements are the cheapest to start with and the most expensive to iterate with.** They need no setup, work in any environment, and survive across process and machine boundaries — but every new question costs an edit-build-run cycle, each edit is a chance to introduce a fresh defect, and leftovers reach production if you forget them.
+* **Print statements are the cheapest to start with and the most expensive to iterate with.** They are easy to insert, but each needs an edit-build-run cycle, each edit is a chance to introduce a fresh defect, and leftovers reach production if you forget them.
 * **Logging is the disciplined, permanent form of printing.** Leveled and filterable, log statements can stay in the code — so they are still there when the failure happens on a user's machine at 3 a.m., where no debugger can reach.
 * **Assertions are probes that check themselves.** Rather than printing a value for you to examine, an assertion states what it should be and fails immediately when it is not, turning a silent infection into a loud, located failure. If you use Java's `assert` statement, enable assertions in your run configuration or it will do nothing; test-framework (e.g., JUnit) assertions are separate and always run during testing.
-* **A debugger asks questions interactively, without changing the code at all.**
+* **A debugger is a tool that can attach itself to an executing program and can ask questions interactively**, without changing the code at all.
 
+The useful question is never "print statements or debugger or ___?" but "what is the cheapest probe that answers _this_ question?" Some probes come out once the bug is found %%(e.g., a temporary print statement)%%; others are meant to stay %%(e.g., a permanent log statement)%%.
 <box type="tip" seamless>
 
 As a rough guide:
@@ -27,7 +28,7 @@ As a rough guide:
 
 **A debugger lets you pause a running program, then inspect and control it from the inside, without modifying its code.** That last part is what makes it different in kind from printing: asking one more question costs seconds rather than another edit-build-run cycle.
 
-**Breakpoints determine where the program pauses.**
+**++Breakpoints++ determine where the program pauses.**
 
 * A **{{ show_term("line breakpoint") }}** pauses when execution reaches a given line.
 * A **{{ show_term("conditional breakpoint") }}** pauses only when a condition holds. This makes debugging the 4137th iteration of a loop feasible at all, and it is the feature beginners most often do not know exists.<br>
@@ -35,14 +36,10 @@ As a rough guide:
 * An **{{ show_term("exception breakpoint") }}** pauses at the moment an exception is thrown, before the stack unwinds and discards the state you need.
 * A **{{ show_term("field watchpoint") }}** pauses when a field's value changes rather than at a location — the right tool for "what is setting this to `null`?"
 
-<box type="tip" seamless>
 
-**Disable breakpoints rather than deleting them**, so that a debugging session can be paused and resumed.
-</box>
+**++Stepping commands++ determine how execution advances.** {{ show_term("step over") }} runs the next line, including any call it makes, as one step. {{ show_term("step into") }} enters the method being called. {{ show_term("step out") }} finishes the current method and pauses at its caller. {{ show_term("run to cursor") }} continues to a chosen line.
 
-**Stepping commands determine how execution advances.** {{ show_term("step over") }} runs the next line, including any call it makes, as one step. {{ show_term("step into") }} enters the method being called. {{ show_term("step out") }} finishes the current method and pauses at its caller. {{ show_term("run to cursor") }} continues to a chosen line.
-
-**The inspection views tell you what state the program is in.**
+**++Inspection views++ tell you what state the program is in.**
 
 * **The call stack shows how execution reached this point**, and selecting any frame reveals that method's variables. The cause is often several frames above where the program stopped.
 * **The variables view shows the values currently in scope**, and _watches_ track a chosen expression as you step.
@@ -62,22 +59,14 @@ A field watchpoint on `items` would not have helped here: `items` is assigned on
 
 <box type="tip" seamless>
 
-Two habits are worth forming:
-
-1. Set your first breakpoint _before_ the suspected region rather than at the failure, so you can watch the state go wrong.
-1. Remember that a debugger reports only _what_ the state is. The _why_ still comes from the hypothesis loop.
+Set your first breakpoint _before_ the suspected region rather than at the failure, so you can watch the state go wrong.
 </box>
-
-<box type="tip" seamless>
 
 **AI assistants are useful for some parts of debugging and unreliable for others.** They are good at explaining unfamiliar error messages, proposing candidate hypotheses, and serving as an always-available rubber duck. They are unreliable at diagnosing a defect in code they cannot run, and will produce confident, fluent, incorrect explanations. A systematic method is what makes them safe: treat any suggestion as a hypothesis, insist it be falsifiable, and verify it against the running program yourself.
-</box>
 
 ##### Reading stack traces
 
-**A stack trace is a precise report of where a program failed and the call path that led there** — yet beginners routinely scroll past it. Note its limit: the call path is exact, but how the program came to be in that state is not in the trace.
-
-Read it in this order:
+**A stack trace is a precise report of where a program failed and the call path that led there**. Read it in this order:
 
 1. **The exception type and message**, which frequently name the problem outright.
 1. **The topmost frame in _your_ code** — not the topmost frame overall, which is usually library or platform code doing exactly what it was asked.

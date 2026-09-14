@@ -38,7 +38,7 @@ A big part of debugging is the backward search for the defect by starting from t
 This chain also explains why bugs hide: a defect infects the state only when that line executes, and an infection becomes a failure only if it propagates out to something observable. So, a defect can sit in daily-executed code for months unnoticed.
 
 {% call show_example() %}
-A _running example_, reused throughout the related debugging topics of this textbook. A shopping cart prints the correct total, but then appears empty.
+The shopping cart code given below prints the correct total, but then the cart appears empty.
 
 ```java
 class Cart {
@@ -63,27 +63,23 @@ class Cart {
 }
 ```
 
-Take the cart's intended contracts to be these: computing a total must not change the cart, and `getItems()` lets callers read the items without owning the list.
+Cart's intended contracts: computing a total must not change the cart, and `getItems()` lets callers read the items without owning the list.
 
 * _Mistake_: the programmer assumed `getItems()` hands back a copy.
 * _Defect_: `getItems()` hands out the live internal list, which `computeTotal()` then empties — breaking both contracts at once.
 * _Infection_: after `computeTotal()` returns, the cart's own `items` list is empty.
 * _Failure_: the next attempt to display the cart shows nothing.
-
-A debugger stopped at the failure would be pointing at the display code, which is correct.
 {% endcall %}
 
 ##### Why debugging is hard
 
 **Some factors that make debugging hard are:**
 
-* **The distance between defect and failure**: the crash site is not always the crime scene; so focusing on the code around the error message might not yield results.
+* **The distance between defect and failure**: the crash site is not always the crime scene; so focusing on the code around the error message might not alway lead you to the cause.
 * **You cannot inspect everything** — a running program holds an enormous amount of state, changing at every step, and choosing which small part to look at is hard.
-* **Your mental model of the code is exactly the thing that is wrong**: if a wrong assumption caused you to create the defect, debugging while holding the same wrong assumption can reproduce the same blind spot. This is why debugging must be driven by evidence from the running program, not by reasoning alone.
+* **Wrong assumptions that caused the bug can hamper debugging as well**: if a wrong assumption caused you to create the defect, debugging while holding the same wrong assumption can reproduce the same blind spot. This is why debugging must be driven by evidence from the running program, not by reasoning alone.
 
 ##### How not to debug
-
-**Most unproductive debugging comes from having no method, rather than from using the wrong tool.**
 
 * {{ bad }} **_Stare and hope_** — reading the code and waiting for the bug to reveal itself. This inspects the code but not the state. It is fine as a 30-second first try but a poor use of time for an extended attempt.
 * {{ bad }} **_Shotgun debugging_** — changing whatever looks suspicious and re-running to see whether it helped. Most such changes neither confirm nor eliminate any explanation, and unrelated edits accumulate.
@@ -91,7 +87,7 @@ A debugger stopped at the failure would be pointing at the display code, which i
   {{ label_example }} %%Special-casing the input that fails, or wrapping the crash in an empty `catch` block.%%
 * {{ bad }} **Keeping no record of what you tried.** Without notes you will re-test explanations you already eliminated, lose your place when interrupted, and be unable to hand the problem over.
 
-**What these have in common is that they produce activity without producing information.** A productive debugging step is one that rules something out.
+**What these have in common is that they produce activity without producing useful information.** A productive debugging step is one that rules something out.
 
 **Adding temporary print statements is not necessarily bad.** A few prints chosen to answer a specific question are legitimate, and in production, embedded, or concurrent settings they are sometimes the only tool available. However, this technique alone is not enough to tackle most non-trivial bugs.
 

@@ -19,7 +19,7 @@
 <variable id="icon_example"><md>:fas-cube:</md></variable>
 <variable id="icon_embedding"><md>:glyphicon-log-in:</md></variable>
 <variable id="icon_exercise"><md>:fas-dumbbell:</md></variable>
-<variable id="icon_extra"><span class='badge rounded-pill bg-secondary'><md>:fas-plus: extra</md></span></variable>
+<variable id="icon_extra"><span class='badge rounded-pill bg-light'><md>(:fas-plus: extra)</md></span></variable>
 <variable id="icon_evidence"><md>:fas-briefcase:</md></variable>
 <variable id="icon_file">:fas-file:</variable>
 <variable id="icon_folder">:fas-folder:</variable>

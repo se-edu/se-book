@@ -19,7 +19,7 @@
 * **Look for the defect's relatives** — the same mistake was probably made in the sibling method, the other branch, or the block copy-pasted from this one.
 * **Verify against the reproduction, then run the full test suite.** A fix that resolves your failure while breaking two other things is not a fix.
 * **Add a regression test** that fails before the fix and passes after it. If you automated the reproduction earlier, you already have it.
-* **Remove your temporary probes** — stray print statements, leftover breakpoints, commented-out experiments. Assertions and logging you added deliberately to stay are not temporary probes; keep those.
+* **Remove your temporary probes** — stray print statements, leftover <tooltip content="a brekpoint is something you add when using a debugger tool, to pause the execution at a specific statement">breakpoints</tooltip>, commented-out experiments. Assertions and logging you added deliberately to stay are not temporary probes; keep those.
 * **Commit the fix on its own**, apart from unrelated cleanup, so that the history stays bisectable for the next bug.
 
 {% call show_example() %}

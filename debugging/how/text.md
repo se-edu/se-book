@@ -7,24 +7,21 @@
 
 <div id="body">
 
-**Systematic debugging follows roughly this sequence:**
+**Systematic debugging involves following tasks, whose first letters make up the mnemonic TRAFFIC** %%(credit: Andreas Zeller)%%.
 
-1. **_Track_** — state what the correct behavior is, and record the problem somewhere durable.
-1. **_Reproduce_** — make the failure happen on demand.
-1. **_Automate and simplify_** — turn the reproduction into a one-step test, and reduce it to the smallest case that still fails.
-1. **_Find origins_** — list the places where the state could first have gone wrong.
-1. **_Focus_** — pick the most likely origin, and state what it predicts.
-1. **_Isolate_** — run the check that decides, and conclude.
-1. **_Correct_** — fix the cause, confirm it, and guard against recurrence.
+* **rack**{.text-info} — state what the correct behavior is, and record the problem somewhere durable.{ texts="['T','R','A','F','F', 'I', 'C']" t-class="badge rounded-pill font-monospace text-bg-info mb-1 me-0 pe-0 fw-bold" }
+* **eproduce**{.text-info} — make the failure happen on demand.
+* **utomate and simplify**{.text-info} — turn the reproduction into a one-step test, and reduce it to the smallest case that still fails.
+* **ind origins**{.text-info} — list the places where the state could first have gone wrong.
+* **ocus**{.text-info} — pick the most likely candidate origin, and state what it predicts.
+* **solate**{.text-info} — run the check that decides if the candidate origin is the actual origin, and conclude.
+* **orrect**{.text-info} — fix the cause, confirm it, and guard against recurrence.
 
-<box type="tip" seamless>
+**TRAFFIC is a map rather than a mandatory sequence.** Some tasks can be done in a loop before it lands on the cause, and you can reorder the other tasks as you see fit.
 
-**The initials spell TRAFFIC**, a mnemonic for the debugging process %%(credit: Andreas Zeller)%%.
-</box>
+**The most common mistake is jumping straight to <span class="badge rounded-pill font-monospace text-bg-info fw-bold">C</span>.** Starting at 'correct' and working backwards is how shotgun debugging happens. This text below covers the six tasks TRAFFIC except C, which is covered separately.
 
-**Treat this as a map rather than a mandatory order.** Steps 4 to 6 form a loop that turns several times before it lands on the cause, and you can reorder the earlier steps as you see fit.
-
-**The most common mistake is jumping straight to step 7.** Starting at 'correct' and working backwards is how shotgun debugging happens. This text below covers steps 1 to 6; step 7 is covered separately.
+<div class="non-printable">
 
 <panel type="info" header="{{ icon_extra }} SIDEBAR: Scientific debugging" minimized >
 
@@ -52,14 +49,16 @@ Rejecting hypothesis 1 is what suggested hypothesis 2.
 {% endcall %}
 
 </panel>
-
+</div>
 
 <box type="tip" seamless>
 
 **Know when to stop for the day:** Debugging is unusually sensitive to fatigue, because the whole activity consists of holding a model of the program in your head.
 </box>
 
-##### 1. Track
+{% macro show_traffic_name(letter, rest) %}<span class="badge rounded-pill font-monospace text-bg-info pe-0 me-0 fw-bold">++{{ letter }}++</span><span class="text-info-emphasis">{{ rest }}</span>{% endmacro %}
+
+##### {{ show_traffic_name('T', 'rack') }}
 
 **The first step of debugging should be stating what the correct behavior is, and why.** Without that you have nothing to compare the program against, and you risk searching code that was right all along. State the expectation in a testable form: for this input, that exact result.
 
@@ -68,13 +67,13 @@ Rejecting hypothesis 1 is what suggested hypothesis 2.
 **Sometimes the fault is in the test**, not in the code under investigation. It is worth considering early, because it is easy to lose hours to a test that was wrong all along.
 </box>
 
-##### 2. Reproduce
+##### {{ show_traffic_name('R', 'eproduce') }}
 
-**A reliable reproduction makes every experiment cheap** and is a way to confirm afterwards that the fix worked. Reproducing means recreating everything the failure depends on, e.g., the input data, the program version, the environment and configuration %%(i.e., operating system, locale, file paths, settings)%%, the sequence of actions, and the starting state, such as leftovers from a previous run.
+**A reliable reproduction makes every experiment cheap** and is a way to confirm afterwards that the fix worked. Reproducing means recreating everything the failure depends on, e.g., the input data, the program version, the environment and <tooltip content="i.e., OS, locale, file paths, settings, etc.">configuration</tooltip>, the sequence of actions, and the starting state, such as leftovers from a previous run.
 
 **When you cannot reproduce a failure you can still investigate it**. Instead of running experiments you mine the evidence left behind: stack traces, logs, <tooltip content="a snapshot of the process's state at the moment it died">crash dumps</tooltip>, <tooltip content="what every thread was doing or waiting for">thread dumps</tooltip>, and the differences between runs that failed and runs that did not. The immediate goal becomes making the failure more observable or more frequent. Moving a bug from 'once a week' to 'one run in five' is real progress.
 
-##### 3. Automate and simplify
+##### {{ show_traffic_name('A', 'utomate and simplify') }}
 
 **Automate the reproduction as a test case as early as you can.** Turning "launch the app and perform these six steps" into a one-second command is what makes the hypothesis loop cheap, and it can become the regression test once you have a fix.
 
@@ -87,22 +86,22 @@ Rejecting hypothesis 1 is what suggested hypothesis 2.
 A 500-line configuration file makes the app crash at startup. Halving gets nowhere: neither half crashes, because the failure needs one setting from each. Removing settings one at a time from the full file isolates the pair — a `theme` entry and a `locale` entry, each harmless alone.
 {% endcall %}
 
-##### 4. Find origins
+##### {{ show_traffic_name('F', 'ind origins') }}
 
 **An origin is a place where the state could first have gone wrong**: before it the state is correct, after it the state is infected, and the cause sits at that boundary. This step often produces a list of candidate origins rather than a single answer. Some techniques you can follow:
 
 * **Reason backwards from the wrong value.** Ask which statements could have produced it, then which produced _their_ inputs. Following data and control dependencies backwards is called {{ show_term("backward slicing") }} — it narrows the candidates rather than pinpointing them, since a slice reliably contains every statement that could be responsible, usually along with some that could not.
-* **Explain the code to someone, line by line** (aka {{ show_term("rubber duck debugging") }}): explaining the code to a patient friend, in a written explanation, to an AI, or even to an inanimate object like a rubber duck works for a real reason: articulating what each line does forces you to state assumptions you had taken for granted, and you often spot the wrong assumption mid-sentence %%("...then, that object is passed to ... wait, that doesn't sound right ... that object should not cross this layer!")%%.
+* **Explain the code to someone, line by line** (aka {{ show_term("rubber duck debugging") }}): explaining the code to a patient friend, in a written explanation, to an AI, or even to an inanimate object like a rubber duck works for a real reason: articulating what each line does forces you to state assumptions you had taken for granted, and you often spot the wrong assumption mid-sentence %%("...then, that object is passed to ... wait, that can't be right ... that object should not cross this boundary!")%%.
 * **Read the evidence you already have** before generating candidates from the code alone. An exception message names the expression that failed, a stack trace names the calls that led there, and a diff names what changed recently.
 
-##### 5. Focus
+##### {{ show_traffic_name('F', 'ocus') }}
 
 **Candidate origins are not equally likely, and the order you check them in decides how long the search takes.**
 
 * **Prefer recently changed code to long-stable code, your code to library code, and library code to the compiler or the operating system.** This is a starting bias rather than a rule %%(i.e., it is possible for the bug to be in the library code or even the OS, although less likely)%%.
 * **Turn the chosen origin into a prediction before you check it.** State what you would observe if it is guilty and what you would observe if it is innocent. This makes your debugging more systematic and helps you narrow down the candidates faster.
 
-##### 6. Isolate
+##### {{ show_traffic_name('I', 'isolate') }}
 
 **Isolating means running one check, discarding the part of the search space it rules out, and repeating** until you find what needs to be fixed.
 
@@ -127,11 +126,15 @@ Binary search along the execution, on a run too long to watch: a 10,000-row impo
 * **Prefer immutability.** A value that cannot change cannot be changed wrongly, which removes an entire category of "what modified this?" investigations %%— including the one in the cart example%%.
 * **Develop incrementally, testing as you go.** When only twenty lines are new, the defect is almost certainly in those twenty lines. This is a high-value habit often abandoned under time pressure.
 * **Use the static checks you already have** — compiler warnings, IDE inspections, linters, `@Override`, generics, `final`. A defect caught here costs no debugging at all.
-* **Log at component boundaries**, so a failure reported from the field arrives with its context attached.
+* **Log at component boundaries**, so that logs can help you narrow the search to specific components.
 
 Each of these shortens the distance between defect and failure, which is the root of the difficulty.
 
 </box>
+
+##### {{ show_traffic_name('C', 'orrect') }}
+
+Covered in a separate section, titled _Fixing_.
 
 </div>
 
