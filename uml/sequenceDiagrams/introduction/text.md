@@ -16,8 +16,8 @@
 ```java
 class Workflow {
 
-    Step executeStep() {
-        Step step = new Step();
+    Step executeStep(Step step) {
+        step.init();
         if (step.isValid()) {
             step.execute();
         }
@@ -26,12 +26,18 @@ class Workflow {
 }
 
 class Step {
+    public boolean isValid() {
+        // ...
+    }
+    public void init() {
+        // ...
+    }
     public void execute() {
         // ...
     }
 }
 ```
-Here is the sequence diagram to model the interactions for the method call `producePrototype()` on a `Machine` object.
+Here is the sequence diagram to model the interactions for the method call `executeStep()` on a `Workflow` object.
 
 <pic eager class="tbg" src="{{baseUrl}}/uml/sequenceDiagrams/introduction/images/workflow.svg" width="518" />
 <p/>
