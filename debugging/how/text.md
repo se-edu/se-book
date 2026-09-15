@@ -25,14 +25,14 @@
 
 <panel type="info" header="{{ icon_extra }} SIDEBAR: Scientific debugging" minimized >
 
-**Steps 1 to 6 of TRAFFIC are the _scientific method_ applied to a program**: you have an unexplained phenomenon, you propose an explanation, and you test it. Applying it deliberately is what separates systematic debugging from guesswork.
+**Tasks TRAFFI of TRAFFIC map to the _scientific method_ applied to debugging a program**: you have an unexplained phenomenon, you propose an explanation, and you test it. Applying it deliberately is what separates systematic debugging from guesswork.
 
-1. **_Observe_** %%steps 1 to 3%% -- collect what you know: the input, the expected result, the actual result, and any state already inspected.
-1. **_Hypothesize_** %%steps 4 and 5%% -- propose a specific, verifiable explanation.<br>
+1. **_Observe_** -- collect what you know: the input, the expected result, the actual result, and any state already inspected.
+1. **_Hypothesize_** -- propose a specific, verifiable explanation.<br>
   {{ label_example }} %%"Something's wrong with the list" is not a hypothesis; "`items` is empty by the time `computeTotal()` returns" is.%%
-1. **_Predict_** %%step 5%% -- state what you would observe if the hypothesis were true, and if it were false.
-1. **_Experiment_** %%step 6%% -- run the smallest probe that distinguishes those outcomes: a breakpoint, an assertion, a targeted print.
-1. **_Conclude_** %%step 6%% -- reject the hypothesis, or record it as _supported so far_. A result that matches your prediction does not prove your hypothesis is the only one that fits, whereas one that does not is decisive. You stop not when an observation matches, but when your explanation accounts for the whole failure -- every symptom you saw, not only the one you probed.
+1. **_Predict_** -- state what you would observe if the hypothesis were true, and if it were false.
+1. **_Experiment_** -- run the smallest probe that distinguishes those outcomes: a breakpoint, an assertion, a targeted print.
+1. **_Conclude_** -- reject the hypothesis, or record it as _supported so far_. A result that matches your prediction does not prove your hypothesis is the only one that fits, whereas one that does not is decisive. You stop not when an observation matches, but when your explanation accounts for the whole failure -- every symptom you saw, not only the one you probed.
 
 **Good record keeping is part of the scientific method.** For example, keep a debugging log that records the hypothesis, prediction, observation, and conclusion.
 
