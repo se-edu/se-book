@@ -1,7 +1,7 @@
 {% from "common/macros.njk" import show_term with context %}
 <span id="title">Top-down and bottom-up design</span>
 
-<span id="prereqs"><panel src="../../multilevelDesign/what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Design → Design Approaches → Multi-Level Design → What%%" popup-url="{{ baseUrl }}/designApproaches/multilevelDesign/what" /></span>
+<span id="prereqs"><panel src="../../../architecture/architectureDiagrams/views/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Design → Architecture → Architecture Diagrams → Different diagrams of one system%%" popup-url="{{ baseUrl }}/architecture/architectureDiagrams/views" /></span>
 
 
 <span id="outcomes">{{ icon_outcome }} Can explain top-down and bottom-up design</span>

@@ -122,6 +122,7 @@ pageNav: 3
 ### Architecture
 
 <include src="../architecture/introduction/what/unit-inParent-asOutcome.md" boilerplate />
+<include src="../architecture/architectureDiagrams/views/unit-inParent-asOutcome.md" boilerplate />
 <include src="../architecture/architectureDiagrams/reading/unit-inParent-asOutcome.md" boilerplate />
 <include src="../architecture/architectureDiagrams/drawing/unit-inParent-asOutcome.md" boilerplate />
 <include src="../architecture/architecturalStyles/introduction/what/unit-inParent-asOutcome.md" boilerplate />
@@ -152,7 +153,6 @@ pageNav: 3
 
 ## Design approaches
 
-<include src="../designApproaches/multilevelDesign/what/unit-inParent-asOutcome.md" boilerplate />
 <include src="../designApproaches/topDownBottomUp/what/unit-inParent-asOutcome.md" boilerplate />
 <include src="../designApproaches/agileDesign/what/unit-inParent-asOutcome.md" boilerplate />
 

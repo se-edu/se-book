@@ -7,7 +7,7 @@
 
 <div id="body">
 
-**Architecture diagrams can differ in what they show and how much detail they show.** Two models, described below, organize them in different ways. Before that, let us first consider two common views of a system:
+**Architecture diagrams can differ in what they show and how much detail they show.** First consider two common views of a system:
 
 1. **A {{ show_term("logical view") }} shows the major parts and which parts depend on which.** It says nothing about where any of it runs.
 1. **A {{ show_term("deployment view") }} shows where the parts actually run.** For the desktop invoice manager the deployment view is almost boring: all four parts run inside one program, on the user's computer.
@@ -27,14 +27,62 @@ In this example, all the interesting structure is in the logical view. If a serv
 "This system has four components" and "this system runs on four computers" are entirely different statements, and one diagram that blurs them will mislead everyone who reads it.
 {% endcall %}
 
-**The {{ show_term("4+1 view model") }} extends the idea above by describing a system using five standard views.** Four cover the system's functionality, runtime processes, code organization, and deployment. The "+1" uses scenarios to show how the system works in specific situations.
+**++The {{ show_term("4+1 view model") }}++ extends the idea above by describing a system using five standard views.** Four cover the system's functionality, runtime processes, code organization, and deployment. The "+1" uses scenarios to show how the system works in specific situations.
 
 <box>
 
 <pic eager class="tbg" src="{{baseUrl}}/architecture/architectureDiagrams/views/images/fourPlusOne.svg" width="513" />
 </box>
 
-**The {{ show_term("C4 model") }} organizes diagrams of a system's static structure by level of detail.** Its four core levels zoom in from the system's surroundings to its code:
+Switching to the aspect of how much details a diagram show, **the design of a small system can be shown at a single level of detail.** One diagram can cover the entire system.
+
+<div v-closeable alt="single-level design example">
+
+{% call show_example() %}
+This class diagram of [se-edu/addressbook-level2](https://se-education.org/addressbook-level2) depicts the design of the entire software.
+
+<pic eager class="tbg" src="https://se-education.org/addressbook-level2/images/mainClassDiagram.png" width="600" />
+{% endcall %}
+
+</div>
+
+**The design of a bigger system needs to be created and shown at multiple levels**: higher-level diagram shows the major parts, and lower-level diagrams zoom into individual parts to show their internal design.
+
+<div v-closeable alt="multi-level design example">
+
+{% call show_example() %}
+This architecture diagram of [se-edu/addressbook-level3](https://se-education.org/addressbook-level3) depicts the high-level design of the software.
+
+<div class="tbg">
+<pic eager src="https://se-education.org/addressbook-level3/images/ArchitectureDiagram.png" width="300"/><br>
+
+<small>dashed arrows: dependencies<br>solid arrows: associations</small>
+</div>
+
+Lower-level designs of some components of the same software:
+
+<tabs>
+  <tab header="UI">
+
+<pic eager src="https://se-edu.github.io/addressbook-level3/images/UiClassDiagram.png" width="800" />
+
+  </tab>
+  <tab header="Logic" class="d-print-none">
+
+<pic eager src="https://se-edu.github.io/addressbook-level3/images/LogicClassDiagram.png" width="500" />
+
+  </tab>
+  <tab header="Storage" class="d-print-none">
+
+<pic eager src="https://se-edu.github.io/addressbook-level3/images/StorageClassDiagram.png" width="500" />
+
+  </tab>
+</tabs>
+{% endcall %}
+
+</div>
+
+**++The {{ show_term("C4 model") }}++ is a specific form of multi-level design views.** It organizes diagrams of a system's static structure into four core levels, which zoom in from the system's surroundings to its code:
 
 1. **A system context diagram shows the system, its users, and the other systems it interacts with.**
 1. **A container diagram zooms in to show the system's applications and data stores.** C4 calls each of these a _container_, which is not the same as a Docker container.
@@ -46,9 +94,11 @@ In this example, all the interesting structure is in the logical view. If a serv
 <pic eager class="tbg" src="{{baseUrl}}/architecture/architectureDiagrams/views/images/c4Levels.svg" width="722" />
 </box>
 
+{{ label_example }} %%The addressbook-level3 diagrams above roughly match the two lowest C4 levels: the architecture diagram is a component diagram, and the class diagrams are code diagrams.%%
+
 **Neither 4+1 nor C4 is a new diagram notation.** 4+1 organizes different kinds of architectural information, while C4 provides zoom levels for static structure. Their diagrams can use an established notation such as UML, or an ad hoc notation made up of boxes, arrows, and text labels.
 
-**Both models are meant for large systems**, larger than our invoice manage example. They add value when a system has many parts running in several places, and its architecture must be explained to readers who each need a different slice of it.
+**Both models are meant for large systems**, larger than our invoice manager example. They add value when a system has many parts running in several places, and its architecture must be explained to readers who each need a different slice of it.
 </div>
 
 <div id="extras">
