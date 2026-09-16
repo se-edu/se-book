@@ -7,7 +7,7 @@
 
 <div id="body">
 
-**A {{ show_term("Work Breakdown Structure (WBS)") }} depicts information about tasks and their details in terms of subtasks.** When managing projects, it is useful to divide the total work into smaller, well-defined units. Relatively complex tasks can be further split into subtasks. In complex projects, a WBS can also include prerequisite tasks and effort estimates for each task.
+**A {{ show_term("Work Breakdown Structure (WBS)") }} is a hierarchical decomposition of the project’s total scope into smaller, manageable pieces of work.** When managing projects, it is useful to divide the total work into smaller, well-defined units. Relatively complex tasks can be further split into subtasks. In complex projects, a WBS can also include prerequisite tasks and effort estimates for each task.
 
 {% call show_example() %}
 The high-level tasks for a single iteration of a small project could look like the following:
@@ -16,16 +16,16 @@ The high-level tasks for a single iteration of a small project could look like t
 
 | Task ID | Task                         | Estimated Effort       | Prerequisite Task |
 | ------- | ---------------------------- | ---------------------- | ----------------- |
-| A       | Analysis                     | 1 man day              | -                 |
-| B       | Design                       | 2 man day              | A                 |
-| C       | Implementation               | 4.5 man day            | B                 |
-| D       | Testing                      | 1 man day              | C                 |
-| E       | Planning for next version    | 1 man day              | D                 |
+| A       | Analysis                     | 1 person day              | -                 |
+| B       | Design                       | 2 person day              | A                 |
+| C       | Implementation               | 4.5 person day            | B                 |
+| D       | Testing                      | 1 person day              | C                 |
+| E       | Planning for next version    | 1 person day              | D                 |
 </div>
 {% endcall %}
 
 
-**The effort is traditionally measured in {{ show_term("man hour/day/month") }}** i.e., work that can be done by one person in one hour/day/month. The _Task ID_ is a label for easy reference to a task. Simple labeling is suitable for a small project, while a more informative labeling system can be adopted for bigger projects.
+**The effort is traditionally measured in {{ show_term("person hour/day/month") }}** i.e., work that can be done by one person in one hour/day/month. The _Task ID_ is a label for easy reference to a task. Simple labeling is suitable for a small project, while a more informative labeling system can be adopted for bigger projects.
 
 {% call show_example() %}
 A WBS for a game development project:

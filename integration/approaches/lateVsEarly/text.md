@@ -1,5 +1,5 @@
 {% from "common/macros.njk" import show_term with context %}
-<span id="title">Late and one time versus early and frequent</span>
+<span id="title">Late and one-time versus early and frequent</span>
 
 <span id="prereqs"><panel src="../../introduction/what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Implementation → Integration → Introduction → What%%" popup-url="{{ baseUrl }}/integration/introduction/what" /></span>
 

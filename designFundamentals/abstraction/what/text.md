@@ -11,7 +11,7 @@
 <include src="../../../common/definitions.md#def-abstraction" trim />
 </box>
 
-**The guiding principle of {{ show_term("abstraction") }} is that only details that are relevant to the current perspective or the task at hand need to be considered.** As most programs are written to solve complex problems involving large amounts of intricate details, it is impossible to deal with all these details at the same time. That is where abstraction can help.
+**The guiding principle of {{ show_term("abstraction") }} is that only details that are relevant to the current perspective or the task at hand need to be considered.** It is the process of hiding complex internal or less relevant details to focus only on essential or more important details. As most programs are written to solve complex problems involving large amounts of intricate details, it is impossible to deal with all these details at the same time. That is where abstraction can help.
 
 **{{ show_term("Data abstraction") }}: abstracting away the lower level data items and thinking in terms of bigger entities**<br>
 {{ label_example }} %%Within a certain software component, you might deal with a _user_ data type, while ignoring the details contained in the user data item such as _name_ and _date of birth_. These details have been ‘abstracted away’ as they do not affect the task of that software component.%%

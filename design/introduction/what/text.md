@@ -9,7 +9,7 @@
 
 <box type="definition" seamless>
 
-Design is the creative process of transforming the problem into a solution; the solution is also called design. <sub>-- :book: _Software Engineering Theory and Practice_, Shari Lawrence Pfleeger; Joanne M. Atlee</sub>
+Design is the creative process of transforming the problem into a solution; the solution is also called design.<br><sub>-- :book: _Software Engineering Theory and Practice_, Shari Lawrence Pfleeger; Joanne M. Atlee</sub>
 </box>
 
 **Software design has two main aspects:**

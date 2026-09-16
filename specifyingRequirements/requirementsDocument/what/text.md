@@ -7,15 +7,7 @@
 
 <div id="body">
 
-**Teams package these formats in different ways: some collect them into a single document that says what is to be built, while others keep each format where it is most useful and write down only what needs agreeing.**
-
-**Where there is such a document, product-led teams usually call it a {{ show_term("product requirements document") }} (PRD), or a product brief.** It typically carries the product's purpose, who it is for, the scope and the priorities within it, the stories or use cases that matter most, and the quality constraints the product has to meet.
-
-**A {{ show_term("software requirements specification") }} (SRS) is its more formal counterpart**, used where requirements have to be agreed precisely with a customer, audited, or contracted for. An SRS is heavier, more structured, and more stable than a PRD; the two are not interchangeable names for the same thing.
-
-{{ icon_important_big_red }} A single document is one common packaging, not a rule. Many teams keep user stories in a tracker, the glossary in a wiki, and prototypes in a design tool, and write down only what needs agreeing in one place.
-
-Each format earns its place by doing a different job:
+As you know, requirements are documented in different formats, each suited for a different purpose. Some examples:
 
 * **Prose** frames the problem and the product's purpose.
 * **A feature list** supports scope and delivery discussions.
@@ -24,12 +16,16 @@ Each format earns its place by doing a different job:
 * **A glossary** settles what shared terms mean.
 * **Supplementary requirements** capture what cuts across all of the above.
 
-**Choosing between them is a question of what you need to be precise about**, not of which notation is better.
+**Some teams document requirements in a single authoritative document while others may keep different requirements formats in different places**, %%e.g., user stories in a tracker, the glossary in a wiki, and prototypes in a design tool%%.
 
-**Working from such a document has a name: {{ show_term("specification-driven development") }} means starting from a specification that is clear, versioned, and testable, and using it both to direct the implementation and to judge what comes back.** The second half is the part that is easy to skip. A specification that only ever directs work, and is never used to check the result against, is a wish list.
+**Where there is a single document, there are two common variants:**
 
-**This matters more as producing a candidate implementation gets cheaper.** An assistant can draft questions, propose alternatives, or write code, but it cannot establish what stakeholders actually want, and it cannot decide a trade-off between things two of them both want. Those stay with the people accountable for the product, which is why writing the specification, and the judgment that goes into it, is the part of this work that does not get handed off.
+* **Product-led teams usually call it a {{ show_term("product requirements document") }} (PRD), or a product brief.** It typically carries the product's purpose, who it is for, the scope and the priorities within it, the stories or use cases that matter most, and the quality constraints the product has to meet.
+* **A {{ show_term("software requirements specification") }} (SRS) is its more formal counterpart**, used where requirements have to be agreed precisely with a customer, audited, or contracted for. An SRS is heavier, more structured.
 
+**{{ show_term("Specification-driven development") }} describes an approach that relies heavily on a specification that is clear, versioned, and testable, and uses it both to direct the implementation and to judge what comes back.**
+
+**This matters more as producing a candidate implementation gets cheaper.** An AI can draft questions, propose alternatives, or write code, but it cannot establish what stakeholders actually want, and it cannot decide a trade-off between things two of them both want. Writing the specification, especially the judgment that goes into it, does not get handed off to AI easily.
 </div>
 
 <div id="extras">

@@ -1,0 +1,1 @@
+<include src="tour-inPage-asFlat.md" boilerplate />

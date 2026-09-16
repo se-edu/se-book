@@ -7,7 +7,7 @@
 
 <div id="body">
 
-**A {{ show_term("milestone") }} is the end of a stage which indicates significant progress.** You should take into account dependencies and priorities when deciding on the features to be delivered at a certain milestone.<br>
+**A {{ show_term("milestone") }} marks significant progress, often at the end of a stage.** You should take into account dependencies and priorities when deciding on the features to be delivered at a certain milestone.<br>
 {{ label_example }} %%Each intermediate product release is a milestone.%%
 
 In some projects, it is not practical to have a very detailed plan for the whole project due to the uncertainty and unavailability of required information. In such cases, you can use a high-level plan for the whole project and a detailed plan for the next few milestones.

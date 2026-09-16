@@ -37,7 +37,7 @@ pageNav: 3
 
 <div id="def-actor">
 
-**Actor**: An actor (in a use case) is a role played by a user.  An actor can be a human or another system. Actors are not part of the system; they reside outside the system.
+**Actor**: An actor (in a use case) is a role played by an external entity, such as a human user or another system.
 
 </div>
 
