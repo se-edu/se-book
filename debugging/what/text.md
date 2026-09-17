@@ -75,7 +75,7 @@ Cart's intended contracts: computing a total must not change the cart, and `getI
 
 **Some factors that make debugging hard are:**
 
-* **The distance between defect and failure**: the crash site is not always the crime scene; so focusing on the code around the error message might not alway lead you to the cause.
+* **The distance between defect and failure**: the crash site is not always the crime scene; so focusing on the code around the error message might not always lead you to the cause.
 * **You cannot inspect everything** — a running program holds an enormous amount of state, changing at every step, and choosing which small part to look at is hard.
 * **Wrong assumptions that caused the bug can hamper debugging as well**: if a wrong assumption caused you to create the defect, debugging while holding the same wrong assumption can reproduce the same blind spot. This is why debugging must be driven by evidence from the running program, not by reasoning alone.
 
