@@ -7,7 +7,7 @@
 
 <div id="body">
 
-**Requirements are documented in different formats, each suited for a different purpose** as you know. Some examples:
+**Requirements are documented in different formats, each suited to a different purpose.** Some examples:
 
 * _Prose_ frames the problem and the product's purpose.
 * _A feature list_ supports scope and delivery discussions.
@@ -16,11 +16,11 @@
 * _A glossary_ settles what shared terms mean.
 * _Supplementary requirements_ capture what cuts across all of the above.
 
-**Some teams document requirements in a single authoritative document while others may keep different requirements formats in different places**, %%e.g., user stories in a tracker, the glossary in a wiki, and prototypes in a design tool%%.
+**Some teams document requirements in a single document while others may keep different requirements formats in different places**, %%e.g., user stories in a tracker, the glossary in a wiki, and prototypes in a design tool%%.
 
 **Where there is a single document, there are two common variants:**
 
-* **Product-led teams usually call it a {{ show_term("product requirements document") }} (PRD), or a product brief.** It typically carries the product's purpose, who it is for, the scope and the priorities within it, the stories or use cases that matter most, and the quality constraints the product has to meet.
+* **Product-led teams usually call it a {{ show_term("product requirements document") }} (PRD), or a {{ show_term("product brief") }}.** It typically carries the product's purpose, who it is for, the scope and the priorities within it, the stories or use cases that matter most, and the quality constraints the product has to meet.
 * **A {{ show_term("software requirements specification") }} (SRS) is its more formal counterpart**, used where requirements have to be agreed precisely with a customer, audited, or contracted for. An SRS is heavier, more structured.
 
 **A requirements document explains the problem and the required outcomes, whereas a {{ show_term("software specification") }} defines the system's behavior precisely enough to implement and verify it.**
