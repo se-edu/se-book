@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import show_term with context %}
+{% from "common/macros.njk" import show_term, show_example with context %}
 <span id="title">What</span>
 
 <span id="prereqs"><panel src="../../unitTesting/what/unit-inElsewhere-asFlat.md" boilerplate header="%%{{ icon_prereq }} Quality Assurance → Testing → Unit Testing → What →%%" popup-url="{{ baseUrl }}/testing/testingTypes/unitTesting/what" /></span>
@@ -7,8 +7,11 @@
 
 <div id="body">
 
-**{{ show_term("Integration testing") }}: testing whether different parts of the software _work together_ (i.e., integrate) as expected.** Integration tests aim to discover bugs in the 'glue code' related to how components interact with each other. These bugs are often the result of misunderstanding what the parts are supposed to do vs what the parts are actually doing.<br>
-{{ label_example }} %%Suppose a class `Car` uses classes `Engine` and `Wheel`. If the `Car` class assumed a `Wheel` can support a speed of up to 200 mph but the actual `Wheel` can only support a speed of up to 150 mph, it is the integration test that is supposed to uncover this discrepancy.%%
+**{{ show_term("Integration testing") }}: testing whether different parts of the software _work together_ (i.e., integrate) as expected.** Integration tests aim to discover bugs in the 'glue code' related to how components interact with each other. These bugs are often the result of misunderstanding what the parts are supposed to do vs what the parts are actually doing.
+
+{% call show_example() %}
+Suppose a class `Car` uses classes `Engine` and `Wheel`. If the `Car` class assumed a `Wheel` can support a speed of up to 200 mph but the actual `Wheel` can only support a speed of up to 150 mph, it is the integration test that is supposed to uncover this discrepancy.
+{% endcall %}
 
 </div>
 

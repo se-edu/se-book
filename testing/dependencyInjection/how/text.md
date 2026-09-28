@@ -7,14 +7,13 @@
 
 <div id="body">
 
-**Polymorphism can be used to implement dependency injection**, as can be seen in the example given in <trigger trigger="click" for="modal:useDi-stub">[Quality Assurance → Testing → Unit Testing → Stubs]</trigger> where a stub is injected to replace a dependency.
+**Polymorphism can be used to implement dependency injection**, as can be seen in the example given in <trigger trigger="click" for="modal:useDi-stub">[Quality Assurance → Testing → Unit Testing → Stubs]</trigger> where a stub is injected to replace a dependency. Another example is given below:
 
 <modal large header="" id="modal:useDi-stub">
   <include src="../../testingTypes/unitTesting/stubs/unit-inElsewhere-asFlat.md" boilerplate/>
 </modal>
 
 {% call show_example() %}
-Another use of polymorphism to implement dependency injection:
 
 Suppose you want to unit test `Payroll#totalSalary()` given below. The method depends on the `SalaryManager` object to calculate the return value. Note how the `setSalaryManager(SalaryManager)` can be used to inject a `SalaryManager` object to replace the current `SalaryManager` object.
 
