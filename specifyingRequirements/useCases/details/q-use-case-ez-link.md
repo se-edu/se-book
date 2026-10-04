@@ -20,7 +20,7 @@ Complete the following use case (MSS, extensions, etc.). Note that you should no
       <li>System: EZ-Link machine (those found at MRTs)</li>
       <li>Use case: UC01 top-up EZ-Link card</li>
       <li>Actor: EZ-Link card user</li>
-      <li>Preconditions: All hardware in working order.</li>
+      <li>Preconditions: No other transaction in progress.</li>
       <li>Guarantees: MSS → the card will be topped-up.</li>
       <li>MSS:
         <ol>

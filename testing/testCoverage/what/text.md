@@ -39,7 +39,7 @@ Note 1: A case where both conditions are `true` is needed because most execution
 {% call show_example() %}
 Consider the following Java method.
 
-```java
+```java {.line-numbers}
 void findRate(int input) {
     if (input == 0) {
         return 0;
@@ -55,9 +55,9 @@ void findRate(int input) {
 
 It has 3 paths, as follows:
 
-1. enter -> `2` -> `3` -> exit (can be triggered by input `0`)
-1. enter -> `2` -> `5` -> `6`  -> `7` -> exit (can be triggered by input `-5`)
-1. enter -> `2` -> `5` -> `6`  -> `9` -> exit (can be triggered by input `8`)
+1. enter → `2` → `3` → exit (can be triggered by input `0`)
+1. enter → `2` → `5` → `6`  → `7` → exit (can be triggered by input `-5`)
+1. enter → `2` → `5` → `6`  → `9` → exit (can be triggered by input `8`)
 
 So, to achieve 100% path coverage, we need at least 3 test cases (e.g., `0`, `-5`, `8`).
 {% endcall %}
@@ -65,7 +65,7 @@ So, to achieve 100% path coverage, we need at least 3 test cases (e.g., `0`, `-5
 {% call show_example() %}
 A loop can increase the path count greatly.
 
-```java
+```java {.line-numbers}
 void sayHello(List<String> names) {
     for (String n : names) {
         System.out.println(n);
@@ -75,9 +75,9 @@ void sayHello(List<String> names) {
 
 The number of paths through this method is very large, as each possible length of `names` produces a unique path.
 
-1. enter -> `2` -> exit (if `names` is empty)
-1. enter -> `2` -> `3` -> exit (if `names` has one entry)
-1. enter -> `2` -> `3` ->  `2` -> `3` -> exit (if `names` has two entries)
+1. enter → `2` → exit (if `names` is empty)
+1. enter → `2` → `3` → exit (if `names` has one entry)
+1. enter → `2` → `3` →  `2` → `3` → exit (if `names` has two entries)
 1. ...
 
 So, achieving 100% path coverage of this method will be extremely difficult.

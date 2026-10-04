@@ -1,4 +1,4 @@
-{% from "common/macros.njk" import show_term with context %}
+{% from "common/macros.njk" import show_term, show_example with context %}
 <span id="title">Interfaces</span>
 
 <span id="prereqs"></span>
@@ -9,11 +9,18 @@
 
 **An {{ show_term("interface") }} is a behavior specification** i.e., a collection of <tooltip content="Just the method signature without any implementation">method specifications</tooltip>. If a class <tooltip content="implements all methods specified in an interface">implements the interface</tooltip>, it means the class is able to support the behaviors specified by that interface.
 
->There are a number of situations in software engineering when it is important for disparate groups of programmers to agree to a "contract" that spells out how their software interacts. Each group should be able to write their code without any knowledge of how the other group's code is written. Generally speaking, interfaces are such contracts. <sub>--[Oracle Docs on Java]({{ java_tutorial }}/java/IandI/createinterface.html)<sub><br>
-{{ label_example }} %%Suppose `SalariedStaff` is an interface that contains two methods `setSalary(int)` and `getSalary()`. `AcademicStaff` can declare itself as _implementing_ the `SalariedStaff` interface, which means the `AcademicStaff` class must implement all the methods specified by the `SalariedStaff` interface i.e., `setSalary(int)` and `getSalary()`.%%
+>There are a number of situations in software engineering when it is important for disparate groups of programmers to agree to a "contract" that spells out how their software interacts. Each group should be able to write their code without any knowledge of how the other group's code is written. Generally speaking, interfaces are such contracts. <sub>--[Oracle Docs on Java]({{ java_tutorial }}/java/IandI/createinterface.html)</sub>
 
-**A class implementing an interface results in an _is-a_ relationship**, just like in class inheritance.<br>
-{{ label_example }} %%In the example above, `AcademicStaff` _is a_ `SalariedStaff`.  An `AcademicStaff` object can be used anywhere a `SalariedStaff` object is expected e.g., `SalariedStaff ss = new AcademicStaff()`.%%
+{% call show_example() %}
+Suppose `SalariedStaff` is an interface that contains two methods `setSalary(int)` and `getSalary()`. `AcademicStaff` can declare itself as _implementing_ the `SalariedStaff` interface, which means the `AcademicStaff` class must implement all the methods specified by the `SalariedStaff` interface i.e., `setSalary(int)` and `getSalary()`.
+{% endcall %}
+
+**A class implementing an interface results in an _is-a_ relationship**, just like in class inheritance.
+
+{% call show_example() %}
+In the example above, `AcademicStaff` _is a_ `SalariedStaff`.  An `AcademicStaff` object can be used anywhere a `SalariedStaff` object is expected<br>
+e.g., `SalariedStaff ss = new AcademicStaff()`
+{% endcall %}
 
 </div>
 
