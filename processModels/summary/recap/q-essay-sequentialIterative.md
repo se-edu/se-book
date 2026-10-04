@@ -61,7 +61,7 @@ g) There is no single right answer; what matters is whether the reasons come fro
 
 An iterative approach is the easier one to defend. The nurses cannot state what they want until they have used something, so requirements will only become clear through feedback on early versions -- exactly the case a sequential approach handles badly. Getting a screen in front of them early is the fastest way to find out what the routine actually needs.
 
-The regulator's requirement is not a reason to abandon that. It is a reason to adapt it: produce and keep the records the regulator wants at each iteration, rather than treating documentation as something a sequential project does and an iterative one skips. Other defensible adaptations include a longer first iteration to establish the parts of the system that clinical safety depends on, or a sequential stage for those parts and iterative work for the rest.
+Produce and keep the records the regulator wants at each iteration. Other defensible adaptations include a longer first iteration to establish the parts of the system that clinical safety depends on, or a sequential stage for those parts and iterative work for the rest.
 
 </panel>
 </panel>

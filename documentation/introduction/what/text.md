@@ -27,7 +27,7 @@
 </div>
 
 2. **Documentation for {{ show_term("developer-as-maintainer") }}**: There is a need to document how a system or a component is designed, implemented and tested so that other developers can maintain and evolve the code. Writing documentation of this type is harder because of the need to explain complex internal details. However, given that readers of this type of documentation usually have access to the source code itself, only _some_ information needs to be included in the documentation, as code (and code comments) can also serve as a complementary source of information.<br>
-{{ label_example }} %%[se-edu/addressbook-level4 Developer Guide](https://se-edu.github.io/addressbook-level4/DeveloperGuide.html#design)%%
+{{ label_example }} %%[se-edu/addressbook-level3 Developer Guide](https://se-edu.github.io/addressbook-level3/DeveloperGuide.html#design)%%
 
 Another view proposed by Daniele Procida in [this article](https://www.divio.com/blog/documentation/) is as follows:
 
@@ -89,7 +89,7 @@ Analogy: a reference encyclopedia article
 
 </blockquote>
 
-**Software documentation (applies to both user-facing and developer-facing) is best kept in a text format** for ease of version tracking. **A writer-friendly source format is also desirable** because non-programmers (e.g., technical writers) may need to author/edit such documents. As a result, formats such as Markdown, AsciiDoc, and PlantUML are often used for software documentation.
+**Software documentation (applies to both user-facing and developer-facing) is best kept in a text format** for ease of version tracking. **A writer-friendly source format is also desirable** because non-programmers (e.g., technical writers) may need to author/edit such documents. As a result, software documentation often uses text formats such as Markdown, together with static site generators such as Jekyll and diagramming tools such as PlantUML and Mermaid.
 
 </div>
 

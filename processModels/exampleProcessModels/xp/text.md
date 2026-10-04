@@ -32,8 +32,6 @@ The following description was adapted from the [XP home page](http://www.extreme
 * the design is refactored constantly, rather than in a cleanup phase;
 * two programmers write the code together at one keyboard, so it is reviewed as it is written rather than in a scheduled review ({{ show_term("pair programming") }}).
 
-**That is the same argument iterative models make about the whole lifecycle**, applied to individual development practices instead: shorten the gap between doing something and finding out whether it worked.
-
 </div>
 
 <div id="extras">

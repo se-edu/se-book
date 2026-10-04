@@ -11,7 +11,7 @@
 <include src="../../common/definitions.md#def-liskov-substitution-principle" trim />
 </box>
 
-LSP sounds the same as <trigger large trigger="click" for="modal:lsp-substitutability">substitutability</trigger> but it goes beyond substitutability; **{{ show_term("LSP") }} implies that a subclass should not be more restrictive than the behavior specified by the superclass.** As you know, Java has language support for substitutability. However, if LSP is not followed, substituting a subclass object for a superclass object can break the functionality of the code.
+LSP sounds the same as <trigger large trigger="click" for="modal:lsp-substitutability">substitutability</trigger> but it goes beyond substitutability; **{{ show_term("LSP") }} implies that a subclass should not be more restrictive than the behavior specified by the superclass.** As you know, <popover content="i.e., Java accepts an object of a subclass where an object of a superclass is expected">Java has language support for substitutability.</popover> However, if LSP is not followed, substituting a subclass object for a superclass object can break the functionality of the code.
 
 <modal large header="Textbook {{ icon_embedding }}" id="modal:lsp-substitutability">
   <include src="../../oop/inheritance/substitutability/unit-inElsewhere-asFlat.md" boilerplate/>

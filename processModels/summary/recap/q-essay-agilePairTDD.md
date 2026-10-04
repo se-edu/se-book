@@ -16,11 +16,10 @@ Find out more about the following three topics and give at least three arguments
 * Less chance of building the wrong product (because of frequent customer feedback).
 * Fewer resources wasted on bureaucracy, over-documenting, contract negotiations.
 
-Arguments against agile processes (not necessarily true):
+Arguments against agile processes:
 
-* It is 'just hacking'. Not very systematic. No discipline.
 * It is hard to know in advance the exact final product.
-* It does not give enough attention to documentation.
+* Agile processes give less attention to documentation.
 * Lack of management control (too much freedom given to developers).
 
 (b) Arguments in favor of pair programming:

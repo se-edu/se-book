@@ -25,11 +25,7 @@ Some concerns in a payroll application:
 {{ label_example }} %%If the code related to _persistence_ is separated from the code related to _security_, a change to how the data are persisted will not need changes to how the security is implemented.%%
 
 **This principle can be applied at the class level, as well as at higher levels.**<br>
-{{ label_example }} %%The <trigger trigger="click" for="modal:soc-layered">n-tier architecture</trigger> utilizes this principle. Each layer in the architecture has a well-defined functionality that has no functional overlap with the other layers.%%
-
-<modal header="Textbook {{ icon_embedding }}" id="modal:soc-layered">
-  <include src="../../architecture/architecturalStyles/layered/what/unit-inElsewhere-asPanelBody.md" boilerplate/>
-</modal>
+{{ label_example }} %%An application can be divided into _layers_, each with a well-defined responsibility that does not overlap with the others.%%
 
 **This principle should lead to higher <trigger trigger="click" for="soc-cohesion">cohesion</trigger> and lower <trigger trigger="click" for="soc-coupling">coupling</trigger>.**
 

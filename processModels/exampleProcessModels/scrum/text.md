@@ -24,7 +24,7 @@
 
 **Scrum enables self-organizing teams**, which rely on frequent and direct communication among all team members and disciplines rather than on documents handed from one to the next.
 
-**Scrum assumes that customers will change their minds about what they want** (often called requirements churn) **and that unforeseen problems cannot be planned for in advance.** It therefore takes an empirical approach: instead of trying to define the problem fully up front, it maximizes the team's ability to deliver quickly and respond to requirements as they emerge.
+**Scrum assumes that customers will change their minds about what they want** (often called _requirements churn_) **and that unforeseen problems cannot be planned for in advance.** It therefore takes an empirical approach: instead of trying to define the problem fully up front, it maximizes the team's ability to deliver quickly and respond to requirements as they emerge.
 
 <pic eager src="{{baseUrl}}/processModels/exampleProcessModels/scrum/images/diagram.png" height="250" />
 <p/>
