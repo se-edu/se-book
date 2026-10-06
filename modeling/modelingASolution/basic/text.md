@@ -74,9 +74,10 @@ Given below are the interactions between the player and the `TextUi` for the who
 
 <div v-closeable alt="Tic-Tac-Toe Video" class="non-printable">
 
-{{ icon_video }} Defining the architecture-level APIs for a small Tic-Tac-Toe game:
-
-@[youtube](Un80XoRT1ME)
+<panel type="seamless" expanded>
+  <div slot="header"><span style="font-size: 100%;" class="badge rounded-pill bg-danger">{{ icon_video }} Video</span><md> Defining the architecture-level APIs for a small Tic-Tac-Toe game</md></div>
+<iframe src="https://mediaweb.ap.panopto.com/Panopto/Pages/Embed.aspx?id=66b6c984-b730-42f1-baff-b4da00902410&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" style="width: 684px; height: 513px; border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+</panel>
 
 </div>
 
