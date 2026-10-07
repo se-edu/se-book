@@ -7,9 +7,9 @@
 <div id="body">
 
 **Pros:**
-* easy to apply 
-* effective in achieving its goal with minimal extra work
-* provides an easy way to access the singleton object from anywhere in the codebase
+* Easy to apply.
+* Effective in achieving its goal with minimal extra work.
+* Provides an easy way to access the singleton object from anywhere in the codebase.
 
 **Cons:**
 * The singleton object acts like a global variable that increases coupling across the codebase.

@@ -1,4 +1,4 @@
-<panel header="{{ icon_Q_A }} Defensive programming">
+<panel header="{{ icon_Q_A }} Statements about defensive programming">
 
 Defensive programming,
 

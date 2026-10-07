@@ -12,8 +12,8 @@ The suitable degree of defensiveness depends on many factors such as:
 
 * How critical is the system?
 * Will the code be used by programmers other than the author?
-* The level of programming language support for defensive programming
-* The overhead of being defensive
+* The level of programming language support for defensive programming.
+* The overhead of being defensive.
 
 </div>
 

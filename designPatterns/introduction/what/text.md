@@ -19,7 +19,7 @@ Two recurring design problems:
 
 | Design Context  | Recurring Problem
 | --------------- | -----------------
-| Assembling a system that makes use of other existing systems implemented using different technologies | What is the best architecture?
+| Assembling a system that makes use of other existing systems implemented using different technologies | How to connect components using different technologies?
 | UI needs to be updated when the data in the application backend changes | How to initiate an update to the UI when data changes without coupling the backend to the UI?
 {% endcall %}
 

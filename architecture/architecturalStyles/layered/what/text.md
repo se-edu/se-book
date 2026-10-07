@@ -7,16 +7,16 @@
 <div id="body">
 {{ show_aspect("This style focuses on how the code inside a program is organized.") }}
 
-**In the {{ show_term("layered") }} style, the software is divided into layers whose dependencies all point one way — downward.** Higher layers use services provided by lower ones; lower layers know nothing about the layers above.
+**In the {{ show_term("layered") }} style, the software is divided into layers whose dependencies all point downward.** Higher layers use services provided by lower ones; lower layers know nothing about the layers above.
 
 <pic eager class="tbg" src="{{baseUrl}}/architecture/architecturalStyles/layered/what/images/layered.svg" width="438" />
 
-**Layered designs differ in how strictly they enforce the separation.** In _strict_ (or _closed_) layering, a layer may use only the layer immediately below it. In the more common _relaxed_ form, a layer may use any lower layer, skipping intermediate ones. **What both share, and what actually matters, is that dependencies never point back up.** Because a lower layer depends on nothing above it, you can understand, test, and replace it on its own. The moment `Storage` calls back into `Ui` to show an error dialog, that property is lost and the two must be understood together.
+**Layered designs differ in how strictly they enforce the separation.** In _strict_ (or _closed_) layering, a layer may use only the layer immediately below it. In the more common _relaxed_ form, a layer may use any lower layer, skipping intermediate ones. In both, dependencies never point back up. Because a lower layer depends on nothing above it, you can understand, test, and replace it without being concerned about any layers above. In contrast, when a layer can depend on both higher and lower layers, more parts of the system needs to be considered when changing something in a given layer.
 
 {% call show_example() %}
 The invoice manager follows relaxed layering, as `Logic` depends on `Storage` as well as `Model`. Operating systems and network communication software are the classic examples of layering.
 
-<pic src="{{ baseUrl }}/architecture/introduction/what/images/architecture.png" /><pic eager class="tbg" src="{{baseUrl}}/architecture/architecturalStyles/layered/what/images/layeredExamples.svg" width="233" />
+<pic eager class="tbg" src="{{baseUrl}}/architecture/architecturalStyles/layered/what/images/layeredExamples.svg" width="233" />
 
 {% endcall %}
 

@@ -7,6 +7,8 @@
 
 <div id="body">
 
+When an association has a multiplicity of `1` (i.e., it is compulsory for the variable to hold an object), a defensive programmer can enforce that requirement in the code.
+
 {% call show_example() %}
 Consider two classes, `Account` and `Guarantor`, with an association as shown in the following diagram:
 
