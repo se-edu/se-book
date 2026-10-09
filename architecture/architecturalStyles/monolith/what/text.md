@@ -18,7 +18,7 @@
 An invoice manager with `Ui`, `Logic`, `Model`, and `Storage` shipped as one program is a modular monolith.
 {% endcall %}
 
-**"Monolith" is not a synonym for "badly structured."** This is the most common misunderstanding. The word describes _how the system is deployed_, not _how well it is organized_. A tangled ball of mud and a disciplined modular monolith share a deployment shape but differ enormously inside; what separates them is whether the internal components and dependencies are real.
+**"Monolith" is not a synonym for "badly structured."** The word describes _how the system is deployed_, not _how well it is organized_. A monolith can have a tangled internal structure or a disciplined modular internal structure.
 <box>
 
 <puml src="images/monolithVsModularMonolith.puml" width="550" />

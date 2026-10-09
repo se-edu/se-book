@@ -1,4 +1,4 @@
-<panel header="{{ icon_Q_A }} True or False?">
+<panel header="{{ icon_Q_A }} Defining component APIs early: True or False?">
 
 Defining component APIs early is useful for developing components in parallel.
 

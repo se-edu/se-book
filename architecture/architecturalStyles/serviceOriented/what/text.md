@@ -13,18 +13,18 @@
 **The {{ show_term("service-oriented architecture") }} (SOA) style organizes a system around such network-accessible services**, often to connect capabilities owned by different applications or organizations.
 
 {% call show_example() %}
-Suppose one company provides a service for browsing and buying merchandise, and a bank provides a service for charging its credit cards. A third party can build an online bookshop that combines them — letting customers buy books and pay by card — even though all three systems are built on different platforms.
+Suppose one company provides a service for browsing and buying merchandise, and a bank provides a service for charging its credit cards. A third party can build an online bookshop that combines them -- letting customers buy books and pay by card -- even though all three systems are built on different platforms.
 
 <puml src="images/composingServices.puml" width="383" />
 
 <small>%%Each arrow is a call over a network, through a published interface. Three owners, three platforms: the bookshop depends on what each service promises, not on how that service is built.%%</small>
 {% endcall %}
 
-**Early SOA was strongly associated with _XML web services_ and the SOAP standard; modern services usually exchange much simpler messages, most often JSON over ordinary HTTP.** The architectural idea — published, network-accessible, platform-independent interfaces — does not depend on the message format.
+**Early SOA was strongly associated with _XML web services_ and the SOAP standard; modern services usually exchange much simpler messages, most often JSON over ordinary HTTP.** The architectural idea -- published, network-accessible, platform-independent interfaces -- does not depend on the message format.
 
-**The {{ show_term("microservice") }} style builds one product as a collection of independently deployable services**, each focused on a capability and usually owning the data behind its interface. **_Micro_ does not prescribe a line count:** independent deployability around a focused responsibility matters far more than physical size. A payment service may be substantial and still be a microservice, if it can be released without redeploying anything else.
+**The {{ show_term("microservice") }} style builds one product as a collection of independently deployable services**, each focused on a capability and usually owning the data behind its interface. _Micro_ does not necessarily mean small. Independent deployability around a focused responsibility matters far more than size. A payment service may be substantial and still be a microservice, if it can be released without redeploying anything else.
 
-**Microservices are best understood by contrast with the modular monolith.** Both organize a system into components with clear responsibilities; the difference is where the boundaries fall.
+**Microservices are best understood by contrast with the modular monolith.** Both organize a system into components with clear responsibilities; the difference is where the boundaries are.
 <box>
 
 <puml src="images/monolithVsMicroservices.puml" width="600" />
@@ -41,9 +41,7 @@ Suppose one company provides a service for browsing and buying merchandise, and 
 | Testing and debugging | Build and inspect one thing | Start and coordinate many |
 | Best fit | One team releasing one product | Several teams needing independent releases |
 
-**Microservices trade operational simplicity for team and deployment independence.** If several teams each own a service, each can release or scale its service without redeploying the others — a large benefit at that scale. In exchange, calls that were method calls become network requests that can time out, no single store can answer "is this data consistent?", and a failing service can drag down the ones that depend on it.
-
-**Good module boundaries make later extraction easier, but never automatic.** The code may move cleanly while the data does not: a boundary that separates two things previously updated together in one local transaction forces a decision about what happens when one update succeeds and the other fails — a problem that did not exist before the split.
+**Microservices trade operational simplicity for team and deployment independence.** If several teams each own a service, each can release or scale its service without redeploying the others. In exchange, calls that were method calls become network requests that can time out, no single store can answer "is this data consistent?", and a failing service can drag down the ones that depend on it.
 
 <box type="info" seamless>
 

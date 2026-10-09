@@ -6,36 +6,7 @@
 
 <div id="body">
 
-##### Summary
 
-**Security protects assets and stakeholders from misuse and harm, whether deliberate or accidental.** Analysis assumes the deliberate case because an attacker gets to choose the worst inputs, timing, and sequence, but accidental causes need attention of their own. A security mindset questions assumptions and considers what someone could do when trust is misplaced.
-
-**Secure software engineering is risk management, not a promise of perfection.** Identify assets, stakeholders, trust boundaries, threats, and risks; then select controls whose benefits justify their costs.
-
-**Use a small set of durable principles.** Grant least privilege, deny by default, minimize attack surface, handle untrusted data at every boundary, enforce authorization on the trusted side, protect secrets and sensitive data, keep one caller from consuming the resources others need, and treat dependencies as part of the product.
-
-**Verify security properties with reasoning, review, misuse cases, and several layers of automated checks.** A passing happy path or clean scan does not prove security.
-
-**Consider security throughout the software lifecycle and whenever assumptions change.** Requirements, design, implementation, release, operation, and maintenance each create security decisions.
-
-**Treat AI-generated code and actions as untrusted until they have been understood and verified.** Limit what tools can see and do, independently check their work, and retain human accountability for accepted changes.
-
-##### Checklist
-
-Before accepting a security-relevant change, ask:
-
-- [ ] What assets and stakeholders could this change affect?
-- [ ] Where does untrusted data or a less-trusted actor cross a boundary?
-- [ ] Who is authenticated, and is each protected action authorized?
-- [ ] Could data become executable code, a command, a query, or active content in an output?
-- [ ] Are secrets, credentials, sensitive data, errors, and logs handled safely?
-- [ ] Did the change add or alter a dependency, permission, interface, trust boundary, or configuration?
-- [ ] Which misuse, boundary, and cross-user cases have been reviewed and tested?
-- [ ] What risk remains after this change, who accepted it, and what would trigger revisiting it?
-- [ ] Does this control make the safe path the easy one, or will people route around it?
-- [ ] Could this change let one caller consume enough resources to deny service to others?
-- [ ] If an AI tool contributed, were its inputs, permissions, commands, dependencies, and full output checked?
-- [ ] Can I explain and take responsibility for the accepted change?
 
 ##### Further reading
 

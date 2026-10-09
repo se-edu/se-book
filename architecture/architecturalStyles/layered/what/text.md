@@ -16,7 +16,7 @@
 {% call show_example() %}
 The invoice manager follows relaxed layering, as `Logic` depends on `Storage` as well as `Model`. Operating systems and network communication software are the classic examples of layering.
 
-<pic eager class="tbg" src="{{baseUrl}}/architecture/architecturalStyles/layered/what/images/layeredExamples.svg" width="233" />
+<pic eager class="tbg" src="{{baseUrl}}/architecture/architecturalStyles/layered/what/images/layeredExamples.svg" width="443" />
 
 {% endcall %}
 

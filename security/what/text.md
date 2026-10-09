@@ -9,8 +9,6 @@ Software now handles personal information, money, communication, transportation,
 
 **Security is therefore part of software engineering, not a specialist activity added after the software is finished; this approach is called {{ show_term("secure by design") }}.** Every software engineer needs enough security knowledge to recognize common risks, make safer design and implementation decisions, and know when expert help is needed.
 
-This textbook does not attempt to teach every kind of attack. Instead, it develops one reusable method that applies broadly.
-
 **Software security is the protection of a system and its stakeholders from misuse and harm, whether deliberate or accidental.** A conventional defect might be triggered accidentally. In contrast, a security weakness may be deliberately searched for and exploited by someone who can choose the inputs, actions, timing, and sequence most favorable to an attack. **Security analysis assumes that deliberate case**, because an attacker exercises a feature far harder than an accident usually does. **Accidental causes still need attention of their own**, because a misconfiguration, an operator mistake, or a corrupted record need not resemble an attack.
 
 {% call show_example() %}
@@ -41,7 +39,7 @@ The value `eventId` identifies the requested event. However, `isOrganizer` is me
 
 **Security is broader than secrecy.** Protecting information from disclosure matters, but so do preventing unauthorized changes, preserving service availability, and ensuring that actions are performed by the right people.
 
-**Three of these are security _properties_, together called the {{ show_term("CIA triad") }}.** Establishing that actions are performed by the right people is not a fourth property; it is a mechanism used to protect all three. **The triad gives three useful questions to ask:**
+**Three of these are security _properties_, together called the {{ show_term("CIA triad") }}.**  The triad gives three useful questions to ask:
 
 * **_Confidentiality_ asks whether information has been disclosed only to those permitted to see it.**<br>
   {{ label_example }} %%An attendee's email address should not be disclosed to another student without a valid reason and permission.%% { text="C" t-size="15px" t-class="badge rounded-pill my-1 bg-term-highlight text-body-emphasis font-monospace" }
@@ -54,6 +52,8 @@ The value `eventId` identifies the requested event. However, `isOrganizer` is me
 
 A single incident can affect more than one goal.<br>
 {{ label_example }} %%A compromised organizer account might expose attendee details, alter registrations, and delete events.%%
+
+Establishing that actions are performed by the right people is not a fourth property; it is a mechanism used to protect all three.
 
 ##### A small vocabulary
 
@@ -73,12 +73,10 @@ The following terms let a team discuss security precisely:
   {{ label_example }} %%Checking ownership before returning a registration is a control.%%
 * **{{ show_term("Authentication") }}: establishing which identity is making a request.**<br>
   {{ label_example }} %%Signing in as a particular student.%%
-* **{{ show_term("Authorization") }}: deciding whether that identity may perform a specific action on a specific resource.**<br>
+* **{{ show_term("Authorization") }}: deciding whether that identity may perform a specific action on a specific resource.** Authentication establishes who is making a request, and authorization decides whether that identity may perform this particular action on this particular resource. A user can be correctly authenticated and still be unauthorized. In most systems, authorization must be checked for every protected action, not just when the user first signs in.<br>
   {{ label_example }} %%Checking that this student owns the registration they asked to see.%%
 * **{{ show_term("Risk") }}: the likelihood of a threat combined with the seriousness of its impact.**<br>
   {{ label_example }} %%A student reading another student's registration is a high risk: it is easy to attempt and it exposes personal data.%%
-* **{{ show_term("Misuse case") }}: a short scenario describing how someone could deliberately use the system to cause harm.**<br>
-  {{ label_example }} %%A student changes an event identifier to download another event's list.%%
 
 These terms describe different parts of one situation. A valuable database is not a vulnerability. A possible theft is not an attack until someone attempts it. A control can reduce risk without eliminating it.
 
@@ -101,16 +99,14 @@ Encrypting database backups, with keys held separately, can reduce the harm caus
 
 ##### Some names you will encounter
 
-You do not need to memorize a catalog of vulnerabilities, but a few common labels are useful:
+Given below are some common vulnerabilities:
 
 * **_Broken access control_ allows someone to perform an action or access data they are not authorized to use.**
 * **{{  show_term("Injection") }} occurs when a system interprets untrusted data as code or commands.**
 * **{{  show_term("Cross-site scripting (XSS)") }} occurs when a web application causes untrusted content to execute as a script in another user's browser.**
 * **_Vulnerable or outdated components_ expose a system to known weaknesses in reused software.**
 
-**Each label has a matching engineering practice, and this textbook covers all four:** enforcing authorization on every protected action, keeping untrusted data separate from commands, encoding output for the context it is placed into, and treating dependencies as part of the product.
-
-The [OWASP Top 10](https://owasp.org/www-project-top-ten/) is a widely used awareness list for web-application risks. It is a useful pointer for further study, but it is not a complete model of software security and should not replace thinking about the specific system in front of you.
+The [OWASP Top 10](https://owasp.org/www-project-top-ten/) is a widely used awareness list for web-application risks.
 
 </div>
 
