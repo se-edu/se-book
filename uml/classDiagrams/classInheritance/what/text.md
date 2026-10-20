@@ -39,8 +39,10 @@ class Bar<T> extends Foo<T> {
 class Goo extends Foo<String> {
 }
 ```
-
 <puml src="images/cd-inheritance-and-generics.puml" />
+<p/>
+
+{{ icon_info }} You may annotate the dependency arrow with a `<<bind>>` to indicate that the dependency is a result of binding `Foo<String>` to `Foo<T>`. You can add another annotation `<T -> String>` to the same dependency arrow to clarify `String` is being bound to `T`.
 
 </box>
 </div>
