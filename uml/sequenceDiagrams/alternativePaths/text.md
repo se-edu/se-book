@@ -22,8 +22,7 @@ Notation:
 
 </box>
 
-**No more than one alternative partitions be executed** in an `alt` frame. That is, it is acceptable for none of the alternative partitions to be executed but it is not acceptable for multiple partitions to be executed.
-
+**No more than one alternative partition can be executed** in an `alt` frame. That is, it is acceptable for none of the alternative partitions to be executed, but it is not acceptable for multiple partitions to be executed.
 </div>
 
 <div id="extras">
