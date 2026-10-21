@@ -42,7 +42,7 @@ A WBS for a game development project:
    <tr>
      <td>A</td>
      <td>High level design</td>
-     <td>1 man day</td>
+     <td>1 person day</td>
      <td>-</td>
    </tr>
    <tr>
@@ -56,11 +56,11 @@ A WBS for a game development project:
        </ol>
      </td>
      <td>
-       2 man day
+       2 person day
        <ul>
-         <li>0.5 man day</li>
-         <li>1 man day</li>
-         <li>0.5 man day</li>
+         <li>0.5 person day</li>
+         <li>1 person day</li>
+         <li>0.5 person day</li>
        </ul>
      </td>
      <td>A</td>
@@ -76,11 +76,11 @@ A WBS for a game development project:
        </ol>
      </td>
      <td>
-       4.5 man day
+       4.5 person day
        <ul>
-         <li>1.5 man day</li>
-         <li>2 man day</li>
-         <li>1 man day</li>
+         <li>1.5 person day</li>
+         <li>2 person day</li>
+         <li>1 person day</li>
        </ul>
      </td>
      <td>
@@ -94,13 +94,13 @@ A WBS for a game development project:
    <tr>
      <td>D</td>
      <td>System Testing</td>
-     <td>1 man day</td>
+     <td>1 person day</td>
      <td>C</td>
    </tr>
    <tr>
      <td>E</td>
      <td>Planning for next version</td>
-     <td>1 man day</td>
+     <td>1 person day</td>
      <td>D</td>
    </tr>
    </tbody>

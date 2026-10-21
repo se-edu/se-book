@@ -16,7 +16,7 @@
 * **Does anything outside the project demand signed-off documents?** Contractual, regulatory, and safety-certification requirements can dictate stage-by-stage evidence regardless of what the team would prefer.
 * **How large and how experienced is the team?** Coordinating many people, or people new to each other, needs more explicit structure than a small experienced team does.
 
-**These questions guide a choice; they do not compute one.** Two reasonable teams can weigh them differently and both be right, and a project can combine approaches rather than adopt one wholesale.
+The above questions can help guide your choice, but they can't always give you a clear answer. Two reasonable teams can weigh them differently and both be right, and a project can combine approaches rather than adopt one fully.
 
 {% call show_example() %}
 Two projects, two defensible answers:

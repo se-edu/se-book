@@ -30,9 +30,9 @@ An _architecture diagram_ depicts the high-level design of a software.
 {% call show_example() %}
 Using models to communicate:
 
-1. You can use an _architecture diagram_ to explain the high-level design of the software to developers.
-2. A business analyst can use a _use case diagram_ to explain to the customer the functionality of the system.
-3. A _class diagram_ can be reverse-engineered from code so as to help explain the design of a component to a new developer.
+1. You can use an _architecture diagram_ (a model) to explain the high-level design of the software to developers.
+2. A business analyst can use a _use case diagram_ (a model) to explain to the customer the functionality of the system.
+3. A developer document can use _class diagrams_ (a model) explain the design of a component to a new developer.
 {% endcall %}
 
 
@@ -41,8 +41,8 @@ Using models to communicate:
 {% call show_example() %}
 Using models as blueprints:
 
-1. A senior developer draws a class diagram to propose a design for an OOP software and passes it to a junior programmer to implement.
-2. A software tool allows users to draw UML models using its interface and the tool automatically generates the code based on the model.
+1. A senior developer draws various models to propose a design for an OOP software and passes it to a junior programmer to implement.
+2. A software tool allows users to draw models using its interface and the tool automatically generates the code based on the model.
 {% endcall %}
 
 <box>

@@ -7,9 +7,15 @@
 
 <div id="body">
 
-In the context of OOP associations, **a {{ show_term("dependency") }} is a need for one class to depend on another without having a direct association in the same direction.** Reason for the exclusion: If there is an association from class `Foo` to class `Bar` (i.e., navigable from `Foo` to `Bar`), that means `Foo` is _obviously_ dependent on `Bar` and hence there is no point in mentioning _dependency_ specifically. In other words, we are specifically focusing on _non-obvious_ dependencies here. One cause of such dependencies is interactions between objects that do not have a long-term link between them.<br>
-{{ label_example }} %%A `Course` class can have a dependency on a `Registrar` class because the `Course` class needs to refer to the `Registrar` class to obtain the maximum number of students it can support (e.g., `Registrar.MAX_COURSE_CAPACITY`).%%
+In the context of OOP associations, **a {{ show_term("dependency") }} is a need for one class to depend on another without having a direct association in the same direction.** Reason for the exclusion: If there is an association from class `Foo` to class `Bar` (i.e., navigable from `Foo` to `Bar`), that means `Foo` is _obviously_ dependent on `Bar` and hence there is no point in mentioning _dependency_ specifically. In other words, we are specifically focusing on _non-obvious_ dependencies here.
 
+One common cause of such dependencies is one class accessing a class-level member of another.
+
+{% call show_example() %}
+A `Course` class can have a dependency on a `Registrar` class because the `Course` class needs to refer to the `Registrar` class to obtain the maximum number of students it can support (e.g., `Registrar.MAX_COURSE_CAPACITY`).
+{% endcall %}
+
+another common cause of such dependencies is interactions between objects that do not have a long-term link between them.
 {% call show_example() %}
 In the code below, `Foo` has a dependency on `Bar` but it is not an association because it is only a <tooltip content="temporary">transient</tooltip> interaction and there is no long-term relationship between a `Foo` object and a `Bar` object. %%i.e., the `Foo` object does not keep the `Bar` object it receives as a parameter%%.
 

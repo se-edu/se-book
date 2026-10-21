@@ -17,9 +17,9 @@
 
 Two things follow from this.
 
-**A specification that is not kept up to date does not become harmless, it becomes misleading**, because people keep acting on it. A developer builds the version that was superseded a month ago; a tester reports a defect against behavior nobody wants any more.
-
-**Every change is also a decision about what will not be built.** Accepting a new requirement late competes with requirements already agreed, so priorities have to be revisited rather than settled once at the start.
+* **A specification that is not kept up to date becomes misleading**, because people keep acting on it.<br>
+  {{ label_example }} %%A developer builds the version that was superseded a month ago; a tester reports a defect against behavior nobody wants any more.%%
+* **Every change is also a decision about what will not be built.** Accepting a new requirement late competes with requirements already agreed, so priorities have to be revisited rather than settled once at the start.
 
 </div>
 

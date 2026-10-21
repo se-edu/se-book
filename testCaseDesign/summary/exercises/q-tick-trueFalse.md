@@ -1,4 +1,4 @@
-<panel header="{{ icon_Q_A }} True or False?">
+<panel header="{{ icon_Q_A }} Equivalence partitioning and white-box testing">
 
 We can apply the equivalence partitioning technique in white-box fashion.
 
