@@ -62,6 +62,11 @@ One way to prevent this situation is to implement the two classes as shown below
 ```java
 public class Woman {
     private Man boyfriend;
+    String name;
+
+    public Woman(String name) {
+        this.name = name;
+    }
 
     public void setBoyfriend(Man m) {
         if (boyfriend == m) {
@@ -77,15 +82,29 @@ public class Woman {
     }
 
     public void breakUp() {
+        // early exit to prevent infinite loops
+        if (boyfriend == null) {
+            return;
+        }
+        // set boyfriend as null first to prevent infinite loops
+        Man ex = boyfriend;
         boyfriend = null;
+        ex.breakUp();
     }
     // ...
 }
+
 ```
+<panel header="Code for the `Man` class (it mirrors the `Woman` class)" minimized >
 
 ```java
 public class Man {
     private Woman girlfriend;
+    String name;
+
+    public Man(String name) {
+        this.name = name;
+    }
 
     public void setGirlfriend(Woman w) {
         if (girlfriend == w) {
@@ -99,12 +118,22 @@ public class Man {
             w.setBoyfriend(this);
         }
     }
+
     public void breakUp() {
+        // early exit to prevent infinite loops
+        if (girlfriend == null) {
+            return;
+        }
+        // set girlfriend as null first to prevent infinite loops
+        Woman ex = girlfriend;
         girlfriend = null;
+        ex.breakUp();
     }
     // ...
 }
 ```
+</panel>
+<p/>
 
 When `james.setGirlfriend(jean)` is executed, the code ensures that `james` breaks up with any current girlfriend before he accepts `jean` as his girlfriend. Furthermore, the code ensures that `jean` breaks up with any existing boyfriends before accepting `james` as her boyfriend.
 

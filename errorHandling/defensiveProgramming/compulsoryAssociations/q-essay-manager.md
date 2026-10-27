@@ -14,16 +14,21 @@ For the `Manager` class shown below, write an `addAccount()` method that
 import java.util.*;
 
 public class Manager {
+    private static final int MAX_ACCOUNTS = 8;
     private ArrayList<Account> theAccounts;
 
     public void addAccount(Account acc) throws Exception {
-        if (theAccounts.size() == 8) {
-            throw new Exception("adding more than 8 accounts");
+        assert theAccounts.size() <= MAX_ACCOUNTS; // the multiplicity is violated already!
+
+        if (theAccounts.size() == MAX_ACCOUNTS) {
+            throw new Exception("Adding more than " + MAX_ACCOUNTS + " accounts");
         }
 
-        if (!theAccounts.contains(acc)) {
-            theAccounts.add(acc);
+        if (theAccounts.contains(acc)) {
+            throw new Exception("Adding a duplicate account");
         }
+
+        theAccounts.add(acc);
     }
 
     public void removeAccount(Account acc) {
