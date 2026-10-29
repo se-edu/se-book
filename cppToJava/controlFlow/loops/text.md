@@ -91,7 +91,7 @@ class Main {
 ```
 123
 ```
-<small>[[Try the above code on Repl.it](https://repl.it/@seedu/Demo-Break)]</small>
+<small>[[Try the above code on Coddy](https://coddy.tech/playground/java#code=ZU_LDoIwEPyVSU8YGoKvi-gnePKoHApUbITWtAVjCP_uYiBKnDSZ7ezMbrZjLdstOctNIdmO5ZVwDkehNLqLBuHRZJXK4bzwRK1RBWpqBydvlS7PKYQt3WJyD1Dak6ybOpPW4QAtn6PWYcmx4lhzxBwbji0V6JNv9mosAjJDUTBOiPbTpKiSuvQ30sJwtu-z84pg9J1VigOF_zwDMivFPZnr_fx7ejkv68g0PnrQif5n7uInOaaI6LH-DQ)]</small>
 
 {{ similar }} **A `continue` statement skips the remainder of the current iteration** and moves to the next iteration of the loop.
 
@@ -111,7 +111,7 @@ public static void main(String[] args) {
 ```
 12345
 ```
-<small>[[Try the above code on Repl.it](https://repl.it/@seedu/Demo-Continue)]</small>
+<small>[[Try the above code on Coddy](https://coddy.tech/playground/java#code=ZU_LDoIwEPyVSU8YGoKvi8gnePKoHgArNoEtoYvGEP7d1WCUONlk2tmZ3Wyvbmoz16pwZ6M2qqgy77HLLKE_EgRNl1e2gOeMhW7OnlFLO9hza6k8nJC1pZ993C9YYpGpq3PTeqQgcx-1HnONhcZSI9ZYaazlgSH5Zi-uRSBmWAnGidD2MymqDJV8FS0MJ_veOy8IRt_BnpBK-M_zQuGILXUmmbaG6Xf_8GzqyHUcNXIl_4ye_STHlJCUGp4)]</small>
 
 </div>
 
