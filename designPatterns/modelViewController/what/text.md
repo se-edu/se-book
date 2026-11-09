@@ -19,11 +19,11 @@ The high coupling that can result from the interlinked nature of the features de
 
 Decouple data, presentation, and control logic of an application by separating them into three different components: _Model_, _View_ and _Controller_.
 
-* {{ show_term("View") }}: Displays data, interacts with the user, and pulls data from the model if necessary.
-* {{ show_term("Controller") }}: Detects UI events such as mouse clicks and button pushes, and takes follow-up action. Updates/changes the model/view when necessary.
-* {{ show_term("Model") }}: Stores and maintains data. Updates the view if necessary.
+* {{ show_term("Model") }}: Maintains application or domain state and implements the rules and operations that act on it. It may notify interested components when its state changes.
+* {{ show_term("View") }}: Presents information to the user and provides UI elements for interaction. It pulls the information to display from the model or from data supplied by the controller, depending on the design.
+* {{ show_term("Controller") }}: Handles user input (e.g., mouse clicks), interprets it, and coordinates the response by invoking an operation on the model or triggering an update to the view.
 
-The relationship between the components can be observed in the diagram below. Typically, the UI is the combination of _View_ and _Controller_.
+The relationship between the components can be observed in the diagram below. Typically, the UI is the combination of _View_ and _Controller_. In a simple UI where there’s only one view, _Controller_ and _View_ can even be combined as one class.
 
 <pic eager class="tbg" src="{{baseUrl}}/designPatterns/modelViewController/what/images/classDiagram.png" width="400" />
 <p/>
@@ -36,8 +36,6 @@ MVC applied to a student management system. In this scenario, the user is retrie
 
 In the diagram above, when the user clicks on a button using the UI, the ‘click’ event is caught and handled by the `UiController`. The `ref` frame indicates that the interactions within that frame have been extracted out to another separate sequence diagram.
 {% endcall %}
-
-Note that in a simple UI where there’s only one view, _Controller_ and _View_ can be combined as one class.
 
 There are many variations of the MVC model used in different domains. For example, the one used in a desktop GUI could be different from the one used in a web application.
 
